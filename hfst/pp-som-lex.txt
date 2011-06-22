@@ -1,0 +1,218 @@
+
+! General notes: 
+!   It might be better to go with a ton of lexical entries here over coming up with
+!   some creative shiny solution, just in the interest of making this readable.
+
+LEXICON Postposition
+Obj_Pron ;
+Obj_Adp ;
+Obj_Adp_Adp ;
+Simple ;
+Adp_Adp ;
+Deictics ;
+Misc ; 
+
+
+! Probably the best thing to do here if this is intended to be used with CG is find a way to separate the fused forms.. 
+
+! basic
+! 	ku PP ; ! in
+! 	ka PP ; ! from
+! 	u  PP ; ! at
+! 	la PP ; ! with
+
+LEXICON Simple
+u+Adp:u     FINAL "in" ;
+ku+Adp:ku   FINAL "from" ;
+ka+Adp:ka   FINAL "at" ;
+la+Adp:la   FINAL "with" ;
+
+! join with person object pronouns
+
+! 	i			?
+! 	ku		?
+! 	na		Pl1
+! 	ina		?
+! 	idin		Pl2
+
+
+! thus...
+
+!			+ú			+kú			+ká			+lá
+! i+		ií			igú			igá			ilá
+! ku+		kuú			kugú		kaá			kulá
+! na+		noó			nagú		nagá		nalá
+! ina+		inoó		inagú		inagá		inalá
+! idin+		idiín		idinkú		idinká		idinlá
+! la+       loó(???)    lagú		lagá		lalá(???)
+
+															! removing tones for now; all final
+LEXICON Obj_Adp
+i+Pron+Ind+Pers+Sg1+Obj#u+Adp:ii      FINAL ;			! ií
+i+Pron+Ind+Pers+Sg1+Obj#ku+Adp:igu     FINAL ;			! igú
+i+Pron+Ind+Pers+Sg1+Obj#ka+Adp:iga     FINAL ;			! igá
+i+Pron+Ind+Pers+Sg1+Obj#la+Adp:ila     FINAL ;			! ilá
+
+ku+Pron+Ind+Pers+Sg2+Obj#u+Adp:kuu     FINAL ;			! kuú
+ku+Pron+Ind+Pers+Sg2+Obj#ku+Adp:kugu   FINAL ;			! kugú
+ku+Pron+Ind+Pers+Sg2+Obj#ka+Adp:kaa    FINAL ;			! kaá
+ku+Pron+Ind+Pers+Sg2+Obj#la+Adp:kula   FINAL ;			! kulá
+
+OMG+Pron+Ind+Pers+Pl1+Obj#u+Adp:noo     FINAL ; ! Check these
+OMG+Pron+Ind+Pers+Pl1+Obj#ku+Adp:nagu   FINAL ; ! Check these
+OMG+Pron+Ind+Pers+Pl1+Obj#ka+Adp:naga   FINAL ; ! Check these
+OMG+Pron+Ind+Pers+Pl1+Obj#la+Adp:nala   FINAL ; ! Check these
+
+! inoó
+! inagú
+! inagá
+! inalá
+
+idinka+Pron+Ind+Pers+Pl2+Obj#u+Adp:idiin    FINAL ;			! idiín
+idinka+Pron+Ind+Pers+Pl2+Obj#ku+Adp:idinku   FINAL ;		! idinkú
+idinka+Pron+Ind+Pers+Pl2+Obj#ka+Adp:idinka   FINAL ;		! etc
+idinka+Pron+Ind+Pers+Pl2+Obj#la+Adp:idinla   FINAL ;
+
+! TODO: Check analysis, Sg3 Obj?
+la+Pron+Ind+Pers+Sg3+Obj#u+Adp:loo     FINAL ;			! loó
+la+Pron+Ind+Pers+Sg3+Obj#ku+Adp:lagu   FINAL ;			! lagú
+la+Pron+Ind+Pers+Sg3+Obj#ka+Adp:laga    FINAL ;			! lagá
+la+Pron+Ind+Pers+Sg3+Obj#la+Adp:lala   FINAL ;			! lalá
+
+! And pronouns can join these preposition clusters
+
+! TODO: read orwin p. 179
+
+! 			+ugú		+ugá		+ulá		+kagá		+kulá		+kalá
+! i			iigú		iigá		iilá		igagá		igulá       igalá
+! ku		kuugú		kaagá		kuulá		kaagá		kugulá      kaalá
+! na		noogú		noogá		noolá		nagagá		nagulá      nagalá
+! ina		inoogú		inoogá		inoolá		inagagá		inagulá     inagalá
+! idin		idiinkú		idiinká		idiinla		idinkagá	idinkulá    idinkalá
+
+! TODO:
+!   		+ugú		+ugá		+ulá		+kagá		+kulá		+kalá
+! la		loogú
+
+! See testing/conj_preposition.txt for all of the above.
+
+! Note, using pronominal absolutive forms in the lemma... 
+! TODO: finish these
+LEXICON Obj_Adp_Adp
+i+Pron+Ind+Pers+Sg1+Obj#u+Adp#u+Adp:iigu                  FINAL ;
+i+Pron+Ind+Pers+Sg1+Obj#u+Adp#ka+Adp:iiga                 FINAL ;
+i+Pron+Ind+Pers+Sg1+Obj#u+Adp#la+Adp:iila                 FINAL ;
+i+Pron+Ind+Pers+Sg1+Obj#ka+Adp#ka+Adp:igaga               FINAL ;
+i+Pron+Ind+Pers+Sg1+Obj#ku+Adp#la+Adp:igula               FINAL ;
+i+Pron+Ind+Pers+Sg1+Obj#ka+Adp#la+Adp:igala               FINAL ;
+
+ku+Pron+Ind+Pers+Sg2+Obj#u+Adp#u+Adp:kuugu                 FINAL ;
+ku+Pron+Ind+Pers+Sg2+Obj#u+Adp#ka+Adp:kaaga                FINAL ;
+ku+Pron+Ind+Pers+Sg2+Obj#u+Adp#la+Adp:kuula                FINAL ;
+ku+Pron+Ind+Pers+Sg2+Obj#ka+Adp#ka+Adp:kaaga               FINAL ;
+ku+Pron+Ind+Pers+Sg2+Obj#ku+Adp#la+Adp:kugula              FINAL ;
+ku+Pron+Ind+Pers+Sg2+Obj#ka+Adp#la+Adp:kaala               FINAL ;
+
+! TODO: check lemmas, glosses
+OMG+Pron+Ind+Pers+Pl1+Obj#u+Adp#u+Adp:noogu                  FINAL ;
+OMG+Pron+Ind+Pers+Pl1+Obj#u+Adp#ka+Adp:nooga                  FINAL ;
+OMG+Pron+Ind+Pers+Pl1+Obj#u+Adp#la+Adp:noola                  FINAL ;
+OMG+Pron+Ind+Pers+Pl1+Obj#ka+Adp#ka+Adp:nagaga                 FINAL ;
+OMG+Pron+Ind+Pers+Pl1+Obj#ku+Adp#la+Adp:nagula                 FINAL ;
+OMG+Pron+Ind+Pers+Pl1+Obj#ka+Adp#la+Adp:nagala                 FINAL ;
+
+! TODO: check lemmas, glosses
+OMG+Pron+Ind+Pers+Pl1+Obj#u+Adp#u+Adp:inoogu                   FINAL ;
+OMG+Pron+Ind+Pers+Pl1+Obj#u+Adp#ka+Adp:inooga                  FINAL ;
+OMG+Pron+Ind+Pers+Pl1+Obj#u+Adp#la+Adp:inoola                  FINAL ;
+OMG+Pron+Ind+Pers+Pl1+Obj#ka+Adp#ka+Adp:inagaga                FINAL ;
+OMG+Pron+Ind+Pers+Pl1+Obj#ku+Adp#la+Adp:inagula                FINAL ;
+OMG+Pron+Ind+Pers+Pl1+Obj#ka+Adp#la+Adp:inagala                FINAL ;
+
+! TODO: check lemmas, glosses
+idinka+Pron+Ind+Pers+Pl2+Obj#u+Adp#u+Adp:idiinku                 FINAL ; 
+idinka+Pron+Ind+Pers+Pl2+Obj#u+Adp#ka+Adp:idiinka                 FINAL ; 
+idinka+Pron+Ind+Pers+Pl2+Obj#u+Adp#la+Adp:idiinla                 FINAL ; 
+idinka+Pron+Ind+Pers+Pl2+Obj#ka+Adp#ka+Adp:idinkaga                FINAL ; 
+idinka+Pron+Ind+Pers+Pl2+Obj#ku+Adp#la+Adp:idinkula                FINAL ; 
+idinka+Pron+Ind+Pers+Pl2+Obj#ka+Adp#la+Adp:idinkala                FINAL ; 
+
+
+! i+Pron+Ind+Pers+Sg1+Obj#:i       Pre_Location ;
+! ku+Pron+Ind+Pers+Sg2+Obj#:ku      Pre_Location ;
+! +Pers+Obj#:na      Pre_Location ;
+! inaga+Pron+Ind+Pers+Pl1Incl+Obj#:ina     Pre_Location ;
+! idinka+Pron+Ind+Pers+Pl2+Obj#:idin    Pre_Location_VL ;
+
+
+! Change +Pers to the persons
+
+! LEXICON Pre_Location
+! Adp_Adp ;
+! Location ;
+! 
+! LEXICON Pre_Location_VL
+! Adp_Adp ; 
+! Location_VL ;
+! 
+! ! Only used for the pronoun conjunct forms
+! LEXICON Location_VL
+! u+Adp:u    # ;
+! ku+Adp:ku   # ;
+! ka+Adp:ka   # ;
+! la+Adp:la   # ;
+! 
+! ! Only used for the pronoun conjunct forms
+! LEXICON Location
+! u+Adp:u    # ;
+! ku+Adp:gu   # ;
+! ka+Adp:ga   # ;
+! la+Adp:la   # ;
+! 
+
+! Prepositions also join prepositions
+
+!			ú			kú			ká			lá
+! ú			ugú			ugú			ugá			ulá
+! kú					kagá		kagá		kulá
+! ká								kagá		kalá
+
+
+LEXICON Adp_Adp
+u+Adp#u+Adp:ugu     FINAL ;
+u+Adp#gu+Adp:ugu     FINAL ;
+
+ku+Adp#ku+Adp:kaga    FINAL ;
+
+u+Adp#ka+Adp:uga     FINAL ;
+ku+Adp#ku+Adp:kaga    FINAL ;
+ku+Adp#ka+Adp:kaga    FINAL ;
+ka+Adp#ka+Adp:kaga    FINAL ;
+
+u+Adp#la+Adp:ula     FINAL ;
+ku+Adp#la+Adp:kula   FINAL ;
+ka+Adp#la+Adp:kala   FINAL ;
+
+LEXICON Misc
+is+Adp+Refl#ka+Adp:iska		FINAL ;
+is+Adp+Refl#ku+Adp:isku		FINAL ;
+is+Adp+Refl:is		FINAL ;
+
+
+
+
+
+! Obj + Adp_Adp work, but no phonological things have been implemented yet.
+
+! These are the indeclinable ones 
+! LEXICON PP 
+! +Po:0 #; 
+
+! 
+! PP ; !Dummy entry
+
+LEXICON Deictics 
+soo+PP+Deic:soo		FINAL ;
+sii+PP+Deic:sii		FINAL ;
+
+

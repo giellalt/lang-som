@@ -1,0 +1,11 @@
+LEXICON Conjunction 
+iyo CC ;
+ee CC ;
+ama CC ;
+ilaa CC ;
+
+
+
+LEXICON CC 
++CC: #;
+

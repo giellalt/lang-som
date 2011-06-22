@@ -1,0 +1,479 @@
+!! =================================== !
+!! The Somali  morphophonological file !
+!! =================================== !
+
+! Notes:
+!  If forms disappear but the rule should work, make sure
+!  that the pair transforming exists in the Alphabet
+
+Alphabet
+ a b c d e f g h i j k l m n o p q r s t u v w x y z ' C
+ ɖ χ ʃ
+ á í ú é ó ý
+ á:a í:i ú:u é:e ó:o ý:y
+ sh kh dh 
+  
+ %^V:0 C
+ 
+ ! lt
+ ! %{ŧ%}:h
+ ! %{ŧ%}:t
+ ! %{ŧ%}:s
+
+ %#
+ ! for testing remove :0
+ @N@:0
+ @V1@:0
+ @V2A@:0
+ @V2B@:0
+ @V3A@:0
+ @V3B@:0
+ @PREFIXING@:0
+ @PROG@:0
+ @INF@
+
+ ! Morphophon
+ %{o%}:a
+ ! o:a
+
+ %{ŧ%}
+ l:s
+ %{ŧ%}:h
+ %{đ%}
+ %{ñ%}
+ %{GD%}
+ %{e%}:e
+ %{m%}:m
+ %{C2%}:0
+ %{n%}:0
+ %{n%}:n
+ %{ae%}:a
+ %{d%}:d
+ ! d:0
+
+ ! Boundary markers
+ ! Ideally %{#%} for root boundary, %{##%} for word-final. Pro'lly inconsistent
+ ! about this, but something worth going through and checking.
+ ! For testing remove :0 to see boundaries
+ %{#%}:0
+ %{##%}:0 %>:0
+ 
+
+ %{t%}:t
+
+ ! Trigger for t + d contraction in 3B
+ %{X%}:0
+
+ %^:0 ; 
+
+!Diacritics
+!  @V1@ @V2@ @V3A@ @V3B@ ; 
+
+Sets
+
+ ! Phonological sets
+ Vowels = a e i o u y á é í ó ú ý {ae} ;
+
+ Cons = b c d f g h j k l m n p q r s t v w x y z dh ʃ {m} kh sh ;
+ Back = c x h ' q kh ;
+ Approximants = w y ;
+
+ ! Phonotactical sets
+ StemVowel = {e} {o} {ae} ; 
+ Gutteral = q kh c x h ' ;
+ T_D_alt = q kh c x h ' d w y;
+ 
+
+ VceStop = b d g dh ɖ ;
+ VcelStop = t k ;
+
+ Dummy = %> C {#} {##} {X} @N@ @V1@ @V2A@ @V2B@ @V3A@ @V3B@ @PREFIXING@ @PROG@ @INF@; ! other verb classes here?
+
+ V2Decl = @V2A@ @V2B@ ; 
+
+ WordChars = a b c d e f g h i j k l m n o p q r s t u v w x y z '
+			dh sh kh 
+			á é í ó ú ý 
+			{#} {##} {m} {C2} {t} {d} {X} {ae} {ŧ} {đ} {ñ} {e} {n} {o} {GD} ;
+
+Definitions
+ WordBoundary = [ %{##%}: | %{#%}: | %>: | %>:0 ] ;
+ MorphBoundary = [ %{#%}: ] ;
+
+
+Rules
+! magac -> magicii, magucu
+! TODO: magacu, madaxiisa/madixiisa
+"Ablaut around back fricatives"
+ a:Cy <=> _ Back MorphBoundary ( k:0 ) Cy ;
+	where Cy in (u i)
+	matched ;
+
+! magaca
+! magac{#}ka{##}
+! magac{#}kii{##}
+
+
+! TODO: corpus (read: google) searches reveal assimilation may be optional... magacu and magucu can be found. How to do this?
+!		currently: magucu possible, magacu not.
+! 		waxa+FocR#uu+Cl+Pron+Pers+SgMasc3
+! wuxuu
+
+! but not xaqiiji xiqiiji
+
+
+!! !! !! !! 
+!! Verbs !!
+!! !! !! !! 
+
+! NOTE: More detailed explanation is in verb-som-morph.txt
+
+! maq^al{#}@V1@@PROG@ay{#}{đ}aa{##}
+! maq^al{#}@V1@{đ}ay{##}
+! maqal > maqlay, maqlayaa, maqal
+
+! maqlay		maqalnay/maqallay
+! maqashay		maqasheen
+! maqlay		maqleen
+! maqashay		
+
+! arkay			maqalnay/maqallay
+! aragtay		aragteen
+! arkay			arkeen
+! aragtay		
+
+"V1: Vowel deletion"
+ Vz:0 <=> %^: _ Cons MorphBoundary @V1@: (:0) Vowels  ; 
+	where Vz in Vowels ;
+ 
+
+"ñ realization"
+ %{ñ%}:ñx <=> Declensions: (@PROG@: ) ([WordChars | WordBoundary]+) _ ;
+	where Declensions in (@V1@ @V2A@ @V2B@ @V3A@ @V3B@ @PREFIXING@)
+		  ñx in (n n n n n n)
+	matched ;
+
+"n realization in progressive V2"
+ @PROG@:n <=> V2Decl: _ ;
+
+"n doubling in V3A"
+ @V3A@:n <=> _ :n ; 
+
+! joogs{o}{#}@V3A@ay{#}
+! @V3A@ -> n / [ a e ] y WordBoundary
+
+!"infinitival -n- in Progressive"
+! @V3A@:n <=> {o}: WordBoundary _ a y [ WordChars - {##}: ] ; 
+
+"infin -n-"
+ @V3A@:n <=> _ a y WordBoundary ; 
+
+! Not using WordBoundary here because something else happens in the progressive
+"đ realization"
+ %{đ%}:đx <=>  Declensions: (WordChars+) _ ;
+	where Declensions in (@V1@ @V2A@ @V2B@ @V3A@ @V3B@)
+		  đx in (0 y y d d)
+	matched ;
+
+"đ realization in nouns"
+ %{đ%}:d <=> _ MorphBoundary @N@:0 ;
+
+! Note that we want to block this in environments where T/D (ex. dhacday)
+! alternation occurs, so that that alternation can later apply. Otherwise
+! these rules block each other.
+
+! samee{#}@2B@y{ŧ}aa
+
+! joogs{o}{#}@V3B@{ŧ}ay
+! keen{#}@V3B@{ŧ}ay
+
+
+"ŧ realization"
+ %{ŧ%}:ŧx <=> ( [Cons - T_D_alt] ) WordBoundary Declensions: (WordChars+) _ ;
+	where Declensions in (@V1@ @V2A@ @V2B@ @V3A@ @V3B@)
+		  ŧx in (t s s t t)
+	matched ;
+
+! TEST: dhacday
+"ŧ->d / [Gutteral] _ " 
+ %{ŧ%}:d <=> [T_D_alt] WordBoundary @V1@: _ ;
+
+
+"đ/ŧ realization in progressive"
+ Cx:Cy <=> y WordBoundary _ ; 
+	where Cx in ({đ} {ŧ})
+		  Cy in (0 s)
+	matched ;
+
+"ŧ realization in V2B"
+ %{ŧ%}:s <=> WordChars WordBoundary @V2B@: _ ;
+
+!"o realizationn V3A"
+! %{o%}:a <=> _ WordBoundary [ @V3A@: | { @V3A@ WordChars - a } ] ; 
+
+"o deletion in V3A" 
+ %{o%}:0 <=> _ WordBoundary [@V3A@: | @V3B@: - @V3A@:n ] ( WordBoundary )( WordBoundary )  a ;
+
+! samee{#}@V2B@yaa
+"ee realization in V2B"
+ %{e%}:y <=> _ WordBoundary @V2B@: [:Cons - :y] ; 
+
+!"{d} realization in V3B"
+! %{d%}:t <=> _ {o}: WordBoundary :d ; 
+
+
+! [ Cons - y ]
+! dad{#}kay{GD}a
+! magac{#}káy{GD}a{##}
+! warqad+N+Fem+Sg+Def+PxSg2+Nom+Prox      warqad{#}táa{GD}u{##}
+! meel+N+Fem+Sg+Def+PxSg2+Nom+Dist        meel{#}táa{GD}ii{##}
+! dayuurad+N+Fem+Sg+Def+PxPl1Excl+Nom+Dist        dayuurad{#}tayá{GD}ii{##}
+
+"Possessive gender agreement"
+ %{GD%}:Cy <=> MorphBoundary :Gender WordChars+ _ ;
+	where Gender in (k g t d)
+		  Cy in (g g d d)
+		matched ; 
+
+! magacayga
+"Possessive gender agreement with deleted k"
+ %{GD%}:g <=> MorphBoundary k:0 WordChars+ _ ;
+ 
+
+"Vowel assimilation/ablaut around back fricatives"
+ a:Cy <=> _ Back WordBoundary ( k ) Cy ;
+    where Cy in (u i ú í)
+    matched ;
+
+! warqadda
+"-t to -d next to d in definite stuff"
+ t:d <=> d MorphBoundary _ Vowels ;
+
+! buugga 
+"-k to -g next to g in definite stuff"
+ k:g <=> g WordBoundary _ CaseV ;
+	where CaseV in (a u i á ú í)
+	matched ;
+
+! iligga
+"Definite suffix -k to -g next to preceding voiced"
+ k:g <=> :g WordBoundary _ Vowels ;
+
+
+"-k to -g intervocalically"
+  k:g <=> Vowels WordBoundary _ Vowels ;
+
+!!! 
+!!! "-t to -d intervocalically"
+!!!  t:d <=> t:d WordBoundary _ Vowels ;
+!!! 
+!!! ! TODO: how can I combine these two?
+!!! ! basically, two contexts for one rule, but optional.
+!!! 
+
+! baabuurro, dukaammo
+"Declension 2: -C doubling in plural"
+ %{C2%}:Cz <=> :Cz WordBoundary @N@:0 _ PlVowels ;
+	where Cz in (b d dh l r n m)
+	PlVowels in (a o) ;
+!!! 
+
+! miisas
+"Declension 4: Plural Reduplication"
+ %{C2%}:Cz <=> Cz WordBoundary @N@:0 a _ ; 
+	where Cz in Cons
+	matched ;
+
+
+
+! kursiyo
+! kursi{#}{C2}o{##}
+
+"Declension 2: -y insertion after back sounds and fricatives; and after -i"
+ %{C2%}:y <=> Cz WordBoundary @N@:0 _ PlVowels ; 
+	where Cz in (c q x s j χ i {đ})
+	PlVowels in (a o á ó) ;
+
+
+! guriyo
+! guri{#}o{##}
+
+"-y- insertion in plurals"
+ 0:y <=> i MorphBoundary _ Vow_ ;
+	where Vow_ in (a o u e á ó ú é) ;
+
+ 
+"-t to 0 after -dh"
+  t:0 <=> d h _ Vowels ; 
+
+
+! maal^i{m}{#}ta{##}
+! kib^is{#}o{##}
+ 
+! galab > galbo, ilig > ilko
+"Declension 3: Plural vowel deletion"
+ Vz:0 <=> %^: _ Cons WordBoundary @N@:0 Vowels ; 
+	where Vz in Vowels ;
+ 
+! Doesn't work with wuxu, where k has been deleted.
+! Doesn't work with magicii, magucu, but should optionally. magacii and magicii, etc are both possible
+
+! Opacity?  wax+ku -> wax+u -> wux+u
+
+!!! ! Didn't work: 
+!!! !  a:Cy <=> _ ( [ %^ABL: ] ) Back ( Back ) ( %>: ) Cy ;
+!!! 
+!!! ! Need to block this before another o; magaalada, magaalooyin
+!!! "Declension 6: final vowel"
+!!!   %{o%}:a <=> _ WordBoundary [WordChars - o] ; 
+!!! 
+!!! ! WordBoundary \?:WordChars
+
+! magaca
+! magac{#}ka{##}
+! magac{#}kii{##}
+
+"Velar deletion after Back"
+ k:0 <=> Back MorphBoundary _ ;
+
+
+
+
+!!! ! ilig:il%^ik      NOUN3_M "tooth" ;          ! ilig, iligga, ilko, ilkaha
+!!! 
+
+! ilig
+"Final lenition."
+ Cv:Cx <=> Vowels:Vowels _ WordBoundary ;
+  where Cx in (b d g)
+        Cv in (p t k)
+		matched ; 
+
+!!! TODO: find example?
+!!! "Lenition syllable finally, or before other consonants."
+!!!  Cr:Cq <=> Vowels:Vowels _ WordBoundary Cons ;
+!!!  where Cq in (b d g)
+!!!        Cr in (p t k)
+!!! 		matched ; 
+
+! maal^i{m}{#}{##}
+! maal^i{m}{#}o{##}
+! maal^i{m}{#}ta{##}
+
+! kul^a{m}{#}@V1@{##}
+! maal^i{m}{#}{##}
+
+
+! "m->n finally"
+!  {m}:n <=> _ WordBoundary ;
+
+"m->n in codas"
+ %{m%}:n <=> _ MorphBoundary ( :0 ) [ WordBoundary | k: | t: ] ; 
+ !!! where Cm in (m {m}) ;
+
+! maalin, maalmo, maalinta, maalmaha, *maalim
+
+
+!!! ! TODO:
+!!! ! "lt:sh around word boundaries"
+!!! ! l:ʃ <=> _ WordBoundary t: ;
+!!! 
+!!! !"Delete h after ʃ"
+!!! ! h:0 <=> :ʃ _ ;
+!!! 
+!!! ! cat src/twol-som.txt | grep T\EST | cut -d ':' -f 2 | tr ', ' '\n' | sort | uniq | som
+!!! 
+!!! 
+!!! ! TESTS: walaaqday, wareegtay, go'day, raacday
+!!! ! must not have qaadtay
+!!! 
+!!! "t->d / [Gutteral] _ " 
+!!!  %{t%}:d <=> T_D_alt WordBoundary _ ; 
+!!! 
+!!! 
+!!! ! w a {d}:d {o}:a {#}:0 t a y     // wadatay
+!!! ! w a {d}:t {o}:0 {#}:0 a y       // watay 
+!!! ! w a {d}:t {o}:0 {#}:0 e e n     // wateen
+!!! 
+!!! ! TESTS: watay, wadatay, wadannay, wateen, wadeen
+!!! "d->t in 3B verbs"
+!!!  %{d%}:t <=> _ %{o%}: WordBoundary %{X%}:0 ;
+!!! 
+!!! ! easier to o-> than ... 
+!!! "o->0 in 3B verbs" 
+!!!  %{o%}:0 <=> _ WordBoundary %{X%}:0 ; 
+!!! 
+!!! ! TODO: xisbiga ; currently is xisbika. intervocalic voicing over morpheme bound.
+!!! !       does this occur really often? what intervocalic consonant boundaries
+!!! !		can i think of that might not work this way? 
+!!! 
+!!! 
+
+
+!  akhri{#}@V1@@INF@{##}
+!  t{ae}g{#}@V1@@INF@{##}
+"V1 Infinitive -i-"
+ @INF@:i <=>  WordChars WordChars [WordChars - i] MorphBoundary @V1@:0 _ WordBoundary ;
+
+! i MorphBoundary @V1@:0 _ WordBoundary ; 
+
+! t{ae}g{#}@V1@@INF@{##}
+"a/e umlaut before i/e"
+  %{ae%}:e <=> Cons _ Cons MorphBoundary ([:0]+) [ :i | :e ] ;
+
+!!! 
+!!! ! TESTS: yeedhay, gabadha
+!!! "orth: delete d after dh over morph. boundaries"
+!!!  d:0 <=> d h WordBoundary _ ;  
+!!! 
+!!! ! TESTS: gabadha 
+!!! "orth: delete d after dh over morph. boundaries"
+!!!  t:0 <=> d h WordBoundary _ ;  
+!!! 
+!!! ! duul -> duushay
+!!! ! d u u l {#}  0 {t} a y
+!!! 
+!!! ! TESTS: duushay, gashay
+!!! 
+
+! maq^al{#}@V1@@PROG@ay{#}{đ}aa{##}
+! maq^al{#}@V1@{đ}ay{##}
+! maqal+V+2Sg+Ind+Past
+! maq^al{#}@V1@{ŧ}ay{##}
+
+! m:m a:a q:q %^:0 a:a l:s {#}:0 @V1@:0 {d}:t a y {##}:0
+
+
+! lt
+! sh
+
+! l:s t:h
+
+"lt -> sh pt 1" 
+  l:s <=> _ MorphBoundary @V1@:0 {ŧ}:h ; 
+ 
+"lt -> sh pt 2"
+ %{ŧ%}:h <=> l:s MorphBoundary @V1@:0 _ ; 
+
+ !  maq^al{#}@V1@{ŧ}ay{##}
+ !"lt -> sh pt 2"
+ ! %{ŧ%}:h <=> l:s MorphBoundary Dummy:0 _ ;
+
+ ! "lt -> sh pt 2"
+ !  %{ŧ%}:h <=> l:s MorphBoundary :0 _ ; 
+
+! "lt -> sh pt 1" 
+!  l:s <=> _ MorphBoundary [:0]* t:h ; 
+! 
+! "lt -> sh pt 2"
+!  %{t%}:h <=> l:s WordBoundary _ ;
+
+"Remove tone symbols"
+ Tx:Ty <=> _ ;
+	where Tx in (á é í ó ú ý)
+		  Ty in (a e i o u y)
+	matched ;
+	
+"Remove dummies"
+ Dummy:0 <=> _ ;
+

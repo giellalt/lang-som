@@ -1,0 +1,319 @@
+! Can specify test words that should be generated with the paradigm here, but currently it will only generate the words, not compare to what should be the outcome.
+
+! TODO: Plurals and no case? +N+Masc+Pl+Indef:oyin	FINAL ;
+! Specifying plurals with no case, when they should probably be all cases if 
+! they're bare plurals
+
+! Need to check ordering of all tag categories. Would be nice if it were the same everywhere
+
+
+! How do I mark gender changes? plurals don't have gender morphs, but do they agree?
+! Probably should. Or at least make it possible to generate without the gender change... E.g., 
+!		magac+N+Masc+Indef+Pl -> magacyo
+!		magac+N+Fem+Indef+Pl -> magacyo
+
+! Currently:
+!		magacyo -> magac+N+Fem+Indef+Pl
+!
+! So, do we want to have it analyse as both masc and fem, or analyse as only one with the gender change?
+! Should ideally abstract away from morphology, marking both Masc and Fem implies morphology is more relevant in generation.
+
+
+LEXICON NOUN1_F
+:{#}@N@		NOUN1_F_PostBound ; 
+
+LEXICON NOUN1_F_PostBound
++N+Fem+Indef+Sg+Abs:0		         FINAL ;                              ! TEST:warqad,warqad
++N+Fem+Indef+Sg+Nom:i		         FINAL ;                              ! TEST:warqad,warqad
++N+Fem+Indef+Sg+Gen:0		         FINAL ;                              ! TEST:warqad,warqad
++N+Masc+Pl+Indef:o		     FINAL ; ! See gender polarity above      ! TEST:warqad,warqado
+
++N+Fem+Sg+Def:t		SgProximity ;
+
++N+Masc+Def+Pl+Abs+Prox:aha      FINAL ; ! See gender polarity above    ! TEST:warqad,warqadaha
++N+Masc+Def+Pl+Nom+Prox:uhu      FINAL ; ! See gender polarity above    ! TEST:warqad,warqaduhu
++N+Masc+Def+Pl+Abs+Dist:ihii     FINAL ; ! See gender polarity above    ! TEST:warqad,warqadihii
++N+Masc+Def+Pl+Nom+Dist:ihii     FINAL ; ! See gender polarity above    ! TEST:warqad,warqadihii
+
+
+LEXICON NOUN1_M/SgOnly
+:{#}@N@		NOUN1_M_PostBoundary/SgOnly ;
+
+LEXICON NOUN1_M
+:{#}@N@		NOUN1_M_PostBoundary ;
+
+LEXICON NOUN1_M_PostBoundary
++N+Masc+Indef+Sg+Abs:0		         FINAL ;                               ! TEST:guri,guri
++N+Masc+Indef+Sg+Nom:0		         FINAL ;                               ! TEST:guri,guri
++N+Masc+Indef+Sg+Gen:0		         FINAL ;                               ! TEST:guri,guri
++N+Masc+Indef+Sg+Pl:o		     FINAL ;                                   ! TEST:guri,guriyo
+
++N+Masc+Def+Sg:g		SgProximity ;
++N+Masc+Def:			MascPl ;
+
+LEXICON NOUN1_M_PostBoundary/SgOnly
++N+Masc+Indef+Sg+Abs:0		         FINAL ;                               ! TEST:guri,guri
++N+Masc+Indef+Sg+Nom:0		         FINAL ;                               ! TEST:guri,guri
++N+Masc+Indef+Sg+Gen:0		         FINAL ;                               ! TEST:guri,guri
+
++N+Masc+Def+Sg:g		SgProximity ;
+
+! Same?
+LEXICON NOUNM/NoPlural
+:{#}@N@		NOUNM/NoPlural_PostBoundary ;
+
+LEXICON NOUNM/NoPlural_PostBoundary
++N+Masc+Indef+Sg+Abs:0		         FINAL ;                               ! TEST:guri,guri
++N+Masc+Indef+Sg+Nom:0		         FINAL ;                               ! TEST:guri,guri
++N+Masc+Indef+Sg+Gen:0		         FINAL ;                               ! TEST:guri,guri
+
++N+Masc+Def+Sg:k		SgProximity ;
+
+
+LEXICON NOUN2_M
+:{#}@N@ NOUN2_M_PostBoundary ;
+
+LEXICON NOUN2_M_PostBoundary
++N+Masc+Indef+Sg+Abs:0		         FINAL ;                                ! TEST:subax,subax
++N+Masc+Indef+Sg+Nom:0		         FINAL ;                                ! TEST:subax,subax
++N+Masc+Indef+Sg+Gen:0		         FINAL ;                                ! TEST:subax,subax
++N+Fem+Pl+Indef:{C2}o		     FINAL ; ! See gender polarity above        ! TEST:subax,subaxyo
+
++N+Masc+Def+Sg:k		SgProximity ;
+
++N+Fem+Def+Pl+Abs+Prox:{C2}ada    FINAL ; ! See gender polarity above        ! TEST:subax,subaxyada
++N+Fem+Def+Pl+Nom+Prox:{C2}adu    FINAL ; ! See gender polarity above        ! TEST:subax,subaxyadu
++N+Fem+Def+Pl+Abs+Dist:{C2}adii   FINAL ; ! See gender polarity above        ! TEST:subax,subaxyadii
++N+Fem+Def+Pl+Nom+Dist:{C2}adii   FINAL ; ! See gender polarity above        ! TEST:subax,subaxyadii
+
+
+! D2 masc masc words= Any?
+
+LEXICON NOUN2_F
++TODO						FINAL ;
+
+
+LEXICON NOUN3_F 
+:{#}@N@ NOUN3_F_PostBoundary ;
+
+LEXICON NOUN3_F_PostBoundary
++N+Fem+Indef+Sg+Abs:0		         FINAL ;                                       ! TEST:galab,galab
++N+Fem+Indef+Sg+Nom:0		         FINAL ;                                       ! TEST:galab,galab
++N+Fem+Indef+Sg+Gen:0		         FINAL ;                                       ! TEST:galab,galab
++N+Masc+Pl+Indef:o		     FINAL ; ! See gender polarity above               ! TEST:galab,galbo
+! Need to check these with a corpus
+
++N+Fem+Def+Sg:t		SgProximity ;
++N+Masc+Def:			MascPl ;
+
+
+LEXICON NOUN3_M
+:{#}@N@ NOUN3_M_PostBoundary ;
+
+LEXICON NOUN3_M_PostBoundary
++N+Masc+Indef+Sg+Abs:0		         FINAL ;                                       ! TEST:ilig,ilig
++N+Masc+Indef+Sg+Nom:0		         FINAL ;                                       ! TEST:ilig,ilig
++N+Masc+Indef+Sg+Gen:0		         FINAL ;                                       ! TEST:ilig,ilig
++N+Masc+Pl+Indef:o		     FINAL ;	                                       ! TEST:ilig,ilko
+
++N+Masc+Def+Sg:k		SgProximity ;
++N+Masc+Def:			MascPl ;
+
+! Notes on progress: 
+!  - Vow deletion in pl works, except there are some funny side effects.
+!  - xadhig -> xadhgo
+!  - what is probably needed here is a rule changing 'voicing' in final positions
+!  - qalinka doesn't work for some reason.: qalmka does. uh oh 
+
+
+
+
+
+
+! Declension 4 fem? how do these work?
+LEXICON NOUN4_F 
++TODO:0 FINAL ; 
+! +N+Fem+Indef+Sg+Abs:0		         FINAL ;                                       
+! +N+Fem+Indef+Sg+Nom:0		         FINAL ;                                       
+! +N+Fem+Indef+Sg+Gen:0		         FINAL ;                                       
+! +N+Masc+Pl+Indef:%>o		     FINAL ; ! See gender polarity above               
+! +N+Fem+Def+Sg+Abs+Prox:%>ta	     FINAL ;                                           
+! +N+Fem+Def+Sg+Nom+Prox:%>tu         FINAL ;                                        
+! +N+Fem+Def+Sg+Abs+Dist:%>tii	     FINAL ;                                       
+! +N+Fem+Def+Sg+Nom+Dist:%>tii	     FINAL ;                                       
+! +N+Masc+Def+Pl+Abs+Prox:%>aha      FINAL ; ! See gender polarity above             
+! +N+Masc+Def+Pl+Nom+Prox:%>uhu      FINAL ; ! See gender polarity above             
+! +N+Masc+Def+Pl+Abs+Dist:%>ihii     FINAL ; ! See gender polarity above             
+! +N+Masc+Def+Pl+Nom+Dist:%>ihii     FINAL ; ! See gender polarity above             
+
+LEXICON NOUN4_M
+:{#}@N@		NOUN4_M_PostBoundary ;
+
+LEXICON NOUN4_M_PostBoundary
++N+Masc+Indef+Sg+Abs:0		         FINAL ;                                        ! TEST:qoys,qoys
++N+Masc+Indef+Sg+Nom:0		         FINAL ;                                        ! TEST:qoys,qoys
++N+Masc+Indef+Sg+Gen:0		         FINAL ;                                        ! TEST:qoys,qoys
++N+Fem+Pl+Indef:a{C2}		     FINAL ;	                                        ! TEST:qoys,qoysas
++N+Masc+Def+Sg+Abs+Prox:ka	     FINAL ;                                        ! TEST:qoys,qoyska
++N+Masc+Def+Sg+Nom+Prox:ku        FINAL ;                                         ! TEST:qoys,qoysku
++N+Masc+Def+Sg+Abs+Dist:kii	     FINAL ;                                        ! TEST:qoys,qoyskii
++N+Masc+Def+Sg+Nom+Dist:kii	     FINAL ;                                        ! TEST:qoys,qoyskii
++N+Masc+Def+Pl+Abs+Prox:a{C2}{#}ka      FINAL ;                                          ! TEST:qoys,qoysaska
++N+Masc+Def+Pl+Nom+Prox:a{C2}{#}ku      FINAL ;                                          ! TEST:qoys,qoysasku
++N+Masc+Def+Pl+Abs+Dist:a{C2}{#}kii     FINAL ;                                          ! TEST:qoys,qoysaskii
++N+Masc+Def+Pl+Nom+Dist:a{C2}{#}kii     FINAL ;                                          ! TEST:qoys,qoysaskii
+
+
+! TODO
+
+LEXICON NOUN6_F
+:{#}@N@	NOUN6_F_PostBoundary ;
+
+LEXICON NOUN6_F_PostBoundary
++N+Fem+Indef+Sg+Abs:0	FINAL ;
++N+Fem+Indef+Sg+Nom:0	FINAL ;
++N+Fem+Indef+Sg+Gen:0	FINAL ;
+
++N+Fem+Def+Sg+Abs+Prox:da		FINAL ;
++N+Fem+Def+Sg+Nom+Prox:du        FINAL ;       
++N+Fem+Def+Sg+Abs+Dist:dii	     FINAL ;      
++N+Fem+Def+Sg+Nom+Dist:dii	     FINAL ; 
+
++N+Masc+Indef+Pl:oyin	FINAL ;
+
++N+Masc+Def+Pl+Abs+Prox:oyinka	FINAL ;
++N+Masc+Def+Pl+Nom+Prox:oyinku	FINAL ;
+
++N+Masc+Def+Pl+Abs+Dist:oyinkii	FINAL ;
++N+Masc+Def+Pl+Nom+Dist:oyinkii	FINAL ;
+
+! Expecting gender morphemes, t/d/k/g
+LEXICON SgProximity
+
++Abs+Prox:a			FINAL ;
+					Possessive ; ! Should there be a morpheme boundary here? 
+
++Nom+Prox:u			FINAL ;
++Abs+Dist:ii		FINAL ;
++Nom+Dist:ii		FINAL ;
+
++Abs+Close:an		FINAL ;
++Nom+Close:anu		FINAL ;
++Nom+Close:ani		FINAL ;
+
++Abs+Near:aas			FINAL ;	
++Nom+Near:aasu			FINAL ;	
++Nom+Near:aasi			FINAL ;	
+
++Abs+Far:eer			FINAL ;	
++Nom+Far:eeri			FINAL ;	
+
++Abs+Farther:oo			FINAL ;	
++Nom+Farther:ooyi		FINAL ;	
+
+! Long forms (abs) 
+! 1Sg      káyga			táyda
+! 2Sg      káaga			táada
+! 3SgM     kíisa			tíisa
+!  SgF     kéeda			téeda
+! 1PlI     kéenna			téenna
+! 1PlE     kayága			tayáda
+! 2Pl      kíinna			tíinna
+! 3Pl      kóoda			tóoda
+
+
+! Short forms
+!		   Subj		Abs     	Subj		Abs
+! 1Sg      káy		kaý	    	táy			taý	
+! 2Sg      káa		kaá 		táa			taá 
+! 3SgM     kíis		kiís		tíis		tiís
+!  SgF     kéed		keéd		téed		teéd
+! 1PlI     kéen		keén		téen		teén
+! 1PlE     kayo		kayo		tayo		tayo
+! 2Pl      kíin		kiín		tíin		tiín
+! 3Pl      kóod		koód		tóod		toód
+
+! Tone test
+LEXICON Possessive
++PxSg1:áy{GD}		PostPossSgProx ;
++PxSg2:áa{GD}		PostPossSgProx ;
++PxSg3M:íis		PostPossSgProx ;
++PxSg3F:íis		PostPossSgProx ;
+
++PxPl1Incl:éenn		PostPossSgProx ; 
++PxPl1Excl:ayá{GD}		PostPossSgProx ; 
++PxPl2:íinn			PostPossSgProx ; 
++PxPl3:óod			PostPossSgProx ; 
+
++PxSg1+Nom:áy			FINAL ;
++PxSg2+Nom:áa			FINAL ;
++PxSg3M+Nom:íis			FINAL ;
++PxSg3F+Nom:íis			FINAL ;
+
++PxPl1Incl+Nom:éen		FINAL ; 
++PxPl1Excl+Nom:ayo		FINAL ; 
++PxPl2+Nom:íin			FINAL ; 
++PxPl3+Nom:óod			FINAL ; 
+
++PxSg1+Abs:aý			FINAL ;
++PxSg2+Abs:aá			FINAL ;
++PxSg3M+Abs:iís			FINAL ;
++PxSg3F+Abs:iís			FINAL ;
+
++PxPl1Incl+Abs:eén		FINAL ; 
++PxPl1Excl+Abs:ayo		FINAL ; 
++PxPl2+Abs:iín			FINAL ; 
++PxPl3+Abs:oód			FINAL ; 
+
+! proximity and case for after possessive suffixes
+! Need to restrict to prevent loops to infinity
+LEXICON PostPossSgProx
++Abs+Prox:a			FINAL ;
++Nom+Prox:u			FINAL ;
++Abs+Dist:ii		FINAL ;
++Nom+Dist:ii		FINAL ;
+
+! +Abs+Close:an		FINAL ;
+! +Nom+Close:anu		FINAL ;
+! +Nom+Close:ani		FINAL ;
+! 
+! +Abs+Near:aas			FINAL ;	
+! +Nom+Near:aasu			FINAL ;	
+! +Nom+Near:aasi			FINAL ;	
+! 
+! +Abs+Far:eer			FINAL ;	
+! +Nom+Far:eeri			FINAL ;	
+! 
+! +Abs+Farther:oo			FINAL ;	
+! +Nom+Farther:ooyi		FINAL ;	
+
+
+
+! Expecting fem sg?
+! TODO: boundaries here?
+LEXICON MascPl
++Pl+Abs+Prox:aha      FINAL ;                                 ! TEST:guri,guriyaha
++Pl+Nom+Prox:uhu      FINAL ;                                 ! TEST:guri,guriyuhu
++Pl+Abs+Dist:ihii     FINAL ;                                 ! TEST:guri,guriyihii
++Pl+Nom+Dist:ihii     FINAL ;                                 ! TEST:guri,guriyihii
+
+! TODO: generation not working here. hilibihii, hilbihii. Need some tests
+
+
+!! Irregular nouns !!
+
+LEXICON Irreg_WAX
++N+Masc+Indef+Sg+Abs+Prox:{#}@N@ FINAL ;
++N+Masc+Indef+Sg+Nom+Prox:{#}@N@ FINAL ;
+
++N+Masc+Def+Sg+Abs+Dist:{#}@N@kii FINAL ;
++N+Masc+Def+Sg+Nom+Dist:{#}@N@kii FINAL ;
+
++N+Masc+Def+Sg+Abs+Prox:{#}@N@a FINAL ;
++N+Fem+Pl+Indef:{#}@N@yaabo FINAL ;
+
+
+
+LEXICON NOUNF
++TODO:0	FINAL ;
+
