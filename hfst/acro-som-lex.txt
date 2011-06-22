@@ -1,0 +1,8 @@
+! ========= !
+! Akronymer !
+! ========= !
+
+
+LEXICON acronym
+	acronym ; 
+	# ;

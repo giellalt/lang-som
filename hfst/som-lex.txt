@@ -1,0 +1,93 @@
+Multichar_Symbols
+
+! POS
++N +V +A +Adp +Adv +CC +CS
++Adv +CC +CS +Interj +Pron +Num
+
+! Verbal MSP
++Prs +Fut +Prt +Prf
++Prog
++Past
++Pres
++Ind +Imp +Cond +Opt +Neg
++Inf +Red
++Imper
++1Sg +2Sg +3Sg +3SgM +3SgF +1Pl +2Pl +3Pl
++Incl +Excl
++Irr +Term +Cond +Des +Compl +Dim
+
+
+! Nominal MSP
++Indef +Def
++Sg +Pl
++Prop +Plc
++Masc +Fem
++Nom +Abs +Acc +Gen +Abl +Dat 
++Dist +Prox +Near +Far +Farther +Close
++Adc 
++Apr
++Prl +Apr
++Cns
++Ord
+
++PxSg1 +PxSg2 +PxSg3F +PxPl1 +PxPl2 +PxPl3 +PxSg3M +PxPl1Incl +PxPl1Excl
+
+! Style 
+
++Sty +Sty/TODO
++TODO
+
+! Verb declensions
+@N@
+
+@V1@
+@V2A@
+@V2B@
+@V3A@
+@V3B@
+@PREFIXING@
+@PROG@
+@INF@
+! Morphophonological stuff
+%{#%} %{##%} %- 
+
+ %{t%} %{o%} %{m%} %{C2%} %{d%} %{X%} %{ae%} %{e%}
+
+ {m}
+
+! Possessive article alternation 
+%{GD%}
+
+! Person consonants
+ %{ŧ%} %{đ%} %{ñ%}
+
+! V2* inf
+ %{n%}
+
+
+! Digraphs
+
+! sh dh kh
+
+! Key lexicon
+
+LEXICON Root
+Abbreviations ; 
+Noun ;
+ProperNouns ;
+Verb ;
+Adjective ;
+Adverb ;
+Interjection ;
+Numeral ;
+Pronoun ;
+Conjunction ;
+Subjunction ;
+Postposition ;
+Punctuation ;
+! VerbReverse ; ! testing
+
+
+LEXICON FINAL
+
+ :{##} 	# ;

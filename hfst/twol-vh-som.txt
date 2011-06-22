@@ -1,0 +1,112 @@
+!! =================================== !
+!! The Somali VH morphophonological file !
+!! =================================== !
+
+! Notes:
+!  If forms disappear but the rule should work, make sure
+!  that the pair transforming exists in the Alphabet
+
+Alphabet
+ a b c d e f g h i j k l m n o p q r s t u v w x y z ' C
+ ä       ë       ï           ö           ü
+ á 	     é       í           ó           ú       ý
+ %+Back %+Front 
+! aa ee ii oo uu 
+! ää ëë ïï öö üü
+
+
+ ! a:ä
+ ! u:ü
+ ! i:ï
+ ! o:ö
+ ! e:ë
+ %{#%}:0
+!
+! aa:ää
+! ii:ïï
+! uu:üü
+! ee:ëë
+! oo:öö
+ ; 
+
+!Diacritics
+!  @V1@ @V2@ @V3A@ @V3B@ ; 
+
+Sets
+
+ ! Phonological sets
+ Vowels = a e i o u ä ë ï ö ü ; !aa ää ïï ii uu üü ee ëë oo öö; 
+ BackV = a e i o u ; ! aa ee ii oo uu ;
+ FrontV = ä ë ï ö ü ; ! ää ëë ïï öö üü ; 
+
+ Cons = b c d f g h j k l m n p q r s t v w x y z ;
+ 
+ Back = c x h ' q ;
+ Approximants = w y ;
+
+ ! Phonotactical sets
+
+ Dummy = %+Back %+Front ; ! other verb classes here?
+
+
+ WordChars = a b c d e f g h i j k l m n o p q r s t u v w x y z '
+			á é í ó ú ý ä ë ï ö ü ! aa ee ii oo uu ää ëë ïï öö üü
+		    ; 
+
+Definitions
+ WordBoundary = [ %{##%}: | %{#%}: | %>: | %>:0 ] ;
+ MorphBoundary = [ %{#%}: ] ;
+
+
+Rules
+"VH must match"
+ Vb:Vb <=> _ ([WordChars]+) Vb ;
+		  Vb ([WordChars]+) _ ;
+   where Vb in BackV ;
+
+! urur -> urur, ürür
+
+
+"VH spreads"
+ Vb:Vf <=> _ ([WordChars]+) FrontV ;
+		   FrontV ([WordChars]+) _ ;
+	where Vb in BackV 
+          Vf in FrontV
+    matched ; 
+
+! also want only the following outcome
+! e.g., only spreading
+! wanaagsanyahäy -> wänäägsänyähäy 
+
+
+! TODO: fix this. everything works except here.
+! ururkii
+! ururkii ürürkïï
+! ururkii ürürkii
+! ururkii ururkïï
+! ururkii ururkii
+
+
+
+! TODO: stop at clitic boundaries {#k}? Need to have {#k} survive in output
+! and then strip it here. 
+
+
+! wanaagsan{#}yähay
+! --> wanaagsan{#}yähäy
+
+! TODO: combine with lexc transducer. 
+! problem appears to be that although i get the correct output with strings, it's perhaps going the opposite direction
+
+! urur
+! urur    ürür
+! urur    urur
+! 
+! wanaagsanyahay
+! wanaagsanyahay  wänäägsänyähäy
+! wanaagsanyahay  wanaagsanyahay
+! 
+! wänäägsänyähäy
+! wänäägsänyähäy  wänäägsänyähäy
+
+! in order for lookups to work, although we get surface forms the correct way, a must be the same as ä and ä must be the same as a.
