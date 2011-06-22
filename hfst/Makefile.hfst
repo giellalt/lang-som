@@ -1,0 +1,93 @@
+# *************************************************************** #
+# This is a makefile that builds the Faroese morphological parser #
+# using the HFST tools.                                           #
+# *************************************************************** #
+
+LEX = som-lex.txt \
+	  noun-som-lex.txt \
+	  noun-som-morph.txt \
+	  propernoun-som-lex.txt \
+	  propernoun-som-morph.txt \
+	  adj-som-lex.txt \
+	  adj-som-morph.txt \
+	  verb-som-lex.txt \
+	  verb-som-morph.txt \
+	  adv-som-lex.txt \
+	  abbr-som-lex.txt \
+	  acro-som-lex.txt \
+	  pron-som-lex.txt \
+	  punct-som-lex.txt \
+	  numeral-som-lex.txt \
+	  pp-som-lex.txt \
+	  cc-som-lex.txt \
+	  cs-som-lex.txt \
+	  interj-som-lex.txt \
+	  det-som-lex.txt
+
+
+vh: ../bin/som-vh.hfst
+
+twol-vh-som.hfst: ../bin/twol-vh-som.hfst
+../bin/twol-vh-som.hfst: twol-vh-som.txt
+	@echo
+	@echo "*** Building $(notdir $@) ***" ;
+	@echo
+	hfst-twolc $< -o $@ 
+
+som-vh-gen.hfst: ../bin/som-vh-gen.hfst 
+../bin/som-vh-gen.hfst: ../bin/som-gen.hfst ../bin/twol-vh-som.hfst 
+	@echo 
+	@echo "*** Building $(notdir $@) ***" ;
+	@echo 
+	hfst-compose-intersect -l $+ -o $@
+
+som-vh.hfst: ../bin/som-vh.hfst 
+../bin/som-vh.hfst: ../bin/som-vh-gen.hfst
+	@echo 
+	@echo "*** Building $(notdir $@) ***" ;
+	@echo 
+	hfst-invert $^ -o $@
+	@echo
+	@echo "*** Building lookup-optimized $(notdir $@).ol ***" ;
+	@echo
+	hfst-lookup-optimize $@ -o $@.ol
+
+
+
+
+all: ../bin/som.hfst
+
+lexc-som.hfst: ../bin/lexc-som.hfst
+../bin/lexc-som.hfst: $(LEX)
+	@echo
+	@echo "*** Building $(notdir $@) ***" ;
+	@echo
+	hfst-lexc $^ -o $@
+
+twol-som.hfst: ../bin/twol-som.hfst
+../bin/twol-som.hfst: twol-som.txt
+	@echo
+	@echo "*** Building $(notdir $@) ***" ;
+	@echo
+	hfst-twolc $< -o $@ 
+
+som-gen.hfst: ../bin/som-gen.hfst 
+../bin/som-gen.hfst: ../bin/lexc-som.hfst ../bin/twol-som.hfst
+	@echo
+	@echo "*** Building $(notdir $@) ***" ;
+	@echo
+	hfst-compose-intersect -l $+ -o $@
+
+som.hfst: ../bin/som.hfst
+../bin/som.hfst: ../bin/som-gen.hfst
+	@echo
+	@echo "*** Building $(notdir $@) ***" ;
+	@echo
+	hfst-invert $^ -o $@
+	@echo
+	@echo "*** Building lookup-optimized $(notdir $@).ol ***" ;
+	@echo
+	hfst-lookup-optimize $@ -o $@.ol
+
+clean:
+	rm -f ../bin/* ../tmp/* ../../tmp/*
