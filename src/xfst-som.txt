@@ -39,7 +39,7 @@ define InfDeletion   n y -> 0 || _ %^Inf ;
 
 
 
-!define PalatalisedSuffixes ê -> e, ë -> o || Vow Boundary (x) _ ;
+!define PalatalisedSuffixes Ãª -> e, Ã« -> o || Vow Boundary (x) _ ;
 
 !define PalatalMarkDeletion ' -> 0 || _ Boundary e ;
 
@@ -47,7 +47,7 @@ define InfDeletion   n y -> 0 || _ %^Inf ;
 
 define LtoV [ l -> v || _ [ .#. | %> Cns ] ] ;
 
-define Syncope ö2 (->) 0, e2 (->) 0, o2 (->) 0 || _ Cns %> (x) Vow ;
+define Syncope Ã¶2 (->) 0, e2 (->) 0, o2 (->) 0 || _ Cns %> (x) Vow ;
 
 define ParagogicCns j2 -> j, k2 -> k, m2 -> m, t2 -> t || _ %> Vow ;
 
@@ -55,7 +55,7 @@ define ParagogicCns j2 -> j, k2 -> k, m2 -> m, t2 -> t || _ %> Vow ;
 
 echo << defining cleanup rules >>
 
-define Cleanup ö2 -> ö, e2 -> e, o2 -> o ;
+define Cleanup Ã¶2 -> Ã¶, e2 -> e, o2 -> o ;
 
 define BoundaryDeletion [ %> -> 0 ] ;
 
