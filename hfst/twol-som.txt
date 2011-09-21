@@ -72,29 +72,29 @@ Alphabet
 Sets
 
  ! Phonological sets
- Vowels = a e i o u y á é í ó ú ý {ae} ;
+ Vowels = a e i o u y á é í ó ú ý %{ae%} ;
 
- Cons = b c d f g h j k l m n p q r s t v w x y z dh ʃ {m} kh sh ;
+ Cons = b c d f g h j k l m n p q r s t v w x y z dh ʃ %{m%} kh sh ;
  Back = c x h ' q kh ;
  Approximants = w y ;
 
  ! Phonotactical sets
- StemVowel = {e} {o} {ae} ; 
+ StemVowel = %{e%} %{o%} %{ae%} ; 
  Gutteral = q kh c x h ' ;
- T_D_alt = q kh c x h ' d w y;
- 
+ TDalt = q kh c x h ' d w y ;
+
 
  VceStop = b d g dh ɖ ;
  VcelStop = t k ;
 
- Dummy = %> C {#} {##} {X} @N@ @V1@ @V2A@ @V2B@ @V3A@ @V3B@ @PREFIXING@ @PROG@ @INF@; ! other verb classes here?
+ Dummy = %> C %{#%} %{##%} %{X%} @N@ @V1@ @V2A@ @V2B@ @V3A@ @V3B@ @PREFIXING@ @PROG@ @INF@; ! other verb classes here?
 
  V2Decl = @V2A@ @V2B@ ; 
 
  WordChars = a b c d e f g h i j k l m n o p q r s t u v w x y z '
 			dh sh kh 
 			á é í ó ú ý 
-			{#} {##} {m} {C2} {t} {d} {X} {ae} {ŧ} {đ} {ñ} {e} {n} {o} {GD} ;
+			%{#%} %{##%} %{m%} %{C2%} %{t%} %{d%} %{X%} %{ae%} %{ŧ%} %{đ%} %{ñ%} %{e%} %{n%} %{o%} %{GD%} ;
 
 Definitions
  WordBoundary = [ %{##%}: | %{#%}: | %>: | %>:0 ] ;
@@ -110,8 +110,8 @@ Rules
 	matched ;
 
 ! magaca
-! magac{#}ka{##}
-! magac{#}kii{##}
+! magac%{#%}ka%{##%}
+! magac%{#%}kii%{##%}
 
 
 ! TODO: corpus (read: google) searches reveal assimilation may be optional... magacu and magucu can be found. How to do this?
@@ -128,8 +128,8 @@ Rules
 
 ! NOTE: More detailed explanation is in verb-som-morph.txt
 
-! maq^al{#}@V1@@PROG@ay{#}{đ}aa{##}
-! maq^al{#}@V1@{đ}ay{##}
+! maq^al%{#%}@V1@@PROG@ay%{#%}%{đ%}aa%{##%}
+! maq^al%{#%}@V1@%{đ%}ay%{##%}
 ! maqal > maqlay, maqlayaa, maqal
 
 ! maqlay		maqalnay/maqallay
@@ -159,11 +159,11 @@ Rules
 "n doubling in V3A"
  @V3A@:n <=> _ :n ; 
 
-! joogs{o}{#}@V3A@ay{#}
+! joogs%{o%}%{#%}@V3A@ay%{#%}
 ! @V3A@ -> n / [ a e ] y WordBoundary
 
 !"infinitival -n- in Progressive"
-! @V3A@:n <=> {o}: WordBoundary _ a y [ WordChars - {##}: ] ; 
+! @V3A@:n <=> %{o%}: WordBoundary _ a y [ WordChars - %{##%}: ] ; 
 
 "infin -n-"
  @V3A@:n <=> _ a y WordBoundary ; 
@@ -182,26 +182,26 @@ Rules
 ! alternation occurs, so that that alternation can later apply. Otherwise
 ! these rules block each other.
 
-! samee{#}@2B@y{ŧ}aa
+! samee%{#%}@2B@y%{ŧ%}aa
 
-! joogs{o}{#}@V3B@{ŧ}ay
-! keen{#}@V3B@{ŧ}ay
+! joogs%{o%}%{#%}@V3B@%{ŧ%}ay
+! keen%{#%}@V3B@%{ŧ%}ay
 
 
 "ŧ realization"
- %{ŧ%}:ŧx <=> ( [Cons - T_D_alt] ) WordBoundary Declensions: (WordChars+) _ ;
+ %{ŧ%}:ŧx <=> ( [Cons - TDalt] ) WordBoundary Declensions: (WordChars+) _ ;
 	where Declensions in (@V1@ @V2A@ @V2B@ @V3A@ @V3B@)
 		  ŧx in (t s s t t)
 	matched ;
 
 ! TEST: dhacday
 "ŧ->d / [Gutteral] _ " 
- %{ŧ%}:d <=> [T_D_alt] WordBoundary @V1@: _ ;
+ %{ŧ%}:d <=> [TDalt] WordBoundary @V1@: _ ;
 
 
 "đ/ŧ realization in progressive"
  Cx:Cy <=> y WordBoundary _ ; 
-	where Cx in ({đ} {ŧ})
+	where Cx in (%{đ%} %{ŧ%})
 		  Cy in (0 s)
 	matched ;
 
@@ -209,25 +209,25 @@ Rules
  %{ŧ%}:s <=> WordChars WordBoundary @V2B@: _ ;
 
 !"o realizationn V3A"
-! %{o%}:a <=> _ WordBoundary [ @V3A@: | { @V3A@ WordChars - a } ] ; 
+! %{o%}:a <=> _ WordBoundary [ @V3A@: | %{ @V3A@ WordChars - a %} ] ; 
 
 "o deletion in V3A" 
  %{o%}:0 <=> _ WordBoundary [@V3A@: | @V3B@: - @V3A@:n ] ( WordBoundary )( WordBoundary )  a ;
 
-! samee{#}@V2B@yaa
+! samee%{#%}@V2B@yaa
 "ee realization in V2B"
  %{e%}:y <=> _ WordBoundary @V2B@: [:Cons - :y] ; 
 
-!"{d} realization in V3B"
-! %{d%}:t <=> _ {o}: WordBoundary :d ; 
+!"%{d%} realization in V3B"
+! %{d%}:t <=> _ %{o%}: WordBoundary :d ; 
 
 
 ! [ Cons - y ]
-! dad{#}kay{GD}a
-! magac{#}káy{GD}a{##}
-! warqad+N+Fem+Sg+Def+PxSg2+Nom+Prox      warqad{#}táa{GD}u{##}
-! meel+N+Fem+Sg+Def+PxSg2+Nom+Dist        meel{#}táa{GD}ii{##}
-! dayuurad+N+Fem+Sg+Def+PxPl1Excl+Nom+Dist        dayuurad{#}tayá{GD}ii{##}
+! dad%{#%}kay%{GD%}a
+! magac%{#%}káy%{GD%}a%{##%}
+! warqad+N+Fem+Sg+Def+PxSg2+Nom+Prox      warqad%{#%}táa%{GD%}u%{##%}
+! meel+N+Fem+Sg+Def+PxSg2+Nom+Dist        meel%{#%}táa%{GD%}ii%{##%}
+! dayuurad+N+Fem+Sg+Def+PxPl1Excl+Nom+Dist        dayuurad%{#%}tayá%{GD%}ii%{##%}
 
 "Possessive gender agreement"
  %{GD%}:Cy <=> MorphBoundary :Gender WordChars+ _ ;
@@ -287,28 +287,28 @@ Rules
 
 
 ! kursiyo
-! kursi{#}{C2}o{##}
+! kursi%{#%}%{C2%}o%{##%}
 
 "Declension 2: -y insertion after back sounds and fricatives; and after -i"
  %{C2%}:y <=> Cz WordBoundary @N@:0 _ PlVowels ; 
-	where Cz in (c q x s j χ i {đ})
+	where Cz in (c q x s j χ i %{đ%})
 	PlVowels in (a o á ó) ;
 
 
 ! guriyo
-! guri{#}o{##}
+! guri%{#%}o%{##%}
 
 "-y- insertion in plurals"
- 0:y <=> i MorphBoundary _ Vow_ ;
-	where Vow_ in (a o u e á ó ú é) ;
+ 0:y <=> i MorphBoundary _ Vx ;
+	where Vx in (a o u e á ó ú é) ;
 
  
 "-t to 0 after -dh"
   t:0 <=> d h _ Vowels ; 
 
 
-! maal^i{m}{#}ta{##}
-! kib^is{#}o{##}
+! maal^i%{m%}%{#%}ta%{##%}
+! kib^is%{#%}o%{##%}
  
 ! galab > galbo, ilig > ilko
 "Declension 3: Plural vowel deletion"
@@ -330,8 +330,8 @@ Rules
 !!! ! WordBoundary \?:WordChars
 
 ! magaca
-! magac{#}ka{##}
-! magac{#}kii{##}
+! magac%{#%}ka%{##%}
+! magac%{#%}kii%{##%}
 
 "Velar deletion after Back"
  k:0 <=> Back MorphBoundary _ ;
@@ -356,20 +356,20 @@ Rules
 !!!        Cr in (p t k)
 !!! 		matched ; 
 
-! maal^i{m}{#}{##}
-! maal^i{m}{#}o{##}
-! maal^i{m}{#}ta{##}
+! maal^i%{m%}%{#%}%{##%}
+! maal^i%{m%}%{#%}o%{##%}
+! maal^i%{m%}%{#%}ta%{##%}
 
-! kul^a{m}{#}@V1@{##}
-! maal^i{m}{#}{##}
+! kul^a%{m%}%{#%}@V1@%{##%}
+! maal^i%{m%}%{#%}%{##%}
 
 
 ! "m->n finally"
-!  {m}:n <=> _ WordBoundary ;
+!  %{m%}:n <=> _ WordBoundary ;
 
 "m->n in codas"
  %{m%}:n <=> _ MorphBoundary ( :0 ) [ WordBoundary | k: | t: ] ; 
- !!! where Cm in (m {m}) ;
+ !!! where Cm in (m %{m%}) ;
 
 ! maalin, maalmo, maalinta, maalmaha, *maalim
 
@@ -388,12 +388,12 @@ Rules
 !!! ! must not have qaadtay
 !!! 
 !!! "t->d / [Gutteral] _ " 
-!!!  %{t%}:d <=> T_D_alt WordBoundary _ ; 
+!!!  %{t%}:d <=> TDalt WordBoundary _ ; 
 !!! 
 !!! 
-!!! ! w a {d}:d {o}:a {#}:0 t a y     // wadatay
-!!! ! w a {d}:t {o}:0 {#}:0 a y       // watay 
-!!! ! w a {d}:t {o}:0 {#}:0 e e n     // wateen
+!!! ! w a %{d%}:d %{o%}:a %{#%}:0 t a y     // wadatay
+!!! ! w a %{d%}:t %{o%}:0 %{#%}:0 a y       // watay 
+!!! ! w a %{d%}:t %{o%}:0 %{#%}:0 e e n     // wateen
 !!! 
 !!! ! TESTS: watay, wadatay, wadannay, wateen, wadeen
 !!! "d->t in 3B verbs"
@@ -410,14 +410,14 @@ Rules
 !!! 
 
 
-!  akhri{#}@V1@@INF@{##}
-!  t{ae}g{#}@V1@@INF@{##}
+!  akhri%{#%}@V1@@INF@%{##%}
+!  t%{ae%}g%{#%}@V1@@INF@%{##%}
 "V1 Infinitive -i-"
  @INF@:i <=>  WordChars WordChars [WordChars - i] MorphBoundary @V1@:0 _ WordBoundary ;
 
 ! i MorphBoundary @V1@:0 _ WordBoundary ; 
 
-! t{ae}g{#}@V1@@INF@{##}
+! t%{ae%}g%{#%}@V1@@INF@%{##%}
 "a/e umlaut before i/e"
   %{ae%}:e <=> Cons _ Cons MorphBoundary ([:0]+) [ :i | :e ] ;
 
@@ -431,17 +431,17 @@ Rules
 !!!  t:0 <=> d h WordBoundary _ ;  
 !!! 
 !!! ! duul -> duushay
-!!! ! d u u l {#}  0 {t} a y
+!!! ! d u u l %{#%}  0 %{t%} a y
 !!! 
 !!! ! TESTS: duushay, gashay
 !!! 
 
-! maq^al{#}@V1@@PROG@ay{#}{đ}aa{##}
-! maq^al{#}@V1@{đ}ay{##}
+! maq^al%{#%}@V1@@PROG@ay%{#%}%{đ%}aa%{##%}
+! maq^al%{#%}@V1@%{đ%}ay%{##%}
 ! maqal+V+2Sg+Ind+Past
-! maq^al{#}@V1@{ŧ}ay{##}
+! maq^al%{#%}@V1@%{ŧ%}ay%{##%}
 
-! m:m a:a q:q %^:0 a:a l:s {#}:0 @V1@:0 {d}:t a y {##}:0
+! m:m a:a q:q %^:0 a:a l:s %{#%}:0 @V1@:0 %{d%}:t a y %{##%}:0
 
 
 ! lt
@@ -450,12 +450,12 @@ Rules
 ! l:s t:h
 
 "lt -> sh pt 1" 
-  l:s <=> _ MorphBoundary @V1@:0 {ŧ}:h ; 
+  l:s <=> _ MorphBoundary @V1@:0 %{ŧ%}:h ; 
  
 "lt -> sh pt 2"
  %{ŧ%}:h <=> l:s MorphBoundary @V1@:0 _ ; 
 
- !  maq^al{#}@V1@{ŧ}ay{##}
+ !  maq^al%{#%}@V1@%{ŧ%}ay%{##%}
  !"lt -> sh pt 2"
  ! %{ŧ%}:h <=> l:s MorphBoundary Dummy:0 _ ;
 
