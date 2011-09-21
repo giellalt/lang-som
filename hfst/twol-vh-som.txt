@@ -54,7 +54,8 @@ Sets
 		    ; 
 
 Definitions
- WordBoundary = [ %{##%}: | %{#%}: | %>: | %>:0 ] ;
+! WordBoundary = [ %{##%}: | %{#%}: | %>: | %>:0 ] ; ! ## causes error
+ WordBoundary = [%{#%}: | %>: | %>:0 ] ;
  MorphBoundary = [ %{#%}: ] ;
 
 
