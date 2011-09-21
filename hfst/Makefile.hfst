@@ -39,7 +39,8 @@ som-vh-gen.hfst: ../bin/som-vh-gen.hfst
 	@echo 
 	@echo "*** Building $(notdir $@) ***" ;
 	@echo 
-	hfst-compose-intersect -l $+ -o $@
+	hfst-compose-intersect -1 ../bin/som-gen.hfst -2 ../bin/twol-vh-som.hfst -o $@ # hfst3
+#	hfst-compose-intersect -l $+ -o $@   # hfst2
 
 som-vh.hfst: ../bin/som-vh.hfst 
 ../bin/som-vh.hfst: ../bin/som-vh-gen.hfst
@@ -50,8 +51,8 @@ som-vh.hfst: ../bin/som-vh.hfst
 	@echo
 	@echo "*** Building lookup-optimized $(notdir $@).ol ***" ;
 	@echo
-	hfst-lookup-optimize $@ -o $@.ol
-
+#	hfst-lookup-optimize $@ -o $@.ol #hfst2
+	hfst-fst2fst -O -i $@ -o $@.ol # hfst3
 
 
 
@@ -76,8 +77,8 @@ som-gen.hfst: ../bin/som-gen.hfst
 	@echo
 	@echo "*** Building $(notdir $@) ***" ;
 	@echo
-	hfst-compose-intersect -l $+ -o $@
-
+	hfst-compose-intersect -1 ../bin/lexc-som.hfst -2 ../bin/twol-som.hfst -o $@ # hfst3
+#	hfst-compose-intersect -l $+ -o $@ # hfst2
 som.hfst: ../bin/som.hfst
 ../bin/som.hfst: ../bin/som-gen.hfst
 	@echo
@@ -87,7 +88,9 @@ som.hfst: ../bin/som.hfst
 	@echo
 	@echo "*** Building lookup-optimized $(notdir $@).ol ***" ;
 	@echo
-	hfst-lookup-optimize $@ -o $@.ol
+#	hfst-lookup-optimize $@ -o $@.ol # hfst2
+	hfst-fst2fst -O -i $@ -o $@.ol   # hfst3
+
 
 clean:
 	rm -f ../bin/* ../tmp/* ../../tmp/*
