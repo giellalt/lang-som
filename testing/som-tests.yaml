@@ -1,0 +1,29 @@
+Config:
+  hfst:
+    Gen: ../bin/som-gen.hfst
+    Morph: ../bin/som-vh.hfst
+  xerox:
+    Gen: ../bin/isom.fst
+    Morph: ../bin/som.fst
+    App: lookup
+
+Tests:
+  Noun - blabla: # a-stems
+    blabla+N+Masc+Indef+Sg+Abs: blabla
+    blabla+N+Masc+Indef+Sg+Nom: blablam
+    blabla+N+Masc+Indef+Sg+Gen: blablak
+    blabla+N+Masc+Indef+Sg+Voc: blablap
+    blabla+N+Masc+Indef+Pl+Abs: blabla
+    blabla+N+Masc+Indef+Pl+Nom: blabla
+    blabla+N+Masc+Indef+Pl+Gen: blabla
+    blabla+N+Masc+Indef+Pl+Voc: blabla
+    blabla+N+Masc+Def+Sg+Abs: blabla
+    blabla+N+Masc+Def+Sg+Nom: blabla
+    blabla+N+Masc+Def+Sg+Gen: blabla
+    blabla+N+Masc+Def+Sg+Voc: blabla
+    blabla+N+Masc+Def+Pl+Abs: blabla
+    blabla+N+Masc+Def+Pl+Nom: blabla
+    blabla+N+Masc+Def+Pl+Gen: blabla
+    blabla+N+Masc+Def+Pl+Voc: blabla
+
+
