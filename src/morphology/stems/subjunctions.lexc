@@ -1,0 +1,166 @@
+﻿! TODO: tones.
+
+! Inuu yimaadaa waa run.
+! inaad timaaddaa waa fiican tahay. 
+! Waxaan rajeynayaa inaad timaaddo.
+LEXICON Subjunctions
+  Subjunction ;
+
+LEXICON Subjunction 
+CS ;
+FOC ;
+
+! TODO: have to decide what to do about the paths here.
+! waxa+FocR#uu+Cl+Pron+Pers+SgMasc3
+! waxa+FocR+uu+Cl+Pron+Pers+SgMasc3 
+
+
+LEXICON CS
+CS_Pers ;
+CS_None ;
+
+! sidaas daraaddeed - therefore
+!        daraadda 'sake'
+
+LEXICON CS_Pers
+
+! Subordinate adverbial CS
+goormaa+CS+Adv:goo´rm Clit_prep2 "when" ;
+markaas+CS+Adv:markaas Clit_prep2 "when" ;
+intii+CS+Adv:int Clit_prep2 "while, since" ;
+markii+CS+Adv:mark Clit_prep2 "while, since" ;
+haddii+CS+Adv:hadd Clit_prep2 "if" ;
+kolkii+CS+Adv:kolk Clit_prep2 "when" ;
+sidii+CS+Adv:sid Clit_prep2 "how" ;
+goortii+CS+Adv:goort Clit_prep2 "when" ;
+sidaas+CS+Adv:sidaas Clit_prep2 "in this manner" ;
+kolkaa+CS+Adv:kolkaas Clit_prep2 "when, then" ;
+
+! Subordinate complementizer
+in+CS:in Clit_prep2 ;
+
+
+! Some of these are probably not CSes
+LEXICON CS_None
+aan+CS+Neg:aan FINAL ;
+
+oo+CS:oo FINAL ;
+oo+CS+Restr:oo FINAL ;
+oo+CS+Appos:oo FINAL ; ! Appositive clauses
+
+ee+CS+Restr:ee FINAL ; ! Both CS and CC, CS restr
+
+ma+CS+Neg:ma Clitics "not" ; ! mana, mase, maba
+ma+CS+Interr:ma Clitics "?" ; ! mana, mase, maba
+ha+CS+Imper+Neg:ha Clitics "don't" ; ! hana, hase, *haba?
+laakiin+CS:laakiin Clitics "but" ; 
+haseeyeeshee+CS+Appos:haseeyeeshee Clitics "but" ;
+in+CS:in FINAL ;
+
+! u+Adp or oo?
+in+CS#u+Adp:inoo FINAL ;
+
+sidee+CS+Adv:sidee FINAL ;
+intii+CS+Adv:intii FINAL "while, since" ;
+sidii+CS+Adv:sidii FINAL "how" ;
+haddii+CS+Adv:haddii FINAL "if" ;
+markii+CS+Adv:markii FINAL "when" ;
+hadii+CS+Use/NG+Adv:hadii FINAL "if" ;
+goortii+CS+Adv:goortii FINAL "when" ;
+
+sida+CS+Adv:sida FINAL "like, how, thus" ;
+si+CS+Adv:si FINAL "how, the way" ;
+hadda+CS+Adv:hadda Clitics "then" ;
+weli+CS:weli Clitics "yet, still (?)" ;
+hada+CS+Use/NG+Adv:hada Clitics "then" ;
+
+sidii+CS+Adv:sidaas Clitics "how" ;
+taas+CS:taas Clitics "therefore" ;
+
+! TODO: These may be CC
+asii+CS:asii Clitics ;
+bacdamaa+CS:bacdamaa Clitics ;
+hayeeshee+CS:hayeeshee Clitics ;
+illeen+CS:illeen Clitics ;
+illowse+CS:illowse Clitics ;
+inkasta+CS:inkasta Clitics ;
+kol+CS+Adv:kol Clitics ;
+maadaama+CS:maadaama Clitics ;
+minii+CS:minii Clitics ;
+misana+CS:misana Clitics ;
+se+CS:se Clitics ;
+walow+CS:walow Clitics ;
+habase+CS:habase Clitics "however" ; 
+
+! forms: sidoo, sidaas 'so (result); why'
+! also, with case, sidaasi 
+! Cali Xamiid ayaa ii tuusaya sida loo qodo cusbada, sidaasi oo oo aabihii iyo awoowyadii sameyn jireen, iyago isticmaalaya dhagax weyn oo madow, waxa uu yiri waa qalabka reer miyiga.  
+! sidee+CS:sid Clit_prep2 ;
+! sid
+! sidatan
+! sideedda
+! sideetan
+! sido
+! sidoo
+! sidooo
+! siduu
+
+! ! sidda
+! ! sidday
+! ! siddeed
+! ! siddeed iyo toban
+! ! siddeedaad
+! ! siddeedda
+! ! siddeetamaadkii
+! ! siddeetan
+! ! siddeetanaad
+! ! siddo
+! ! siddoo
+
+LEXICON FOC
+	WAXA ;
+waa+CS+Foc/V:w Clit_prep2 ;
+baa+CS+Foc/L:b Clit_prep2 ;
+ma+CS+Neg:m Clit_prep2 ;
+ma+CS+Interr:m Clit_prep2 ;
+! TODO: how to mark that this is fused form of yaa aad, where there's Abs and
+! then Subj?
+yaa+Pron+Interr+Abs+CS:y Clit_prep2 ;
+
+ayaa+CS+Foc/L:ay Clit_prep2 ;
+ayaa+CS+Interr+Foc/L:miy Clit_prep2 ;
+
+
+LEXICON WAXA
+waxa+CS+Foc/R:wax´{#} Clit_prep_notone ;
+waxa+CS+Interr+Foc/R:max´{#} Clit_prep ; ! TODO: maxáad, not *máxaad
+
+
+! Note: according to orwin, ma + ayaa = miyaa. Should lemma be ayaa still?
+
+
+! Negative comes in between these. wax-aan-aynu, b-aan-an, what is 'wax-aan-a'? 'waxanu'?
+
+! inaanay
+! TODO: tones
+LEXICON Clit_prep
+Clit_pron_short_tag_hightone ;
++Subj+Null:a Clitics ; ! Allow focus markers etc., to stand on own
++Subj+Null:aa Clitics ; ! Not sure which is right here.
++Subj+Null:aa´´ Clitics ; ! Not sure which is right here.
+
+LEXICON Clit_prep_notone
+Clit_pron_short_tag ;
++Subj+Null:a Clitics ; ! Allow focus markers etc., to stand on own
++Subj+Null:aa Clitics ; ! Not sure which is right here.
+
+LEXICON Clit_prep2
+Clit_pron_short_tag_hightone ;
+! TODO: probably need to change to +Neg/aan? 
++Subj+Null+Neg:aan Clitics ;
++Subj+Null:aa Clitics ;
++Subj+Null:aa´´ Clitics ; ! Not sure which is right here.
+
+
+! vim: set ts=4 sw=4 tw=0 syntax=lexc :
+

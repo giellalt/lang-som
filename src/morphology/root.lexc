@@ -1,0 +1,423 @@
+! Divvun & Giellatekno - open source grammars for UNDEFINED language
+! Copyright © 2012 The University of Tromsø & the Norwegian Sámi Parliament
+! http://giellatekno.uit.no & http://divvun.no
+!
+! This program is free software; you can redistribute and/or modify
+! this file under the terms of the GNU General Public License as published by
+! the Free Software Foundation, either version 3 of the License, or
+! (at your option) any later version. The GNU General Public License
+! is found at http://www.gnu.org/licenses/gpl.html. It is
+! also available in the file $GTHOME/LICENSE.txt.
+!
+! Other licensing options are available upon request, please contact
+! giellatekno@hum.uit.no or divvun@samediggi.no
+
+! ========================================================================== !
+! !!            !!!Somali morphological analyser                      !
+! ========================================================================== !
+!! INTRODUCTION TO MORPHOLOGICAL ANALYSER OF Somali LANGUAGE.
+ 
+
+Multichar_Symbols  !!≈ !!!@CODE@ definitions
+
+!! !!Analysis symbols
+!! ----------------
+!! The morphological analyses of wordforms of UNDEFINED language are presented
+!! in this system in terms of following symbols.
+!! (It is highly suggested to follow existing standards when adding new tags).
+
+!! The parts-of-speech are:
+ +N +V +A +Adp +Q +Pr +Adv +CC +CS +Interj +Pron +Num
+
+! TODO: copied this over, but need to remember why it was there.
+
+!! # 
+
+!! Fusional adpositions
+
+ +Adp/u
+ +Adp/ka
+ +Adp/la
+ +Adp/ku
+
+!! Focus
+
++Foc/L +Foc/R
+
+!! The parts of speech are further split up into:
+ +Interr +Interr/ma +Attr +Short +Cmp +Der/sho +Pfx +PP +Sep +Com
+ +Appos +Impers +Inch
+ 
+ +Recit +Restr
+
+ +Pers
+ +Dem
+ +Coll
+ +Mass
+ +Acr
+ +Abstr
+
+
+!! Verb and noun declensions for the analysers that want to know about that
+ +Decl/1 +Decl/2 +Decl/2A +Decl/2B +Decl/3 +Decl/3A +Decl/3B +Decl/4 +Decl/5
+ +Decl/6 +Decl/7
+
+!! The Usage extents are marked using following tags:
+ +Use/Sub   
+ +Use/-Spell 
+ +Use/-Spell
+ +Use/Circ
+ +Use/CircN
+ +Use/LexSub
+ +Use/Marg
+ +Use/NA
+ +Use/NG
+ +Use/Ped
+ +Use/SpellNoSugg+Prog
+ +Use/Sub
+
+!! The nominals are inflected in the following Case and Number
+ +Sg +Du +Pl
+ +Ess +Nom +Gen +Acc +Ill +Loc +Com +Com/Sh
+ +Indef +Def
+ +Sg +Pl
+ +Prop +Plc
+ +Abbr
+ +Masc +Fem
+ +Nom +Abs +Acc +Gen +Abl +Dat 
+ +Dist +Prox +Near +Far +Farther +Close
+ +Adc 
+ +Apr
+ +Prl +Apr
+ +Cns
+ +Ord
+
+!! The possession is marked as such:
++PxSg1 +PxSg2 +PxSg3F +PxPl1 +PxPl2 +PxPl3 +PxSg3M +PxPl1Incl +PxPl1Excl
+!! The comparative forms are:
+ +Comp +Superl
+!! Numerals are classified under:
+ +Attr +Card
+ +Ord 
+!! Verb moods are:
+ +Ind +Prs +Prt +Pot +Cond +Imprt
+!! Verb personal forms are:
+ +Sg1 +Sg2 +Sg3 +Du1 +Du2 +Du3 +Pl1 +Pl2 +Pl3
+!! Other verb forms are
+ +Inf +Ger +ConNeg +ConNegII +Neg +ImprtII +PrsPrc +PrfPrc +Sup +VGen +VAbess
+
+! Abbreviated words are classified with:
+ +ABBR +ACR 
+!! Special symbols are classified with:
++CLB +PUNCT +LEFT +RIGHT
+!! The verbs are syntactically split according to transitivity:
+ +TV +IV +DV
+!! Special multiword units are analysed with:
+ +Multi
+!! Non-dictionary words can be recognised with:
+ +Guess
+ ^GUESSNOUNROOT
+
+!! Question and Focus particles:
+ +Qst +Foc
+
+
+!! Semantics are classified with
+
+
+!! Derivations are classified under the morphophonetic form of the suffix, the
+!! source and target part-of-speech.
+ +V→N +V→V +V→A
+ +Der/xxx
+
+
+!! And some things that I haven't moved up to other categories yet...
+
+ +Prs +Fut +Prt +Prf
+ 
+ +1SgObj/i
+ +2SgObj/ku
+ 
+ +Past
+ +Pres
+ +Ptcpl
+ +Ind +Imp +Cond +Opt +Neg
+ +Inf +Red
+ +Imper
+ +1Sg +2Sg +3Sg +3SgM +3SgF +1Pl +2Pl +3Pl
+ +Incl +Excl
+ +Irr +Term +Cond +Des +Compl +Dim
+ 
+ 
+!! Syntaxy stuff, don't want to use +Acc, because this isn't relevant in nouns
+ +Subj +Obj
+ 
+!! Nominal MSP
+ +Rel
+ 
+!! Derivation
+ 
+ +Der/A
+ +Der/V
+ +Der/N
+ 
+!! Clitics
+ 
+ +Clit/ba
+ +Clit/se
+ +Clit/na
+ +Clit/oo
+ 
+ +Clit/CS
+ +Clit/Without
+ 
+ 
+!! Style 
+ 
+ +Use/NG
+ 
+ +Sty 
+ +Sty/TODO
+ +Sty/i
+ +Sty/D
+ +Sty/R
+ 
+ +TODO
+
+!! Morphophonology
+!! ---------------
+!! To represent phonologic variations in word forms we use the following
+!! symbols in the lexicon files:
+ {aä} {oö} {uü}
+
+!! Verb declensions
+{N}
+
+!! Going to try to replace these with flag diacritics if possible.
+
+! TODO: these may not be in use?
+
+{V1}
+{V2A}
+{V2B}
+{V3A}
+{V3B}
+{PREFIXING}
+{INF}
+
+!! And following triggers to control variation
+ {front} {back}
+
+{PROG}
+%
+%>
+
+{#} {##} - 
+
+ ! TODO: no need for , but needs to be removed in all files
+ {t} {o} {m} {mm} {C2} {d} {X} {ae} {e} {-e} {a} {-VV} {-V} {-I} {-w} {-a}
+ 
+ {E} ! part of cliticized ee (CS+Appos)
+
+ {ea} ! aabbe - aabbaha
+ {m}
+ {y}
+
+ {ATR}
+
+! Person consonants
+ {ŧ} {đ} {ñ}
+
+! V2* inf
+ {n}
+
+! Tone 
+ {aá}
+ {áa}
+ {aa}
+
+ ´
+ ´´
+
+!! We have manually optimised the structure of our lexicon using following
+!! flag diacritics to restrict morhpological combinatorics:
+@P.NeedNoun.ON@  @D.NeedNoun.ON@  @C.NeedNoun@
+
+@P.STYLE.NG@
+@R.STYLE.NG@
+
+@P.VCLASS.V1@  @R.VCLASS.V1@
+@P.VCLASS.V1ow@  @R.VCLASS.V1ow@
+@P.VCLASS.V1ow2@  @R.VCLASS.V1ow2@
+
+@P.VCLASS.V2A@ @R.VCLASS.V2A@
+@P.VCLASS.V2B@ @R.VCLASS.V2B@
+@P.VCLASS.V3A@ @R.VCLASS.V3A@
+@P.VCLASS.V3B@ @R.VCLASS.V3B@
+@P.VCLASS.V3B_ADel@ @R.VCLASS.V3B_ADel@
+@P.VCLASS.V3B_ADelPart@ @R.VCLASS.V3B_ADelPart@
+@P.VCLASS.PREFIXING@
+
+@U.VCLASS.V1@ 
+@U.VCLASS.V2A@
+@U.VCLASS.V2B@
+@U.VCLASS.V3A@
+@U.VCLASS.V3B@
+@U.VCLASS.UREFIXING@
+
+@P.ATR.True@
+@R.ATR.True@
+
+!! Person flags
+
+@U.Pers.1Sg@
+@U.Pers.2Sg@
+@U.Pers.3SgM@
+@U.Pers.3SgF@
+
+@U.Pers.1Pl@
+@U.Pers.2Pl@
+@U.Pers.3Pl@
+
+
+@P.Pers.1Sg@
+@P.Pers.2Sg@
+@P.Pers.3SgM@
+@P.Pers.3SgF@
+
+@P.Pers.1Pl@
+@P.Pers.2Pl@
+@P.Pers.3Pl@
+
+
+@R.Pers.1Sg@
+@R.Pers.2Sg@
+@R.Pers.3SgM@
+@R.Pers.3SgF@
+
+@R.Pers.1Pl@
+@R.Pers.2Pl@
+@R.Pers.3Pl@
+
+@R.Gender.Masc@
+@P.Gender.Masc@
+
+@R.Gender.Fem@
+@P.Gender.Fem@
+
+!! TODO: adj-som-lex.txt.d
+!! TODO: allcaps.xfst
+!! TODO: apply_tones.regex
+!! TODO: case.regex
+!! TODO: det-som-lex.txt
+!! TODO: guess-script.xfst
+!! TODO: inituppercase.regex
+!! TODO: interj-som-lex.txt
+!! TODO: noun-guesser.xfst
+!! TODO: num-som-lex.txt
+!! TODO: num-som-morph.txt
+!! TODO: pp-som-lex.txt
+!! TODO: punct-som-lex.txt
+!! TODO: remove_declension_tags.regex
+!! TODO: remove_tones.regex
+!! TODO: remove_usage_tags.regex
+!! TODO: som-dis.rle
+!! TODO: spellrelax.regex
+!! TODO: tag-not-save.regex
+!! TODO: tagfix.xfst
+!! TODO: tok.xfst
+!! TODO: twol-vh-som.txt
+!! TODO: use-DIAL-filter.regex
+!! TODO: use-NG-filter.regex
+!! TODO: use-sub-filter.regex
+!! TODO: verb-som-irregular.txt
+!! TODO: verb-som-lex.txt.d
+
+LEXICON Root
+!! The word forms in UNDEFINED language start from the lexeme roots of basic
+!! word classes, or optionally from prefixes:
+Abbreviations ; 
+
+Nouns ;
+
+Pronouns ; 
+Verbs ;
+Adjectives ;
+Numerals ; 
+
+Adverbs ;
+
+Conjunctions ;
+Subjunctions ;
+
+
+!! Prefixes  ;
+!! Acronyms ;
+!! 
+!! !! these are coming from som-lex.txt
+!! Determiner ;
+!! Noun ;
+!! IrregularNounMorph ;
+!! Verb ;
+!! IrregularVerb ;
+!! VerbalPrefixes ;
+!! Adjective ;
+!! IrregularAdjective ;
+!! Adverb ;
+!! Interjection ;
+!! Pronoun ;
+!! Conjunction ;
+!! Subjunction ;
+!! Postposition ;
+!! Punctuation ;
+
+LEXICON FINAL_NG
+
+ +Use/NG:{##} 	# ;
+
+LEXICON FINAL
+
+ :{##} 	# ;
+
+! +Use/NG:@R.STYLE.NG@{##}		# ;
+! @R.ATR.True@+ATR:@R.ATR.True@{##}   # ;  ! ATR tag
+! @R.ATR.True@+ATR:@R.ATR.True@¨{##} # ;
+
+
+
+! These lexica are dummy lexical to make the source compile.
+
+LEXICON Proper 
+# ;
+
+LEXICON Unknown_Declensions
+# ;
+
+LEXICON Obj_Pron
+# ;
+
+LEXICON SemiReducedPerson
+# ;
+
+
+! TODO: the following is copied from som-lex.txt, probably needs to be moved elsewhere.
+
+! GUESSNOUN ;
+! TODO: maybe make some very specific regexes for some word types to find
+! attested forms? -ayso, sanaa, sanayd, etc. Try testing with grep first
+
+! LEXICON GUESSNOUN
+!  < (
+!      ( [ b | x | n | t | s | d | g | r ]* ) 
+!        [ a | i | o | u | e ] 
+!      ( [ b | x | n | t | s | d | g | r ]* )
+!    )* 
+!    [{ga} | {gii} | {gu} | {ha} | {ka}] > TAG ;
+! 
+
+! LEXICON TAG
+!  +N+Guess: # ;
+
+
+
+! vim: set ft=lexc:
