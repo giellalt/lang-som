@@ -1,0 +1,1279 @@
+!! Verb inflection
+!! ---------------
+!! The UNDEFINED language verbs inflect in persons.
+
+! ----------------- !
+! Prefix morphology !
+! ----------------- !
+
+ ! ------------------------- !
+ !  Morphophonological notes !
+ ! ------------------------- !
+
+    ! *** For information on changes that are more to do with stems,
+    ! take a look at the corresponding lexicon file. ***
+
+    ! Person morphemes
+    !   No longer using these, but for reference: this is how personal markers
+    !   surface
+
+            ! {đ} - 1Sg, 3SgM and 3Pl ;     realized as 0/y/d in classes
+            ! {ŧ} - 2Sg, 3SgF, 2Pl ;    realized as t/s in classes
+            ! {ñ} - 1Pl ;               realized as n in all classes
+            !                             'special' here just in case.
+
+    ! Diacritics
+    !   Verb classes are marked with flag @DIACRITICS@, which have no surface
+    !   representation, these are meant to control paths to different personal
+    !   morphemes, because some paths converge at some point.
+
+    ! Boundaries
+    !   Morpheme boundaries are sometimes recognized, or at least when
+    !   they are significant to morphophonology.
+
+            ! {#} - Morpheme boundary
+            ! {##} - Ultimate word boundary
+
+    !   Probably not going to use {##} too much, but maybe it will be
+    !   useful when I start caring about clitics.
+
+    ! Style tags
+    !   Need to do some research for these. Currently all I have are
+    !   ay/ey alternation but not the one that occurs in progressive.
+    !   It's likely that this is a dialectical thing, but it may also
+    !   be phonological. Either way -ay- is most typically recognized
+    !   by the northern dialects, which are considered more 'standard'
+    !   for writing, but, some writers are comfortable with -ey-.
+
+            ! ay
+            ! ey - +Sty/TODO
+
+ ! --------------------- !
+ ! Brief verb morphology !
+ ! --------------------- !
+
+    ! Person
+    !
+    !  Somali verbs agree with nominative marked subjects for person and number
+    !  but not inclusivity/exclusivity. The latter aspect is only carried on
+    !  pronouns.
+    !
+    !  Person marking is sometimes shown by prefix (verb-som-irregular.txt)
+    !  but the vast majority of words are suffixal.
+    !
+    !  An interesting facet of verb agreement is that there is a similarity
+    !  in both suffixing and prefixing verbs between 1Sg and 3SgM forms and
+    !  2Sg and 3SgF forms.
+
+    !    1Sg/3SgM       keenaa
+    !    2Sg/3SgF       keentaa
+
+    !  However, in paradigms in this document, these forms will be listed separately.
+    !
+    !  Another note is that there are two separate 2Sg forms. Unsure what the
+    !  variation is, however for now I'm just going to note that it exists. The alternate
+    !  form is -id, and occurs in : General Present Negative (keentó / keentíd),
+    !  present progressive negative (máyso / máysíd), present progressive negative
+    !  (keénaysó / keénaysíd), optative (keénto / keéntid)
+
+    ! -------
+
+    ! Reduced and Full person paradigms
+
+    !  The use of these will be decribed in more detail below, but there is a reduced
+    !  paradigm of verb agreement in Somali. Following is a simplified description of
+    !  the agreement patterns with single letters substituted for verb forms.
+
+    !!          Full            Reduced
+    !!
+    !!   1Sg    A               A
+    !!   2Sg    B               A
+    !!   3SgM   A               A
+    !!   3SgF   B               B
+    !!   1Pl    C               C
+    !!   2Pl    D               A
+    !!   3Pl    E               A
+
+    ! -------
+
+    ! Tenses
+    !
+    !  Somali simple verb tenses are two: present (-aa) and past (-ay).
+
+    !!          Present         Past
+    !!
+    !!   1Sg    keenaa          keenay
+    !!   2Sg    keentaa         keentay
+    !!   3SgM   keenaa          keenay
+    !!   3SgF   keentaa         keentay
+    !!   1Pl    keennaa         keennay
+    !!   2Pl    keentaan        keenteen
+    !!   3Pl    keenaan         keenaan
+
+    ! -------
+
+    ! Aspects
+    !
+    !  Somali has two aspects: simple, and progressive. Paradigms for simple have
+    !  been shown above. Progressive appears to be a combination of a verb root
+    !  and the copula `ah`.
+
+    !!          Present         Past
+    !!
+    !!   1Sg    keénayaa        keénayay
+    !!   2Sg    keénaysaa       keénaysay
+    !!   3SgM   keénayaa        keénayay
+    !!   3SgF   keénaysaa       keénaysay
+    !!   1Pl    keénaynaa       keénaynay
+    !!   2Pl    keénaysaan      keénayseen
+    !!   3Pl    keénayaan       keénayeen
+
+    ! -------
+
+    ! Moods
+    !
+    !  Indicative, Optative, Conditional
+    !  Negative?
+
+    ! -------
+
+    ! Matrix vs. subordinate and case
+    !
+    !  NB: tonal marking here needs to remain combined, for demonstrational purposes.
+    !
+    !  One of the interesting facets of somali verbs is that they have separate
+    !  conjugations for main clauses and subordinate clauses. They also appear
+    !  to be assigned case if they occur as the right-most element of a phrase.
+    !
+    !  This is potentially a combination of case, because verbs differ depending
+    !  on whether they are part of a clause which is an object, or a clause which
+    !  is a subject.
+    !
+    !    Ex.)   Subject:  _Áwrka uu keénayaa_ wáa cúni doonaa.
+    !                     '_The camel he is bringing_ will eat (it).'
+    !
+    !                     keénayaa - Regular paradigm
+    !
+    !           Object:   _Áwrka uu keénayó_ wuu cúni doonaa.
+    !                     'He will eat _the camel he is bringing_.'
+    !
+    !                     keénayó - Relative paradigm
+    !
+    !  There is also a difference of whether the head noun of a relative clause
+    !  is the subject of that relative clause, or not. The two above sentences
+    !  show a difference between the subject/object-hood of a relative clause
+    !  in which the head noun is the object of that relative clause.
+    !
+    !  The following two show a difference in subject/objecthood of a relative
+    !  clause in which the head is the subject of its clause.
+    !
+    !           _Nimánka keenayá_ wáan arkay.
+    !           'I saw the men who are bringing (it).'
+    !
+    !           keenayá - *Reduced* paradigm, absolutive case. (not Relative)
+    !
+    !           _Naagáha imánayaa_ wáa raáci doonaan.                   ! TODO: keenayaa / imanayaa missing from FST
+    !           '_The women who are coming_ will accompany (them).'
+    !
+    !           imánayaa - *Reduced* paradigm with nominative (long vowel, no tone)
+    !
+    !  This is reflected on the verb with a reduced paradigm for each, but a difference
+    !  in case marking, which is reflected by tonal and segmental differences.
+    !
+    !  To summarize...
+    !
+    !                        | Clause Case Subj | Clause Case Obj |
+    !                        ---------------------------------------
+    !           Head NP Subj | Reduced+Nom      | Reduced+Abs     |
+    !           Head NP Obj  | Regular          | Relative        |
+    !
+    !
+    !   With `keen` in 3pM to show the difference in reduced vs. non.
+    !
+    !                        | Clause Case Subj | Clause Case Obj |
+    !                        ---------------------------------------
+    !           Head NP Subj | keénayaa         | keenayá         |
+    !           Head NP Obj  | keénayaa         | keénayó         |
+    !
+    !  TODO: Many of these paradigms are not implemented in the FSTs.
+    !
+    !  ### Sample Paradigms for testing
+    !
+    !  #### Regular - Head+Obj/Clause+Subj
+    !                   Pres            Past            ProgPres            ProgPast
+    !
+    !       1Sg         keen0aa         keen0ay         keénay0aa           keénay0ay
+    !       2Sg         keentaa         keentay         keénaysaa           keénaysay
+    !       3SgM        keen0aa         keen0ay         keénay0aa           keénay0ay
+    !       3SgF        keentaa         keentay         keénaysaa           keénaysay
+    !       1Pl         keennaa         keennay         keénaynaa           keénaynay
+    !       2Pl         keentaan        keenteen        keénaysaan          keénayseen
+    !       3Pl         keen0aan        keen0een        keénay0aan          keénay0een
+
+    !  #### Relative - Head+Obj/Clause+Obj
+    !
+    !       1Sg         keen0ó          keen0aý         keénay0ó            keénay0aý
+    !       2Sg         keentó          keentaý         keénaysó            keénaysaý
+    !       3SgM        keen0ó          keen0aý         keénay0ó            keénay0aý
+    !       3SgF        keentó          keentaý         keénaysó            keénaysaý
+    !       1Pl         keennó          keennaý         keénaynó            keénaynaý
+    !       2Pl         keentáan        keentéen        keénaysáan          keénayséen
+    !       3Pl         keen0áan        keen0éen        keénay0áan          keénay0éen
+
+    !  #### Reduced+Nom - Head+Subj/Clause+Subj
+    !
+    !       1Sg         keen0aa         keen0ay         keénay0aa           keénay0ay
+    !       2Sg         keen0aa         keen0ay         keénay0aa           keénay0ay
+    !       3SgM        keen0aa         keen0ay         keénay0aa           keénay0ay
+    !       3SgF        keentaa         keentay         keénaysaa           keénaysay
+    !       1Pl         keennaa         keennay         keénaynaa           keénaynay
+    !       2Pl         keen0aa         keen0ay         keénay0aa           keénay0ay
+    !       3Pl         keen0aa         keen0ay         keénay0aa           keénay0ay
+
+    !  #### Reduced+Abs - Head+Subj/Clause+Obj
+    !
+    !       1Sg         keen0á          keen0aý         keénayá             keénayaý
+    !       2Sg         keen0á          keen0aý         keénayá             keénayaý
+    !       3SgM        keen0á          keen0aý         keénayá             keénayaý
+    !       3SgF        keentá          keentaý         keénaysá            keénaysaý
+    !       1Pl         keenná          keennaý         keénayná            keénaynaý
+    !       2Pl         keen0á          keen0aý         keénayá             keénayaý
+    !       3Pl         keen0á          keen0aý         keénayá             keénayaý
+
+    !  #### Negative
+    !
+    !       1Sg         keen0ó          keenín          keénay0ó            keénaýn
+    !       2Sg         keentó          keenín          keénaysó            keénaýn
+    !       3SgM        keen0ó          keenín          keénay0ó            keénaýn
+    !       3SgF        keentó          keenín          keénaysó            keénaýn
+    !       1Pl         keennó          keenín          keénaynó            keénaynín
+    !       2Pl         keentáan        keenín          keénaysáan          keénaynín
+    !       3Pl         keen0áan        keenín          keénay0áan          keénaynín
+
+    !  #### Optative (Almost like negative, but tone difference)
+    !
+    !       1Sg         keén0o
+    !       2Sg         keénto/keéntid
+    !       3SgM        keen0o
+    !       3SgF        keento
+    !       1Pl         keénno
+    !       2Pl         keénteen
+    !       3Pl         keen0een
+
+    !  ### Negative optative
+    !
+    !       1Sg         yáanan
+    !       2Sg         yáanad
+    !       3SgM        yáanu
+    !       3SgF        yáanay
+    !       1Pl         yáynu
+    !                   yáanan/yáananu
+    !       2Pl         yáanad
+    !       3Pl         yáanay
+    !
+    !       + keénin / karín / sameýn / joogsán / furán
+    !
+
+    ! -------
+
+    ! Tone marking
+    !
+    !  With the exception of progressive, verbs generally carry one tone. The
+    !  progressive exception is possibly clarified with that it is a fusion
+    !  of a verb stem with the copula `ah`.
+    !
+    !  Boundary tones are sometimes applied, as in the case of subordinate verbs.
+
+!
+! ! Conditional
+!
+!
+! ! Conditional Neg
+!
+!
+! ! Potential
+!
+!
+
+! TODO: Subordinate clause forms - mostly done?
+! TODO: V->N derivations, -id, etc
+
+LEXICON V1_VerbMorf
+    @P.VCLASS.V1@    V1_ ;
+
+    ! Derived forms here so flag diacritic is applied only once.
+    ! These verbs can be derived into V3B and adjectives
+
+    ! difference of 40067 uncovered to 39340 uncovered
+    ! Maybe use these to discover things that should be their own lemma
+    +Der/V:a       V3B_VerbMorf ;
+    +Der/N:a       V3B_VerbMorf ;
+
+    ! dhig -> dhignaan, dhan -> dhammaan (dham{#}naan -> dham{#}maan)
+    ! Derive and then just treat it as a noun stem
+    +Der/V:{#}naan    NOUN1_F/SgOnly ;
+
+    LEXICON V1_
+    +V:              V1_VerbMorf_Tones ;
+
+LEXICON V1_IV_VerbMorf
+    @P.VCLASS.V1@   V1_IV ;
+
+    +Der/V:a       V3B_VerbMorf ;
+    +Der/V:%^an   AdjState ;
+
+    LEXICON V1_IV
+    +V+IV:          V1_VerbMorf_Tones ;
+
+LEXICON V1_TV_VerbMorf
+    @P.VCLASS.V1@   V1_TV ;
+
+    LEXICON V1_TV
+    +V+TV:          V1_VerbMorf_Tones ;
+
+
+LEXICON V1_VerbMorf_VDel
+    @P.VCLASS.V1@   V1_VDel_ ;
+    
+    LEXICON V1_VDel_
+    +V:             V1_VerbMorf_VDel_Tones ;
+
+LEXICON V1_VerbMorf_IV_VDel
+    @P.VCLASS.V1@   V1_IV_VDel_ ;
+    
+    LEXICON V1_IV_VDel_
+    +V+IV:          V1_VerbMorf_VDel_Tones ;
+
+LEXICON V1_VerbMorf_TV_VDel
+    @P.VCLASS.V1@   V1_TV_VDel_ ;
+    
+    LEXICON V1_TV_VDel_
+    +V+TV:          V1_VerbMorf_VDel_Tones ;
+
+
+LEXICON V1_VerbMorf_ow_oob
+    @P.VCLASS.V1ow@ V1_VerbMorf_ow_oob_Tones ;
+
+LEXICON V1_VerbMorf_ow_ob
+    @P.VCLASS.V1ow2@ V1_VerbMorf_ow_oob_Tones ;
+
+! magacow, and a few others; mostly like 
+! ow_ob, and in lexicon magac is the stem
+! but, infinitive is -bi
+LEXICON MAGACOW_IV_TV
+    @P.VCLASS.V1ow2@ MAGACOW_PB ;
+
+    LEXICON MAGACOW_PB
+        +V+TV:      MAGACOW_Tones ;
+        +V+IV:      MAGACOW_Tones ;
+
+LEXICON MUUSAW_IV
+    @P.VCLASS.V1ow2@ MUUSAW_PB ;
+
+    LEXICON MUUSAW_PB
+        +V+IV:      MUUSAW_Tones ;
+
+LEXICON V2A_VerbMorf
+    @P.VCLASS.V2A@  V2A_ ;
+
+    ! Derived forms here so flag diacritic is applied only once.
+    +Der/V:{-I}sa       V3A_VerbMorf ;
+    +Der/V:{-I}san      AdjState ;
+
+
+    LEXICON V2A_
+    +V:             V2A_VerbMorf_Tones ;
+
+LEXICON V2A_IV_VerbMorf
+    @P.VCLASS.V2A@  V2A_IV ;
+
+    +Der/V:{-I}sa       V3A_VerbMorf ;
+    +Der/V:{-I}san      AdjState ;
+
+    LEXICON V2A_IV
+    +V+IV:          V2A_VerbMorf_Tones ;
+
+LEXICON V2A_DV_VerbMorf
+    @P.VCLASS.V2A@  V2A_DV ;
+
+    +Der/V:{-I}sa       V3A_VerbMorf ;
+    +Der/V:{-I}san      AdjState ;
+
+    LEXICON V2A_DV
+    +V+DV:          V2A_VerbMorf_Tones ;
+
+
+LEXICON V2A_TV_VerbMorf
+    @P.VCLASS.V2A@  V2A_TV ;
+
+    +Der/V:{-I}sa       V3A_VerbMorf ;
+    +Der/V:{-I}san      AdjState ;
+
+    LEXICON V2A_TV
+    +V+TV:          V2A_VerbMorf_Tones ;
+
+LEXICON V2A_VerbMorf/SII
+    @P.VCLASS.V2A@  V2A_VerbMorf_Tones/SII ;
+
+LEXICON V2B_VerbMorf
+    @P.VCLASS.V2B@  V2B_ ;
+
+    LEXICON V2B_
+     +V:            V2B_VerbMorf_Tones ;
+
+LEXICON V2B_IV_VerbMorf
+    @P.VCLASS.V2B@  V2B_IV ;
+
+    LEXICON V2B_IV
+     +V+IV:         V2B_VerbMorf_Tones ;
+
+LEXICON V2B_TV_VerbMorf
+    @P.VCLASS.V2B@  V2B_TV ;
+
+    LEXICON V2B_TV
+     +V+TV:         V2B_VerbMorf_Tones ;
+
+LEXICON V3A_VerbMorf
+    @P.VCLASS.V3A@  V3A_ ;
+
+    LEXICON V3A_
+        +V:         V3A_VerbMorf_Tones ;
+
+LEXICON V3A_IV_VerbMorf
+    @P.VCLASS.V3A@  V3A_IV ;
+
+    LEXICON V3A_IV
+        +V+IV:      V3A_VerbMorf_Tones ;
+
+LEXICON V3A_TV_VerbMorf
+    @P.VCLASS.V3A@  V3A_TV ;
+
+    LEXICON V3A_TV
+        +V+TV:      V3A_VerbMorf_Tones ;
+
+LEXICON V3B_VerbMorf
+    @P.VCLASS.V3B@  V3B_ ;
+
+    LEXICON V3B_
+        +V:         V3B_VerbMorf_Tones ;
+
+! TODO: move +V, etc
+LEXICON V3B_IV_VerbMorf
+    @P.VCLASS.V3B@  V3B_IV ;
+
+    LEXICON V3B_IV
+        +V+IV:      V3B_VerbMorf_Tones ;
+
+LEXICON V3B_IV_OW_VerbMorf
+    @P.VCLASS.V3B@  V3B_OW_IV ;
+
+    LEXICON V3B_OW_IV
+        +V+IV:      V3B_VerbMorf_OW_Tones ;
+
+LEXICON V3B_IV_O_VerbMorf
+    @P.VCLASS.V3B@  V3B_O_IV ;
+
+    LEXICON V3B_O_IV
+        +V+IV:      V3B_VerbMorf_O_Tones ;
+
+LEXICON V3B_IV_ADel_VerbMorf
+    @P.VCLASS.V3B@  V3B_ADel_IV ;
+
+    LEXICON V3B_ADel_IV
+        +V+IV:      V3B_VerbMorf_ADel_Tones ;
+
+LEXICON V3B_TV_VerbMorf
+    @P.VCLASS.V3B@  V3B_TV ;
+
+    LEXICON V3B_TV
+        +V+TV:      V3B_VerbMorf_Tones ;
+
+LEXICON V3B_TV_VerbMorf/ADelPart
+    @P.VCLASS.V3B_ADelPart@  V3B_TV_ADelPart ;
+
+    LEXICON V3B_TV_ADelPart
+        +V+TV:      V3B_VerbMorf_Tones ;
+
+LEXICON V3B_IV_VerbMorf/ADelPart
+    @P.VCLASS.V3B_ADelPart@  V3B_IV ;
+
+LEXICON V3B_DV_VerbMorf
+    @P.VCLASS.V3B@  V3B_DV ;
+
+    LEXICON V3B_DV
+        +V+DV:      V3B_VerbMorf_Tones ;
+
+!!
+!!  Apply post-root tones, and other root triggers
+!!
+
+LEXICON V1_VerbMorf_Tones
+    :{#}                PostRoot ;
+    :´{#}               PostRootProg ;
+
+    +Inf:{#}i           FINAL ;
+
+    +Der/V:{#}id           NOUN1_F/SgOnly ;
+    +Der/V+Der/sho:{#}asha      NOUN6_F/SgOnly ;
+
+! oob and ow is handled further on for present.
+LEXICON V1_VerbMorf_ow_oob_Tones
+    +V:{#}                  PostRoot ;
+    +V:ob´{#}               PostRootProg ;
+
+    +V+Inf:ob{#}i           FINAL ;
+    +Der/V+Der/sho:ob{#}asha        NOUN6_F/SgOnly ;
+
+LEXICON MAGACOW_Tones
+    +V:aa{#}                  PostRoot ;
+    +V:aab´{#}               PostRootProg ;
+
+    +V+Inf:aab{#}i           FINAL ;
+    +Der/V+Der/sho:aab{#}asha        NOUN6_F/SgOnly ;
+    +Recit:ow             FINAL ;
+
+LEXICON MUUSAW_Tones
+    +V:aa{#}                  PostRoot ;
+    +V:aab´{#}               PostRootProg ;
+
+    +V+Inf:aab{#}i           FINAL ;
+    +Der/V+Der/sho:aab{#}asha        NOUN6_F/SgOnly ;
+    +Recit:aw             FINAL ;
+
+
+
+! inf:     1P       2P          INF
+! -lan    -lmay    -lantay      -lmi
+! -dub    -dbay    -dubtay      -dbi
+! -ran    -rmay    -rantay      -rmi
+
+! ran{-V}{#}0 -> rm
+! ran{-V}{#}i -> rmi
+! ran{-V}{#}t -> rant
+
+! etc.
+
+LEXICON V1_VerbMorf_VDel_Tones
+    :{-V}{#}              PostRoot ;
+    :{-V}´{#}             PostRootProg ;
+    +Inf:{-V}{#}i         FINAL ;
+    /Der+Der/sho:{-V}{#}asha      NOUN6_F/SgOnly ;
+    ! TODO: furmasho? furanasho?
+
+! TODO: Infinitive
+! geli
+LEXICON V2A_VerbMorf_Tones
+    :{y}{#}         PostRoot ;
+    :´{#}n{#}       PostRootProg ;
+    ! +V+Recit:{#}       FINAL ;
+
+    +Inf:{#}n       FINAL ;
+    ! How to work in infinitive with progressive here? +V:{#}@V2B@
+
+! sii
+LEXICON V2A_VerbMorf_Tones/SII
+    +V:{y}{#}           PostRoot ;
+    +V:´{#}n{#}         PostRootProg ;
+    ! +V+Recit:{#}       FINAL ;
+
+    +V+Inf:{#}n         FINAL ;
+
+! samee, buuflee
+LEXICON V2B_VerbMorf_Tones
+    +Recit:ee{#}           FINAL ;
+    :e{e}{#}           PostRoot ;
+    +Use/NG:ay{#}      PostRoot ;
+    ! TODO: which is normative?
+    :ey´{#}n{#}        PostRootProg ;
+    :ay´{#}n{#}        PostRootProg ;
+
+    +Inf:{#}n          FINAL ;
+    +Der/V+Der/sho:{#}asha     NOUN6_F/SgOnly ;
+
+! joogso, aammiinso, xusullayso
+! TODO: wanaagsaneyn +Use/NG
+LEXICON V3A_VerbMorf_Tones
+    :{#}                    PostRoot ;
+    :´{#}n{#}               PostRootProg ;
+
+    +Inf:{#}n               FINAL ;
+    +Der/V+Der/sho:{-a}{#}asha     NOUN6_F/SgOnly ;
+
+LEXICON V3B_VerbMorf_ADel_Tones
+    :{a}                    V3B_VerbMorf_Tones ;
+
+! TODO: -ow in lemma, ,-aaday, -aatay;
+!  casow / casaaday casaatay
+
+! weynow / weynaaday weynaatay
+! TODO: imperatives?
+LEXICON V3B_VerbMorf_OW_Tones
+    +Recit:ow{#}           FINAL ;
+    :aa{#}                  PostRoot/NoImperative ;
+    :aa´{#}n{#}             PostRootProg ;
+    +Inf:{#}n               FINAL ;
+
+    ! +Der/V:{#}{N}sha        NOUN6_F/SgOnly ;
+
+LEXICON V3B_VerbMorf_O_Tones
+    :a{#}                  PostRoot ;
+    :a´{#}n{#}             PostRootProg ;
+    +Inf:{#}n               FINAL ;
+
+    ! +Der/V:{#}{N}sha        NOUN6_F/SgOnly ;
+
+
+! wado, sigo, qubo, furto
+LEXICON V3B_VerbMorf_Tones
+    :{#}                    PostRoot ;
+    :´{#}n{#}               PostRootProg ;
+
+    +Inf:{#}n               FINAL ;
+
+    +Der/V+Der/sho:{#}{N}sha        NOUN6_F/SgOnly ;
+
+
+! No flag diacritic for these, they go straight to adj inflections
+LEXICON V4_IV_VerbMorf
+    +V+IV+Der/A:{#}   StatePerson ;
+    +V+IV+Der/A:{#}   FINAL ;
+
+LEXICON V4_IV_VerbMorf_VDel
+    +V+IV+Der/A:{-V}{#}   StatePerson ;
+    +V+IV+Der/A:{-V}{#}   FINAL ;
+
+
+LEXICON Progressive
+    PostRootProg ;
+
+LEXICON PostRoot
+
+    SimplePerson ;
+    ReducedPerson ;
+    Imperative ;
+
+    ! Invariable form for all persons
+    PastNeg ;
+    FINAL ;
+
+    ! SemiReducedPerson ; ! Reduced+Nom paradigm
+
+! Types like -ow- which have a special bare stem that is not present in the
+! imperative need to go here.
+LEXICON PostRoot/NoImperative
+
+    SimplePerson ;
+    ReducedPerson ;
+
+    PastNeg ;
+    FINAL ;
+
+
+! TODO: check tones on imperative
+LEXICON Imperative
+! All verb types have bare imperative for sg pos
+    +Imper+Sg:0     FINAL ;
+
+    @R.VCLASS.V1@   Imperative_V1 ;
+    @R.VCLASS.V1ow@ Imperative_V1 ;
+    @R.VCLASS.V1ow2@ Imperative_V1 ;
+
+    @R.VCLASS.V2A@  Imperative_V2A ;
+    @R.VCLASS.V2B@  Imperative_V2B ;
+
+    @R.VCLASS.V3A@  Imperative_V3A ;
+    @R.VCLASS.V3B@  Imperative_V3B ;
+    @R.VCLASS.V3B_ADel@  Imperative_V3B ;
+    @R.VCLASS.V3B_ADelPart@  Imperative_V3B ;
+
+LEXICON Imperative_V1
+    +Imper+Pl:a                         FINAL ;
+    +Imper+Neg+Sg:in´{#}                FINAL ;
+    +Imper+Neg+Pl:in´{#}a               FINAL ;
+
+! TODO: V2A Imperative
+LEXICON Imperative_V2A
+    !@R.VCLASS.V2A@+Imper+Sg:0 FINAL ;
+    +Imper+Pl:a              FINAL   ;
+    +Imper+Neg:i             FINAL   ;
+
+! TODO: samée
+LEXICON Imperative_V2B
+    +Imper+Pl:ya             FINAL   ;
+    +Imper+Neg:yn´{#}        FINAL   ;
+    +Imper+Neg:ynin´{#}a     FINAL   ;
+
+LEXICON Imperative_V3A
+    +Imper+Pl:da             FINAL   ;
+    +Imper+Neg+Sg:n´{#}      FINAL   ;
+    +Imper+Neg+Pl:nin´{#}a   FINAL   ;
+
+LEXICON Imperative_V3B
+    !@R.VCLASS.V3B@+Imper+Sg:0 FINAL ;
+    +Imper+Pl:ta              FINAL   ;
+    +Imper+Neg+Sg:n´{#}       FINAL   ;
+    +Imper+Neg+Pl:nin´{#}a    FINAL   ;
+
+LEXICON PastNeg
+    @R.VCLASS.V1@:i             PastNeg_iy ;
+    @R.VCLASS.V1ow@:i           PastNeg_iy ;
+    @R.VCLASS.V1ow2@:i           PastNeg_iy ;
+    @R.VCLASS.V2A@:i            PastNeg_iy ;
+    @R.VCLASS.V2B@:y            PastNeg_iy ;
+    @R.VCLASS.V3A@:i            PastNeg_iy ;
+    @R.VCLASS.V3B@:i            PastNeg_iy ;
+    @R.VCLASS.V3B_ADel@:i            PastNeg_iy ;
+    @R.VCLASS.V3B_ADelPart@:i            PastNeg_iy ;
+
+LEXICON PastNeg_iy
+    +1Sg+Ind+Past+Neg:n´             FINAL ;
+    +2Sg+Ind+Past+Neg:n´             FINAL ;
+    +3SgM+Ind+Past+Neg:n´            FINAL ;
+    +3SgF+Ind+Past+Neg:n´            FINAL ;
+    +1Pl+Ind+Past+Neg:n´             FINAL ;
+    +2Pl+Ind+Past+Neg:n´             FINAL ;
+    +3Pl+Ind+Past+Neg:n´             FINAL ;
+
+! Recover from merged path with diacritics
+LEXICON SimplePerson
+
+    @R.VCLASS.V1@       SimplePersonMorph_V1 ;
+    @R.VCLASS.V1ow@     SimplePersonMorph_V1/ow ;
+    @R.VCLASS.V1ow2@     SimplePersonMorph_V1/ow2 ;
+    @R.VCLASS.V2A@      SimplePersonMorph_V2A ;
+    @R.VCLASS.V2B@      SimplePersonMorph_V2B ;
+    @R.VCLASS.V3A@      SimplePersonMorph_V3A ;
+    @R.VCLASS.V3B@      SimplePersonMorph_V3B ;
+    @R.VCLASS.V3B_ADel@      SimplePersonMorph_V3B ;
+    @R.VCLASS.V3B_ADelPart@      SimplePersonMorph_V3B/ADelPart ;
+
+LEXICON ReducedPerson
+
+    @R.VCLASS.V1@       ReducedPersonMorph_V1 ;
+    @R.VCLASS.V1ow@     ReducedPersonMorph_V1/ow ;
+    @R.VCLASS.V1ow2@     ReducedPersonMorph_V1/ow2 ;
+    @R.VCLASS.V2A@      ReducedPersonMorph_V2A ;
+    @R.VCLASS.V2B@      ReducedPersonMorph_V2B ;
+    @R.VCLASS.V3A@      ReducedPersonMorph_V3A ;
+    @R.VCLASS.V3B@      ReducedPersonMorph_V3B ;
+    @R.VCLASS.V3B_ADel@      ReducedPersonMorph_V3B ;
+    @R.VCLASS.V3B_ADelPart@      ReducedPersonMorph_V3B/ADelPart ;
+
+! V1
+!           keen-0-         keen-n-
+!           keen-t-         keen-0-
+!           keen-0-         keen-t-
+!           keen-t-
+
+! Note: person form B (2Sg, 3SgF, etc) is voiced after certain sounds.
+
+LEXICON SimplePersonMorph_V1
+    +1Sg:0          PostSimplePerson/1Sg ;
+    +2Sg:t          PostSimplePerson/2Sg ;
+    +3SgM:0         PostSimplePerson/3SgM ;
+    +3SgF:t         PostSimplePerson/3SgF ;
+
+    +1Pl:n          PostSimplePerson/1Pl ;
+    +2Pl:t          PostSimplePerson/2Pl ;
+    +3Pl:0          PostSimplePerson/3Pl ;
+
+! V1 - oob/ow
+!           xoroob-         xorown-
+!           xorowd-         xoroob-
+!           xoroob-         xorowd-
+!           xorowd-
+
+LEXICON SimplePersonMorph_V1/ow
+    +1Sg:ob         PostSimplePerson/1Sg ;
+    +2Sg:wd         PostSimplePerson/2Sg ;
+    +3SgM:ob        PostSimplePerson/3SgM ;
+    +3SgF:wd        PostSimplePerson/3SgF ;
+
+    +1Pl:wn         PostSimplePerson/1Pl ;
+    +2Pl:wd         PostSimplePerson/2Pl ;
+    +3Pl:ob         PostSimplePerson/3Pl ;
+
+LEXICON SimplePersonMorph_V1/ow2
+    +1Sg:b         PostSimplePerson/1Sg ;
+    +2Sg:wd         PostSimplePerson/2Sg ;
+    +3SgM:b        PostSimplePerson/3SgM ;
+    +3SgF:wd        PostSimplePerson/3SgF ;
+
+    +1Pl:wn         PostSimplePerson/1Pl ;
+    +2Pl:wd         PostSimplePerson/2Pl ;
+    +3Pl:b         PostSimplePerson/3Pl ;
+
+
+! Reduced V1 (Nom)
+!           keen-0-         keen-n-
+!           keen-0-         keen-0-
+!           keen-0-         keen-0-
+!           keen-t-
+
+LEXICON ReducedPersonMorph_V1
+    +1Sg:0      PostReducedPerson/1Sg ;     +1Pl:n    PostReducedPerson/1Pl ;
+    +2Sg:0      PostReducedPerson/2Sg ;     +2Pl:0    PostReducedPerson/2Pl ;
+    +3SgM:0     PostReducedPerson/3SgM ;    +3Pl:0    PostReducedPerson/3Pl ;
+    +3SgF:t     PostReducedPerson/3SgF ;
+
+! Reduced V1 (Nom)
+!           xoroob-         xorown-
+!           xoroob-         xoroob-
+!           xoroob-         xoroob-
+!           xorowd-
+
+LEXICON ReducedPersonMorph_V1/ow
+    +1Sg:ob     PostReducedPerson/1Sg ;     +1Pl:wn     PostReducedPerson/1Pl ;
+    +2Sg:ob     PostReducedPerson/2Sg ;     +2Pl:ob     PostReducedPerson/2Pl ;
+    +3SgM:ob    PostReducedPerson/3SgM ;    +3Pl:ob     PostReducedPerson/3Pl ;
+    +3SgF:wd    PostReducedPerson/3SgF ;
+
+LEXICON ReducedPersonMorph_V1/ow2
+    +1Sg:b     PostReducedPerson/1Sg ;     +1Pl:wn     PostReducedPerson/1Pl ;
+    +2Sg:b     PostReducedPerson/2Sg ;     +2Pl:b     PostReducedPerson/2Pl ;
+    +3SgM:b    PostReducedPerson/3SgM ;    +3Pl:b     PostReducedPerson/3Pl ;
+    +3SgF:wd    PostReducedPerson/3SgF ;
+
+! V2A
+!       sameeyay        sameynay
+!       sameysay        sameyseen
+!       sameeyay        sameyeen
+!       sameysay
+
+LEXICON SimplePersonMorph_V2A
+    +1Sg:0          PostSimplePerson/1Sg ;  +1Pl:n      PostSimplePerson/1Pl ;
+    +2Sg:s          PostSimplePerson/2Sg ;  +2Pl:s      PostSimplePerson/2Pl ;
+    +3SgM:0         PostSimplePerson/3SgM ; +3Pl:0      PostSimplePerson/3Pl ;
+    +3SgF:s         PostSimplePerson/3SgF ;
+
+LEXICON ReducedPersonMorph_V2A
+    +1Sg:0          PostReducedPerson/1Sg ;
+    +2Sg:0          PostReducedPerson/2Sg ;
+    +3SgM:0         PostReducedPerson/3SgM ;
+    +3SgF:s         PostReducedPerson/3SgF ;
+
+    +1Pl:n          PostReducedPerson/1Pl ;
+    +2Pl:0          PostReducedPerson/2Pl ;
+    +3Pl:0          PostReducedPerson/3Pl ;
+
+!
+! V2B
+!       kariyay         kariynay
+!       kariysay        kariseen
+!       kariyay         kariyeen
+!       kariysay
+
+LEXICON SimplePersonMorph_V2B
+    +1Sg:0          PostSimplePerson/1Sg ;
+    +2Sg:s          PostSimplePerson/2Sg ;
+    +3SgM:0         PostSimplePerson/3SgM ;
+    +3SgF:s         PostSimplePerson/3SgF ;
+
+    +1Pl:n          PostSimplePerson/1Pl ;
+    +2Pl:s          PostSimplePerson/2Pl ;
+    +3Pl:0          PostSimplePerson/3Pl ;
+
+LEXICON ReducedPersonMorph_V2B
+    +1Sg:0          PostReducedPerson/1Sg ;
+    +2Sg:0          PostReducedPerson/2Sg ;
+    +3SgM:0         PostReducedPerson/3SgM ;
+    +3SgF:s         PostReducedPerson/3SgF ;
+
+    +1Pl:n          PostReducedPerson/1Pl ;
+    +2Pl:0          PostReducedPerson/2Pl ;
+    +3Pl:0          PostReducedPerson/3Pl ;
+
+! V3A - joogso, tuko
+!       joogsaday       joogsannay
+!       joogsatay       joogsateen
+!       joogsaday       joogsadeen
+!       joogsatay
+
+LEXICON SimplePersonMorph_V3A
+    +1Sg:d          PostSimplePerson/1Sg ;
+    +2Sg:t          PostSimplePerson/2Sg ;
+    +3SgM:d         PostSimplePerson/3SgM ;
+    +3SgF:t         PostSimplePerson/3SgF ;
+
+    +1Pl:nn         PostSimplePerson/1Pl ;
+    +2Pl:t          PostSimplePerson/2Pl ;
+    +3Pl:d          PostSimplePerson/3Pl ;
+
+LEXICON ReducedPersonMorph_V3A
+    +1Sg:0          PostReducedPerson/1Sg ;
+    +2Sg:0          PostReducedPerson/2Sg ;
+    +3SgM:0         PostReducedPerson/3SgM ;
+    +3SgF:t         PostReducedPerson/3SgF ;
+
+    +1Pl:nn         PostReducedPerson/1Pl ;
+    +2Pl:0          PostReducedPerson/2Pl ;
+    +3Pl:0          PostReducedPerson/3Pl ;
+
+
+
+!
+! V3B wado , furo
+
+! furay     furannay            watay       wadannay
+! furtay        furateen        wadatay     wadateen
+! furay     furteen             watay       wateen
+! furtay                        wadatay
+
+! fadhiiso
+
+! fadhiistay            fadhiisannay
+! fadhiisatay           ?
+! fadhiistay            fadhiisteen
+! fadhiisatay
+
+! yeelo
+
+LEXICON SimplePersonMorph_V3B
+    +1Sg:d          PostSimplePerson/1Sg ;
+    +2Sg:t          PostSimplePerson/2Sg ;
+    +3SgM:d         PostSimplePerson/3SgM ;
+    +3SgF:t         PostSimplePerson/3SgF ;
+
+    +1Pl:nn         PostSimplePerson/1Pl ;
+    +2Pl:t          PostSimplePerson/2Pl ;
+    +3Pl:d          PostSimplePerson/3Pl ;
+
+LEXICON ReducedPersonMorph_V3B
+    +1Sg:0          PostReducedPerson/1Sg ;
+    +2Sg:0          PostReducedPerson/2Sg ;
+    +3SgM:0         PostReducedPerson/3SgM ;
+    +3SgF:t         PostReducedPerson/3SgF ;
+
+    +1Pl:nn         PostReducedPerson/1Pl ;
+    +2Pl:0          PostReducedPerson/2Pl ;
+    +3Pl:0          PostReducedPerson/3Pl ;
+
+LEXICON SimplePersonMorph_V3B/ADelPart
+    +1Sg:d          PostSimplePerson/1Sg ;
+    +2Sg:at          PostSimplePerson/2Sg ;
+    +3SgM:d         PostSimplePerson/3SgM ;
+    +3SgF:at         PostSimplePerson/3SgF ;
+
+    +1Pl:ann         PostSimplePerson/1Pl ;
+    +2Pl:at          PostSimplePerson/2Pl ;
+    +3Pl:d          PostSimplePerson/3Pl ;
+
+LEXICON ReducedPersonMorph_V3B/ADelPart
+    +1Sg:0          PostReducedPerson/1Sg ;
+    +2Sg:0          PostReducedPerson/2Sg ;
+    +3SgM:0         PostReducedPerson/3SgM ;
+    +3SgF:at         PostReducedPerson/3SgF ;
+
+    +1Pl:ann         PostReducedPerson/1Pl ;
+    +2Pl:0          PostReducedPerson/2Pl ;
+    +3Pl:0          PostReducedPerson/3Pl ;
+
+
+! TODO: currently working on redoing reduced paradigm, need to begin here, creating PostReducedPerson(s)
+LEXICON PostSimplePerson/1Sg
+    @P.Pers.1Sg@        PostSimplePerson ;
+
+LEXICON PostSimplePerson/2Sg
+    @P.Pers.2Sg@        PostSimplePerson ;
+
+LEXICON PostSimplePerson/3SgM
+    @P.Pers.3SgM@       PostSimplePerson ;
+
+LEXICON PostSimplePerson/3SgF
+    @P.Pers.3SgF@       PostSimplePerson ;
+
+LEXICON PostSimplePerson/1Pl
+    @P.Pers.1Pl@        PostSimplePerson ;
+
+LEXICON PostSimplePerson/2Pl
+    @P.Pers.2Pl@        PostSimplePerson ;
+
+LEXICON PostSimplePerson/3Pl
+    @P.Pers.3Pl@        PostSimplePerson ;
+
+LEXICON PostReducedPerson/1Sg
+    @P.Pers.1Sg@        PostReducedPerson ;
+
+LEXICON PostReducedPerson/2Sg
+    @P.Pers.2Sg@        PostReducedPerson ;
+
+LEXICON PostReducedPerson/3SgM
+    @P.Pers.3SgM@       PostReducedPerson ;
+
+LEXICON PostReducedPerson/3SgF
+    @P.Pers.3SgF@       PostReducedPerson ;
+
+LEXICON PostReducedPerson/1Pl
+    @P.Pers.1Pl@        PostReducedPerson ;
+
+LEXICON PostReducedPerson/2Pl
+    @P.Pers.2Pl@        PostReducedPerson ;
+
+LEXICON PostReducedPerson/3Pl
+    @P.Pers.3Pl@        PostReducedPerson ;
+
+LEXICON PostSimplePerson
+
+    :{#}        SimpleIndicative ;
+    :{#}        SimpleOptative ;
+
+LEXICON PostReducedPerson
+    :{#}        ReducedIndicative ;
+    ! TODO: :{#}        ReducedOptative ;
+
+LEXICON SimpleIndicative
+    @R.Pers.1Sg@        SimpleIndicative/Sg ;
+    @R.Pers.2Sg@        SimpleIndicative/Sg ;
+    @R.Pers.3SgM@       SimpleIndicative/Sg ;
+    @R.Pers.3SgF@       SimpleIndicative/Sg ;
+
+    @R.Pers.1Pl@        SimpleIndicative/Sg ;
+
+    ! Forms for 2, 3 pl
+    @R.Pers.2Pl@        SimpleIndicative/23Pl ;
+    @R.Pers.3Pl@        SimpleIndicative/23Pl ;
+
+LEXICON SimpleIndicative/Sg
+    +Ind+Pres:aa                      Clitics ;
+    +Ind+Past:0                       AY ;
+    +Ind+Past+Rel:0                   AY_ ;
+
+    +Ind+Pres+Neg:o´                  Clitics ;
+    +Ind+Pres+Neg:@R.Pers.2Sg@id´     Clitics ;
+    +Ind+Pres+Rel:o´                  Clitics ;
+
+! TODO: Tones
+LEXICON SimpleIndicative/23Pl
+    +Ind+Pres:aan           Clitics ;
+    +Ind+Past:een           Clitics ;
+    ! TODO: above is Sg not Pl alternative
+    +Ind+Pres+Neg:aan       Clitics ;
+
+    +Ind+Pres+Rel:aan´´     Clitics ;
+    +Ind+Pres+Rel:aan       Clitics ;
+    +Ind+Past+Rel:een´´     Clitics ;
+
+LEXICON SimpleOptative
+    @R.Pers.1Sg@        SimpleOptative/Sg ;
+    @R.Pers.2Sg@        SimpleOptative/Sg ;
+    @R.Pers.3SgM@       SimpleOptative/Sg ;
+    @R.Pers.3SgF@       SimpleOptative/Sg ;
+
+    @R.Pers.1Pl@        SimpleOptative/Sg ;
+    ! Forms for 2, 3 pl
+    @R.Pers.2Pl@        SimpleOptative/23Pl ;
+    @R.Pers.3Pl@        SimpleOptative/23Pl ;
+
+LEXICON SimpleOptative/Sg
+    +Opt:o          Clitics ;
+    +Opt:@R.Pers.2Sg@id         Clitics ;
+
+LEXICON SimpleOptative/23Pl
+    +Opt:een            Clitics ;
+
+LEXICON ProgPastNeg
+    +1Sg+Ind+Past+Neg:n´                    FINAL ;
+    +2Sg+Ind+Past+Neg:n´                    FINAL ;
+    +3SgM+Ind+Past+Neg:n´                   FINAL ;
+    +3SgF+Ind+Past+Neg:n´                   FINAL ;
+    +1Pl+Ind+Past+Neg:nin´                  FINAL ;
+    +2Pl+Ind+Past+Neg:nin´                  FINAL ;
+    +3Pl+Ind+Past+Neg:nin´                  FINAL ;
+
+LEXICON ReducedIndicative
+    @R.Pers.1Sg@        ReducedIndicative/Sg ;
+    @R.Pers.2Sg@        ReducedIndicative/Sg ;
+    @R.Pers.3SgM@       ReducedIndicative/Sg ;
+    @R.Pers.3SgF@       ReducedIndicative/Sg ;
+    @R.Pers.1Pl@        ReducedIndicative/Sg ;
+    @R.Pers.2Pl@        ReducedIndicative/Sg ;
+    @R.Pers.3Pl@        ReducedIndicative/Sg ;
+
+LEXICON ReducedIndicative/Sg
+    +Ind+Pres+Red+Nom:aa            Clitics ;
+    +Ind+Pres+Red+Abs:a´        Clitics ;
+
+    +Ind+Past+Red+Nom:      AY ;
+    +Ind+Past+Red+Abs:      AY_ ;
+
+LEXICON PostRootProg
+
+    +Prog:a¨y{#}        ProgPerson ;
+    +Prog:a¨y{#}        ReducedProgPerson ;
+
+    +Prog:a¨y{#}        ProgPastNeg ;
+
+LEXICON ProgPerson
+    +1Sg:0          PostProgPerson/1Sg ;
+    +2Sg:s          PostProgPerson/2Sg ;
+    +3SgM:0         PostProgPerson/3SgM ;
+    +3SgF:s         PostProgPerson/3SgF ;
+
+    +1Pl:n          PostProgPerson/1Pl ;
+    +2Pl:s          PostProgPerson/2Pl ;
+    +3Pl:0          PostProgPerson/3Pl ;
+
+! PostSimplePerson is wrong
+LEXICON PostProgPerson/1Sg
+    @P.Pers.1Sg@        PostProgSimplePerson ;
+
+LEXICON PostProgPerson/2Sg
+    @P.Pers.2Sg@        PostProgSimplePerson ;
+
+LEXICON PostProgPerson/3SgM
+    @P.Pers.3SgM@       PostProgSimplePerson ;
+
+LEXICON PostProgPerson/3SgF
+    @P.Pers.3SgF@       PostProgSimplePerson ;
+
+LEXICON PostProgPerson/1Pl
+    @P.Pers.1Pl@        PostProgSimplePerson ;
+
+LEXICON PostProgPerson/2Pl
+    @P.Pers.2Pl@        PostProgSimplePerson ;
+
+LEXICON PostProgPerson/3Pl
+    @P.Pers.3Pl@        PostProgSimplePerson ;
+
+LEXICON PostProgSimplePerson
+
+    :{#}        SimpleProgIndicative ;
+    ! :{#}      SimpleOptative ;
+
+LEXICON SimpleProgIndicative
+    @R.Pers.1Sg@        SimpleProgIndicative/Sg ;
+    @R.Pers.2Sg@        SimpleProgIndicative/Sg ;
+    @R.Pers.3SgM@       SimpleProgIndicative/Sg ;
+    @R.Pers.3SgF@       SimpleProgIndicative/Sg ;
+
+    @R.Pers.1Pl@        SimpleProgIndicative/Sg ;
+
+    ! Forms for 2, 3 pl
+    @R.Pers.2Pl@        SimpleProgIndicative/Pl ;
+    @R.Pers.3Pl@        SimpleProgIndicative/Pl ;
+
+LEXICON SimpleProgIndicative/Sg
+    +Ind+Pres:aa            Clitics ;
+    +Ind+Past:0             AY ;
+
+    +Ind+Pres+Neg:o´        Clitics ;
+    +Ind+Pres+Neg:@R.Pers.2Sg@id´           Clitics ;
+
+! TODO: Tones
+LEXICON SimpleProgIndicative/Pl
+    +Ind+Pres:aan       Clitics ;
+    +Ind+Past:een           Clitics ;
+    ! TODO: above is Sg not Pl alternative
+    +Ind+Pres+Neg:aan       Clitics ;
+
+LEXICON ReducedProgPerson
+    +1Sg:0          PostProgReducedPerson/1Sg ;
+    +2Sg:0          PostProgReducedPerson/2Sg ;
+    +3SgM:0         PostProgReducedPerson/3SgM ;
+    +3SgF:s         PostProgReducedPerson/3SgF ;
+
+    +1Pl:n          PostProgReducedPerson/1Pl ;
+    +2Pl:s          PostProgReducedPerson/2Pl ;
+    +3Pl:0          PostProgReducedPerson/3Pl ;
+
+LEXICON PostProgReducedPerson/1Sg
+    @P.Pers.1Sg@        PostProgReducedPerson ;
+
+LEXICON PostProgReducedPerson/2Sg
+    @P.Pers.2Sg@        PostProgReducedPerson ;
+
+LEXICON PostProgReducedPerson/3SgM
+    @P.Pers.3SgM@       PostProgReducedPerson ;
+
+LEXICON PostProgReducedPerson/3SgF
+    @P.Pers.3SgF@       PostProgReducedPerson ;
+
+LEXICON PostProgReducedPerson/1Pl
+    @P.Pers.1Pl@        PostProgReducedPerson ;
+
+LEXICON PostProgReducedPerson/2Pl
+    @P.Pers.2Pl@        PostProgReducedPerson ;
+
+LEXICON PostProgReducedPerson/3Pl
+    @P.Pers.3Pl@        PostProgReducedPerson ;
+
+LEXICON PostProgPerson
+
+    :{#}        SimpleIndicative ;
+    ! No optative in Progressive
+
+LEXICON PostProgReducedPerson
+    :{#}        ReducedProgIndicative ;
+
+LEXICON ReducedProgIndicative
+    @R.Pers.1Sg@        ReducedProgIndicative/Sg ;
+    @R.Pers.2Sg@        ReducedProgIndicative/Sg ;
+    @R.Pers.3SgM@       ReducedProgIndicative/Sg ;
+    @R.Pers.3SgF@       ReducedProgIndicative/Sg ;
+    @R.Pers.1Pl@        ReducedProgIndicative/Sg ;
+    @R.Pers.2Pl@        ReducedProgIndicative/Pl ;
+    @R.Pers.3Pl@        ReducedProgIndicative/Pl ;
+
+LEXICON ReducedProgIndicative/Sg
+    +Ind+Past+Rel:0         AY_ ;
+    +Ind+Pres+Rel:o´        FINAL ;
+
+    +Ind+Pres+Red+Nom:aa    FINAL ;
+    +Ind+Pres+Red+Abs:a´    FINAL ;
+
+    +Ind+Past+Red+Nom:      AY ;
+    +Ind+Past+Red+Abs:      AY_ ;
+
+LEXICON ReducedProgIndicative/Pl
+    +Ind+Past+Rel:een´´         FINAL ;
+    +Ind+Pres+Rel:aan´´         FINAL ;
+
+    +Ind+Pres+Red+Nom:aa     FINAL ;
+    +Ind+Pres+Red+Abs:a´    FINAL ;
+
+    ! TODO: ?
+    ! +Ind+Past+Red+Nom:      AY ;
+    ! +Ind+Past+Red+Abs:      AY_ ;
+
+
+LEXICON AY
+    :ay                     Clitics ;
+    +Use/NG+Sty/TODO:ey     Clitics ;
+
+LEXICON AY_
+    :ay´                    Clitics ;
+    +Use/NG+Sty/TODO:ey´    Clitics ;
+
+! Verbal prefixes for when things end up written together
+
+! TODO: Possible to restrict somehow so that Masar doesn't end up as ma-sar, or
+! Ilaah as i-la-ah?
+LEXICON VerbalPrefixes
+    is+Adp+Refl:is CmpNGVerb ;
+    is+Adp+Refl+Adp/ka:iska CmpNGVerb ;
+    ku+Adp:ku CmpNGVerb ;
+    wada+PP:wada CmpNGVerb ;
+    kala+PP:kala CmpNGVerb ;
+    kala+Adp+Adp/la:kala CmpNGVerb ;
+    u+Adp:u CmpNGVerb ;
+    ma+Adp+Neg:ma CmpNGVerb ; ! TODO: better tag? ma is also CS, but here we have adp Neg?
+    
+    dhex+Adp+Loc:dhex´	CmpNGVerb ;
+    hor+Adp+Loc:hor´  CmpNGVerb ;
+    ag+Adp+Loc:ag´  CmpNGVerb ;
+    hoos+Adp+Loc:hoos´´	CmpNGVerb ;
+    kor+Adp+Loc:kor´´  CmpNGVerb ;
+
+! TODO: how to mark these for a speller?
+LEXICON CmpNGVerb
+    +Pfx+Cmp+Use/Sub+Use/NG#: ToWords ;
+    +Pfx+Cmp+Use/Sub+Use/NG#:%- ToWords ;
+
+LEXICON ToWords
+    Verb ;
+    IrregularVerb ;
+    Noun ;
+    
+
+! vim: set ft=xfst-lexc:
+

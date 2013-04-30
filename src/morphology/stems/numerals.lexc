@@ -1,0 +1,69 @@
+!! Numerals
+!! --------
+!! Numerals in UNDEFINED language are numbers.
+
+LEXICON Numerals
+  NumeralCirc ;
+  Numeral ;
+
+LEXICON NumeralCirc
++Use/CircN: NumeralPre ;
+
+LEXICON NumeralPre
++Use/Circ: ARABIC ; ! for the arabic numerals !
++Use/Circ: ROMAN ; ! for the roman numerals!
++Use/Circ: NUM-PREFIXES ; ! for §34 etc.!
+! TODO: +Use/Circ: ISOLATED-NUMEXP ; ! for ½ etc.!
+
+LEXICON Numeral
+  ordinal ; 
+  cardinal ; 
+  Numeral_digit ; 
+
+LEXICON cardinal
+  kow		NUM1 ;
+  laba		NUM1_FEMd ;
+  saddex		NUM1_FEM ;
+  afar		NUM1_FEM ;
+  shan		NUM1_FEM ;
+  lix		NUM1_FEM ;
+  toddoba		NUM1_FEMd ;
+  siddeed		NUM1_FEM ;
+  sagaal		NUM1_MASC ;
+  toban:tob%^an		NUM1_MASC ;
+  labaatan		NUM1 ;
+  soddon		NUM1 ;
+  afartan		NUM1 ;
+  konton		NUM1 ;
+  lixdan		NUM1 ;
+  toddobaatan		NUM1 ;
+  siddeetan		NUM1 ;
+  sagaashan		NUM1 ;
+  boqol		NUM1 ;
+  kun		NUM1 ;
+
+LEXICON ordinal
+  kowaad		ORD2 ;
+  labaad		ORD2 ;
+  saddexaad		ORD2 ;
+  afaraad		ORD2 ;
+  afraad		ORD2 ;
+  shanaad		ORD2 ;
+  lixaad		ORD2 ;
+  toddobaad		ORD2 ;
+  siddeedaad		ORD2 ;
+  sagaalaad		ORD2 ;
+  tobnaad		ORD2 ;
+  tobanaad		ORD2 ;
+  labaatanaad		ORD2 ;
+  soddonaad		ORD2 ;
+  afartanaad		ORD2 ;
+  kontonaad		ORD2 ;
+  lixdanaad		ORD2 ;
+  toddobaatanaad		ORD2 ;
+  siddeetanaad		ORD2 ;
+  sagaashanaad		ORD2 ;
+  boqolaad		ORD2 ;
+  kunaad		ORD2 ;
+
+! vim: set ft=xfst-lexc:

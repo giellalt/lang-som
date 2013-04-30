@@ -1,0 +1,167 @@
+!! Adjective inflection
+!! --------------------
+!! The UNDEFINED language adjectives compare.
+
+! TODO: weyn - weynu, weyni?, weynaadaa
+! TODO: case on adjectives, yar, yaruna, yaru, dab yaru, qayb yar
+	! Sidaas oo kalena carrabku waa qayb yar ... Bal eega dab yaru intuu qoryo shido.
+
+LEXICON IrregularAdjective
+dhan+A+Pl:dhammu Clitics "much, many" ; 
+xaq+A+Abs:xaqa Clitics "just" ;
+xaq+A:xaq Clitics "just" ;
+xun+A:xun Clitics "evil" ;
+been+A:been Clitics "false" ;
+dheer+A:dheer Clitics "tall" ;
+badan+A+Attr:bad%^an StatePerson ;
+og+A:og StatePerson "know(ing)";
+og+A:og Clitics "know(ing)";
+eg:ek AdjState ;
+eg+A:eg Clitics ;
+
+! TODO: perhaps need to do something else with this.
+leh+A+Neg:la'aan Clitics ;
+leh+A:leh Clitics ;
+leh+A+Nom:lahu Clitics ;
+
+alla+A+Attr:alla Clitics ;
+dambe+A+Attr:dambe Clitics ;
+dhexaad+A+Attr:dhexaad Clitics ;
+dhexe+A+Attr:dhexe Clitics ;
+gadaale+A+Attr:gadaale Clitics ;
+hoose+A+Attr:hoose Clitics ;
+kale+A+Attr:kale Clitics ;
+kasta+A+Attr:kasta Clitics ;
+keliya+A+Attr:keliya Clitics ;
+kore+A+Attr:kore Clitics ;
+qalaad+A+Attr:qalaad Clitics ;
+sare+A+Attr:sare Clitics ;
+shishay+A+Attr:shishay Clitics ;
+shishe+A+Attr:shishe Clitics ;
+soke+A+Attr:soke Clitics ;
+wal+A+Attr:wal Clitics ;
+xagge+A+Attr:xagge Clitics ;
+
+
+kasta+A+Clit/oo+CS:kastoo Clitics ;
+
+LEXICON AdjState
++A: StatePerson ;
++A: AdjMor ;
++A: AdjNom ; 
+
+LEXICON AdjNom
++Nom:u Clitics ;
++Nom:i Clitics ;
+
+! Sometimes orthography includes spaces, e.g. wanaagsan ahay. This will just be handled with copulas elsewhere.
+
+LEXICON StatePerson
+:{#} StatePres ; 
+:{#} StatePast ; 
+
+! TODO: note that it's not just these -san adjectives that do this, but also other adjectives such as cusúb, which can also take the short forms. Hmmm.
+
+LEXICON StatePres
+	StatePresLong ;
+	StatePresShort ; 
+	StateNeg ;
+	StateNegShort ;
+
+	! wanaagsanaado, kululaado, degganaado, etc.
+	+V/ah:aa V3A_VerbMorf ;  ! TODO: Is that what this is?
+
+
+LEXICON StatePresLong
++Pres+1Sg:ahay	  	  FINAL ; 
++Pres+2Sg:tahay        FINAL ; 
++Pres+3SgM:yahay    #; 
++Pres+3SgF:tahay     FINAL ;
+
++Pres+1PlIncl:nahay     FINAL ;
++Pres+1PlExcl:nahay     FINAL ;
++Pres+2Pl:tihiin	   FINAL ; 
++Pres+3Pl:yihiin       FINAL ; 
+
+LEXICON StatePresShort
++Pres+1Sg:ay	  	  FINAL ; 
++Pres+2Sg:tay        FINAL ; 
++Pres+3SgM:yay    FINAL ; 
++Pres+3SgF:tay     FINAL ;
+
++Pres+1PlIncl:nay     FINAL ;
++Pres+1PlExcl:nay     FINAL ;
++Pres+2Pl:tiin	   FINAL ; 
++Pres+3Pl:yiin       FINAL ; 
+
+LEXICON StateNeg
+
++Pres+1Sg+Neg:ihi´	FINAL ;
++Pres+2Sg+Neg:ihi´d	FINAL ;
++Pres+3SgM+Neg:aha´	FINAL ;
++Pres+3SgF+Neg:aha´	FINAL ;
++Pres+1PlIncl+Neg:ihi´n  FINAL ;
++Pres+1PlExcl+Neg:ihi´n  FINAL ;
++Pres+2Pl+Neg:ihidi´n    FINAL ;
+
++Pres+3Pl+Neg:aha´	FINAL ;
+
+
+LEXICON StateNegShort
+
++Pres+1Sg+Neg:i´	FINAL ;
++Pres+2Sg+Neg:i´d	FINAL ;
++Pres+3SgM+Neg:a´	FINAL ;
++Pres+3SgF+Neg:a´	FINAL ;
++Pres+1PlIncl+Neg:i´n  FINAL ;
++Pres+1PlExcl+Neg:i´n  FINAL ;
++Pres+2Pl+Neg:idi´n    FINAL ;
++Pres+3Pl+Neg:a´	FINAL ;
+
+
+LEXICON StatePast
+	StatePastLong ;
+	StatePastShort ;
+
+LEXICON StatePastLong
++Past+1Sg:ahaa	  	  FINAL ; 
++Past+2Sg:ahayd        FINAL ; 
++Past+3SgM:ahaa    FINAL ; 
++Past+3SgF:ahayd     FINAL ;
+
++Past+1PlIncl:ahayn     FINAL ;
++Past+1PlExcl:ahayn     FINAL ;
++Past+2Pl:ahaydeen	   FINAL ; 
++Past+3Pl:ahaayeen       FINAL ;
+
+LEXICON StatePastShort
++Past+1Sg:aa	  	  FINAL ; 
++Past+2Sg:ayd        FINAL ; 
++Past+3SgM:aa    FINAL ; 
++Past+3SgF:ayd     FINAL ;
+
++Past+1PlIncl:ayn     FINAL ;
++Past+1PlExcl:ayn     FINAL ;
++Past+2Pl:aydeen	   FINAL ; 
++Past+3Pl:aayeen       FINAL ;
+
+! Saeed: òw / òob inchoative
+! dhow 'near' / dhowow 'get near; approach'
+! http://books.google.com/books?id=gaktTQ8vq28C&pg=PA566&lpg=PA566&dq=ahay+tahay+yahay+nahay+yihiin+tihiin+verb&source=bl&ots=g2t30_f-qh&sig=j61mtnaQIJi6GXLObDYYorNyEog&hl=fi&ei=0kx6TOi4O4KiOLik8bIG&sa=X&oi=book_result&ct=result&resnum=2&ved=0CBwQ6AEwAQ#v=onepage&q=ahay20tahay20yahay20nahay20yihiin20tihiin20verb&f=false
+
+
+LEXICON AdjBase
++A: AdjMor ;
++A+Inch:oo´b{#} StatePerson ;
++A+Inch:oo´b{#} Progressive ;
++A:o´w FINAL ;
+
+LEXICON AdjMor
+Clitics ;
+
+
+! vim: set ts=4 sw=4 tw=0 syntax=lexc :
+
+
+! vim: set ft=xfst-lexc:
+

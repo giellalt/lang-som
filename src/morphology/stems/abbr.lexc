@@ -1,0 +1,27 @@
+
+LEXICON Abbreviations
+	ab ;
+	# ;
+
+LEXICON ab 
+BBC+N+Prop+Abbr+Fem:bbc ab_fem ;
+BBC+N+Prop+Abbr+Fem:BBC ab_fem ;
+
+GMT+N+Abbr:GMT FINAL ;
+SGA+N+Prop+Abbr:SGA FINAL ;
+CSS+N+Prop+Abbr:CSS FINAL ; 
+TV+N+Abbr:TV FINAL ;
+UK+N+Prop+Abbr:UK FINAL ;
+UK+N+Prop+Abbr:uk FINAL ;
+CO+N+Prop+Abbr:CO FINAL ;
+CO+N+Prop+Abbr:co FINAL ;
+
+
+LEXICON ab_fem
++Def+Sg+Abs+Prox:da FINAL ;
++Indef+Sg+Abs:0 FINAL ;
++Indef+Sg+Nom:0 FINAL ;
++Indef+Sg+Gen:0 FINAL ;
+
+
+! vim: set ts=4 sw=4 tw=0 syntax=lexc :

@@ -1,0 +1,1231 @@
+LEXICON IrregularVerb
+	Copulas ;
+	prefixing ;  	! TODO: prefixing verbs
+
+LEXICON Copulas
+	Ah ; 
+	MA ; 
+
+LEXICON MA
+	ma+V+Neg+Pres+3SgM:muu Clitics ; ! mu´u ? 
+
+    ma+V+1Sg+Ind+Pres+Prog+Neg:ma´ayo´ Clitics ;
+    ma+V+2Sg+Ind+Pres+Prog+Neg:ma´yso´ Clitics ;
+    ma+V+2Sg+Ind+Pres+Prog+Neg:ma´ysi´d Clitics ;
+    ma+V+3SgM+Ind+Pres+Prog+Neg:ma´ayo´ Clitics ;
+    ma+V+3SgF+Ind+Pres+Prog+Neg:ma´ayso´ Clitics ;
+    ma+V+1Pl+Ind+Pres+Prog+Neg:ma´yno´ Clitics ;
+    ma+V+2Pl+Ind+Pres+Prog+Neg:ma´ysaan´´ Clitics ;
+    ma+V+3Pl+Ind+Pres+Prog+Neg:ma´ayaan´´ Clitics ;
+
+
+LEXICON Ah
+	Ah_Neg  ;
+	Ah_Pres ; 
+	Ah_Long ;
+	Ah_Rel ;
+	+V+Imper: Ah_Imper ;
+	Ah_Clause_Case ;
+	Ah_Past ;
+	Ah_Opt ;
+	Ah_Cond ; 
+
+
+! TODO: more relative forms? nahay?
+LEXICON Ah_Rel
+    ah+V+Pres+Rel+3SgM:ah         Clitics ;
+
+LEXICON Ah_Neg
+    ah+V+Neg:ahayn		Clitics ;
+
+    ! TODO: unsure about tense here, may be no tense
+    ah+V+Past+1Sg+Neg:lahayn´ Clitics ;
+    ah+V+Past+2Sg+Neg:lahayn´ Clitics ;
+    ah+V+Past+3SgM+Neg:lahayn´ Clitics ;
+    ah+V+Past+3SgF+Neg:lahayn´ Clitics ;
+    ah+V+Past+1Pl+Neg:lahayn´ Clitics ;
+    ah+V+Past+2Pl+Neg:lahayn´ Clitics ;
+    ah+V+Past+3Pl+Neg:lahayn´ Clitics ;
+	
+	ah+V+Pres+1Sg+Neg:ihi´	Clitics ;
+	ah+V+Pres+2Sg+Neg:ihi´d	Clitics ;
+	ah+V+Pres+3SgM+Neg:aha´	Clitics ;
+	ah+V+Pres+3SgF+Neg:aha´	Clitics ;
+
+	ah+V+Pres+1PlIncl+Neg:ihi´n  Clitics ;
+	ah+V+Pres+1PlExcl+Neg:ihi´n  Clitics ;
+	ah+V+Pres+2Pl+Neg:ihidi´n    Clitics ;
+	ah+V+Pres+3Pl+Neg:aha´	Clitics ;
+
+! TODO: lahaado
+! TODO: what are these exactly?
+LEXICON Ah_Long
+	ah:ahaa V3A_VerbMorf ; !
+
+	! ahaataa
+	! ahaatid
+	! ahaadaa
+	! ahaataa
+
+	! ahaannaa
+	! ahaataan
+	! ahaadaan
+
+
+LEXICON Ah_Pres
+	ah+V+Inf:ahaa´n			# ;
+	ah+V+Ind+Pres+1Sg:ahay	  	  # ; 
+	ah+V+Ind+Pres+2Sg:tahay        # ; 
+	ah+V+Ind+Pres+3SgM:yahay    # ; 
+	ah+V+Ind+Pres+3SgF:tahay     # ;
+	
+	ah+V+Ind+Pres+1PlIncl:nahay     # ;
+	ah+V+Ind+Pres+1PlExcl:nahay     # ;
+	ah+V+Ind+Pres+2Pl:tihiin	   # ; 
+	ah+V+Ind+Pres+3Pl:yihiin       # ; 
+
+LEXICON Ah_Imper
+	+Sg:aha´w		Clitics ;	
+	+Pl:ahaa´da		Clitics ;	
+	
+	+Neg+Sg:ahaa´nin	 Clitics ;	
+	+Neg+Pl:ahaani´na Clitics ;
+	
+
+LEXICON Ah_Past
+	Ah_Past_Full ;
+	Ah_Past_Reduced ;
+
+LEXICON Ah_Past_Full
+	ah+V+1Sg+Ind+Past:ahaa	  	  # ; 
+	ah+V+2Sg+Ind+Past:ahayd        # ; 
+	ah+V+3SgM+Ind+Past:ahaa    # ; 
+	ah+V+3SgF+Ind+Past:ahayd     # ;
+	
+	ah+V+1Pl+Incl+Ind+Past:ahayn     # ;
+	ah+V+1Pl+Excl+Ind+Past:ahayn     # ;
+	ah+V+2Pl+Ind+Past:ahaydeen	   # ; 
+	ah+V+3Pl+Ind+Past:ahaayeen       # ;
+
+! TODO: These are reduced forms for focus
+LEXICON Ah_Past_Reduced
+	ah+V+1Sg+Ind+Past+Red:ahaa´	  	  # ; 
+	ah+V+2Sg+Ind+Past+Red:ahaa´        # ; 
+	ah+V+3SgM+Ind+Past+Red:ahaa´    # ; 
+	ah+V+3SgF+Ind+Past+Red:ahaýd     # ;
+	
+	ah+V+1Pl+Incl+Ind+Past+Red:ahaýn     # ;
+	ah+V+1Pl+Excl+Ind+Past+Red:ahayn     # ;
+	ah+V+2Pl+Ind+Past+Red:ahaa´	   # ; 
+	ah+V+3Pl+Ind+Past+Red:ahaa´       # ;
+
+! TODO: Need to go through verb tags here and make sure everything is in the order it is in
+!       these reduced forms.
+!
+!		+V+PERSON+Ind+TENSE+etc
+
+! TODO: These are reduced forms for subordinate clauses
+! TODO: Rel+Nom Rel+Abs +Red?
+
+! They are invariable, but they need person marking.
+
+! TODO: ahu? 
+LEXICON Ah_Clause_Case
+
+	ah+V+1Sg+Ind+Pres+Red+Abs:a´h 		Clitics ; 
+	ah+V+2Sg+Ind+Pres+Red+Abs:a´h 		Clitics ; 
+	ah+V+3SgM+Ind+Pres+Red+Abs:a´h 		Clitics ; 
+	ah+V+3SgF+Ind+Pres+Red+Abs:a´h 		Clitics ; 
+	ah+V+1Pl+Ind+Pres+Red+Abs:a´h 		Clitics ; 
+	ah+V+2Pl+Ind+Pres+Red+Abs:a´h 		Clitics ; 
+	ah+V+3Pl+Ind+Pres+Red+Abs:a´h 		Clitics ; 
+
+	ah+V+1Sg+Ind+Pres+Red+Nom:ihi 		Clitics ; 
+	ah+V+2Sg+Ind+Pres+Red+Nom:ihi 		Clitics ; 
+	ah+V+3SgM+Ind+Pres+Red+Nom:ihi 		Clitics ; 
+	ah+V+3SgF+Ind+Pres+Red+Nom:ihi 		Clitics ; 
+	ah+V+1Pl+Ind+Pres+Red+Nom:ihi 		Clitics ; 
+	ah+V+2Pl+Ind+Pres+Red+Nom:ihi 		Clitics ; 
+	ah+V+3Pl+Ind+Pres+Red+Nom:ihi 		Clitics ; 
+
+	! TODO: fid a way to check this. appears to be for subj of subord. and subj of matrix
+	ah+V+1Sg+Ind+Pres+Red+Nom:a´hu 		Clitics ; 
+	ah+V+2Sg+Ind+Pres+Red+Nom:a´hu 		Clitics ; 
+	ah+V+3SgM+Ind+Pres+Red+Nom:a´hu 		Clitics ; 
+	ah+V+3SgF+Ind+Pres+Red+Nom:a´hu 		Clitics ; 
+	ah+V+1Pl+Ind+Pres+Red+Nom:a´hu 		Clitics ; 
+	ah+V+2Pl+Ind+Pres+Red+Nom:a´hu 		Clitics ; 
+	ah+V+3Pl+Ind+Pres+Red+Nom:a´hu 		Clitics ; 
+
+
+LEXICON Ah_Opt
+	ah+V+Pres+Opt+Neg+1Sg:ya´anan	  	  Clitics ; 
+	ah+V+Pres+Opt+Neg+2Sg:ya´anad        Clitics ; 
+	ah+V+Pres+Opt+Neg+3SgM:ya´anu    Clitics ; 
+	ah+V+Pres+Opt+Neg+3SgF:ya´anay     Clitics ;
+	
+	ah+V+Pres+Opt+Neg+1PlIncl:ya´anan     Clitics ;
+	ah+V+Pres+Opt+Neg+1PlIncl:ya´anannu     Clitics ;
+	ah+V+Pres+Opt+Neg+1PlExcl:ya´anan     Clitics ;
+	ah+V+Pres+Opt+Neg+1PlExcl:ya´anannu     Clitics ;
+	
+	ah+V+Pres+Opt+Neg+2Pl:ya´anad	   Clitics ; 
+	ah+V+Pres+Opt+Neg+3Pl:ya´anay       Clitics ;
+
+
+LEXICON Ah_Cond
+	ah+V+Pres+Cond+1Sg:lahaa	  	  Clitics ; 
+	ah+V+Pres+Cond+2Sg:lahaa        Clitics ; 
+	ah+V+Pres+Cond+3SgM:lahaa    Clitics ; 
+	ah+V+Pres+Cond+3SgF:lahayd     Clitics ;
+	
+	ah+V+Pres+Cond+1PlIncl:lahayn     Clitics ;
+	ah+V+Pres+Cond+1PlExcl:lahayn     Clitics ;
+	ah+V+Pres+Cond+2Pl:lahaydeen	   Clitics ; 
+	ah+V+Pres+Cond+3Pl:lahaayeen       Clitics ;
+
+
+LEXICON prefixing
+	iman+V+IV:		IMAN "come" ;
+	aqoon+V:	AQOON "know, recognize" ; 
+	odhan+V+IV:	ODHAN "say" ;
+	oolli+V+IV:	OOLLI "be in a place" ;
+	lee+V+V/:lee	Ah	"have" ;		! lee+V+V/ah
+
+
+	! TODO: ah is one of these verbs
+
+
+LEXICON AQOON
+	+Inf:aqoon Clitics ; ! aqoo´n ! check inf form
+	+Ind+Past:	AQOON/GenPast ;
+	+Ind+Past:  AQOON/GenPastRedAbs ; ! +Red tag after
+	+Ind+Past:  AQOON/GenPastRedNom ; ! +Red tag after
+	+Neg+Past:	AQOON/GenPastNeg ;
+	
+	+Ind+Pres:	AQOON/GenPres ;
+	+Ind+Pres:	AQOON/GenPresRedAbs ; ! +Red tag after
+	+Ind+Pres:	AQOON/GenPresRedNom ; ! +Red tag after
+	+Neg+Pres:	AQOON/GenPresNeg ;
+	+Ind+Pres:	AQOON/GenPresRel ; ! +Rel tag after
+	
+	+Ind+Pres:	AQOON/GenPresAlt ;
+	+Ind+Pres:	AQOON/GenPresRedAbsAlt ; ! +Red tag after
+	
+	+Imp:		AQOON/Imp ;
+	
+	! Barrier and {PREFIXING} necessary for Prog.
+	:aqoon%{#%}{PREFIXING}		Progressive ; ! ima´n ; TODO: +Ind tag comes in at some odd place.
+	+Neg+Prog+Pres:oqoon 			Clitics ;		! oqoo´n
+	+Neg+Prog+Past:oqoonaynin		Clitics ; 	! oqoonayni´n
+
+
+! Following lexicons only have Person, Reduced and Sty tags.
+LEXICON AQOON/GenPast
+	  +1Sg:iqiin			Clitics ;
+	 +2Sg:tiqiin			Clitics ;
+	+3SgM:yiqiin			Clitics ;
+	+3SgF:tiqiin			Clitics ;
+	 +1Pl:niqiin			Clitics ;
+	+2Pl:tiqiinneen		Clitics ;
+	+3Pl:yiqiinneen		Clitics ;
+
+LEXICON AQOON/GenPastRedAbs
+	  +1Sg+Red:iqii´n			Clitics ; !  iqii´n
+	 +2Sg+Red:yiqii´n			Clitics ; ! yiqii´n
+	+3SgM+Red:yiqii´n			Clitics ; ! yiqii´n
+	+3SgF+Red:tiqii´n			Clitics ; ! tiqii´n
+	 +1Pl+Red:niqii´n			Clitics ; ! niqii´n
+	+2Pl+Red:yiqii´n			Clitics ; ! yiqii´n
+	+3Pl+Red:yiqii´n			Clitics ; ! yiqii´n
+
+! TODO: Check this.
+LEXICON AQOON/GenPastRedNom
+	  +1Sg+Red+Nom:aqaannaa			Clitics ;
+	 +2Sg+Red+Nom:yaqaannaa			Clitics ;
+	+3SgM+Red+Nom:yaqaannaa			Clitics ;
+	+3SgF+Red+Nom:taqaannaa			Clitics ;
+	 +1Pl+Red+Nom:naqaannaa			Clitics ;
+	+2Pl+Red+Nom:yaqaannaanaa			Clitics ;
+	+3Pl+Red+Nom:yaqaannaanaa			Clitics ;
+
+	! NOTE: NG forms without geminate
+	  +1Sg+Red+Nom:aqaanaa			Clitics/NG ;
+	 +2Sg+Red+Nom:yaqaanaa			Clitics/NG ;
+	+3SgM+Red+Nom:yaqaanaa			Clitics/NG ;
+	+3SgF+Red+Nom:taqaanaa			Clitics/NG ;
+	 +1Pl+Red+Nom:naqaanaa			Clitics/NG ;
+	+2Pl+Red+Nom:yaqaanaanaa			Clitics/NG ;
+	+3Pl+Red+Nom:yaqaanaanaa			Clitics/NG ;
+
+
+LEXICON AQOON/GenPastNeg
+	+Sg:oqoo´n               Clitics ; ! oqoo´n
+	+Pl:oqooni´n             Clitics ; ! oqooni´n
+	+Sg+Sty/TODO:aqoo´n      Clitics ; ! aqoo´n
+	+Pl+Sty/TODO:aqooni´n	Clitics ; ! aqooni´n
+
+LEXICON AQOON/GenPres
+	  +1Sg:aqaan			Clitics ;
+	 +2Sg:taqaan			Clitics ;
+	+3SgM:yaqaan			Clitics ;
+	+3SgF:taqaan			Clitics ;
+	 +1Pl:naqaan			Clitics ;
+	+2Pl:taqaanniin		Clitics ;
+	+3Pl:yaqaanniin		Clitics ;
+
+
+! TODO: check this.
+LEXICON AQOON/GenPresRedNom
+	  +1Sg+Red+Nom:aqaa´n			Clitics ; 	!  aqaa´n
+	 +2Sg+Red+Nom:yaqaa´n			Clitics ; 	! yaqaa´n
+	+3SgM+Red+Nom:yaqaa´n			Clitics ; 	! yaqaa´n
+	+3SgF+Red+Nom:taqaa´n			Clitics ; 	! taqaa´n
+	 +1Pl+Red+Nom:naqaa´n			Clitics ; 	! naqaa´n
+	+2Pl+Red+Nom:yaqaa´n			Clitics ; 	! yaqaa´n
+	+3Pl+Red+Nom:yaqaa´n			Clitics ; 	! yaqaa´n
+
+! Abs
+LEXICON AQOON/GenPresRedAbs
+	  +1Sg+Red+Abs:aqaa´n			Clitics ; 	!  aqaa´n
+	 +2Sg+Red+Abs:yaqaa´n			Clitics ; 	! yaqaa´n
+	+3SgM+Red+Abs:yaqaa´n			Clitics ; 	! yaqaa´n
+	+3SgF+Red+Abs:taqaa´n			Clitics ; 	! taqaa´n
+	 +1Pl+Red+Abs:naqaa´n			Clitics ; 	! naqaa´n
+	+2Pl+Red+Abs:yaqaa´n			Clitics ; 	! yaqaa´n
+	+3Pl+Red+Abs:yaqaa´n			Clitics ; 	! yaqaa´n
+
+LEXICON AQOON/GenPresRel
+	  +1Sg+Rel:aqaanno´			Clitics ; 	! 	 aqaanno´
+	 +2Sg+Rel:yaqaanno´			Clitics ; 	! 	yaqaanno´
+	+3SgM+Rel:yaqaanno´			Clitics ; 	! 	yaqaanno´
+	+3SgF+Rel:taqaanno´			Clitics ; 	! 	taqaanno´
+	 +1Pl+Rel:naqaanno´			Clitics ; 	! 	naqaanno´
+	+2Pl+Rel:yaqaannaan´´			Clitics ; 	! 	yaqaannaan´´
+	+3Pl+Rel:yaqaannaan´´			Clitics ; 	! 	yaqaannaan´´
+
+	! NOTE: NG forms without geminate
+	  +1Sg+Rel:aqaano´			Clitics/NG ; 	! 	 aqaano´
+	 +2Sg+Rel:yaqaano´			Clitics/NG ; 	! 	yaqaano´
+	+3SgM+Rel:yaqaano´			Clitics/NG ; 	! 	yaqaano´
+	+3SgF+Rel:taqaano´			Clitics/NG ; 	! 	taqaano´
+	 +1Pl+Rel:naqaano´			Clitics/NG ; 	! 	naqaanno´
+	+2Pl+Rel:yaqaanaan´´			Clitics/NG ; 	! 	yaqaanaan´´
+	+3Pl+Rel:yaqaanaan´´			Clitics/NG ; 	! 	yaqaanaan´´
+
+
+
+LEXICON AQOON/GenPresNeg
+	  +1Sg:aqaa´n			Clitics ;     !  aqaa´n
+	 +2Sg:taqaa´n			Clitics ;     ! taqaa´n
+	+3SgM:yaqaa´n			Clitics ;     ! yaqaa´n
+	+3SgF:taqaa´n			Clitics ;     ! taqaa´n
+	 +1Pl:naqaa´n			Clitics ;     ! naqaa´n
+	+2Pl:taqaanni´in		Clitics ;     ! taqaanni´in
+	+3Pl:yaqaanni´in		Clitics ;     ! yaqaanni´in
+
+LEXICON AQOON/GenPresAlt
+	  +1Sg+Sty/TODO:aqaannaa			Clitics ;
+	 +2Sg+Sty/TODO:taqaannaa			Clitics ;
+	+3SgM+Sty/TODO:yaqaannaa			Clitics ;
+	+3SgF+Sty/TODO:taqaannaa			Clitics ;
+	 +1Pl+Sty/TODO:naqaannaa			Clitics ;
+	+2Pl+Sty/TODO:taqaanniin			Clitics ;
+	+3Pl+Sty/TODO:yaqaanniin			Clitics ;
+
+LEXICON AQOON/GenPresRedAbsAlt
+	  +1Sg+Red+Abs+Sty/TODO:aqaanna´			Clitics ; 	!  aqaanna´
+	 +2Sg+Red+Abs+Sty/TODO:yaqaanna´			Clitics ; 	! yaqaanna´
+	+3SgM+Red+Abs+Sty/TODO:yaqaanna´			Clitics ; 	! yaqaanna´
+	+3SgF+Red+Abs+Sty/TODO:taqaanna´			Clitics ; 	! taqaanna´
+	 +1Pl+Red+Abs+Sty/TODO:naqaanna´			Clitics ; 	! naqaanna´
+	+2Pl+Red+Abs+Sty/TODO:yaqaanna´			Clitics ; 	! yaqaanna´
+	+3Pl+Red+Abs+Sty/TODO:yaqaanna´			Clitics ; 	! yaqaanna´
+
+LEXICON AQOON/Imp
+	+Sg:oqo´ow		Clitics ;		! oqo´ow
+	+Pl:oqoo´da		Clitics ;		! oqoo´da
+	
+	+Neg+Sg:o´qoon	Clitics ;		! o´qoon
+	+Neg+Sg:o´qoonin	Clitics ;		! o´qoonin
+	+Neg+Pl:o´qoonina Clitics ; 	! oqooni´na
+
+
+
+LEXICON IMAN
+	+Inf:ima´n	Clitics ; ! ima´n
+	+Ind+Past:	IMAN/GenPast ;
+	+Ind+Past:  IMAN/GenPastRedAbs ; ! +Red tag after
+	+Ind+Past:  IMAN/GenPastRedNom ; ! +Red tag after
+	+Neg+Past:	IMAN/GenPastNeg ;
+	
+	+Ind+Pres:	IMAN/GenPres ;
+	+Ind+Pres:  IMAN/GenPresRel ;
+	+Ind+Pres:	IMAN/GenPresRedAbs ; ! +Red tag after
+	+Ind+Pres:  IMAN/GenPresRedNom ;
+
+	+Neg+Pres:	IMAN/GenPresNeg ;
+        
+	+Imp:		IMAN/Imp ;
+	
+	! Barrier and {PREFIXING} necessary for Prog.
+	:iman%{#%}{PREFIXING}		Progressive ; ! ima´n ; TODO: +Ind tag comes in at some odd place.
+	+Neg+Prog+Pres:iman 			Clitics ;		! ima´n
+	+Neg+Prog+Past:imanayn		Clitics ; 	! ima´naýn
+	+Neg+Prog+Past:imanaynin		Clitics ; 	! ima´nayni´n
+
+
+! Following lexicons only have Person, Reduced and Sty tags.
+LEXICON IMAN/GenPast
+	  +1Sg:imi´				Clitics ;
+	 +2Sg:timi´				Clitics ;
+	+3SgM:yimi´				Clitics ;
+	+3SgF:timi´				Clitics ;
+	 +1Pl:nimi´				Clitics ;
+	+2Pl:timiddeen		Clitics/NG ;
+	+3Pl:yimiddeen		Clitics/NG ;
+	+2Pl:timaaddeen		Clitics ;
+	+3Pl:yimaaddeen		Clitics ;
+
+	! NOTE: NG forms without geminate
+	+2Pl:timaadeen		Clitics/NG ;
+	+3Pl:yimaadeen		Clitics/NG ;
+
+	+2Pl:timideen		Clitics/NG ;
+	+3Pl:yimideen		Clitics/NG ;
+
+	! TODO: some of these may be reduced or relative
+	  +1Sg+Sty/D:imid´				Clitics ;
+	 +2Sg+Sty/D:timid´				Clitics ;
+	+3SgM+Sty/D:yimid´				Clitics ;
+	+3SgF+Sty/D:timid´				Clitics ;
+	 +1Pl+Sty/D:nimid´				Clitics ;
+
+	  +1Sg+Sty/TODO:imiday				Clitics ;
+	 +2Sg+Sty/TODO:timiday				Clitics ;
+	+3SgM+Sty/TODO:yimiday				Clitics ;
+	+3SgF+Sty/TODO:timiday				Clitics ;
+	 +1Pl+Sty/TODO:nimidnay				Clitics ;
+
+	  +1Sg+Sty/TODO:imaaday				Clitics ;
+	 +2Sg+Sty/TODO:timaaday				Clitics ;
+	+3SgM+Sty/TODO:yimaaday				Clitics ;
+	+3SgF+Sty/TODO:timaaday				Clitics ;
+	 +1Pl+Sty/TODO:nimaadnay				Clitics ;
+
+
+! TODO: Check these-- kind of guessing
+LEXICON IMAN/GenPastRedNom
+	  +1Sg+Red+Abs:imaadday			IMAN/ALT ;
+	 +2Sg+Red+Abs:yimaadday			IMAN/ALT ;
+	+3SgM+Red+Abs:yimaadday			IMAN/ALT ;
+	+3SgF+Red+Abs:timaadday			IMAN/ALT ;
+	 +1Pl+Red+Abs:nimaadnay			IMAN/ALT ;
+	+2Pl+Red+Abs:yimaadday			IMAN/ALT ;
+	+3Pl+Red+Abs:yimaadday			IMAN/ALT ;
+
+	  +1Sg+Red+Abs:imaaday			IMAN/ALT ;
+	 +2Sg+Red+Abs:yimaaday			IMAN/ALT ;
+	+3SgM+Red+Abs:yimaaday			IMAN/ALT ;
+	+3SgF+Red+Abs:timaaday			IMAN/ALT ;
+	 +1Pl+Red+Abs:nimaadnay			IMAN/ALT ;
+	+2Pl+Red+Abs:yimaaday			IMAN/ALT ;
+	+3Pl+Red+Abs:yimaaday			IMAN/ALT ;
+
+
+! NOTE: following lexicon adds final tone and -d alternative
+LEXICON IMAN/GenPastRedAbs
+	  +1Sg+Red+Abs:imi			IMAN/ALT ; ! 	 imi´	/	 imi´d
+	 +2Sg+Red+Abs:yimi			IMAN/ALT ; ! 	yimi´	/	yimi´d
+	+3SgM+Red+Abs:yimi			IMAN/ALT ; ! 	yimi´	/	yimi´d
+	+3SgF+Red+Abs:timi			IMAN/ALT ; ! 	timi´	/	timi´d
+	 +1Pl+Red+Abs:nimi			IMAN/ALT ; ! 	nimi´	/	nimi´d
+	+2Pl+Red+Abs:yimi			IMAN/ALT ; ! 	yimi´	/	yimi´d
+	+3Pl+Red+Abs:yimi			IMAN/ALT ; ! 	yimi´	/	yimi´d
+
+! 	  +1Sg+Red+Abs+Sty/TODO:imiday			IMAN/ALT ; ! 	 imi´	/	 imi´d
+! 	 +2Sg+Red+Abs+Sty/TODO:yimiday			IMAN/ALT ; ! 	yimi´	/	yimi´d
+! 	+3SgM+Red+Abs+Sty/TODO:yimiday			IMAN/ALT ; ! 	yimi´	/	yimi´d
+! 	+3SgF+Red+Abs+Sty/TODO:timiday			IMAN/ALT ; ! 	timi´	/	timi´d
+! 	 +1Pl+Red+Abs+Sty/TODO:nimidnay			IMAN/ALT ; ! 	nimi´	/	nimi´d
+! 	+2Pl+Red+Abs+Sty/TODO:yimiday			IMAN/ALT ; ! 	yimi´	/	yimi´d
+! 	+3Pl+Red+Abs+Sty/TODO:yimiday			IMAN/ALT ; ! 	yimi´	/	yimi´d
+
+
+LEXICON IMAN/GenPastNeg
+	+Sg:iman               Clitics ; ! ima´n
+	+Pl:imanin             Clitics ; ! imani´n
+
+LEXICON IMAN/GenPres
+	  +1Sg:imaaddaa			Clitics ;
+	 +2Sg:timaaddaa			Clitics ;
+	+3SgM:yimaaddaa			Clitics ;
+	+3SgF:timaaddaa			Clitics ;
+	 +1Pl:nimaadnaa			Clitics ;
+	+2Pl:timaaddaan		Clitics ;
+	+3Pl:yimaaddaan		Clitics ;
+
+	! NOTE: NG forms without geminate
+	  +1Sg:imaadaa			Clitics/NG ;
+	 +2Sg:timaadaa			Clitics/NG ;
+	+3SgM:yimaadaa			Clitics/NG ;
+	+3SgF:timaadaa			Clitics/NG ;
+	 +1Pl:nimaadnaa			Clitics/NG ;
+	+2Pl:timaadaan		Clitics/NG ;
+	+3Pl:yimaadaan		Clitics/NG ;
+
+
+LEXICON IMAN/GenPresRedNom
+	  +1Sg+Red+Nom:imaaddaa			Clitics ; 	! 	 imaaddaa
+	 +2Sg+Red+Nom:yimaaddaa			Clitics ; 	! 	yimaaddaa
+	+3SgM+Red+Nom:yimaaddaa			Clitics ; 	! 	yimaaddaa
+	+3SgF+Red+Nom:timaaddaa			Clitics ; 	! 	timaaddaa
+	 +1Pl+Red+Nom:nimaaddaa			Clitics ; 	! 	nimaadnaa
+	+2Pl+Red+Nom:yimaaddaa			Clitics ; 	! 	yimaaddaa
+	+3Pl+Red+Nom:yimaaddaa			Clitics ; 	! 	yimaaddaa
+
+	! NOTE: NG forms without geminate
+	  +1Sg+Red+Nom:imaadaa			Clitics/NG ; 	! 	 imaadaa
+	 +2Sg+Red+Nom:yimaadaa			Clitics/NG ; 	! 	yimaadaa
+	+3SgM+Red+Nom:yimaadaa			Clitics/NG ; 	! 	yimaadaa
+	+3SgF+Red+Nom:timaadaa			Clitics/NG ; 	! 	timaadaa
+	 +1Pl+Red+Nom:nimaadaa			Clitics/NG ; 	! 	nimaadnaa
+	+2Pl+Red+Nom:yimaadaa			Clitics/NG ; 	! 	yimaadaa
+	+3Pl+Red+Nom:yimaadaa			Clitics/NG ; 	! 	yimaadaa
+
+
+LEXICON IMAN/GenPresRedAbs
+	  +1Sg+Red+Abs:imaadda´			Clitics ; 	! 	 imaadda´
+	 +2Sg+Red+Abs:yimaadda´			Clitics ; 	! 	yimaadda´
+	+3SgM+Red+Abs:yimaadda´			Clitics ; 	! 	yimaadda´
+	+3SgF+Red+Abs:timaadda´			Clitics ; 	! 	timaadda´
+	 +1Pl+Red+Abs:nimaadda´			Clitics ; 	! 	nimaadna´
+	+2Pl+Red+Abs:yimaadda´			Clitics ; 	! 	yimaadda´
+	+3Pl+Red+Abs:yimaadda´			Clitics ; 	! 	yimaadda´
+
+	! NOTE: NG forms without geminate
+	  +1Sg+Red+Abs:imaada´			Clitics/NG ; 	! 	 imaada´
+	 +2Sg+Red+Abs:yimaada´			Clitics/NG ; 	! 	yimaada´
+	+3SgM+Red+Abs:yimaada´			Clitics/NG ; 	! 	yimaada´
+	+3SgF+Red+Abs:timaada´			Clitics/NG ; 	! 	timaada´
+	 +1Pl+Red+Abs:nimaada´			Clitics/NG ; 	! 	nimaadna´
+	+2Pl+Red+Abs:yimaada´			Clitics/NG ; 	! 	yimaada´
+	+3Pl+Red+Abs:yimaada´			Clitics/NG ; 	! 	yimaada´
+
+LEXICON IMAN/GenPresRel
+	  +1Sg+Rel:imaaddo´			Clitics ; 	! 	 imaaddo´
+	 +2Sg+Rel:yimaaddo´			Clitics ; 	! 	yimaaddo´
+	+3SgM+Rel:yimaaddo´			Clitics ; 	! 	yimaaddo´
+	+3SgF+Rel:timaaddo´			Clitics ; 	! 	timaaddo´
+	 +1Pl+Rel:nimaaddo´			Clitics ; 	! 	nimaadno´
+	+2Pl+Rel:yimaaddaan´´			Clitics ; 	! 	yimaaddaan´´
+	+3Pl+Rel:yimaaddaan´´			Clitics ; 	! 	yimaaddaan´´
+
+	! NOTE: NG forms without geminate
+	  +1Sg+Rel:imaado´			Clitics/NG ; 	! 	 imaado´
+	 +2Sg+Rel:yimaado´			Clitics/NG ; 	! 	yimaado´
+	+3SgM+Rel:yimaado´			Clitics/NG ; 	! 	yimaado´
+	+3SgF+Rel:timaado´			Clitics/NG ; 	! 	timaado´
+	 +1Pl+Rel:nimaado´			Clitics/NG ; 	! 	nimaadno´
+	+2Pl+Rel:yimaadaan´´			Clitics/NG ; 	! 	yimaadaan´´
+	+3Pl+Rel:yimaadaan´´			Clitics/NG ; 	! 	yimaadaan´´
+
+
+
+LEXICON IMAN/GenPresNeg
+	  +1Sg:imaaddo´			Clitics ;     !  imaaddo´  
+	 +2Sg:timaaddo´			Clitics ;     ! timaaddo´  
+	+3SgM:yimaaddo´			Clitics ;     ! yimaaddo´  
+	+3SgF:timaaddo´			Clitics ;     ! timaaddo´  
+	 +1Pl:nimaaddo´			Clitics ;     ! nimaadno´  
+	+2Pl:timaaddaan´	Clitics ;     ! timaadda´an
+	+3Pl:yimaaddaan´	Clitics ;     ! yimaadda´an
+
+LEXICON IMAN/Imp
+	+Sg:kaalay		Clitics ;		! kaa´lay
+	+Pl:kaalaya		Clitics ; 	! kaala´ya
+	
+	+Neg+Sg:iman	Clitics ;     ! i´man
+	+Neg+Sg:imanin	Clitics ;     ! i´manin
+	+Neg+Pl:imani´na Clitics ; 	! imani´na
+
+LEXICON IMAN/ALT
+	+Sty/TODO:d´		Clitics ;
+	:´                  Clitics ; 
+
+
+
+! TODO: odhan needs alternate -r- forms with +Sty/TODO
+
+LEXICON ODHAN
+	+Inf:odhan	Clitics ; ! odha´n
+	+Inf:oran	FINAL/TODO ; ! odha´n
+
+	+Ind+Past:	ODHAN/GenPast ;
+	+Ind+Past:  ODHAN/GenPastRedAbs ; ! +Red tag after
+	+Neg+Past:	ODHAN/GenPastNeg ;
+	+Ind+Pres:  ODHAN/GenPresRel ; ! +Rel tag after
+	
+	+Ind+Pres:	ODHAN/GenPres ;
+	+Ind+Pres:	ODHAN/GenPresRedAbs ; ! +Red tag after
+	+Neg+Pres:	ODHAN/GenPresNeg ;
+	
+	+Imp:		ODHAN/Imp ;
+	
+	! Barrier and {PREFIXING} necessary for Prog.
+	 :odhan%{#%}{PREFIXING}		Progressive ; ! ima´n ; TODO: +Ind tag comes in at some odd place.
+	+Sty/TODO:oran%{#%}{PREFIXING}		Progressive ; ! ima´n ; TODO: +Ind tag comes in at some odd place.
+	
+	+Neg+Prog+Pres:odhan 			Clitics ;		! odha´n
+	+Neg+Prog+Past:odhanayn			Clitics ; 	! odha´naýn
+	+Neg+Prog+Past:odhanaynin		Clitics ; 	! odha´nayni´n
+	
+	+Neg+Prog+Pres:oran 			Clitics ;		! odha´n
+	+Neg+Prog+Past:oranayn			Clitics ; 	! odha´naýn
+	+Neg+Prog+Past:oranaynin		Clitics ; 	! odha´nayni´n
+	
+
+
+LEXICON ODHAN/GenPast
+	  +1Sg:idhi				Clitics ;
+	 +2Sg:tidhi				Clitics ;
+	+3SgM:yidhi				Clitics ;
+	+3SgF:tidhi				Clitics ;
+	 +1Pl:nidhi				Clitics ;
+	+2Pl:tidhaahdeen		Clitics ;
+	+3Pl:yidhaahdeen		Clitics ;
+	! Forms for southern dialect. Doing this the lazy copy/paste way.
+	! People actually write these, so analyzing them with a Sty tag.
+	  +1Sg:iri				STY/R ;
+	 +2Sg:tiri				STY/R ;
+	+3SgM:yiri				STY/R ;
+	+3SgF:tiri				STY/R ;
+	 +1Pl:niri				STY/R ;
+	+2Pl:tiraahdeen		STY/R ;
+	+3Pl:yiraahdeen		STY/R ;
+
+LEXICON ODHAN/GenPastRedNom
+	  +1Sg+Red+Nom:idhaahday			Clitics ;
+	 +2Sg+Red+Nom:tidhaahday			Clitics ;
+	+3SgM+Red+Nom:yidhaahday			Clitics ;
+	+3SgF+Red+Nom:tidhaahday			Clitics ;
+	 +1Pl+Red+Nom:nidhaahnay			Clitics ;
+	+2Pl+Red+Nom:tidhaahdeen		Clitics ;
+	+3Pl+Red+Nom:yidhaahdeen		Clitics ;
+	
+	  +1Sg+Red+Nom:iraahday			STY/R ;
+	 +2Sg+Red+Nom:tiraahday			STY/R ;
+	+3SgM+Red+Nom:yiraahday			STY/R ;
+	+3SgF+Red+Nom:tiraahday			STY/R ;
+	 +1Pl+Red+Nom:niraahnay			STY/R ;
+	+2Pl+Red+Nom:tiraahdeen		STY/R ;
+	+3Pl+Red+Nom:yiraahdeen		STY/R ;
+
+LEXICON ODHAN/GenPastRedAbs
+	  +1Sg+Red+Abs:idhi			Clitics ; ! 	 idhi´
+	 +2Sg+Red+Abs:yidhi			Clitics ; ! 	yidhi´ 
+	+3SgM+Red+Abs:yidhi			Clitics ; ! 	yidhi´ 
+	+3SgF+Red+Abs:tidhi			Clitics ; ! 	tidhi´ 
+	 +1Pl+Red+Abs:nidhi			Clitics ; ! 	nidhi´ 
+	+2Pl+Red+Abs:yidhi			Clitics ; ! 	yidhi´ 
+	+3Pl+Red+Abs:yidhi			Clitics ; ! 	yidhi´ 
+	! Southern dialect?
+	  +1Sg+Red+Abs:iri			STY/R ; ! 	 idhi´
+	 +2Sg+Red+Abs:yiri			STY/R ; ! 	yidhi´ 
+	+3SgM+Red+Abs:yiri			STY/R ; ! 	yidhi´ 
+	+3SgF+Red+Abs:tiri			STY/R ; ! 	tidhi´ 
+	 +1Pl+Red+Abs:niri			STY/R ; ! 	nidhi´ 
+	+2Pl+Red+Abs:yiri			STY/R ; ! 	yidhi´ 
+	+3Pl+Red+Abs:yiri			STY/R ; ! 	yidhi´ 
+
+LEXICON ODHAN/GenPastNeg
+	+Sg:odhan               Clitics ; ! odha´n
+	+Pl:odhanin             Clitics ; ! odhani´n
+	+Sg:oran               STY/R ; ! odha´n
+	+Pl:oranin             STY/R ; ! odhani´n
+
+LEXICON ODHAN/GenPres
+	  +1Sg:idhaahdaa			Clitics ;
+	 +2Sg:tidhaahdaa			Clitics ;
+	+3SgM:yidhaahdaa			Clitics ;
+	+3SgF:tidhaahdaa			Clitics ;
+	 +1Pl:nidhaahnaa			Clitics ;
+	+2Pl:tidhaahdaan		Clitics ;
+	+3Pl:yidhaahdaan		Clitics ;
+	
+	  +1Sg:iraahdaa			STY/R ;
+	 +2Sg:tiraahdaa			STY/R ;
+	+3SgM:yiraahdaa			STY/R ;
+	+3SgF:tiraahdaa			STY/R ;
+	 +1Pl:niraahnaa			STY/R ;
+	+2Pl:tiraahdaan		STY/R ;
+	+3Pl:yiraahdaan		STY/R ;
+
+LEXICON ODHAN/GenPresRedNom
+	  +1Sg+Red+Nom:idhaahdaa			Clitics ; 	! 	 idhaahda´
+	 +2Sg+Red+Nom:yidhaahdaa			Clitics ; 	! 	yidhaahda´
+	+3SgM+Red+Nom:yidhaahdaa			Clitics ; 	! 	yidhaahda´
+	+3SgF+Red+Nom:tidhaahdaa			Clitics ; 	! 	tidhaahda´
+	 +1Pl+Red+Nom:nidhaahdaa			Clitics ; 	! 	nidhaahda´
+	+2Pl+Red+Nom:yidhaahdaa			Clitics ; 	! 	yidhaahda´
+	+3Pl+Red+Nom:yidhaahdaa			Clitics ; 	! 	yidhaahda´
+	
+	  +1Sg+Red+Nom:iraahdaa			STY/R ; 	! 	 idhaahda´
+	 +2Sg+Red+Nom:yiraahdaa			STY/R ; 	! 	yidhaahda´
+	+3SgM+Red+Nom:yiraahdaa			STY/R ; 	! 	yidhaahda´
+	+3SgF+Red+Nom:tiraahdaa			STY/R ; 	! 	tidhaahda´
+	 +1Pl+Red+Nom:niraahdaa			STY/R ; 	! 	nidhaahda´
+	+2Pl+Red+Nom:yiraahdaa			STY/R ; 	! 	yidhaahda´
+	+3Pl+Red+Nom:yiraahdaa			STY/R ; 	! 	yidhaahda´
+
+LEXICON ODHAN/GenPresRedAbs
+	  +1Sg+Red+Abs:idhaahda´			Clitics ; 	! 	 idhaahda´
+	 +2Sg+Red+Abs:yidhaahda´			Clitics ; 	! 	yidhaahda´
+	+3SgM+Red+Abs:yidhaahda´			Clitics ; 	! 	yidhaahda´
+	+3SgF+Red+Abs:tidhaahda´			Clitics ; 	! 	tidhaahda´
+	 +1Pl+Red+Abs:nidhaahda´			Clitics ; 	! 	nidhaahda´
+	+2Pl+Red+Abs:yidhaahda´			Clitics ; 	! 	yidhaahda´
+	+3Pl+Red+Abs:yidhaahda´			Clitics ; 	! 	yidhaahda´
+	
+	  +1Sg+Red+Abs:iraahda´			STY/R ; 	! 	 idhaahda´
+	 +2Sg+Red+Abs:yiraahda´			STY/R ; 	! 	yidhaahda´
+	+3SgM+Red+Abs:yiraahda´			STY/R ; 	! 	yidhaahda´
+	+3SgF+Red+Abs:tiraahda´			STY/R ; 	! 	tidhaahda´
+	 +1Pl+Red+Abs:niraahda´			STY/R ; 	! 	nidhaahda´
+	+2Pl+Red+Abs:yiraahda´			STY/R ; 	! 	yidhaahda´
+	+3Pl+Red+Abs:yiraahda´			STY/R ; 	! 	yidhaahda´
+	
+LEXICON ODHAN/GenPresRel
+	  +1Sg+Rel:idhaahdo´			Clitics ;     !  idhaahdo´  
+	 +2Sg+Rel:tidhaahdo´			Clitics ;     ! tidhaahdo´  
+	+3SgM+Rel:yidhaahdo´			Clitics ;     ! yidhaahdo´  
+	+3SgF+Rel:tidhaahdo´			Clitics ;     ! tidhaahdo´  
+	 +1Pl+Rel:nidhaahdo´			Clitics ;     ! nidhaahno´  
+	+2Pl+Rel:tidhaahdaan´´		Clitics ;     ! tidhaahda´an
+	+3Pl+Rel:yidhaahdaan´´		Clitics ;     ! yidhaahda´an
+	
+	  +1Sg+Rel:iraahdo´			STY/R ;     !  idhaahdo´  
+	 +2Sg+Rel:tiraahdo´			STY/R ;     ! tidhaahdo´  
+	+3SgM+Rel:yiraahdo´			STY/R ;     ! yidhaahdo´  
+	+3SgF+Rel:tiraahdo´			STY/R ;     ! tidhaahdo´  
+	 +1Pl+Rel:niraahdo´			STY/R ;     ! nidhaahno´  
+	+2Pl+Rel:tiraahdaan´		STY/R ;     ! tidhaahda´an
+	+3Pl+Rel:yiraahdaan´		STY/R ;     ! yidhaahda´an
+
+
+LEXICON ODHAN/GenPresNeg
+	  +1Sg:idhaahdo´			Clitics ;     !  idhaahdo´  
+	 +2Sg:tidhaahdo´			Clitics ;     ! tidhaahdo´  
+	+3SgM:yidhaahdo´			Clitics ;     ! yidhaahdo´  
+	+3SgF:tidhaahdo´			Clitics ;     ! tidhaahdo´  
+	 +1Pl:nidhaahdo´			Clitics ;     ! nidhaahno´  
+	+2Pl:tidhaahdaan´´		Clitics ;     ! tidhaahda´an
+	+3Pl:yidhaahdaan´´		Clitics ;     ! yidhaahda´an
+	
+	  +1Sg:iraahdo´			STY/R ;     !  idhaahdo´  
+	 +2Sg:tiraahdo´			STY/R ;     ! tidhaahdo´  
+	+3SgM:yiraahdo´			STY/R ;     ! yidhaahdo´  
+	+3SgF:tiraahdo´			STY/R ;     ! tidhaahdo´  
+	 +1Pl:niraahdo´			STY/R ;     ! nidhaahno´  
+	+2Pl:tiraahdaan´´		STY/R ;     ! tidhaahda´an
+	+3Pl:yiraahdaan´´		STY/R ;     ! yidhaahda´an
+
+LEXICON ODHAN/Imp
+	+Sg:dheh		Clitics ;		! dhe´h
+	+Pl:dhaha		Clitics ; 	! dha´ha
+	
+	+Neg+Sg:odhan	Clitics ;     ! o´dhan
+	+Neg+Sg:odhanin	Clitics ;     ! o´dhanin
+	+Neg+Pl:odhanina Clitics ; 	! odhani´na
+	! Unclear on whether these exist, but doing them for consistency
+	+Sg:reh		STY/R ;		! dhe´h
+	+Pl:raha		STY/R ; 	! dha´ha
+	
+	+Neg+Sg:oran	STY/R ;     ! o´dhan
+	+Neg+Sg:oranin	STY/R ;     ! o´dhanin
+	+Neg+Pl:oranina STY/R ; 	! odhani´na
+
+
+LEXICON STY/R
+    +Sty/R+Use/NG:      FINAL ;
+
+LEXICON FINAL/TODO
+	+Sty/TODO:			FINAL ;
+
+
+
+
+
+! Prefixing notes
+!  Marking tones because I may want to do something with them.
+!  Might be nice to have an analyzer that returns forms with tones
+!  for text to speech, but then strips those for other usages.
+
+! Hmm...
+!  Upon collecting forms for iqi and even just part of imi, it seems like
+!  it will be annoyign to formulate something nice that isn't repetitive.
+!  iqi and imi form General Past Negative in separate ways, apparently; 
+!  one uses o´ and the other does not.
+! 
+!  But maybe there is a chance for something to arise out of creating an
+!  exhaustive list of forms and tags.
+
+
+!!!! 	iqi - Infinitive form is aqoo´n
+!!!!			Wa´an ku aqoo´n doonaa 'I will recognize you.'
+
+!  Gen Past - Note same {ŧ} / {đ} / {ñ} pattern
+! 			  Note same 2/3Pl pattern
+
+!	Sg	1		 iqiin
+!		2		tiqiin
+!		3m		yiqiin
+!		3f		tiqiin
+!	Pl	1		niqiin
+!		2		tiqiinneen
+!		3		yiqiinneen
+
+! Gen Past Reduced
+
+!	Sg	1		 iqii´n
+!		2		yiqii´n
+!		3m		yiqii´n
+!		3f		tiqii´n
+!	Pl	1		niqii´n
+!		2		yiqii´n
+!		3		yiqii´n
+
+! Gen Past Neg
+
+!	ma´ + 	oqoo´n (Sg.) / oqooni´n (Pl.)
+!
+!   Also spelt aqoo´n / aqooni´n
+!
+!
+!	ex.)  Ma´ydin oqooni´n
+!		 'You (pl.) did not know.'
+
+! Gen Pres                             Gen Pres Reduced
+                                      
+!	Sg	1		 aqaan                	Sg	1		 aqaa´n
+!		2		taqaan                		2		yaqaa´n
+!		3m		yaqaan                		3m		yaqaa´n
+!		3f		taqaan                		3f		taqaa´n
+!	Pl	1		naqaan                	Pl	1		naqaa´n
+!		2		taqaanniin            		2		yaqaa´n
+!		3		yaqaanniin            		3		yaqaa´n
+
+! Gen Pres (Alternate)                 Gen Pres Reduced Abs (Alternate)
+                                      
+!	Sg	1		 aqaannaa             	Sg	1		 aqaanna´
+!		2		taqaannaa             		2		yaqaanna´
+!		3m		yaqaannaa             		3m		yaqaanna´
+!		3f		taqaannaa             		3f		taqaanna´
+!	Pl	1		naqaannaa             	Pl	1		naqaanna´
+!		2		taqaanniin            		2		yaqaanna´
+!		3		yaqaanniin            		3		yaqaanna´
+
+! Gen Pres Negative
+
+!	Sg	1		 aqaa´n
+!		2		taqaa´n
+!		3m		yaqaa´n
+!		3f		taqaa´n
+!	Pl	1		naqaa´n
+!		2		taqaanni´in  ! TODO: ii´n?
+!		3		yaqaanni´in  ! TODO: ii´n?
+
+
+! Progressive forms use the infinitive, and then essentially
+! the same morphology as with suffixing verbs.
+
+! Progressive Present              Progressive Present Reduced Abs
+                                  
+!	Sg	1		aqoo´nayaa         	Sg	1		aqoo´naya´
+!		2		aqoo´naysaa        		2		aqoo´naya´
+!		3m		aqoo´nayaa         		3m		aqoo´naya´
+!		3f		aqoo´naysaa        		3f		aqoo´naysa´
+!	Pl	1		aqoo´naynaa        	Pl	1		aqoo´nayna´
+!		2		aqoo´naysaan       		2		aqoo´naya´
+!		3		aqoo´nayaan        		3		aqoo´naya´
+
+
+! Progressive Past                 Progressive Past Reduced Abs
+                                  
+!	Sg	1		aqoo´nayay         	Sg	1		aqoo´nayaý
+!		2		aqoo´naysay        		2		aqoo´nayaý
+!		3m		aqoo´nayay         		3m		aqoo´nayaý
+!		3f		aqoo´naysay        		3f		aqoo´naysaý
+!	Pl	1		aqoo´naynay        	Pl	1		aqoo´naynaý
+!		2		aqoo´nayseen       		2		aqoo´nayaý
+!		3		aqoo´nayeen        		3		aqoo´nayaý
+
+
+! Progressive Present Negative
+
+!	ma´ayo´ + Inf ... or ma´ + typical Prog Pres Neg endings
+!		aqoonayso, aqoonayno, etc.
+
+! 	ex.)		Ma´ aqoo´nayo´.		I do not recognize her.
+!				Oqoo´n ma´ayo´.		I do not recognize her.
+
+! Progressive Past Neg.
+
+!  Invariable form:
+!
+!	Ma´ oqoonayni´n.		I didn't recognize her.
+
+! Imperative
+
+!		sg.			pl.
+!		oqo´ow		oqoo´da
+
+! Negative Imperative
+
+!		sg.			pl.
+!		ha o´qoon	ha oqooni´na
+!		ha o´qoonin
+
+
+
+
+!!!! 	imi - Infinitive form is ima´n
+!!!!			Wa´an ku aqoo´n doonaa 'I will recognize you.'
+
+!  Gen Past - Note same {ŧ} / {đ} / {ñ} pattern
+! 			  Note same 2/3Pl pattern
+
+!	Sg	1		 imi
+!		2		timi
+!		3m		yimi
+!		3f		timi
+!	Pl	1		nimi
+!		2		timaaddeen
+!		3		yimaaddeen
+
+!  Gen Past (Alternate)
+
+!	Sg	1		 imid
+!		2		timid
+!		3m		yimid
+!		3f		timid
+!	Pl	1		nimid
+!		2		timaaddeen
+!		3		yimaaddeen
+
+! Gen Past Reduced Abs
+
+!	Sg	1		 imi´			 imi´d
+!		2		yimi´			yimi´d
+!		3m		yimi´			yimi´d
+!		3f		timi´			timi´d
+!	Pl	1		nimi´			nimi´d
+!		2		yimi´			yimi´d
+!		3		yimi´			yimi´d
+
+! Gen Past Neg
+
+!	ma´ + 	ima´n (Sg.) / imani´n (Pl.)
+
+
+! Gen Pres
+                                 
+!	Sg	1		 imaaddaa
+!		2		timaaddaa
+!		3m		yimaaddaa
+!		3f		timaaddaa
+!	Pl	1		nimaadnaa
+!		2		timaaddaan
+!		3		yimaaddaan
+
+! Gen Pres Reduced Abs
+                                 
+!	Sg	1		 imaadda´          
+!		2		yimaadda´          
+!		3m		yimaadda´          
+!		3f		timaadda´          
+!	Pl	1		nimaadna´          
+!		2		yimaadda´       
+!		3		yimaadda´  
+
+! Gen Pres Neg
+                                 
+!	Sg	1		 imaaddo´         
+!		2		timaaddo´         
+!		3m		yimaaddo´         
+!		3f		timaaddo´         
+!	Pl	1		nimaadno´         
+!		2		timaadda´an      ! TODO: aa´n?
+!		3		yimaadda´an		! TODO: aa´n?  
+
+
+! Progressive: inf + typical progressive endings.
+
+! TODO: collect these from Orwin anyway, p. 152
+
+
+
+! Inf - oo´lli?
+
+! Gen Past
+
+!	Sg	1		 iil 
+!		2		tiil
+!		3m		yiil
+!		3f		tiil
+!	Pl	1		niil
+!		2		tiilleen
+!		3		yiilleen
+
+! Negative Gen Past
+
+! oo´l / oolli´n 'be in a place'
+
+
+! Gen Past Reduced Abs
+
+!	Sg	1		 ii´l          
+!		2		yii´l          
+!		3m		yii´l          
+!		3f		tii´l          
+!	Pl	1		nii´l          
+!		2		yii´l       
+!		3		yii´l  
+
+
+
+
+! Gen Pres
+
+!	Sg	1		 aal 
+!		2		taal
+!		3m		yaal
+!		3f		taal
+!	Pl	1		naal
+!		2		taalliin
+!		3		yaalliin
+
+! Gen Pres Alternative
+
+!	Sg	1		 aallaa 
+!		2		taallaa
+!		3m		yaallaa
+!		3f		taallaa
+!	Pl	1		naallaa
+!		2		taallaan
+!		3		yaallaan
+
+! Gen Pres Reduced
+
+!	Sg	1		 aa´l          
+!		2		yaa´l          
+!		3m		yaa´l          
+!		3f		taa´l          
+!	Pl	1		naa´l          
+!		2		yaa´l       
+!		3		yaa´l  
+
+! Gen Pres Reduced Alternative
+
+!	Sg	1		 aalla´
+!		2		yaalla´
+!		3m		yaalla´
+!		3f		taalla´
+!	Pl	1		naalla´
+!		2		yaalla´
+!		3		yaalla´
+
+! Gen Pres Neg
+
+!	Sg	1		 aa´l 
+!		2		taa´l
+!		3m		yaa´l
+!		3f		taa´l
+!	Pl	1		naa´l
+!		2		taalli´in
+!		3		yaalli´in
+
+
+! Progressive Present              Progressive Present Reduced
+                                  
+!	Sg	1		oo´llayaa         	Sg	1		oo´llaya´
+!		2		oo´llaysaa        		2		oo´llaya´
+!		3m		oo´llayaa         		3m		oo´llaya´
+!		3f		oo´llaysaa        		3f		oo´llaysa´
+!	Pl	1		oo´llaynaa        	Pl	1		oo´llayna´
+!		2		oo´llaysaan       		2		oo´llaya´
+!		3		oo´llayaan        		3		oo´llaya´
+
+
+! Progressive Past                 Progressive Past Reduced
+                                  
+!	Sg	1		oo´llayay         	Sg	1		oo´llayaý
+!		2		oo´llaysay        		2		oo´llayaý
+!		3m		oo´llayay         		3m		oo´llayaý
+!		3f		oo´llaysay        		3f		oo´llaysaý
+!	Pl	1		oo´llaynay        	Pl	1		oo´llaynaý
+!		2		oo´llayseen       		2		oo´llayaý
+!		3		oo´llayeen        		3		oo´llayaý
+
+
+
+! Imperative
+
+!		  	sg				pl
+!	pos	  	o´ol				oo´lla
+!	neg	    ha oo´llin	    ha oolli´na
+
+
+! Lexical notes: 
+
+! yiil - be in a place, inanimate. may use ku´.
+!		Ku´rsi ba´a mi´iska gee´sti´isa yaalla´.
+!		'There is a chair at the side of the table.'
+!
+!		'Ka´badhku qo´lka bu´u yiil.'
+!		'The cupboard was in the room.'
+!
+
+
+! joog - be in a place, people, animals. no prep.
+!		Xaggee´ ba´y joogaan?		Where are they?
+!		Gu´riga ba´y joogaan.		
+
+
+! jir - be in a place, people, animals, inanimate. may use ku´.
+!
+!		Ka´badh ba´a qo´lka ku´ jira´. 'There is a cupboard in the room.
+!		Gaba´dhu du´gsiga ku´ ma´ jirto´. 'The girl is not in the school.
+!
+!		jir is more existential, yiil is more about being located somewhere.
+
+
+LEXICON OOLLI
+	+Inf:oo´lli FINAL ; ! aqoo´n ! check inf form
+	+Ind+Past:	OOLLI/GenPast ;
+	+Ind+Past:  OOLLI/GenPastRedAbs ; ! +Red tag after
+	+Neg+Past:	OOLLI/GenPastNeg ;
+	
+	+Ind+Pres:	OOLLI/GenPres ;
+	+Ind+Pres:	OOLLI/GenPresRedAbs ; ! +Red tag after
+	+Ind+Pres:	OOLLI/GenPresRel ; ! +Rel tag after
+	+Neg+Pres:	OOLLI/GenPresNeg ;
+	
+	+Ind+Pres:	OOLLI/GenPresAlt ;
+	+Ind+Pres:	OOLLI/GenPresRedAbsAlt ; ! +Red tag after
+	
+	+Imp:		OOLLI/Imp ;
+	
+	! Barrier and {PREFIXING} necessary for Prog.
+	:oo´ll%{#%}{PREFIXING}		Progressive ; ! ima´n ; TODO: +Ind tag comes in at some odd place.
+	+Neg+Prog+Pres:oo´llin 			FINAL ;		! oqoo´n
+	+Neg+Prog+Past:TODO		FINAL ; 	! oqoonayni´n
+
+
+! Following lexicons only have Person, Reduced and Sty tags.
+LEXICON OOLLI/GenPast
+	  +1Sg:iil			Clitics ;
+	 +2Sg:tiil			Clitics ;
+	+3SgM:yiil			Clitics ;
+	+3SgF:tiil			Clitics ;
+	 +1Pl:niil			Clitics ;
+ 	 +2Pl:tiilleen		Clitics ;
+	 +3Pl:yiilleen		Clitics ;
+
+LEXICON OOLLI/GenPastRedAbs
+	  +1Sg+Red+Abs:ii´l			Clitics ; !  ii´l
+	 +2Sg+Red+Abs:yii´l			Clitics ; ! yii´l
+	+3SgM+Red+Abs:yii´l			Clitics ; ! yii´l
+	+3SgF+Red+Abs:tii´l			Clitics ; ! tii´l
+	 +1Pl+Red+Abs:nii´l			Clitics ; ! lii´l
+	 +2Pl+Red+Abs:yii´l			Clitics ; ! yii´l
+	 +3Pl+Red+Abs:yii´l			Clitics ; ! yii´l
+
+! TODO: this
+LEXICON OOLLI/GenPastNeg
+	+Sg:oqoo´n               Clitics ; ! oqoo´n
+	+Pl:oqooni´n             Clitics ; ! oqooni´n
+	+Sg+Sty/TODO:aqoo´n      Clitics ; ! aqoo´n
+	+Pl+Sty/TODO:aqooni´n	Clitics ; ! aqooni´n
+
+LEXICON OOLLI/GenPres
+	  +1Sg:aal			Clitics ;
+	 +2Sg:taal			Clitics ;
+	+3SgM:yaal			Clitics ;
+	+3SgF:taal			Clitics ;
+	 +1Pl:naal			Clitics ;
+	 +2Pl:taalliin		Clitics ;
+	 +3Pl:yaalliin		Clitics ;
+
+! TODO: LEXICON OOLLI/GenPresRedNom
+
+LEXICON OOLLI/GenPresRedAbs
+	  +1Sg+Red+Abs:aa´l			Clitics ; 	!  aa´l
+	 +2Sg+Red+Abs:yaa´l			Clitics ; 	! yaa´l
+	+3SgM+Red+Abs:yaa´l			Clitics ; 	! yaa´l
+	+3SgF+Red+Abs:taa´l			Clitics ; 	! taa´l
+	 +1Pl+Red+Abs:naa´l			Clitics ; 	! naa´l
+	 +2Pl+Red+Abs:yaa´l			Clitics ; 	! yaa´l
+	 +3Pl+Red+Abs:yaa´l			Clitics ; 	! yaa´l
+
+LEXICON OOLLI/GenPresNeg
+	  +1Sg:aa´l			Clitics ;     !  aa´l
+	 +2Sg:taa´l			Clitics ;     ! taa´l
+	+3SgM:yaa´l			Clitics ;     ! yaa´l
+	+3SgF:taa´l			Clitics ;     ! taa´l
+	 +1Pl:naa´l			Clitics ;     ! naa´l
+	 +2Pl:taalli´in		Clitics ;     ! taalli´in
+	 +3Pl:yaalli´in		Clitics ;     ! yaalli´in
+
+LEXICON OOLLI/GenPresRel
+	  +1Sg+Rel:aallo´			Clitics ;     !  aallo´
+	 +2Sg+Rel:taallo´			Clitics ;     ! taallo´
+	+3SgM+Rel:yaallo´			Clitics ;     ! yaallo´
+	+3SgF+Rel:taallo´			Clitics ;     ! taallo´
+	 +1Pl+Rel:naallo´			Clitics ;     ! naallo´
+	 +2Pl+Rel:taallaan´´		Clitics ;     ! taallaan´
+	 +3Pl+Rel:yaallaan´´		Clitics ;     ! yaallaan´
+
+	  +1Sg+Rel:aalo´			Clitics ;     !  aalo´
+	 +2Sg+Rel:taalo´			Clitics ;     ! taalo´
+	+3SgM+Rel:yaalo´			Clitics ;     ! yaalo´
+	+3SgF+Rel:taalo´			Clitics ;     ! taalo´
+	 +1Pl+Rel:naalo´			Clitics ;     ! naalo´
+	 +2Pl+Rel:taalaan		Clitics ;     ! taali´in
+	 +3Pl+Rel:yaalaan		Clitics ;     ! yaali´in
+
+
+LEXICON OOLLI/GenPresAlt
+	  +1Sg+Sty/TODO:aallaa			Clitics ;
+	 +2Sg+Sty/TODO:taallaa			Clitics ;
+	+3SgM+Sty/TODO:yaallaa			Clitics ;
+	+3SgF+Sty/TODO:taallaa			Clitics ;
+	 +1Pl+Sty/TODO:naallaa			Clitics ;
+	 +2Pl+Sty/TODO:taallaan			Clitics ;
+	 +3Pl+Sty/TODO:yaallaan			Clitics ;
+
+LEXICON OOLLI/GenPresRedAbsAlt
+	  +1Sg+Red+Abs+Sty/TODO:aalla´			Clitics ; 	!  aalla´
+	 +2Sg+Red+Abs+Sty/TODO:yaalla´			Clitics ; 	! yaalla´
+	+3SgM+Red+Abs+Sty/TODO:yaalla´			Clitics ; 	! yaalla´
+	+3SgF+Red+Abs+Sty/TODO:taalla´			Clitics ; 	! taalla´
+	 +1Pl+Red+Abs+Sty/TODO:naalla´			Clitics ; 	! naalla´
+	 +2Pl+Red+Abs+Sty/TODO:yaalla´			Clitics ; 	! yaalla´
+	 +3Pl+Red+Abs+Sty/TODO:yaalla´			Clitics ; 	! yaalla´
+
+! TODO: check oollin imperative, doing by analogy here.
+LEXICON OOLLI/Imp
+	+Sg:o´ol		Clitics ;		! oqo´ow
+	+Pl:oo´lla		Clitics ;		! oqoo´da
+	
+	+Neg+Sg:oo´llin	Clitics ;		! o´qoon
+	+Neg+Sg:oo´llinin	Clitics ;		! o´qoonin
+	+Neg+Pl:oollini´na Clitics ; 	! oqooni´na
+
+
+LEXICON HIGH
+	:´		FINAL ;
+
+LEXICON LOWHIGH
+	:´´		FINAL ;
+
