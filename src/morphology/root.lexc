@@ -337,49 +337,45 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !! --> make-blah, but are they necessary anymore?
 
 
+!! Things that seem to not work yet
+
+!!  Progressives on verbs
+!!  Nouns
+
+!! General connecting thing here so far is tone marks are probably messing with
+!! analysis, or some multichar things are missing. Regexes are compiled to .xfst,
+!! but, are they actually included in build process? 
+
 
 LEXICON Root
 !! The word forms in UNDEFINED language start from the lexeme roots of basic
 !! word classes, or optionally from prefixes:
-Abbreviations ; 
+Abbreviations   ;
 
-Nouns ;
+Nouns           ;
+Numerals        ;
 
-Pronouns ; 
-Verbs ;
-Adjectives ;
-Numerals ; 
+Pronouns        ;
 
-Adverbs ;
+Verbs           ;
+Adjectives      ;
 
-Conjunctions ;
-Subjunctions ;
+Adverbs         ;
 
-Postpositions ; 
-Determiners ;
-Interjections ;
-Punctuation ; 
+Conjunctions    ;
+Subjunctions    ;
 
+Postpositions   ;
+Determiners     ;
+Interjections   ;
+Punctuation     ;
 
-!! Prefixes  ;
-!! Acronyms ;
-!! 
 !! !! these are coming from som-lex.txt
-!! Determiner ;
-!! Noun ;
 !! IrregularNounMorph ;
-!! Verb ;
-!! IrregularVerb ;
 !! VerbalPrefixes ;
-!! Adjective ;
 !! IrregularAdjective ;
 !! Adverb ;
-!! Interjection ;
-!! Pronoun ;
-!! Conjunction ;
-!! Subjunction ;
-!! Postposition ;
-!! Punctuation ;
+!! Prefixes  ;
 
 LEXICON FINAL_NG
 
