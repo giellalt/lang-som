@@ -1,0 +1,340 @@
+!! Pronouns
+!! --------
+!! Pronouns in UNDEFINED language are references to things.
+
+! TODO: need to go through these and check, particularly subj clitics and
+!       negative, f.eks,. aadan / aanad, and others
+!
+
+LEXICON Pronoun 
+Personal ;
+Demonstrative ;
+PronDeterminer ;
+DefiniteDemonstratives ;
+Reflexive ; 
+ImpersonalP ;
+Clit_pron ;
+Quantity ; 
+Indefinite_P ; 
+Object ;
+Obj_Pron_2 ;
+
+! TODO: compare person tags here with those in verbs
+
+! Convert these to some form that uses only anig- adig- 
+
+LEXICON Personal
+aniga+Pron+Pers+Short+1Sg:an     Clitics ; ! 1pSg
+aniga+Pron+Pers+1Sg:anig     Pronoun_case ; ! 1pSg
+adiga+Pron+Pers+2Sg:adig     Pronoun_case ; ! 2pSg
+isaga+Pron+Pers+3SgM:isag Pronoun_case ; ! 3pSgMasc
+iyada+Pron+Pers+3SgF:iyad  Pronoun_case ; ! 3pSgFem, 3pPl
+
+anaga+Pron+Pers+1PlExcl:anag     Pronoun_case ; ! 1pPl
+annaga+Pron+Pers+1PlExcl:annag     Pronoun_case ; ! 1pPl
+
+inaga+Pron+Pers+1PlIncl:inag     Pronoun_case ; ! 1pPl
+innaga+Pron+Pers+1PlIncl:innag     Pronoun_case ; ! 1pPl
+
+idinka+Pron+Pers+2Pl:idink   Pronoun_case ; ! 2pPl
+
+iyaga+Pron+Pers+3Pl:iyag  Pronoun_case ; ! 3pSgFem, 3pPl
+iyaga+Pron+Pers+Short+3Pl:iya  Clitics ; ! 3pSgFem, 3pPl
+
+! TODO: definitions, tags
+adaa+Pron+TODO:adaa Clitics ;
+adaan+Pron+TODO:adaan Clitics ;
+adiyo+Pron+TODO:adiyo Clitics ;
+adna+Pron+TODO:adna Clitics ;
+adoo+Pron+TODO:adoo Clitics ;
+adse+Pron+TODO:adse Clitics ;
+aduu+Pron+TODO:aduu Clitics ;
+amba+Pron+TODO:amba Clitics ;
+anaa+Pron+TODO:anaa Clitics ;
+aniyo+Pron+TODO:aniyo Clitics ;
+anoo+Pron+TODO:anoo Clitics ;
+anuun+Pron+TODO:anuun Clitics ;
+idinna+Pron+TODO:idinna Clitics ;
+
+LEXICON Object
+na+Pron+Pers+1Pl+Excl+Obj:na		FINAL ; 
+ina+Pron+Pers+1Pl+Incl+Obj:ina		FINAL ; 
+i+Pron+Pers+1Sg+Obj:i		FINAL ; 
+ku+Pron+Pers+2Sg+Obj:ku		FINAL ; 
+idin+Pron+Pers+2Pl+Obj:idin		FINAL ; 
+
+LEXICON Pronoun_case
++Nom:u		Clitics ;				! TEST:anigu,anigu
++Abs:a		Clitics ;				! TEST:aniga,aniga
+
+LEXICON Clit_pron
+aan+Pron+Pers+Subj+1Sg:aan           ShortNeg ; ! 1pSg
+aad+Pron+Pers+Subj+2Sg:aad           ShortNeg ; ! 2pSg
+uu+Pron+Pers+Subj+3SgM:uu         ShortNeg ; ! 3pSgMasc
+ay+Pron+Pers+Subj+3SgF:ay          ShortNeg ; ! 3pSgFem
+aannu+Pron+Pers+Subj+1Pl+Excl:aannu   ShortNeg ; ! 1pSg Incl
+aan+Pron+Pers+Subj+1Pl+Incl:aan       ShortNeg ; ! 1pSg Incl
+aynu+Pron+Pers+Subj+1Pl+Incl:aynu     ShortNeg ; ! 1pSg Excl
+aydin+Pron+Pers+Subj+2Pl:aydin       ShortNeg ; ! 2pPl
+aad+Pron+Pers+Subj+2Pl:aad           ShortNeg ; ! 2pPl
+ay+Pron+Pers+Subj+3Pl:ay             ShortNeg ; ! 3pPl
+
+aan+Pron+Pers+Subj+1Sg+Neg:aanan           FINAL ; ! 1pSg
+aad+Pron+Pers+Subj+2Sg+Neg:aanad           FINAL ; ! 2pSg
+uu+Pron+Pers+Subj+3SgM+Neg:aanu         FINAL ; ! 3pSgMasc
+uu+Pron+Pers+Subj+3SgM+Neg:uusan        FINAL ;
+ay+Pron+Pers+Subj+3SgF+Neg:aanay          FINAL ; ! 3pSgFem
+aannu+Pron+Pers+Subj+1Pl+Excl+Neg:aanannu   FINAL ; ! 1pSg Incl
+aan+Pron+Pers+Subj+1Pl+Incl+Neg:aanan       FINAL ; ! 1pSg Incl
+aynu+Pron+Pers+Subj+1Pl+Incl+Neg:aanaynu     FINAL ; ! 1pSg Excl
+aydin+Pron+Pers+Subj+2Pl+Neg:aanaydin       FINAL ; ! 2pPl
+aad+Pron+Pers+Subj+2Pl+Neg:aanad           FINAL ; ! 2pPl
+ay+Pron+Pers+Subj+3Pl+Neg:aanay             FINAL ; ! 3pPl
+
+aad+Pron+Pers+Subj+2Sg+Neg:aadan           FINAL ; ! 2pSg
+aydin+Pron+Pers+Subj+2Pl+Neg:aydaan       Clitics/NoFoc ; ! 2pPl
+
+! For +CS/baa+Foc/L
+LEXICON Clit_pron_aff
+! TODO: +Subj?
++1Sg:aan           Clitics/NoFoc ; ! 1pSg
++2Sg:aad           Clitics/NoFoc ; ! 2pSg
++3SgM:uu         Clitics/NoFoc ; ! 3pSgMasc
++3SgF:ay          Clitics/NoFoc ; ! 3pSgFem
++1Pl+Excl:aannu   Clitics/NoFoc ; ! 1pSg Incl
++1Pl+Incl:aan       Clitics/NoFoc ; ! 1pSg Incl
++1Pl+Incl:aynu     Clitics/NoFoc ; ! 1pSg Excl
++2Pl:aydin       Clitics/NoFoc ; ! 2pPl
++2Pl:aad           Clitics/NoFoc ; ! 2pPl
++3Pl:ay             Clitics/NoFoc ; ! 3pPl
++Subj+Null:aa             Clitics/NoFoc ; ! 3pPl
+
++1Sg+Neg:aanan           Clitics/NoFoc ; ! 1pSg
++2Sg+Neg:aanad           Clitics/NoFoc ; ! 2pSg
++3SgM+Neg:aanu         Clitics/NoFoc ; ! 3pSgMasc
++3SgM+Neg:uusan         Clitics ; ! 3pSgMasc
++3SgF+Neg:aanay          Clitics/NoFoc ; ! 3pSgFem
++1Pl+Excl+Neg:aanannu   Clitics/NoFoc ; ! 1pSg Incl
++1Pl+Incl+Neg:aanan       Clitics/NoFoc ; ! 1pSg Incl
++1Pl+Incl+Neg:aanaynu     Clitics/NoFoc ; ! 1pSg Excl
++2Pl+Neg:aanaydin       Clitics/NoFoc ; ! 2pPl
++2Pl+Neg:aanad           Clitics/NoFoc ; ! 2pPl
++3Pl+Neg:aanay             Clitics/NoFoc ; ! 3pPl
+
+! TODO: which way?
++2Sg+Neg:aadan           Clitics/NoFoc ; ! 2pSg
++2Pl+Neg:aadan           Clitics/NoFoc ; ! 2pPl
++2Pl+Neg:aydaan       Clitics/NoFoc ; ! 2pPl
+
+
+! Using these with waxa and other CS, so tags are shorter
+LEXICON Clit_pron_short_tag
++Subj+1Sg:aan           ShortNeg ; ! 1pSg
++Subj+2Sg:aad           ShortNeg ; ! 2pSg
++Subj+3SgM:uu         ShortNeg ; ! 3pSgMasc
++Subj+3SgF:ay          ShortNeg ; ! 3pSgFem
++Subj+1Pl+Excl:aannu   ShortNeg ; ! 1pSg Incl
++Subj+1Pl+Incl:aan       ShortNeg ; ! 1pSg Incl
++Subj+1Pl+Incl:aynu     ShortNeg ; ! 1pSg Excl
++Subj+2Pl:aydin       ShortNeg ; ! 2pPl
++Subj+2Pl:aad           ShortNeg ; ! 2pPl
++Subj+3Pl:ay             ShortNeg ; ! 3pPl
+
++Subj+3SgF+Sty/TODO:ey          Clitics ; ! 3pSgFem
++Subj+3Pl+Sty/TODO:ey             Clitics ; ! 3pPl
+
++Subj+1Sg+Neg:aanan           Clitics ; ! 1pSg
++Subj+2Sg+Neg:aanad           Clitics ; ! 2pSg
++Subj+3SgM+Neg:aanu         Clitics ; ! 3pSgMasc
++Subj+3SgM+Neg:uusan         Clitics ; ! 3pSgMasc
++Subj+3SgF+Neg:aanay          Clitics ; ! 3pSgFem
++Subj+1Pl+Excl+Neg:aanannu   Clitics ; ! 1pSg Incl
++Subj+1Pl+Incl+Neg:aanan       Clitics ; ! 1pSg Incl
++Subj+1Pl+Incl+Neg:aanaynu     Clitics ; ! 1pSg Excl
++Subj+2Pl+Neg:aanaydin       Clitics ; ! 2pPl
++Subj+2Pl+Neg:aanad           Clitics ; ! 2pPl
++Subj+3Pl+Neg:aanay             Clitics ; ! 3pPl
+
+! Which way?
++Subj+2Sg+Neg:aadan           Clitics ; ! 2pSg
++Subj+2Pl+Neg:aydaan       Clitics/NoFoc ; ! 2pPl
+
+LEXICON Clit_pron_short_tag_hightone
++Subj+1Sg:aan´´           ShortNeg ; ! 1pSg
++Subj+2Sg:aad´´           ShortNeg ; ! 2pSg
++Subj+3SgM:uu´´         ShortNeg ; ! 3pSgMasc
++Subj+3SgF:ay´´          ShortNeg ; ! 3pSgFem
++Subj+1Pl+Excl:aan´´nu   ShortNeg ; ! 1pSg Incl
++Subj+1Pl+Incl+Use/NG:aan´´       ShortNeg ; ! 1pSg Incl
++Subj+1Pl+Incl:aann´´       ShortNeg ; ! 1pSg Incl
++Subj+1Pl+Incl:ayn´´u     ShortNeg ; ! 1pSg Excl
++Subj+2Pl:ayd´´in       ShortNeg ; ! 2pPl
++Subj+2Pl:aad´´           ShortNeg ; ! 2pPl
++Subj+3Pl:ay´´             ShortNeg ; ! 3pPl
+
++Subj+3SgF+Sty/TODO:ey´´          Clitics ; ! 3pSgFem
++Subj+3Pl+Sty/TODO:ey´´            Clitics ; ! 3pPl
+
++Subj+1Sg+Neg:aan´´an           Clitics ; ! 1pSg
++Subj+2Sg+Neg:aan´´ad           Clitics ; ! 2pSg
++Subj+3SgM+Neg:aan´´u         Clitics ; ! 3pSgMasc
++Subj+3SgM+Neg:uusan         Clitics ; ! 3pSgMasc
++Subj+3SgF+Neg:aan´´ay          Clitics ; ! 3pSgFem
++Subj+1Pl+Excl+Neg:aan´´annu   Clitics ; ! 1pSg Incl
++Subj+1Pl+Incl+Neg:aan´´an       Clitics ; ! 1pSg Incl
++Subj+1Pl+Incl+Neg:aan´´aynu     Clitics ; ! 1pSg Excl
++Subj+2Pl+Neg:aan´´aydin       Clitics ; ! 2pPl
++Subj+2Pl+Neg:aan´´ad           Clitics ; ! 2pPl
++Subj+3Pl+Neg:aan´´ay             Clitics ; ! 3pPl
+
+
+LEXICON ShortNeg
++Neg:an        Clitics ;
+Clitics ;
+
+
+! Saeed (1993) notes some pre-conjunction pronouns too. Need to see these in use.
+! an     1pSg
+! ad     2pSg
+! is     3pSgM
+! iya    3pSgF
+! anna   1pPlExcl
+! inna   1pPlIncl
+! idin   2pPl
+! iya    3pPl
+
+! TODO: are these determiners? seem similar to oo dhan, but not quite, quantifiers?
+
+LEXICON PronDeterminer
+uun+Pron+Det+Def:uun Masc "each" ;
+uun+Pron+Det+Indef:uun Clitics "each" ;
+yaa+Pron+Interr+Sg+Nom:yaa´´ Clitics "who" ;
+ku+Pron+Interr+Masc+Subj+Interr/ma:kuma Clitics "who" ;
+tu+Pron+Interr+Fem+Subj+Interr/ma:tuma Clitics "who" ;
+
+
+LEXICON DefiniteDemonstratives
+! These are basically the same as definite suffixes
+ka+Pron+Dem+Sg+Masc+Abs+Near:kaas      Clitics ;
+ka+Pron+Dem+Sg+Masc+Gen+Near:kaas      Clitics ;
+ka+Pron+Dem+Sg+Masc+Near+Near:kaasi      Clitics ;
+ka+Pron+Dem+Sg+Masc+Abs+Close:kan      Clitics ;
+ka+Pron+Dem+Sg+Masc+Gen+Close:kan      Clitics ;
+ka+Pron+Dem+Sg+Masc+Abs+Prox:ka      Clitics ;
+ka+Pron+Dem+Sg+Masc+Gen+Prox:ka      Clitics ;
+ka+Pron+Dem+Sg+Masc+Nom+Prox:ku      Clitics ;
+ka+Pron+Dem+Sg+Masc+Abs+Dist:kii     Clitics ;
+ka+Pron+Dem+Sg+Masc+Nom+Dist:kii     Clitics ;
+ka+Pron+Dem+Sg+Masc+Voc:kow     Clitics ;
+
+
+ta+Pron+Dem+Sg+Fem+Abs+Close:taas      Clitics ;
+ta+Pron+Dem+Sg+Fem+Gen+Close:taas      Clitics ;
+ta+Pron+Dem+Sg+Fem+Nom+Close:taasi      Clitics ;
+ta+Pron+Dem+Sg+Fem+Abs+Close:tan      Clitics ;
+ta+Pron+Dem+Sg+Fem+Gen+Close:tan      Clitics ;
+ta+Pron+Dem+Sg+Fem+Abs+Prox:ta      Clitics ;
+ta+Pron+Dem+Sg+Fem+Gen+Prox:ta      Clitics ;
+ta+Pron+Dem+Sg+Fem+Nom+Prox:tu      Clitics ;
+ta+Pron+Dem+Sg+Fem+Abs+Dist:tii     Clitics ;
+ta+Pron+Dem+Sg+Fem+Nom+Dist:tii     Clitics ;
+ta+Pron+Dem+Sg+Fem+Voc:tay        Clitics ;
+
+PossessiveDemonstratives ;
+
+
+LEXICON PossessiveDemonstratives
+	@P.Gender.Fem@	_PDFx ;
+	@P.Gender.Masc@	_PDMx ;
+
+	LEXICON _PDFx
+	ta+Pron+Dem+Sg+Fem:t      Possessive ;
+
+	LEXICON _PDMx
+	ka+Pron+Dem+Sg+Masc:k     Possessive ;
+
+
+LEXICON Demonstrative
+in+Pron+Dem:in NOUN1_F_PostBoundarySg "this" ; ! skip noun tags, straight to +Indef/+Def
+in+Pron+Dem+Indef+Sg+Neg/ma:inna Clitics "not this" ; ! skip noun tags, straight to +Indef/+Def
+
+! TODO: sg or pl?
+kuwa+Pron+Dem+Masc+Pl+Indef:kuwo Clitics "these" ;
+kuwa+Pron+Dem+Masc+Pl+Abs+Prox:kuwa Clitics "these" ;
+kuwa+Pron+Dem+Masc+Pl+Abs+Close:kuwan Clitics "these" ;
+kuwa+Pron+Dem+Masc+Pl+Nom+Close:kuwanu Clitics "these" ;
+kuwa+Pron+Dem+Masc+Pl+Abs+Near:kuwaas Clitics "these" ;
+
+kuwa+Pron+Dem+Masc+Pl+Abs+Near+Adp/u:kuwaasoo Clitics "these" ;
+kuwa+Pron+Dem+Masc+Pl+Abs+Near+Clit/oo+CS+Appos:kuwaasoo Clitics "these" ;
+
+kuwa+Pron+Dem+Masc+Pl+Def+Nom:kuwii Clitics "this" ; ! TODO: this, plural?
+kuwa+Pron+Dem+Masc+Pl+Def+Abs:kuwii Clitics "this" ; ! TODO: this, plural?
+! TODO: can probably just extend this by including the distance lexicon
+
+! TODO: kuwii 
+
+kan+Pron+Dem+Masc+Sg+Abs+Close:kan			Clitics ;
+kan+Pron+Dem+Masc+Sg+Nom+Close:kanu			Clitics ;
+kan+Pron+Dem+Masc+Sg+Nom+Close:kani			Clitics ;
+
+tan+Pron+Dem+Fem+Sg+Abs+Close:tan			Clitics ;
+tan+Pron+Dem+Fem+Sg+Nom+Close:tanu			Clitics ;
+tan+Pron+Dem+Fem+Sg+Nom+Close:tani			Clitics ;
+
+kaas+Pron+Dem+Masc+Sg+Abs+Near:kaas			Clitics ;	
+kaas+Pron+Dem+Masc+Sg+Nom+Near:kaasu			Clitics ;	
+kaas+Pron+Dem+Masc+Sg+Nom+Near:kaasi			Clitics ;	
+
+kaas+Pron+Dem+Masc+Sg+Nom+Near+Adp/u:kaasoo			Clitics ;	
+kaas+Pron+Dem+Masc+Sg+Abs+Near+Clit/oo+CS+Appos:kaasoo			Clitics ;	
+
+taas+Pron+Dem+Fem+Sg+Abs+Near:taas			Clitics ;	
+taas+Pron+Dem+Fem+Sg+Nom+Near:taasu			Clitics ;	
+taas+Pron+Dem+Fem+Sg+Nom+Near:taasi			Clitics ;	
+
+taas+Pron+Dem+Fem+Sg+Nom+Near+Adp/u:taasoo			Clitics ;	
+taas+Pron+Dem+Fem+Sg+Nom+Near#oo+CS+Appos:taasoo			Clitics ;	
+
+
+LEXICON Reflexive
+is+Refl:is Clitics ;
+is+Pron+Pers+Obj+Refl:is FINAL ;
+is+Pron+Pers+Obj+Refl+Nom:isu FINAL ;
+is+Pron+Pers+Obj+Refl+Abs:isa FINAL ;
+isugu+Pron+Pers+Refl+Nom:isugu FINAL ; ! Refl independent? TODO: check
+
+LEXICON ImpersonalP 
+la+Pron+Impers+Subj:la FINAL ;
+
+LEXICON Obj_Pron_2
+kay+Pron+Pers+Poss+1Sg:kay´´ FINAL ;
+kaa+Pron+Pers+Poss+2Sg:kaa´´ FINAL ;
+kayo+Pron+Pers+Poss+1Pl+Excl:kayo´´ FINAL ;
+keen+Pron+Pers+Poss+1Pl+Incl:keen´´ FINAL ;
+kiin+Pron+Pers+Poss+2Pl:kiin´´ FINAL ;
+! no 3p
+
+! TODO: these could also be combinations of ka and something else? 
+
+! Wáy igá kíin qaadeen
+! Waa-ay i-ká kíin qaadeen
+! They took me away from you.
+
+! N ? ?		cidna		"no-one"
+! N ? ? 		cidina		"no-one, +Subj marking with negative verbs"
+! waxba 		"nothing"
+
+! Finnish: kukaan+Pron+Qnt+Sg+Nom
+
+LEXICON Quantity
+waxba+Pron+Qnt+Sg+Abs:waxba		FINAL 	"nothing" ;
+cidna+Pron+Qnt+Sg+Abs:cidna		FINAL	"no-one" ;
+cidina+Pron+Qnt+Sg+Nom:cidina		FINAL	"no-one" ;
+
+
+
+LEXICON Indefinite_P
+wax+Pron+Indef+Abs:wax FINAL ; 
+
+! vim: set ts=4 sw=4 tw=0 syntax=lexc :

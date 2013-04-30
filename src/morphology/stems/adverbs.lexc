@@ -1,0 +1,124 @@
+﻿
+LEXICON Adverb
+Multiwords ; 
+Advs ; 
+Locational ; 
+
+! These may be something else
+LEXICON Locational 
+badaal      AdvEnd_ "backward, taaksepäin" ;
+
+LEXICON Advs
+aad			AdvEnd_ "much" ;
+badan		AdvEnd_ "many" ;
+baddan		AdvEnd_/NG "many" ;
+xataa		AdvEnd_ "even" ;
+wanaag		AdvEnd_ "well" ;
+lamafilaan  AdvEnd_ "by chance, suddenly" ;
+
+! The rest aren't really adverbs... 
+! These have morphology
+halkaas		AdvEnd	"there"                           ; 
+halkan		AdvEnd	"here"                           ; 
+markaas		AdvEnd	"at that time, when"              ; 
+alla        AdvEnd  "ever, whoever, whatever" ;
+
+maanta		AdvEnd	"today" ; 
+maantadan	AdvEnd	"this day" ; 
+berrito		AdvEnd	"tomorrow" ;
+berri		AdvEnd	"tomorrow" ;
+shalayto    AdvEnd  "yesterday" ;
+shalay      AdvEnd  "yesterday" ;
+xalayto    AdvEnd  "last night" ;
+xalay      AdvEnd  "last night, at night" ;
+sow         AdvEnd  "thus" ;
+wal         AdvEnd  "? mar walba - always" ;
+
+
+LEXICON Misc
+kala		AdvEnd 	"separately" ; ! adv or verbal particle thing?
+wada		AdvEnd	"together" ;
+
+! What to do with these?
+LEXICON Multiwords
+marka% hore		AdvEnd 	"firstly"                      ;
+khaas% ahaan	AdvEnd 		"especially"               ;
+isla% markaasi	AdvEnd 		"at the same time"         ;
+ka% dib			AdvEnd 	"afterwards, after"            ;
+! Some of these probably shouldn't be here?
+ilaa			AdvEnd "until" ;
+hubaal			AdvEnd "surely" ;
+aalaa		AdvEnd ;
+ahaateenaa		AdvEnd ;
+ammaa		AdvEnd ;
+armaa		AdvEnd ;
+ash		AdvEnd ;
+aslan		AdvEnd ;
+badanaa		AdvEnd ;
+balki		AdvEnd ;
+berrito		AdvEnd ;
+billaa		AdvEnd ;
+bilmasal		AdvEnd ;
+bilqasab		AdvEnd ;
+calaa-xaal		AdvEnd ;
+ciyow		AdvEnd ;
+dabcan		AdvEnd ;
+dalaadala		AdvEnd ;
+dambeeto		AdvEnd ;
+dambow		AdvEnd ;
+dar-alla		AdvEnd ;
+dawaali		AdvEnd ;
+dee		AdvEnd ;
+deeb		AdvEnd ;
+dhaaxa		AdvEnd ;
+haatan		AdvEnd ;
+haddaayey		AdvEnd ;
+haddee		AdvEnd ;
+hadhow		AdvEnd ;
+halhaleel		AdvEnd ;
+hanuun		AdvEnd ;
+haye		AdvEnd ;
+hee		AdvEnd ;
+horay		AdvEnd ;
+hore		AdvEnd ;
+inta		AdvEnd ;
+kaddib		AdvEnd ;
+kistoo		AdvEnd ;
+kolla		AdvEnd ;
+kolley		AdvEnd ;
+laasim		AdvEnd ;
+labaddaraadle		AdvEnd ;
+maanta		AdvEnd ;
+malaha		AdvEnd ;
+marxabba		AdvEnd ;
+masalan		AdvEnd ;
+meetan		AdvEnd ;
+mindhaa		AdvEnd ;
+min		AdvEnd ;
+saaddambe		AdvEnd ;
+saaka		AdvEnd ;
+saakuun		AdvEnd ;
+saas		AdvEnd ;
+saatan		AdvEnd ;
+saa		AdvEnd ;
+siiba		AdvEnd ;
+sugukuun		AdvEnd ;
+tahna		AdvEnd ;
+tan		AdvEnd ;
+taniyo		AdvEnd ;
+uun		AdvEnd ;
+xataa		AdvEnd ;
+yacni		AdvEnd ;
+yare		AdvEnd ;
+
+LEXICON AdvEnd_
++Adv: 		# ;
+
+LEXICON AdvEnd_/NG
++Adv+Use/NG: 		FINAL ;
+
+LEXICON AdvEnd
++Adv: 		Clitics ; 
+
+
+! vim: set ts=4 sw=4 tw=0 syntax=lexc :

@@ -1,0 +1,18 @@
+﻿
+LEXICON Conjunctions
+  Conjunction ; 
+
+LEXICON Conjunction 
+iyo CC ;
+ee CC ;
+oo CC ;
+ama CC ;
+ilaa CC ;
+mise CC_ ;
+
+LEXICON CC
++CC: # ;
+
+LEXICON CC
++CC: Clitics ;
+

@@ -1,0 +1,56 @@
+!! Proper noun inflection
+!! ----------------------
+!! The UNDEFINED language proper nouns inflect in the same cases as regular
+!! nouns, but with a colon (':') as separator.
+
+! Table of content
+! ================
+! - The morphological tags
+! - - Male first names
+! - - Female first names
+! - - Surnames
+! - - Place names and other names
+
+! TODO: tones
+
+! The morphological tags
+! ======================
+
+! For each group, the maltag etc. lexicon functions as a default
+! lexicon. The other lexica are there for specific subgroups of the names.
+
+LEXICON propmasc
++N+Prop+Masc:	propcase ;
+
+LEXICON propfem
++N+Prop+Fem:		propcase ;
+
+LEXICON PROP_NOUN1_F/SgOnly
++N+Prop+Fem+Sg:´{#}{N}		NOUN1_F_PostBoundarySg ;
+
+LEXICON PROP_NOUN1_M/SgOnly
++N+Prop+Masc+Sg:´´{#}{N}		NOUN1_M_PostBoundarySg ;
+
+LEXICON PROP_PLACE_NOUN1_M/SgOnly
++N+Prop+Plc+Masc+Sg:´´{#}{N}		NOUN1_M_PostBoundarySg ;
+
+LEXICON PROP_PLACE_NOUN1_F/SgOnly
++N+Prop+Plc+Fem+Sg:´{#}{N}		NOUN1_F_PostBoundarySg ;
+
+
+LEXICON proptag
++N+Prop:			propcase ;
+
+! usually final tone with proper nouns.
+LEXICON propcase
++Sg+Nom: Clitics ;
++Sg+Abs: Clitics ;
++Sg+Gen: Clitics ;
+
+LEXICON placetag 
++N+Prop+Plc+Sg+Nom: Clitics ;
++N+Prop+Plc+Sg+Abs: Clitics ;
++N+Prop+Plc+Sg+Gen: Clitics ;
++N+Prop+Plc+Sg+Voc:ow Clitics ;
+
+! vim: set ft=xfst-lexc:

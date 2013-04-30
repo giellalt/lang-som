@@ -1,0 +1,903 @@
+!! =================================== !
+!! The Somali morphophonological/twolc rules file !
+!! =================================== !
+
+ ! ------------------------- !
+ !  Morphophonological notes !
+ ! ------------------------- !
+	
+	! Phonological Processes in Somali
+	!
+	!	Somali has several phonological alternations involving reduplication, lenition, vowel harmony
+	!	and tone.
+	!
+	!	The hopes with this documentation is that it will either make twolc rules clearer, or help
+	!	if it comes time to completely redo all the rules.
+
+	! Spreading processes
+
+	! Lenition
+	!
+	!	The lenis stop series in Somali <b d g> alternates with the fortis series <t k>, note that
+	!	the <b> does not actually participate. Lenis stops are found in coda positions, and fortis
+	!	stops are found elsewhere. The alternation occurs in both nouns and verbs.
+	!
+	!		ilig 'tooth'   ~   iligga 'tooth (Def.)'     ~   ilko 'teeth (Indef.)'
+	!		arag 'see'     ~   aragtaa '2Sg/3SgF sees'   ~   arkaa '1Sg/3SgM sees'
+
+	! Voicing assimilation
+	!   
+	!	Stops assimilate for voicing (or lenis/fortis), particularly across morpheme boundaries,
+	!	however they only assimilate if they share place of articulation.
+	!
+	!		aragtaa 		'2Sg/3SgF sees'
+	!
+	!		wararka			'the news'
+	!		buugga 			'the book'
+	!
+	!		naagta			'the woman'
+	!		jaamacadda 		'the university'
+	!
+	!	This also follows for the retroflex segment <dh>, however the sequence <dhdh> is shortened
+	!	to <dh>.
+	!
+	!		gabadh			'(a) girl'
+	!		gabadha			'the girl'
+
+	! Vowel ablaut
+	!
+	!	Vowels are subject to two main types of ablaut: (1) full ablaut across back consonants,
+	!	and (2) partial ablaut with <a> ~ <e> preceding the high vowel <i>.
+	!
+	!	Full ablaut is constrained to morpheme boundaries: and most commonly occurs in the 'waxa'
+	!	focus marker.
+	!
+	!		waxaan 'foc+1Sg'			magac						rah
+	!		wuxuu  'foc+3SgM'			magucu	/ magacu			ruhu
+	!									magicii	/ magicii 
+
+	!	Full ablaut appears to be optional in some words.
+	!
+	!	Partial ablaut occurs in verbal infinitives with mostly any word of the pattern CaC. When
+	!	the infinitive ending <i> is appended, <a> raises to <e>. It also occurs around person
+	!	suffixes and tense ending in <e>
+	!
+	!		tag 'go'		tegi 'to go'			tegeen 'they went'
+	!		bax 'leave'		bexi 'to leave'			bexeen 'they left'
+
+	! <k> deletion
+	!	
+	!	<k> is deleted when it follows a back consonant (which is not <k> itself):
+	!
+	!		wax + ka => waxa
+	!		magac + ka => magaca
+	!		rah + ka => raha
+	!
+
+	! <l> + <t> -> <sh>
+	!
+	!	Occurs only across morpheme boundaries, in verbs and nouns.
+	!
+	!		wiilal		=>		wiilasha
+	!		'boys'		  		'the boys'
+
+	!		maqal		=>		maqashay
+	!		'listen'			'2Sg/3SgF listened'
+
+
+	! Vowel harmony
+	!
+	!	For a complete description of vowel harmony, see the literature.
+	!
+	!	Short summary: +ATR is the active spreading feature, and spreads leftward across all
+	!	boundaries but is blocked by pauses in speech (Intonation Phrase). +ATR can spread
+	!	rightward, but stops at the word boundary. It does not cross clitics, typically.
+	!
+	!	Hopefully VH will be covered in this analyzer.
+
+	! Tonal Processes
+	!
+	!	In certain environments Somali appears to dislike having two tones immediately next
+	!	to eachother. I have some collected environments for a phonology paper. May not be
+	!	super important right off the bat.
+
+	! Reduplication
+	!	
+	!	Somali has two kinds of reduplication: partial and full. Reduplication is typically
+	!	a strategy for marking plural in nouns and adjectives in some declensions, but also
+	!	appears in verbs as a derivational process. The inflectional processes are quite
+	!	productive, but the derivational processes are not as productive.
+	!
+	!	Partial reduplication occurs in the 4th declension of nouns, but a subtype of these
+	!	4th declensional nouns also has full reduplication. Partial reduplication includes
+	!	epenthesis of <a>. Note that partial reduplication in adjectives is prefixing,
+	!	while in nouns it is suffixing. Also, the template is slightly different.
+	!
+	!		af 'mouth, language'		=>		afaf	'... +Pl'
+	!		qoys 'family'				=>		qoysas	'... +Pl'
+	!
+	!	*Note: There may be some partial reduplication that also copies the vowel.
+	!
+	!	Full reduplication also applies to some of these nouns:
+	!
+	!		qof 'person'				=> 		qofqof
+	!		cad 'part'					=>		cadcad
+	!
+	!	Adjectives:
+	!
+	!		quruxsán 'beautiful'		=>		qurquruxsán ' ... +Pl'
+	!		fudúd 'easy, light'			=>		fudfudúd
+	!		adág 'difficult'			=>		ad'adág
+	!		yár 'a little'				=>		yaryára
+	!
+	!		gaabán 'short'				=>		gaaggaabán ' ... +Pl'
+	!		laabán 'folded'				=>		laallaabán
+	!		jabán 'broken'				=>		'jajabán'
+	!
+	!	Irregular adjectives:
+	!
+	!		dhéer 'long, tall (sg)'		=>		dhaadhéer
+	!		wéyn 'big'					=>		waawéyn
+	!
+	!	Note: Other possibilities might be found greping: with '^\(.\)aa\1e', '^\(.\)aa\1\1aa',
+	!		 '\(.\)a\1$'
+
+	! Person morphemes
+	!	
+	!	The realization of personal suffixes on verbs is a little complex and depends mostly on
+	!	declension type and whether or not the suffix is preceded by the progressive.
+	!	
+	!	Realization of these suffixes is currently all handled by twolc:
+	!		
+	!						sg			pl				
+	!			1			{đ}			{ñ} 	==>		
+	!			2			{ŧ}			0				
+	!			3 Masc		{đ}			{đ}				
+	!			3 Fem	    {ŧ}							
+	!
+	!			Declension 1
+	!	
+	!						sg			pl					
+	!			1			keenaa		keennaa			1		dhacay		dhacnay
+	!			2			keentaa		keenaan			2		dhacday		dheceen
+	!			3 Masc		keenaa		keentaan		3 Masc	dhacay		dhecdeen
+	!			3 Fem		keentaa						3 Fem	dhacday
+	
+	!			Declension 2
+	!
+	!						sg			pl						sg
+	!			1			sameeyay	sameynay		1		kariyay		karinay
+	!			2			sameysay	sameyseen		2		karisay		kariseen
+	!			3 Masc		sameeyay	sameeyeen		3 Masc	kariyay		kariyeen
+	!			3 Fem		sameysay					3 Fem	karisay
+
+	!			Declension 3
+
+	!						sg			pl					
+	!			1			furay		furannay			1		watay		wadannay
+	!			2			furtay		furateen			2		wadatay		wadateen
+	!			3 Masc		furay		fureen				3 Masc	watay		wateen
+	!			3 Fem		furtay							3 Fem	wadatay
+
+	
+	! 	A short summary:
+	
+	!			%{đ%} - 1Sg, 3SgM and 3Pl; 	realized as 0/y/d in classes
+	!			%{ŧ%} - 2Sg, 3SgF, 2Pl; 	realized as t/s in classes 
+	!			%{ñ%} - 1Pl;				realized as n in all classes
+	!										  'special' here just in case.
+
+	!	This process could easily be removed from twolc and done in just flag diacritics, why not?
+
+	! More processes to describe:
+	!
+	! wataa / wadatay dissimilation
+	! a/e alternation in -e nouns (noun type is a bit more complex too, as corpus reveals)
+	! vowel deletion ilig, ilko
+	! e/y alternation in samee- verbs
+	! w/b alternations
+	! vowel lengthening magaalo / magaalooyin
+
+
+
+! Notes:
+!  If forms disappear but the rule should work, make sure
+!  that the pair transforming exists in the Alphabet
+
+Alphabet
+ a b c d e f g h i j k l m n o p q r s t u v w x y z ' C ´ ´´ 
+ 
+ á í ú é ó ý ẃ
+ ä ï ü ë ö 
+ sh kh dh 
+  
+ %^V:0 C
+ 
+ %^:0
+
+ %#
+ %{N%}:0
+ 
+ %{PREFIXING%}:0
+ %{PROG%}:0
+ %{INF%}
+
+ ! Morphophon
+ %{o%}
+
+ %{m%} ! #CODA_N
+ %{mm%}:m ! block m-n 
+ ! o:a
+
+ %{a%}:0
+ %{ŧ%}:t
+ %{đ%}
+ %{ñ%}
+
+ %{E%}:e
+
+ %{e%}
+ %{a%}            ! V3B with -a root deletion
+ %{%-e%}:0
+ %{%-a%}:0
+ %{%-w%}:0
+ %{%-V%}:0
+ %{%-a%}:0
+ %{%-VV%}:0
+ %{%-I%}:0
+ 
+ %{y%}:y
+
+ %{C2%}
+ %{C3A%}
+ %{C3B%}
+ %{C3C%}
+ %{n%}:n
+ %{ae%}
+ %{d%}:d
+
+ %{ATR%}:0
+ %{aá%}:0
+ %{áa%}:0
+ %{aa%}:0
+
+ ! Boundary markers
+ ! Ideally %{#%} for root boundary, %{##%} for word-final. Pro'lly inconsistent
+ ! about this, but something worth going through and checking.
+ ! For testing remove :0 to see boundaries
+ %{#%}:0
+ %{##%}:0 %>:0
+ 
+
+ %{t%}:t
+
+ ! Trigger for t + d contraction in 3B
+ ! Also ablaut blocker
+ %{X%}:0
+%{e%} ;
+
+Sets
+
+ A =      a           á           ä              ;
+ E =        e           é           ë            ;
+ I =          i           í           ï          ;
+ O =            o           ó           ö        ;
+ U =              u           ú           ü      ;
+
+ Y =                y           ý                ;
+
+ Vowels = A E I O U Y %{ae%} %{o%} %{e%} %{a%} ;
+ 
+ BackV =  a e i o u ; ! aa ee ii oo uu ;
+ FrontV = ä ë ï ö ü ; ! ää ëë ïï öö üü ; 
+
+ Cons = b c d f g h j k l m n p q r s t v w x y z dh %{m%} %{mm%} %{n%} kh sh ' ;
+ Back = c x h ' q kh ;
+ Approximants = w y ;
+
+ TonalUnits = a e i o u y w á é í ó ú ý ẃ ;
+ AtonalV = a e i o u y w ;
+  TonalV = á é í ó ú ý ẃ ;
+ Gutteral = q kh c x h ' ;
+ TDalt = q kh c x h ' d w y ;
+ 
+
+ VceStop = b d g dh ;
+ VcelStop = t k ;
+
+ Dummy = %> C %{aá%} %{áa%} %{#%} %{##%} %{X%} %{N%} %{V1%} %{V2A%} %{V2B%} %{V3A%} %{V3B%} 
+			%{PREFIXING%} %{PROG%} %{INF%} %{ATR%} ; ! other verb classes here?
+
+ Letters = a b c d e f g h i j k l m n o p q r s t u v w x y z ' ´
+			dh sh kh 
+			;
+
+ MorphoPhon =
+			%{aá%} %{áa%} %{#%} %{##%} %{m%} %{C2%} %{C3A%} %{C3B%} %{C3C%} %{t%} %{d%} %{X%} 
+			%{ae%} %{ŧ%} %{đ%} %{ñ%} %{e%} %{n%} %{o%} %{ATR%} 
+			%{PROG%}
+			;
+ Tones = %{aá%} %{áa%} %{aa%} ´ ´´ ;
+
+ WordChars = Letters MorphoPhon ;
+
+Definitions
+ WordBoundary = [ %{##%}:0 | %{#%}:0 | %>:0 | %>:0 ] ;
+ MorphBoundary = [ %{#%}:0 ] ;
+
+ TonePattern = [ %{aá%} | %{áa%} | %{aa%} | ´ | ´´ ] ;
+ PostN = TonePattern %{#%}:0 %{N%}:0 ;
+
+Rules
+
+! magac -> magicii, magucu
+! TODO: magacu, madaxiisa/madixiisa
+! magac+N+Masc+Def+Sg+Nom+Prox	magac%{#%}%{N%}ku%{##%}
+! gac^a%{m%}%{aá%}%{#%}%{N%}ah%{#%}íisu%{##%}
+
+! wuxuu
+
+! for some reason adding environment for gacmihiisu blocks gacmaha 
+
+! TODO: gacmihiisu / gacmahiisu free variation 
+!! ilig+N+Masc+Pl+Def+PxSg3M+Abs+Prox       il^ik%{aá%}%{#%}%{N%}a%{#%}híisa%{##%}
+!!   -- > ilkihiisa 
+!! walaal+N+Masc+Pl+Def+PxSg3M+Abs+Prox     walaal%{áa%}%{#%}%{N%}a%{#%}híisa%{##%}
+!!   -- > walaalihiisa 
+
+!! magac+N+Masc+Sg+Def+Abs+Dist				magac%{áa%}%{#%}%{N%}kii%{##%}
+!!   -- > magicii 
+!! magac+N+Masc+Sg+Def+Nom+Prox				magac%{áa%}%{#%}%{N%}ku%{##%}
+!!   -- > magucu 
+!! magac+N+Masc+Sg+Def+PxSg3F+Abs+Prox      magac%{áa%}%{#%}%{N%}kíisa%{##%}
+!!   -- > magiciisa 
+!! waxa+CS+Foc/R+Sg3M      wax%{#%}uu%{##%}
+!!   -- > wuxuu
+
+
+!! TODO: wixiisu not working
+!! wax+N+Masc+Sg+Def+PxSg3M+Nom+Prox		wax%{áa%}%{#%}%{N%}kíisu%{##%}
+!!   -- > wixiisu
+
+
+! getting waxuu; tone marker blocks.
+"Ablaut around back fricatives at morpheme boundaries"
+ a:Cy <=> Cons _ Back ( Tones ) PostN ( k:0 ) Cy ;					!  ?
+		  Cons _ Back ( Tones ) PostN k:0 Cy ;						! magucu
+		  Cons _ Back ( Tones ) MorphBoundary :Cy ;				    ! wuxuu
+
+	where Cy in (u i)
+
+	matched ;
+
+! aabb{-e}{e}´´{#}{N}h
+! aabb{e}´´{#}{N}hii
+
+"Ablaut in declension 7 with final vowel"
+ %{e%}:Cy <=> Cons (%{%-e%}:0) _ PostN h Cy ;
+
+	where Cy in (u i)
+
+	matched ;
+
+
+! #LT_SH
+
+"LT -> SH part 1"
+ l:s <=> _ ( Tones ) %{#%}:0 ( %{N%}:0 ) ( %{#%}:0 ) t: ;
+ ! Also for V3B where there is d in triggering environment and interceding {a}
+         _ %{a%}:0 ( Tones ) %{#%}:0 ( %{N%}:0 ) ( %{#%}:0 ) d: ;
+ ! Also for V1 where a vowel deletes
+         _ %{%-V%}:0 ( Tones ) %{#%}:0 ( %{#%}:0 ) t: ;
+
+
+"LT -> SH part 2"
+ t:h <=> l: ( Tones ) %{#%}:0 ( %{N%}:0 ) ( %{#%}:0 ) _ ;
+         l: %{%-V%}:0 ( Tones ) %{#%}:0 ( %{N%}:0 ) ( %{#%}:0 ) _ ;
+
+         ! In reduplicative plurals where l is reduplicated
+         l: PostN [ Vowels | Vowels+ ] %{C2%}:s ( [ %{#%}:0 | %{#%}:0+ ] ) _ ;
+         l: Tones %{N%}:0 a %{C2%}:s %{#%}:0 _ ;
+
+
+"LT -> SH part 2 for V3B"
+ d:h <=> l: %{a%}:0 ( Tones ) %{#%}:0 ( %{#%}:0 ) _ ;
+
+"LT -> SH in reduplicative plurals, pt 1"
+ %{C2%}:s <=> l Tones %{#%}:0 %{N%}:0 a _ %{#%}:0  t: ;
+
+"V2 {y} deletion"
+ %{y%}:0 <=> _ ( Tones ) %{#%}:0+ y ;
+ 			 y _ ;
+ 			 i i _ ( Tones ) %{#%}:0+ Cons;
+ 			 i _ ( Tones ) %{#%}:0+ Cons;
+ 			 _ %{#%}:0 %{##%}:0 ;
+
+
+"đ realization in nouns"
+ %{đ%}:d <=> _ PostN ;
+
+"Definite suffix -k to -g next to preceding voiced"
+ k:g <=> [ :VC | Vowels ] PostN _ Vowels ;
+ 		 %{C2%}:g %{#%}:0 _ Vowels ;
+	where VC in (g y w) ;
+
+"t:0 before d h"
+ CD:0 <=> d h Tones %{#%}:0 %{N%}:0 _ Vowels ;
+    where CD in (d t) ;
+
+"t/d alternation - definite suffix, V1"
+ t:d <=> 
+         ! In verbs
+         TDalt (%{%-V%}:0) ( Tones ) %{#%}:0 _ ;
+         i     (%{%-V%}:0) ( Tones ) %{#%}:0 _ ;
+         ! Definite suffix: dhexda, xuquuqda
+         TDalt  PostN _ Vowels ;
+         Vowels PostN _ Vowels ;
+
+! TODO: dukaammo
+! baabuurro, dukaammo, albaabbo
+! Except words like guri/bangi, which have y.
+"Declension 2: -C doubling in plural"
+ %{C2%}:Cz <=> :Cz PostN _ ( %{#%}:0 ) PlVowels ;
+	where Cz in (b d dh l r n m)
+	PlVowels in (a o á ó) ;
+
+! TODO: This rule is currently conflicting with the next one.
+! bangiyo
+! TODO: guriyo, guryo
+"Declension 2: -y insertion after back sounds and fricatives; and after -i"
+ %{C2%}:y <=> Cz PostN _ ( %{#%}:0 ) PlVowels ; 
+			  I PostN _ ( %{#%}:0 ) PlVowels ;
+	where Cz in (w c q x s j %{đ%})
+	PlVowels in (a o á ó) ;
+
+
+! miisas, qoysas, afaf
+"Declension 4: Plural Partial Reduplication"
+ %{C2%}:Cz <=> Cz PostN A _ ; 
+	where Cz in Cons
+	matched ;
+
+! TODO: nimanka not working 
+"Declension 4: Plural Partial Reduplication %{m}"
+ %{C2%}:m <=> %{m%}: PostN _ %{#%}:0 A ;
+
+"Declension 4: C2->n in m contexts"
+ %{C2%}:n <=> :m Tones %{#%}:0 %{N%}:0 A _ %{#%}:0 [ k t n ] ;
+ 			  :m ( Tones ) %{#%}:0 %{N%}:0 ( Vowels ) _ ;
+
+! yar´{#}{N}{C3A}{C3B}{C3C}{#}{##}
+
+!! "Declension 4: Plural Full Reduplication - pt. 1"
+!!  %{C3A%}:Cz <=> Cz WordChars WordChars ( Tones ) %{#%}:0 %{N%}:0 _ ;
+!!     matched ;
+
+!! "Declension 4: Plural Full Reduplication - pt. 2"
+!!  %{C3B%}:Cz <=> WordChars Cz WordChars ( Tones ) %{#%}:0 %{N%}:0 _ ;
+!!     where Cz in Cons
+!!     matched ;
+!! 
+!! "Declension 4: Plural Full Reduplication - pt. 3"
+!!  %{C3C%}:Cz <=> WordChars WordChars Cz ( Tones ) %{#%}:0 %{N%}:0 _ ;
+!!     where Cz in Cons
+!!     matched ;
+
+! guriyo
+"-y- insertion in plurals"
+ 0:y <=> I PostN _ VowB ;
+	where VowB in (a o u e á ó ú é) ;
+
+! disallow yy
+"Disallow yy"
+ y:0 <=> _ [PostN | MorphBoundary] y ;
+
+
+! Doesn't work with wuxu, where k has been deleted.
+! Doesn't work with magicii, magucu, but should optionally. magacii and magicii, etc are both possible
+
+! Opacity?  wax+ku -> wax+u -> wux+u
+
+"Declension 6: final vowel"
+  a:o <=> _ PostN %{##%}:0 ;
+  		  _ PostN o ;
+
+
+! 
+"Declension V1: magacow / magacaabay / magacawday, shorten a"
+ a:0 <=> a _ %{#%}:0 w d ;
+
+"Declension V1: A deletion"
+ a:0 <=> a _ %{%-VV%}:0 ;
+
+"Delete preceding a"
+ a:0 <=>  _ %{%-a%}:0 ;
+
+! TRY: { WordChars - O }
+
+! _ Tones MorphBoundary NOUN [WordChars - O] ; 
+
+!!! 
+!!! ! WordBoundary \?:WordChars
+! TODO: could also be i/a alternations in this declension
+
+"Declension 7: {-e} delete"
+ e:0 <=> _ %{%-e%}:0 ;
+
+"Declension 7: final vowel"
+ %{e%}:a <=> _ PostN WordChars ;
+
+"Declension 7: final vowel in final position"
+ %{e%}:e <=> _ PostN %{##%}:0 ;
+
+
+
+!!!
+!!!
+!!!  Verbal Rules
+!!!
+!!!
+
+! {-I}:0 for derivations
+
+"V2A -> V3B derivations, delete -i"
+ i:0 <=> Vowels Cons _ %{%-I%}:0 ;
+
+"V2A -> V3B derivations, depalatization"
+ j:g <=> _ i:0 %{%-I%}:0 ;
+
+! {-V}:0 for concatenative v deletion set.
+
+! "V1: -w deletion"
+!  w:0 <=> _ %{%-w%}:0 ;
+
+! "V1: b mutation"
+!  b:w <=> _ %{#%}:0 Cons ;
+
+
+! TODO: xfst  analyzes both, generates one for tag, but not for bex
+! bax+V+Inf, tag+V+Inf
+
+"V1: a/e umlaut before i/e"
+  %{ae%}:e <=> Cons _ Cons ( Tones ) [%{#%}:0 | %{#%}:0+ ] i ;
+               Cons _ Cons ( Tones ) [%{#%}:0 | %{#%}:0+ ] e ;
+
+
+"V1: a/e umlaut before a"
+  %{ae%}:a <=> Cons _ Cons ( Tones ) [%{#%}:0 | %{#%}:0+ ] a ;
+               Cons _ Cons ( Tones ) [%{#%}:0 | %{#%}:0+ ] Cons ;
+
+
+! "V1: a/e umlaut before i/e"
+!   %{ae%}:a <=> Cons _ Cons ( Tones ) [%{#%}:0 | %{#%}:0+ ] [ :I | :E ] ;
+
+! TODO: maqallay
+"V1, D3: Vowel deletion"
+ Vz:0 <=>
+          ! V1 
+          ! Cons+ for korodhay, etc
+          %^:0 _ Cons+ ( Tones ) %{#%}:0+ Vowels ; 
+          ! D3
+          %^: _ Cons PostN Vowels ; 
+          ! With no %^ marker, but {-V} instead
+          Cons _ Cons ( Tones ) %{%-V%}:0 %{#%}:0+ [ Vowels + 0 ] ;
+
+	where Vz in Vowels ;
+
+    ! maqlay			maqalnay/maqallay
+    ! maqashay			maqasheen
+    ! maqlay			maqleen
+    ! maqashay		
+
+
+    ! arkay			aragnay
+    ! aragtay			aragteen
+    ! arkay			arkeen
+    ! aragtay		
+
+    ! inf:     1P       2P          INF
+    ! -lan    -lmay    -lantay      -lmi
+    ! -dub    -dbay    -dubtay      -dbi
+    ! -ran    -rmay    -rantay      -rmi
+    
+    ! ran{-V}{#}0 -> rm
+    ! ran{-V}{#}i -> rmi
+    ! ran{-V}{#}t -> rant
+    
+    ! TODO: seems to be optional?
+    ! echo "gulaalan+V+3SgM+Ind+Past" | xsomgen
+    ! -> gulaalanay, gulaalmay
+
+
+! TODO: is there a better place to do this? After twolc?
+"V1: Simplification of dhd to dh (t)"
+ t:0 <=> d h ( Tones ) %{#%}:0 _ ;
+
+
+! "V4: Vowel deletion without preceding marker before vowels and epsilon"
+!  Vz:0 <=> Cons _ Cons %{%-V%}:0 %{#%}:0 [Vowels + 0] ;
+!    where Vz in Vowels ;
+ 
+"V1: n/m when deleted vowel results in C0n"
+ n:m <=> Cons Vowels:0 _ ( Tones ) %{%-V%}:0 %{#%}:0+ [ Vowels + 0 ] ;
+
+
+ 
+!!!
+!!!  V2A
+!!!
+
+
+
+!!!
+!!!  V2B
+!!!
+
+"V2B: y-insertion"
+ 0:y <=> [:Vowels - :y] ( Tones ) %{#%}:0 _ %{#%}:0 :Vowels ; 
+
+"V2B: ey before consonants"
+ %{e%}:y <=> _ ( Tones ) %{#%}:0 [:Cons - :Y] ; 
+
+"V2B: ee before y"
+ %{e%}:e <=> _ ( Tones ) %{#%}:0 :Y ; 
+
+"V2B: Remove e"
+ %{e%}:0 <=> _ ( Tones ) %{#%}:0 :Y :Cons ;
+
+
+	 ! PAST
+
+	 ! sameeyay		sameynay
+	 ! sameysay		sameyseen / sameysid
+	 ! sameeyay		sameeyeen
+	 ! sameysay		
+
+	 ! PROG
+
+	 ! sameynayaa
+	 ! etc...
+
+
+
+!!!
+!!!  V3A
+!!!
+
+
+
+
+!!!
+!!!  V3B
+!!!
+
+!! Following rules are for the funky things that happen with 1Sg, 3SgM, 3Pl
+!! Basically, disallowed d_d, so it gets simplified to t
+!!   
+
+!!	wada{#}d{#}aa{##}		wada{#}nn{#}aa{##}
+!!  wada{#}t{#}aa{##}		wada{#}d{#}aan{##}
+!!	wada{#}d{#}aa{##}		wada{#}t{#}aan{##}
+!!  wada{#}t{#}aa{##}
+
+!!	wataa						wadannaa
+!!  wadataa						wadataan
+!!	wataa						wataan
+!!  wadataa
+
+
+!!	fura{#}d{#}aa{##}		fura{#}nn{#}aa{##}
+!!  fura{#}t{#}aa{##}		fura{#}d{#}aan{##}
+!!	fura{#}d{#}aa{##}		fura{#}t{#}aan{##}
+!!  fura{#}t{#}aa{##}
+
+!!	furtaa						furannaa
+!!  furataa						furataan
+!!	furtaa						furtaan
+!!  furataa
+
+!! Also another type: TODO: merge
+
+!! sigo+V+IV+1Sg+Ind+Past   sig{a}{#}d{#}ay{##}
+!! sigo+V+IV+2Sg+Ind+Past   sig{a}{#}t{#}ay{##}
+
+!! sigtay
+!! sigatay
+
+!! But: obd / cd / hd / qd / xd / yd
+!! Note: bt / obd
+
+! TODO: cashaoyin
+! 					casha´´{#}{N}oyin{##}
+
+"V3B: %{o%}:o finally"
+ a:o <=> _ ( Tones ) %{#%}:0 %{##%}:0 ; 
+
+"V3B: %{o%}:0 in d _ d"
+ a:0 <=> Vowels CorCons: _ ( Tones ) %{#%}:0 d: ;
+ 	where CorCons in (d r s) ;
+
+"V3B: d dissimilation"
+ d:0 <=> Vowels d: a:0 ( Tones ) %{#%}:0 _ %{#%}:0 ;
+
+! TODO: block with obd? 
+"V3B: d dissimilation w/ cor" 
+ d:t <=> Vowels [CorCons: - d:] [ a:0 ] ( Tones ) %{#%}:0 _ %{#%}:0 ;
+         Vowels NonCorCons %{a%}:0 ( Tones ) %{#%}:0 _ ;
+         Vowels s h [ a:0 %{a%}:0 ] ( Tones ) %{#%}:0 _ ;
+         ! arrumo -> arruntay Nasal
+         Vowels :n %{a%}:0 ( Tones ) %{#%}:0 _ ;
+
+ 	where CorCons in (d r s)
+ 	      NonCorCons in (b f g n q r) 
+ 	      ;
+
+"V3B: d dissimilation 2" 
+ d:t <=> Vowels _ a:0 ( Tones ) %{#%}:0 d:0 %{#%}:0 ; 
+
+! TODO: buqday / buqatay ; sirtay / siratay
+
+"V3B: root {a} deletion before suffixes with -d"
+ %{a%}:0 <=> _ ( Tones ) %{#%}:0 d: ;
+
+"V3B: otherwise"
+ %{a%}:a <=> _ ( Tones ) %{#%}:0 t: ;
+
+ 
+!!!
+!!!
+!!!  General Rules
+!!!
+!!!
+
+!!!!! !!! 
+!!!!! !!! "Vowel reduction VVY -> VY"
+!!!!! !!!  V1:0 <=> _ WordBoundary (MorphBoundary) V1 Vowels ;
+!!!!! !!!   where V1 in Vowels
+!!!!! !!! 	matched ;
+!!!!! !!! 
+
+"Vowel reduction VVV -> VV"
+ V1:0 <=> _ WordBoundary (MorphBoundary) V1 V1 ;
+  where V1 in Vowels
+	matched ;
+
+!!!!! !!! ! Rule should only apply to VVY -> VY and VVV -> VV, not YVV -> YV or any other
+!!!!! !!! ! permutations
+!!!!! !!! 
+
+! TODO: sakhraan / sakhraamo
+"m->n in codas"
+ Cm:n <=> _ ( Tones ) %{#%}:0 [ %{##%}:0 | k: | t: ] ; 
+ 		  _ PostN [ %{##%}:0 | k: | t: ] ;
+ 	! V3B 1P arrumo -> arruntay
+ 	      _ %{a%}:0 ( Tones ) %{#%}:0 d: ;
+ 	      ! Before clitics
+ 	      _ PostN %{#%}:0 [ Cons: - [ k: | g: ] ] ;
+ 	where Cm in (m %{m%}) ;
+
+"m->m in codas"
+ %{m%}:m <=> _ ( Tones ) %{#%}:0 ( %{N%}:0 ) [ Vowels | :m ] ; 
+ 		  _ PostN :m ;
+
+"Optional m doubling"
+ 0:m => _ %{m%}:m ;
+
+! magac%{áa%}%{#%}%{N%}ku%{##%} 
+"Velar deletion after Back, but avoiding digraphs"
+ k:0 <=> [Letters - [d | s | k ]] Back PostN _ ;
+
+! Final lenition appears to be final voicing because of the orthography.
+! {b d g} represent lenis stops, and {p t k} represent fortis stops.
+! Lenition occurs in syllable codas, leading to alternations 
+! such as arkaa / aragtaa
+
+! Some literature may refer to this as final voicing.
+
+! TODO: xfst generating two forms, only want one: arag+V+2Sg+Ind+Pres
+
+"Final lenition."
+ Cv:Cx <=> Vowels _ ( Tones ) %{#%}:0 ( %{N%}:0 ) [ %{##%}:0 | :Cons ] ;
+  where Cx in (b d g)
+        Cv in (p t k)
+		matched ; 
+
+"-ee changes to -ye after other vowels"
+ %{E%}:y <=> [Vowels - o] %{#%}:0 _ e ;
+
+"-ee changes to -e after y"
+ %{E%}:0 <=> y %{#%}:0 _ e ;
+
+"-ee clitic deletes preceding -o"
+ Cv:0 <=> _ %{#%}:0 %{E%}:e ;
+  where Cv in ( o ) ;
+
+! dhammaan
+"progressive nasal assimilation across morphological boundaries"
+ n:m <=> m %{#%}:0 _ ;
+
+!!!
+!!!
+!!!  Tonal stuff
+!!!
+!!!
+
+
+!!!!! !!! !!!!
+!!!!! !!! !!
+!!!!! !!! !! ATR Harmony / Vowel Harmony
+!!!!! !!! !!
+!!!!! !!! !!!!!!
+!!!!! !!! 
+!!!!! !!! ! WordInternal is a mix of derivational tags, Dummies and WordChars.
+!!!!! !!! ! See above...
+!!!!! !!! 
+!!!!! !!! ! Goal for these rules:
+!!!!! !!! 
+!!!!! !!! ! GENERATION:
+!!!!! !!! !   Generate +ATR if possible, otherwise also generate -ATR
+!!!!! !!! !   	doon+V+etc -> döönää, doonaa
+!!!!! !!! !		jab+V+etc  -> jabaa
+!!!!! !!! !
+!!!!! !!! ! ANALYSIS:
+!!!!! !!! !   If a word is +ATR, accept -ATR input
+!!!!! !!! !   Do not accept +ATR word if a word is not +ATR
+!!!!! !!! !
+!!!!! !!! !		jäbää -> *
+!!!!! !!! ! 		jabaa -> jab+V+etc
+!!!!! !!! !		jabayay -> jab+V+Prog+etc
+!!!!! !!! !		jäbäyäy -> jab+V+Prog+etc
+!!!!! !!! !
+!!!!! !!! !		(Progressive seems to have ATR all the time)
+!!!!! !!! 
+!!!!! !!! ! TODO: ATR - blocks a lot of weird paths
+!!!!! !!! !!!!! "ATR"
+!!!!! !!! !!!!!   Vb:Vf => %{ATR%}:0 [WordInternal]+ _ ;
+!!!!! !!! !!!!! 			 FrontV [WordInternal]+ _ ;
+!!!!! !!! !!!!! 			_ ( [WordInternal]+ ) FrontV ;
+!!!!! !!! !!!!! 			_ ( [WordInternal]+ ) %{ATR%}:0 ;
+!!!!! !!! !!!!! 
+!!!!! !!! !!!!!  	where Vf in FrontV
+!!!!! !!! !!!!!  		  Vb in BackV
+!!!!! !!! !!!!! 	matched ;
+!!!!! !!! !!!!! 
+!!!!! !!! !!!!! 
+!!!!! !!! !!!!! "VH must match"
+!!!!! !!! !!!!!  Vb:Vb <=> _ ([WordInternal]+) Vb ;
+!!!!! !!! !!!!! 		  Vb ([WordInternal]+) _ ;
+!!!!! !!! !!!!!    where Vb in BackV ;
+!!!!! !!! 
+!!!!! !!! ! TODO: Fix these
+!!!!! !!! ! doondoon+V+Prog+1Sg+Ind+Pres	doondoonayaa
+!!!!! !!! ! doondoon+V+Prog+1Sg+Ind+Pres	doondoonäyää
+!!!!! !!! ! doondoon+V+Prog+1Sg+Ind+Pres	dööndöönayaa
+!!!!! !!! ! doondoon+V+Prog+1Sg+Ind+Pres	dööndöönäyää
+!!!!! !!! 
+!!!!! !!! ! TODO: Cases to consider
+!!!!! !!! ! 
+!!!!! !!! ! ninkïï - clitic Boundary
+!!!!! !!! ! bërbëruu - clitic Boundary
+!!!!! !!! 
+!!!!! !!! 
+!!!!! !!! !! "Remove ATR"
+!!!!! !!! !!  Tx:Ty <=> _ ;
+!!!!! !!! !! 	where Tx in (ä ë ï ö ü)
+!!!!! !!! !! 		  Ty in (a e i o u)
+!!!!! !!! !! 	matched ;
+!!!!! !!! 
+
+!!! "Remove dummies"
+!!!  Dummy:0 <=> _ ;
+
+! vim modeline
+! vim: set ts=4 sw=4 tw=0 syntax=lexc :
+
+
+!€ primus%>s
+!€ primus00
+
+!€grís%>s
+!€grís00
+
+!$grís%>s
+!$grís0s
