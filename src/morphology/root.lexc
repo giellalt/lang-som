@@ -305,33 +305,38 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 @R.Gender.Fem@
 @P.Gender.Fem@
 
+!! Moving progress:
+
+!! Some of the problem with the analyzers is that tone and ATR marks are included
+!! and not yet stripped by any filters.
+
+!! TODO: apostrophe?
+
 !! TODO: adj-som-lex.txt.d
-!! TODO: allcaps.xfst
-!! TODO: apply_tones.regex
-!! TODO: case.regex
-!! TODO: det-som-lex.txt
-!! TODO: guess-script.xfst
-!! TODO: inituppercase.regex
-!! TODO: interj-som-lex.txt
-!! TODO: noun-guesser.xfst
-!! TODO: num-som-lex.txt
-!! TODO: num-som-morph.txt
-!! TODO: pp-som-lex.txt
-!! TODO: punct-som-lex.txt
-!! TODO: remove_declension_tags.regex
-!! TODO: remove_tones.regex
-!! TODO: remove_usage_tags.regex
-!! TODO: som-dis.rle
-!! TODO: spellrelax.regex
-!! TODO: tag-not-save.regex
+!! TODO: verb-som-lex.txt.d
+
 !! TODO: tagfix.xfst
+!! TODO: allcaps.xfst
+!! TODO: guess-script.xfst
+!! TODO: noun-guesser.xfst
+
 !! TODO: tok.xfst
 !! TODO: twol-vh-som.txt
+
+!! TODO: case.regex
+
+!! TODO: remove_usage_tags.regex
+!!   - this may be covered by other regexes, but need to check that i am
+!!   defining all usage tags in the right place-- also, which analyser/generator is
+!!   this intended for? 
+
 !! TODO: use-DIAL-filter.regex
 !! TODO: use-NG-filter.regex
 !! TODO: use-sub-filter.regex
-!! TODO: verb-som-irregular.txt
-!! TODO: verb-som-lex.txt.d
+
+!! --> make-blah, but are they necessary anymore?
+
+
 
 LEXICON Root
 !! The word forms in UNDEFINED language start from the lexeme roots of basic
@@ -349,6 +354,11 @@ Adverbs ;
 
 Conjunctions ;
 Subjunctions ;
+
+Postpositions ; 
+Determiners ;
+Interjections ;
+Punctuation ; 
 
 
 !! Prefixes  ;
