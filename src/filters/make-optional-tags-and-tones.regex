@@ -1,0 +1,73 @@
+! Make suprasegmentals and certain semantic and declensional tags optional in
+! analysis 
+
+# %+Dimin (<-) %+Der/Dimin,
+# 0 (<-) %+ACR,
+# 0 (<-) %+Coll,
+
+# Semantic tags:
+# 0 (<-) %+Fem,
+# 0 (<-) %+Ani,
+# 0 (<-) %+Mal,
+# 0 (<-) %+Obj,
+# 0 (<-) %+Org,
+# 0 (<-) %+Plc,
+# 0 (<-) %+Sur,
+# 0 (<-) %+Group,
+# 0 (<-) %+Time, 
+# 0 (<-) %+Txt,
+# 0 (<-) %+Route,
+# 0 (<-) %+Measr, 
+# 0 (<-) %+Wthr,
+# 0 (<-) %+Build, 
+# 0 (<-) %+Hum,
+# 0 (<-) %+Edu,
+# 0 (<-) %+Veh,
+# 0 (<-) %+Clth,
+# 0 (<-) %+Plant,
+# 0 (<-) %+Event,
+# 0 (<-) %+Wpn,
+# 0 (<-) %+Body,
+# 0 (<-) %+Food,
+
+# Tone stuff, gets in the way of some analysis: cidla, cidlada, f.ex
+0 (<-) ´,
+0 (<-) ´´,
+0 (<-) ¨,
+
+# 0 (<-) %+TV,
+# 0 (<-) %+IV,
+# Declension tags
+
+0 (<-) %+Decl%/1,
+0 (<-) %+Decl%/2,
+0 (<-) %+Decl%/2A,
+0 (<-) %+Decl%/2B,
+0 (<-) %+Decl%/3,
+0 (<-) %+Decl%/3A,
+0 (<-) %+Decl%/3B,
+0 (<-) %+Decl%/4,
+0 (<-) %+Decl%/5,
+0 (<-) %+Decl%/6,
+0 (<-) %+Decl%/7,
+
+0 (<-) %#,
+0 (<-) %+Use%/Sub,
+0 (<-) %+Use%/Circ,
+0 (<-) %+Use%/CircN,
+0 (<-) %+Use%/%-Spell,
+0 (<-) %+Use%/Ped,
+0 (<-) %+Use%/NG,
+0 (<-) %+Use%/NA,
+0 (<-) %+Use%/NVD,
+0 (<-) %+Use%/LexSub,
+0 (<-) %+Use%/Marg,
+0 (<-) %+Use%/SpellNoSugg,
+0 (<-) %+Dial%/%-KJ,
+0 (<-) %+Dial%/%-GG,
+0 (<-) %+Dial%/%-GS,
+0 (<-) %+Dial%/A,
+0 (<-) %+Dial%/OE,
+0 (<-) %+Dial%/SH,
+0 (<-) %+Dial%/L ;
+

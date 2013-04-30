@@ -1,0 +1,11 @@
+LEXICON Determiners
+	Determiner ;
+
+! Putting these here for now, until something else comes along.
+LEXICON Determiner
+	mid+Det+Indef:mid	FINAL "a, an" ;
+	mid+Det+Indef:mid	Masc "a, an" ;
+
+
+! vim: set ts=4 sw=4 tw=0 syntax=lexc : 
+

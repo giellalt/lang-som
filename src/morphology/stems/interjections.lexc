@@ -1,0 +1,11 @@
+
+LEXICON Interjections
+bal+Interj:bal FINAL "Okay" ;
+waayo+Interj:waayo FINAL "Okay" ;
+haa+Interj:haa FINAL "Yes" ;
+haah+Interj:haah FINAL "Even still, yes" ;
+aamiin+Interj:aamiin FINAL "amen" ;
+maya+Interj:maya FINAL "nope" ;
+
+! vim: set ts=4 sw=4 tw=0 syntax=lexc:  
+

@@ -1,0 +1,14 @@
+! Remove declension tags
+
+0 <- %+Decl%/1,
+0 <- %+Decl%/2,
+0 <- %+Decl%/2A,
+0 <- %+Decl%/2B,
+0 <- %+Decl%/3,
+0 <- %+Decl%/3A,
+0 <- %+Decl%/3B,
+0 <- %+Decl%/4,
+0 <- %+Decl%/5,
+0 <- %+Decl%/6,
+0 <- %+Decl%/7
+;
