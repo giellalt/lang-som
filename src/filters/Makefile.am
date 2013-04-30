@@ -77,13 +77,17 @@ endif
 # Add the target of local additions here:
 # HFST targets here:
 if CAN_HFST
-GT_FILTER_TARGETS+=
+GT_FILTER_TARGETS+=remove-tones.hfst \
+				   remove-declension-tags.hfst \
+				   make-optional-tags-and-tones.hfst
 
 endif
 
 # And Xerox targets here:
 if CAN_XFST
-GT_FILTER_TARGETS+=
+GT_FILTER_TARGETS+=remove-tones.xfst \
+				   remove-declension-tags.xfst \
+				   make-optional-tags-and-tones.xfst
 
 endif
 

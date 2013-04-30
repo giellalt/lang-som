@@ -31,6 +31,10 @@ GT_LEXC_SRCS=\
 			 stems/adverbs.lexc \
 			 stems/conjunctions.lexc \
 			 stems/subjunctions.lexc \
+			 stems/postpositions.lexc \
+			 stems/determiners.lexc \
+			 stems/interjections.lexc \
+			 stems/punctuation.lexc \
 			 affixes/adjectives.lexc \
 			 affixes/nouns.lexc \
 			 affixes/propernouns.lexc \
