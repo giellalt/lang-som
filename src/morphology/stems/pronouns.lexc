@@ -6,6 +6,9 @@
 !       negative, f.eks,. aadan / aanad, and others
 !
 
+LEXICON Pronouns
+  Pronoun ;
+
 LEXICON Pronoun 
 Personal ;
 Demonstrative ;

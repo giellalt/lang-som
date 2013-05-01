@@ -1,4 +1,7 @@
 
+LEXICON Adverbs
+  Adverb ;
+
 LEXICON Adverb
 Multiwords ; 
 Advs ; 
@@ -35,9 +38,15 @@ sow         AdvEnd  "thus" ;
 wal         AdvEnd  "? mar walba - always" ;
 
 
+
 LEXICON Misc
 kala		AdvEnd 	"separately" ; ! adv or verbal particle thing?
 wada		AdvEnd	"together" ;
+
+!!€gt-norm: shalayto # Adverbs exist test
+!!€ shalayto            shalayto+Adv
+!!€ wada                wada+Adv
+!!€ oeiwajfoeij         wada+Adv
 
 ! What to do with these?
 LEXICON Multiwords

@@ -1,0 +1,6 @@
+﻿!! Things that seem to not work yet
+
+ * Progressives on verbs
+ * Nouns
+
+General connecting thing here so far is tone marks are probably messing with it. I can generate keen+V+Prog+1Sg+Ind+Pres (keen´a¨yaa), presenting suprasegmentals, but trying to analyze the same with and without results in seg fault
