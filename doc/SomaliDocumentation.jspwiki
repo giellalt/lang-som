@@ -1,0 +1,23 @@
+!!! Dynamic documentation
+
+* [Links to generated source file documentation|Links.html]
+* Source files: [stems|https://victorio.uit.no/langtech/trunk/langs/som/src/morphology/stems/]   
+  / [affixes|https://victorio.uit.no/langtech/trunk/langs/som/src/morphology/affixes/] 
+  / [twolc|https://victorio.uit.no/langtech/trunk/langs/som/src/phonology/som-phon.twolc]   
+  / [yaml|https://victorio.uit.no/langtech/trunk/langs/som/test/src/morphology/]
+* Generation of: [paradigms|http://giellatekno.uit.no/cgi/p-som.eng.html]
+  / [text|http://giellatekno.uit.no/cgi/d-som.eng.html]
+
+!!! Project pages
+
+tbw
+
+!!! Meetings
+
+Most monologues :-)
+
+!!! Grammatical issues
+
+* [The tags that are in use|https://victorio.uit.no/langtech/trunk/langs/som/src/morphology/root.lexc]   
+* [A list of morphological tags|../common/MorphologicalTags.html]
+
