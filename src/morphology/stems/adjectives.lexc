@@ -5,6 +5,45 @@
 LEXICON Adjectives
   Attr ;
   State ;
+  IrregularAdjective ;
+
+LEXICON IrregularAdjective
+  dhan+A+Pl:dhammu Clitics "much, many" ;  ! TODO: Nom? 
+  xaq+A+Abs:xaqa Clitics "just" ;
+  xaq+A:xaq Clitics "just" ;
+  xun+A:xun Clitics "evil" ;
+  been+A:been Clitics "false" ;
+  dheer+A:dheer Clitics "tall" ;
+  badan+A+Attr:bad%^an StatePerson ;
+  og+A:og StatePerson "know(ing)";
+  og+A:og Clitics "know(ing)";
+  eg:ek AdjState ;
+  eg+A:eg Clitics ;
+  
+  ! TODO: perhaps need to do something else with this.
+  leh+A+Neg:la'aan Clitics ;
+  leh+A:leh Clitics ;
+  leh+A+Nom:lahu Clitics ;
+  
+  alla+A+Attr:alla Clitics ;
+  dambe+A+Attr:dambe Clitics ;
+  dhexaad+A+Attr:dhexaad Clitics ;
+  dhexe+A+Attr:dhexe Clitics ;
+  gadaale+A+Attr:gadaale Clitics ;
+  hoose+A+Attr:hoose Clitics ;
+  kale+A+Attr:kale Clitics ;
+  kasta+A+Attr:kasta Clitics ;
+  keliya+A+Attr:keliya Clitics ;
+  kore+A+Attr:kore Clitics ;
+  qalaad+A+Attr:qalaad Clitics ;
+  sare+A+Attr:sare Clitics ;
+  shishay+A+Attr:shishay Clitics ;
+  shishe+A+Attr:shishe Clitics ;
+  soke+A+Attr:soke Clitics ;
+  wal+A+Attr:wal Clitics ;
+  xagge+A+Attr:xagge Clitics ;
+  
+  kasta+A+Clit/oo+CS:kastoo Clitics ;
 
 LEXICON Attr
   badan	AdjBase ;
@@ -901,4 +940,4 @@ LEXICON State
   yeelan	AdjState ;
   yuusan	AdjState ;
 
-! vim: set ft=xfst-lexc:
+! vim: set ft=lexc:

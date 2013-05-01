@@ -3,12 +3,9 @@
 !! Nouns in Somali are things.
 
 LEXICON Nouns
-  Noun ;
   IrregularNounMorph ;
   ProperNouns ;
 
-LEXICON Noun
-  ArabicLoans ;
   D1 ;
   D2 ;
   D3 ;
@@ -16,22 +13,8 @@ LEXICON Noun
   D5 ;
   D6 ;
   D7 ;
+  ArabicLoans ;
   IrregNouns ;
-
-LEXICON D2
-  Collective ;
-  D2_F ;
-  D2_M ;
-  D2_M_Arabic ;
-  D2_M_Coll ;
-  D2_M_Mass ;
-  D2_M_yo ;
-  D2_M_yo ;
-  D3_F ;
-
-LEXICON D2_M_Arabic
-  masaajid	NOUN2_M ;
-  surwaal	NOUN2_M ;
 
 LEXICON D1
   D1_F ;
@@ -178,6 +161,22 @@ LEXICON D1_F/SgOnly
   xer	NOUN1_F/SgOnly ;
   xirnaan	NOUN1_F/SgOnly ;
   xuquuq	NOUN1_F/SgOnly ;
+
+LEXICON D2
+  Collective ;
+  D2_F ;
+  D2_M ;
+  D2_M_Arabic ;
+  D2_M_Coll ;
+  D2_M_Mass ;
+  D2_M_yo ;
+  D2_M_yo ;
+  D3_F ;
+
+LEXICON D2_M_Arabic
+  masaajid	NOUN2_M ;
+  surwaal	NOUN2_M ;
+
 
 LEXICON D4
   D4_F ;
@@ -1389,10 +1388,6 @@ LEXICON D3_F
   kibis:kib^is	NOUN3_F ;
   maalin:maal^i{m}	NOUN3_F ;
   xubin:xub^in	NOUN3_F ;
-
-LEXICON NOUN
-  D2 ;
-  D6 ;
 
 LEXICON D2_M_yo
   aad:¨aad	NOUN2_M_yo ;

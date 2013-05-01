@@ -9,4 +9,5 @@
 0 <- %+Dial%/SH,
 0 <- %+Dial%/L,
 0 <- %+Dial%/OE,
-0 <- %+Dial%/A;
+0 <- %+Dial%/A
+;

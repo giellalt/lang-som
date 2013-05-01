@@ -43,7 +43,8 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! Focus
 
-+Foc/L +Foc/R  !!= * @CODE@
++Foc/L  !!= * @CODE@ Focus markers _baa_ and _ayaa_
++Foc/R  !!= * @CODE@ Focus marker _waxaa_
 
 !! The parts of speech are further split up into:
  +Interr +Interr/ma +Attr +Short +Cmp     !!= * @CODE@
@@ -110,6 +111,8 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
  +Ord 
 !! Verb moods are:
  +Ind +Prs +Prt +Pot +Cond +Imprt
+!! Verb aspects are:
+ +Prog
 !! Verb personal forms are:
  +Sg1 +Sg2 +Sg3 +Du1 +Du2 +Du3 +Pl1 +Pl2 +Pl3
 !! Other verb forms are
@@ -198,26 +201,18 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! To represent phonologic variations in word forms we use the following
 !! symbols in the lexicon files:
- {aä} {oö} {uü}   !!= * @CODE@
 
 !! !Verb declensions
 {N}   !!= * @CODE@
 
 !! Going to try to replace these with flag diacritics if possible.
 
-!! TODO: these may not be in use?
+!! TODO: this is in use, but might be better to do a flag diacritic
 
-{V1}	      !!= * @CODE@
-{V2A}	      !!= * @CODE@
-{V2B}	      !!= * @CODE@
-{V3A}	      !!= * @CODE@
-{V3B}	      !!= * @CODE@
 {PREFIXING}   !!= * @CODE@
-{INF}	      !!= * @CODE@
 
 !! And following triggers to control variation
 
-{front} {back}  !!= * @CODE@
 {PROG}		    !!= * @CODE@
 %			    !!= * @CODE@
 %>			    !!= * @CODE@
@@ -235,22 +230,11 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
  {y}   !!= * @CODE@
  {ATR}  !!= * @CODE@
 
-!! Person consonants
-
- {ŧ} {đ} {ñ}   !!= * @CODE@
-
-!! V2* inf
-
- {n}  !!= * @CODE@
-
 !! Tone 
 
- {aá}   !!= * @CODE@
- {áa}   !!= * @CODE@
- {aa}   !!= * @CODE@
 
- ´      !!= * @CODE@ Trond: this is not a multichar symbol
- ´´     !!= * @CODE@
+!  ´      !!= * @CODE@ Trond: this is not a multichar symbol
+ ´´     !!= * @CODE@ 
 
 !! We have manually optimised the structure of our lexicon using following
 !! flag diacritics to restrict morhpological combinatorics:
@@ -365,8 +349,8 @@ Numerals        ;   !!= * @CODE@
 
 Pronouns        ;   !!= * @CODE@
 
-Verbs           ;   !!= * @CODE@
-Adjectives      ;   !!= * @CODE@
+Verbs           ;   !!= * @CODE@ 
+Adjectives      ;   !!= * @CODE@ Some have verb morphology, and some view them to just be a 4th declension of verbs. 
 
 Adverbs         ;   !!= * @CODE@
 

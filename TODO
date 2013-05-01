@@ -1,6 +1,19 @@
 ﻿!! Things that seem to not work yet
 
- * Progressives on verbs
  * Nouns
+    - also missing because of tones: (also these would be good to write tests to)
+      - guri´´ga
+      - guri´´gay´´ga
+      - awr´´
+      - awr´´ka
+      - awr´
+      - awr´ta
 
-General connecting thing here so far is tone marks are probably messing with it. I can generate keen+V+Prog+1Sg+Ind+Pres (keen´a¨yaa), presenting suprasegmentals, but trying to analyze the same with and without results in seg fault
+ * suprasegmental optional analysis:
+    - ayuu (ayaa+CS+Foc/L+Subj+3SgM) does not analyse, but can be generated
+    - ayuu´´ does analyze though.
+
+General connecting thing here so far is tone marks are probably messing with
+it. I can generate keen+V+Prog+1Sg+Ind+Pres (keen´a¨yaa), presenting
+suprasegmentals, but analysis does not work (or does, but does not reveal this
+analysis)
