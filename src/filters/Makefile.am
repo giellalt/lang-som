@@ -16,7 +16,9 @@
 ## along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # List any local additions here:
-GT_FILTER_SRCS=
+GT_FILTER_SRCS=remove-tones.hfst \
+			   remove-declension-tags.hfst \
+			   make-optional-tags-and-tones.hfst
 
 # The common filter targets (don't change locally):
 GT_FILTER_TARGETS=
