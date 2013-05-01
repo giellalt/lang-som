@@ -1,5 +1,5 @@
 ! Make suprasegmentals and certain semantic and declensional tags optional in
-! analysis 
+! generation
 
 # %+Dimin (<-) %+Der/Dimin,
 # 0 (<-) %+ACR,

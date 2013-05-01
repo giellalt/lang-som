@@ -6,44 +6,6 @@
 ! TODO: case on adjectives, yar, yaruna, yaru, dab yaru, qayb yar
 	! Sidaas oo kalena carrabku waa qayb yar ... Bal eega dab yaru intuu qoryo shido.
 
-LEXICON IrregularAdjective
-dhan+A+Pl:dhammu Clitics "much, many" ; 
-xaq+A+Abs:xaqa Clitics "just" ;
-xaq+A:xaq Clitics "just" ;
-xun+A:xun Clitics "evil" ;
-been+A:been Clitics "false" ;
-dheer+A:dheer Clitics "tall" ;
-badan+A+Attr:bad%^an StatePerson ;
-og+A:og StatePerson "know(ing)";
-og+A:og Clitics "know(ing)";
-eg:ek AdjState ;
-eg+A:eg Clitics ;
-
-! TODO: perhaps need to do something else with this.
-leh+A+Neg:la'aan Clitics ;
-leh+A:leh Clitics ;
-leh+A+Nom:lahu Clitics ;
-
-alla+A+Attr:alla Clitics ;
-dambe+A+Attr:dambe Clitics ;
-dhexaad+A+Attr:dhexaad Clitics ;
-dhexe+A+Attr:dhexe Clitics ;
-gadaale+A+Attr:gadaale Clitics ;
-hoose+A+Attr:hoose Clitics ;
-kale+A+Attr:kale Clitics ;
-kasta+A+Attr:kasta Clitics ;
-keliya+A+Attr:keliya Clitics ;
-kore+A+Attr:kore Clitics ;
-qalaad+A+Attr:qalaad Clitics ;
-sare+A+Attr:sare Clitics ;
-shishay+A+Attr:shishay Clitics ;
-shishe+A+Attr:shishe Clitics ;
-soke+A+Attr:soke Clitics ;
-wal+A+Attr:wal Clitics ;
-xagge+A+Attr:xagge Clitics ;
-
-
-kasta+A+Clit/oo+CS:kastoo Clitics ;
 
 LEXICON AdjState
 +A: StatePerson ;
@@ -160,8 +122,5 @@ LEXICON AdjMor
 Clitics ;
 
 
-! vim: set ts=4 sw=4 tw=0 syntax=lexc :
-
-
-! vim: set ft=xfst-lexc:
+! vim: set ft=lexc:
 
