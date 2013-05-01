@@ -1,5 +1,5 @@
-! Divvun & Giellatekno - open source grammars for UNDEFINED language
-! Copyright © 2012 The University of Tromsø & the Norwegian Sámi Parliament
+! Divvun & Giellatekno - open source grammars for Somali language
+! Copyright © 2012 The University of Tromsø & Ryan Johnson
 ! http://giellatekno.uit.no & http://divvun.no
 !
 ! This program is free software; you can redistribute and/or modify
@@ -13,56 +13,65 @@
 ! giellatekno@hum.uit.no or divvun@samediggi.no
 
 ! ========================================================================== !
-! !!            !!!Somali morphological analyser                      !
+!!                     !!!Somali morphological analyser                      
 ! ========================================================================== !
-!! INTRODUCTION TO MORPHOLOGICAL ANALYSER OF Somali LANGUAGE.
+
+!! INTRODUCTION TO THE MORPHOLOGICAL ANALYSER OF SOMALI.
  
 
 Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! !!Analysis symbols
-!! ----------------
-!! The morphological analyses of wordforms of UNDEFINED language are presented
-!! in this system in terms of following symbols.
+! ----------------
+
+!! The morphological analyses of Somali wordforms are presented
+!! in this system in terms of the following symbols.
 !! (It is highly suggested to follow existing standards when adding new tags).
 
 !! The parts-of-speech are:
- +N +V +A +Adp +Q +Pr +Adv +CC +CS +Interj +Pron +Num
+ +N +V +A +Adp +Q +Pr +Adv +CC +CS +Interj +Pron +Num !!= * @CODE@
 
 ! TODO: copied this over, but need to remember why it was there.
 
-!! # 
 
 !! Fusional adpositions
 
- +Adp/u
- +Adp/ka
- +Adp/la
- +Adp/ku
+ +Adp/u	   !!= * @CODE@
+ +Adp/ka   !!= * @CODE@
+ +Adp/la   !!= * @CODE@
+ +Adp/ku   !!= * @CODE@
 
 !! Focus
 
-+Foc/L +Foc/R
++Foc/L +Foc/R  !!= * @CODE@
 
 !! The parts of speech are further split up into:
- +Interr +Interr/ma +Attr +Short +Cmp +Der/sho +Pfx +PP +Sep +Com
- +Appos +Impers +Inch
- 
- +Recit +Restr
+ +Interr +Interr/ma +Attr +Short +Cmp     !!= * @CODE@
+ +Der/sho +Pfx +PP +Sep +Com		      !!= * @CODE@
+ +Appos +Impers +Inch				      !!= * @CODE@
 
- +Pers
- +Dem
- +Coll
- +Mass
- +Acr
- +Abstr
+ +Recit +Restr						      !!= * @CODE@
+
+ +Pers								      !!= * @CODE@
+ +Dem								      !!= * @CODE@
+ +Coll								      !!= * @CODE@
+ +Mass								      !!= * @CODE@
+ +Acr								      !!= * @CODE@
+ +Abstr								      !!= * @CODE@
 
 
 !! Verb and noun declensions for the analysers that want to know about that
- +Decl/1 +Decl/2 +Decl/2A +Decl/2B +Decl/3 +Decl/3A +Decl/3B +Decl/4 +Decl/5
- +Decl/6 +Decl/7
 
-!! The Usage extents are marked using following tags:
+ +Decl/1 				      !!= * @CODE@
+ +Decl/2 +Decl/2A +Decl/2B    !!= * @CODE@
+ +Decl/3 +Decl/3A +Decl/3B    !!= * @CODE@
+ +Decl/4 				      !!= * @CODE@
+ +Decl/5				      !!= * @CODE@
+ +Decl/6 				      !!= * @CODE@
+ +Decl/7				      !!= * @CODE@
+
+!! The Usage extents are marked using the following tags:
+
  +Use/Sub   
  +Use/-Spell 
  +Use/-Spell
@@ -184,197 +193,202 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
  
  +TODO
 
-!! Morphophonology
-!! ---------------
+!! !!Morphophonology
+! ---------------
+
 !! To represent phonologic variations in word forms we use the following
 !! symbols in the lexicon files:
- {aä} {oö} {uü}
+ {aä} {oö} {uü}   !!= * @CODE@
 
-!! Verb declensions
-{N}
+!! !Verb declensions
+{N}   !!= * @CODE@
 
 !! Going to try to replace these with flag diacritics if possible.
 
-! TODO: these may not be in use?
+!! TODO: these may not be in use?
 
-{V1}
-{V2A}
-{V2B}
-{V3A}
-{V3B}
-{PREFIXING}
-{INF}
+{V1}	      !!= * @CODE@
+{V2A}	      !!= * @CODE@
+{V2B}	      !!= * @CODE@
+{V3A}	      !!= * @CODE@
+{V3B}	      !!= * @CODE@
+{PREFIXING}   !!= * @CODE@
+{INF}	      !!= * @CODE@
 
 !! And following triggers to control variation
- {front} {back}
 
-{PROG}
-%
-%>
+{front} {back}  !!= * @CODE@
+{PROG}		    !!= * @CODE@
+%			    !!= * @CODE@
+%>			    !!= * @CODE@
 
-{#} {##} - 
+{#} {##} -      !!= * @CODE@
 
- ! TODO: no need for , but needs to be removed in all files
- {t} {o} {m} {mm} {C2} {d} {X} {ae} {e} {-e} {a} {-VV} {-V} {-I} {-w} {-a}
+!! TODO: no need for , but needs to be removed in all files
+
+ {t} {o} {m} {mm} {C2} {d} {X} {ae} {e} {-e} {a} {-VV} {-V} {-I} {-w} {-a}  !!= * @CODE@
  
- {E} ! part of cliticized ee (CS+Appos)
+ {E}  !!= * @CODE@ part of cliticized ee (CS+Appos)
 
- {ea} ! aabbe - aabbaha
- {m}
- {y}
+ {ea}  !!= * @CODE@ aabbe - aabbaha
+ {m}   !!= * @CODE@
+ {y}   !!= * @CODE@
+ {ATR}  !!= * @CODE@
 
- {ATR}
+!! Person consonants
 
-! Person consonants
- {ŧ} {đ} {ñ}
+ {ŧ} {đ} {ñ}   !!= * @CODE@
 
-! V2* inf
- {n}
+!! V2* inf
 
-! Tone 
- {aá}
- {áa}
- {aa}
+ {n}  !!= * @CODE@
 
- ´
- ´´
+!! Tone 
+
+ {aá}   !!= * @CODE@
+ {áa}   !!= * @CODE@
+ {aa}   !!= * @CODE@
+
+ ´      !!= * @CODE@ Trond: this is not a multichar symbol
+ ´´     !!= * @CODE@
 
 !! We have manually optimised the structure of our lexicon using following
 !! flag diacritics to restrict morhpological combinatorics:
-@P.NeedNoun.ON@  @D.NeedNoun.ON@  @C.NeedNoun@
 
-@P.STYLE.NG@
-@R.STYLE.NG@
-
-@P.VCLASS.V1@  @R.VCLASS.V1@
-@P.VCLASS.V1ow@  @R.VCLASS.V1ow@
-@P.VCLASS.V1ow2@  @R.VCLASS.V1ow2@
-
-@P.VCLASS.V2A@ @R.VCLASS.V2A@
-@P.VCLASS.V2B@ @R.VCLASS.V2B@
-@P.VCLASS.V3A@ @R.VCLASS.V3A@
-@P.VCLASS.V3B@ @R.VCLASS.V3B@
-@P.VCLASS.V3B_ADel@ @R.VCLASS.V3B_ADel@
-@P.VCLASS.V3B_ADelPart@ @R.VCLASS.V3B_ADelPart@
-@P.VCLASS.PREFIXING@
-
-@U.VCLASS.V1@ 
-@U.VCLASS.V2A@
-@U.VCLASS.V2B@
-@U.VCLASS.V3A@
-@U.VCLASS.V3B@
-@U.VCLASS.UREFIXING@
-
-@P.ATR.True@
-@R.ATR.True@
+@P.NeedNoun.ON@  @D.NeedNoun.ON@  @C.NeedNoun@   !!= * @CODE@
+											     !!= * @CODE@
+@P.STYLE.NG@								     !!= * @CODE@
+@R.STYLE.NG@								     !!= * @CODE@
+											     !!= * @CODE@
+@P.VCLASS.V1@  @R.VCLASS.V1@				     !!= * @CODE@
+@P.VCLASS.V1ow@  @R.VCLASS.V1ow@			     !!= * @CODE@
+@P.VCLASS.V1ow2@  @R.VCLASS.V1ow2@			     !!= * @CODE@
+											     !!= * @CODE@
+@P.VCLASS.V2A@ @R.VCLASS.V2A@				     !!= * @CODE@
+@P.VCLASS.V2B@ @R.VCLASS.V2B@				     !!= * @CODE@
+@P.VCLASS.V3A@ @R.VCLASS.V3A@				     !!= * @CODE@
+@P.VCLASS.V3B@ @R.VCLASS.V3B@				     !!= * @CODE@
+@P.VCLASS.V3B_ADel@ @R.VCLASS.V3B_ADel@		     !!= * @CODE@
+@P.VCLASS.V3B_ADelPart@ @R.VCLASS.V3B_ADelPart@  !!= * @CODE@
+@P.VCLASS.PREFIXING@						     !!= * @CODE@
+											     !!= * @CODE@
+@U.VCLASS.V1@ 								     !!= * @CODE@
+@U.VCLASS.V2A@								     !!= * @CODE@
+@U.VCLASS.V2B@								     !!= * @CODE@
+@U.VCLASS.V3A@								     !!= * @CODE@
+@U.VCLASS.V3B@								     !!= * @CODE@
+@U.VCLASS.UREFIXING@						     !!= * @CODE@
+											     !!= * @CODE@
+@P.ATR.True@								     !!= * @CODE@
+@R.ATR.True@								     !!= * @CODE@
 
 !! Person flags
 
-@U.Pers.1Sg@
-@U.Pers.2Sg@
-@U.Pers.3SgM@
-@U.Pers.3SgF@
+@U.Pers.1Sg@      !!= * @CODE@
+@U.Pers.2Sg@      !!= * @CODE@
+@U.Pers.3SgM@     !!= * @CODE@
+@U.Pers.3SgF@     !!= * @CODE@
 
-@U.Pers.1Pl@
-@U.Pers.2Pl@
-@U.Pers.3Pl@
+@U.Pers.1Pl@      !!= * @CODE@
+@U.Pers.2Pl@      !!= * @CODE@
+@U.Pers.3Pl@      !!= * @CODE@
 
+@P.Pers.1Sg@      !!= * @CODE@
+@P.Pers.2Sg@      !!= * @CODE@
+@P.Pers.3SgM@     !!= * @CODE@
+@P.Pers.3SgF@     !!= * @CODE@
 
-@P.Pers.1Sg@
-@P.Pers.2Sg@
-@P.Pers.3SgM@
-@P.Pers.3SgF@
+@P.Pers.1Pl@      !!= * @CODE@
+@P.Pers.2Pl@      !!= * @CODE@
+@P.Pers.3Pl@      !!= * @CODE@
 
-@P.Pers.1Pl@
-@P.Pers.2Pl@
-@P.Pers.3Pl@
+@R.Pers.1Sg@      !!= * @CODE@
+@R.Pers.2Sg@      !!= * @CODE@
+@R.Pers.3SgM@     !!= * @CODE@
+@R.Pers.3SgF@     !!= * @CODE@
 
+@R.Pers.1Pl@      !!= * @CODE@
+@R.Pers.2Pl@      !!= * @CODE@
+@R.Pers.3Pl@      !!= * @CODE@
 
-@R.Pers.1Sg@
-@R.Pers.2Sg@
-@R.Pers.3SgM@
-@R.Pers.3SgF@
+@R.Gender.Masc@   !!= * @CODE@
+@P.Gender.Masc@   !!= * @CODE@
 
-@R.Pers.1Pl@
-@R.Pers.2Pl@
-@R.Pers.3Pl@
+@R.Gender.Fem@    !!= * @CODE@
+@P.Gender.Fem@    !!= * @CODE@
 
-@R.Gender.Masc@
-@P.Gender.Masc@
+! Moving progress:
 
-@R.Gender.Fem@
-@P.Gender.Fem@
+! Some of the problem with the analyzers is that tone and ATR marks are included
+! and not yet stripped by any filters.
 
-!! Moving progress:
+! TODO: apostrophe?
 
-!! Some of the problem with the analyzers is that tone and ATR marks are included
-!! and not yet stripped by any filters.
+! TODO: adj-som-lex.txt.d
+! TODO: verb-som-lex.txt.d
 
-!! TODO: apostrophe?
+! TODO: tagfix.xfst
+! TODO: allcaps.xfst
+! TODO: guess-script.xfst
+! TODO: noun-guesser.xfst
 
-!! TODO: adj-som-lex.txt.d
-!! TODO: verb-som-lex.txt.d
+! TODO: tok.xfst
+! TODO: twol-vh-som.txt
 
-!! TODO: tagfix.xfst
-!! TODO: allcaps.xfst
-!! TODO: guess-script.xfst
-!! TODO: noun-guesser.xfst
+! TODO: case.regex
 
-!! TODO: tok.xfst
-!! TODO: twol-vh-som.txt
+! TODO: remove_usage_tags.regex
+!   - this may be covered by other regexes, but need to check that i am
+!   defining all usage tags in the right place-- also, which analyser/generator is
+!   this intended for? 
 
-!! TODO: case.regex
+! TODO: can make a local copy of these and override the parents.
 
-!! TODO: remove_usage_tags.regex
-!!   - this may be covered by other regexes, but need to check that i am
-!!   defining all usage tags in the right place-- also, which analyser/generator is
-!!   this intended for? 
+! TODO: use-DIAL-filter.regex
+! TODO: use-NG-filter.regex
+! TODO: use-sub-filter.regex
 
-!! TODO: can make a local copy of these and override the parents.
-
-!! TODO: use-DIAL-filter.regex
-!! TODO: use-NG-filter.regex
-!! TODO: use-sub-filter.regex
-
-!! --> make-blah, but are they necessary anymore?
+! --> make-blah, but are they necessary anymore?
 
 
-LEXICON Root
-!! The word forms in UNDEFINED language start from the lexeme roots of basic
+!! !!!The continuation lexica
+
+LEXICON Root   !!= * @CODE@ 
+
+!! The word forms in Somali start from the lexeme roots of basic
 !! word classes, or optionally from prefixes:
-Abbreviations   ;
 
-Nouns           ;
-Numerals        ;
+Abbreviations   ;   !!= * @CODE@
 
-Pronouns        ;
+Nouns           ;   !!= * @CODE@
+Numerals        ;   !!= * @CODE@
 
-Verbs           ;
-Adjectives      ;
+Pronouns        ;   !!= * @CODE@
 
-Adverbs         ;
+Verbs           ;   !!= * @CODE@
+Adjectives      ;   !!= * @CODE@
 
-Conjunctions    ;
-Subjunctions    ;
+Adverbs         ;   !!= * @CODE@
 
-Postpositions   ;
-Determiners     ;
-Interjections   ;
-Punctuation     ;
+Conjunctions    ;   !!= * @CODE@
+Subjunctions    ;   !!= * @CODE@
 
-!! !! these are coming from som-lex.txt
-!! IrregularNounMorph ;
-!! VerbalPrefixes ;
-!! IrregularAdjective ;
-!! Adverb ;
-!! Prefixes  ;
+Postpositions   ;   !!= * @CODE@
+Determiners     ;   !!= * @CODE@
+Interjections   ;   !!= * @CODE@
+Punctuation     ;   !!= * @CODE@
 
-LEXICON FINAL_NG
+!! !!The following are coming from som-lex.txt
+!! * IrregularNounMorph ; 
+!! * VerbalPrefixes ;	    
+!! * IrregularAdjective ; 
+!! * Adverb ;			    
+!! * Prefixes  ;		    
 
+LEXICON FINAL_NG !!= * @CODE@ just adds the +Use/NG tag to lower ##
  +Use/NG:{##} 	# ;
 
-LEXICON FINAL
-
+LEXICON FINAL !!= * @CODE@ just adds lower ##
  :{##} 	# ;
 
 ! +Use/NG:@R.STYLE.NG@{##}		# ;
@@ -383,18 +397,18 @@ LEXICON FINAL
 
 
 
-! These lexica are dummy lexical to make the source compile.
+!! These lexica are dummy lexical to make the source compile, they contain only #.
 
-LEXICON Proper 
+LEXICON Proper   !!= * @CODE@
 # ;
 
-LEXICON Unknown_Declensions
+LEXICON Unknown_Declensions  !!= * @CODE@
 # ;
 
-LEXICON Obj_Pron
+LEXICON Obj_Pron  !!= * @CODE@
 # ;
 
-LEXICON SemiReducedPerson
+LEXICON SemiReducedPerson  !!= * @CODE@
 # ;
 
 
