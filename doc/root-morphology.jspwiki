@@ -1,0 +1,298 @@
+
+                    !!!Somali morphological analyser                      
+
+INTRODUCTION TO THE MORPHOLOGICAL ANALYSER OF SOMALI.
+
+
+ !!!Multichar_Symbols definitions
+
+!!Analysis symbols
+
+The morphological analyses of Somali wordforms are presented
+in this system in terms of the following symbols.
+(It is highly suggested to follow existing standards when adding new tags).
+
+The parts-of-speech are:
+ *  +N +V +A +Adp +Q +Pr +Adv +CC +CS +Interj +Pron +Num 
+
+
+
+Fusional adpositions
+
+ *  +Adp/u	   
+ *  +Adp/ka   
+ *  +Adp/la   
+ *  +Adp/ku   
+
+Focus
+
+ * +Foc/L +Foc/R  
+
+The parts of speech are further split up into:
+ *  +Interr +Interr/ma +Attr +Short +Cmp     
+ *  +Der/sho +Pfx +PP +Sep +Com		      
+ *  +Appos +Impers +Inch				      
+
+ *  +Recit +Restr						      
+
+ *  +Pers								      
+ *  +Dem								      
+ *  +Coll								      
+ *  +Mass								      
+ *  +Acr								      
+ *  +Abstr								      
+
+
+Verb and noun declensions for the analysers that want to know about that
+
+ *  +Decl/1 				      
+ *  +Decl/2 +Decl/2A +Decl/2B    
+ *  +Decl/3 +Decl/3A +Decl/3B    
+ *  +Decl/4 				      
+ *  +Decl/5				      
+ *  +Decl/6 				      
+ *  +Decl/7				      
+
+The Usage extents are marked using the following tags:
+
+
+The nominals are inflected in the following Case and Number
+
+The possession is marked as such:
+The comparative forms are:
+Numerals are classified under:
+Verb moods are:
+Verb personal forms are:
+Other verb forms are
+
+Special symbols are classified with:
+The verbs are syntactically split according to transitivity:
+Special multiword units are analysed with:
+Non-dictionary words can be recognised with:
+
+Question and Focus particles:
+
+
+Semantics are classified with
+
+
+Derivations are classified under the morphophonetic form of the suffix, the
+source and target part-of-speech.
+
+
+And some things that I haven't moved up to other categories yet...
+
+
+
+
+
+Syntaxy stuff, don't want to use +Acc, because this isn't relevant in nouns
+
+Nominal MSP
+
+Derivation
+
+
+Clitics
+
+
+
+
+Style 
+
+
+
+
+!!Morphophonology
+
+To represent phonologic variations in word forms we use the following
+symbols in the lexicon files:
+ *  {aä} {oö} {uü}   
+
+!Verb declensions
+ * {N}   
+
+Going to try to replace these with flag diacritics if possible.
+
+TODO: these may not be in use?
+
+ * {V1}	      
+ * {V2A}	      
+ * {V2B}	      
+ * {V3A}	      
+ * {V3B}	      
+ * {PREFIXING}   
+ * {INF}	      
+
+And following triggers to control variation
+
+ * {front} {back}  
+ * {PROG}		    
+ * %			    
+ * %>			    
+
+ * {#} {##} -      
+
+TODO: no need for , but needs to be removed in all files
+
+ *  {t} {o} {m} {mm} {C2} {d} {X} {ae} {e} {-e} {a} {-VV} {-V} {-I} {-w} {-a}  
+
+ *  {E}   part of cliticized ee (CS+Appos)
+
+ *  {ea}   aabbe - aabbaha
+ *  {m}   
+ *  {y}   
+ *  {ATR}  
+
+Person consonants
+
+ *  {ŧ} {đ} {ñ}   
+
+V2* inf
+
+ *  {n}  
+
+Tone 
+
+ *  {aá}   
+ *  {áa}   
+ *  {aa}   
+
+ *  ´       Trond: this is not a multichar symbol
+ *  ´´     
+
+We have manually optimised the structure of our lexicon using following
+flag diacritics to restrict morhpological combinatorics:
+
+ * @P.NeedNoun.ON@  @D.NeedNoun.ON@  @C.NeedNoun@   
+ * 											     
+ * @P.STYLE.NG@								     
+ * @R.STYLE.NG@								     
+ * 											     
+ * @P.VCLASS.V1@  @R.VCLASS.V1@				     
+ * @P.VCLASS.V1ow@  @R.VCLASS.V1ow@			     
+ * @P.VCLASS.V1ow2@  @R.VCLASS.V1ow2@			     
+ * 											     
+ * @P.VCLASS.V2A@ @R.VCLASS.V2A@				     
+ * @P.VCLASS.V2B@ @R.VCLASS.V2B@				     
+ * @P.VCLASS.V3A@ @R.VCLASS.V3A@				     
+ * @P.VCLASS.V3B@ @R.VCLASS.V3B@				     
+ * @P.VCLASS.V3B_ADel@ @R.VCLASS.V3B_ADel@		     
+ * @P.VCLASS.V3B_ADelPart@ @R.VCLASS.V3B_ADelPart@  
+ * @P.VCLASS.PREFIXING@						     
+ * 											     
+ * @U.VCLASS.V1@ 								     
+ * @U.VCLASS.V2A@								     
+ * @U.VCLASS.V2B@								     
+ * @U.VCLASS.V3A@								     
+ * @U.VCLASS.V3B@								     
+ * @U.VCLASS.UREFIXING@						     
+ * 											     
+ * @P.ATR.True@								     
+ * @R.ATR.True@								     
+
+Person flags
+
+ * @U.Pers.1Sg@      
+ * @U.Pers.2Sg@      
+ * @U.Pers.3SgM@     
+ * @U.Pers.3SgF@     
+
+ * @U.Pers.1Pl@      
+ * @U.Pers.2Pl@      
+ * @U.Pers.3Pl@      
+
+ * @P.Pers.1Sg@      
+ * @P.Pers.2Sg@      
+ * @P.Pers.3SgM@     
+ * @P.Pers.3SgF@     
+
+ * @P.Pers.1Pl@      
+ * @P.Pers.2Pl@      
+ * @P.Pers.3Pl@      
+
+ * @R.Pers.1Sg@      
+ * @R.Pers.2Sg@      
+ * @R.Pers.3SgM@     
+ * @R.Pers.3SgF@     
+
+ * @R.Pers.1Pl@      
+ * @R.Pers.2Pl@      
+ * @R.Pers.3Pl@      
+
+ * @R.Gender.Masc@   
+ * @P.Gender.Masc@   
+
+ * @R.Gender.Fem@    
+ * @P.Gender.Fem@    
+
+
+
+
+
+
+
+
+
+
+
+
+
+!!!The continuation lexica
+
+ * LEXICON Root    
+
+The word forms in Somali start from the lexeme roots of basic
+word classes, or optionally from prefixes:
+
+ * Abbreviations   ;   
+
+ * Nouns           ;   
+ * Numerals        ;   
+
+ * Pronouns        ;   
+
+ * Verbs           ;   
+ * Adjectives      ;   
+
+ * Adverbs         ;   
+
+ * Conjunctions    ;   
+ * Subjunctions    ;   
+
+ * Postpositions   ;   
+ * Determiners     ;   
+ * Interjections   ;   
+ * Punctuation     ;   
+
+!!The following are coming from som-lex.txt
+* IrregularNounMorph ; 
+* VerbalPrefixes ;	    
+* IrregularAdjective ; 
+* Adverb ;			    
+* Prefixes  ;		    
+
+ * LEXICON FINAL_NG  just adds the +Use/NG tag to lower ##
+
+ * LEXICON FINAL  just adds lower ##
+
+
+
+
+These lexica are dummy lexical to make the source compile, they contain only #.
+
+ * LEXICON Proper   
+
+ * LEXICON Unknown_Declensions  
+
+ * LEXICON Obj_Pron  
+
+ * LEXICON SemiReducedPerson  
+
+
+
+
+
+
+
+
