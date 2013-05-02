@@ -1,0 +1,89 @@
+Nouns
+-----
+
+Nouns in Somali are things. They have separate paradigms depending on
+morphophonological stuff, but are split up into subgroups which correspond
+to gender polarity groups.
+
+
+Irregular nouns
+_il_ and _si_ are both female in singular, and have typical morphology there
+but, have varying irregular masculine plural forms.
+
+ * LEXICON IrregNouns   
+
+(subsequent examples are *il # Irregular tests*)
+* __il__: {{il+N+Fem+Sg+Indef+Abs}}
+* __isha__: {{il+N+Fem+Sg+Def+Abs+Prox}}
+* __indho__: {{il+N+Masc+Pl+Indef+Abs}}
+* __indhaha__: {{il+N+Masc+Pl+Def+Abs+Prox}}
+
+(subsequent examples are *il # Irregular tests*)
+* __si__: {{si+N+Fem+Sg+Indef+Abs}}
+* __sida__: {{si+N+Fem+Sg+Def+Abs+Prox}}
+* __siyaabo__: {{si+N+Masc+Pl+Indef+Abs}}
+* __siyaabaha__: {{si+N+Masc+Pl+Def+Abs+Prox}}
+
+
+Declension 1: F→M
+
+TODO: write quick overview of morphosyntax, morphophon
+-i for some nominatives. Pl is -o.
+
+Good amount of nouns with -ad, Fem derivational suffix.
+
+(subsequent examples are *aalad # aalad sample paradigm.*)
+* __aalad__: {{aalad+N+Decl/1+Fem+Sg+Indef+Abs}}
+* __aaladda__: {{aalad+N+Decl/1+Fem+Sg+Def+Abs+Prox}}
+* __aalado__: {{aalad+N+Decl/1+Masc+Pl+Indef+Abs}}
+* __aaladaha__: {{aalad+N+Decl/1+Masc+Pl+Def+Abs+Prox}}
+
+
+
+Declension 1: M, sg. only
+
+
+Declension 1: M→M
+
+
+Declension 1: Masc. Pl. Only
+
+
+Declension 1: Fem. Sg. Only
+
+A fair amount of abstract things, and some collective things that probably need
+to be moved to collective lexica.
+
+
+TODO: continue documentation here.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+(subsequent examples are *guri # Odd-syllable test*)
+* __guri__: {{guri+N+Masc+Sg+Indef+Nom}}
+
