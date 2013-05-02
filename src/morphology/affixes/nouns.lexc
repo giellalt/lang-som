@@ -473,14 +473,14 @@ LEXICON NOUN5_M
 LEXICON NOUN6_M
 
     @P.Gender.Masc@          _N_6_M_Sg_PB ;
-    @P.Gender.Masc@          _N_6_M_Sg_PB ;
+    @P.Gender.Masc@          _N_6_M_Pl_PB ;
 
     NIMO ;
 
 LEXICON NOUN6_F
 
     @P.Gender.Fem@           _N_6_F_Sg_PB ;
-    @P.Gender.Masc@          _N_6_M_Sg_PB ;
+    @P.Gender.Masc@          _N_6_M_Pl_PB ;
 
     NIMO ;
 
