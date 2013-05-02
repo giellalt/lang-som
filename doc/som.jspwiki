@@ -26,19 +26,22 @@ in this system in terms of the following symbols.
 The parts-of-speech are:
  *  +N +V +A +Adp +Q +Pr +Adv +CC +CS +Interj +Pron +Num 
 
-
-
 Fusional adpositions
 
- *  +Adp/u	   
- *  +Adp/ka   
- *  +Adp/la   
- *  +Adp/ku   
+ *  +Adp/u	    Fusional ú
+ *  +Adp/ka    Fusional ká
+ *  +Adp/la    Fusional lá
+ *  +Adp/ku    Fusional kú
+
+Object pronouns in adpositional+pronoun
+
+ *  +1SgObj/i      E.x.: la + i + lá  -> laylá
+ *  +2SgObj/ku     E.x.: la + ku + lá -> lagulá
 
 Focus
 
- * +Foc/L   Focus markers _baa_ and _ayaa_
- * +Foc/R   Focus marker _waxaa_
+ * +Foc/L   Focus markers __baa__ and __ayaa__
+ * +Foc/R   Focus marker __waxaa__
 
 The parts of speech are further split up into:
  *  +Interr +Interr/ma +Attr +Short +Cmp     
@@ -68,14 +71,63 @@ Verb and noun declensions for the analysers that want to know about that
 The Usage extents are marked using the following tags:
 
 
-The nominals are inflected in the following Case and Number
+The nominals are inflected in the following case, number
+
+Nominals also are inflected for gender
+
+Nominal marked for gender undergo gender polarity changes in plural.
+We want to mark +Masc and +Fem, such that disambiguation is easier,
+but knowing the gender of the lemma since it is not predictable from
+a given plural form is a good thing.
+
+
+
+Nominals also have affixed demonstratives
+
+ *  +Prox       -0
+ *  +Dist       -ii
+ *  +Near       -aas / -aasi
+ *  +Far        -eer / -eeri
+ *  +Farther    -oo / -ooyi
+ *  +Close      -an / -anu / -ani
+
+Are these in use?
+
+ *  +Adc            
+ *  +Apr            
+ *  +Prl            
+ *  +Apr            
+ *  +Cns            
+ *  +Ord            
 
 The possession is marked as such:
+ *  +PxSg1          
+ *  +PxSg2          
+ *  +PxSg3F          
+ *  +PxSg3M         
+
+ *  +PxPl1          
+ *  +PxPl1Incl          
+ *  +PxPl1Excl          
+ *  +PxPl2          
+ *  +PxPl3          
+
 The comparative forms are:
+
 Numerals are classified under:
+
 Verb moods are:
+
+Verb tenses
+
 Verb aspects are:
-Verb personal forms are:
+
+Verb personal forms are (NB: no inclusive/exclusive):
+
+Verbs also mark some non-agreement syntactic information
+ *  +Red  occurs often with subjects that are focused
+ *  +Rel  the verb is within a relative clause, and is also case marked.
+
 Other verb forms are
 
 Special symbols are classified with:
@@ -85,17 +137,12 @@ Non-dictionary words can be recognised with:
 
 Question and Focus particles:
 
-
 Semantics are classified with
+
 
 
 Derivations are classified under the morphophonetic form of the suffix, the
 source and target part-of-speech.
-
-
-And some things that I haven't moved up to other categories yet...
-
-
 
 
 
@@ -107,7 +154,6 @@ Derivation
 
 
 Clitics
-
 
 
 
@@ -152,7 +198,7 @@ TODO: no need for , but needs to be removed in all files
 Tone 
 
 
- * !  ´       Trond: this is not a multichar symbol
+
  *  ´´      
 
 We have manually optimised the structure of our lexicon using following
@@ -242,11 +288,15 @@ word classes, or optionally from prefixes:
  * Abbreviations   ;   
 
  * Nouns           ;   
+ * ProperNouns     ;   
+
  * Numerals        ;   
 
  * Pronouns        ;   
 
  * Verbs           ;    
+ * IrregularVerbs  ;   
+ * VerbalPrefixes  ;    Certain VP elements often get combined with the verbs in writing.
  * Adjectives      ;    Some have verb morphology, and some view them to just be a 4th declension of verbs. 
 
  * Adverbs         ;   
@@ -254,16 +304,13 @@ word classes, or optionally from prefixes:
  * Conjunctions    ;   
  * Subjunctions    ;   
 
- * Postpositions   ;   
+ * Adpositions     ;   
  * Determiners     ;   
  * Interjections   ;   
  * Punctuation     ;   
 
 !!The following are coming from som-lex.txt
-* IrregularNounMorph ; 
-* VerbalPrefixes ;	    
 * IrregularAdjective ; 
-* Adverb ;			    
 * Prefixes  ;		    
 
  * LEXICON FINAL_NG  just adds the +Use/NG tag to lower ##
@@ -274,6 +321,7 @@ word classes, or optionally from prefixes:
 
 
 These lexica are dummy lexical to make the source compile, they contain only #.
+
 
  * LEXICON Proper   
 
