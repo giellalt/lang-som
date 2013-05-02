@@ -26,7 +26,8 @@ Fusional adpositions
 
 Focus
 
- * +Foc/L +Foc/R  
+ * +Foc/L   Focus markers _baa_ and _ayaa_
+ * +Foc/R   Focus marker _waxaa_
 
 The parts of speech are further split up into:
  *  +Interr +Interr/ma +Attr +Short +Cmp     
@@ -62,6 +63,7 @@ The possession is marked as such:
 The comparative forms are:
 Numerals are classified under:
 Verb moods are:
+Verb aspects are:
 Verb personal forms are:
 Other verb forms are
 
@@ -107,26 +109,18 @@ Style
 
 To represent phonologic variations in word forms we use the following
 symbols in the lexicon files:
- *  {aä} {oö} {uü}   
 
 !Verb declensions
  * {N}   
 
 Going to try to replace these with flag diacritics if possible.
 
-TODO: these may not be in use?
+TODO: this is in use, but might be better to do a flag diacritic
 
- * {V1}	      
- * {V2A}	      
- * {V2B}	      
- * {V3A}	      
- * {V3B}	      
  * {PREFIXING}   
- * {INF}	      
 
 And following triggers to control variation
 
- * {front} {back}  
  * {PROG}		    
  * %			    
  * %>			    
@@ -144,22 +138,11 @@ TODO: no need for , but needs to be removed in all files
  *  {y}   
  *  {ATR}  
 
-Person consonants
-
- *  {ŧ} {đ} {ñ}   
-
-V2* inf
-
- *  {n}  
-
 Tone 
 
- *  {aá}   
- *  {áa}   
- *  {aa}   
 
- *  ´       Trond: this is not a multichar symbol
- *  ´´     
+ * !  ´       Trond: this is not a multichar symbol
+ *  ´´      
 
 We have manually optimised the structure of our lexicon using following
 flag diacritics to restrict morhpological combinatorics:
@@ -252,8 +235,8 @@ word classes, or optionally from prefixes:
 
  * Pronouns        ;   
 
- * Verbs           ;   
- * Adjectives      ;   
+ * Verbs           ;    
+ * Adjectives      ;    Some have verb morphology, and some view them to just be a 4th declension of verbs. 
 
  * Adverbs         ;   
 
