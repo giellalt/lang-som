@@ -36,8 +36,8 @@ GT_LEXC_SRCS=\
 			 stems/interjections.lexc \
 			 stems/punctuation.lexc \
 			 affixes/adjectives.lexc \
-			 affixes/nouns.lexc \
 			 affixes/propernouns.lexc \
+			 affixes/nouns.lexc \
 			 affixes/verbs.lexc \
 			 affixes/irregularverbs.lexc \
 			 affixes/numerals.lexc \

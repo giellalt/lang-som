@@ -1,4 +1,4 @@
-LEXICON IrregularVerb
+LEXICON IrregularVerbs
 	Copulas ;
 	prefixing ;  	! TODO: prefixing verbs
 
@@ -568,6 +568,9 @@ LEXICON ODHAN
 	
 	+Ind+Pres:	ODHAN/GenPres ;
 	+Ind+Pres:	ODHAN/GenPresRedAbs ; ! +Red tag after
+    +Ind+Pres:  ODHAN/GenPresRedNom ;
+    +Ind+Past:  ODHAN/GenPastRedAbs ;
+    +Ind+Past:  ODHAN/GenPastRedNom ;
 	+Neg+Pres:	ODHAN/GenPresNeg ;
 	
 	+Imp:		ODHAN/Imp ;

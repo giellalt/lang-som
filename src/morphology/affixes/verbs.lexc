@@ -1270,8 +1270,8 @@ LEXICON CmpNGVerb
     +Pfx+Cmp+Use/Sub+Use/NG#:%- ToWords ;
 
 LEXICON ToWords
-    Verb ;
-    IrregularVerb ;
+    Verbs ;
+    IrregularVerbs ;
     Nouns ; ! 2.5. Changed from (nonexisting) Noun to Nouns, Trond.
     
 

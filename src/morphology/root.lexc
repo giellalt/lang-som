@@ -345,11 +345,15 @@ LEXICON Root   !!= * @CODE@
 Abbreviations   ;   !!= * @CODE@
 
 Nouns           ;   !!= * @CODE@
+ProperNouns     ;   !!= * @CODE@
+
 Numerals        ;   !!= * @CODE@
 
 Pronouns        ;   !!= * @CODE@
 
 Verbs           ;   !!= * @CODE@ 
+IrregularVerbs  ;   !!= * @CODE@
+VerbalPrefixes  ;   !!= * @CODE@ Certain VP elements often get combined with the verbs in writing.
 Adjectives      ;   !!= * @CODE@ Some have verb morphology, and some view them to just be a 4th declension of verbs. 
 
 Adverbs         ;   !!= * @CODE@
