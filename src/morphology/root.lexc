@@ -45,8 +45,8 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! Focus
 
-+Foc/L  !!= * @CODE@ Focus markers _baa_ and _ayaa_
-+Foc/R  !!= * @CODE@ Focus marker _waxaa_
++Foc/L  !!= * @CODE@ Focus markers __baa__ and __ayaa__
++Foc/R  !!= * @CODE@ Focus marker __waxaa__
 
 !! The parts of speech are further split up into:
  +Interr +Interr/ma +Attr +Short +Cmp     !!= * @CODE@
@@ -272,7 +272,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !! Tone 
 
 
-!  ´      !!= * @CODE@ Trond: this is not a multichar symbol
+
  ´´     !!= * @CODE@ 
 
 !! We have manually optimised the structure of our lexicon using following
