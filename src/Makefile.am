@@ -58,39 +58,39 @@ endif # WANT_OAHPA
 
 #### BEGIN: Add local processing instructions BELOW this line ####
 
-# Copied from SMA. 
-# analyser-%.hfst: analyser-%.tmp.hfst \
-# 				filters/remove-test-tags.hfst
-# 	$(AM_V_GEN)$(HFST_COMPOSE) $(HFST_FLAGS) -F -2 $< \
-# 			-1 filters/remove-test-tags.hfst \
-# 		| $(HFST_INVERT) \
-# 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
-
-analyser-%.xfst: analyser-%.tmp.xfst \
-				filters/remove-tones.xfst
-	$(AM_V_GEN)$(PRINTF) "read regex \
-				@\"filters/remove-tones.xfst\" \
-			.o. @\"$<\" ;\n\
-		 save stack $@\n\
-		 quit\n" | $(XFST) -q
-
-# # And also for the generator:
-# generator-%.hfst: generator-%.tmp.hfst \
-# 				filters/remove-test-tags.hfst
-# 	$(AM_V_GEN)$(HFST_COMPOSE) $(HFST_FLAGS) -F $< \
-# 			-1 filters/remove-test-tags.hfst \
-# 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
+# # Copied from SMA. 
+# # analyser-%.hfst: analyser-%.tmp.hfst \
+# # 				filters/remove-test-tags.hfst
+# # 	$(AM_V_GEN)$(HFST_COMPOSE) $(HFST_FLAGS) -F -2 $< \
+# # 			-1 filters/remove-test-tags.hfst \
+# # 		| $(HFST_INVERT) \
+# # 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
 # 
-
-generator-%.xfst: generator-%.tmp.xfst \
-				filters/remove-tones.xfst
-	$(AM_V_GEN)$(PRINTF) "read regex \
-				@\"$<\" \
-			.o. @\"filters/remove-tones.xfst\".i \
-			;\n\
-		 save stack $@\n\
-		 quit\n" | $(XFST) -q
-
+# analyser-%.xfst: analyser-%.tmp.xfst \
+# 				filters/remove-tones.xfst
+# 	$(AM_V_GEN)$(PRINTF) "read regex \
+# 				@\"filters/remove-tones.xfst\" \
+# 			.o. @\"$<\" ;\n\
+# 		 save stack $@\n\
+# 		 quit\n" | $(XFST) -q
+# 
+# # # And also for the generator:
+# # generator-%.hfst: generator-%.tmp.hfst \
+# # 				filters/remove-test-tags.hfst
+# # 	$(AM_V_GEN)$(HFST_COMPOSE) $(HFST_FLAGS) -F $< \
+# # 			-1 filters/remove-test-tags.hfst \
+# # 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
+# # 
+# 
+# generator-%.xfst: generator-%.tmp.xfst \
+# 				filters/remove-tones.xfst
+# 	$(AM_V_GEN)$(PRINTF) "read regex \
+# 				@\"$<\" \
+# 			.o. @\"filters/remove-tones.xfst\".i \
+# 			;\n\
+# 		 save stack $@\n\
+# 		 quit\n" | $(XFST) -q
+# 
 
 
 #### END: Add local processing instructions ABOVE this line ######
