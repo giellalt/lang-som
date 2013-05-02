@@ -31,15 +31,17 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !! The parts-of-speech are:
  +N +V +A +Adp +Q +Pr +Adv +CC +CS +Interj +Pron +Num !!= * @CODE@
 
-! TODO: copied this over, but need to remember why it was there.
-
-
 !! Fusional adpositions
 
- +Adp/u	   !!= * @CODE@
- +Adp/ka   !!= * @CODE@
- +Adp/la   !!= * @CODE@
- +Adp/ku   !!= * @CODE@
+ +Adp/u	   !!= * @CODE@ Fusional ú
+ +Adp/ka   !!= * @CODE@ Fusional ká
+ +Adp/la   !!= * @CODE@ Fusional lá
+ +Adp/ku   !!= * @CODE@ Fusional kú
+
+!! Object pronouns in adpositional+pronoun
+
+ +1SgObj/i     !!= * @CODE@ E.x.: la + i + lá  -> laylá
+ +2SgObj/ku    !!= * @CODE@ E.x.: la + ku + lá -> lagulá
 
 !! Focus
 
@@ -59,6 +61,8 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
  +Mass								      !!= * @CODE@
  +Acr								      !!= * @CODE@
  +Abstr								      !!= * @CODE@
+ +Abbr
+ +Prop 
 
 
 !! Verb and noun declensions for the analysers that want to know about that
@@ -86,42 +90,93 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
  +Use/SpellNoSugg+Prog
  +Use/Sub
 
-!! The nominals are inflected in the following Case and Number
- +Sg +Du +Pl
- +Ess +Nom +Gen +Acc +Ill +Loc +Com +Com/Sh
- +Indef +Def
+!! The nominals are inflected in the following case, number
  +Sg +Pl
- +Prop +Plc
- +Abbr
+ +Nom +Abs +Gen
+ +Indef +Def
+
+!! Nominals also are inflected for gender
  +Masc +Fem
- +Nom +Abs +Acc +Gen +Abl +Dat 
- +Dist +Prox +Near +Far +Farther +Close
- +Adc 
- +Apr
- +Prl +Apr
- +Cns
- +Ord
+
+!! Nominal marked for gender undergo gender polarity changes in plural.
+!! We want to mark +Masc and +Fem, such that disambiguation is easier,
+!! but knowing the gender of the lemma since it is not predictable from
+!! a given plural form is a good thing.
+
+! TODO: insert these into noun affixes.
+
+ +M→M
+ +M→F
+ +F→M
+ +F→F
+
+!! Nominals also have affixed demonstratives
+
+ +Prox      !!= * @CODE@ -0
+ +Dist      !!= * @CODE@ -ii
+ +Near      !!= * @CODE@ -aas / -aasi
+ +Far       !!= * @CODE@ -eer / -eeri
+ +Farther   !!= * @CODE@ -oo / -ooyi
+ +Close     !!= * @CODE@ -an / -anu / -ani
+
+!! Are these in use?
+
+ +Adc            !!= * @CODE@
+ +Apr            !!= * @CODE@
+ +Prl            !!= * @CODE@
+ +Apr            !!= * @CODE@
+ +Cns            !!= * @CODE@
+ +Ord            !!= * @CODE@
 
 !! The possession is marked as such:
-+PxSg1 +PxSg2 +PxSg3F +PxPl1 +PxPl2 +PxPl3 +PxSg3M +PxPl1Incl +PxPl1Excl
+ +PxSg1          !!= * @CODE@
+ +PxSg2          !!= * @CODE@
+ +PxSg3F         !!= * @CODE@ 
+ +PxSg3M         !!= * @CODE@
+
+ +PxPl1          !!= * @CODE@
+ +PxPl1Incl      !!= * @CODE@    
+ +PxPl1Excl      !!= * @CODE@    
+ +PxPl2          !!= * @CODE@
+ +PxPl3          !!= * @CODE@
+
 !! The comparative forms are:
- +Comp +Superl
+ +Comp
+ +Superl
+
 !! Numerals are classified under:
- +Attr +Card
+ +Attr 
+ +Card
  +Ord 
+
 !! Verb moods are:
- +Ind +Prs +Prt +Pot +Cond +Imprt
+ +Ind
+ +Opt
+ +Imprt
+ +Neg
+ +Imper
+
+!! Verb tenses
+ +Past
+ +Pres
+
 !! Verb aspects are:
  +Prog
-!! Verb personal forms are:
- +Sg1 +Sg2 +Sg3 +Du1 +Du2 +Du3 +Pl1 +Pl2 +Pl3
+
+!! Verb personal forms are (NB: no inclusive/exclusive):
+ +1Sg +2Sg +3Sg +3SgM +3SgF +1Pl +2Pl +3Pl
+
+!! Verbs also mark some non-agreement syntactic information
+ +Red !!= * @CODE@ occurs often with subjects that are focused
+ +Rel !!= * @CODE@ the verb is within a relative clause, and is also case marked.
+
 !! Other verb forms are
  +Inf +Ger +ConNeg +ConNegII +Neg +ImprtII +PrsPrc +PrfPrc +Sup +VGen +VAbess
-
+ 
 ! Abbreviated words are classified with:
  +ABBR +ACR 
 !! Special symbols are classified with:
-+CLB +PUNCT +LEFT +RIGHT
+ +CLB +PUNCT +LEFT +RIGHT
 !! The verbs are syntactically split according to transitivity:
  +TV +IV +DV
 !! Special multiword units are analysed with:
@@ -133,8 +188,9 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !! Question and Focus particles:
  +Qst +Foc
 
-
 !! Semantics are classified with
+
+ +Plc
 
 
 !! Derivations are classified under the morphophonetic form of the suffix, the
@@ -142,23 +198,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
  +V→N +V→V +V→A
  +Der/xxx
 
-
-!! And some things that I haven't moved up to other categories yet...
-
- +Prs +Fut +Prt +Prf
- 
- +1SgObj/i
- +2SgObj/ku
- 
- +Past
- +Pres
- +Ptcpl
- +Ind +Imp +Cond +Opt +Neg
- +Inf +Red
- +Imper
- +1Sg +2Sg +3Sg +3SgM +3SgF +1Pl +2Pl +3Pl
  +Incl +Excl
- +Irr +Term +Cond +Des +Compl +Dim
  
  
 !! Syntaxy stuff, don't want to use +Acc, because this isn't relevant in nouns
@@ -182,7 +222,6 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
  
  +Clit/CS
  +Clit/Without
- 
  
 !! Style 
  
@@ -361,16 +400,13 @@ Adverbs         ;   !!= * @CODE@
 Conjunctions    ;   !!= * @CODE@
 Subjunctions    ;   !!= * @CODE@
 
-Postpositions   ;   !!= * @CODE@
+Adpositions     ;   !!= * @CODE@
 Determiners     ;   !!= * @CODE@
 Interjections   ;   !!= * @CODE@
 Punctuation     ;   !!= * @CODE@
 
 !! !!The following are coming from som-lex.txt
-!! * IrregularNounMorph ; 
-!! * VerbalPrefixes ;	    
 !! * IrregularAdjective ; 
-!! * Adverb ;			    
 !! * Prefixes  ;		    
 
 LEXICON FINAL_NG !!= * @CODE@ just adds the +Use/NG tag to lower ##
@@ -386,6 +422,8 @@ LEXICON FINAL !!= * @CODE@ just adds lower ##
 
 
 !! These lexica are dummy lexical to make the source compile, they contain only #.
+
+! TODO: remove references to them.
 
 LEXICON Proper   !!= * @CODE@
 # ;
