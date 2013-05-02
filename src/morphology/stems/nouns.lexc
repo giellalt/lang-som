@@ -1,6 +1,9 @@
 !! Nouns
 !! -----
-!! Nouns in Somali are things.
+!! 
+!! Nouns in Somali are things. They have separate paradigms depending on
+!! morphophonological stuff, but are split up into subgroups which correspond
+!! to gender polarity groups.
 
 LEXICON Nouns
   D1 ;
@@ -13,11 +16,28 @@ LEXICON Nouns
   ArabicLoans ;
   IrregNouns ;
 
-LEXICON IrregNouns
+!! !! Irregular nouns
+!! _il_ and _si_ are both female in singular, and have typical morphology there
+!! but, have varying irregular masculine plural forms.
+
+LEXICON IrregNouns  !!= * @CODE@ 
   il	NOUN1_F/SgOnly ;
   si	NOUN1_F/SgOnly ;
   wax	FINAL ;
   IrregularNounMorph ;
+
+! Test data:
+!!€gt-desc: il # Irregular tests
+!!€ il      il+N+Fem+Sg+Indef+Abs
+!!€ isha    il+N+Fem+Sg+Def+Abs+Prox
+!!€ indho   il+N+Masc+Pl+Indef+Abs
+!!€ indhaha il+N+Masc+Pl+Def+Abs+Prox
+
+!!€gt-desc: il # Irregular tests
+!!€ si        si+N+Fem+Sg+Indef+Abs
+!!€ sida      si+N+Fem+Sg+Def+Abs+Prox
+!!€ siyaabo   si+N+Masc+Pl+Indef+Abs
+!!€ siyaabaha si+N+Masc+Pl+Def+Abs+Prox
 
 LEXICON D1
   D1_F ;
@@ -25,6 +45,20 @@ LEXICON D1
   D1_M ;
   D1_M/PlOnly ;
   D1_M/SgOnly ;
+
+!! !! Declension 1: F→M
+
+!! TODO: write quick overview of morphosyntax, morphophon
+!! -i for some nominatives. Pl is -o.
+
+!! Good amount of nouns with -ad, Fem derivational suffix.
+
+!!€gt-desc: aalad # aalad sample paradigm.
+!!€ aalad           aalad+N+Decl/1+Fem+Sg+Indef+Abs
+!!€ aaladda         aalad+N+Decl/1+Fem+Sg+Def+Abs+Prox
+!!€ aalado          aalad+N+Decl/1+Masc+Pl+Indef+Abs
+!!€ aaladaha        aalad+N+Decl/1+Masc+Pl+Def+Abs+Prox
+
 
 LEXICON D1_F
   aalad	NOUN1_F ;
@@ -116,6 +150,8 @@ LEXICON D1_F
   xigmad	NOUN1_F ;
   xukumad	NOUN1_F ;
 
+!! !! Declension 1: M, sg. only
+
 LEXICON D1_M/SgOnly
   abaal	NOUN1_M/SgOnly ;
   abaalgud	NOUN1_M/SgOnly ;
@@ -178,6 +214,8 @@ LEXICON D1_M/SgOnly
   xayawaan	NOUN1_M/SgOnly ;
   yamaarug	NOUN1_M/SgOnly ;
 
+!! !! Declension 1: M→M
+
 LEXICON D1_M
   aakhir	NOUN1_M ;
   abqaad	NOUN1_M ;
@@ -238,8 +276,15 @@ LEXICON D1_M
   xudduud	NOUN1_M ;
   xuur	NOUN1_M ;
 
+!! !! Declension 1: Masc. Pl. Only
+
 LEXICON D1_M/PlOnly
   xoolo:xool	NOUN1_M/PlOnly ;
+
+!! !! Declension 1: Fem. Sg. Only
+
+!! A fair amount of abstract things, and some collective things that probably need
+!! to be moved to collective lexica.
 
 LEXICON D1_F/SgOnly
   addoon	NOUN1_F/SgOnly ;
@@ -379,6 +424,8 @@ LEXICON D1_F/SgOnly
   xer	NOUN1_F/SgOnly ;
   xirnaan	NOUN1_F/SgOnly ;
   xuquuq	NOUN1_F/SgOnly ;
+
+!! TODO: continue documentation here.
 
 LEXICON D2
   Collective ;
