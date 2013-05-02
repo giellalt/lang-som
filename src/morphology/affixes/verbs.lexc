@@ -1272,7 +1272,7 @@ LEXICON CmpNGVerb
 LEXICON ToWords
     Verb ;
     IrregularVerb ;
-    Noun ;
+    Nouns ; ! 2.5. Changed from (nonexisting) Noun to Nouns, Trond.
     
 
 ! vim: set ft=xfst-lexc:
