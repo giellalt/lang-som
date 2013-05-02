@@ -9,7 +9,8 @@
 
 if CAN_DOCC
 
-JSP_PAGES=root-morphology.jspwiki
+JSP_PAGES=root-morphology.jspwiki \
+		 nouns-stems.jspwiki              
 # clitics-morphology.jspwiki       \
 # compounding-morphology.jspwiki   \
 # abbreviations-stems.jspwiki      \
@@ -21,7 +22,6 @@ JSP_PAGES=root-morphology.jspwiki
 # conjunctions-stems.jspwiki       \
 # interjections-stems.jspwiki      \
 # nouns-oahpa-stems.jspwiki        \
-# nouns-stems.jspwiki              \
 # numerals-stems.jspwiki           \
 # particles-stems.jspwiki          \
 # pronouns-stems.jspwiki           \
