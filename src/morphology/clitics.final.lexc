@@ -3,26 +3,26 @@ LEXICON Clitics/NG
  +Use/NG:   Clitics ;
 
 LEXICON Clitics
- +Clit/Without:{#}la'aan{#}		FINAL ;
- +Clit/Without:{#}la'aan		Fem ;
- +Clit/na:{#}na		FINAL ;
- +Clit/se:{#}se		FINAL ;
- +Clit/ba:{#}ba		FINAL ;
+ +Clit/Without:%>la'aan%>		FINAL ;
+ +Clit/Without:%>la'aan		Fem ;
+ +Clit/na:%>na		FINAL ;
+ +Clit/se:%>se		FINAL ;
+ +Clit/ba:%>ba		FINAL ;
 
  ! 39340 -> 39049
- +Clit/ee+CS:{#}{E}e   FINAL ;
+ +Clit/ee+CS:%>{E}e   FINAL ;
 
- +Foc/baa:{#}	Clit_pron_aff ;
+ +Foc/baa:%>	Clit_pron_aff ;
  FINAL ;
 
 ! Just the things that don't lead back to Clitics
 ! TODO: flag diacritic to block
 LEXICON Clitics/NoFoc
- +Clit/na:{#}na		FINAL ;
- +Clit/se:{#}se		FINAL ;
- +Clit/ba:{#}ba		FINAL ;
+ +Clit/na:%>na		FINAL ;
+ +Clit/se:%>se		FINAL ;
+ +Clit/ba:%>ba		FINAL ;
 
- +Clit/ee+CS:{#}{E}e   FINAL ;
+ +Clit/ee+CS:%>{E}e   FINAL ;
 
  FINAL ;
 
