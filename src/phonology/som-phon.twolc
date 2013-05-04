@@ -238,7 +238,6 @@ Alphabet
  %{%-w%}:0
  %{%-V%}:0
  %{%-a%}:0
- %{%-VV%}:0
  %{%-I%}:0
  
  %{y%}:y
@@ -250,8 +249,6 @@ Alphabet
  %{n%}:n
  %{ae%}
  %{d%}:d
-
- %{ATR%}:0
 
  ! Boundary markers
  ! Ideally %> for root boundary, # for word-final. Pro'lly inconsistent
@@ -497,9 +494,6 @@ Rules
 ! 
 "Declension V1: magacow / magacaabay / magacawday, shorten a"
  a:0 <=> a _ %>: w d ;
-
-"Declension V1: A deletion"
- a:0 <=> a _ %{%-VV%}:0 ;
 
 "Delete preceding a"
  a:0 <=>  _ %{%-a%}:0 ;

@@ -278,19 +278,27 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! TODO: no need for , but needs to be removed in all files
 
- {t} {o} {m} {mm} {C2} {d} {X} {ae} {e} {-e} {a} {-VV} {-V} {-I} {-w} {-a}  !!= * @CODE@
+ {o} 
+ {m}    !!= * @CODE@ in nouns: for marking m~n alternations
+ {mm}   !!= * @CODE@ in nouns: rare instance of mm ~ n 
+ {C2}   !!= * @CODE@ in nouns: consonant reduplication in noun declension 4. (yaab ~ yaabab)
+
+ {d}
+ {X}    !!= * @CODE@ in nouns: insertion of some kind in noun definiteness. TODO: twolc rule no longer exists? 
+ {ae}   !!= * @CODE@ in verbs: umlaut of a~i in some verb stems (seems restricted to specific lexemes, not productive)
+ {e}    !!= * @CODE@ in nouns: -e- variation in declension 7 (waraabe ~ waraabaha), not 100% predictable
+ {-e}   !!= * @CODE@ in nouns: delete final -e, often used in conjunction with {a}, possible room for cleaning up.
+ {a}    !!= * @CODE@ in verbs: Mostly V3B: has alternation between o ~ a. (sigo ~ sigaday) 
+ {-V}   !!= * @CODE@ in verbs: deletion of specific vowel, used only in affixes, to make stems prettier? room for cleaning
+ {-I}   !!= * @CODE@ in verbs: -i- deletions in V3A and -san adjectives
+ {-a}   !!= * @CODE@ used specifically in -sho derivations. TODO: change to rule with » ?
+
  
  {E}    !!= * @CODE@ part of cliticized ee (CS+Appos)
 
- {ea}   !!= * @CODE@ aabbe - aabbaha
- {m}    !!= * @CODE@
- {y}    !!= * @CODE@
- {ATR}  !!= * @CODE@
+ {y}    !!= * @CODE@ in verbs: -y- deletion in certain parts of V2
 
 !! Tone 
-
-
-
 
  ´´     !!= * @CODE@ 
 
