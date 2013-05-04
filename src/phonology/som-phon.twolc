@@ -213,42 +213,26 @@ Alphabet
  sh kh dh 
   
  %^V:0
- 
  %^:0
-
  %{N%}:0
  
- %{INF%}
-
  ! Morphophon
- %{o%}
-
- %{m%} ! #CODA_N
- %{mm%}:m ! block m-n 
- ! o:a
-
- %{a%}:0
-
- %{E%}:e
-
- %{e%}
- %{a%}            ! V3B with -a root deletion
- %{%-e%}:0
- %{%-a%}:0
- %{%-w%}:0
+ %{%-I%}:0
  %{%-V%}:0
  %{%-a%}:0
- %{%-I%}:0
- 
- %{y%}:y
-
+ %{%-e%}:0
  %{C2%}
- %{C3A%}
- %{C3B%}
- %{C3C%}
- %{n%}:n
+ %{E%}:e
+ %{a%}            ! V3B with -a root deletion
+ %{a%}:0
  %{ae%}
  %{d%}:d
+ %{e%}
+ %{m%}
+ %{mm%}:m 
+ %{n%}:n
+ %{o%}
+ %{y%}:y
 
  ! Boundary markers
  ! Ideally %> for root boundary, # for word-final. Pro'lly inconsistent
@@ -322,16 +306,10 @@ Definitions
 
 Rules
 
-! magac -> magicii, magucu
-! TODO: magacu, madaxiisa/madixiisa
-! magac+N+Masc+Def+Sg+Nom+Prox	magac%>%{N%}ku#
-! gac^a%{m%}´%>%{N%}ah%>íisu#
+! TODO: write tests for gacmahii / gacmihii, magacii / magicii, magucu / magacu
 
-! wuxuu
+! TODO: tests from these
 
-! for some reason adding environment for gacmihiisu blocks gacmaha 
-
-! TODO: gacmihiisu / gacmahiisu free variation 
 !! ilig+N+Masc+Pl+Def+PxSg3M+Abs+Prox       il^ik´%>%{N%}a%>híisa#
 !!   -- > ilkihiisa 
 !! walaal+N+Masc+Pl+Def+PxSg3M+Abs+Prox     walaal´´%>%{N%}a%>híisa#
@@ -346,10 +324,8 @@ Rules
 !! waxa+CS+Foc/R+Sg3M      wax%>uu#
 !!   -- > wuxuu
 
-
-!! TODO: wixiisu not working
 !! wax+N+Masc+Sg+Def+PxSg3M+Nom+Prox		wax´´%>%{N%}kíisu#
-!!   -- > wixiisu
+!!   -- > wixiisu / waxiisu
 
 
 ! getting waxuu; tone marker blocks.
@@ -429,7 +405,7 @@ Rules
 "Declension 2: -C doubling in plural"
  %{C2%}:Cz <=> :Cz PostN _ ( %>: ) PlVowels ;
 	where Cz in (b d dh l r n m)
-	PlVowels in (a o á ó) ;
+	PlVowels in (a o) ;
 
 ! TODO: This rule is currently conflicting with the next one.
 ! bangiyo
@@ -438,7 +414,7 @@ Rules
  %{C2%}:y <=> Cz PostN _ ( %>: ) PlVowels ; 
 			  i PostN _ ( %>: ) PlVowels ;
 	where Cz in (w c q x s j)
-	PlVowels in (a o á ó) ;
+	PlVowels in (a o) ;
 
 
 ! miisas, qoysas, afaf
@@ -447,7 +423,6 @@ Rules
 	where Cz in Cons
 	matched ;
 
-! TODO: nimanka not working 
 "Declension 4: Plural Partial Reduplication %{m}"
  %{C2%}:m <=> %{m%}: PostN _ %>: a ;
 
@@ -474,7 +449,7 @@ Rules
 ! guriyo
 "-y- insertion in plurals"
  0:y <=> i PostN _ VowB ;
-	where VowB in (a o u e á ó ú é) ;
+	where VowB in (a o u e) ;
 
 ! disallow yy
 "Disallow yy"
@@ -532,9 +507,6 @@ Rules
  j:g <=> _ i:0 %{%-I%}:0 ;
 
 ! {-V}:0 for concatenative v deletion set.
-
-! "V1: -w deletion"
-!  w:0 <=> _ %{%-w%}:0 ;
 
 ! "V1: b mutation"
 !  b:w <=> _ %>: Cons ;
@@ -692,8 +664,6 @@ Rules
 !! But: obd / cd / hd / qd / xd / yd
 !! Note: bt / obd
 
-! TODO: cashaoyin
-! 					casha´´>{N}oyin#
 
 "V3B: %{o%}:o finally"
  a:o <=> _ ( Tones ) %>: WordBoundary ; 
@@ -705,7 +675,7 @@ Rules
 "V3B: d dissimilation"
  d:0 <=> Vowels d: a:0 ( Tones ) %>: _ %>: ;
 
-! TODO: block with obd? 
+! TODO: write test
 "V3B: d dissimilation w/ cor" 
  d:t <=> Vowels [CorCons: - d:] [ a:0 ] ( Tones ) %>: _ %>: ;
          Vowels NonCorCons %{a%}:0 ( Tones ) %>: _ ;
@@ -720,7 +690,7 @@ Rules
 "V3B: d dissimilation 2" 
  d:t <=> Vowels _ a:0 ( Tones ) %>: d:0 %>: ; 
 
-! TODO: buqday / buqatay ; sirtay / siratay
+! TODO: write test: buqday / buqatay ; sirtay / siratay
 
 "V3B: root {a} deletion before suffixes with -d"
  %{a%}:0 <=> _ ( Tones ) %>: d: ;
@@ -736,7 +706,7 @@ Rules
   where V1 in Vowels
 	matched ;
 
-! TODO: sakhraan / sakhraamo
+! TODO: write test: sakhraan / sakhraamo
 "m->n in codas"
  Cm:n <=> _ ( Tones ) %>: [ WordBoundary | k: | t: ] ; 
  		  _ PostN [ WordBoundary | k: | t: ] ;
@@ -764,7 +734,7 @@ Rules
 
 ! Some literature may refer to this as final voicing.
 
-! TODO: xfst generating two forms, only want one: arag+V+2Sg+Ind+Pres
+! TODO: write test: arag- / ark- 
 
 "Final lenition."
  Cv:Cx <=> Vowels _ ( Tones ) %>: ( %{N%}:0 ) [ WordBoundary | :Cons ] ;
