@@ -67,21 +67,21 @@ LEXICON Nominal_PP_Fem
     @P.Gender.Fem@      _NPPPost ;
 
    LEXICON _NPPPost
-        +Decl/1+Fem+Sg:´{#}{N}       NOUN1_F_PostBoundarySg ;
+        +Decl/1+Fem+Sg:´%>{N}       NOUN1_F_PostBoundarySg ;
 
 LEXICON Nominal_PP_Masc
     PP_FINAL ;
     @P.Gender.Masc@      _NPPPostM ;
 
    LEXICON _NPPPostM
-        +Decl/1+Masc+Sg:´{#}{N}       NOUN1_M_PostBoundarySg ;
+        +Decl/1+Masc+Sg:´%>{N}       NOUN1_M_PostBoundarySg ;
 
 LEXICON Nominal_PP_Masc_Pl
     PP_FINAL ;
     @P.Gender.Masc@      _NPPPostMPl ;
 
    LEXICON _NPPPostMPl
-        +Decl/1+Masc+Pl:´´{#}{N}       NOUN1_M_PostBoundaryPl ;
+        +Decl/1+Masc+Pl:´´%>{N}       NOUN1_M_PostBoundaryPl ;
 
 
 !! !! Simple adpositions

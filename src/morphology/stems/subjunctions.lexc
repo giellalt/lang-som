@@ -132,8 +132,8 @@ ayaa+CS+Interr+Foc/L:miy Clit_prep2 ;
 
 
 LEXICON WAXA
-waxa+CS+Foc/R:wax´{#} Clit_prep_notone ;
-waxa+CS+Interr+Foc/R:max´{#} Clit_prep ; ! TODO: maxáad, not *máxaad
+waxa+CS+Foc/R:wax´%> Clit_prep_notone ;
+waxa+CS+Interr+Foc/R:max´%> Clit_prep ; ! TODO: maxáad, not *máxaad
 
 
 ! Note: according to orwin, ma + ayaa = miyaa. Should lemma be ayaa still?

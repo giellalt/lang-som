@@ -17,9 +17,9 @@
     !   No longer using these, but for reference: this is how personal markers
     !   surface
 
-            ! {đ} - 1Sg, 3SgM and 3Pl ;     realized as 0/y/d in classes
-            ! {ŧ} - 2Sg, 3SgF, 2Pl ;    realized as t/s in classes
-            ! {ñ} - 1Pl ;               realized as n in all classes
+            ! d - 1Sg, 3SgM and 3Pl ;     realized as 0/y/d in classes
+            ! t - 2Sg, 3SgF, 2Pl ;    realized as t/s in classes
+            ! n - 1Pl ;               realized as n in all classes
             !                             'special' here just in case.
 
     ! Diacritics
@@ -31,10 +31,10 @@
     !   Morpheme boundaries are sometimes recognized, or at least when
     !   they are significant to morphophonology.
 
-            ! {#} - Morpheme boundary
-            ! {##} - Ultimate word boundary
+            ! %> - Morpheme boundary
+            ! # - Ultimate word boundary
 
-    !   Probably not going to use {##} too much, but maybe it will be
+    !   Probably not going to use # too much, but maybe it will be
     !   useful when I start caring about clitics.
 
     ! Style tags
@@ -309,9 +309,9 @@ LEXICON V1_VerbMorf
     +Der/V:a       V3B_VerbMorf ;
     +Der/N:a       V3B_VerbMorf ;
 
-    ! dhig -> dhignaan, dhan -> dhammaan (dham{#}naan -> dham{#}maan)
+    ! dhig -> dhignaan, dhan -> dhammaan (dham%>naan -> dham%>maan)
     ! Derive and then just treat it as a noun stem
-    +Der/V:{#}naan    NOUN1_F/SgOnly ;
+    +Der/V:%>naan    NOUN1_F/SgOnly ;
 
     LEXICON V1_
     +V:              V1_VerbMorf_Tones ;
@@ -503,41 +503,39 @@ LEXICON V3B_DV_VerbMorf
     LEXICON V3B_DV
         +V+DV:      V3B_VerbMorf_Tones ;
 
-!!
 !!  Apply post-root tones, and other root triggers
-!!
 
 LEXICON V1_VerbMorf_Tones
-    :{#}                PostRoot ;
-    :´{#}               PostRootProg ;
+    :%>                PostRoot ;
+    :´%>               PostRootProg ;
 
-    +Inf:{#}i           FINAL ;
+    +Inf:%>i           FINAL ;
 
-    +Der/V:{#}id           NOUN1_F/SgOnly ;
-    +Der/V+Der/sho:{#}asha      NOUN6_F/SgOnly ;
+    +Der/V:%>id           NOUN1_F/SgOnly ;
+    +Der/V+Der/sho:%>asha      NOUN6_F/SgOnly ;
 
 ! oob and ow is handled further on for present.
 LEXICON V1_VerbMorf_ow_oob_Tones
-    +V:{#}                  PostRoot ;
-    +V:ob´{#}               PostRootProg ;
+    +V:%>                  PostRoot ;
+    +V:ob´%>               PostRootProg ;
 
-    +V+Inf:ob{#}i           FINAL ;
-    +Der/V+Der/sho:ob{#}asha        NOUN6_F/SgOnly ;
+    +V+Inf:ob%>i           FINAL ;
+    +Der/V+Der/sho:ob%>asha        NOUN6_F/SgOnly ;
 
 LEXICON MAGACOW_Tones
-    +V:aa{#}                  PostRoot ;
-    +V:aab´{#}               PostRootProg ;
+    +V:aa%>                  PostRoot ;
+    +V:aab´%>               PostRootProg ;
 
-    +V+Inf:aab{#}i           FINAL ;
-    +Der/V+Der/sho:aab{#}asha        NOUN6_F/SgOnly ;
+    +V+Inf:aab%>i           FINAL ;
+    +Der/V+Der/sho:aab%>asha        NOUN6_F/SgOnly ;
     +Recit:ow             FINAL ;
 
 LEXICON MUUSAW_Tones
-    +V:aa{#}                  PostRoot ;
-    +V:aab´{#}               PostRootProg ;
+    +V:aa%>                  PostRoot ;
+    +V:aab´%>               PostRootProg ;
 
-    +V+Inf:aab{#}i           FINAL ;
-    +Der/V+Der/sho:aab{#}asha        NOUN6_F/SgOnly ;
+    +V+Inf:aab%>i           FINAL ;
+    +Der/V+Der/sho:aab%>asha        NOUN6_F/SgOnly ;
     +Recit:aw             FINAL ;
 
 
@@ -547,57 +545,57 @@ LEXICON MUUSAW_Tones
 ! -dub    -dbay    -dubtay      -dbi
 ! -ran    -rmay    -rantay      -rmi
 
-! ran{-V}{#}0 -> rm
-! ran{-V}{#}i -> rmi
-! ran{-V}{#}t -> rant
+! ran{-V}%>0 -> rm
+! ran{-V}%>i -> rmi
+! ran{-V}%>t -> rant
 
 ! etc.
 
 LEXICON V1_VerbMorf_VDel_Tones
-    :{-V}{#}              PostRoot ;
-    :{-V}´{#}             PostRootProg ;
-    +Inf:{-V}{#}i         FINAL ;
-    /Der+Der/sho:{-V}{#}asha      NOUN6_F/SgOnly ;
+    :{-V}%>              PostRoot ;
+    :{-V}´%>             PostRootProg ;
+    +Inf:{-V}%>i         FINAL ;
+    /Der+Der/sho:{-V}%>asha      NOUN6_F/SgOnly ;
     ! TODO: furmasho? furanasho?
 
 ! TODO: Infinitive
 ! geli
 LEXICON V2A_VerbMorf_Tones
-    :{y}{#}         PostRoot ;
-    :´{#}n{#}       PostRootProg ;
-    ! +V+Recit:{#}       FINAL ;
+    :{y}%>         PostRoot ;
+    :´%>n%>       PostRootProg ;
+    ! +V+Recit:%>       FINAL ;
 
-    +Inf:{#}n       FINAL ;
-    ! How to work in infinitive with progressive here? +V:{#}@V2B@
+    +Inf:%>n       FINAL ;
+    ! How to work in infinitive with progressive here? +V:%>@V2B@
 
 ! sii
 LEXICON V2A_VerbMorf_Tones/SII
-    +V:{y}{#}           PostRoot ;
-    +V:´{#}n{#}         PostRootProg ;
-    ! +V+Recit:{#}       FINAL ;
+    +V:{y}%>           PostRoot ;
+    +V:´%>n%>         PostRootProg ;
+    ! +V+Recit:%>       FINAL ;
 
-    +V+Inf:{#}n         FINAL ;
+    +V+Inf:%>n         FINAL ;
 
 ! samee, buuflee
 LEXICON V2B_VerbMorf_Tones
-    +Recit:ee{#}           FINAL ;
-    :e{e}{#}           PostRoot ;
-    +Use/NG:ay{#}      PostRoot ;
+    +Recit:ee%>           FINAL ;
+    :e{e}%>           PostRoot ;
+    +Use/NG:ay%>      PostRoot ;
     ! TODO: which is normative?
-    :ey´{#}n{#}        PostRootProg ;
-    :ay´{#}n{#}        PostRootProg ;
+    :ey´%>n%>        PostRootProg ;
+    :ay´%>n%>        PostRootProg ;
 
-    +Inf:{#}n          FINAL ;
-    +Der/V+Der/sho:{#}asha     NOUN6_F/SgOnly ;
+    +Inf:%>n          FINAL ;
+    +Der/V+Der/sho:%>asha     NOUN6_F/SgOnly ;
 
 ! joogso, aammiinso, xusullayso
 ! TODO: wanaagsaneyn +Use/NG
 LEXICON V3A_VerbMorf_Tones
-    :{#}                    PostRoot ;
-    :´{#}n{#}               PostRootProg ;
+    :%>                    PostRoot ;
+    :´%>n%>               PostRootProg ;
 
-    +Inf:{#}n               FINAL ;
-    +Der/V+Der/sho:{-a}{#}asha     NOUN6_F/SgOnly ;
+    +Inf:%>n               FINAL ;
+    +Der/V+Der/sho:{-a}%>asha     NOUN6_F/SgOnly ;
 
 LEXICON V3B_VerbMorf_ADel_Tones
     :{a}                    V3B_VerbMorf_Tones ;
@@ -608,39 +606,39 @@ LEXICON V3B_VerbMorf_ADel_Tones
 ! weynow / weynaaday weynaatay
 ! TODO: imperatives?
 LEXICON V3B_VerbMorf_OW_Tones
-    +Recit:ow{#}           FINAL ;
-    :aa{#}                  PostRoot/NoImperative ;
-    :aa´{#}n{#}             PostRootProg ;
-    +Inf:{#}n               FINAL ;
+    +Recit:ow%>           FINAL ;
+    :aa%>                  PostRoot/NoImperative ;
+    :aa´%>n%>             PostRootProg ;
+    +Inf:%>n               FINAL ;
 
-    ! +Der/V:{#}{N}sha        NOUN6_F/SgOnly ;
+    ! +Der/V:%>{N}sha        NOUN6_F/SgOnly ;
 
 LEXICON V3B_VerbMorf_O_Tones
-    :a{#}                  PostRoot ;
-    :a´{#}n{#}             PostRootProg ;
-    +Inf:{#}n               FINAL ;
+    :a%>                  PostRoot ;
+    :a´%>n%>             PostRootProg ;
+    +Inf:%>n               FINAL ;
 
-    ! +Der/V:{#}{N}sha        NOUN6_F/SgOnly ;
+    ! +Der/V:%>{N}sha        NOUN6_F/SgOnly ;
 
 
 ! wado, sigo, qubo, furto
 LEXICON V3B_VerbMorf_Tones
-    :{#}                    PostRoot ;
-    :´{#}n{#}               PostRootProg ;
+    :%>                    PostRoot ;
+    :´%>n%>               PostRootProg ;
 
-    +Inf:{#}n               FINAL ;
+    +Inf:%>n               FINAL ;
 
-    +Der/V+Der/sho:{#}{N}sha        NOUN6_F/SgOnly ;
+    +Der/V+Der/sho:%>{N}sha        NOUN6_F/SgOnly ;
 
 
 ! No flag diacritic for these, they go straight to adj inflections
 LEXICON V4_IV_VerbMorf
-    +V+IV+Der/A:{#}   StatePerson ;
-    +V+IV+Der/A:{#}   FINAL ;
+    +V+IV+Der/A:%>   StatePerson ;
+    +V+IV+Der/A:%>   FINAL ;
 
 LEXICON V4_IV_VerbMorf_VDel
-    +V+IV+Der/A:{-V}{#}   StatePerson ;
-    +V+IV+Der/A:{-V}{#}   FINAL ;
+    +V+IV+Der/A:{-V}%>   StatePerson ;
+    +V+IV+Der/A:{-V}%>   FINAL ;
 
 
 LEXICON Progressive
@@ -688,8 +686,8 @@ LEXICON Imperative
 
 LEXICON Imperative_V1
     +Imper+Pl:a                         FINAL ;
-    +Imper+Neg+Sg:in´{#}                FINAL ;
-    +Imper+Neg+Pl:in´{#}a               FINAL ;
+    +Imper+Neg+Sg:in´%>                FINAL ;
+    +Imper+Neg+Pl:in´%>a               FINAL ;
 
 ! TODO: V2A Imperative
 LEXICON Imperative_V2A
@@ -700,19 +698,19 @@ LEXICON Imperative_V2A
 ! TODO: samée
 LEXICON Imperative_V2B
     +Imper+Pl:ya             FINAL   ;
-    +Imper+Neg:yn´{#}        FINAL   ;
-    +Imper+Neg:ynin´{#}a     FINAL   ;
+    +Imper+Neg:yn´%>        FINAL   ;
+    +Imper+Neg:ynin´%>a     FINAL   ;
 
 LEXICON Imperative_V3A
     +Imper+Pl:da             FINAL   ;
-    +Imper+Neg+Sg:n´{#}      FINAL   ;
-    +Imper+Neg+Pl:nin´{#}a   FINAL   ;
+    +Imper+Neg+Sg:n´%>      FINAL   ;
+    +Imper+Neg+Pl:nin´%>a   FINAL   ;
 
 LEXICON Imperative_V3B
     !@R.VCLASS.V3B@+Imper+Sg:0 FINAL ;
     +Imper+Pl:ta              FINAL   ;
-    +Imper+Neg+Sg:n´{#}       FINAL   ;
-    +Imper+Neg+Pl:nin´{#}a    FINAL   ;
+    +Imper+Neg+Sg:n´%>       FINAL   ;
+    +Imper+Neg+Pl:nin´%>a    FINAL   ;
 
 LEXICON PastNeg
     @R.VCLASS.V1@:i             PastNeg_iy ;
@@ -1014,12 +1012,12 @@ LEXICON PostReducedPerson/3Pl
 
 LEXICON PostSimplePerson
 
-    :{#}        SimpleIndicative ;
-    :{#}        SimpleOptative ;
+    :%>        SimpleIndicative ;
+    :%>        SimpleOptative ;
 
 LEXICON PostReducedPerson
-    :{#}        ReducedIndicative ;
-    ! TODO: :{#}        ReducedOptative ;
+    :%>        ReducedIndicative ;
+    ! TODO: :%>        ReducedOptative ;
 
 LEXICON SimpleIndicative
     @R.Pers.1Sg@        SimpleIndicative/Sg ;
@@ -1098,10 +1096,10 @@ LEXICON ReducedIndicative/Sg
 
 LEXICON PostRootProg
 
-    +Prog:a¨y{#}        ProgPerson ;
-    +Prog:a¨y{#}        ReducedProgPerson ;
+    +Prog:a¨y%>        ProgPerson ;
+    +Prog:a¨y%>        ReducedProgPerson ;
 
-    +Prog:a¨y{#}        ProgPastNeg ;
+    +Prog:a¨y%>        ProgPastNeg ;
 
 LEXICON ProgPerson
     +1Sg:0          PostProgPerson/1Sg ;
@@ -1137,8 +1135,8 @@ LEXICON PostProgPerson/3Pl
 
 LEXICON PostProgSimplePerson
 
-    :{#}        SimpleProgIndicative ;
-    ! :{#}      SimpleOptative ;
+    :%>        SimpleProgIndicative ;
+    ! :%>      SimpleOptative ;
 
 LEXICON SimpleProgIndicative
     @R.Pers.1Sg@        SimpleProgIndicative/Sg ;
@@ -1199,11 +1197,11 @@ LEXICON PostProgReducedPerson/3Pl
 
 LEXICON PostProgPerson
 
-    :{#}        SimpleIndicative ;
+    :%>        SimpleIndicative ;
     ! No optative in Progressive
 
 LEXICON PostProgReducedPerson
-    :{#}        ReducedProgIndicative ;
+    :%>        ReducedProgIndicative ;
 
 LEXICON ReducedProgIndicative
     @R.Pers.1Sg@        ReducedProgIndicative/Sg ;
@@ -1275,5 +1273,5 @@ LEXICON ToWords
     Nouns ; ! 2.5. Changed from (nonexisting) Noun to Nouns, Trond.
     
 
-! vim: set ft=xfst-lexc:
+! vim: set ft=lexc:
 
