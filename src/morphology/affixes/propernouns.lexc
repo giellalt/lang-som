@@ -26,16 +26,16 @@ LEXICON propfem
 +N+Prop+Fem:		propcase ;
 
 LEXICON PROP_NOUN1_F/SgOnly
-+N+Prop+Fem+Sg:´{#}{N}		NOUN1_F_PostBoundarySg ;
++N+Prop+Fem+Sg:´%>{N}		NOUN1_F_PostBoundarySg ;
 
 LEXICON PROP_NOUN1_M/SgOnly
-+N+Prop+Masc+Sg:´´{#}{N}		NOUN1_M_PostBoundarySg ;
++N+Prop+Masc+Sg:´´%>{N}		NOUN1_M_PostBoundarySg ;
 
 LEXICON PROP_PLACE_NOUN1_M/SgOnly
-+N+Prop+Plc+Masc+Sg:´´{#}{N}		NOUN1_M_PostBoundarySg ;
++N+Prop+Plc+Masc+Sg:´´%>{N}		NOUN1_M_PostBoundarySg ;
 
 LEXICON PROP_PLACE_NOUN1_F/SgOnly
-+N+Prop+Plc+Fem+Sg:´{#}{N}		NOUN1_F_PostBoundarySg ;
++N+Prop+Plc+Fem+Sg:´%>{N}		NOUN1_F_PostBoundarySg ;
 
 
 LEXICON proptag

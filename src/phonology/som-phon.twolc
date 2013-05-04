@@ -205,21 +205,19 @@
 !  that the pair transforming exists in the Alphabet
 
 Alphabet
- a b c d e f g h i j k l m n o p q r s t u v w x y z ' C ´ ´´ 
+
+ a b c d e f g h i j k l m n o p q r s t u v w x y z ' ´ ´´ 
  
- á í ú é ó ý ẃ
- ä ï ü ë ö 
+!! For ease of reduplication and treating sh as separate from l + t => sh
+
  sh kh dh 
   
- %^V:0 C
+ %^V:0
  
  %^:0
 
- %#
  %{N%}:0
  
- %{PREFIXING%}:0
- %{PROG%}:0
  %{INF%}
 
  ! Morphophon
@@ -230,9 +228,6 @@ Alphabet
  ! o:a
 
  %{a%}:0
- %{ŧ%}:t
- %{đ%}
- %{ñ%}
 
  %{E%}:e
 
@@ -257,16 +252,31 @@ Alphabet
  %{d%}:d
 
  %{ATR%}:0
- %{aá%}:0
- %{áa%}:0
- %{aa%}:0
 
  ! Boundary markers
- ! Ideally %{#%} for root boundary, %{##%} for word-final. Pro'lly inconsistent
+ ! Ideally %> for root boundary, # for word-final. Pro'lly inconsistent
  ! about this, but something worth going through and checking.
  ! For testing remove :0 to see boundaries
- %{#%}:0
- %{##%}:0 %>:0
+ %>:0
+ #:0 
+:
+
+! Literal quotes and angles must be escaped (cf morpheme boundaries further down):
+ »7     ! »
+ «7     ! «
+ %[%>%] ! >
+ %[%<%] ! <
+  
+  %-
+  ':0 !'
+
+! Morpheme boundaries:
+ «  ! Derivational prefix
+ »  ! Derivational suffix
+ %< ! Inflectional prefx
+ %> ! Inflectional suffix
+ #  ! Word boundary for both lexicalised and dynamic compounds
+ %^ ! (exceptional) soft hyphenation point
  
 
  %{t%}:t
@@ -274,89 +284,74 @@ Alphabet
  ! Trigger for t + d contraction in 3B
  ! Also ablaut blocker
  %{X%}:0
-%{e%} ;
+ %{e%} 
+
+;
 
 Sets
 
- A =      a           á           ä              ;
- E =        e           é           ë            ;
- I =          i           í           ï          ;
- O =            o           ó           ö        ;
- U =              u           ú           ü      ;
-
- Y =                y           ý                ;
-
- Vowels = A E I O U Y %{ae%} %{o%} %{e%} %{a%} ;
+ Vowels = a e i o u y %{ae%} %{o%} %{e%} %{a%} ;
  
  BackV =  a e i o u ; ! aa ee ii oo uu ;
  FrontV = ä ë ï ö ü ; ! ää ëë ïï öö üü ; 
 
  Cons = b c d f g h j k l m n p q r s t v w x y z dh %{m%} %{mm%} %{n%} kh sh ' ;
  Back = c x h ' q kh ;
- Approximants = w y ;
 
- TonalUnits = a e i o u y w á é í ó ú ý ẃ ;
- AtonalV = a e i o u y w ;
-  TonalV = á é í ó ú ý ẃ ;
- Gutteral = q kh c x h ' ;
  TDalt = q kh c x h ' d w y ;
  
 
  VceStop = b d g dh ;
  VcelStop = t k ;
 
- Dummy = %> C %{aá%} %{áa%} %{#%} %{##%} %{X%} %{N%} %{V1%} %{V2A%} %{V2B%} %{V3A%} %{V3B%} 
-			%{PREFIXING%} %{PROG%} %{INF%} %{ATR%} ; ! other verb classes here?
-
  Letters = a b c d e f g h i j k l m n o p q r s t u v w x y z ' ´
 			dh sh kh 
 			;
 
  MorphoPhon =
-			%{aá%} %{áa%} %{#%} %{##%} %{m%} %{C2%} %{C3A%} %{C3B%} %{C3C%} %{t%} %{d%} %{X%} 
-			%{ae%} %{ŧ%} %{đ%} %{ñ%} %{e%} %{n%} %{o%} %{ATR%} 
-			%{PROG%}
+			# %{m%} %{C2%} %{C3A%} %{C3B%} %{C3C%} %{t%} %{d%} %{X%} 
+			%{ae%} %{e%} %{n%} %{o%} %{ATR%} 
 			;
- Tones = %{aá%} %{áa%} %{aa%} ´ ´´ ;
+ Tones = ´ ´´ ;
 
  WordChars = Letters MorphoPhon ;
 
 Definitions
- WordBoundary = [ %{##%}:0 | %{#%}:0 | %>:0 | %>:0 ] ;
- MorphBoundary = [ %{#%}:0 ] ;
+ AllBoundaries = [ #: | %>: | %> | %>: ] ;
+ WordBoundary  = #: ;
 
- TonePattern = [ %{aá%} | %{áa%} | %{aa%} | ´ | ´´ ] ;
- PostN = TonePattern %{#%}:0 %{N%}:0 ;
+ TonePattern = [ ´ | ´´ ] ;
+ PostN = TonePattern %>: %{N%}:0 ;
 
 Rules
 
 ! magac -> magicii, magucu
 ! TODO: magacu, madaxiisa/madixiisa
-! magac+N+Masc+Def+Sg+Nom+Prox	magac%{#%}%{N%}ku%{##%}
-! gac^a%{m%}%{aá%}%{#%}%{N%}ah%{#%}íisu%{##%}
+! magac+N+Masc+Def+Sg+Nom+Prox	magac%>%{N%}ku#
+! gac^a%{m%}´%>%{N%}ah%>íisu#
 
 ! wuxuu
 
 ! for some reason adding environment for gacmihiisu blocks gacmaha 
 
 ! TODO: gacmihiisu / gacmahiisu free variation 
-!! ilig+N+Masc+Pl+Def+PxSg3M+Abs+Prox       il^ik%{aá%}%{#%}%{N%}a%{#%}híisa%{##%}
+!! ilig+N+Masc+Pl+Def+PxSg3M+Abs+Prox       il^ik´%>%{N%}a%>híisa#
 !!   -- > ilkihiisa 
-!! walaal+N+Masc+Pl+Def+PxSg3M+Abs+Prox     walaal%{áa%}%{#%}%{N%}a%{#%}híisa%{##%}
+!! walaal+N+Masc+Pl+Def+PxSg3M+Abs+Prox     walaal´´%>%{N%}a%>híisa#
 !!   -- > walaalihiisa 
 
-!! magac+N+Masc+Sg+Def+Abs+Dist				magac%{áa%}%{#%}%{N%}kii%{##%}
+!! magac+N+Masc+Sg+Def+Abs+Dist				magac´´%>%{N%}kii#
 !!   -- > magicii 
-!! magac+N+Masc+Sg+Def+Nom+Prox				magac%{áa%}%{#%}%{N%}ku%{##%}
+!! magac+N+Masc+Sg+Def+Nom+Prox				magac´´%>%{N%}ku#
 !!   -- > magucu 
-!! magac+N+Masc+Sg+Def+PxSg3F+Abs+Prox      magac%{áa%}%{#%}%{N%}kíisa%{##%}
+!! magac+N+Masc+Sg+Def+PxSg3F+Abs+Prox      magac´´%>%{N%}kíisa#
 !!   -- > magiciisa 
-!! waxa+CS+Foc/R+Sg3M      wax%{#%}uu%{##%}
+!! waxa+CS+Foc/R+Sg3M      wax%>uu#
 !!   -- > wuxuu
 
 
 !! TODO: wixiisu not working
-!! wax+N+Masc+Sg+Def+PxSg3M+Nom+Prox		wax%{áa%}%{#%}%{N%}kíisu%{##%}
+!! wax+N+Masc+Sg+Def+PxSg3M+Nom+Prox		wax´´%>%{N%}kíisu#
 !!   -- > wixiisu
 
 
@@ -364,14 +359,14 @@ Rules
 "Ablaut around back fricatives at morpheme boundaries"
  a:Cy <=> Cons _ Back ( Tones ) PostN ( k:0 ) Cy ;					!  ?
 		  Cons _ Back ( Tones ) PostN k:0 Cy ;						! magucu
-		  Cons _ Back ( Tones ) MorphBoundary :Cy ;				    ! wuxuu
+		  Cons _ Back ( Tones ) %>: :Cy ;				    ! wuxuu
 
 	where Cy in (u i)
 
 	matched ;
 
-! aabb{-e}{e}´´{#}{N}h
-! aabb{e}´´{#}{N}hii
+! aabb{-e}{e}´´>{N}h
+! aabb{e}´´>{N}hii
 
 "Ablaut in declension 7 with final vowel"
  %{e%}:Cy <=> Cons (%{%-e%}:0) _ PostN h Cy ;
@@ -384,53 +379,49 @@ Rules
 ! #LT_SH
 
 "LT -> SH part 1"
- l:s <=> _ ( Tones ) %{#%}:0 ( %{N%}:0 ) ( %{#%}:0 ) t: ;
+ l:s <=> _ ( Tones ) %>: ( %{N%}:0 ) ( %>: ) t: ;
  ! Also for V3B where there is d in triggering environment and interceding {a}
-         _ %{a%}:0 ( Tones ) %{#%}:0 ( %{N%}:0 ) ( %{#%}:0 ) d: ;
+         _ %{a%}:0 ( Tones ) %>: ( %{N%}:0 ) ( %>: ) d: ;
  ! Also for V1 where a vowel deletes
-         _ %{%-V%}:0 ( Tones ) %{#%}:0 ( %{#%}:0 ) t: ;
+         _ %{%-V%}:0 ( Tones ) %>: ( %>: ) t: ;
 
 
 "LT -> SH part 2"
- t:h <=> l: ( Tones ) %{#%}:0 ( %{N%}:0 ) ( %{#%}:0 ) _ ;
-         l: %{%-V%}:0 ( Tones ) %{#%}:0 ( %{N%}:0 ) ( %{#%}:0 ) _ ;
+ t:h <=> l: ( Tones ) %>: ( %{N%}:0 ) ( %>: ) _ ;
+         l: %{%-V%}:0 ( Tones ) %>: ( %{N%}:0 ) ( %>: ) _ ;
 
          ! In reduplicative plurals where l is reduplicated
-         l: PostN [ Vowels | Vowels+ ] %{C2%}:s ( [ %{#%}:0 | %{#%}:0+ ] ) _ ;
-         l: Tones %{N%}:0 a %{C2%}:s %{#%}:0 _ ;
+         l: PostN [ Vowels | Vowels+ ] %{C2%}:s ( [ %>: | %>:+ ] ) _ ;
+         l: Tones %{N%}:0 a %{C2%}:s %>: _ ;
 
 
 "LT -> SH part 2 for V3B"
- d:h <=> l: %{a%}:0 ( Tones ) %{#%}:0 ( %{#%}:0 ) _ ;
+ d:h <=> l: %{a%}:0 ( Tones ) %>: ( %>: ) _ ;
 
 "LT -> SH in reduplicative plurals, pt 1"
- %{C2%}:s <=> l Tones %{#%}:0 %{N%}:0 a _ %{#%}:0  t: ;
+ %{C2%}:s <=> l Tones %>: %{N%}:0 a _ %>:  t: ;
 
 "V2 {y} deletion"
- %{y%}:0 <=> _ ( Tones ) %{#%}:0+ y ;
+ %{y%}:0 <=> _ ( Tones ) %>:+ y ;
  			 y _ ;
- 			 i i _ ( Tones ) %{#%}:0+ Cons;
- 			 i _ ( Tones ) %{#%}:0+ Cons;
- 			 _ %{#%}:0 %{##%}:0 ;
-
-
-"đ realization in nouns"
- %{đ%}:d <=> _ PostN ;
+ 			 i i _ ( Tones ) %>:+ Cons;
+ 			 i _ ( Tones ) %>:+ Cons;
+ 			 _ %>: WordBoundary ;
 
 "Definite suffix -k to -g next to preceding voiced"
  k:g <=> [ :VC | Vowels ] PostN _ Vowels ;
- 		 %{C2%}:g %{#%}:0 _ Vowels ;
+ 		 %{C2%}:g %>: _ Vowels ;
 	where VC in (g y w) ;
 
 "t:0 before d h"
- CD:0 <=> d h Tones %{#%}:0 %{N%}:0 _ Vowels ;
+ CD:0 <=> d h Tones %>: %{N%}:0 _ Vowels ;
     where CD in (d t) ;
 
 "t/d alternation - definite suffix, V1"
  t:d <=> 
          ! In verbs
-         TDalt (%{%-V%}:0) ( Tones ) %{#%}:0 _ ;
-         i     (%{%-V%}:0) ( Tones ) %{#%}:0 _ ;
+         TDalt (%{%-V%}:0) ( Tones ) %>: _ ;
+         i     (%{%-V%}:0) ( Tones ) %>: _ ;
          ! Definite suffix: dhexda, xuquuqda
          TDalt  PostN _ Vowels ;
          Vowels PostN _ Vowels ;
@@ -439,7 +430,7 @@ Rules
 ! baabuurro, dukaammo, albaabbo
 ! Except words like guri/bangi, which have y.
 "Declension 2: -C doubling in plural"
- %{C2%}:Cz <=> :Cz PostN _ ( %{#%}:0 ) PlVowels ;
+ %{C2%}:Cz <=> :Cz PostN _ ( %>: ) PlVowels ;
 	where Cz in (b d dh l r n m)
 	PlVowels in (a o á ó) ;
 
@@ -447,50 +438,50 @@ Rules
 ! bangiyo
 ! TODO: guriyo, guryo
 "Declension 2: -y insertion after back sounds and fricatives; and after -i"
- %{C2%}:y <=> Cz PostN _ ( %{#%}:0 ) PlVowels ; 
-			  I PostN _ ( %{#%}:0 ) PlVowels ;
-	where Cz in (w c q x s j %{đ%})
+ %{C2%}:y <=> Cz PostN _ ( %>: ) PlVowels ; 
+			  i PostN _ ( %>: ) PlVowels ;
+	where Cz in (w c q x s j)
 	PlVowels in (a o á ó) ;
 
 
 ! miisas, qoysas, afaf
 "Declension 4: Plural Partial Reduplication"
- %{C2%}:Cz <=> Cz PostN A _ ; 
+ %{C2%}:Cz <=> Cz PostN a _ ; 
 	where Cz in Cons
 	matched ;
 
 ! TODO: nimanka not working 
 "Declension 4: Plural Partial Reduplication %{m}"
- %{C2%}:m <=> %{m%}: PostN _ %{#%}:0 A ;
+ %{C2%}:m <=> %{m%}: PostN _ %>: a ;
 
 "Declension 4: C2->n in m contexts"
- %{C2%}:n <=> :m Tones %{#%}:0 %{N%}:0 A _ %{#%}:0 [ k t n ] ;
- 			  :m ( Tones ) %{#%}:0 %{N%}:0 ( Vowels ) _ ;
+ %{C2%}:n <=> :m Tones %>: %{N%}:0 a _ %>: [ k t n ] ;
+ 			  :m ( Tones ) %>: %{N%}:0 ( Vowels ) _ ;
 
-! yar´{#}{N}{C3A}{C3B}{C3C}{#}{##}
+! yar´>{N}{C3A}{C3B}{C3C}>#
 
 !! "Declension 4: Plural Full Reduplication - pt. 1"
-!!  %{C3A%}:Cz <=> Cz WordChars WordChars ( Tones ) %{#%}:0 %{N%}:0 _ ;
+!!  %{C3A%}:Cz <=> Cz WordChars WordChars ( Tones ) %>: %{N%}:0 _ ;
 !!     matched ;
 
 !! "Declension 4: Plural Full Reduplication - pt. 2"
-!!  %{C3B%}:Cz <=> WordChars Cz WordChars ( Tones ) %{#%}:0 %{N%}:0 _ ;
+!!  %{C3B%}:Cz <=> WordChars Cz WordChars ( Tones ) %>: %{N%}:0 _ ;
 !!     where Cz in Cons
 !!     matched ;
 !! 
 !! "Declension 4: Plural Full Reduplication - pt. 3"
-!!  %{C3C%}:Cz <=> WordChars WordChars Cz ( Tones ) %{#%}:0 %{N%}:0 _ ;
+!!  %{C3C%}:Cz <=> WordChars WordChars Cz ( Tones ) %>: %{N%}:0 _ ;
 !!     where Cz in Cons
 !!     matched ;
 
 ! guriyo
 "-y- insertion in plurals"
- 0:y <=> I PostN _ VowB ;
+ 0:y <=> i PostN _ VowB ;
 	where VowB in (a o u e á ó ú é) ;
 
 ! disallow yy
 "Disallow yy"
- y:0 <=> _ [PostN | MorphBoundary] y ;
+ y:0 <=> _ [PostN | %>:] y ;
 
 
 ! Doesn't work with wuxu, where k has been deleted.
@@ -499,13 +490,13 @@ Rules
 ! Opacity?  wax+ku -> wax+u -> wux+u
 
 "Declension 6: final vowel"
-  a:o <=> _ PostN %{##%}:0 ;
+  a:o <=> _ PostN WordBoundary ;
   		  _ PostN o ;
 
 
 ! 
 "Declension V1: magacow / magacaabay / magacawday, shorten a"
- a:0 <=> a _ %{#%}:0 w d ;
+ a:0 <=> a _ %>: w d ;
 
 "Declension V1: A deletion"
  a:0 <=> a _ %{%-VV%}:0 ;
@@ -515,10 +506,10 @@ Rules
 
 ! TRY: { WordChars - O }
 
-! _ Tones MorphBoundary NOUN [WordChars - O] ; 
+! _ Tones %>: NOUN [WordChars - O] ; 
 
 !!! 
-!!! ! WordBoundary \?:WordChars
+!!! ! AllBoundaries \?:WordChars
 ! TODO: could also be i/a alternations in this declension
 
 "Declension 7: {-e} delete"
@@ -528,7 +519,7 @@ Rules
  %{e%}:a <=> _ PostN WordChars ;
 
 "Declension 7: final vowel in final position"
- %{e%}:e <=> _ PostN %{##%}:0 ;
+ %{e%}:e <=> _ PostN WordBoundary ;
 
 
 
@@ -552,35 +543,35 @@ Rules
 !  w:0 <=> _ %{%-w%}:0 ;
 
 ! "V1: b mutation"
-!  b:w <=> _ %{#%}:0 Cons ;
+!  b:w <=> _ %>: Cons ;
 
 
 ! TODO: xfst  analyzes both, generates one for tag, but not for bex
 ! bax+V+Inf, tag+V+Inf
 
 "V1: a/e umlaut before i/e"
-  %{ae%}:e <=> Cons _ Cons ( Tones ) [%{#%}:0 | %{#%}:0+ ] i ;
-               Cons _ Cons ( Tones ) [%{#%}:0 | %{#%}:0+ ] e ;
+  %{ae%}:e <=> Cons _ Cons ( Tones ) [%>: | %>:+ ] i ;
+               Cons _ Cons ( Tones ) [%>: | %>:+ ] e ;
 
 
 "V1: a/e umlaut before a"
-  %{ae%}:a <=> Cons _ Cons ( Tones ) [%{#%}:0 | %{#%}:0+ ] a ;
-               Cons _ Cons ( Tones ) [%{#%}:0 | %{#%}:0+ ] Cons ;
+  %{ae%}:a <=> Cons _ Cons ( Tones ) [%>: | %>:+ ] a ;
+               Cons _ Cons ( Tones ) [%>: | %>:+ ] Cons ;
 
 
 ! "V1: a/e umlaut before i/e"
-!   %{ae%}:a <=> Cons _ Cons ( Tones ) [%{#%}:0 | %{#%}:0+ ] [ :I | :E ] ;
+!   %{ae%}:a <=> Cons _ Cons ( Tones ) [%>: | %>:+ ] [ :I | :E ] ;
 
 ! TODO: maqallay
 "V1, D3: Vowel deletion"
  Vz:0 <=>
           ! V1 
           ! Cons+ for korodhay, etc
-          %^:0 _ Cons+ ( Tones ) %{#%}:0+ Vowels ; 
+          %^:0 _ Cons+ ( Tones ) %>:+ Vowels ; 
           ! D3
           %^: _ Cons PostN Vowels ; 
           ! With no %^ marker, but {-V} instead
-          Cons _ Cons ( Tones ) %{%-V%}:0 %{#%}:0+ [ Vowels + 0 ] ;
+          Cons _ Cons ( Tones ) %{%-V%}:0 %>:+ [ Vowels + 0 ] ;
 
 	where Vz in Vowels ;
 
@@ -600,9 +591,9 @@ Rules
     ! -dub    -dbay    -dubtay      -dbi
     ! -ran    -rmay    -rantay      -rmi
     
-    ! ran{-V}{#}0 -> rm
-    ! ran{-V}{#}i -> rmi
-    ! ran{-V}{#}t -> rant
+    ! ran{-V}>0 -> rm
+    ! ran{-V}>i -> rmi
+    ! ran{-V}>t -> rant
     
     ! TODO: seems to be optional?
     ! echo "gulaalan+V+3SgM+Ind+Past" | xsomgen
@@ -611,15 +602,15 @@ Rules
 
 ! TODO: is there a better place to do this? After twolc?
 "V1: Simplification of dhd to dh (t)"
- t:0 <=> d h ( Tones ) %{#%}:0 _ ;
+ t:0 <=> d h ( Tones ) %>: _ ;
 
 
 ! "V4: Vowel deletion without preceding marker before vowels and epsilon"
-!  Vz:0 <=> Cons _ Cons %{%-V%}:0 %{#%}:0 [Vowels + 0] ;
+!  Vz:0 <=> Cons _ Cons %{%-V%}:0 %>: [Vowels + 0] ;
 !    where Vz in Vowels ;
  
 "V1: n/m when deleted vowel results in C0n"
- n:m <=> Cons Vowels:0 _ ( Tones ) %{%-V%}:0 %{#%}:0+ [ Vowels + 0 ] ;
+ n:m <=> Cons Vowels:0 _ ( Tones ) %{%-V%}:0 %>:+ [ Vowels + 0 ] ;
 
 
  
@@ -634,16 +625,16 @@ Rules
 !!!
 
 "V2B: y-insertion"
- 0:y <=> [:Vowels - :y] ( Tones ) %{#%}:0 _ %{#%}:0 :Vowels ; 
+ 0:y <=> [:Vowels - :y] ( Tones ) %>: _ %>: :Vowels ; 
 
 "V2B: ey before consonants"
- %{e%}:y <=> _ ( Tones ) %{#%}:0 [:Cons - :Y] ; 
+ %{e%}:y <=> _ ( Tones ) %>: [:Cons - :Y] ; 
 
 "V2B: ee before y"
- %{e%}:e <=> _ ( Tones ) %{#%}:0 :Y ; 
+ %{e%}:e <=> _ ( Tones ) %>: :Y ; 
 
 "V2B: Remove e"
- %{e%}:0 <=> _ ( Tones ) %{#%}:0 :Y :Cons ;
+ %{e%}:0 <=> _ ( Tones ) %>: :Y :Cons ;
 
 
 	 ! PAST
@@ -675,10 +666,10 @@ Rules
 !! Basically, disallowed d_d, so it gets simplified to t
 !!   
 
-!!	wada{#}d{#}aa{##}		wada{#}nn{#}aa{##}
-!!  wada{#}t{#}aa{##}		wada{#}d{#}aan{##}
-!!	wada{#}d{#}aa{##}		wada{#}t{#}aan{##}
-!!  wada{#}t{#}aa{##}
+!!	wada>d>aa#		wada>nn>aa#
+!!  wada>t>aa#		wada>d>aan#
+!!	wada>d>aa#		wada>t>aan#
+!!  wada>t>aa#
 
 !!	wataa						wadannaa
 !!  wadataa						wadataan
@@ -686,10 +677,10 @@ Rules
 !!  wadataa
 
 
-!!	fura{#}d{#}aa{##}		fura{#}nn{#}aa{##}
-!!  fura{#}t{#}aa{##}		fura{#}d{#}aan{##}
-!!	fura{#}d{#}aa{##}		fura{#}t{#}aan{##}
-!!  fura{#}t{#}aa{##}
+!!	fura>d>aa#		fura>nn>aa#
+!!  fura>t>aa#		fura>d>aan#
+!!	fura>d>aa#		fura>t>aan#
+!!  fura>t>aa#
 
 !!	furtaa						furannaa
 !!  furataa						furataan
@@ -698,8 +689,8 @@ Rules
 
 !! Also another type: TODO: merge
 
-!! sigo+V+IV+1Sg+Ind+Past   sig{a}{#}d{#}ay{##}
-!! sigo+V+IV+2Sg+Ind+Past   sig{a}{#}t{#}ay{##}
+!! sigo+V+IV+1Sg+Ind+Past   sig{a}>d>ay#
+!! sigo+V+IV+2Sg+Ind+Past   sig{a}>t>ay#
 
 !! sigtay
 !! sigatay
@@ -708,82 +699,67 @@ Rules
 !! Note: bt / obd
 
 ! TODO: cashaoyin
-! 					casha´´{#}{N}oyin{##}
+! 					casha´´>{N}oyin#
 
 "V3B: %{o%}:o finally"
- a:o <=> _ ( Tones ) %{#%}:0 %{##%}:0 ; 
+ a:o <=> _ ( Tones ) %>: WordBoundary ; 
 
 "V3B: %{o%}:0 in d _ d"
- a:0 <=> Vowels CorCons: _ ( Tones ) %{#%}:0 d: ;
+ a:0 <=> Vowels CorCons: _ ( Tones ) %>: d: ;
  	where CorCons in (d r s) ;
 
 "V3B: d dissimilation"
- d:0 <=> Vowels d: a:0 ( Tones ) %{#%}:0 _ %{#%}:0 ;
+ d:0 <=> Vowels d: a:0 ( Tones ) %>: _ %>: ;
 
 ! TODO: block with obd? 
 "V3B: d dissimilation w/ cor" 
- d:t <=> Vowels [CorCons: - d:] [ a:0 ] ( Tones ) %{#%}:0 _ %{#%}:0 ;
-         Vowels NonCorCons %{a%}:0 ( Tones ) %{#%}:0 _ ;
-         Vowels s h [ a:0 %{a%}:0 ] ( Tones ) %{#%}:0 _ ;
+ d:t <=> Vowels [CorCons: - d:] [ a:0 ] ( Tones ) %>: _ %>: ;
+         Vowels NonCorCons %{a%}:0 ( Tones ) %>: _ ;
+         Vowels s h [ a:0 %{a%}:0 ] ( Tones ) %>: _ ;
          ! arrumo -> arruntay Nasal
-         Vowels :n %{a%}:0 ( Tones ) %{#%}:0 _ ;
+         Vowels :n %{a%}:0 ( Tones ) %>: _ ;
 
  	where CorCons in (d r s)
  	      NonCorCons in (b f g n q r) 
  	      ;
 
 "V3B: d dissimilation 2" 
- d:t <=> Vowels _ a:0 ( Tones ) %{#%}:0 d:0 %{#%}:0 ; 
+ d:t <=> Vowels _ a:0 ( Tones ) %>: d:0 %>: ; 
 
 ! TODO: buqday / buqatay ; sirtay / siratay
 
 "V3B: root {a} deletion before suffixes with -d"
- %{a%}:0 <=> _ ( Tones ) %{#%}:0 d: ;
+ %{a%}:0 <=> _ ( Tones ) %>: d: ;
 
 "V3B: otherwise"
- %{a%}:a <=> _ ( Tones ) %{#%}:0 t: ;
+ %{a%}:a <=> _ ( Tones ) %>: t: ;
 
  
-!!!
-!!!
-!!!  General Rules
-!!!
-!!!
-
-!!!!! !!! 
-!!!!! !!! "Vowel reduction VVY -> VY"
-!!!!! !!!  V1:0 <=> _ WordBoundary (MorphBoundary) V1 Vowels ;
-!!!!! !!!   where V1 in Vowels
-!!!!! !!! 	matched ;
-!!!!! !!! 
+!! !!  General Rules
 
 "Vowel reduction VVV -> VV"
- V1:0 <=> _ WordBoundary (MorphBoundary) V1 V1 ;
+ V1:0 <=> _ AllBoundaries (%>:) V1 V1 ;
   where V1 in Vowels
 	matched ;
 
-!!!!! !!! ! Rule should only apply to VVY -> VY and VVV -> VV, not YVV -> YV or any other
-!!!!! !!! ! permutations
-!!!!! !!! 
-
 ! TODO: sakhraan / sakhraamo
 "m->n in codas"
- Cm:n <=> _ ( Tones ) %{#%}:0 [ %{##%}:0 | k: | t: ] ; 
- 		  _ PostN [ %{##%}:0 | k: | t: ] ;
+ Cm:n <=> _ ( Tones ) %>: [ WordBoundary | k: | t: ] ; 
+ 		  _ PostN [ WordBoundary | k: | t: ] ;
  	! V3B 1P arrumo -> arruntay
- 	      _ %{a%}:0 ( Tones ) %{#%}:0 d: ;
+ 	      _ %{a%}:0 ( Tones ) %>: d: ;
  	      ! Before clitics
- 	      _ PostN %{#%}:0 [ Cons: - [ k: | g: ] ] ;
+ 	      _ PostN %>: [ Cons: - [ k: | g: ] ] ;
  	where Cm in (m %{m%}) ;
 
 "m->m in codas"
- %{m%}:m <=> _ ( Tones ) %{#%}:0 ( %{N%}:0 ) [ Vowels | :m ] ; 
+ %{m%}:m <=> _ ( Tones ) %>: ( %{N%}:0 ) [ Vowels | :m ] ; 
  		  _ PostN :m ;
 
 "Optional m doubling"
  0:m => _ %{m%}:m ;
 
-! magac%{áa%}%{#%}%{N%}ku%{##%} 
+! magac´´%>%{N%}ku# 
 "Velar deletion after Back, but avoiding digraphs"
  k:0 <=> [Letters - [d | s | k ]] Back PostN _ ;
 
@@ -797,101 +773,24 @@ Rules
 ! TODO: xfst generating two forms, only want one: arag+V+2Sg+Ind+Pres
 
 "Final lenition."
- Cv:Cx <=> Vowels _ ( Tones ) %{#%}:0 ( %{N%}:0 ) [ %{##%}:0 | :Cons ] ;
+ Cv:Cx <=> Vowels _ ( Tones ) %>: ( %{N%}:0 ) [ WordBoundary | :Cons ] ;
   where Cx in (b d g)
         Cv in (p t k)
 		matched ; 
 
 "-ee changes to -ye after other vowels"
- %{E%}:y <=> [Vowels - o] %{#%}:0 _ e ;
+ %{E%}:y <=> [Vowels - o] %>: _ e ;
 
 "-ee changes to -e after y"
- %{E%}:0 <=> y %{#%}:0 _ e ;
+ %{E%}:0 <=> y %>: _ e ;
 
 "-ee clitic deletes preceding -o"
- Cv:0 <=> _ %{#%}:0 %{E%}:e ;
+ Cv:0 <=> _ %>: %{E%}:e ;
   where Cv in ( o ) ;
 
 ! dhammaan
 "progressive nasal assimilation across morphological boundaries"
- n:m <=> m %{#%}:0 _ ;
-
-!!!
-!!!
-!!!  Tonal stuff
-!!!
-!!!
-
-
-!!!!! !!! !!!!
-!!!!! !!! !!
-!!!!! !!! !! ATR Harmony / Vowel Harmony
-!!!!! !!! !!
-!!!!! !!! !!!!!!
-!!!!! !!! 
-!!!!! !!! ! WordInternal is a mix of derivational tags, Dummies and WordChars.
-!!!!! !!! ! See above...
-!!!!! !!! 
-!!!!! !!! ! Goal for these rules:
-!!!!! !!! 
-!!!!! !!! ! GENERATION:
-!!!!! !!! !   Generate +ATR if possible, otherwise also generate -ATR
-!!!!! !!! !   	doon+V+etc -> döönää, doonaa
-!!!!! !!! !		jab+V+etc  -> jabaa
-!!!!! !!! !
-!!!!! !!! ! ANALYSIS:
-!!!!! !!! !   If a word is +ATR, accept -ATR input
-!!!!! !!! !   Do not accept +ATR word if a word is not +ATR
-!!!!! !!! !
-!!!!! !!! !		jäbää -> *
-!!!!! !!! ! 		jabaa -> jab+V+etc
-!!!!! !!! !		jabayay -> jab+V+Prog+etc
-!!!!! !!! !		jäbäyäy -> jab+V+Prog+etc
-!!!!! !!! !
-!!!!! !!! !		(Progressive seems to have ATR all the time)
-!!!!! !!! 
-!!!!! !!! ! TODO: ATR - blocks a lot of weird paths
-!!!!! !!! !!!!! "ATR"
-!!!!! !!! !!!!!   Vb:Vf => %{ATR%}:0 [WordInternal]+ _ ;
-!!!!! !!! !!!!! 			 FrontV [WordInternal]+ _ ;
-!!!!! !!! !!!!! 			_ ( [WordInternal]+ ) FrontV ;
-!!!!! !!! !!!!! 			_ ( [WordInternal]+ ) %{ATR%}:0 ;
-!!!!! !!! !!!!! 
-!!!!! !!! !!!!!  	where Vf in FrontV
-!!!!! !!! !!!!!  		  Vb in BackV
-!!!!! !!! !!!!! 	matched ;
-!!!!! !!! !!!!! 
-!!!!! !!! !!!!! 
-!!!!! !!! !!!!! "VH must match"
-!!!!! !!! !!!!!  Vb:Vb <=> _ ([WordInternal]+) Vb ;
-!!!!! !!! !!!!! 		  Vb ([WordInternal]+) _ ;
-!!!!! !!! !!!!!    where Vb in BackV ;
-!!!!! !!! 
-!!!!! !!! ! TODO: Fix these
-!!!!! !!! ! doondoon+V+Prog+1Sg+Ind+Pres	doondoonayaa
-!!!!! !!! ! doondoon+V+Prog+1Sg+Ind+Pres	doondoonäyää
-!!!!! !!! ! doondoon+V+Prog+1Sg+Ind+Pres	dööndöönayaa
-!!!!! !!! ! doondoon+V+Prog+1Sg+Ind+Pres	dööndöönäyää
-!!!!! !!! 
-!!!!! !!! ! TODO: Cases to consider
-!!!!! !!! ! 
-!!!!! !!! ! ninkïï - clitic Boundary
-!!!!! !!! ! bërbëruu - clitic Boundary
-!!!!! !!! 
-!!!!! !!! 
-!!!!! !!! !! "Remove ATR"
-!!!!! !!! !!  Tx:Ty <=> _ ;
-!!!!! !!! !! 	where Tx in (ä ë ï ö ü)
-!!!!! !!! !! 		  Ty in (a e i o u)
-!!!!! !!! !! 	matched ;
-!!!!! !!! 
-
-!!! "Remove dummies"
-!!!  Dummy:0 <=> _ ;
-
-! vim modeline
-! vim: set ts=4 sw=4 tw=0 syntax=lexc :
-
+ n:m <=> m %>: _ ;
 
 !€ primus%>s
 !€ primus00
@@ -901,3 +800,5 @@ Rules
 
 !$grís%>s
 !$grís0s
+
+! vim: set ts=4 sw=4 tw=0 syntax=lexc :

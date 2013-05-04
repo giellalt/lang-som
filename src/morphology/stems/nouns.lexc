@@ -5,6 +5,13 @@
 !! morphophonological stuff, but are split up into subgroups which correspond
 !! to gender polarity groups.
 
+!! Note that items containing ATR should mark the ATR using <¨> before the vowel
+!! or at the beginning of the stem if uncertain.
+
+!! {{{
+!!     doog:¨doog	NOUN1_M/SgOnly ;
+!! }}}
+
 LEXICON Nouns
   D1 ;
   D2 ;
@@ -214,7 +221,9 @@ LEXICON D1_M/SgOnly
   xayawaan	NOUN1_M/SgOnly ;
   yamaarug	NOUN1_M/SgOnly ;
 
-!! !! Declension 1: M→M
+!! !! Declension 1: M→M, M→F
+
+! TODO: maybe split out NOUN1_M and NOUN1_MF so they're easier to keep track of?
 
 LEXICON D1_M
   aakhir	NOUN1_M ;
@@ -425,7 +434,7 @@ LEXICON D1_F/SgOnly
   xirnaan	NOUN1_F/SgOnly ;
   xuquuq	NOUN1_F/SgOnly ;
 
-!! TODO: continue documentation here.
+!! !! Declension 2
 
 LEXICON D2
   Collective ;
@@ -435,6 +444,11 @@ LEXICON D2
   D2_M_Mass ;
   D2_M_yo ;
   D2_M_Arabic ;
+
+!! !! Declension 2: Collective
+
+!! Groups of things, -ley is a common suffix. Taged with +Coll, but available
+!! only in singular.
 
 LEXICON Collective
   aadami	NOUN2_M_Coll ;
@@ -817,6 +831,10 @@ LEXICON Collective
   yiciis	NOUN2_F_Coll ;
   yoofil	NOUN2_F_Coll ;
   ¨luul:lu¨ul	NOUN2_M_Coll ;
+
+!! !! Declension 2: M→F
+!!
+!! -yo is plural.
 
 LEXICON D2_M_yo
   aad:¨aad	NOUN2_M_yo ;
@@ -2027,6 +2045,10 @@ LEXICON D2_M_yo
   yeegtiis	NOUN2_M_yo ;
   yurasil	NOUN2_M_yo ;
 
+!! !! Declension 2: M→F
+
+!! Some consonant doubling in plurals with -o, some with -yo, no doubling.
+
 LEXICON D2_M
   aabbur	NOUN2_M ;
   aameel	NOUN2_M ;
@@ -2871,9 +2893,15 @@ LEXICON D2_M
   yeeg-bicaddaan	NOUN2_M ;
   yeeg-bijoohaar	NOUN2_M ;
 
+!! !! Declension 2: M→M - Arabic words with Somali plurals.
+
 LEXICON D2_M_Arabic
   masaajid	NOUN2_M ;
   surwaal	NOUN2_M ;
+
+!! !! Declension 2: F→F
+!!
+!! -yo plurals
 
 LEXICON D2_F
   qor	NOUN2_F ;
@@ -2882,12 +2910,22 @@ LEXICON D2_F
   subax	NOUN2_F ;
   subax:subax	NOUN2_F ;
 
+!! !! Declension 2: M→F - collectives
+
+!! TODO: these are collectives, but not marked as such and perhaps should be.
+!! but also, they have plurals. May be marked as collectives because of Orwin
+
 LEXICON D2_M_Coll
   canab	NOUN2_M ;
   dumar	NOUN2_M ;
   kalluun:kalluu{m}	NOUN2_M ;
   raashin	NOUN2_M ;
   reer	NOUN2_M ;
+
+!! !! Declension 2: M→F - Mass
+
+!! TODO: these are mass nouns, but not marked as such and perhaps should be.
+!! Plurals found in word lists, so maybe these need some special handling.
 
 LEXICON D2_M_Mass
   baraf	NOUN2_M ;
@@ -2896,9 +2934,27 @@ LEXICON D2_M_Mass
   shaah	NOUN2_M ;
   subag	NOUN2_M ;
 
+!! !! Declension 3: M→M
+!!
+!! These are fun, because plurals delete the second vowel.
+!! Ex.) gabadh -> gabdho; xubin -> xubno
+!!
+!! Note that some of these have lenis/fortis changes:
+!! Ex.) xadhig -> xadhko
+!! 
+
 LEXICON D3
   D3_M ;
   D3_F ;
+
+!! !! Declension 3: F→M
+
+! Test data:
+!!€gt-desc: gabadh # dh + d -> dh; vowel deletion
+!!€ gabadh      gabadh+N+Fem+Sg+Indef+Abs
+!!€ gabadha     gabadh+N+Fem+Sg+Def+Abs+Prox
+!!€ gabdho      gabadh+N+Masc+Pl+Indef+Abs
+!!€ gabdhaha    gabadh+N+Masc+Pl+Def+Abs+Prox
 
 LEXICON D3_F
   gabadh:gab^adh	NOUN3_F ;
@@ -2907,6 +2963,14 @@ LEXICON D3_F
   kibis:kib^is	NOUN3_F ;
   maalin:maal^i{m}	NOUN3_F ;
   xubin:xub^in	NOUN3_F ;
+
+!! !! Declension 3: M→M
+
+!!€gt-desc: xadhig # g ~ k; vowel deletion
+!!€ xadhig    xadhig+N+Masc+Sg+Indef+Abs
+!!€ xadhigga  xadhig+N+Masc+Sg+Def+Abs+Prox
+!!€ xadhko    xadhig+N+Masc+Pl+Indef+Abs
+!!€ xadhkaha  xadhig+N+Masc+Pl+Def+Abs+Prox
 
 LEXICON D3_M
   garab:gar^ab	NOUN3_M ;
@@ -2918,148 +2982,7 @@ LEXICON D3_M
   waran:war^a{m}	NOUN3_M ;
   xadhig:xadh^ik	NOUN3_M ;
 
-LEXICON ArabicLoans
-  amar:awaamiir	Arabic/PlOnly_F ;
-  axmaq:axmaqiin	Arabic/PlOnly_F ;
-  banki:bunuug	Arabic/PlOnly_F ;
-  buddi:buddiyiin	Arabic/PlOnly_F ;
-  burjiwaasi:burjiwaasiyiin	Arabic/PlOnly_F ;
-  caabid:caabidiin	Arabic/PlOnly_F ;
-  caaddil:caaddiliin	Arabic/PlOnly_F ;
-  caajis:caajisiin	Arabic/PlOnly_F ;
-  caaqil:caaqiliin	Arabic/PlOnly_F ;
-  caarif:caarifiin	Arabic/PlOnly_F ;
-  caasi:caasiyaal	Arabic/PlOnly_F ;
-  caasi:caasiyiin	Arabic/PlOnly_F ;
-  cajuus:cajuusiin	Arabic/PlOnly_F ;
-  canjeel:canjeel	Arabic/PlOnly_F ;
-  caqli:cuquul	Arabic/PlOnly_F ;
-  cariish:carshaan	Arabic/PlOnly_F ;
-  caroog:caroog	Arabic/PlOnly_F ;
-  daallin:daallimiin	Arabic/PlOnly_F ;
-  dallaal:¨dallaaliin	Arabic/PlOnly_F ;
-  darwiish:daraawish	Arabic/PlOnly_F ;
-  deris:dersaan	Arabic/PlOnly_F ;
-  diblomaasi:diblomaasiyiin	Arabic/PlOnly_F ;
-  dimoqaraadi:dimoqaraadiyiin	Arabic/PlOnly_F ;
-  faahin:faahimiin	Arabic/PlOnly_F ;
-  faajir:faajiriin	Arabic/PlOnly_F ;
-  faasid:faasidiin	Arabic/PlOnly_F ;
-  faasiq:faasiqiin	Arabic/PlOnly_F ;
-  fannaan:fannaaniin	Arabic/PlOnly_F ;
-  faqiir:fuqaraa	Arabic/PlOnly_F ;
-  farakh:furuukh	Arabic/PlOnly_F ;
-  filin:aflaam	Arabic/PlOnly_F ;
-  firaash:furshaan	Arabic/PlOnly_F ;
-  fujaan:fanaajiin	Arabic/PlOnly_F ;
-  fujaan:faraajiin	Arabic/PlOnly_F ;
-  hadaf:ahdaaf	Arabic/PlOnly_F ;
-  ikhyaar:ikhyaar	Arabic/PlOnly_F ;
-  injinyeer:injinyeeriin	Arabic/PlOnly_F ;
-  jaahid:jaahidiin	Arabic/PlOnly_F ;
-  jaahil:jaahiliin	Arabic/PlOnly_F ;
-  jaamici:jaamiciyiin	Arabic/PlOnly_F ;
-  jaasuus:jaasuusiin	Arabic/PlOnly_F ;
-  jaaxid:jaaxidiin	Arabic/PlOnly_F ;
-  jariidad:jaraa'id	Arabic/PlOnly_F ;
-  jinaw:jinaw	Arabic/PlOnly_F ;
-  khaa'in:khaa'iniin	Arabic/PlOnly_F ;
-  khashiin:khashiimiin	Arabic/PlOnly_F ;
-  khasiis:khasiisiin	Arabic/PlOnly_F ;
-  khayr:khayraad	Arabic/PlOnly_F ;
-  koryeeri:koryeeri	Arabic/PlOnly_F ;
-  kursi:karaasi	Arabic/PlOnly_F ;
-  kursi:kuraas	Arabic/PlOnly_F ;
-  laacib:laacibiin	Arabic/PlOnly_F ;
-  laaji:laaji'in	Arabic/PlOnly_F ;
-  leylisarkaal:leylisaraakiil	Arabic/PlOnly_F ;
-  macallin:macallimiin	Arabic/PlOnly_F ;
-  machad:macaahid	Arabic/PlOnly_F ;
-  madfac:madaafiic	Arabic/PlOnly_F ;
-  madiix:madaa'iix	Arabic/PlOnly_F ;
-  majlis:majaalis	Arabic/PlOnly_F ;
-  majnuun:majaaniin	Arabic/PlOnly_F ;
-  makaraan:makaraan	Arabic/PlOnly_F ;
-  malag:malaa'ig	Arabic/PlOnly_F ;
-  malloolli:malloolli	Arabic/PlOnly_F ;
-  manhaj:manaahij	Arabic/PlOnly_F ;
-  maqaasiin:maqaasiin	Arabic/PlOnly_F ;
-  marjac:maraajic	Arabic/PlOnly_F ;
-  markab:maraakiib	Arabic/PlOnly_F ;
-  markab:maraakiib	Arabic/PlOnly_M ;
-  mas'uul:mas'uuliin	Arabic/PlOnly_F ;
-  masaafir:masaafiriin	Arabic/PlOnly_F ;
-  masdar:masaadir	Arabic/PlOnly_F ;
-  mashruuc:mashaaric	Arabic/PlOnly_F ;
-  masiixi:masiixiyiin	Arabic/PlOnly_F ;
-  masjid:masaajid	Arabic/PlOnly_F ;
-  masnac:masaanic	Arabic/PlOnly_F ;
-  masrax:masrax	Arabic/PlOnly_F ;
-  matxaf:mataaxif	Arabic/PlOnly_F ;
-  maxbuus:maxaabiis	Arabic/PlOnly_F ;
-  maxmil:maxaamil	Arabic/PlOnly_F ;
-  miskiin:masaakin	Arabic/PlOnly_F ;
-  moqorof:moqorof	Arabic/PlOnly_F ;
-  mu'allif:mu'allifiin	Arabic/PlOnly_F ;
-  mu'asas:mu'asasiin	Arabic/PlOnly_F ;
-  mu'min:mu'miniin	Arabic/PlOnly_F ;
-  mu'tamir:mu'tamiriin	Arabic/PlOnly_F ;
-  mucaarad:mucaaradiin	Arabic/PlOnly_F ;
-  muftaax:mafaatiix	Arabic/PlOnly_F ;
-  muhaajir:muhaajiriin	Arabic/PlOnly_F ;
-  mujaahid:mujaahidiin	Arabic/PlOnly_F ;
-  mujarrab:mujarrabiin	Arabic/PlOnly_F ;
-  mujtahid:mujtahidiin	Arabic/PlOnly_F ;
-  mukallaf:mukallafiin	Arabic/PlOnly_F ;
-  mukhlis:mukhlisiin	Arabic/PlOnly_F ;
-  mulxid:mulxidiin	Arabic/PlOnly_F ;
-  munaafaq:munaafiqiin	Arabic/PlOnly_F ;
-  murjis:murjis	Arabic/PlOnly_F ;
-  murtad:murtadiin	Arabic/PlOnly_F ;
-  musannif:musannifiin	Arabic/PlOnly_F ;
-  mushrig:mushrikiin	Arabic/PlOnly_F ;
-  mushtaki:mushtakiyiin	Arabic/PlOnly_F ;
-  mushtari:mushtariyiin	Arabic/PlOnly_F ;
-  muslin:muslimiin	Arabic/PlOnly_F ;
-  musmaar:masaamiir	Arabic/PlOnly_F ;
-  mustacmir:mustacmiriin	Arabic/PlOnly_F ;
-  mutacallin:mutacallimiin	Arabic/PlOnly_F ;
-  muwaaddin:muwaaddiniin	Arabic/PlOnly_F ;
-  nadi:nadi	Arabic/PlOnly_F ;
-  nasraani:nasraaniyiin	Arabic/PlOnly_F ;
-  nujub:nujubiin	Arabic/PlOnly_F ;
-  qaanuun:qawaaniin	Arabic/PlOnly_F ;
-  qaatil:qaatiliin	Arabic/PlOnly_F ;
-  qabiili:qabiiliyiin	Arabic/PlOnly_F ;
-  qandi:qandi	Arabic/PlOnly_F ;
-  raasammaali:raasammaaliyiin	Arabic/PlOnly_F ;
-  rajci:rajciyiin	Arabic/PlOnly_F ;
-  saahid:saahidiin	Arabic/PlOnly_F ;
-  saanac:saanaciin	Arabic/PlOnly_F ;
-  saaqid:saaqidiin	Arabic/PlOnly_F ;
-  saaxir:saaxiriin	Arabic/PlOnly_F ;
-  saayaq:saayaqiin	Arabic/PlOnly_F ;
-  saciim:saciimiin	Arabic/PlOnly_F ;
-  sahyuuni:sahyuuniyiin	Arabic/PlOnly_F ;
-  sakhraan:sakhraamiin	Arabic/PlOnly_F ;
-  sargaal:saraakiil	Arabic/PlOnly_F ;
-  saxan:suxuun	Arabic/PlOnly_F ;
-  sayaaq:sayaaqiin	Arabic/PlOnly_F ;
-  sayruukh:sawaariik	Arabic/PlOnly_F ;
-  sharci:shuruuc	Arabic/PlOnly_F ;
-  shuuci:shuuciin	Arabic/PlOnly_F ;
-  sicir:ascaar	Arabic/PlOnly_F ;
-  sirkaal:saraakiil	Arabic/PlOnly_F ;
-  siyaasi:siyaasiin	Arabic/PlOnly_F ;
-  sunni:sunniin	Arabic/PlOnly_F ;
-  surwaal:saraawiil	Arabic/PlOnly_M ;
-  taambuug:taambuug	Arabic/PlOnly_F ;
-  takhtar:takhaatiir	Arabic/PlOnly_F ;
-  waajib:waajibaad	Arabic/PlOnly_F ;
-  waalid:waalidiin	Arabic/PlOnly_F ;
-  waddani:waddaniyiin	Arabic/PlOnly_F ;
-  waxash:wuxuush	Arabic/PlOnly_F ;
-  ximaar:ximaariin	Arabic/PlOnly_F ;
+! TODO: continue documenting here
 
 LEXICON D4
   D4_F ;
@@ -3650,7 +3573,7 @@ LEXICON D7
 LEXICON D7_M
   aabbe	NOUN7_M_MF/e ;
   aabbe:aabb	NOUN7_M ;
-  aabe:@P.STYLE.NG@aab	NOUN7_M ;
+  aabe+Use/NG:aab	NOUN7_M ;
   aabe:aab	NOUN7_M ;
   aaminlaawe:aaminlaaw	NOUN7_M ;
   abaabule	NOUN7_M_MF/e ;
@@ -4582,7 +4505,159 @@ LEXICON D7_M
   yoonge	NOUN7_M_MF/e ;
   yurqudle	NOUN7_M_MF/e ;
 
+!! !! Arabic loan plural forms
+!!
+!! These are borrowed Arabic plural forms for Arabic loans. Not really predictable
+!! but mostly taken from Qaamuuska af-Soomaaliga.
 
+!! Ex.) 
+
+!! * amar -> awaamiir
+!! * axmaq -> axmaqiin
+!! * banki -> bunuug
+
+LEXICON ArabicLoans  !!= * @CODE@ 
+  amar:awaamiir	Arabic/PlOnly_F ;
+  axmaq:axmaqiin	Arabic/PlOnly_F ;
+  banki:bunuug	Arabic/PlOnly_F ;
+  buddi:buddiyiin	Arabic/PlOnly_F ;
+  burjiwaasi:burjiwaasiyiin	Arabic/PlOnly_F ;
+  caabid:caabidiin	Arabic/PlOnly_F ;
+  caaddil:caaddiliin	Arabic/PlOnly_F ;
+  caajis:caajisiin	Arabic/PlOnly_F ;
+  caaqil:caaqiliin	Arabic/PlOnly_F ;
+  caarif:caarifiin	Arabic/PlOnly_F ;
+  caasi:caasiyaal	Arabic/PlOnly_F ;
+  caasi:caasiyiin	Arabic/PlOnly_F ;
+  cajuus:cajuusiin	Arabic/PlOnly_F ;
+  canjeel:canjeel	Arabic/PlOnly_F ;
+  caqli:cuquul	Arabic/PlOnly_F ;
+  cariish:carshaan	Arabic/PlOnly_F ;
+  caroog:caroog	Arabic/PlOnly_F ;
+  daallin:daallimiin	Arabic/PlOnly_F ;
+  dallaal:¨dallaaliin	Arabic/PlOnly_F ;
+  darwiish:daraawish	Arabic/PlOnly_F ;
+  deris:dersaan	Arabic/PlOnly_F ;
+  diblomaasi:diblomaasiyiin	Arabic/PlOnly_F ;
+  dimoqaraadi:dimoqaraadiyiin	Arabic/PlOnly_F ;
+  faahin:faahimiin	Arabic/PlOnly_F ;
+  faajir:faajiriin	Arabic/PlOnly_F ;
+  faasid:faasidiin	Arabic/PlOnly_F ;
+  faasiq:faasiqiin	Arabic/PlOnly_F ;
+  fannaan:fannaaniin	Arabic/PlOnly_F ;
+  faqiir:fuqaraa	Arabic/PlOnly_F ;
+  farakh:furuukh	Arabic/PlOnly_F ;
+  filin:aflaam	Arabic/PlOnly_F ;
+  firaash:furshaan	Arabic/PlOnly_F ;
+  fujaan:fanaajiin	Arabic/PlOnly_F ;
+  fujaan:faraajiin	Arabic/PlOnly_F ;
+  hadaf:ahdaaf	Arabic/PlOnly_F ;
+  ikhyaar:ikhyaar	Arabic/PlOnly_F ;
+  injinyeer:injinyeeriin	Arabic/PlOnly_F ;
+  jaahid:jaahidiin	Arabic/PlOnly_F ;
+  jaahil:jaahiliin	Arabic/PlOnly_F ;
+  jaamici:jaamiciyiin	Arabic/PlOnly_F ;
+  jaasuus:jaasuusiin	Arabic/PlOnly_F ;
+  jaaxid:jaaxidiin	Arabic/PlOnly_F ;
+  jariidad:jaraa'id	Arabic/PlOnly_F ;
+  jinaw:jinaw	Arabic/PlOnly_F ;
+  khaa'in:khaa'iniin	Arabic/PlOnly_F ;
+  khashiin:khashiimiin	Arabic/PlOnly_F ;
+  khasiis:khasiisiin	Arabic/PlOnly_F ;
+  khayr:khayraad	Arabic/PlOnly_F ;
+  koryeeri:koryeeri	Arabic/PlOnly_F ;
+  kursi:karaasi	Arabic/PlOnly_F ;
+  kursi:kuraas	Arabic/PlOnly_F ;
+  laacib:laacibiin	Arabic/PlOnly_F ;
+  laaji:laaji'in	Arabic/PlOnly_F ;
+  leylisarkaal:leylisaraakiil	Arabic/PlOnly_F ;
+  macallin:macallimiin	Arabic/PlOnly_F ;
+  machad:macaahid	Arabic/PlOnly_F ;
+  madfac:madaafiic	Arabic/PlOnly_F ;
+  madiix:madaa'iix	Arabic/PlOnly_F ;
+  majlis:majaalis	Arabic/PlOnly_F ;
+  majnuun:majaaniin	Arabic/PlOnly_F ;
+  makaraan:makaraan	Arabic/PlOnly_F ;
+  malag:malaa'ig	Arabic/PlOnly_F ;
+  malloolli:malloolli	Arabic/PlOnly_F ;
+  manhaj:manaahij	Arabic/PlOnly_F ;
+  maqaasiin:maqaasiin	Arabic/PlOnly_F ;
+  marjac:maraajic	Arabic/PlOnly_F ;
+  markab:maraakiib	Arabic/PlOnly_F ;
+  markab:maraakiib	Arabic/PlOnly_M ;
+  mas'uul:mas'uuliin	Arabic/PlOnly_F ;
+  masaafir:masaafiriin	Arabic/PlOnly_F ;
+  masdar:masaadir	Arabic/PlOnly_F ;
+  mashruuc:mashaaric	Arabic/PlOnly_F ;
+  masiixi:masiixiyiin	Arabic/PlOnly_F ;
+  masjid:masaajid	Arabic/PlOnly_F ;
+  masnac:masaanic	Arabic/PlOnly_F ;
+  masrax:masrax	Arabic/PlOnly_F ;
+  matxaf:mataaxif	Arabic/PlOnly_F ;
+  maxbuus:maxaabiis	Arabic/PlOnly_F ;
+  maxmil:maxaamil	Arabic/PlOnly_F ;
+  miskiin:masaakin	Arabic/PlOnly_F ;
+  moqorof:moqorof	Arabic/PlOnly_F ;
+  mu'allif:mu'allifiin	Arabic/PlOnly_F ;
+  mu'asas:mu'asasiin	Arabic/PlOnly_F ;
+  mu'min:mu'miniin	Arabic/PlOnly_F ;
+  mu'tamir:mu'tamiriin	Arabic/PlOnly_F ;
+  mucaarad:mucaaradiin	Arabic/PlOnly_F ;
+  muftaax:mafaatiix	Arabic/PlOnly_F ;
+  muhaajir:muhaajiriin	Arabic/PlOnly_F ;
+  mujaahid:mujaahidiin	Arabic/PlOnly_F ;
+  mujarrab:mujarrabiin	Arabic/PlOnly_F ;
+  mujtahid:mujtahidiin	Arabic/PlOnly_F ;
+  mukallaf:mukallafiin	Arabic/PlOnly_F ;
+  mukhlis:mukhlisiin	Arabic/PlOnly_F ;
+  mulxid:mulxidiin	Arabic/PlOnly_F ;
+  munaafaq:munaafiqiin	Arabic/PlOnly_F ;
+  murjis:murjis	Arabic/PlOnly_F ;
+  murtad:murtadiin	Arabic/PlOnly_F ;
+  musannif:musannifiin	Arabic/PlOnly_F ;
+  mushrig:mushrikiin	Arabic/PlOnly_F ;
+  mushtaki:mushtakiyiin	Arabic/PlOnly_F ;
+  mushtari:mushtariyiin	Arabic/PlOnly_F ;
+  muslin:muslimiin	Arabic/PlOnly_F ;
+  musmaar:masaamiir	Arabic/PlOnly_F ;
+  mustacmir:mustacmiriin	Arabic/PlOnly_F ;
+  mutacallin:mutacallimiin	Arabic/PlOnly_F ;
+  muwaaddin:muwaaddiniin	Arabic/PlOnly_F ;
+  nadi:nadi	Arabic/PlOnly_F ;
+  nasraani:nasraaniyiin	Arabic/PlOnly_F ;
+  nujub:nujubiin	Arabic/PlOnly_F ;
+  qaanuun:qawaaniin	Arabic/PlOnly_F ;
+  qaatil:qaatiliin	Arabic/PlOnly_F ;
+  qabiili:qabiiliyiin	Arabic/PlOnly_F ;
+  qandi:qandi	Arabic/PlOnly_F ;
+  raasammaali:raasammaaliyiin	Arabic/PlOnly_F ;
+  rajci:rajciyiin	Arabic/PlOnly_F ;
+  saahid:saahidiin	Arabic/PlOnly_F ;
+  saanac:saanaciin	Arabic/PlOnly_F ;
+  saaqid:saaqidiin	Arabic/PlOnly_F ;
+  saaxir:saaxiriin	Arabic/PlOnly_F ;
+  saayaq:saayaqiin	Arabic/PlOnly_F ;
+  saciim:saciimiin	Arabic/PlOnly_F ;
+  sahyuuni:sahyuuniyiin	Arabic/PlOnly_F ;
+  sakhraan:sakhraamiin	Arabic/PlOnly_F ;
+  sargaal:saraakiil	Arabic/PlOnly_F ;
+  saxan:suxuun	Arabic/PlOnly_F ;
+  sayaaq:sayaaqiin	Arabic/PlOnly_F ;
+  sayruukh:sawaariik	Arabic/PlOnly_F ;
+  sharci:shuruuc	Arabic/PlOnly_F ;
+  shuuci:shuuciin	Arabic/PlOnly_F ;
+  sicir:ascaar	Arabic/PlOnly_F ;
+  sirkaal:saraakiil	Arabic/PlOnly_F ;
+  siyaasi:siyaasiin	Arabic/PlOnly_F ;
+  sunni:sunniin	Arabic/PlOnly_F ;
+  surwaal:saraawiil	Arabic/PlOnly_M ;
+  taambuug:taambuug	Arabic/PlOnly_F ;
+  takhtar:takhaatiir	Arabic/PlOnly_F ;
+  waajib:waajibaad	Arabic/PlOnly_F ;
+  waalid:waalidiin	Arabic/PlOnly_F ;
+  waddani:waddaniyiin	Arabic/PlOnly_F ;
+  waxash:wuxuush	Arabic/PlOnly_F ;
+  ximaar:ximaariin	Arabic/PlOnly_F ;
 
 
 
