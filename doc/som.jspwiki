@@ -24,6 +24,7 @@ in this system in terms of the following symbols.
 (It is highly suggested to follow existing standards when adding new tags).
 
 The parts-of-speech are:
+
  *  +N +V +A +Adp +Q +Pr +Adv +CC +CS +Interj +Pron +Num 
 
 Fusional adpositions
@@ -44,6 +45,7 @@ Focus
  * +Foc/R   Focus marker __waxaa__
 
 The parts of speech are further split up into:
+
  *  +Interr +Interr/ma +Attr +Short +Cmp     
  *  +Der/sho +Pfx +PP +Sep +Com		      
  *  +Appos +Impers +Inch				      
@@ -73,7 +75,9 @@ The Usage extents are marked using the following tags:
 
 The nominals are inflected in the following case, number
 
+
 Nominals also are inflected for gender
+
 
 Nominal marked for gender undergo gender polarity changes in plural.
 We want to mark +Masc and +Fem, such that disambiguation is easier,
@@ -101,6 +105,7 @@ Are these in use?
  *  +Ord            
 
 The possession is marked as such:
+
  *  +PxSg1          
  *  +PxSg2          
  *  +PxSg3F          
@@ -114,31 +119,49 @@ The possession is marked as such:
 
 The comparative forms are:
 
+
 Numerals are classified under:
+
 
 Verb moods are:
 
+
 Verb tenses
+
 
 Verb aspects are:
 
+
 Verb personal forms are (NB: no inclusive/exclusive):
 
+
 Verbs also mark some non-agreement syntactic information
+
  *  +Red  occurs often with subjects that are focused
  *  +Rel  the verb is within a relative clause, and is also case marked.
 
 Other verb forms are
 
+
+Abbreviated words are classified with:
+
+
 Special symbols are classified with:
+
+
 The verbs are syntactically split according to transitivity:
+
+
 Special multiword units are analysed with:
+
+
 Non-dictionary words can be recognised with:
+
 
 Question and Focus particles:
 
-Semantics are classified with
 
+Semantics are classified with
 
 
 Derivations are classified under the morphophonetic form of the suffix, the
@@ -148,7 +171,9 @@ source and target part-of-speech.
 
 Syntaxy stuff, don't want to use +Acc, because this isn't relevant in nouns
 
+
 Nominal MSP
+
 
 Derivation
 
@@ -164,55 +189,61 @@ Style
 
 !!Morphophonology
 
+
 To represent phonologic variations in word forms we use the following
 symbols in the lexicon files:
 
-!Verb declensions
- * {N}   
+ * {N}    For tagging certain twolc rules as nominal-only
 
 Going to try to replace these with flag diacritics if possible.
 
-TODO: this is in use, but might be better to do a flag diacritic
-
- * {PREFIXING}   
-
 And following triggers to control variation
 
- * {PROG}		    
- * %			    
- * %>			    
+ * ! %			    
 
- * {#} {##} -      
+ * {#} # -      
 
 TODO: no need for , but needs to be removed in all files
 
- *  {t} {o} {m} {mm} {C2} {d} {X} {ae} {e} {-e} {a} {-VV} {-V} {-I} {-w} {-a}  
+ *  {m}     in nouns: for marking m~n alternations
+ *  {mm}    in nouns: rare instance of mm ~ n 
+ *  {C2}    in nouns: consonant reduplication in noun declension 4. (yaab ~ yaabab)
 
- *  {E}   part of cliticized ee (CS+Appos)
+ *  {X}     in nouns: insertion of some kind in noun definiteness. TODO: twolc rule no longer exists? 
+ *  {ae}    in verbs: umlaut of a~i in some verb stems (seems restricted to specific lexemes, not productive)
+ *  {e}     in nouns: -e- variation in declension 7 (waraabe ~ waraabaha), not 100% predictable
+ *  {-e}    in nouns: delete final -e, often used in conjunction with {a}, possible room for cleaning up.
+ *  {a}     in verbs: Mostly V3B: has alternation between o ~ a. (sigo ~ sigaday) 
+ *  {-V}    in verbs: deletion of specific vowel, used only in affixes, to make stems prettier? room for cleaning
+ *  {-I}    in verbs: -i- deletions in V3A and -san adjectives
+ *  {-a}    used specifically in -sho derivations. TODO: change to rule with » ?
 
- *  {ea}   aabbe - aabbaha
- *  {m}   
- *  {y}   
- *  {ATR}  
+
+ *  {E}     part of cliticized ee (CS+Appos)
+
+ *  {y}     in verbs: -y- deletion in certain parts of V2
 
 Tone 
 
-
-
  *  ´´      
+
+!!Symbols that need to be escaped on the lower side (towards twolc):
+ ; »7 : Literal »
+ ; «7 : Literal «
+{{{
+  %[%>%]  - Literal >
+  %[%<%]  - Literal <
+}}}
 
 We have manually optimised the structure of our lexicon using following
 flag diacritics to restrict morhpological combinatorics:
 
  * @P.NeedNoun.ON@  @D.NeedNoun.ON@  @C.NeedNoun@   
- * 											     
- * @P.STYLE.NG@								     
- * @R.STYLE.NG@								     
- * 											     
+
  * @P.VCLASS.V1@  @R.VCLASS.V1@				     
  * @P.VCLASS.V1ow@  @R.VCLASS.V1ow@			     
  * @P.VCLASS.V1ow2@  @R.VCLASS.V1ow2@			     
- * 											     
+
  * @P.VCLASS.V2A@ @R.VCLASS.V2A@				     
  * @P.VCLASS.V2B@ @R.VCLASS.V2B@				     
  * @P.VCLASS.V3A@ @R.VCLASS.V3A@				     
@@ -220,14 +251,14 @@ flag diacritics to restrict morhpological combinatorics:
  * @P.VCLASS.V3B_ADel@ @R.VCLASS.V3B_ADel@		     
  * @P.VCLASS.V3B_ADelPart@ @R.VCLASS.V3B_ADelPart@  
  * @P.VCLASS.PREFIXING@						     
- * 											     
+
  * @U.VCLASS.V1@ 								     
  * @U.VCLASS.V2A@								     
  * @U.VCLASS.V2B@								     
  * @U.VCLASS.V3A@								     
  * @U.VCLASS.V3B@								     
  * @U.VCLASS.UREFIXING@						     
- * 											     
+
  * @P.ATR.True@								     
  * @R.ATR.True@								     
 
@@ -280,10 +311,10 @@ Person flags
 
 !!!The continuation lexica
 
- * LEXICON Root    
-
 The word forms in Somali start from the lexeme roots of basic
 word classes, or optionally from prefixes:
+
+ * LEXICON Root    
 
  * Abbreviations   ;   
 
@@ -345,6 +376,13 @@ Nouns in Somali are things. They have separate paradigms depending on
 morphophonological stuff, but are split up into subgroups which correspond
 to gender polarity groups.
 
+Note that items containing ATR should mark the ATR using <¨> before the vowel
+or at the beginning of the stem if uncertain.
+
+{{{
+    doog:¨doog	NOUN1_M/SgOnly ;
+}}}
+
 
 Irregular nouns
 _il_ and _si_ are both female in singular, and have typical morphology there
@@ -383,7 +421,8 @@ Good amount of nouns with -ad, Fem derivational suffix.
 Declension 1: M, sg. only
 
 
-Declension 1: M→M
+Declension 1: M→M, M→F
+
 
 
 Declension 1: Masc. Pl. Only
@@ -395,7 +434,67 @@ A fair amount of abstract things, and some collective things that probably need
 to be moved to collective lexica.
 
 
-TODO: continue documentation here.
+Declension 2
+
+
+Declension 2: Collective
+
+Groups of things, -ley is a common suffix. Taged with +Coll, but available
+only in singular.
+
+
+Declension 2: M→F
+-yo is plural.
+
+
+Declension 2: M→F
+
+Some consonant doubling in plurals with -o, some with -yo, no doubling.
+
+
+Declension 2: M→M - Arabic words with Somali plurals.
+
+
+Declension 2: F→F
+-yo plurals
+
+
+Declension 2: M→F - collectives
+
+TODO: these are collectives, but not marked as such and perhaps should be.
+but also, they have plurals. May be marked as collectives because of Orwin
+
+
+Declension 2: M→F - Mass
+
+TODO: these are mass nouns, but not marked as such and perhaps should be.
+Plurals found in word lists, so maybe these need some special handling.
+
+
+Declension 3: M→M
+These are fun, because plurals delete the second vowel.
+Ex.) gabadh -> gabdho; xubin -> xubno
+Note that some of these have lenis/fortis changes:
+Ex.) xadhig -> xadhko
+
+
+
+Declension 3: F→M
+
+(subsequent examples are *gabadh # dh + d -> dh; vowel deletion*)
+* __gabadh__: {{gabadh+N+Fem+Sg+Indef+Abs}}
+* __gabadha__: {{gabadh+N+Fem+Sg+Def+Abs+Prox}}
+* __gabdho__: {{gabadh+N+Masc+Pl+Indef+Abs}}
+* __gabdhaha__: {{gabadh+N+Masc+Pl+Def+Abs+Prox}}
+
+
+Declension 3: M→M
+
+(subsequent examples are *xadhig # g ~ k; vowel deletion*)
+* __xadhig__: {{xadhig+N+Masc+Sg+Indef+Abs}}
+* __xadhigga__: {{xadhig+N+Masc+Sg+Def+Abs+Prox}}
+* __xadhko__: {{xadhig+N+Masc+Pl+Indef+Abs}}
+* __xadhkaha__: {{xadhig+N+Masc+Pl+Def+Abs+Prox}}
 
 
 
@@ -410,17 +509,17 @@ TODO: continue documentation here.
 
 
 
+Arabic loan plural forms
+These are borrowed Arabic plural forms for Arabic loans. Not really predictable
+but mostly taken from Qaamuuska af-Soomaaliga.
 
+Ex.) 
 
+* amar -> awaamiir
+* axmaq -> axmaqiin
+* banki -> bunuug
 
-
-
-
-
-
-
-
-
+ * LEXICON ArabicLoans   
 
 
 
