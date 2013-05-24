@@ -5,6 +5,13 @@ Nouns in Somali are things. They have separate paradigms depending on
 morphophonological stuff, but are split up into subgroups which correspond
 to gender polarity groups.
 
+Note that items containing ATR should mark the ATR using <¨> before the vowel
+or at the beginning of the stem if uncertain.
+
+{{{
+    doog:¨doog	NOUN1_M/SgOnly ;
+}}}
+
 
 Irregular nouns
 _il_ and _si_ are both female in singular, and have typical morphology there
@@ -43,7 +50,8 @@ Good amount of nouns with -ad, Fem derivational suffix.
 Declension 1: M, sg. only
 
 
-Declension 1: M→M
+Declension 1: M→M, M→F
+
 
 
 Declension 1: Masc. Pl. Only
@@ -55,7 +63,67 @@ A fair amount of abstract things, and some collective things that probably need
 to be moved to collective lexica.
 
 
-TODO: continue documentation here.
+Declension 2
+
+
+Declension 2: Collective
+
+Groups of things, -ley is a common suffix. Taged with +Coll, but available
+only in singular.
+
+
+Declension 2: M→F
+-yo is plural.
+
+
+Declension 2: M→F
+
+Some consonant doubling in plurals with -o, some with -yo, no doubling.
+
+
+Declension 2: M→M - Arabic words with Somali plurals.
+
+
+Declension 2: F→F
+-yo plurals
+
+
+Declension 2: M→F - collectives
+
+TODO: these are collectives, but not marked as such and perhaps should be.
+but also, they have plurals. May be marked as collectives because of Orwin
+
+
+Declension 2: M→F - Mass
+
+TODO: these are mass nouns, but not marked as such and perhaps should be.
+Plurals found in word lists, so maybe these need some special handling.
+
+
+Declension 3: M→M
+These are fun, because plurals delete the second vowel.
+Ex.) gabadh -> gabdho; xubin -> xubno
+Note that some of these have lenis/fortis changes:
+Ex.) xadhig -> xadhko
+
+
+
+Declension 3: F→M
+
+(subsequent examples are *gabadh # dh + d -> dh; vowel deletion*)
+* __gabadh__: {{gabadh+N+Fem+Sg+Indef+Abs}}
+* __gabadha__: {{gabadh+N+Fem+Sg+Def+Abs+Prox}}
+* __gabdho__: {{gabadh+N+Masc+Pl+Indef+Abs}}
+* __gabdhaha__: {{gabadh+N+Masc+Pl+Def+Abs+Prox}}
+
+
+Declension 3: M→M
+
+(subsequent examples are *xadhig # g ~ k; vowel deletion*)
+* __xadhig__: {{xadhig+N+Masc+Sg+Indef+Abs}}
+* __xadhigga__: {{xadhig+N+Masc+Sg+Def+Abs+Prox}}
+* __xadhko__: {{xadhig+N+Masc+Pl+Indef+Abs}}
+* __xadhkaha__: {{xadhig+N+Masc+Pl+Def+Abs+Prox}}
 
 
 
@@ -70,17 +138,17 @@ TODO: continue documentation here.
 
 
 
+Arabic loan plural forms
+These are borrowed Arabic plural forms for Arabic loans. Not really predictable
+but mostly taken from Qaamuuska af-Soomaaliga.
 
+Ex.) 
 
+* amar -> awaamiir
+* axmaq -> axmaqiin
+* banki -> bunuug
 
-
-
-
-
-
-
-
-
+ * LEXICON ArabicLoans   
 
 
 
