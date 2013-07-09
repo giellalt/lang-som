@@ -1,0 +1,15 @@
+
+
+This is a grammatical analyser for Somali.
+
+It is large enough to be useful, but has yet to
+be put into use in practical projects. It was
+written by Ryan Joahnson.
+
+
+
+-----
+
+The structure of the source file catalogue is the same for all
+the languages, it is documented [here|../../infra/infraremake/NewinfraCatalogues.html].
+
