@@ -1,6 +1,6 @@
-!! =================================== !
-!! The Somali morphophonological/twolc rules file !
-!! =================================== !
+
+!! !!!The Somali morphophonological/twolc rules file 
+
 
  ! ------------------------- !
  !  Morphophonological notes !
@@ -330,6 +330,7 @@ Rules
 
 ! getting waxuu; tone marker blocks.
 "Ablaut around back fricatives at morpheme boundaries"
+!! __@RULENAME@__  
  a:Cy <=> Cons _ Back ( Tones ) PostN ( k:0 ) Cy ;					!  ?
 		  Cons _ Back ( Tones ) PostN k:0 Cy ;						! magucu
 		  Cons _ Back ( Tones ) %>: :Cy ;				    ! wuxuu
@@ -342,6 +343,7 @@ Rules
 ! aabb{e}´´>{N}hii
 
 "Ablaut in declension 7 with final vowel"
+!! __@RULENAME@__  
  %{e%}:Cy <=> Cons (%{%-e%}:0) _ PostN h Cy ;
 
 	where Cy in (u i)
@@ -352,6 +354,7 @@ Rules
 ! #LT_SH
 
 "LT -> SH part 1"
+!! __@RULENAME@__  
  l:s <=> _ ( Tones ) %>: ( %{N%}:0 ) ( %>: ) t: ;
  ! Also for V3B where there is d in triggering environment and interceding {a}
          _ %{a%}:0 ( Tones ) %>: ( %{N%}:0 ) ( %>: ) d: ;
@@ -360,6 +363,7 @@ Rules
 
 
 "LT -> SH part 2"
+!! __@RULENAME@__  
  t:h <=> l: ( Tones ) %>: ( %{N%}:0 ) ( %>: ) _ ;
          l: %{%-V%}:0 ( Tones ) %>: ( %{N%}:0 ) ( %>: ) _ ;
 
@@ -369,12 +373,15 @@ Rules
 
 
 "LT -> SH part 2 for V3B"
+!! __@RULENAME@__  
  d:h <=> l: %{a%}:0 ( Tones ) %>: ( %>: ) _ ;
 
 "LT -> SH in reduplicative plurals, pt 1"
+!! __@RULENAME@__  
  %{C2%}:s <=> l Tones %>: %{N%}:0 a _ %>:  t: ;
 
 "V2 {y} deletion"
+!! __@RULENAME@__  
  %{y%}:0 <=> _ ( Tones ) %>:+ y ;
  			 y _ ;
  			 i i _ ( Tones ) %>:+ Cons;
@@ -382,15 +389,18 @@ Rules
  			 _ %>: WordBoundary ;
 
 "Definite suffix -k to -g next to preceding voiced"
+!! __@RULENAME@__  
  k:g <=> [ :VC | Vowels ] PostN _ Vowels ;
  		 %{C2%}:g %>: _ Vowels ;
 	where VC in (g y w) ;
 
 "t:0 before d h"
+!! __@RULENAME@__  
  CD:0 <=> d h Tones %>: %{N%}:0 _ Vowels ;
     where CD in (d t) ;
 
 "t/d alternation - definite suffix, V1"
+!! __@RULENAME@__  
  t:d <=> 
          ! In verbs
          TDalt (%{%-V%}:0) ( Tones ) %>: _ ;
@@ -403,6 +413,7 @@ Rules
 ! baabuurro, dukaammo, albaabbo
 ! Except words like guri/bangi, which have y.
 "Declension 2: -C doubling in plural"
+!! __@RULENAME@__  
  %{C2%}:Cz <=> :Cz PostN _ ( %>: ) PlVowels ;
 	where Cz in (b d dh l r n m)
 	PlVowels in (a o) ;
@@ -411,6 +422,7 @@ Rules
 ! bangiyo
 ! TODO: guriyo, guryo
 "Declension 2: -y insertion after back sounds and fricatives; and after -i"
+!! __@RULENAME@__  
  %{C2%}:y <=> Cz PostN _ ( %>: ) PlVowels ; 
 			  i PostN _ ( %>: ) PlVowels ;
 	where Cz in (w c q x s j)
@@ -419,14 +431,17 @@ Rules
 
 ! miisas, qoysas, afaf
 "Declension 4: Plural Partial Reduplication"
+!! __@RULENAME@__  
  %{C2%}:Cz <=> Cz PostN a _ ; 
 	where Cz in Cons
 	matched ;
 
 "Declension 4: Plural Partial Reduplication %{m}"
+!! __@RULENAME@__  
  %{C2%}:m <=> %{m%}: PostN _ %>: a ;
 
 "Declension 4: C2->n in m contexts"
+!! __@RULENAME@__  
  %{C2%}:n <=> :m Tones %>: %{N%}:0 a _ %>: [ k t n ] ;
  			  :m ( Tones ) %>: %{N%}:0 ( Vowels ) _ ;
 
@@ -448,11 +463,13 @@ Rules
 
 ! guriyo
 "-y- insertion in plurals"
+!! __@RULENAME@__  
  0:y <=> i PostN _ VowB ;
 	where VowB in (a o u e) ;
 
 ! disallow yy
 "Disallow yy"
+!! __@RULENAME@__  
  y:0 <=> _ [PostN | %>:] y ;
 
 
@@ -462,15 +479,18 @@ Rules
 ! Opacity?  wax+ku -> wax+u -> wux+u
 
 "Declension 6: final vowel"
+!! __@RULENAME@__  
   a:o <=> _ PostN WordBoundary ;
   		  _ PostN o ;
 
 
 ! 
 "Declension V1: magacow / magacaabay / magacawday, shorten a"
+!! __@RULENAME@__  
  a:0 <=> a _ %>: w d ;
 
 "Delete preceding a"
+!! __@RULENAME@__  
  a:0 <=>  _ %{%-a%}:0 ;
 
 ! TRY: { WordChars - O }
@@ -482,12 +502,15 @@ Rules
 ! TODO: could also be i/a alternations in this declension
 
 "Declension 7: {-e} delete"
+!! __@RULENAME@__  
  e:0 <=> _ %{%-e%}:0 ;
 
 "Declension 7: final vowel"
+!! __@RULENAME@__  
  %{e%}:a <=> _ PostN WordChars ;
 
 "Declension 7: final vowel in final position"
+!! __@RULENAME@__  
  %{e%}:e <=> _ PostN WordBoundary ;
 
 
@@ -501,9 +524,11 @@ Rules
 ! {-I}:0 for derivations
 
 "V2A -> V3B derivations, delete -i"
+!! __@RULENAME@__  
  i:0 <=> Vowels Cons _ %{%-I%}:0 ;
 
 "V2A -> V3B derivations, depalatization"
+!! __@RULENAME@__  
  j:g <=> _ i:0 %{%-I%}:0 ;
 
 ! {-V}:0 for concatenative v deletion set.
@@ -516,11 +541,13 @@ Rules
 ! bax+V+Inf, tag+V+Inf
 
 "V1: a/e umlaut before i/e"
+!! __@RULENAME@__  
   %{ae%}:e <=> Cons _ Cons ( Tones ) [%>: | %>:+ ] i ;
                Cons _ Cons ( Tones ) [%>: | %>:+ ] e ;
 
 
 "V1: a/e umlaut before a"
+!! __@RULENAME@__  
   %{ae%}:a <=> Cons _ Cons ( Tones ) [%>: | %>:+ ] a ;
                Cons _ Cons ( Tones ) [%>: | %>:+ ] Cons ;
 
@@ -530,6 +557,7 @@ Rules
 
 ! TODO: maqallay
 "V1, D3: Vowel deletion"
+!! __@RULENAME@__  
  Vz:0 <=>
           ! V1 
           ! Cons+ for korodhay, etc
@@ -568,6 +596,7 @@ Rules
 
 ! TODO: is there a better place to do this? After twolc?
 "V1: Simplification of dhd to dh (t)"
+!! __@RULENAME@__  
  t:0 <=> d h ( Tones ) %>: _ ;
 
 
@@ -576,6 +605,7 @@ Rules
 !    where Vz in Vowels ;
  
 "V1: n/m when deleted vowel results in C0n"
+!! __@RULENAME@__  
  n:m <=> Cons Vowels:0 _ ( Tones ) %{%-V%}:0 %>:+ [ Vowels + 0 ] ;
 
 
@@ -591,15 +621,19 @@ Rules
 !!!
 
 "V2B: y-insertion"
+!! __@RULENAME@__  
  0:y <=> [:Vowels - :y] ( Tones ) %>: _ %>: :Vowels ; 
 
 "V2B: ey before consonants"
+!! __@RULENAME@__  
  %{e%}:y <=> _ ( Tones ) %>: [:Cons - :Y] ; 
 
 "V2B: ee before y"
+!! __@RULENAME@__  
  %{e%}:e <=> _ ( Tones ) %>: :Y ; 
 
 "V2B: Remove e"
+!! __@RULENAME@__  
  %{e%}:0 <=> _ ( Tones ) %>: :Y :Cons ;
 
 
@@ -666,13 +700,16 @@ Rules
 
 
 "V3B: %{o%}:o finally"
+!! __@RULENAME@__  
  a:o <=> _ ( Tones ) %>: WordBoundary ; 
 
 "V3B: %{o%}:0 in d _ d"
+!! __@RULENAME@__  
  a:0 <=> Vowels CorCons: _ ( Tones ) %>: d: ;
  	where CorCons in (d r s) ;
 
 "V3B: d dissimilation"
+!! __@RULENAME@__  
  d:0 <=> Vowels d: a:0 ( Tones ) %>: _ %>: ;
 
 ! TODO: write test
@@ -693,21 +730,25 @@ Rules
 ! TODO: write test: buqday / buqatay ; sirtay / siratay
 
 "V3B: root {a} deletion before suffixes with -d"
+!! __@RULENAME@__  
  %{a%}:0 <=> _ ( Tones ) %>: d: ;
 
 "V3B: otherwise"
+!! __@RULENAME@__  
  %{a%}:a <=> _ ( Tones ) %>: t: ;
 
  
 !! !!  General Rules
 
 "Vowel reduction VVV -> VV"
+!! __@RULENAME@__  
  V1:0 <=> _ AllBoundaries (%>:) V1 V1 ;
   where V1 in Vowels
 	matched ;
 
 ! TODO: write test: sakhraan / sakhraamo
 "m->n in codas"
+!! __@RULENAME@__  
  Cm:n <=> _ ( Tones ) %>: [ WordBoundary | k: | t: ] ; 
  		  _ PostN [ WordBoundary | k: | t: ] ;
  	! V3B 1P arrumo -> arruntay
@@ -717,14 +758,17 @@ Rules
  	where Cm in (m %{m%}) ;
 
 "m->m in codas"
+!! __@RULENAME@__  
  %{m%}:m <=> _ ( Tones ) %>: ( %{N%}:0 ) [ Vowels | :m ] ; 
  		  _ PostN :m ;
 
 "Optional m doubling"
+!! __@RULENAME@__  
  0:m => _ %{m%}:m ;
 
 ! magac´´%>%{N%}ku# 
 "Velar deletion after Back, but avoiding digraphs"
+!! __@RULENAME@__  
  k:0 <=> [Letters - [d | s | k ]] Back PostN _ ;
 
 ! Final lenition appears to be final voicing because of the orthography.
@@ -737,23 +781,28 @@ Rules
 ! TODO: write test: arag- / ark- 
 
 "Final lenition."
+!! __@RULENAME@__  
  Cv:Cx <=> Vowels _ ( Tones ) %>: ( %{N%}:0 ) [ WordBoundary | :Cons ] ;
   where Cx in (b d g)
         Cv in (p t k)
 		matched ; 
 
 "-ee changes to -ye after other vowels"
+!! __@RULENAME@__  
  %{E%}:y <=> [Vowels - o] %>: _ e ;
 
 "-ee changes to -e after y"
+!! __@RULENAME@__  
  %{E%}:0 <=> y %>: _ e ;
 
 "-ee clitic deletes preceding -o"
+!! __@RULENAME@__  
  Cv:0 <=> _ %>: %{E%}:e ;
   where Cv in ( o ) ;
 
 ! dhammaan
 "progressive nasal assimilation across morphological boundaries"
+!! __@RULENAME@__  
  n:m <=> m %>: _ ;
 
 !€ primus%>s
