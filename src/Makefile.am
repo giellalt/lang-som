@@ -96,7 +96,7 @@ endif
 # Apertium-related language-specific targets - modify to suit each language:
 analyser-mt-%.und.hfst: analyser-mt-%.tmp.hfst
 	$(AM_V_GEN)$(HFST_INVERT) $< \
-		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
+		| $(HFST_FST2FST) $(HFST_FLAGS) -t -o $@
 
 # # Copied from SMA. 
 # # analyser-%.hfst: analyser-%.tmp.hfst \
