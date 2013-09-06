@@ -24,3 +24,7 @@ Most monologues :-)
 * [The tags that are in use|https://victorio.uit.no/langtech/trunk/langs/som/src/morphology/root.lexc]   
 * [A list of morphological tags|../common/MorphologicalTags.html]
 
+!!!Using the analysers
+
+* In the terminal: analyse words by writing ''usom'', generate with ''dsom''
+* For more info, see [How to use the morphological parsers|../../tools/docu-sme-manual.html]
