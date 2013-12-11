@@ -2,19 +2,23 @@
 <hfstspeller dtdversion="1.0" hfstversion="3">
   <info>
     <locale>so</locale>
-    <title>Giellatekno/divvun/UiT morphological analyser-based speller (Somali)</title>
-    <description>
+    <title>Giellatekno/Divvun/UiT fst-based speller for Somali</title>
+    <description>This is an fst-based speller for Somali. It is based
+    on the normative subset of the morphological analyser for Somali.
+    The source code can be found at:
+    https://victorio.uit.no/langtech/trunk/langs/som/
+    License: GPL3+.
     </description>
     <version vcsrev="GT_REVISION">GT_VERSION</version>
     <date>DATE</date>
-    <producer>giellatekno/divvun/UiT contributors</producer>
-    <contact email="bugs@divvun.no" 
+    <producer>giellatekno/Divvun/UiT contributors</producer>
+    <contact email="feedback@divvun.no" 
         website="http://divvun.no"/>
   </info>
   <acceptor type="general" id="acceptor.default.hfst">
-    <title>Giellatekno/divvun/UiT dictionary Somali</title>
+    <title>Giellatekno/Divvun/UiT dictionary Somali</title>
     <description>
-        Giellatekno/divvun/UiT dictionary for Somali compiled for HFST.
+        Giellatekno/Divvun/UiT dictionary for Somali compiled for HFST.
     </description>
   </acceptor>
   <errmodel id="errmodel.default.hfst">
