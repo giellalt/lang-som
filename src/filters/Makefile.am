@@ -107,6 +107,6 @@ GT_FILTER_TARGETS+=remove-tones.xfst \
 
 endif
 
-include $(top_srcdir)/am-shared/filters-include.am
+include $(top_srcdir)/am-shared/src-filters-dir-include.am
 
 # vim: set ft=automake:
