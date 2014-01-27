@@ -250,7 +250,7 @@ Alphabet
  ! For testing remove :0 to see boundaries
  %>:0
  #:0 
-:
+ %:
 
 ! Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  »7     ! »
