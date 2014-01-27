@@ -390,13 +390,15 @@ but, have varying irregular masculine plural forms.
 
  * LEXICON IrregNouns   
 
-(subsequent examples are *il # Irregular tests*)
+
+__il # Irregular tests examples:__
 * __il__: {{il+N+Fem+Sg+Indef+Abs}}
 * __isha__: {{il+N+Fem+Sg+Def+Abs+Prox}}
 * __indho__: {{il+N+Masc+Pl+Indef+Abs}}
 * __indhaha__: {{il+N+Masc+Pl+Def+Abs+Prox}}
 
-(subsequent examples are *il # Irregular tests*)
+
+__il # Irregular tests examples:__
 * __si__: {{si+N+Fem+Sg+Indef+Abs}}
 * __sida__: {{si+N+Fem+Sg+Def+Abs+Prox}}
 * __siyaabo__: {{si+N+Masc+Pl+Indef+Abs}}
@@ -410,7 +412,8 @@ TODO: write quick overview of morphosyntax, morphophon
 
 Good amount of nouns with -ad, Fem derivational suffix.
 
-(subsequent examples are *aalad # aalad sample paradigm.*)
+
+__aalad # aalad sample paradigm. examples:__
 * __aalad__: {{aalad+N+Decl/1+Fem+Sg+Indef+Abs}}
 * __aaladda__: {{aalad+N+Decl/1+Fem+Sg+Def+Abs+Prox}}
 * __aalado__: {{aalad+N+Decl/1+Masc+Pl+Indef+Abs}}
@@ -481,7 +484,8 @@ Ex.) xadhig -> xadhko
 
 Declension 3: F→M
 
-(subsequent examples are *gabadh # dh + d -> dh; vowel deletion*)
+
+__gabadh # dh + d -> dh; vowel deletion examples:__
 * __gabadh__: {{gabadh+N+Fem+Sg+Indef+Abs}}
 * __gabadha__: {{gabadh+N+Fem+Sg+Def+Abs+Prox}}
 * __gabdho__: {{gabadh+N+Masc+Pl+Indef+Abs}}
@@ -490,7 +494,8 @@ Declension 3: F→M
 
 Declension 3: M→M
 
-(subsequent examples are *xadhig # g ~ k; vowel deletion*)
+
+__xadhig # g ~ k; vowel deletion examples:__
 * __xadhig__: {{xadhig+N+Masc+Sg+Indef+Abs}}
 * __xadhigga__: {{xadhig+N+Masc+Sg+Def+Abs+Prox}}
 * __xadhko__: {{xadhig+N+Masc+Pl+Indef+Abs}}
@@ -523,7 +528,8 @@ Ex.)
 
 
 
-(subsequent examples are *guri # Odd-syllable test*)
+
+__guri # Odd-syllable test examples:__
 * __guri__: {{guri+N+Masc+Sg+Indef+Nom}}
 
 
