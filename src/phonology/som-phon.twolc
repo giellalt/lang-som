@@ -250,7 +250,7 @@ Alphabet
  ! For testing remove :0 to see boundaries
  %>:0
  #:0 
- %:
+! %:
 
 ! Literal quotes and angles must be escaped (cf morpheme boundaries further down):
  »7     ! »
@@ -643,15 +643,15 @@ Rules
 
 "V2B: ey before consonants"
 !! __ @RULENAME@ __  
- %{e%}:y <=> _ ( Tones ) %>: [:Cons - :Y] ; 
+ %{e%}:y <=> _ ( Tones ) %>: [:Cons - :y] ; 
 
 "V2B: ee before y"
 !! __ @RULENAME@ __  
- %{e%}:e <=> _ ( Tones ) %>: :Y ; 
+ %{e%}:e <=> _ ( Tones ) %>: :y ; 
 
 "V2B: Remove e"
 !! __ @RULENAME@ __  
- %{e%}:0 <=> _ ( Tones ) %>: :Y :Cons ;
+ %{e%}:0 <=> _ ( Tones ) %>: :y :Cons ;
 
 
      ! PAST
