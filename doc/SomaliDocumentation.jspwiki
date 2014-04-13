@@ -8,7 +8,7 @@
   / [affixes|https://victorio.uit.no/langtech/trunk/langs/som/src/morphology/affixes/] 
   / [syntax|https://victorio.uit.no/langtech/trunk/langs/som/src/syntax] 
   / [twolc|https://victorio.uit.no/langtech/trunk/langs/som/src/phonology/som-phon.twolc]   
-  / [yaml|https://victorio.uit.no/langtech/trunk/langs/som/test/src/morphology/]
+  / [yaml|https://victorio.uit.no/langtech/trunk/langs/som/test/src/gt-norm-yamls/]
 * Generation of: [paradigms|http://giellatekno.uit.no/cgi/p-som.eng.html]
   / [text|http://giellatekno.uit.no/cgi/d-som.eng.html]
 
