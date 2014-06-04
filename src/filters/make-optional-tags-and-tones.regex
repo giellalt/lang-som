@@ -52,7 +52,7 @@
 0 (<-) %+Decl%/7,
 
 0 (<-) %#,
-0 (<-) %+Use%/Sub,
+0 (<-) %+Err%/Sub,
 0 (<-) %+Use%/Circ,
 0 (<-) %+Use%/CircN,
 0 (<-) %+Use%/%-Spell,
