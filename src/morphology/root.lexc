@@ -79,7 +79,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! The Usage extents are marked using the following tags:
 
- +Use/Sub   
+ +Err/Sub   
  +Use/-Spell 
  +Use/-Spell
  +Use/Circ
@@ -90,7 +90,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
  +Use/NG
  +Use/Ped
  +Use/SpellNoSugg+Prog
- +Use/Sub
+ +Err/Sub
 
 !! The nominals are inflected in the following case, number
 
