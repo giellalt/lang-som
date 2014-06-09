@@ -30,7 +30,18 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! The parts-of-speech are:
 
- +N +V +A +Adp +Q +Pr +Adv +CC +CS +Interj +Pron +Num !!= * @CODE@
+ +N	      !!= * @CODE@
++V	      !!= * @CODE@
++A	      !!= * @CODE@
++Adp      !!= * @CODE@
++Q	      !!= * @CODE@
++Pr	      !!= * @CODE@
++Adv      !!= * @CODE@
++CC	      !!= * @CODE@
++CS	      !!= * @CODE@
++Interj   !!= * @CODE@
++Pron     !!= * @CODE@
++Num !!= * @CODE@
 
 !! Fusional adpositions
 
@@ -51,11 +62,22 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! The parts of speech are further split up into:
 
- +Interr +Interr/ma +Attr +Short +Cmp     !!= * @CODE@
- +Der/sho +Pfx +PP +Sep +Com		      !!= * @CODE@
- +Appos +Impers +Inch				      !!= * @CODE@
+ +Interr
++Interr/ma
++Attr
++Short
++Cmp     !!= * @CODE@
+ +Der/sho
++Pfx
++PP
++Sep
++Com		      !!= * @CODE@
+ +Appos
++Impers
++Inch				      !!= * @CODE@
 
- +Recit +Restr						      !!= * @CODE@
+ +Recit
++Restr						      !!= * @CODE@
 
  +Pers								      !!= * @CODE@
  +Dem								      !!= * @CODE@
@@ -70,7 +92,9 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !! Verb and noun declensions for the analysers that want to know about that
 
  +Decl/1 				      !!= * @CODE@
- +Decl/2 +Decl/2A +Decl/2B    !!= * @CODE@
+ +Decl/2
++Decl/2A
++Decl/2B    !!= * @CODE@
  +Decl/3 +Decl/3A +Decl/3B    !!= * @CODE@
  +Decl/4 				      !!= * @CODE@
  +Decl/5				      !!= * @CODE@
@@ -94,13 +118,21 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! The nominals are inflected in the following case, number
 
- +Sg +Pl
- +Nom +Abs +Gen
- +Indef +Def
+
++Sg
++Pl
+
++Nom
++Abs
++Gen
+
++Indef
++Def
 
 !! Nominals also are inflected for gender
 
- +Masc +Fem
+ +Masc 
+ +Fem
 
 !! Nominal marked for gender undergo gender polarity changes in plural.
 !! We want to mark +Masc and +Fem, such that disambiguation is easier,
@@ -147,35 +179,42 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! The comparative forms are:
 
- +Comp
- +Superl
+ +Comp	   !!= * @CODE@
+ +Superl   !!= * @CODE@
 
 !! Numerals are classified under:
 
- +Attr 
- +Card
- +Ord 
+ +Attr   !!= * @CODE@ 
+ +Card   !!= * @CODE@
+ +Ord    !!= * @CODE@
 
 !! Verb moods are:
 
- +Ind
- +Opt
- +Imprt
- +Neg
- +Imper
+ +Ind     !!= * @CODE@
+ +Opt     !!= * @CODE@
+ +Imprt   !!= * @CODE@
+ +Neg     !!= * @CODE@
+ +Imper   !!= * @CODE@
 
 !! Verb tenses
 
- +Past
- +Pres
+ +Past   !!= * @CODE@
+ +Pres   !!= * @CODE@
 
 !! Verb aspects are:
 
- +Prog
+ +Prog   !!= * @CODE@
 
 !! Verb personal forms are (NB: no inclusive/exclusive):
 
- +1Sg +2Sg +3Sg +3SgM +3SgF +1Pl +2Pl +3Pl
++1Sg    !!= * @CODE@
++2Sg    !!= * @CODE@
++3Sg    !!= * @CODE@
++3SgM   !!= * @CODE@
++3SgF   !!= * @CODE@
++1Pl    !!= * @CODE@
++2Pl    !!= * @CODE@
++3Pl    !!= * @CODE@
 
 !! Verbs also mark some non-agreement syntactic information
 
@@ -184,80 +223,102 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! Other verb forms are
 
- +Inf +Ger +ConNeg +ConNegII +Neg +ImprtII +PrsPrc +PrfPrc +Sup +VGen +VAbess
+
++Inf	    !!= * @CODE@
++Ger	    !!= * @CODE@
++ConNeg	    !!= * @CODE@
++ConNegII   !!= * @CODE@
++Neg	    !!= * @CODE@
++ImprtII    !!= * @CODE@
++PrsPrc	    !!= * @CODE@
++PrfPrc	    !!= * @CODE@
++Sup	    !!= * @CODE@
++VGen	    !!= * @CODE@
++VAbess	    !!= * @CODE@
  
 !! Abbreviated words are classified with:
 
- +ABBR +ACR 
+ +ABBR   !!= * @CODE@
+ +ACR   !!= * @CODE@
 
 !! Special symbols are classified with:
 
- +CLB +PUNCT +LEFT +RIGHT
+ +CLB    !!= * @CODE@
++PUNCT   !!= * @CODE@
++LEFT    !!= * @CODE@
++RIGHT   !!= * @CODE@
 
 !! The verbs are syntactically split according to transitivity:
 
- +TV +IV +DV
++TV   !!= * @CODE@
++IV   !!= * @CODE@
++DV   !!= * @CODE@
 
 !! Special multiword units are analysed with:
 
- +Multi
+ +Multi   !!= * @CODE@
 
 !! Non-dictionary words can be recognised with:
 
- +Guess
- ^GUESSNOUNROOT
+ +Guess   !!= * @CODE@
+ ^GUESSNOUNROOT   !!= * @CODE@
 
 !! Question and Focus particles:
 
- +Qst +Foc
+ +Qst   !!= * @CODE@
+ +Foc  !!= * @CODE@
 
 !! Semantics are classified with
 
- +Plc
+ +Plc   !!= * @CODE@
 
 !! Derivations are classified under the morphophonetic form of the suffix, the
 !! source and target part-of-speech.
 
- +V→N +V→V +V→A
- +Der/xxx
+ +V→N 	    !!= * @CODE@
+ +V→V 	    !!= * @CODE@
+ +V→A	    !!= * @CODE@
+ +Der/xxx   !!= * @CODE@
 
- +Incl +Excl
- 
+ +Incl 	    !!= * @CODE@
+ +Excl	    !!= * @CODE@
+
 !! Syntaxy stuff, don't want to use +Acc, because this isn't relevant in nouns
 
- +Subj +Obj
+ +Subj   !!= * @CODE@
+ +Obj  !!= * @CODE@
  
 !! Nominal MSP
 
- +Rel
+ +Rel  !!= * @CODE@
  
 !! Derivation
  
- +Der/A
- +Der/V
- +Der/N
+ +Der/A  !!= * @CODE@
+ +Der/V  !!= * @CODE@
+ +Der/N  !!= * @CODE@
  
 !! Clitics
  
- +Clit/ba
- +Clit/se
- +Clit/na
- +Clit/oo
+ +Clit/ba  !!= * @CODE@
+ +Clit/se  !!= * @CODE@
+ +Clit/na  !!= * @CODE@
+ +Clit/oo  !!= * @CODE@
  
- +Clit/CS
- +Clit/Without
+ +Clit/CS  !!= * @CODE@
+ +Clit/Without  !!= * @CODE@
  
 !! Style 
  
- +Use/NG
+ +Use/NG  !!= * @CODE@
  
- +Sty 
- +Sty/TODO
- +Sty/i
- +Sty/D
- +Sty/R
+ +Sty   !!= * @CODE@
+ +Sty/TODO  !!= * @CODE@
+ +Sty/i  !!= * @CODE@
+ +Sty/D  !!= * @CODE@
+ +Sty/R  !!= * @CODE@
  
- +TODO
+ +TODO  !!= * @CODE@
 
 !! !!Morphophonology
 
