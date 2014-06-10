@@ -25,7 +25,18 @@ in this system in terms of the following symbols.
 
 The parts-of-speech are:
 
- *  +N +V +A +Adp +Q +Pr +Adv +CC +CS +Interj +Pron +Num 
+ *  +N	      
+ * +V	      
+ * +A	      
+ * +Adp      
+ * +Q	      
+ * +Pr	      
+ * +Adv      
+ * +CC	      
+ * +CS	      
+ * +Interj   
+ * +Pron     
+ * +Num 
 
 Fusional adpositions
 
@@ -46,11 +57,11 @@ Focus
 
 The parts of speech are further split up into:
 
- *  +Interr +Interr/ma +Attr +Short +Cmp     
- *  +Der/sho +Pfx +PP +Sep +Com		      
- *  +Appos +Impers +Inch				      
+ * +Cmp     
+ * +Com		      
+ * +Inch				      
 
- *  +Recit +Restr						      
+ * +Restr						      
 
  *  +Pers								      
  *  +Dem								      
@@ -63,7 +74,7 @@ The parts of speech are further split up into:
 Verb and noun declensions for the analysers that want to know about that
 
  *  +Decl/1 				      
- *  +Decl/2 +Decl/2A +Decl/2B    
+ * +Decl/2B    
  *  +Decl/3 +Decl/3A +Decl/3B    
  *  +Decl/4 				      
  *  +Decl/5				      
@@ -74,6 +85,9 @@ The Usage extents are marked using the following tags:
 
 
 The nominals are inflected in the following case, number
+
+
+
 
 
 Nominals also are inflected for gender
@@ -119,21 +133,42 @@ The possession is marked as such:
 
 The comparative forms are:
 
+ *  +Comp	   
+ *  +Superl   
 
 Numerals are classified under:
 
+ *  +Attr    
+ *  +Card   
+ *  +Ord    
 
 Verb moods are:
 
+ *  +Ind     
+ *  +Opt     
+ *  +Imprt   
+ *  +Neg     
+ *  +Imper   
 
 Verb tenses
 
+ *  +Past   
+ *  +Pres   
 
 Verb aspects are:
 
+ *  +Prog   
 
 Verb personal forms are (NB: no inclusive/exclusive):
 
+ * +1Sg    
+ * +2Sg    
+ * +3Sg    
+ * +3SgM   
+ * +3SgF   
+ * +1Pl    
+ * +2Pl    
+ * +3Pl    
 
 Verbs also mark some non-agreement syntactic information
 
@@ -143,49 +178,101 @@ Verbs also mark some non-agreement syntactic information
 Other verb forms are
 
 
+ * +Inf	    
+ * +Ger	    
+ * +ConNeg	    
+ * +ConNegII   
+ * +Neg	    
+ * +ImprtII    
+ * +PrsPrc	    
+ * +PrfPrc	    
+ * +Sup	    
+ * +VGen	    
+ * +VAbess	    
+
 Abbreviated words are classified with:
 
+ *  +ABBR   
+ *  +ACR   
 
 Special symbols are classified with:
 
+ *  +CLB    
+ * +PUNCT   
+ * +LEFT    
+ * +RIGHT   
 
 The verbs are syntactically split according to transitivity:
 
+ * +TV   
+ * +IV   
+ * +DV   
 
 Special multiword units are analysed with:
 
+ *  +Multi   
 
 Non-dictionary words can be recognised with:
 
+ *  +Guess   
+ *  ^GUESSNOUNROOT   
 
 Question and Focus particles:
 
+ *  +Qst   
+ *  +Foc  
 
 Semantics are classified with
 
+ *  +Plc   
 
 Derivations are classified under the morphophonetic form of the suffix, the
 source and target part-of-speech.
 
+ *  +V→N 	    
+ *  +V→V 	    
+ *  +V→A	    
+ *  +Der/xxx   
 
+ *  +Incl 	    
+ *  +Excl	    
 
 Syntaxy stuff, don't want to use +Acc, because this isn't relevant in nouns
 
+ *  +Subj   
+ *  +Obj  
 
 Nominal MSP
 
+ *  +Rel  
 
 Derivation
 
+ *  +Der/A  
+ *  +Der/V  
+ *  +Der/N  
 
 Clitics
 
+ *  +Clit/ba  
+ *  +Clit/se  
+ *  +Clit/na  
+ *  +Clit/oo  
 
+ *  +Clit/CS  
+ *  +Clit/Without  
 
 Style 
 
+ *  +Use/NG  
 
+ *  +Sty   
+ *  +Sty/TODO  
+ *  +Sty/i  
+ *  +Sty/D  
+ *  +Sty/R  
 
+ *  +TODO  
 
 !!Morphophonology
 
