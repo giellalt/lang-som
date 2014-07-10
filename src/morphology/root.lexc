@@ -13,11 +13,11 @@
 ! giellatekno@hum.uit.no or divvun@samediggi.no
 
 ! ========================================================================== !
-!!                     !!!Somali morphological analyser                      
+!!                     !!!Somali morphological analyser
 ! ========================================================================== !
 
 !! INTRODUCTION TO THE MORPHOLOGICAL ANALYSER OF SOMALI.
- 
+
 
 Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
@@ -86,7 +86,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
  +Acr								      !!= * @CODE@
  +Abstr								      !!= * @CODE@
  +Abbr
- +Prop 
+ +Prop
 
 
 !! Verb and noun declensions for the analysers that want to know about that
@@ -103,8 +103,8 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! The Usage extents are marked using the following tags:
 
- +Err/Sub   
- +Use/-Spell 
+ +Err/Sub
+ +Use/-Spell
  +Use/-Spell
  +Use/Circ
  +Use/CircN
@@ -131,7 +131,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! Nominals also are inflected for gender
 
- +Masc 
+ +Masc
  +Fem
 
 !! Nominal marked for gender undergo gender polarity changes in plural.
@@ -168,12 +168,12 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
  +PxSg1          !!= * @CODE@
  +PxSg2          !!= * @CODE@
- +PxSg3F         !!= * @CODE@ 
+ +PxSg3F         !!= * @CODE@
  +PxSg3M         !!= * @CODE@
 
  +PxPl1          !!= * @CODE@
- +PxPl1Incl      !!= * @CODE@    
- +PxPl1Excl      !!= * @CODE@    
+ +PxPl1Incl      !!= * @CODE@
+ +PxPl1Excl      !!= * @CODE@
  +PxPl2          !!= * @CODE@
  +PxPl3          !!= * @CODE@
 
@@ -184,7 +184,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! Numerals are classified under:
 
- +Attr   !!= * @CODE@ 
+ +Attr   !!= * @CODE@
  +Card   !!= * @CODE@
  +Ord    !!= * @CODE@
 
@@ -235,7 +235,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 +Sup	    !!= * @CODE@
 +VGen	    !!= * @CODE@
 +VAbess	    !!= * @CODE@
- 
+
 !! Abbreviated words are classified with:
 
  +ABBR   !!= * @CODE@
@@ -287,37 +287,37 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
  +Subj   !!= * @CODE@
  +Obj  !!= * @CODE@
- 
+
 !! Nominal MSP
 
  +Rel  !!= * @CODE@
- 
+
 !! Derivation
- 
+
  +Der/A  !!= * @CODE@
  +Der/V  !!= * @CODE@
  +Der/N  !!= * @CODE@
- 
+
 !! Clitics
- 
+
  +Clit/ba  !!= * @CODE@
  +Clit/se  !!= * @CODE@
  +Clit/na  !!= * @CODE@
  +Clit/oo  !!= * @CODE@
- 
+
  +Clit/CS  !!= * @CODE@
  +Clit/Without  !!= * @CODE@
- 
-!! Style 
- 
+
+!! Style
+
  +Use/NG  !!= * @CODE@
- 
+
  +Sty   !!= * @CODE@
  +Sty/TODO  !!= * @CODE@
  +Sty/i  !!= * @CODE@
  +Sty/D  !!= * @CODE@
  +Sty/R  !!= * @CODE@
- 
+
  +TODO  !!= * @CODE@
 
 !! !!Morphophonology
@@ -339,29 +339,29 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! TODO: no need for , but needs to be removed in all files
 
- {o} 
+ {o}
  {m}    !!= * @CODE@ in nouns: for marking m~n alternations
- {mm}   !!= * @CODE@ in nouns: rare instance of mm ~ n 
+ {mm}   !!= * @CODE@ in nouns: rare instance of mm ~ n
  {C2}   !!= * @CODE@ in nouns: consonant reduplication in noun declension 4. (yaab ~ yaabab)
 
  {d}
- {X}    !!= * @CODE@ in nouns: insertion of some kind in noun definiteness. TODO: twolc rule no longer exists? 
+ {X}    !!= * @CODE@ in nouns: insertion of some kind in noun definiteness. TODO: twolc rule no longer exists?
  {ae}   !!= * @CODE@ in verbs: umlaut of a~i in some verb stems (seems restricted to specific lexemes, not productive)
  {e}    !!= * @CODE@ in nouns: -e- variation in declension 7 (waraabe ~ waraabaha), not 100% predictable
  {-e}   !!= * @CODE@ in nouns: delete final -e, often used in conjunction with {a}, possible room for cleaning up.
- {a}    !!= * @CODE@ in verbs: Mostly V3B: has alternation between o ~ a. (sigo ~ sigaday) 
+ {a}    !!= * @CODE@ in verbs: Mostly V3B: has alternation between o ~ a. (sigo ~ sigaday)
  {-V}   !!= * @CODE@ in verbs: deletion of specific vowel, used only in affixes, to make stems prettier? room for cleaning
  {-I}   !!= * @CODE@ in verbs: -i- deletions in V3A and -san adjectives
  {-a}   !!= * @CODE@ used specifically in -sho derivations. TODO: change to rule with » ?
 
- 
+
  {E}    !!= * @CODE@ part of cliticized ee (CS+Appos)
 
  {y}    !!= * @CODE@ in verbs: -y- deletion in certain parts of V2
 
-!! Tone 
+!! Tone
 
- ´´     !!= * @CODE@ 
+ ´´     !!= * @CODE@
 
         !! !!Symbols that need to be escaped on the lower side (towards twolc):
  »7     !!≈ ; @CODE@ : Literal »
@@ -456,7 +456,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 ! TODO: remove_usage_tags.regex
 !   - this may be covered by other regexes, but need to check that i am
 !   defining all usage tags in the right place-- also, which analyser/generator is
-!   this intended for? 
+!   this intended for?
 
 ! TODO: can make a local copy of these and override the parents.
 
@@ -472,7 +472,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !! The word forms in Somali start from the lexeme roots of basic
 !! word classes, or optionally from prefixes:
 
-LEXICON Root   !!= * @CODE@ 
+LEXICON Root   !!= * @CODE@
 
 Abbreviations   ;   !!= * @CODE@
 
@@ -483,10 +483,10 @@ Numerals        ;   !!= * @CODE@
 
 Pronouns        ;   !!= * @CODE@
 
-Verbs           ;   !!= * @CODE@ 
+Verbs           ;   !!= * @CODE@
 IrregularVerbs  ;   !!= * @CODE@
 VerbalPrefixes  ;   !!= * @CODE@ Certain VP elements often get combined with the verbs in writing.
-Adjectives      ;   !!= * @CODE@ Some have verb morphology, and some view them to just be a 4th declension of verbs. 
+Adjectives      ;   !!= * @CODE@ Some have verb morphology, and some view them to just be a 4th declension of verbs.
 
 Adverbs         ;   !!= * @CODE@
 
@@ -499,8 +499,8 @@ Interjections   ;   !!= * @CODE@
 Punctuation     ;   !!= * @CODE@
 
 !! !!The following are coming from som-lex.txt
-!! * IrregularAdjective ; 
-!! * Prefixes  ;		    
+!! * IrregularAdjective ;
+!! * Prefixes  ;
 
 LEXICON FINAL_NG !!= * @CODE@ just adds the +Use/NG tag to lower ##
  +Use/NG:# 	# ;
@@ -539,12 +539,12 @@ LEXICON SemiReducedPerson  !!= * @CODE@
 
 ! LEXICON GUESSNOUN
 !  < (
-!      ( [ b | x | n | t | s | d | g | r ]* ) 
-!        [ a | i | o | u | e ] 
 !      ( [ b | x | n | t | s | d | g | r ]* )
-!    )* 
+!        [ a | i | o | u | e ]
+!      ( [ b | x | n | t | s | d | g | r ]* )
+!    )*
 !    [{ga} | {gii} | {gu} | {ha} | {ka}] > TAG ;
-! 
+!
 
 ! LEXICON TAG
 !  +N+Guess: # ;
