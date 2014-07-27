@@ -1,5 +1,5 @@
 
-                    !!!Somali morphological analyser                      
+                    !!!Somali morphological analyser
 
 INTRODUCTION TO THE MORPHOLOGICAL ANALYSER OF SOMALI.
 
@@ -111,12 +111,12 @@ The possession is marked as such:
 
  *  +PxSg1          
  *  +PxSg2          
- *  +PxSg3F          
+ *  +PxSg3F         
  *  +PxSg3M         
 
  *  +PxPl1          
- *  +PxPl1Incl          
- *  +PxPl1Excl          
+ *  +PxPl1Incl      
+ *  +PxPl1Excl      
  *  +PxPl2          
  *  +PxPl3          
 
@@ -127,7 +127,7 @@ The comparative forms are:
 
 Numerals are classified under:
 
- *  +Attr    
+ *  +Attr   
  *  +Card   
  *  +Ord    
 
@@ -251,7 +251,7 @@ Clitics
  *  +Clit/CS  
  *  +Clit/Without  
 
-Style 
+Style
 
  *  +Use/NG  
 
@@ -282,14 +282,14 @@ And following triggers to control variation
 TODO: no need for , but needs to be removed in all files
 
  *  {m}     in nouns: for marking m~n alternations
- *  {mm}    in nouns: rare instance of mm ~ n 
+ *  {mm}    in nouns: rare instance of mm ~ n
  *  {C2}    in nouns: consonant reduplication in noun declension 4. (yaab ~ yaabab)
 
- *  {X}     in nouns: insertion of some kind in noun definiteness. TODO: twolc rule no longer exists? 
+ *  {X}     in nouns: insertion of some kind in noun definiteness. TODO: twolc rule no longer exists?
  *  {ae}    in verbs: umlaut of a~i in some verb stems (seems restricted to specific lexemes, not productive)
  *  {e}     in nouns: -e- variation in declension 7 (waraabe ~ waraabaha), not 100% predictable
  *  {-e}    in nouns: delete final -e, often used in conjunction with {a}, possible room for cleaning up.
- *  {a}     in verbs: Mostly V3B: has alternation between o ~ a. (sigo ~ sigaday) 
+ *  {a}     in verbs: Mostly V3B: has alternation between o ~ a. (sigo ~ sigaday)
  *  {-V}    in verbs: deletion of specific vowel, used only in affixes, to make stems prettier? room for cleaning
  *  {-I}    in verbs: -i- deletions in V3A and -san adjectives
  *  {-a}    used specifically in -sho derivations. TODO: change to rule with » ?
@@ -299,9 +299,9 @@ TODO: no need for , but needs to be removed in all files
 
  *  {y}     in verbs: -y- deletion in certain parts of V2
 
-Tone 
+Tone
 
- *  ´´      
+ *  ´´     
 
 !!Symbols that need to be escaped on the lower side (towards twolc):
  ; »7 : Literal »
@@ -390,7 +390,7 @@ Person flags
 The word forms in Somali start from the lexeme roots of basic
 word classes, or optionally from prefixes:
 
- * LEXICON Root    
+ * LEXICON Root   
 
  * Abbreviations   ;   
 
@@ -401,10 +401,10 @@ word classes, or optionally from prefixes:
 
  * Pronouns        ;   
 
- * Verbs           ;    
+ * Verbs           ;   
  * IrregularVerbs  ;   
  * VerbalPrefixes  ;    Certain VP elements often get combined with the verbs in writing.
- * Adjectives      ;    Some have verb morphology, and some view them to just be a 4th declension of verbs. 
+ * Adjectives      ;    Some have verb morphology, and some view them to just be a 4th declension of verbs.
 
  * Adverbs         ;   
 
@@ -417,8 +417,8 @@ word classes, or optionally from prefixes:
  * Punctuation     ;   
 
 !!The following are coming from som-lex.txt
-* IrregularAdjective ; 
-* Prefixes  ;		    
+* IrregularAdjective ;
+* Prefixes  ;
 
  * LEXICON FINAL_NG  just adds the +Use/NG tag to lower ##
 
