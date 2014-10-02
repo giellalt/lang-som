@@ -19,6 +19,7 @@
 ############## BEGIN: Local modifications ###############
 # List any local filter regex files here:
 GIELLA_FILTER_LOCAL_REGEX_SRCS=\
+			   downcase_UCletters.regex \
 			   remove-tones.regex \
 			   remove-declension-tags.regex \
 			   make-optional-tags-and-tones.regex
