@@ -62,10 +62,13 @@ endif # CAN_HFST
 # # Copied from SMA. 
 # # analyser-%.hfst: analyser-%.tmp.hfst \
 # # 				filters/remove-test-tags.hfst
-# # 	$(AM_V_GEN)$(HFST_COMPOSE) $(HFST_FLAGS) -F -2 $< \
-# # 			-1 filters/remove-test-tags.hfst \
-# # 		| $(HFST_INVERT) \
-# # 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
+# #	$(AM_V_RGX2FST)$(PRINTF) "\
+# #				@\"filters/remove-test-tags.hfst\" \
+# #			.o. @\"$<\" \
+# #			;" \
+# #		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
+# # 	| $(HFST_INVERT) \
+# # 	> $@
 # 
 # analyser-%.xfst: analyser-%.tmp.xfst \
 # 				filters/remove-tones.xfst
@@ -78,10 +81,12 @@ endif # CAN_HFST
 # # # And also for the generator:
 # # generator-%.hfst: generator-%.tmp.hfst \
 # # 				filters/remove-test-tags.hfst
-# # 	$(AM_V_GEN)$(HFST_COMPOSE) $(HFST_FLAGS) -F $< \
-# # 			-1 filters/remove-test-tags.hfst \
-# # 		| $(HFST_FST2FST) $(HFST_FLAGS) -f olw -o $@
-# # 
+# #	$(AM_V_RGX2FST)$(PRINTF) "\
+# #				@\"filters/remove-test-tags.hfst\" \
+# #			.o. @\"$<\" \
+# #			;" \
+# #		| $(HFST_REGEXP2FST) $(HFST_FLAGS) -S --xerox-composition=ON \
+# # 	> $@
 # 
 # generator-%.xfst: generator-%.tmp.xfst \
 # 				filters/remove-tones.xfst
