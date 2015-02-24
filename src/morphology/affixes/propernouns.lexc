@@ -32,10 +32,10 @@ LEXICON PROP_NOUN1_M/SgOnly
 +N+Prop+Masc+Sg:´´%>{N}		NOUN1_M_PostBoundarySg ;
 
 LEXICON PROP_PLACE_NOUN1_M/SgOnly
-+N+Prop+Plc+Masc+Sg:´´%>{N}		NOUN1_M_PostBoundarySg ;
++N+Prop+Sem/Plc+Masc+Sg:´´%>{N}		NOUN1_M_PostBoundarySg ;
 
 LEXICON PROP_PLACE_NOUN1_F/SgOnly
-+N+Prop+Plc+Fem+Sg:´%>{N}		NOUN1_F_PostBoundarySg ;
++N+Prop+Sem/Plc+Fem+Sg:´%>{N}		NOUN1_F_PostBoundarySg ;
 
 
 LEXICON proptag
@@ -48,9 +48,9 @@ LEXICON propcase
 +Sg+Gen: Clitics ;
 
 LEXICON placetag 
-+N+Prop+Plc+Sg+Nom: Clitics ;
-+N+Prop+Plc+Sg+Abs: Clitics ;
-+N+Prop+Plc+Sg+Gen: Clitics ;
-+N+Prop+Plc+Sg+Voc:ow Clitics ;
++N+Prop+Sem/Plc+Sg+Nom: Clitics ;
++N+Prop+Sem/Plc+Sg+Abs: Clitics ;
++N+Prop+Sem/Plc+Sg+Gen: Clitics ;
++N+Prop+Sem/Plc+Sg+Voc:ow Clitics ;
 
 ! vim: set ft=xfst-lexc:
