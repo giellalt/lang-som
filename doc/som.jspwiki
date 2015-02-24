@@ -240,7 +240,7 @@ source and target part-of-speech.
 Syntaxy stuff, don't want to use +Acc, because this isn't relevant in nouns
 
  *  +Subj   
- *  +Obj  
+ *  +Sem/Obj  
 
 Nominal MSP
 

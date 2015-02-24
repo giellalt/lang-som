@@ -199,7 +199,7 @@
     !
     !  ### Sample Paradigms for testing
     !
-    !  #### Regular - Head+Obj/Clause+Subj
+    !  #### Regular - Head+Sem/Obj/Clause+Subj
     !                   Pres            Past            ProgPres            ProgPast
     !
     !       1Sg         keen0aa         keen0ay         keénay0aa           keénay0ay
@@ -210,7 +210,7 @@
     !       2Pl         keentaan        keenteen        keénaysaan          keénayseen
     !       3Pl         keen0aan        keen0een        keénay0aan          keénay0een
 
-    !  #### Relative - Head+Obj/Clause+Obj
+    !  #### Relative - Head+Sem/Obj/Clause+Sem/Obj
     !
     !       1Sg         keen0ó          keen0aý         keénay0ó            keénay0aý
     !       2Sg         keentó          keentaý         keénaysó            keénaysaý
@@ -230,7 +230,7 @@
     !       2Pl         keen0aa         keen0ay         keénay0aa           keénay0ay
     !       3Pl         keen0aa         keen0ay         keénay0aa           keénay0ay
 
-    !  #### Reduced+Abs - Head+Subj/Clause+Obj
+    !  #### Reduced+Abs - Head+Subj/Clause+Sem/Obj
     !
     !       1Sg         keen0á          keen0aý         keénayá             keénayaý
     !       2Sg         keen0á          keen0aý         keénayá             keénayaý
