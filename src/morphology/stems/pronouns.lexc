@@ -60,11 +60,11 @@ anuun+Pron+TODO:anuun Clitics ;
 idinna+Pron+TODO:idinna Clitics ;
 
 LEXICON Object
-na+Pron+Pers+1Pl+Excl+Obj:na		FINAL ; 
-ina+Pron+Pers+1Pl+Incl+Obj:ina		FINAL ; 
-i+Pron+Pers+1Sg+Obj:i		FINAL ; 
-ku+Pron+Pers+2Sg+Obj:ku		FINAL ; 
-idin+Pron+Pers+2Pl+Obj:idin		FINAL ; 
+na+Pron+Pers+1Pl+Excl+Sem/Obj:na		FINAL ; 
+ina+Pron+Pers+1Pl+Incl+Sem/Obj:ina		FINAL ; 
+i+Pron+Pers+1Sg+Sem/Obj:i		FINAL ; 
+ku+Pron+Pers+2Sg+Sem/Obj:ku		FINAL ; 
+idin+Pron+Pers+2Pl+Sem/Obj:idin		FINAL ; 
 
 LEXICON Pronoun_case
 +Nom:u		Clitics ;				! TEST:anigu,anigu
@@ -302,9 +302,9 @@ taas+Pron+Dem+Fem+Sg+Nom+Near#oo+CS+Appos:taasoo			Clitics ;
 
 LEXICON Reflexive
 is+Refl:is Clitics ;
-is+Pron+Pers+Obj+Refl:is FINAL ;
-is+Pron+Pers+Obj+Refl+Nom:isu FINAL ;
-is+Pron+Pers+Obj+Refl+Abs:isa FINAL ;
+is+Pron+Pers+Sem/Obj+Refl:is FINAL ;
+is+Pron+Pers+Sem/Obj+Refl+Nom:isu FINAL ;
+is+Pron+Pers+Sem/Obj+Refl+Abs:isa FINAL ;
 isugu+Pron+Pers+Refl+Nom:isugu FINAL ; ! Refl independent? TODO: check
 
 LEXICON ImpersonalP 

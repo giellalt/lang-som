@@ -285,7 +285,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 !! Syntaxy stuff, don't want to use +Acc, because this isn't relevant in nouns
 
  +Subj   !!= * @CODE@
- +Obj  !!= * @CODE@
+ +Sem/Obj  !!= * @CODE@
 
 !! Nominal MSP
 
