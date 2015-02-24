@@ -178,35 +178,35 @@ iyaga+Pron+Pers+3Pl+Abs+Adp/u:iyagii  Clitics ;
 ! 11  I am afraid of you, lest I have bestowed upon you labor in vain.
 
 ! TODO: include 3rd person null option?
-! %0+Pron+Pers+3Sg+Obj+Adp/u:u FINAL_TONE_OR_NEG ;
+! %0+Pron+Pers+3Sg+Sem/Obj+Adp/u:u FINAL_TONE_OR_NEG ;
 
 LEXICON Obj_Adp
-i+Pron+Pers+1Sg+Obj+Adp/u:ii      FINAL_TONE_OR_NEG ;   ! ií
-i+Pron+Pers+1Sg+Obj+Adp/ku:igu     FINAL_TONE_OR_NEG ;  ! igú
-i+Pron+Pers+1Sg+Obj+Adp/ka:iga     FINAL_TONE_OR_NEG ;  ! igá
-i+Pron+Pers+1Sg+Obj+Adp/la:ila     FINAL_TONE_OR_NEG ;  ! ilá
+i+Pron+Pers+1Sg+Sem/Obj+Adp/u:ii      FINAL_TONE_OR_NEG ;   ! ií
+i+Pron+Pers+1Sg+Sem/Obj+Adp/ku:igu     FINAL_TONE_OR_NEG ;  ! igú
+i+Pron+Pers+1Sg+Sem/Obj+Adp/ka:iga     FINAL_TONE_OR_NEG ;  ! igá
+i+Pron+Pers+1Sg+Sem/Obj+Adp/la:ila     FINAL_TONE_OR_NEG ;  ! ilá
 
-i+Pron+Pers+1Sg+Obj+Neg/ma:ima     FINAL_TONE_OR_NEG ;  ! imá
+i+Pron+Pers+1Sg+Sem/Obj+Neg/ma:ima     FINAL_TONE_OR_NEG ;  ! imá
 
-ku+Pron+Pers+2Sg+Obj+Adp/u:kuu     FINAL_TONE_OR_NEG ;  ! kuú
-ku+Pron+Pers+2Sg+Obj+Adp/ku:kugu   FINAL_TONE_OR_NEG ;  ! kugú
-ku+Pron+Pers+2Sg+Obj+Adp/ka:kaa    FINAL_TONE_OR_NEG ;  ! kaá
-ku+Pron+Pers+2Sg+Obj+Adp/la:kula   FINAL_TONE_OR_NEG ;  ! kulá
+ku+Pron+Pers+2Sg+Sem/Obj+Adp/u:kuu     FINAL_TONE_OR_NEG ;  ! kuú
+ku+Pron+Pers+2Sg+Sem/Obj+Adp/ku:kugu   FINAL_TONE_OR_NEG ;  ! kugú
+ku+Pron+Pers+2Sg+Sem/Obj+Adp/ka:kaa    FINAL_TONE_OR_NEG ;  ! kaá
+ku+Pron+Pers+2Sg+Sem/Obj+Adp/la:kula   FINAL_TONE_OR_NEG ;  ! kulá
 
-ina+Pron+Pers+1Pl+Obj+Adp/u:noo     FINAL_TONE_OR_NEG ; ! noóma
-ina+Pron+Pers+1Pl+Obj+Adp/ku:nagu   FINAL_TONE_OR_NEG ; ! nagúma
-ina+Pron+Pers+1Pl+Obj+Adp/ka:naga   FINAL_TONE_OR_NEG ; ! nagáma
-ina+Pron+Pers+1Pl+Obj+Adp/la:nala   FINAL_TONE_OR_NEG ; ! naláma
+ina+Pron+Pers+1Pl+Sem/Obj+Adp/u:noo     FINAL_TONE_OR_NEG ; ! noóma
+ina+Pron+Pers+1Pl+Sem/Obj+Adp/ku:nagu   FINAL_TONE_OR_NEG ; ! nagúma
+ina+Pron+Pers+1Pl+Sem/Obj+Adp/ka:naga   FINAL_TONE_OR_NEG ; ! nagáma
+ina+Pron+Pers+1Pl+Sem/Obj+Adp/la:nala   FINAL_TONE_OR_NEG ; ! naláma
 
 ! inoó
 ! inagú
 ! inagá
 ! inalá
 
-idinka+Pron+Pers+2Pl+Obj+Adp/u:idiin    FINAL_TONE_OR_NEG ;         ! idiín
-idinka+Pron+Pers+2Pl+Obj+Adp/ku:idinku   FINAL_TONE_OR_NEG ;        ! idinkú
-idinka+Pron+Pers+2Pl+Obj+Adp/ka:idinka   FINAL_TONE_OR_NEG ;        ! etc
-idinka+Pron+Pers+2Pl+Obj+Adp/la:idinla   FINAL_TONE_OR_NEG ;
+idinka+Pron+Pers+2Pl+Sem/Obj+Adp/u:idiin    FINAL_TONE_OR_NEG ;         ! idiín
+idinka+Pron+Pers+2Pl+Sem/Obj+Adp/ku:idinku   FINAL_TONE_OR_NEG ;        ! idinkú
+idinka+Pron+Pers+2Pl+Sem/Obj+Adp/ka:idinka   FINAL_TONE_OR_NEG ;        ! etc
+idinka+Pron+Pers+2Pl+Sem/Obj+Adp/la:idinla   FINAL_TONE_OR_NEG ;
 
 ! TODO: Check analysis, 3Sg Obj?
 la+Pron+Impers+Subj+Adp/u:loo     FINAL_TONE_OR_NEG ;           ! loó
@@ -236,43 +236,43 @@ la+Pron+Impers+Subj+Adp/la:lala   FINAL_TONE_OR_NEG ;           ! lalá
 
 
 LEXICON Obj_Adp_Adp
-i+Pron+Pers+1Sg+Obj+Adp/u+Adp/u:iigu                  FINAL_TONE_OR_NEG ;
-i+Pron+Pers+1Sg+Obj+Adp/u+Adp/ka:iiga                 FINAL_TONE_OR_NEG ;
-i+Pron+Pers+1Sg+Obj+Adp/u+Adp/la:iila                 FINAL_TONE_OR_NEG ;
-i+Pron+Pers+1Sg+Obj+Adp/ka+Adp/ka:igaga               FINAL_TONE_OR_NEG ;
-i+Pron+Pers+1Sg+Obj+Adp/ku+Adp/la:igula               FINAL_TONE_OR_NEG ;
-i+Pron+Pers+1Sg+Obj+Adp/ka+Adp/la:igala               FINAL_TONE_OR_NEG ;
+i+Pron+Pers+1Sg+Sem/Obj+Adp/u+Adp/u:iigu                  FINAL_TONE_OR_NEG ;
+i+Pron+Pers+1Sg+Sem/Obj+Adp/u+Adp/ka:iiga                 FINAL_TONE_OR_NEG ;
+i+Pron+Pers+1Sg+Sem/Obj+Adp/u+Adp/la:iila                 FINAL_TONE_OR_NEG ;
+i+Pron+Pers+1Sg+Sem/Obj+Adp/ka+Adp/ka:igaga               FINAL_TONE_OR_NEG ;
+i+Pron+Pers+1Sg+Sem/Obj+Adp/ku+Adp/la:igula               FINAL_TONE_OR_NEG ;
+i+Pron+Pers+1Sg+Sem/Obj+Adp/ka+Adp/la:igala               FINAL_TONE_OR_NEG ;
 
-ku+Pron+Pers+2Sg+Obj+Adp/u+Adp/u:kuugu                 FINAL_TONE_OR_NEG ;
-ku+Pron+Pers+2Sg+Obj+Adp/u+Adp/ka:kaaga                FINAL_TONE_OR_NEG ;
-ku+Pron+Pers+2Sg+Obj+Adp/u+Adp/la:kuula                FINAL_TONE_OR_NEG ;
-ku+Pron+Pers+2Sg+Obj+Adp/ka+Adp/ka:kaaga               FINAL_TONE_OR_NEG ;
-ku+Pron+Pers+2Sg+Obj+Adp/ku+Adp/la:kugula              FINAL_TONE_OR_NEG ;
-ku+Pron+Pers+2Sg+Obj+Adp/ka+Adp/la:kaala               FINAL_TONE_OR_NEG ;
-
-! TODO: check lemmas, glosses
-na+Pron+Pers+1Pl+Excl+Obj+Adp/u+Adp/u:noogu                  FINAL_TONE_OR_NEG ;
-na+Pron+Pers+1Pl+Excl+Obj+Adp/u+Adp/ka:nooga                  FINAL_TONE_OR_NEG ;
-na+Pron+Pers+1Pl+Excl+Obj+Adp/u+Adp/la:noola                  FINAL_TONE_OR_NEG ;
-na+Pron+Pers+1Pl+Excl+Obj+Adp/ka+Adp/ka:nagaga                 FINAL_TONE_OR_NEG ;
-na+Pron+Pers+1Pl+Excl+Obj+Adp/ku+Adp/la:nagula                 FINAL_TONE_OR_NEG ;
-na+Pron+Pers+1Pl+Excl+Obj+Adp/ka+Adp/la:nagala                 FINAL_TONE_OR_NEG ;
+ku+Pron+Pers+2Sg+Sem/Obj+Adp/u+Adp/u:kuugu                 FINAL_TONE_OR_NEG ;
+ku+Pron+Pers+2Sg+Sem/Obj+Adp/u+Adp/ka:kaaga                FINAL_TONE_OR_NEG ;
+ku+Pron+Pers+2Sg+Sem/Obj+Adp/u+Adp/la:kuula                FINAL_TONE_OR_NEG ;
+ku+Pron+Pers+2Sg+Sem/Obj+Adp/ka+Adp/ka:kaaga               FINAL_TONE_OR_NEG ;
+ku+Pron+Pers+2Sg+Sem/Obj+Adp/ku+Adp/la:kugula              FINAL_TONE_OR_NEG ;
+ku+Pron+Pers+2Sg+Sem/Obj+Adp/ka+Adp/la:kaala               FINAL_TONE_OR_NEG ;
 
 ! TODO: check lemmas, glosses
-ina+Pron+Pers+1Pl+Incl+Obj+Adp/u+Adp/u:inoogu                   FINAL_TONE_OR_NEG ;
-ina+Pron+Pers+1Pl+Incl+Obj+Adp/u+Adp/ka:inooga                  FINAL_TONE_OR_NEG ;
-ina+Pron+Pers+1Pl+Incl+Obj+Adp/u+Adp/la:inoola                  FINAL_TONE_OR_NEG ;
-ina+Pron+Pers+1Pl+Incl+Obj+Adp/ka+Adp/ka:inagaga                FINAL_TONE_OR_NEG ;
-ina+Pron+Pers+1Pl+Incl+Obj+Adp/ku+Adp/la:inagula                FINAL_TONE_OR_NEG ;
-ina+Pron+Pers+1Pl+Incl+Obj+Adp/ka+Adp/la:inagala                FINAL_TONE_OR_NEG ;
+na+Pron+Pers+1Pl+Excl+Sem/Obj+Adp/u+Adp/u:noogu                  FINAL_TONE_OR_NEG ;
+na+Pron+Pers+1Pl+Excl+Sem/Obj+Adp/u+Adp/ka:nooga                  FINAL_TONE_OR_NEG ;
+na+Pron+Pers+1Pl+Excl+Sem/Obj+Adp/u+Adp/la:noola                  FINAL_TONE_OR_NEG ;
+na+Pron+Pers+1Pl+Excl+Sem/Obj+Adp/ka+Adp/ka:nagaga                 FINAL_TONE_OR_NEG ;
+na+Pron+Pers+1Pl+Excl+Sem/Obj+Adp/ku+Adp/la:nagula                 FINAL_TONE_OR_NEG ;
+na+Pron+Pers+1Pl+Excl+Sem/Obj+Adp/ka+Adp/la:nagala                 FINAL_TONE_OR_NEG ;
 
 ! TODO: check lemmas, glosses
-idinka+Pron+Pers+2Pl+Obj+Adp/u+Adp/u:idiinku                 FINAL_TONE_OR_NEG ; 
-idinka+Pron+Pers+2Pl+Obj+Adp/u+Adp/ka:idiinka                 FINAL_TONE_OR_NEG ; 
-idinka+Pron+Pers+2Pl+Obj+Adp/u+Adp/la:idiinla                 FINAL_TONE_OR_NEG ; 
-idinka+Pron+Pers+2Pl+Obj+Adp/ka+Adp/ka:idinkaga                FINAL_TONE_OR_NEG ; 
-idinka+Pron+Pers+2Pl+Obj+Adp/ku+Adp/la:idinkula                FINAL_TONE_OR_NEG ; 
-idinka+Pron+Pers+2Pl+Obj+Adp/ka+Adp/la:idinkala                FINAL_TONE_OR_NEG ; 
+ina+Pron+Pers+1Pl+Incl+Sem/Obj+Adp/u+Adp/u:inoogu                   FINAL_TONE_OR_NEG ;
+ina+Pron+Pers+1Pl+Incl+Sem/Obj+Adp/u+Adp/ka:inooga                  FINAL_TONE_OR_NEG ;
+ina+Pron+Pers+1Pl+Incl+Sem/Obj+Adp/u+Adp/la:inoola                  FINAL_TONE_OR_NEG ;
+ina+Pron+Pers+1Pl+Incl+Sem/Obj+Adp/ka+Adp/ka:inagaga                FINAL_TONE_OR_NEG ;
+ina+Pron+Pers+1Pl+Incl+Sem/Obj+Adp/ku+Adp/la:inagula                FINAL_TONE_OR_NEG ;
+ina+Pron+Pers+1Pl+Incl+Sem/Obj+Adp/ka+Adp/la:inagala                FINAL_TONE_OR_NEG ;
+
+! TODO: check lemmas, glosses
+idinka+Pron+Pers+2Pl+Sem/Obj+Adp/u+Adp/u:idiinku                 FINAL_TONE_OR_NEG ; 
+idinka+Pron+Pers+2Pl+Sem/Obj+Adp/u+Adp/ka:idiinka                 FINAL_TONE_OR_NEG ; 
+idinka+Pron+Pers+2Pl+Sem/Obj+Adp/u+Adp/la:idiinla                 FINAL_TONE_OR_NEG ; 
+idinka+Pron+Pers+2Pl+Sem/Obj+Adp/ka+Adp/ka:idinkaga                FINAL_TONE_OR_NEG ; 
+idinka+Pron+Pers+2Pl+Sem/Obj+Adp/ku+Adp/la:idinkula                FINAL_TONE_OR_NEG ; 
+idinka+Pron+Pers+2Pl+Sem/Obj+Adp/ka+Adp/la:idinkala                FINAL_TONE_OR_NEG ; 
 
 ! Impers always subj?
 la+Pron+Pers+Impers+Subj+Adp/u+Adp/u:loogu                 FINAL_TONE_OR_NEG ; 
@@ -331,11 +331,11 @@ la+Pron+Pers+Impers+2SgObj/ku+Adp/ga+Adp/la:lagaala                FINAL_TONE_OR
 !   la+is+ku = laysku
 !   etc.
 
-! i+Pron+Pers+1Sg+Obj#:i       Pre_Location ;
-! ku+Pron+Pers+2Sg+Obj#:ku      Pre_Location ;
-! +Pers+Obj#:na      Pre_Location ;
-! inaga+Pron+Pers+1PlIncl+Obj#:ina     Pre_Location ;
-! idinka+Pron+Pers+2Pl+Obj#:idin    Pre_Location_VL ;
+! i+Pron+Pers+1Sg+Sem/Obj#:i       Pre_Location ;
+! ku+Pron+Pers+2Sg+Sem/Obj#:ku      Pre_Location ;
+! +Pers+Sem/Obj#:na      Pre_Location ;
+! inaga+Pron+Pers+1PlIncl+Sem/Obj#:ina     Pre_Location ;
+! idinka+Pron+Pers+2Pl+Sem/Obj#:idin    Pre_Location_VL ;
 
 
 ! Change +Pers to the persons
