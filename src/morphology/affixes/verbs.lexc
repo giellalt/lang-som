@@ -1264,8 +1264,8 @@ LEXICON VerbalPrefixes
 
 ! TODO: how to mark these for a speller?
 LEXICON CmpNGVerb
-    +Pfx+Cmp+Err/Sub+Use/NG#: ToWords ;
-    +Pfx+Cmp+Err/Sub+Use/NG#:%- ToWords ;
+    +Pfx+Cmp+Err/Orth+Use/NG#: ToWords ;
+    +Pfx+Cmp+Err/Orth+Use/NG#:%- ToWords ;
 
 LEXICON ToWords
     Verbs ;

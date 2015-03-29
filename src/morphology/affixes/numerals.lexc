@@ -133,20 +133,20 @@ LEXICON ARABICLOOPORD
 LEXICON ARABICDELIMITER
 +Num:           ARABICCASE0 ;   ! This is the 1984 case (ie nominative).
 +Num:%:         ARABICCASE ;    ! This is the 1984:s case.
-+Num+Err/Sub:%> ARABICCASE ;    ! This is the 1984s case.
-+Num+Err/Sub:%' ARABICCASE ;    ! This is the 1984's case.
-+Num+Err/Sub:%- ARABICCASE ;    ! This is the 1984-s case.
++Num+Err/Orth:%> ARABICCASE ;    ! This is the 1984s case.
++Num+Err/Orth:%' ARABICCASE ;    ! This is the 1984's case.
++Num+Err/Orth:%- ARABICCASE ;    ! This is the 1984-s case.
 
 LEXICON ARABICCASE0
 +Sg+Nom: # ;
 
 LEXICON ARABICCASE
-f+Sg+Nom+Err/Sub:f  # ; ! s. 123f.
-ff+Sg+Nom+Err/Sub:ff # ; ! s. 123ff.
-b+Sg+Nom+Err/Sub:b  # ; ! § 123b
-c+Sg+Nom+Err/Sub:c  # ; ! § 123c
-d+Sg+Nom+Err/Sub:d  # ; ! § 123d
-e+Sg+Nom+Err/Sub:e  # ; ! § 123e
+f+Sg+Nom+Err/Orth:f  # ; ! s. 123f.
+ff+Sg+Nom+Err/Orth:ff # ; ! s. 123ff.
+b+Sg+Nom+Err/Orth:b  # ; ! § 123b
+c+Sg+Nom+Err/Orth:c  # ; ! § 123c
+d+Sg+Nom+Err/Orth:d  # ; ! § 123d
+e+Sg+Nom+Err/Orth:e  # ; ! § 123e
 !ordinals
 
 
@@ -304,10 +304,10 @@ LEXICON ROMNUMTAG !
 +A+Ord:%. # ; ! !III. as ordinal.
 +A+Ord:   # ;! !Looking for trouble...
 ! TODO: +Num:%:         ROMNUMTAGOBL ; ! IV:se
-! +Num+Err/Sub:'7 ROMNUMTAGOBL ; ! IV'se
-! +Num+Err/Sub:%- ROMNUMTAGOBL ; ! IV-se
-! +Num+Err/Sub:%´ ROMNUMTAGOBL ; ! IV´se
-! +Num+Err/Sub:%> ROMNUMTAGOBL ; ! IVse
+! +Num+Err/Orth:'7 ROMNUMTAGOBL ; ! IV'se
+! +Num+Err/Orth:%- ROMNUMTAGOBL ; ! IV-se
+! +Num+Err/Orth:%´ ROMNUMTAGOBL ; ! IV´se
+! +Num+Err/Orth:%> ROMNUMTAGOBL ; ! IVse
 
 
 ! vim: set ts=4 sw=4 tw=0 syntax=lexc :
