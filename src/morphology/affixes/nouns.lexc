@@ -699,9 +699,9 @@ LEXICON SgProximity
 +Abs+Dist:ii            Clitics ;
 +Nom+Dist:ii            Clitics ;
 ! break ablaut path for -ii and -u #ablaut
-+Abs+Dist+Use/NG+Err/Sub:{X}ii            Clitics ;
-+Nom+Dist+Use/NG+Err/Sub:{X}ii            Clitics ;
-+Nom+Prox+Use/NG+Err/Sub:{X}u             Clitics ;
++Abs+Dist+Use/NG+Err/Orth:{X}ii            Clitics ;
++Nom+Dist+Use/NG+Err/Orth:{X}ii            Clitics ;
++Nom+Prox+Use/NG+Err/Orth:{X}u             Clitics ;
 
 +Abs+Close:an           Clitics ;
 +Nom+Close:anu          Clitics ;
@@ -754,7 +754,7 @@ LEXICON Possessive
 +PxSg2:aa´´           PostPossSgGender ;
 +PxSg3M:iis´´               PostPossSgProx ;
 ! break ablaut path for -iis #ablaut
-+PxSg3M+Err/Sub+Use/NG:{X}iis´´               PostPossSgProx ;
++PxSg3M+Err/Orth+Use/NG:{X}iis´´               PostPossSgProx ;
 +PxSg3F:eed´´               PostPossSgProx ;
 
 +PxPl1Incl:eenn´´           PostPossSgProx ; 
@@ -823,7 +823,7 @@ LEXICON PostPossDistVocMasc
 +Voc+Dist:ii´´yow Clitics ;
 
 LEXICON PostPossDistVocFem
-+Voc+Dist+Use/NG+Err/Sub:ii´´yay Clitics ;
++Voc+Dist+Use/NG+Err/Orth:ii´´yay Clitics ;
 +Voc+Dist:ii´´yey Clitics ;
 
 
@@ -863,8 +863,8 @@ LEXICON MascPl
 ! TODO: too much?
 :ih                      Possessive ;
 
-+Def+Abs+Dist+Err/Sub:ahii       Clitics ;           
-+Def+Nom+Dist+Err/Sub:ahii       Clitics ;           
++Def+Abs+Dist+Err/Orth:ahii       Clitics ;           
++Def+Nom+Dist+Err/Orth:ahii       Clitics ;           
 
 LEXICON Fem 
 +Abs+Close:%>taas      Clitics ;
