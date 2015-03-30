@@ -52,7 +52,8 @@
 0 (<-) %+Decl%/7,
 
 0 (<-) %#,
-0 (<-) %+Err%/Sub,
+0 (<-) %+Err%/Orth,
+0 (<-) %+Err%/Lex,
 0 (<-) %+Use%/Circ,
 0 (<-) %+Use%/CircN,
 0 (<-) %+Use%/%-Spell,
@@ -60,7 +61,6 @@
 0 (<-) %+Use%/NG,
 0 (<-) %+Use%/NA,
 0 (<-) %+Use%/NVD,
-0 (<-) %+Err%/LexSub,
 0 (<-) %+Use%/Marg,
 0 (<-) %+Use%/SpellNoSugg,
 0 (<-) %+Dial%/%-KJ,
