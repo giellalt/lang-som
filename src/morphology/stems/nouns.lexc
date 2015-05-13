@@ -35,16 +35,16 @@ LEXICON IrregNouns  !!= * @CODE@
 
 ! Test data:
 !!€gt-desc: il # Irregular tests
-!!€ il      il+N+Fem+Sg+Indef+Abs
-!!€ isha    il+N+Fem+Sg+Def+Abs+Prox
-!!€ indho   il+N+Masc+Pl+Indef+Abs
-!!€ indhaha il+N+Masc+Pl+Def+Abs+Prox
+!!€ il:      il+N+Fem+Sg+Indef+Abs
+!!€ isha:    il+N+Fem+Sg+Def+Abs+Prox
+!!€ indho:   il+N+Masc+Pl+Indef+Abs
+!!€ indhaha: il+N+Masc+Pl+Def+Abs+Prox
 
 !!€gt-desc: il # Irregular tests
-!!€ si        si+N+Fem+Sg+Indef+Abs
-!!€ sida      si+N+Fem+Sg+Def+Abs+Prox
-!!€ siyaabo   si+N+Masc+Pl+Indef+Abs
-!!€ siyaabaha si+N+Masc+Pl+Def+Abs+Prox
+!!€ si:        si+N+Fem+Sg+Indef+Abs
+!!€ sida:      si+N+Fem+Sg+Def+Abs+Prox
+!!€ siyaabo:   si+N+Masc+Pl+Indef+Abs
+!!€ siyaabaha: si+N+Masc+Pl+Def+Abs+Prox
 
 LEXICON D1
   D1_F ;
@@ -61,10 +61,10 @@ LEXICON D1
 !! Good amount of nouns with -ad, Fem derivational suffix.
 
 !!€gt-desc: aalad # aalad sample paradigm.
-!!€ aalad           aalad+N+Decl/1+Fem+Sg+Indef+Abs
-!!€ aaladda         aalad+N+Decl/1+Fem+Sg+Def+Abs+Prox
-!!€ aalado          aalad+N+Decl/1+Masc+Pl+Indef+Abs
-!!€ aaladaha        aalad+N+Decl/1+Masc+Pl+Def+Abs+Prox
+!!€ aalad:           aalad+N+Decl/1+Fem+Sg+Indef+Abs
+!!€ aaladda:         aalad+N+Decl/1+Fem+Sg+Def+Abs+Prox
+!!€ aalado:          aalad+N+Decl/1+Masc+Pl+Indef+Abs
+!!€ aaladaha:        aalad+N+Decl/1+Masc+Pl+Def+Abs+Prox
 
 
 LEXICON D1_F
@@ -2951,10 +2951,10 @@ LEXICON D3
 
 ! Test data:
 !!€gt-desc: gabadh # dh + d -> dh; vowel deletion
-!!€ gabadh      gabadh+N+Fem+Sg+Indef+Abs
-!!€ gabadha     gabadh+N+Fem+Sg+Def+Abs+Prox
-!!€ gabdho      gabadh+N+Masc+Pl+Indef+Abs
-!!€ gabdhaha    gabadh+N+Masc+Pl+Def+Abs+Prox
+!!€ gabadh:      gabadh+N+Fem+Sg+Indef+Abs
+!!€ gabadha:     gabadh+N+Fem+Sg+Def+Abs+Prox
+!!€ gabdho:      gabadh+N+Masc+Pl+Indef+Abs
+!!€ gabdhaha:    gabadh+N+Masc+Pl+Def+Abs+Prox
 
 LEXICON D3_F
   gabadh:gab^adh	NOUN3_F ;
@@ -2967,10 +2967,10 @@ LEXICON D3_F
 !! !! Declension 3: M→M
 
 !!€gt-desc: xadhig # g ~ k; vowel deletion
-!!€ xadhig    xadhig+N+Masc+Sg+Indef+Abs
-!!€ xadhigga  xadhig+N+Masc+Sg+Def+Abs+Prox
-!!€ xadhko    xadhig+N+Masc+Pl+Indef+Abs
-!!€ xadhkaha  xadhig+N+Masc+Pl+Def+Abs+Prox
+!!€ xadhig:    xadhig+N+Masc+Sg+Indef+Abs
+!!€ xadhigga:  xadhig+N+Masc+Sg+Def+Abs+Prox
+!!€ xadhko:    xadhig+N+Masc+Pl+Indef+Abs
+!!€ xadhkaha:  xadhig+N+Masc+Pl+Def+Abs+Prox
 
 LEXICON D3_M
   garab:gar^ab	NOUN3_M ;
@@ -4663,6 +4663,6 @@ LEXICON ArabicLoans  !!= * @CODE@
 
 ! Test data:
 !!€gt-norm: guri # Odd-syllable test
-!!€ guri                guri+N+Masc+Sg+Indef+Nom
+!!€ guri:                guri+N+Masc+Sg+Indef+Nom
 
 ! vim: set ts=2 sw=2 tw=0 syntax=lexc :
