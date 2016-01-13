@@ -827,13 +827,13 @@ Rules
 !! __ @RULENAME@ __  
  n:m <=> m %>: _ ;
 
-!€ primus%>s
-!€ primus00
+!!€ primus%>s
+!!€ primus00
 
-!€grís%>s
-!€grís00
+!!€grís%>s
+!!€grís00
 
-!$grís%>s
-!$grís0s
+!!$grís%>s
+!!$grís0s
 
 ! vim: set ts=4 sw=4 tw=0 syntax=lexc :
