@@ -1,4 +1,0 @@
-Rename the source files from "xxx" to "new", given that the ISO code for the 
-new language is "new".
-
-ls -d *xxx* | sed "s/\(.*\)\(xxx\)\(.*\)/mv '&' '\1new\3'/" | sh
