@@ -1,5 +1,0 @@
-LEXICON PP ! These are the indeclieable ones 
-+Po: #;
-
-LEXICON Postposition
- PP ;
