@@ -1,5 +1,5 @@
 !! Noun inflection
-!! ---------------
+! ---------------
 !! The Somali nouns inflect in cases, are marked for gender and number.
 
 ! Can specify test words that should be generated with the paradigm here, but currently it will only generate the words, not compare to what should be the outcome.
