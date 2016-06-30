@@ -286,7 +286,6 @@ Going to try to replace these with flag diacritics if possible.
 
 And following triggers to control variation
 
-! %			      * exclamation mark and %
 
  * {#} # -      
 
@@ -818,7 +817,6 @@ Notes:
   that the pair transforming exists in the Alphabet
 
 
-The twolc rule file itself
 
 Alphabet
 
@@ -849,7 +847,6 @@ For ease of reduplication and treating sh as separate from l + t => sh
 
 
 
-Rules
 
 
 TODO: write tests for gacmahii / gacmihii, magacii / magicii, magucu / magacu
