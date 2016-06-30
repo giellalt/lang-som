@@ -1,5 +1,4 @@
 Nouns
------
 
 Nouns in Somali are things. They have separate paradigms depending on
 morphophonological stuff, but are split up into subgroups which correspond
@@ -21,17 +20,17 @@ but, have varying irregular masculine plural forms.
 
 
 __il # Irregular tests examples:__
-* __il:__ {{il+N+Fem+Sg+Indef+Abs}}
-* __isha:__ {{il+N+Fem+Sg+Def+Abs+Prox}}
-* __indho:__ {{il+N+Masc+Pl+Indef+Abs}}
-* __indhaha:__ {{il+N+Masc+Pl+Def+Abs+Prox}}
+* __il: __ {{il+N+Fem+Sg+Indef+Abs}}
+* __isha: __ {{il+N+Fem+Sg+Def+Abs+Prox}}
+* __indho: __ {{il+N+Masc+Pl+Indef+Abs}}
+* __indhaha: __ {{il+N+Masc+Pl+Def+Abs+Prox}}
 
 
 __il # Irregular tests examples:__
-* __si:__ {{si+N+Fem+Sg+Indef+Abs}}
-* __sida:__ {{si+N+Fem+Sg+Def+Abs+Prox}}
-* __siyaabo:__ {{si+N+Masc+Pl+Indef+Abs}}
-* __siyaabaha:__ {{si+N+Masc+Pl+Def+Abs+Prox}}
+* __si: __ {{si+N+Fem+Sg+Indef+Abs}}
+* __sida: __ {{si+N+Fem+Sg+Def+Abs+Prox}}
+* __siyaabo: __ {{si+N+Masc+Pl+Indef+Abs}}
+* __siyaabaha: __ {{si+N+Masc+Pl+Def+Abs+Prox}}
 
 
 Declension 1: F→M
@@ -43,10 +42,10 @@ Good amount of nouns with -ad, Fem derivational suffix.
 
 
 __aalad # aalad sample paradigm. examples:__
-* __aalad:__ {{aalad+N+Decl/1+Fem+Sg+Indef+Abs}}
-* __aaladda:__ {{aalad+N+Decl/1+Fem+Sg+Def+Abs+Prox}}
-* __aalado:__ {{aalad+N+Decl/1+Masc+Pl+Indef+Abs}}
-* __aaladaha:__ {{aalad+N+Decl/1+Masc+Pl+Def+Abs+Prox}}
+* __aalad: __ {{aalad+N+Decl/1+Fem+Sg+Indef+Abs}}
+* __aaladda: __ {{aalad+N+Decl/1+Fem+Sg+Def+Abs+Prox}}
+* __aalado: __ {{aalad+N+Decl/1+Masc+Pl+Indef+Abs}}
+* __aaladaha: __ {{aalad+N+Decl/1+Masc+Pl+Def+Abs+Prox}}
 
 
 
@@ -115,20 +114,20 @@ Declension 3: F→M
 
 
 __gabadh # dh + d -> dh; vowel deletion examples:__
-* __gabadh:__ {{gabadh+N+Fem+Sg+Indef+Abs}}
-* __gabadha:__ {{gabadh+N+Fem+Sg+Def+Abs+Prox}}
-* __gabdho:__ {{gabadh+N+Masc+Pl+Indef+Abs}}
-* __gabdhaha:__ {{gabadh+N+Masc+Pl+Def+Abs+Prox}}
+* __gabadh: __ {{gabadh+N+Fem+Sg+Indef+Abs}}
+* __gabadha: __ {{gabadh+N+Fem+Sg+Def+Abs+Prox}}
+* __gabdho: __ {{gabadh+N+Masc+Pl+Indef+Abs}}
+* __gabdhaha: __ {{gabadh+N+Masc+Pl+Def+Abs+Prox}}
 
 
 Declension 3: M→M
 
 
 __xadhig # g ~ k; vowel deletion examples:__
-* __xadhig:__ {{xadhig+N+Masc+Sg+Indef+Abs}}
-* __xadhigga:__ {{xadhig+N+Masc+Sg+Def+Abs+Prox}}
-* __xadhko:__ {{xadhig+N+Masc+Pl+Indef+Abs}}
-* __xadhkaha:__ {{xadhig+N+Masc+Pl+Def+Abs+Prox}}
+* __xadhig: __ {{xadhig+N+Masc+Sg+Indef+Abs}}
+* __xadhigga: __ {{xadhig+N+Masc+Sg+Def+Abs+Prox}}
+* __xadhko: __ {{xadhig+N+Masc+Pl+Indef+Abs}}
+* __xadhkaha: __ {{xadhig+N+Masc+Pl+Def+Abs+Prox}}
 
 
 
@@ -159,5 +158,5 @@ Ex.)
 
 
 __guri # Odd-syllable test examples:__
-* __guri:__ {{guri+N+Masc+Sg+Indef+Nom}}
+* __guri: __ {{guri+N+Masc+Sg+Indef+Nom}}
 
