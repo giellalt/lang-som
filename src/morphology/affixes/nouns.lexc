@@ -15,63 +15,63 @@
 !
 !           *gúriyaha -> guriyáha
 
-! TODO: how to deal with gender marking in plural? generation may be tricky, may 
+! TODO: how to deal with gender marking in plural? generation may be tricky, may
 !       need to tag differently.
 
 LEXICON NullCase/Clitics
-+Abs:0                      Clitics ;   
-+Nom:0                      Clitics ;      
-+Gen:0                      Clitics ;
+ +Abs:0 Clitics ;
+ +Nom:0 Clitics ;
+ +Gen:0 Clitics ;
 
 LEXICON NullCase
-+Abs:0                      Clitics ;   
-+Nom:0                      Clitics ;      
-+Gen:0                      Clitics ;
+ +Abs:0 Clitics ;
+ +Nom:0 Clitics ;
+ +Gen:0 Clitics ;
 
 LEXICON NullCase/inom
-+Abs:0                      Clitics ;   
-+Nom+Sty/i:i                        Clitics ;      
-+Nom:0                      Clitics ;      
-+Gen:0                      Clitics ;
+       +Abs:0 Clitics ;
+ +Nom+Sty/i:i Clitics ;
+       +Nom:0 Clitics ;
+       +Gen:0 Clitics ;
 
 
 !D1_F
 LEXICON NOUN1_F
 
-    @P.Gender.Fem@      _N1FPBSg ; 
-    @P.Gender.Masc@     _N1MPBPl ; 
+        @P.Gender.Fem@           _N1FPBSg               ;
+       @P.Gender.Masc@           _N1MPBPl               ;
 
-    NIMO ;
+                                 NIMO                   ;
 
     LEXICON _N1FPBSg
-        +N+Decl/1+Fem+Sg:´%>{N}       NOUN1_F_PostBoundarySg ; 
+      +N+Decl/1+Fem+Sg:´%>{N}    NOUN1_F_PostBoundarySg ;
         ! No tone on stem in genitive
-        +N+Decl/1+Fem+Sg+Gen:%>{N}eed´                    Clitics ;
+  +N+Decl/1+Fem+Sg+Gen:%>{N}eed´ Clitics                ;
 
     LEXICON _N1MPBPl
-        +N+Decl/1+Masc+Pl:´%>{N}      NOUN1_F_PostBoundaryPl ; 
+     +N+Decl/1+Masc+Pl:´%>{N}    NOUN1_F_PostBoundaryPl ;
         ! No tone on stem in genitive
-        +N+Decl/1+Masc+Pl+Gen:%>{N}ood´                    Clitics ;
+ +N+Decl/1+Masc+Pl+Gen:%>{N}ood´ Clitics                ;
 
     ! TODO: flag diacritic for gender, why isn't it working
     LEXICON NOUN1_F/SgOnly
-        @P.Gender.Fem@      _N1FSgFlag ;
+        @P.Gender.Fem@           _N1FSgFlag             ;
 
         LEXICON _N1FSgFlag
-            +N+Decl/1+Fem+Sg:´%>{N}       NOUN1_F_PostBoundarySg ;
+      +N+Decl/1+Fem+Sg:´%>{N}    NOUN1_F_PostBoundarySg ;
 
 
     LEXICON NOUN1_F_PostBoundarySg
-    +Indef:0                    NullCase/inom ;
+                +Indef:0         NullCase/inom          ;
 
-    +Indef+Voc:ay               Clitics ;
+            +Indef+Voc:ay        Clitics                ;
 
-    +Def:t                      SgProximity ;
-    +Def+Voc:tay                Clitics ;
+                  +Def:t         SgProximity            ;
+              +Def+Voc:tay       Clitics                ;
 
     LEXICON NOUN1_F_PostBoundaryPl
-    +Indef:o%>                 NullCase/Clitics ;
-                                MascPl ; 
+                +Indef:o%>       NullCase/Clitics       ;
+                                 MascPl                 ;
 
 
 !D1_M
@@ -80,217 +80,217 @@ LEXICON NOUN1_F
 
 LEXICON NOUN1_M/SgOnly
 
-    @P.Gender.Masc@     _N_1_M_Sg_PB ;
+ @P.Gender.Masc@ _N_1_M_Sg_PB ;
 
-    NIMO ;
+                 NIMO         ;
 
 
 LEXICON NOUN1_M/PlOnly
 
-    @P.Gender.Masc@     _N_1_M_Pl_PB ;
+   @P.Gender.Masc@         _N_1_M_Pl_PB            ;
 
-    NIMO ;
+                           NIMO                    ;
 
 
     LEXICON NOUN1_M
-        @P.Gender.Masc@     _N_1_M_Sg_PB ;
-        @P.Gender.Masc@     _N_1_M_Pl_PB ;
+   @P.Gender.Masc@         _N_1_M_Sg_PB            ;
+   @P.Gender.Masc@         _N_1_M_Pl_PB            ;
 
 
     LEXICON NOUN1_MF
 
-        @P.Gender.Masc@     _N_1_M_Sg_PB ;
-        @P.Gender.Fem@      _N_1_MF_Pl_PB ;
+   @P.Gender.Masc@         _N_1_M_Sg_PB            ;
+    @P.Gender.Fem@         _N_1_MF_Pl_PB           ;
 
     ! TODO: check tones
     LEXICON _N_1_M_Sg_PB
-        +N+Decl/1+Masc+Sg:´´%>{N}      NOUN1_M_PostBoundarySg ;
+ +N+Decl/1+Masc+Sg:´´%>{N} NOUN1_M_PostBoundarySg  ;
 
     LEXICON _N_1_M_Pl_PB
-        +N+Decl/1+Masc+Pl:´´%>{N}      NOUN1_M_PostBoundaryPl ;
+ +N+Decl/1+Masc+Pl:´´%>{N} NOUN1_M_PostBoundaryPl  ;
 
     LEXICON _N_1_MF_Pl_PB
-        +N+Decl/1+Fem+Pl:´´%>{N}       NOUN1_MF_PostBoundaryPl ;
+  +N+Decl/1+Fem+Pl:´´%>{N} NOUN1_MF_PostBoundaryPl ;
 
         LEXICON NOUN1_M_PostBoundarySg
-        +Indef:0                     NullCase ;
-        +Indef+Voc:ow                Clitics ;
+            +Indef:0       NullCase                ;
+        +Indef+Voc:ow      Clitics                 ;
 
-        +Def:k                       SgProximity ;
-        +Def+Voc:kow                 Clitics ;
+              +Def:k       SgProximity             ;
+          +Def+Voc:kow     Clitics                 ;
 
         LEXICON NOUN1_M_PostBoundaryPl
-        +Indef:o%>                  NullCase/Clitics ;
-                                     MascPl ;
+            +Indef:o%>     NullCase/Clitics        ;
+                           MascPl                  ;
 
         ! TODO: Possessives?  funny.
         LEXICON NOUN1_MF_PostBoundaryPl
-        +Indef:yo%>                 NullCase/Clitics ;
-            :y                       FemPl ;
+            +Indef:yo%>    NullCase/Clitics        ;
+                  :y       FemPl                   ;
 
 
 
 ! D2_M
 LEXICON NOUN2_M
 
-    @P.Gender.Masc@     _N_2_MF_Sg_PB ;
-    @P.Gender.Fem@      _N_2_MF_Pl_PB ;  
+   @P.Gender.Masc@         _N_2_MF_Sg_PB          ;
+    @P.Gender.Fem@         _N_2_MF_Pl_PB          ;
 
-    NIMO ;
+                           NIMO                   ;
 
 ! TODO: check -- maybe this is post root tone now? albaabáda or albaábada?
 
     LEXICON _N_2_MF_Sg_PB
-        +N+Decl/2+Masc+Sg:´´%>{N}          NOUN2_M_PostBoundarySg ;
+ +N+Decl/2+Masc+Sg:´´%>{N} NOUN2_M_PostBoundarySg ;
 
     LEXICON _N_2_MF_Pl_PB
-        +N+Decl/2+Fem+Pl:´%>{N}            NOUN2_M_PostBoundaryPl ;  
+  +N+Decl/2+Fem+Pl:´%>{N}  NOUN2_M_PostBoundaryPl ;
 
 ! TODO: plural possible?
 LEXICON NOUN2_M_Coll
 
-    @P.Gender.Masc@     _N_2_M_Coll_Sg_PB ;
+        @P.Gender.Masc@         _N_2_M_Coll_Sg_PB      ;
 
-    NIMO ;
+                                NIMO                   ;
 
     LEXICON _N_2_M_Coll_Sg_PB
-        +N+Decl/2+Coll+Masc+Sg:´´%>{N}          NOUN2_M_PostBoundarySg ;
+ +N+Decl/2+Coll+Masc+Sg:´´%>{N} NOUN2_M_PostBoundarySg ;
 
 ! TODO: plural possible?
 LEXICON NOUN2_F_Coll
 
-    @P.Gender.Fem@     _N_2_F_Coll_Sg_PB ;
+        @P.Gender.Fem@         _N_2_F_Coll_Sg_PB      ;
 
-    NIMO ;
+                               NIMO                   ;
 
     LEXICON _N_2_F_Coll_Sg_PB
-        +N+Decl/2+Coll+Fem+Sg:´´%>{N}       NOUN2_F_PostBoundarySg ;
+ +N+Decl/2+Coll+Fem+Sg:´´%>{N} NOUN2_F_PostBoundarySg ;
 
 LEXICON WARAYSI
-    aysi:aysi NOUN2_M_yo ;
-    aysi+Use/NG:eysi NOUN2_M_yo ;
-    aysi+Use/NG:eeysi NOUN2_M_yo ;
+        aysi:aysi  NOUN2_M_yo   ;
+ aysi+Use/NG:eysi  NOUN2_M_yo   ;
+ aysi+Use/NG:eeysi NOUN2_M_yo   ;
 
-    ayso:aysa V3A_VerbMorf ;
-    ayso+Use/NG:eysa V3A_VerbMorf ;
-    ayso+Use/NG:eeysa V3A_VerbMorf ;
+        ayso:aysa  V3A_VerbMorf ;
+ ayso+Use/NG:eysa  V3A_VerbMorf ;
+ ayso+Use/NG:eeysa V3A_VerbMorf ;
 
 LEXICON AFAREYSI
-    eysi:eysi NOUN2_M_yo ;
-    eysi+Use/NG:aysi NOUN2_M_yo ;
-    eysi+Use/NG:eeysi NOUN2_M_yo ;
+        eysi:eysi  NOUN2_M_yo   ;
+ eysi+Use/NG:aysi  NOUN2_M_yo   ;
+ eysi+Use/NG:eeysi NOUN2_M_yo   ;
 
-    eyso:eysa V3A_VerbMorf ;
-    eyso+Use/NG:aysa V3A_VerbMorf ;
-    eyso+Use/NG:eeysa V3A_VerbMorf ;
+        eyso:eysa  V3A_VerbMorf ;
+ eyso+Use/NG:aysa  V3A_VerbMorf ;
+ eyso+Use/NG:eeysa V3A_VerbMorf ;
 
 LEXICON NOUN2_M_yo
 
-    @P.Gender.Masc@     _N_2_yo_MF_Sg_PB ;
-    @P.Gender.Fem@      _N_2_yo_MF_Pl_PB ;  
+   @P.Gender.Masc@         _N_2_yo_MF_Sg_PB          ;
+    @P.Gender.Fem@         _N_2_yo_MF_Pl_PB          ;
 
-    NIMO ;
+                           NIMO                      ;
 
     ! TODO: check -- maybe this is post root tone now? albaabáda or albaábada?
 
     LEXICON _N_2_yo_MF_Sg_PB
-        +N+Decl/2+Masc+Sg:´´%>{N}          NOUN2_M_PostBoundarySg ;
+ +N+Decl/2+Masc+Sg:´´%>{N} NOUN2_M_PostBoundarySg    ;
 
     LEXICON _N_2_yo_MF_Pl_PB
-        +N+Decl/2+Fem+Pl:´%>{N}            NOUN2_M_PostBoundaryPl_yo ;  
+  +N+Decl/2+Fem+Pl:´%>{N}  NOUN2_M_PostBoundaryPl_yo ;
 
 
 LEXICON NOUN2_M_o
 
-    @P.Gender.Masc@     _N_2_o_MF_Sg_PB ;
-    @P.Gender.Fem@      _N_2_o_MF_Pl_PB ;  
+   @P.Gender.Masc@          _N_2_o_MF_Sg_PB          ;
+    @P.Gender.Fem@          _N_2_o_MF_Pl_PB          ;
 
-    NIMO ;
+                            NIMO                     ;
 
     LEXICON _N_2_o_MF_Sg_PB
-        +N+Decl/2+Masc+Sg:´´%>{N}          NOUN2_M_PostBoundarySg ;
+ +N+Decl/2+Masc+Sg:´´%>{N}  NOUN2_M_PostBoundarySg   ;
 
     LEXICON _N_2_o_MF_Pl_PB
-        +N+Decl/2+Fem+Pl:´%>{N}            NOUN2_M_PostBoundaryPl_o ;  
+  +N+Decl/2+Fem+Pl:´%>{N}   NOUN2_M_PostBoundaryPl_o ;
 
     LEXICON NOUN2_M_PostBoundarySg
-    +Indef:0                     NullCase ;
-    +Indef+Voc:ow                Clitics ;
+            +Indef:0        NullCase                 ;
+        +Indef+Voc:ow       Clitics                  ;
 
-    +Def:k                       SgProximity ;
-    +Def+Voc:kow                 Clitics ;
+              +Def:k        SgProximity              ;
+          +Def+Voc:kow      Clitics                  ;
 
     LEXICON NOUN2_M_PostBoundaryPl
-    +Indef:{C2}o%>            NullCase/Clitics ; 
-    :{C2}                  FemPl ;
-    +Indef+Gen:{C2}oo´d                 Clitics ; 
+            +Indef:{C2}o%>  NullCase/Clitics         ;
+                  :{C2}     FemPl                    ;
+        +Indef+Gen:{C2}oo´d Clitics                  ;
 
     LEXICON NOUN2_M_PostBoundaryPl_yo
-    +Indef:yo%>             NullCase/Clitics ; 
-    :y                       FemPl ;
-    +Indef+Gen:yoo´d          Clitics ; 
+            +Indef:yo%>     NullCase/Clitics         ;
+                  :y        FemPl                    ;
+        +Indef+Gen:yoo´d    Clitics                  ;
 
     LEXICON NOUN2_M_PostBoundaryPl_o
-    +Indef:o%>             NullCase/Clitics ; 
-    :                       FemPl ;
-    +Indef+Gen:oo´d          Clitics ; 
+            +Indef:o%>      NullCase/Clitics         ;
+                  :         FemPl                    ;
+        +Indef+Gen:oo´d     Clitics                  ;
 
 LEXICON NOUN2_F
 
-    @P.Gender.Fem@  _N_2_F_Sg_PB ;
-    @P.Gender.Fem@  _N_2_F_Pl_PB ;
+   @P.Gender.Fem@         _N_2_F_Sg_PB           ;
+   @P.Gender.Fem@         _N_2_F_Pl_PB           ;
 
-    NIMO ;
+                          NIMO                   ;
 
     LEXICON _N_2_F_Sg_PB
-        +N+Decl/2+Fem+Sg:´´%>{N}       NOUN2_F_PostBoundarySg ;
+ +N+Decl/2+Fem+Sg:´´%>{N} NOUN2_F_PostBoundarySg ;
 
     LEXICON _N_2_F_Pl_PB
         ! TODO: check tones
-        +N+Decl/2+Fem+Pl:´%>{N}        NOUN2_F_PostBoundaryPl ;  
+ +N+Decl/2+Fem+Pl:´%>{N}  NOUN2_F_PostBoundaryPl ;
 
     LEXICON NOUN2_F_PostBoundarySg
-    +Indef:0                     NullCase ;
-    +Indef+Voc:ay                Clitics ;
-    +Indef+Gen:aa´d               Clitics ; 
+           +Indef:0       NullCase               ;
+       +Indef+Voc:ay      Clitics                ;
+       +Indef+Gen:aa´d    Clitics                ;
 
-    +Def:t                       SgProximity ;
-    +Def+Voc:tay                 Clitics ;
+             +Def:t       SgProximity            ;
+         +Def+Voc:tay     Clitics                ;
 
     LEXICON NOUN2_F_PostBoundaryPl
-    +Indef:yo%>                NullCase/Clitics ; 
-    :y                       FemPl ;
+           +Indef:yo%>    NullCase/Clitics       ;
+                 :y       FemPl                  ;
 
 
 ! TODO: galáb galbáha, or gálbaha?
-LEXICON NOUN3_F 
+LEXICON NOUN3_F
 
-    @P.Gender.Fem@          _N_3_F_Sg_PB ;
-    @P.Gender.Masc@         _N_3_F_Pl_PB ;
+    @P.Gender.Fem@        _N_3_F_Sg_PB           ;
+   @P.Gender.Masc@        _N_3_F_Pl_PB           ;
 
-    NIMO ;
+                          NIMO                   ;
 
     LEXICON _N_3_F_Sg_PB
-        +N+Decl/3+Fem+Sg:´%>{N}        NOUN3_F_PostBoundarySg ;
+  +N+Decl/3+Fem+Sg:´%>{N} NOUN3_F_PostBoundarySg ;
 
     LEXICON _N_3_F_Pl_PB
-        +N+Decl/3+Masc+Pl:´%>{N}       NOUN3_F_PostBoundaryPl ;
+ +N+Decl/3+Masc+Pl:´%>{N} NOUN3_F_PostBoundaryPl ;
 
 
     LEXICON NOUN3_F_PostBoundarySg
-    +Indef:0                     NullCase ;
-    +Indef+Voc:ay                Clitics ;
+            +Indef:0      NullCase               ;
+        +Indef+Voc:ay     Clitics                ;
 
-    +Def:t                       SgProximity ;
-    +Def+Voc:tay                 Clitics ;
+              +Def:t      SgProximity            ;
+          +Def+Voc:tay    Clitics                ;
 
 
     LEXICON NOUN3_F_PostBoundaryPl
-    +Pl+Indef:o%>               NullCase/Clitics ; 
+         +Pl+Indef:o%>    NullCase/Clitics       ;
 
-                                 MascPl ; ! (a?)
-    +Indef+Gen:oo´d               Clitics ; 
-    +Def+Gen:ahood               Clitics ; 
+                          MascPl                 ; ! (a?)
+        +Indef+Gen:oo´d   Clitics                ;
+          +Def+Gen:ahood  Clitics                ;
     ! TODO: Need to check these with a corpus (why did I write this?)
 
 
@@ -298,121 +298,121 @@ LEXICON NOUN3_F
 ! D3_M
 ! TODO: tone in plurals?
 LEXICON NOUN3_M
-    @P.Gender.Masc@             _N_3_M_Sg_PB ;
-    @P.Gender.Masc@             _N_3_M_Pl_PB ;
+   @P.Gender.Masc@         _N_3_M_Sg_PB           ;
+   @P.Gender.Masc@         _N_3_M_Pl_PB           ;
 
-    NIMO ;
+                           NIMO                   ;
 
     LEXICON _N_3_M_Sg_PB
-        +N+Decl/3+Masc+Sg:´´%>{N}          NOUN3_M_PostBoundarySg ;
+ +N+Decl/3+Masc+Sg:´´%>{N} NOUN3_M_PostBoundarySg ;
 
     LEXICON _N_3_M_Pl_PB
-        +N+Decl/3+Masc+Pl:´%>{N}           NOUN3_M_PostBoundaryPl ;
+ +N+Decl/3+Masc+Pl:´%>{N}  NOUN3_M_PostBoundaryPl ;
 
     LEXICON NOUN3_M_PostBoundarySg
-    +Indef:0                     NullCase ;
-    +Indef+Voc:ow                Clitics ;
+            +Indef:0       NullCase               ;
+        +Indef+Voc:ow      Clitics                ;
 
-    +Def:k                       SgProximity ;
-    +Def+Voc:kow                 Clitics ;
+              +Def:k       SgProximity            ;
+          +Def+Voc:kow     Clitics                ;
 
     LEXICON NOUN3_M_PostBoundaryPl
-    +Indef:o%>                  NullCase/Clitics ;
-                                 MascPl ;
-    +Def+Gen:ahood               Clitics ; 
-    +Indef+Gen:oo´d               Clitics ; 
+            +Indef:o%>     NullCase/Clitics       ;
+                           MascPl                 ;
+          +Def+Gen:ahood   Clitics                ;
+        +Indef+Gen:oo´d    Clitics                ;
 
 ! TODO: genitives?
 LEXICON Arabic/PlOnly_F
 
-    @P.Gender.Fem@      _Arabic_Pl_F ;
+          @P.Gender.Fem@        _Arabic_Pl_F ;
 
     LEXICON _Arabic_Pl_F
-    +N+Decl/A+Fem+Pl:´%>{N}        Fem ;
-    +N+Decl/A+Fem+Pl+Indef:0                    NullCase ;
+        +N+Decl/A+Fem+Pl:´%>{N} Fem          ;
+  +N+Decl/A+Fem+Pl+Indef:0      NullCase     ;
 
     LEXICON Arabic/PlOnly_M
-        @P.Gender.Masc@      _Arabic_Pl_M ;
+         @P.Gender.Masc@        _Arabic_Pl_M ;
 
     LEXICON _Arabic_Pl_M
-    +N+Decl/A+Masc+Pl:´%>{N}       Masc ;
-    +N+Decl/A+Masc+Pl+Indef:0                   NullCase ;
+       +N+Decl/A+Masc+Pl:´%>{N} Masc         ;
+ +N+Decl/A+Masc+Pl+Indef:0      NullCase     ;
 
 LEXICON NOUN4_M
 
-    @P.Gender.Masc@      _N_4_M_Sg_PB ;
-    @P.Gender.Masc@     _N_4_M_Pl_PB ;
+   @P.Gender.Masc@                   _N_4_M_Sg_PB                ;
+   @P.Gender.Masc@                   _N_4_M_Pl_PB                ;
 
-    NIMO ;
+                                     NIMO                        ;
 
     LEXICON NOUN4_FF
-        @P.Gender.Fem@      _N_4_F_Sg_PB ;
-        @P.Gender.Fem@      _N_4_F_Pl_PB ;
+    @P.Gender.Fem@                   _N_4_F_Sg_PB                ;
+    @P.Gender.Fem@                   _N_4_F_Pl_PB                ;
 
     LEXICON NOUN4_FM
-        @P.Gender.Fem@      _N_4_F_Sg_PB ;
-        @P.Gender.Masc@     _N_4_M_Pl_PB ;
+    @P.Gender.Fem@                   _N_4_F_Sg_PB                ;
+   @P.Gender.Masc@                   _N_4_M_Pl_PB                ;
 
     LEXICON NOUN4_MF
-        @P.Gender.Masc@      _N_4_M_Sg_PB ;
-        @P.Gender.Fem@       _N_4_F_Pl_PB ;
+   @P.Gender.Masc@                   _N_4_M_Sg_PB                ;
+    @P.Gender.Fem@                   _N_4_F_Pl_PB                ;
 
     LEXICON _N_4_F_Sg_PB
-        +N+Decl/4+Fem+Sg:´%>{N}       NOUN4_F_PostBoundarySg ;
+  +N+Decl/4+Fem+Sg:´%>{N}            NOUN4_F_PostBoundarySg      ;
 
     LEXICON _N_4_M_Sg_PB
-        +N+Decl/4+Masc+Sg:´´%>{N}     NOUN4_M_PostBoundarySg ;
+ +N+Decl/4+Masc+Sg:´´%>{N}           NOUN4_M_PostBoundarySg      ;
 
     LEXICON _N_4_F_Pl_PB
-        +N+Decl/4+Fem+Pl:´%>{N}       NOUN4_F_PostBoundaryPl ;
+  +N+Decl/4+Fem+Pl:´%>{N}            NOUN4_F_PostBoundaryPl      ;
 
     LEXICON _N_4_M_Pl_PB
-        +N+Decl/4+Masc+Pl:´´%>{N}     NOUN4_M_PostBoundaryPl ;
+ +N+Decl/4+Masc+Pl:´´%>{N}           NOUN4_M_PostBoundaryPl      ;
 
 
     LEXICON NOUN4_M_PostBoundarySg
-    +Indef:0                     NullCase ;
-    +Indef+Voc:ow                Clitics ;
+            +Indef:0                 NullCase                    ;
+        +Indef+Voc:ow                Clitics                     ;
 
-    +Def:k                       SgProximity ;
-    +Def+Voc:kow                 Clitics ;
+              +Def:k                 SgProximity                 ;
+          +Def+Voc:kow               Clitics                     ;
 
 
     LEXICON NOUN4_M_PostBoundaryPl
-    +Indef:a{C2}%>              NullCase/Clitics ;
-    +Def:a{C2}                     Masc ;
+            +Indef:a{C2}%>           NullCase/Clitics            ;
+              +Def:a{C2}             Masc                        ;
     ! Pl definite morphemes same as sg.  wanka, wananka
 
 
     LEXICON NOUN4_M_Full
-    +N+Decl/4+Masc+Sg:´%>{N}       NOUN4_M_Full_PostBoundarySg ;
-    +N+Decl/4+Masc+Pl:´%>{N}       NOUN4_M_Full_PostBoundaryPl ;
+ +N+Decl/4+Masc+Sg:´%>{N}            NOUN4_M_Full_PostBoundarySg ;
+ +N+Decl/4+Masc+Pl:´%>{N}            NOUN4_M_Full_PostBoundaryPl ;
 
 
     LEXICON NOUN4_M_Full_PostBoundarySg
-    +Indef:0                     NullCase ;
-    +Indef+Voc:ow                Clitics ;
+            +Indef:0                 NullCase                    ;
+        +Indef+Voc:ow                Clitics                     ;
 
-    +Def:k                       SgProximity ;
-    +Def+Voc:kow                 Clitics ;
+              +Def:k                 SgProximity                 ;
+          +Def+Voc:kow               Clitics                     ;
 
 
     LEXICON NOUN4_M_Full_PostBoundaryPl
-    +Indef:{C3A}{C3B}{C3C}%>                NullCase/Clitics ;
-    +Def:{C3A}{C3B}{C3C}                   Masc ;
+            +Indef:{C3A}{C3B}{C3C}%> NullCase/Clitics            ;
+              +Def:{C3A}{C3B}{C3C}   Masc                        ;
     ! Pl definite morphemes same as sg.  wanka, wananka
 
 
     LEXICON NOUN4_F_PostBoundarySg
-    +Indef:0                     NullCase ;
-    +Indef+Voc:ow                Clitics ;
+            +Indef:0                 NullCase                    ;
+        +Indef+Voc:ow                Clitics                     ;
 
-    +Def:t                       SgProximity ;
-    +Def+Voc:tay                 Clitics ;
+              +Def:t                 SgProximity                 ;
+          +Def+Voc:tay               Clitics                     ;
 
     LEXICON NOUN4_F_PostBoundaryPl
-    +Indef:a{C2}%>              NullCase/Clitics ;
-    +Def:a{C2}                    Fem ; 
+            +Indef:a{C2}%>           NullCase/Clitics            ;
+              +Def:a{C2}             Fem                         ;
     ! Pl definite morphemes same as sg.  wanka, wananka
 
 
@@ -420,223 +420,223 @@ LEXICON NOUN4_M
 ! ug, dhag supplied
 LEXICON NOUN4_UGAX
 
-    @P.Gender.Masc@         _N_4_UGAX_Sg_PB ;
-    @P.Gender.Fem@          _N_4_UGAX_Pl_PB ;
+   @P.Gender.Masc@         _N_4_UGAX_Sg_PB           ;
+    @P.Gender.Fem@         _N_4_UGAX_Pl_PB           ;
 
     LEXICON _N_4_UGAX_Sg_PB
-        +N+Decl/4+Masc+Sg:´´%>{N}     NOUN4_UGAX_PostBoundarySg ;
+ +N+Decl/4+Masc+Sg:´´%>{N} NOUN4_UGAX_PostBoundarySg ;
 
     LEXICON _N_4_UGAX_Pl_PB
-        +N+Decl/4+Fem+Pl:´´%>{N}      NOUN4_UGAX_PostBoundaryPl ;
+  +N+Decl/4+Fem+Pl:´´%>{N} NOUN4_UGAX_PostBoundaryPl ;
 
     LEXICON NOUN4_UGAX_PostBoundarySg
-    +Indef:ax                    NullCase ;
-    +Indef+Voc:axow              Clitics ;
+            +Indef:ax      NullCase                  ;
+        +Indef+Voc:axow    Clitics                   ;
 
-    +Def:ax                      SgProximity ;
-    +Def+Voc:ow                  Clitics ;
+              +Def:ax      SgProximity               ;
+          +Def+Voc:ow      Clitics                   ;
 
     LEXICON NOUN4_UGAX_PostBoundaryPl
-    +Indef:xan%>              NullCase/Clitics ;
-    +Def:xan                    Fem ;
+            +Indef:xan%>   NullCase/Clitics          ;
+              +Def:xan     Fem                       ;
 
 LEXICON NOUN5_M
 
-    @P.Gender.Masc@          _N_5_M_Sg_PB ;
-    @P.Gender.Fem@           _N_5_F_Sg_PB ;
+   @P.Gender.Masc@         _N_5_M_Sg_PB           ;
+    @P.Gender.Fem@         _N_5_F_Sg_PB           ;
 
-    NIMO ;
+                           NIMO                   ;
 
     LEXICON _N_5_M_Sg_PB
-        +N+Decl/5+Masc+Sg:´´%>{N}      NOUN5_M_PostBoundarySg ;
+ +N+Decl/5+Masc+Sg:´´%>{N} NOUN5_M_PostBoundarySg ;
 
     LEXICON _N_5_F_Sg_PB
-        +N+Decl/5+Fem+Pl:´%>{N}        NOUN5_M_PostBoundaryPl ;
+  +N+Decl/5+Fem+Pl:´%>{N}  NOUN5_M_PostBoundaryPl ;
 
     LEXICON NOUN5_M_PostBoundarySg
-    +Indef:0                     NullCase ;
-    +Indef+Voc:ow                Clitics ;
+            +Indef:0       NullCase               ;
+        +Indef+Voc:ow      Clitics                ;
 
     ! buuggayga
-    +Def:k                       SgProximity ;
-    +Def+Voc:kow                 Clitics ;
+              +Def:k       SgProximity            ;
+          +Def+Voc:kow     Clitics                ;
 
 
     ! Tonal plural
     LEXICON NOUN5_M_PostBoundaryPl
-    +Indef:%>                     NullCase/Clitics ;           
-    +Def:t       SgProximity ;      
+            +Indef:%>      NullCase/Clitics       ;
+              +Def:t       SgProximity            ;
 
-    +Def+Gen:tood´       Clitics ;      
-    +Indef+Gen:ood´          Clitics ;      
+          +Def+Gen:tood´   Clitics                ;
+        +Indef+Gen:ood´    Clitics                ;
 
 LEXICON NOUN6_M
 
-    @P.Gender.Masc@          _N_6_M_Sg_PB ;
-    @P.Gender.Masc@          _N_6_M_Pl_PB ;
+ @P.Gender.Masc@ _N_6_M_Sg_PB ;
+ @P.Gender.Masc@ _N_6_M_Pl_PB ;
 
-    NIMO ;
+                 NIMO         ;
 
 LEXICON NOUN6_F
 
-    @P.Gender.Fem@           _N_6_F_Sg_PB ;
-    @P.Gender.Masc@          _N_6_M_Pl_PB ;
+    @P.Gender.Fem@           _N_6_F_Sg_PB           ;
+   @P.Gender.Masc@           _N_6_M_Pl_PB           ;
 
-    NIMO ;
+                             NIMO                   ;
 
     LEXICON NOUN6_F/SgOnly
-        @P.Gender.Fem@           _N_6_F_Sg_PB ;
+    @P.Gender.Fem@           _N_6_F_Sg_PB           ;
 
     LEXICON _N_6_M_Sg_PB
-        +N+Decl/6+Masc+Sg:´´%>{N}      NOUN6_M_PostBoundarySg ;
+ +N+Decl/6+Masc+Sg:´´%>{N}   NOUN6_M_PostBoundarySg ;
 
     LEXICON _N_6_F_Sg_PB
-        +N+Decl/6+Fem+Sg:´%>{N}        NOUN6_F_PostBoundarySg ;
+  +N+Decl/6+Fem+Sg:´%>{N}    NOUN6_F_PostBoundarySg ;
 
     LEXICON _N_6_M_Pl_PB
-        +N+Decl/6+Masc+Pl:´´%>{N}      NOUN6_F_PostBoundaryPl ;
+ +N+Decl/6+Masc+Pl:´´%>{N}   NOUN6_F_PostBoundaryPl ;
 
 
     LEXICON NOUN6_M_PostBoundarySg
-    +Indef:0               NullCase ;
-    +Indef+Voc:ow          Clitics ;
+            +Indef:0         NullCase               ;
+        +Indef+Voc:ow        Clitics                ;
 
-    +Def:h                 SgProximity ;
-    +Def+Voc:how           Clitics ;
+              +Def:h         SgProximity            ;
+          +Def+Voc:how       Clitics                ;
 
     LEXICON NOUN6_F_PostBoundarySg
-    +Indef:0                     NullCase ;
-    +Indef+Voc:ay                Clitics ;
+            +Indef:0         NullCase               ;
+        +Indef+Voc:ay        Clitics                ;
 
-    +Def:t                       SgProximity ;
-    +Def+Voc:tay                 Clitics ;
+              +Def:t         SgProximity            ;
+          +Def+Voc:tay       Clitics                ;
 
 
     LEXICON NOUN6_F_PostBoundaryPl
-    +Indef:oyin                  NullCase/Clitics ;    
-    +Def:oyin                    Masc ;
+            +Indef:oyin      NullCase/Clitics       ;
+              +Def:oyin      Masc                   ;
 
-    +Def+Gen:oyinkood´                   Clitics ;
+          +Def+Gen:oyinkood´ Clitics                ;
 
 
 ! TODO: some of these should be "retired", need to try to use M_M, M_F, M_MF consistently
 LEXICON NOUN7_M
 
-    @P.Gender.Masc@         _N_7_M_g_Sg_PB ;
-    @P.Gender.Fem@          _N_7_F_Sg_PB ;
+       @P.Gender.Masc@            _N_7_M_g_Sg_PB             ;
+        @P.Gender.Fem@            _N_7_F_Sg_PB               ;
 
-    NIMO ;
+                                  NIMO                       ;
 
     LEXICON _N_7_M_g_Sg_PB
-        +N+Decl/7+Masc+Sg:{e}´´%>{N}      NOUN7_M_PostBoundarySg_g ;
-        +N+Decl/7+Masc+Sg+Voc:%>{N}ow      Clitics ;
+     +N+Decl/7+Masc+Sg:{e}´´%>{N} NOUN7_M_PostBoundarySg_g   ;
+ +N+Decl/7+Masc+Sg+Voc:%>{N}ow    Clitics                    ;
 
     LEXICON _N_7_F_Sg_PB
-        +N+Decl/7+Fem+Pl:{e}´%>{N}        NOUN7_M_PostBoundaryPl/Fem ;
+      +N+Decl/7+Fem+Pl:{e}´%>{N}  NOUN7_M_PostBoundaryPl/Fem ;
 
 LEXICON NOUN7_M/e
 
-    @P.Gender.Masc@  _N_7_M_e_Sg_PB ;
-    @P.Gender.Fem@   _N_7_M_e_Pl_PB ;
+       @P.Gender.Masc@                _N_7_M_e_Sg_PB             ;
+        @P.Gender.Fem@                _N_7_M_e_Pl_PB             ;
 
-    NIMO ;
+                                      NIMO                       ;
 
     LEXICON _N_7_M_e_Sg_PB
-        +N+Decl/7+Masc+Sg:{-e}{e}´´%>{N}      NOUN7_M_PostBoundarySg_g ;
-        +N+Decl/7+Masc+Sg+Voc:{-e}%>{N}ow      Clitics ;
+     +N+Decl/7+Masc+Sg:{-e}{e}´´%>{N} NOUN7_M_PostBoundarySg_g   ;
+ +N+Decl/7+Masc+Sg+Voc:{-e}%>{N}ow    Clitics                    ;
 
     LEXICON _N_7_M_e_Pl_PB
-        +N+Decl/7+Fem+Pl:{-e}{e}´%>{N}        NOUN7_M_PostBoundaryPl/Fem ;
+      +N+Decl/7+Fem+Pl:{-e}{e}´%>{N}  NOUN7_M_PostBoundaryPl/Fem ;
 
 LEXICON NOUN7_M_M/e
 
-    @P.Gender.Masc@  _N_7_M_M_e_Sg_PB ;
-    @P.Gender.Masc@   _N_7_M_M_e_Pl_PB ;
+       @P.Gender.Masc@                _N_7_M_M_e_Sg_PB            ;
+       @P.Gender.Masc@                _N_7_M_M_e_Pl_PB            ;
 
-    NIMO ;
+                                      NIMO                        ;
 
     LEXICON _N_7_M_M_e_Sg_PB
-        +N+Decl/7+Masc+Sg:{-e}{e}´´%>{N}      NOUN7_M_PostBoundarySg_g ;
-        +N+Decl/7+Masc+Sg+Voc:{-e}%>{N}ow      Clitics ;
+     +N+Decl/7+Masc+Sg:{-e}{e}´´%>{N} NOUN7_M_PostBoundarySg_g    ;
+ +N+Decl/7+Masc+Sg+Voc:{-e}%>{N}ow    Clitics                     ;
 
     LEXICON _N_7_M_M_e_Pl_PB
-        +N+Decl/7+Masc+Pl:{-e}{e}´%>{N}        NOUN7_M_PostBoundaryPl/Masc ;
+     +N+Decl/7+Masc+Pl:{-e}{e}´%>{N}  NOUN7_M_PostBoundaryPl/Masc ;
 
 LEXICON NOUN7_M_F/e
 
-    @P.Gender.Masc@  _N_7_M_F_e_Sg_PB ;
-    @P.Gender.Fem@   _N_7_M_F_e_Pl_PB ;
+       @P.Gender.Masc@                _N_7_M_F_e_Sg_PB           ;
+        @P.Gender.Fem@                _N_7_M_F_e_Pl_PB           ;
 
-    NIMO ;
+                                      NIMO                       ;
 
     LEXICON _N_7_M_F_e_Sg_PB
-        +N+Decl/7+Masc+Sg:{-e}{e}´´%>{N}      NOUN7_M_PostBoundarySg_g ;
-        +N+Decl/7+Masc+Sg+Voc:{-e}%>{N}ow      Clitics ;
+     +N+Decl/7+Masc+Sg:{-e}{e}´´%>{N} NOUN7_M_PostBoundarySg_g   ;
+ +N+Decl/7+Masc+Sg+Voc:{-e}%>{N}ow    Clitics                    ;
 
-    LEXICON _N_7_M_F_e_Pl_PB    
-        +N+Decl/7+Fem+Pl:{-e}{e}´%>{N}        NOUN7_M_PostBoundaryPl/Fem ;
+    LEXICON _N_7_M_F_e_Pl_PB
+      +N+Decl/7+Fem+Pl:{-e}{e}´%>{N}  NOUN7_M_PostBoundaryPl/Fem ;
 
 ! Masc in Sg., Masc or Fem in Pl, lemma ends on -i
 LEXICON NOUN7_M_MF/i
 
-    @P.Gender.Masc@             _N_7_M_i_MF_Sg_PB ;
-    @P.Gender.Masc@             _N_7_M_i_MF_M_Pl_PB ;
-    @P.Gender.Fem@              _N_7_M_i_MF_F_Pl_PB ;
+   @P.Gender.Masc@         _N_7_M_i_MF_Sg_PB           ;
+   @P.Gender.Masc@         _N_7_M_i_MF_M_Pl_PB         ;
+    @P.Gender.Fem@         _N_7_M_i_MF_F_Pl_PB         ;
 
-    NIMO ;
+                           NIMO                        ;
 
     LEXICON _N_7_M_i_MF_Sg_PB
-        +N+Decl/7+Masc+Sg:´´%>{N}      NOUN7_M_PostBoundarySg_g ;
+ +N+Decl/7+Masc+Sg:´´%>{N} NOUN7_M_PostBoundarySg_g    ;
 
     LEXICON _N_7_M_i_MF_M_Pl_PB
-        +N+Decl/7+Masc+Pl:´%>{N}        NOUN7_M_PostBoundaryPl/Masc ;
+ +N+Decl/7+Masc+Pl:´%>{N}  NOUN7_M_PostBoundaryPl/Masc ;
 
     LEXICON _N_7_M_i_MF_F_Pl_PB
-        +N+Decl/7+Fem+Pl:´%>{N}        NOUN7_M_PostBoundaryPl/Fem ;
+  +N+Decl/7+Fem+Pl:´%>{N}  NOUN7_M_PostBoundaryPl/Fem  ;
 
 
 
 LEXICON NOUN7_M_MF/e
 
-    @P.Gender.Masc@             _N_7_M_e_MF_Sg_PB ;
-    @P.Gender.Masc@             _N_7_M_e_MF_M_Pl_PB ;
-    @P.Gender.Fem@              _N_7_M_e_MF_F_Pl_PB ;
+       @P.Gender.Masc@                _N_7_M_e_MF_Sg_PB           ;
+       @P.Gender.Masc@                _N_7_M_e_MF_M_Pl_PB         ;
+        @P.Gender.Fem@                _N_7_M_e_MF_F_Pl_PB         ;
 
-    NIMO ;
+                                      NIMO                        ;
 
     LEXICON _N_7_M_e_MF_Sg_PB
-        +N+Decl/7+Masc+Sg:{-e}{e}´´%>{N}      NOUN7_M_PostBoundarySg_g ;
-        +N+Decl/7+Masc+Sg+Voc:{-e}%>{N}ow      Clitics ;
+     +N+Decl/7+Masc+Sg:{-e}{e}´´%>{N} NOUN7_M_PostBoundarySg_g    ;
+ +N+Decl/7+Masc+Sg+Voc:{-e}%>{N}ow    Clitics                     ;
 
     LEXICON _N_7_M_e_MF_M_Pl_PB
-        +N+Decl/7+Masc+Pl:{-e}{e}´%>{N}        NOUN7_M_PostBoundaryPl/Masc ;
+     +N+Decl/7+Masc+Pl:{-e}{e}´%>{N}  NOUN7_M_PostBoundaryPl/Masc ;
 
     LEXICON _N_7_M_e_MF_F_Pl_PB
-        +N+Decl/7+Fem+Pl:{-e}{e}´%>{N}        NOUN7_M_PostBoundaryPl/Fem ;
+      +N+Decl/7+Fem+Pl:{-e}{e}´%>{N}  NOUN7_M_PostBoundaryPl/Fem  ;
 
 LEXICON NOUN7_M_MF
 
-    @P.Gender.Masc@             _N_7_M_MF_Sg_PB ;
-    @P.Gender.Masc@             _N_7_M_MF_M_Pl_PB ;
-    @P.Gender.Fem@              _N_7_M_MF_F_Pl_PB ;
+       @P.Gender.Masc@          _N_7_M_MF_Sg_PB             ;
+       @P.Gender.Masc@          _N_7_M_MF_M_Pl_PB           ;
+        @P.Gender.Fem@          _N_7_M_MF_F_Pl_PB           ;
 
-    NIMO ;
+                                NIMO                        ;
 
     LEXICON _N_7_M_MF_Sg_PB
-        +N+Decl/7+Masc+Sg:´´%>{N}      NOUN7_M_PostBoundarySg_g ;
-        +N+Decl/7+Masc+Sg+Voc:%>{N}ow      Clitics ;
+     +N+Decl/7+Masc+Sg:´´%>{N}  NOUN7_M_PostBoundarySg_g    ;
+ +N+Decl/7+Masc+Sg+Voc:%>{N}ow  Clitics                     ;
 
     LEXICON _N_7_M_MF_M_Pl_PB
-        +N+Decl/7+Masc+Pl:´%>{N}        NOUN7_M_PostBoundaryPl/Masc ;
+     +N+Decl/7+Masc+Pl:´%>{N}   NOUN7_M_PostBoundaryPl/Masc ;
 
     LEXICON _N_7_M_MF_F_Pl_PB
-        +N+Decl/7+Fem+Pl:´%>{N}        NOUN7_M_PostBoundaryPl/Fem ;
+      +N+Decl/7+Fem+Pl:´%>{N}   NOUN7_M_PostBoundaryPl/Fem  ;
 
 
 
     LEXICON NOUN7_M_PostBoundarySg_g
-    +Indef:0                     NullCase ;
-    +Def:h                       SgProximity ;
+                +Indef:0        NullCase                    ;
+                  +Def:h        SgProximity                 ;
 
 
     ! Subtype: wabiga / wabiyaal, odayga, odayaal
@@ -644,84 +644,84 @@ LEXICON NOUN7_M_MF
 
 
     LEXICON NOUN7_M_PostBoundaryPl
-    +Indef:yaal                  NullCase/Clitics ;    
-    +Indef+Gen:yaalood´                    Clitics ;
-    +Def:yaal                    Fem ;
+                +Indef:yaal     NullCase/Clitics            ;
+            +Indef+Gen:yaalood´ Clitics                     ;
+                  +Def:yaal     Fem                         ;
 
     LEXICON NOUN7_M_PostBoundaryPl/Fem
-    +Indef:yaal                  NullCase/Clitics ;    
-    +Indef+Gen:yaalood´                    Clitics ;
-    +Def:yaal                    Fem ;
+                +Indef:yaal     NullCase/Clitics            ;
+            +Indef+Gen:yaalood´ Clitics                     ;
+                  +Def:yaal     Fem                         ;
 
     LEXICON NOUN7_M_PostBoundaryPl/Masc
-    +Indef:yaal                  NullCase/Clitics ;    
-    +Indef+Gen:yaalood´                    Clitics ;
-    +Def:yaal                    Masc ;
+                +Indef:yaal     NullCase/Clitics            ;
+            +Indef+Gen:yaalood´ Clitics                     ;
+                  +Def:yaal     Masc                        ;
 
-    ! TODO: oday ? 
+    ! TODO: oday ?
     LEXICON NOUN7_M_GA
-        @P.Gender.Masc@     _N_7_M_GA_Sg_PB ;
-        @P.Gender.Fem@      _N_7_M_GA_Pl_PB ;
+       @P.Gender.Masc@          _N_7_M_GA_Sg_PB             ;
+        @P.Gender.Fem@          _N_7_M_GA_Pl_PB             ;
 
     LEXICON _N_7_M_GA_Sg_PB
-        +N+Decl/7+Masc+Sg:´´%>{N}      NOUN7_M_PostBoundarySg_ga ;
+     +N+Decl/7+Masc+Sg:´´%>{N}  NOUN7_M_PostBoundarySg_ga   ;
 
     LEXICON _N_7_M_GA_Pl_PB
-        +N+Decl/7+Fem+Pl:´%>{N}        NOUN7_M_PostBoundaryPl_ga ;
+      +N+Decl/7+Fem+Pl:´%>{N}   NOUN7_M_PostBoundaryPl_ga   ;
 
     LEXICON NOUN7_M_PostBoundarySg_ga
-    +Indef:0                     NullCase ;
-    +Def:g                       SgProximity ;
+                +Indef:0        NullCase                    ;
+                  +Def:g        SgProximity                 ;
 
     LEXICON NOUN7_M_PostBoundaryPl_ga
-    +Indef:aal                  NullCase/Clitics ;    
-    +Def:aal                    Fem ;
-    +Def+Gen:aalood´                    Clitics ;
+                +Indef:aal      NullCase/Clitics            ;
+                  +Def:aal      Fem                         ;
+              +Def+Gen:aalood´  Clitics                     ;
 
     LEXICON NOUN7_M_PostBoundarySg_h
-    +Indef:0                     NullCase ;
-    +Def:h                       SgProximity ;
+                +Indef:0        NullCase                    ;
+                  +Def:h        SgProximity                 ;
 
 
 ! TODO: tone?
 ! Expecting gender morphemes, t/d/k/g
 LEXICON SgProximity
 
-                    Possessive ; ! Should there be a morpheme boundary here? 
+                                 Possessive ; ! Should there be a morpheme boundary here?
 
-@R.Gender.Masc@         MascVoc ;
-@R.Gender.Fem@          FemVoc ;
+           @R.Gender.Masc@       MascVoc    ;
+            @R.Gender.Fem@       FemVoc     ;
 
-+Abs+Prox:a             Clitics ;
-+Gen+Prox:a             Clitics ;
+                 +Abs+Prox:a     Clitics    ;
+                 +Gen+Prox:a     Clitics    ;
 
-+Nom+Prox:u             Clitics ;
-+Abs+Dist:ii            Clitics ;
-+Nom+Dist:ii            Clitics ;
+                 +Nom+Prox:u     Clitics    ;
+                 +Abs+Dist:ii    Clitics    ;
+                 +Nom+Dist:ii    Clitics    ;
 ! break ablaut path for -ii and -u #ablaut
-+Abs+Dist+Use/NG+Err/Orth:{X}ii            Clitics ;
-+Nom+Dist+Use/NG+Err/Orth:{X}ii            Clitics ;
-+Nom+Prox+Use/NG+Err/Orth:{X}u             Clitics ;
+ +Abs+Dist+Use/NG+Err/Orth:{X}ii Clitics    ;
+ +Nom+Dist+Use/NG+Err/Orth:{X}ii Clitics    ;
+ +Nom+Prox+Use/NG+Err/Orth:{X}u  Clitics    ;
 
-+Abs+Close:an           Clitics ;
-+Nom+Close:anu          Clitics ;
-+Nom+Close:ani          Clitics ;
+                +Abs+Close:an    Clitics    ;
+                +Nom+Close:anu   Clitics    ;
+                +Nom+Close:ani   Clitics    ;
 
-+Abs+Near:aas           Clitics ;   
-+Nom+Near:aasu          Clitics ;   
-+Nom+Near:aasi          Clitics ;   
+                 +Abs+Near:aas   Clitics    ;
+                 +Nom+Near:aasu  Clitics    ;
+                 +Nom+Near:aasi  Clitics    ;
 
-+Abs+Far:eer            Clitics ;   
-+Nom+Far:eeri           Clitics ;   
+                  +Abs+Far:eer   Clitics    ;
+                  +Nom+Far:eeri  Clitics    ;
 
-+Abs+Farther:oo         Clitics ;   
-+Nom+Farther:ooyi       Clitics ;   
+              +Abs+Farther:oo    Clitics    ;
+              +Nom+Farther:ooyi  Clitics    ;
 
-+Gen:eed´           Clitics ;
+                      +Gen:eed´  Clitics    ;
 
-+Q:ee           FINAL ; ! TODO: clitics?
+                        +Q:ee    FINAL      ; ! TODO: clitics?
 
-! Long forms (abs) 
+! Long forms (abs)
 ! 1Sg      káyga            táyda
 ! 2Sg      káaga            táada
 ! 3SgM     kíisa            tíisa
@@ -733,14 +733,14 @@ LEXICON SgProximity
 
 
 LEXICON MascVoc
-  +Voc:ow Clitics ;
+ +Voc:ow Clitics ;
 LEXICON FemVoc
-  +Voc:ay Clitics ;
+ +Voc:ay Clitics ;
 
 ! Short forms
 !          Subj     Abs         Subj        Abs
-! 1Sg      káy      kaý         táy         taý 
-! 2Sg      káa      kaá         táa         taá 
+! 1Sg      káy      kaý         táy         taý
+! 2Sg      káa      kaá         táa         taá
 ! 3SgM     kíis     kiís        tíis        tiís
 !  SgF     kéed     keéd        téed        teéd
 ! 1PlI     kéen     keén        téen        teén
@@ -750,230 +750,230 @@ LEXICON FemVoc
 
 ! Tone test
 LEXICON Possessive
-+PxSg1:ay´´           PostPossSgGender ;
-+PxSg2:aa´´           PostPossSgGender ;
-+PxSg3M:iis´´               PostPossSgProx ;
+                  +PxSg1:ay´´     PostPossSgGender ;
+                  +PxSg2:aa´´     PostPossSgGender ;
+                 +PxSg3M:iis´´    PostPossSgProx   ;
 ! break ablaut path for -iis #ablaut
-+PxSg3M+Err/Orth+Use/NG:{X}iis´´               PostPossSgProx ;
-+PxSg3F:eed´´               PostPossSgProx ;
+ +PxSg3M+Err/Orth+Use/NG:{X}iis´´ PostPossSgProx   ;
+                 +PxSg3F:eed´´    PostPossSgProx   ;
 
-+PxPl1Incl:eenn´´           PostPossSgProx ; 
-+PxPl1Excl:aya´       PostPossSgGender ; 
-+PxPl2:iinn´´               PostPossSgProx ; 
-+PxPl3:ood´´                PostPossSgProx ; 
+              +PxPl1Incl:eenn´´   PostPossSgProx   ;
+              +PxPl1Excl:aya´     PostPossSgGender ;
+                  +PxPl2:iinn´´   PostPossSgProx   ;
+                  +PxPl3:ood´´    PostPossSgProx   ;
 
-+PxSg1+Nom:ay´´         Clitics ;
-+PxSg2+Nom:aa´´         Clitics ;
-+PxSg3M+Nom:iis´´           Clitics ;
-+PxSg3F+Nom:eed´´           Clitics ;
+              +PxSg1+Nom:ay´´     Clitics          ;
+              +PxSg2+Nom:aa´´     Clitics          ;
+             +PxSg3M+Nom:iis´´    Clitics          ;
+             +PxSg3F+Nom:eed´´    Clitics          ;
 
-+PxPl1Incl+Nom:een´´        Clitics ;  ! TODO: keena? abs?
-+PxPl1Excl+Nom:ayo      Clitics ; 
-+PxPl2+Nom:iin´´            Clitics ; 
-+PxPl3+Nom:ood´´            Clitics ; 
+          +PxPl1Incl+Nom:een´´    Clitics          ; ! TODO: keena? abs?
+          +PxPl1Excl+Nom:ayo      Clitics          ;
+              +PxPl2+Nom:iin´´    Clitics          ;
+              +PxPl3+Nom:ood´´    Clitics          ;
 
-+PxSg1+Abs:ay´          Clitics ;
-+PxSg2+Abs:aa´          Clitics ;
-+PxSg3M+Abs:iis´            Clitics ;
-+PxSg3F+Abs:eed´            Clitics ;
+              +PxSg1+Abs:ay´      Clitics          ;
+              +PxSg2+Abs:aa´      Clitics          ;
+             +PxSg3M+Abs:iis´     Clitics          ;
+             +PxSg3F+Abs:eed´     Clitics          ;
 
-+PxPl1Incl+Abs:een´     Clitics ; 
-+PxPl1Excl+Abs:ayo      Clitics ; 
-+PxPl1Excl+Voc:ayow      Clitics ; 
+          +PxPl1Incl+Abs:een´     Clitics          ;
+          +PxPl1Excl+Abs:ayo      Clitics          ;
+          +PxPl1Excl+Voc:ayow     Clitics          ;
 
-+PxPl2+Abs:iin´         Clitics ; 
-+PxPl3+Abs:ood´         Clitics ; 
+              +PxPl2+Abs:iin´     Clitics          ;
+              +PxPl3+Abs:ood´     Clitics          ;
 
-+PxSg1+Gen:ay´          Clitics ;
-+PxSg2+Gen:aa´          Clitics ;
-+PxSg3M+Gen:iis´            Clitics ;
-+PxSg3F+Gen:eed´            Clitics ;
+              +PxSg1+Gen:ay´      Clitics          ;
+              +PxSg2+Gen:aa´      Clitics          ;
+             +PxSg3M+Gen:iis´     Clitics          ;
+             +PxSg3F+Gen:eed´     Clitics          ;
 
-+PxPl1Incl+Gen:een´     Clitics ; 
-+PxPl1Excl+Gen:ayo      Clitics ; 
-+PxPl2+Gen:iin´         Clitics ; 
-+PxPl3+Gen:ood´         Clitics ; 
+          +PxPl1Incl+Gen:een´     Clitics          ;
+          +PxPl1Excl+Gen:ayo      Clitics          ;
+              +PxPl2+Gen:iin´     Clitics          ;
+              +PxPl3+Gen:ood´     Clitics          ;
 ! TODO: genitive in possessive?
 
 LEXICON PostPossSgGender
- @R.Gender.Masc@    PostPossSgGender_M ;
- @R.Gender.Fem@     PostPossSgGender_F ;
+ @R.Gender.Masc@ PostPossSgGender_M ;
+  @R.Gender.Fem@ PostPossSgGender_F ;
 
 LEXICON PostPossSgGender_M
- :g         PostPossSgProx ;
+ :g PostPossSgProx ;
 
 LEXICON PostPossSgGender_F
- :d         PostPossSgProx ;
+ :d PostPossSgProx ;
 
 ! proximity and case for after possessive suffixes
 ! Need to restrict to prevent loops to infinity
 LEXICON PostPossSgProx
-+Abs+Prox:a         Clitics ;
-+Gen+Prox:a         Clitics ; ! TODO: Gen? 
-+Nom+Prox:u         Clitics ;
-+Abs+Dist:ii´       Clitics ; ! TODO: check tones
-+Nom+Dist:ii´´      Clitics ;
-+Gen+Dist:ii´       Clitics ;
-+Voc:ow     Clitics ;
+       +Abs+Prox:a    Clitics             ;
+       +Gen+Prox:a    Clitics             ; ! TODO: Gen?
+       +Nom+Prox:u    Clitics             ;
+       +Abs+Dist:ii´  Clitics             ; ! TODO: check tones
+       +Nom+Dist:ii´´ Clitics             ;
+       +Gen+Dist:ii´  Clitics             ;
+            +Voc:ow   Clitics             ;
 
-@R.Gender.Masc@     PostPossDistVocMasc ;
-@R.Gender.Fem@     PostPossDistVocFem ;
+ @R.Gender.Masc@      PostPossDistVocMasc ;
+  @R.Gender.Fem@      PostPossDistVocFem  ;
 
 LEXICON PostPossDistVocMasc
-+Voc+Dist:ii´´yow Clitics ;
+ +Voc+Dist:ii´´yow Clitics ;
 
 LEXICON PostPossDistVocFem
-+Voc+Dist+Use/NG+Err/Orth:ii´´yay Clitics ;
-+Voc+Dist:ii´´yey Clitics ;
+ +Voc+Dist+Use/NG+Err/Orth:ii´´yay Clitics ;
+                 +Voc+Dist:ii´´yey Clitics ;
 
 
 ! TODO: more boundaries here?
 ! TODO: tones
-! TODO: -> proximity path? 
+! TODO: -> proximity path?
 LEXICON Masc
-+Abs+Near:%>kaas      Clitics ;
-+Gen+Near:%>kaas      Clitics ;
-+Nom+Near:%>kaasi      Clitics ;
+  +Abs+Near:%>kaas  Clitics    ;
+  +Gen+Near:%>kaas  Clitics    ;
+  +Nom+Near:%>kaasi Clitics    ;
 
-+Abs+Close:%>kan      Clitics ;
-+Gen+Close:%>kan      Clitics ;
-+Abs+Prox:%>ka      Clitics ;
-+Gen+Prox:%>ka      Clitics ;
-+Nom+Prox:%>ku      Clitics ;
-+Abs+Dist:%>kii     Clitics ;
-+Nom+Dist:%>kii     Clitics ;
-+Voc:%>kow     Clitics ;
-:%>k     Possessive ;
+ +Abs+Close:%>kan   Clitics    ;
+ +Gen+Close:%>kan   Clitics    ;
+  +Abs+Prox:%>ka    Clitics    ;
+  +Gen+Prox:%>ka    Clitics    ;
+  +Nom+Prox:%>ku    Clitics    ;
+  +Abs+Dist:%>kii   Clitics    ;
+  +Nom+Dist:%>kii   Clitics    ;
+       +Voc:%>kow   Clitics    ;
+           :%>k     Possessive ;
 
 LEXICON MascPl
-+Def+Abs+Near:ahaas      Clitics ;           
-+Def+Gen+Near:ahaas      Clitics ;           
-+Def+Nom+Near:ahaasi     Clitics ;           
-+Def+Nom+Near:ahaasu     Clitics ;           
+          +Def+Abs+Near:ahaas  Clitics    ;
+          +Def+Gen+Near:ahaas  Clitics    ;
+          +Def+Nom+Near:ahaasi Clitics    ;
+          +Def+Nom+Near:ahaasu Clitics    ;
 
-+Def+Abs+Close:ahan      Clitics ;           
-+Def+Gen+Close:ahan      Clitics ;           
-+Def+Abs+Prox:aha        Clitics ;           
-+Def+Gen+Prox:aha        Clitics ;           
-+Def+Nom+Prox:uhu        Clitics ;           
-+Def+Abs+Dist:ihii       Clitics ;           
-+Def+Nom+Dist:ihii       Clitics ;           
-+Def+Voc:ahow            Clitics ; ! TODO: ablaut here?
-:ah                      Possessive ;
+         +Def+Abs+Close:ahan   Clitics    ;
+         +Def+Gen+Close:ahan   Clitics    ;
+          +Def+Abs+Prox:aha    Clitics    ;
+          +Def+Gen+Prox:aha    Clitics    ;
+          +Def+Nom+Prox:uhu    Clitics    ;
+          +Def+Abs+Dist:ihii   Clitics    ;
+          +Def+Nom+Dist:ihii   Clitics    ;
+               +Def+Voc:ahow   Clitics    ; ! TODO: ablaut here?
+                       :ah     Possessive ;
 ! TODO: too much?
-:ih                      Possessive ;
+                       :ih     Possessive ;
 
-+Def+Abs+Dist+Err/Orth:ahii       Clitics ;           
-+Def+Nom+Dist+Err/Orth:ahii       Clitics ;           
+ +Def+Abs+Dist+Err/Orth:ahii   Clitics    ;
+ +Def+Nom+Dist+Err/Orth:ahii   Clitics    ;
 
-LEXICON Fem 
-+Abs+Close:%>taas      Clitics ;
-+Gen+Close:%>taas      Clitics ;
-+Nom+Close:%>taasi      Clitics ;
+LEXICON Fem
+ +Abs+Close:%>taas  Clitics    ;
+ +Gen+Close:%>taas  Clitics    ;
+ +Nom+Close:%>taasi Clitics    ;
 
-+Abs+Close:%>tan      Clitics ;
-+Gen+Close:%>tan      Clitics ;
-+Abs+Prox:%>ta      Clitics ;
-+Gen+Prox:%>ta      Clitics ;
-+Nom+Prox:%>tu      Clitics ;
-+Abs+Dist:%>tii     Clitics ;
-+Nom+Dist:%>tii     Clitics ;
-+Voc:%>tay        Clitics ;
-:%>t      Possessive ;
+ +Abs+Close:%>tan   Clitics    ;
+ +Gen+Close:%>tan   Clitics    ;
+  +Abs+Prox:%>ta    Clitics    ;
+  +Gen+Prox:%>ta    Clitics    ;
+  +Nom+Prox:%>tu    Clitics    ;
+  +Abs+Dist:%>tii   Clitics    ;
+  +Nom+Dist:%>tii   Clitics    ;
+       +Voc:%>tay   Clitics    ;
+           :%>t     Possessive ;
 
 
 LEXICON Fem/d
-+Abs+Near:%>daas      Clitics ;
-+Gen+Near:%>daas     Clitics ;
-+Nom+Near:%>daasi      Clitics ;
+  +Abs+Near:%>daas  Clitics    ;
+  +Gen+Near:%>daas  Clitics    ;
+  +Nom+Near:%>daasi Clitics    ;
 
-+Abs+Close:%>dan      Clitics ;
-+Gen+Close:%>dan      Clitics ;
-+Abs+Prox:%>da      Clitics ;
-+Gen+Prox:%>da      Clitics ;
-+Nom+Prox:%>du      Clitics ;
-+Abs+Dist:%>dii     Clitics ;
-+Nom+Dist:%>dii     Clitics ;
-+Voc:%>day        Clitics ;
-:%>d      Possessive ;
+ +Abs+Close:%>dan   Clitics    ;
+ +Gen+Close:%>dan   Clitics    ;
+  +Abs+Prox:%>da    Clitics    ;
+  +Gen+Prox:%>da    Clitics    ;
+  +Nom+Prox:%>du    Clitics    ;
+  +Abs+Dist:%>dii   Clitics    ;
+  +Nom+Dist:%>dii   Clitics    ;
+       +Voc:%>day   Clitics    ;
+           :%>d     Possessive ;
 
 
 LEXICON FemPl
-+Def+Abs+Near:%>adaas      Clitics ;  
-+Def+Gen+Near:%>adaas      Clitics ;  
-+Def+Nom+Near:%>adaasi      Clitics ;  
+  +Def+Abs+Near:%>adaas  Clitics    ;
+  +Def+Gen+Near:%>adaas  Clitics    ;
+  +Def+Nom+Near:%>adaasi Clitics    ;
 
-+Def+Abs+Close:%>adan      Clitics ;  
-+Def+Gen+Close:%>adan      Clitics ;  
-+Def+Abs+Prox:%>ada      Clitics ;  
-+Def+Gen+Prox:%>ada      Clitics ;  
-+Def+Nom+Prox:%>adu      Clitics ;  
-+Def+Abs+Dist:%>adii     Clitics ;  
-+Def+Nom+Dist:%>adii     Clitics ;  
-+Voc:%>aday              Clitics ;  
-:%>ad                    Possessive ;
+ +Def+Abs+Close:%>adan   Clitics    ;
+ +Def+Gen+Close:%>adan   Clitics    ;
+  +Def+Abs+Prox:%>ada    Clitics    ;
+  +Def+Gen+Prox:%>ada    Clitics    ;
+  +Def+Nom+Prox:%>adu    Clitics    ;
+  +Def+Abs+Dist:%>adii   Clitics    ;
+  +Def+Nom+Dist:%>adii   Clitics    ;
+           +Voc:%>aday   Clitics    ;
+               :%>ad     Possessive ;
 
 LEXICON IrregularNounMorph
-    MISC_N ;
-    WAXYAABO ;
-    SIYAABO ;
-    INDHA ;
-    NOUN7_M_BIYO ;
+  MISC_N       ;
+  WAXYAABO     ;
+  SIYAABO      ;
+  INDHA        ;
+  NOUN7_M_BIYO ;
 
 LEXICON MISC_N
-  ab+N:ab Clitics ;
+ ab+N:ab Clitics ;
 
 LEXICON NOUN7_M_BIYO
-biyo+N+Mass+Masc+Pl+Indef:biy%>{N}o     NullCase/Clitics ;
-biyo+N+Mass+Masc+Pl:biy%>{N}%>   MascPl ;
-biyo+N+Mass+Masc+Sg+Indef+Gen+Pl:biyood      NullCase/Clitics ; 
+        biyo+N+Mass+Masc+Pl+Indef:biy%>{N}o  NullCase/Clitics ;
+              biyo+N+Mass+Masc+Pl:biy%>{N}%> MascPl           ;
+ biyo+N+Mass+Masc+Sg+Indef+Gen+Pl:biyood     NullCase/Clitics ;
 
-! TODO: dhagaxyaalaha? 
+! TODO: dhagaxyaalaha?
 
 ! wax ~ waxa ~ waxyaalo/waxyaabo ~ waxyaalaha/waxyaabaha
 LEXICON WAXYAABO
 ! TODO: waxyaalahiisii, waxyaalihiisii. free var.
 ! Here are only the plurals, sg. is defined in lex.
-wax+N+Masc+Pl+Indef:wax%>{N}yaab%>o     NullCase/Clitics ;
-wax+N+Masc+Pl:wax%>{N}yaab%>    MascPl ;
+ wax+N+Masc+Pl+Indef:wax%>{N}yaab%>o  NullCase/Clitics ;
+       wax+N+Masc+Pl:wax%>{N}yaab%>   MascPl           ;
 
-wax+N+Masc+Pl+Indef:wax%>{N}yaalo%>     NullCase/Clitics ;
-wax+N+Masc+Pl+Indef:wax%>{N}yaallo%>     NullCase/Clitics ;
-wax+N+Masc+Pl:wax%>{N}yaal%>    MascPl ;
+ wax+N+Masc+Pl+Indef:wax%>{N}yaalo%>  NullCase/Clitics ;
+ wax+N+Masc+Pl+Indef:wax%>{N}yaallo%> NullCase/Clitics ;
+       wax+N+Masc+Pl:wax%>{N}yaal%>   MascPl           ;
 
 
 ! si ~ sida ~ siyaabo ~ siyaabaha/siyaalaha
 ! TODO: voc i def: siday, sidow?
 LEXICON SIYAABO
 
-si+N+Masc+Pl+Indef:si%>{N}yaab%>o   NullCase/Clitics ;
-si+N+Masc+Pl+Indef+Voc:so%>{N}w%>   FINAL ;
-si+N+Masc+Pl:si%>{N}yaab%>  MascPl ;
+     si+N+Masc+Pl+Indef:si%>{N}yaab%>o  NullCase/Clitics ;
+ si+N+Masc+Pl+Indef+Voc:so%>{N}w%>      FINAL            ;
+           si+N+Masc+Pl:si%>{N}yaab%>   MascPl           ;
 
-si+N+Masc+Pl+Indef:si%>{N}yaallo%>   NullCase/Clitics ;
-si+N+Masc+Pl+Indef:si%>{N}yaalo%>   NullCase/Clitics ;
-si+N+Masc+Pl:si%>{N}yaal%>  MascPl ;
+     si+N+Masc+Pl+Indef:si%>{N}yaallo%> NullCase/Clitics ;
+     si+N+Masc+Pl+Indef:si%>{N}yaalo%>  NullCase/Clitics ;
+           si+N+Masc+Pl:si%>{N}yaal%>   MascPl           ;
 
 ! il ~ isha ~ indho ~ indhaha
 LEXICON INDHA
-il+N+Masc+Pl+Indef:in%>{N}dh%>o´        NullCase/Clitics ;
-il+N+Masc+Pl:in%>{N}dh%>            MascPl ;
+ il+N+Masc+Pl+Indef:in%>{N}dh%>o´ NullCase/Clitics ;
+       il+N+Masc+Pl:in%>{N}dh%>   MascPl           ;
 
 
 LEXICON NIMO
-    @P.Gender.Fem@      _N_NIMO ;
+        @P.Gender.Fem@             _N_NIMO                ;
 
     LEXICON _N_NIMO
-        +Der/N+Abstr+N+Fem+Sg:nima´´%>{N}   _N_NIMO_PostBoundarySg ;
+ +Der/N+Abstr+N+Fem+Sg:nima´´%>{N} _N_NIMO_PostBoundarySg ;
 
 
     LEXICON _N_NIMO_PostBoundarySg
-    +Indef:0                     NullCase ;
-    +Indef+Voc:ay                Clitics ;
+                +Indef:0           NullCase               ;
+            +Indef+Voc:ay          Clitics                ;
 
-    +Def:t                       SgProximity ;
-    +Def+Voc:tay                 Clitics ;
- 
+                  +Def:t           SgProximity            ;
+              +Def+Voc:tay         Clitics                ;
+
 
 ! vim: set ts=4 sw=4 tw=0 syntax=lexc :
 
