@@ -1,4 +1,0 @@
-LEXICON Determiner
-	Determiner ;
-	# ;
-
