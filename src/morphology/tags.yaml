@@ -10,7 +10,6 @@ dictitems:
     !!python/unicode 'Foc/V': null
   Sem: !!set
     !!python/unicode 'Sem/Obj': null
-    !!python/unicode 'Sem/Obj#': null
   Use: !!set
     !!python/unicode 'Use/Circ': null
     !!python/unicode 'Use/CircN': null
@@ -26,7 +25,6 @@ dictitems:
     !!python/unicode '2Sg': null
     !!python/unicode '2SgObj/ku': null
     !!python/unicode '3Pl': null
-    !!python/unicode '3Sg': null
     !!python/unicode '3SgF': null
     !!python/unicode '3SgM': null
     !!python/unicode 'A': null
@@ -82,7 +80,6 @@ dictitems:
     !!python/unicode 'PUNCT': null
     !!python/unicode 'Pers': null
     !!python/unicode 'Pl': null
-    !!python/unicode 'Po': null
     !!python/unicode 'Poss': null
     !!python/unicode 'PostP': null
     !!python/unicode 'Pr': null
