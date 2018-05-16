@@ -11,8 +11,6 @@ dictitems:
   Sem: !!set
     !!python/unicode 'Sem/Obj': null
   Use: !!set
-    !!python/unicode 'Use/Circ': null
-    !!python/unicode 'Use/CircN': null
     !!python/unicode 'Use/NG': null
   resten: !!set
     !!python/unicode '1Pl': null
@@ -40,14 +38,11 @@ dictitems:
     !!python/unicode 'Adv': null
     !!python/unicode 'Appos': null
     !!python/unicode 'Attr': null
-    !!python/unicode 'CC': null
-    !!python/unicode 'CLB': null
     !!python/unicode 'CS': null
     !!python/unicode 'CS#u': null
     !!python/unicode 'Clit/oo': null
     !!python/unicode 'Close': null
     !!python/unicode 'Com': null
-    !!python/unicode 'Decl/1': null
     !!python/unicode 'Def': null
     !!python/unicode 'Deic': null
     !!python/unicode 'Dem': null
@@ -56,8 +51,6 @@ dictitems:
     !!python/unicode 'Excl': null
     !!python/unicode 'Fem': null
     !!python/unicode 'Gen': null
-    !!python/unicode 'Guess': null
-    !!python/unicode 'HYPH': null
     !!python/unicode 'Imper': null
     !!python/unicode 'Impers': null
     !!python/unicode 'Incl': null
@@ -74,10 +67,7 @@ dictitems:
     !!python/unicode 'Neg/ma': null
     !!python/unicode 'Nom': null
     !!python/unicode 'Nom#oo': null
-    !!python/unicode 'Null': null
-    !!python/unicode 'PAR': null
     !!python/unicode 'PP': null
-    !!python/unicode 'PUNCT': null
     !!python/unicode 'Pers': null
     !!python/unicode 'Pl': null
     !!python/unicode 'Poss': null
@@ -92,7 +82,6 @@ dictitems:
     !!python/unicode 'Sep': null
     !!python/unicode 'Sg': null
     !!python/unicode 'Short': null
-    !!python/unicode 'Sty/TODO': null
     !!python/unicode 'Subj': null
     !!python/unicode 'TODO': null
     !!python/unicode 'Voc': null
