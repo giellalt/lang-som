@@ -1,87 +1,83 @@
-!!python/object/apply:collections.defaultdict
-args:
-- !!python/name:__builtin__.set ''
-dictitems:
-  Err: !!set
-    !!python/unicode 'Err/Orth': null
-  Foc: !!set
-    !!python/unicode 'Foc/L': null
-    !!python/unicode 'Foc/R': null
-    !!python/unicode 'Foc/V': null
-  Sem: !!set
-    !!python/unicode 'Sem/Obj': null
-  Use: !!set
-    !!python/unicode 'Use/NG': null
-  resten: !!set
-    !!python/unicode '1Pl': null
-    !!python/unicode '1PlExcl': null
-    !!python/unicode '1PlIncl': null
-    !!python/unicode '1Sg': null
-    !!python/unicode '1SgObj/i': null
-    !!python/unicode '2': null
-    !!python/unicode '2Pl': null
-    !!python/unicode '2Sg': null
-    !!python/unicode '2SgObj/ku': null
-    !!python/unicode '3Pl': null
-    !!python/unicode '3SgF': null
-    !!python/unicode '3SgM': null
-    !!python/unicode 'A': null
-    !!python/unicode 'Abbr': null
-    !!python/unicode 'Abs': null
-    !!python/unicode 'Adp': null
-    !!python/unicode 'Adp/ga': null
-    !!python/unicode 'Adp/gu': null
-    !!python/unicode 'Adp/ka': null
-    !!python/unicode 'Adp/ku': null
-    !!python/unicode 'Adp/la': null
-    !!python/unicode 'Adp/u': null
-    !!python/unicode 'Adv': null
-    !!python/unicode 'Appos': null
-    !!python/unicode 'Attr': null
-    !!python/unicode 'CS': null
-    !!python/unicode 'CS#u': null
-    !!python/unicode 'Clit/oo': null
-    !!python/unicode 'Close': null
-    !!python/unicode 'Com': null
-    !!python/unicode 'Def': null
-    !!python/unicode 'Deic': null
-    !!python/unicode 'Dem': null
-    !!python/unicode 'Det': null
-    !!python/unicode 'Dist': null
-    !!python/unicode 'Excl': null
-    !!python/unicode 'Fem': null
-    !!python/unicode 'Gen': null
-    !!python/unicode 'Imper': null
-    !!python/unicode 'Impers': null
-    !!python/unicode 'Incl': null
-    !!python/unicode 'Indef': null
-    !!python/unicode 'Interj': null
-    !!python/unicode 'Interr': null
-    !!python/unicode 'Interr/ma': null
-    !!python/unicode 'Loc': null
-    !!python/unicode 'Masc': null
-    !!python/unicode 'N': null
-    !!python/unicode 'Near': null
-    !!python/unicode 'Near#oo': null
-    !!python/unicode 'Neg': null
-    !!python/unicode 'Neg/ma': null
-    !!python/unicode 'Nom': null
-    !!python/unicode 'Nom#oo': null
-    !!python/unicode 'PP': null
-    !!python/unicode 'Pers': null
-    !!python/unicode 'Pl': null
-    !!python/unicode 'Poss': null
-    !!python/unicode 'PostP': null
-    !!python/unicode 'Pr': null
-    !!python/unicode 'Pron': null
-    !!python/unicode 'Prop': null
-    !!python/unicode 'Prox': null
-    !!python/unicode 'Qnt': null
-    !!python/unicode 'Refl': null
-    !!python/unicode 'Restr': null
-    !!python/unicode 'Sep': null
-    !!python/unicode 'Sg': null
-    !!python/unicode 'Short': null
-    !!python/unicode 'Subj': null
-    !!python/unicode 'TODO': null
-    !!python/unicode 'Voc': null
+Err
+	Err/Orth
+Foc
+	Foc/L
+	Foc/R
+	Foc/V
+Sem
+	Sem/Obj
+Use
+	Use/NG
+resten
+	1Pl
+	1PlExcl
+	1PlIncl
+	1Sg
+	1SgObj/i
+	2
+	2Pl
+	2Sg
+	2SgObj/ku
+	3Pl
+	3SgF
+	3SgM
+	A
+	Abbr
+	Abs
+	Adp
+	Adp/ga
+	Adp/gu
+	Adp/ka
+	Adp/ku
+	Adp/la
+	Adp/u
+	Adv
+	Appos
+	Attr
+	CS
+	CS#u
+	Clit/oo
+	Close
+	Com
+	Def
+	Deic
+	Dem
+	Det
+	Dist
+	Excl
+	Fem
+	Gen
+	Imper
+	Impers
+	Incl
+	Indef
+	Interj
+	Interr
+	Interr/ma
+	Loc
+	Masc
+	N
+	Near
+	Near#oo
+	Neg
+	Neg/ma
+	Nom
+	Nom#oo
+	PP
+	Pers
+	Pl
+	Poss
+	PostP
+	Pr
+	Pron
+	Prop
+	Prox
+	Qnt
+	Refl
+	Restr
+	Sep
+	Sg
+	Short
+	Subj
+	TODO
+	Voc
