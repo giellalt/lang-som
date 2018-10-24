@@ -304,7 +304,7 @@ LEXICON ROMNUMTAG !
 +A+Ord:%. # ; ! !III. as ordinal.
 +A+Ord:   # ;! !Looking for trouble...
 ! TODO: +Num:%:         ROMNUMTAGOBL ; ! IV:se
-! +Num+Err/Orth:'7 ROMNUMTAGOBL ; ! IV'se
+! +Num+Err/Orth:'  ROMNUMTAGOBL ; ! IV'se
 ! +Num+Err/Orth:%- ROMNUMTAGOBL ; ! IV-se
 ! +Num+Err/Orth:%´ ROMNUMTAGOBL ; ! IV´se
 ! +Num+Err/Orth:%> ROMNUMTAGOBL ; ! IVse
