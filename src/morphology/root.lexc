@@ -30,18 +30,18 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! The parts-of-speech are:
 
- +N	      !!= * @CODE@
-+V	      !!= * @CODE@
-+A	      !!= * @CODE@
++N	  !!= * @CODE@
++V	  !!= * @CODE@
++A	  !!= * @CODE@
 +Adp      !!= * @CODE@
-+Q	      !!= * @CODE@
-+Pr	      !!= * @CODE@
++Q	  !!= * @CODE@
++Pr	  !!= * @CODE@
 +Adv      !!= * @CODE@
-+CC	      !!= * @CODE@
-+CS	      !!= * @CODE@
++CC	  !!= * @CODE@
++CS	  !!= * @CODE@
 +Interj   !!= * @CODE@
 +Pron     !!= * @CODE@
-+Num !!= * @CODE@
++Num      !!= * @CODE@
 
 !! Fusional adpositions
 
@@ -62,76 +62,79 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! The parts of speech are further split up into:
 
- +Interr
-+Interr/ma
-+Attr
-+Short
-+Cmp     !!= * @CODE@
- +Der/sho
-+Pfx
-+PP
-+Sep
++Interr        !!= * @CODE@     
++Interr/ma          !!= * @CODE@
++Attr        !!= * @CODE@
++Short        !!= * @CODE@
++Cmp        !!= * @CODE@
++Der/sho        !!= * @CODE@
++Pfx        !!= * @CODE@
++PP        !!= * @CODE@
++Sep        !!= * @CODE@
 +Com		      !!= * @CODE@
- +Appos
-+Impers
++Appos        !!= * @CODE@
++Impers        !!= * @CODE@
 +Inch				      !!= * @CODE@
 
- +Recit
+ +Recit        !!= * @CODE@
 +Restr						      !!= * @CODE@
 
- +Pers								      !!= * @CODE@
- +Dem								      !!= * @CODE@
- +Coll								      !!= * @CODE@
- +Mass								      !!= * @CODE@
- +Acr								      !!= * @CODE@
- +Abstr								      !!= * @CODE@
- +Abbr
- +Prop
+ +Pers	      !!= * @CODE@
+ +Dem	      !!= * @CODE@
+ +Coll	      !!= * @CODE@
+ +Mass	      !!= * @CODE@
+ +Acr	      !!= * @CODE@
+ +Abstr	      !!= * @CODE@
+ +Abbr        !!= * @CODE@
+ +Prop        !!= * @CODE@
 
 
 !! Verb and noun declensions for the analysers that want to know about that
+!! NOTE: We probably do not want to thag these, this is morphological and
+!! not morphosyntactic info. t.
 
- +Decl/1 				      !!= * @CODE@
- +Decl/2
-+Decl/2A
++Decl/1 				      !!= * @CODE@
++Decl/2 				      !!= * @CODE@
++Decl/2A				      !!= * @CODE@
 +Decl/2B    !!= * @CODE@
- +Decl/3 +Decl/3A +Decl/3B    !!= * @CODE@
- +Decl/4 				      !!= * @CODE@
- +Decl/5				      !!= * @CODE@
- +Decl/6 				      !!= * @CODE@
- +Decl/7				      !!= * @CODE@
++Decl/3 +Decl/3A +Decl/3B    !!= * @CODE@
++Decl/4 				      !!= * @CODE@
++Decl/5				      !!= * @CODE@
++Decl/6 				      !!= * @CODE@
++Decl/7				      !!= * @CODE@
 
 !! The Usage extents are marked using the following tags:
 
- +Err/Orth
- +Use/-Spell
- +Use/-Spell
- +Use/Circ
- +Use/CircN
- +Err/Lex
- +Use/Marg
- +Use/NG
- +Use/Ped
- +Use/SpellNoSugg+Prog
- +Err/Orth
+ +Err/Orth				      !!= * @CODE@
+ +Use/-Spell				      !!= * @CODE@
+ +Use/-Spell				      !!= * @CODE@
+ +Use/Circ				      !!= * @CODE@
+ +Use/CircN				      !!= * @CODE@
+ +Err/Lex				      !!= * @CODE@
+ +Use/Marg				      !!= * @CODE@
+ +Use/NG				      !!= * @CODE@
+ +Use/Ped				      !!= * @CODE@
+ +Use/SpellNoSugg+Prog				      !!= * @CODE@
+ +Err/Orth				      !!= * @CODE@
 
 !! The nominals are inflected in the following case, number
 
 
-+Sg
-+Pl
++Sg				      !!= * @CODE@
++Pl				      !!= * @CODE@
 
-+Nom
-+Abs
-+Gen
++Nom				      !!= * @CODE@
++Abs				      !!= * @CODE@
++Gen				      !!= * @CODE@
 
-+Indef
-+Def
++Indef				      !!= * @CODE@
++Def				      !!= * @CODE@
+
 
 !! Nominals also are inflected for gender
 
- +Masc
- +Fem
+ +Masc				      !!= * @CODE@
+ +Fem				      !!= * @CODE@
 
 !! Nominal marked for gender undergo gender polarity changes in plural.
 !! We want to mark +Masc and +Fem, such that disambiguation is easier,
@@ -140,10 +143,10 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 ! TODO: insert these into noun affixes.
 
- +M→M
- +M→F
- +F→M
- +F→F
+ +M→M				      !!= * @CODE@
+ +M→F				      !!= * @CODE@
+ +F→M				      !!= * @CODE@
+ +F→F				      !!= * @CODE@
 
 !! Nominals also have affixed demonstratives
 
@@ -242,7 +245,7 @@ Multichar_Symbols  !!≈ !!!@CODE@ definitions
 
 !! Special symbols are classified with:
 
- +CLB    !!= * @CODE@
++CLB    !!= * @CODE@
 +PUNCT   !!= * @CODE@
 +LEFT    !!= * @CODE@
 +RIGHT   !!= * @CODE@
