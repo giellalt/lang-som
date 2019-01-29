@@ -1,6 +1,6 @@
 Nouns
 
-Nouns in Somali are things. They have separate paradigms depending on
+Nouns in Somali have separate paradigms depending on
 morphophonological stuff, but are split up into subgroups which correspond
 to gender polarity groups.
 
@@ -8,7 +8,7 @@ Note that items containing ATR should mark the ATR using <¨> before the vowel
 or at the beginning of the stem if uncertain.
 
 {{{
-    doog:¨doog	NOUN1_M/SgOnly ;
+doog:¨doog NOUN1_M/SgOnly ;
 }}}
 
 
@@ -16,7 +16,7 @@ Irregular nouns
 _il_ and _si_ are both female in singular, and have typical morphology there
 but, have varying irregular masculine plural forms.
 
- * LEXICON IrregNouns   
+ * LEXICON IrregNouns  
 
 
 __il # Irregular tests examples:__
@@ -152,7 +152,7 @@ Ex.)
 * axmaq -> axmaqiin
 * banki -> bunuug
 
- * LEXICON ArabicLoans   
+ * LEXICON ArabicLoans  
 
 
 
