@@ -25,18 +25,18 @@ in this system in terms of the following symbols.
 
 The parts-of-speech are:
 
- *  +N	      
- * +V	      
- * +A	      
+ * +N	  
+ * +V	  
+ * +A	  
  * +Adp      
- * +Q	      
- * +Pr	      
+ * +Q	  
+ * +Pr	  
  * +Adv      
- * +CC	      
- * +CS	      
+ * +CC	  
+ * +CS	  
  * +Interj   
  * +Pron     
- * +Num 
+ * +Num      
 
 Fusional adpositions
 
@@ -57,41 +57,79 @@ Focus
 
 The parts of speech are further split up into:
 
- * +Cmp     
+ * +Interr             
+ * +Interr/ma          
+ * +Attr        
+ * +Short        
+ * +Cmp        
+ * +Der/sho        
+ * +Pfx        
+ * +PP        
+ * +Sep        
  * +Com		      
+ * +Appos        
+ * +Impers        
  * +Inch				      
 
+ *  +Recit        
  * +Restr						      
 
- *  +Pers								      
- *  +Dem								      
- *  +Coll								      
- *  +Mass								      
- *  +Acr								      
- *  +Abstr								      
+ *  +Pers	      
+ *  +Dem	      
+ *  +Coll	      
+ *  +Mass	      
+ *  +Acr	      
+ *  +Abstr	      
+ *  +Abbr        
+ *  +Prop        
 
 
 Verb and noun declensions for the analysers that want to know about that
+NOTE: We probably do not want to thag these, this is morphological and
+not morphosyntactic info. t.
 
- *  +Decl/1 				      
+ * +Decl/1 				      
+ * +Decl/2 				      
+ * +Decl/2A				      
  * +Decl/2B    
- *  +Decl/3 +Decl/3A +Decl/3B    
- *  +Decl/4 				      
- *  +Decl/5				      
- *  +Decl/6 				      
- *  +Decl/7				      
+ * +Decl/3 +Decl/3A +Decl/3B    
+ * +Decl/4 				      
+ * +Decl/5				      
+ * +Decl/6 				      
+ * +Decl/7				      
 
 The Usage extents are marked using the following tags:
 
+ *  +Err/Orth				      
+ *  +Use/-Spell				      
+ *  +Use/-Spell				      
+ *  +Use/Circ				      
+ *  +Use/CircN				      
+ *  +Err/Lex				      
+ *  +Use/Marg				      
+ *  +Use/NG				      
+ *  +Use/Ped				      
+ *  +Use/SpellNoSugg+Prog				      
+ *  +Err/Orth				      
 
 The nominals are inflected in the following case, number
 
 
+ * +Sg				      
+ * +Pl				      
 
+ * +Nom				      
+ * +Abs				      
+ * +Gen				      
+
+ * +Indef				      
+ * +Def				      
 
 
 Nominals also are inflected for gender
 
+ *  +Masc				      
+ *  +Fem				      
 
 Nominal marked for gender undergo gender polarity changes in plural.
 We want to mark +Masc and +Fem, such that disambiguation is easier,
@@ -99,6 +137,10 @@ but knowing the gender of the lemma since it is not predictable from
 a given plural form is a good thing.
 
 
+ *  +M→M				      
+ *  +M→F				      
+ *  +F→M				      
+ *  +F→F				      
 
 Nominals also have affixed demonstratives
 
@@ -197,7 +239,7 @@ Abbreviated words are classified with:
 
 Special symbols are classified with:
 
- *  +CLB    
+ * +CLB    
  * +PUNCT   
  * +LEFT    
  * +RIGHT   
@@ -480,7 +522,7 @@ These lexica are dummy lexical to make the source compile, they contain only #.
 
 Nouns
 
-Nouns in Somali are things. They have separate paradigms depending on
+Nouns in Somali have separate paradigms depending on
 morphophonological stuff, but are split up into subgroups which correspond
 to gender polarity groups.
 
@@ -488,7 +530,7 @@ Note that items containing ATR should mark the ATR using <¨> before the vowel
 or at the beginning of the stem if uncertain.
 
 {{{
-    doog:¨doog	NOUN1_M/SgOnly ;
+doog:¨doog NOUN1_M/SgOnly ;
 }}}
 
 
@@ -496,7 +538,7 @@ Irregular nouns
 _il_ and _si_ are both female in singular, and have typical morphology there
 but, have varying irregular masculine plural forms.
 
- * LEXICON IrregNouns   
+ * LEXICON IrregNouns  
 
 
 __il # Irregular tests examples:__
@@ -632,7 +674,7 @@ Ex.)
 * axmaq -> axmaqiin
 * banki -> bunuug
 
- * LEXICON ArabicLoans   
+ * LEXICON ArabicLoans  
 
 
 
