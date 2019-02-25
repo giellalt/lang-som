@@ -2,6 +2,7 @@
 
 This is a grammatical analyser for Somali.
 
+With 15800 stems and a basic morphological component, 
 It is large enough to be useful, but has yet to
 be put into use in practical projects. It was
 written by Ryan Joahnson.
