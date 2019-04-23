@@ -4,11 +4,11 @@
 !!! Dynamic documentation
 
 * [Links to generated source file documentation|Links.html]
-* Source files: [stems|https://victorio.uit.no/langtech/trunk/langs/som/src/morphology/stems/]   
-  / [affixes|https://victorio.uit.no/langtech/trunk/langs/som/src/morphology/affixes/] 
-  / [syntax|https://victorio.uit.no/langtech/trunk/langs/som/src/syntax] 
-  / [twolc|https://victorio.uit.no/langtech/trunk/langs/som/src/phonology/som-phon.twolc]   
-  / [yaml|https://victorio.uit.no/langtech/trunk/langs/som/test/src/gt-norm-yamls/]
+* Source files: [stems|https://gtsvn.uit.no/langtech/trunk/langs/som/src/morphology/stems/]   
+  / [affixes|https://gtsvn.uit.no/langtech/trunk/langs/som/src/morphology/affixes/] 
+  / [syntax|https://gtsvn.uit.no/langtech/trunk/langs/som/src/syntax] 
+  / [twolc|https://gtsvn.uit.no/langtech/trunk/langs/som/src/phonology/som-phon.twolc]   
+  / [yaml|https://gtsvn.uit.no/langtech/trunk/langs/som/test/src/gt-norm-yamls/]
 * Generation of: [paradigms|http://giellatekno.uit.no/cgi/p-som.eng.html]
   / [text|http://giellatekno.uit.no/cgi/d-som.eng.html]
 
@@ -22,7 +22,7 @@ Most monologues :-)
 
 !!! Grammatical issues
 
-* [The tags that are in use|https://victorio.uit.no/langtech/trunk/langs/som/src/morphology/root.lexc]   
+* [The tags that are in use|https://gtsvn.uit.no/langtech/trunk/langs/som/src/morphology/root.lexc]   
 * [A list of morphological tags|../common/MorphologicalTags.html]
 
 !!!Using the analysers
