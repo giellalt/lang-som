@@ -224,6 +224,7 @@ Other verb forms are
 Abbreviated words are classified with:
 
  *  +ABBR   
+ * +Symbol = independent symbols in the text stream, like £, €, ©
  *  +ACR   
 
 Special symbols are classified with:
@@ -479,6 +480,7 @@ word classes, or optionally from prefixes:
  * Determiners     ;   
  * Interjections   ;   
  * Punctuation     ;   
+ * Symbols         ;   
 
 !!The following are coming from som-lex.txt
 * IrregularAdjective ;
