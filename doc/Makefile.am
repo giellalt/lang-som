@@ -9,7 +9,7 @@
 
 JSP_PAGES=root-morphology.jspwiki \
 		  nouns-stems.jspwiki        \
-		  som-phon-phonology.jspwiki       
+		  phonology-morphology.jspwiki       
 # clitics-morphology.jspwiki       \
 # compounding-morphology.jspwiki   \
 # abbreviations-stems.jspwiki      \
