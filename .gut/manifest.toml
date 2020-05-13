@@ -1,0 +1,35 @@
+[package]
+name = "som"
+human_name = "Somali"
+version = "0.1.0"
+
+# Table of speller tag -> filename to include in the bundle
+# filenames depends on specific project
+[spellers.som]
+filename = "so-mobile.zhfst"
+
+# Table of bundles to generated
+# key is the type of bundle
+# Windows speller bundle require a uuid for the installer
+[bundles.speller_win]
+package = "speller-som"
+platform = "windows"
+uuid = "634D46D5-33D4-4FB3-B210-7858072A3FF1"
+repo = "https://pahkat.uit.no/main/"
+
+[bundles.speller_macos]
+pkg_id = "no.divvun.MacDivvun.so"
+package = "speller-som"
+platform = "macos"
+repo = "https://pahkat.uit.no/main/"
+
+[bundles.speller_win_mso]
+package = "speller-som-mso"
+platform = "windows"
+uuid = "6F2E7221-75FA-4CF3-97E6-03926D7CBA8C"
+repo = "https://pahkat.uit.no/main/"
+
+[bundles.speller_mobile]
+package = "speller-som"
+platform = "mobile"
+repo = "https://pahkat.uit.no/main/"
