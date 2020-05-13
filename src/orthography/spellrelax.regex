@@ -1,0 +1,14 @@
+# Somali spellrelax
+
+´ (->) 0,
+´´ (->) 0,
+¨ (->) 0,
+ü (->) u, # Somali
+Ü (->) Ü # Somali
+!ˊ (->) ´ # 00B4 ACUTE ACCENT for Skolt 02CA MIDIFIER LETTER ACUTE ACCENT
+;
+
+# Explanation:
+# lexical side (->) input 
+
+

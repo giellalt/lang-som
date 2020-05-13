@@ -1,0 +1,31 @@
+[What is this?|WhatIsThis.html]
+
+
+!!! Dynamic documentation
+
+* [Links to generated source file documentation|Links.html]
+* Source files: [stems|https://gtsvn.uit.no/langtech/trunk/langs/som/src/fst/stems/]   
+  / [affixes|https://gtsvn.uit.no/langtech/trunk/langs/som/src/fst/affixes/] 
+  / [syntax|https://gtsvn.uit.no/langtech/trunk/langs/som/src/syntax] 
+  / [twolc|https://gtsvn.uit.no/langtech/trunk/langs/som/src/phonology/som-phon.twolc]   
+  / [yaml|https://gtsvn.uit.no/langtech/trunk/langs/som/test/src/gt-norm-yamls/]
+* Generation of: [paradigms|http://giellatekno.uit.no/cgi/p-som.eng.html]
+  / [text|http://giellatekno.uit.no/cgi/d-som.eng.html]
+
+!!! Project pages
+
+tbw
+
+!!! Meetings
+
+Most monologues :-)
+
+!!! Grammatical issues
+
+* [The tags that are in use|https://gtsvn.uit.no/langtech/trunk/langs/som/src/fst/root.lexc]   
+* [A list of morphological tags|/lang/common/MorphologicalTags.html]
+
+!!!Using the analysers
+
+* In the terminal: analyse words by writing ''usom'', generate with ''dsom''
+* For more info, see [How to use the morphological parsers|/tools/docu-sme-manual.html]

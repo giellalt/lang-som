@@ -1,0 +1,2256 @@
+
+# #BASICPOS
+# #AGREEMENT
+# #CASE
+# #VERBPARTICLES
+# #ADJECTIVES
+# #CS
+# #ADPOSITIONS
+
+# ========== #
+# Delimiters #
+# ========== #
+
+DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>";
+
+# PARENTHESES = "<$(>" "<$)>" "<$[>" "<$]>" "<${>" "<$}>" "<$«>" "<$»>" ;
+
+# ============= #
+# Tags and sets #
+# ============= #
+
+SETS
+
+# I define end of clause and beginning of clause in a way so that the file
+# may be read both by the CG-2 and the vislcg formalisms.
+
+LIST BOS = (>>>) (<s>);
+LIST EOS = (<<<) (</s>);
+
+# CG3 doesn´t function without >>> and <<< !
+
+# Tags declared as single-membered LISTs 
+# ======================================
+
+# Parts of speech
+# ---------------
+
+LIST N = N ;
+LIST A = A ;
+LIST Adv = Adv ;
+LIST Adp = Adp ;
+
+LIST Adp/u = Adp/u ;
+LIST Adp/ku = Adp/ku ;
+LIST Adp/ka = Adp/ka ;
+LIST Adp/la = Adp/la ;
+
+LIST Der/V* = Der/V* ;
+LIST Der/N* = Der/N* ;
+
+LIST Der/V = Der/V ;
+LIST Der/N = Der/N ;
+
+LIST Der/sho = Der/sho ;
+
+LIST Use/NG = Use/NG ;
+
+# In the first section, we split up fusional Adp, these mark that these items were fused
+LIST Fus/Prev = Fus/Prev ;
+LIST Fus/Next = Fus/Next ;
+
+
+LIST V = V ;
+LIST Pron = Pron ;
+LIST CS = CS ;
+LIST CC = CC ;
+LIST PP = PP ;
+LIST Pr = Pr ;
+
+LIST CCC = CC ;
+
+SET CONJ = CC OR CS ;
+
+LIST TV = TV ;
+LIST IV = IV ;
+LIST DV = DV ;
+
+LIST Pcle = Pcle ;
+LIST Num = Num ;
+LIST G3 = G3 ;
+
+# LIST V* = V* ;
+
+
+# POS sub-categories
+# ------------------
+
+LIST Pers = Pers ;
+LIST Impers = Impers ;
+LIST Imper = Imper ;
+LIST Recit = Recit ;
+LIST Dem = Dem ;
+LIST Interr = Interr ;
+
+LIST Indef = Indef ;
+
+LIST Recipr = Recipr ;
+LIST Refl = Refl ;
+LIST Rel = Rel ;
+LIST Red = Red ;
+ 
+LIST Interj = Interj ;
+LIST Adp = Adp ;
+
+LIST Appos = Appos ; 
+LIST Deic = Deic ;
+
+# Morphosyntactic properties
+# --------------------------
+
+LIST Nom = Nom ;
+LIST Acc = Acc ;
+LIST Abs = Abs ;
+LIST Gen = Gen ;
+LIST Voc = Voc ;
+
+LIST Sg = Sg ;
+LIST Pl = Pl ;
+
+LIST Cmpnd = Cmpnd ;
+LIST Prop = Prop ;
+LIST Guess = Guess ;
+ 
+LIST PxSg1 = PxSg1 ;
+LIST PxSg2 = PxSg2 ;
+LIST PxSg3 = PxSg3 ;
+LIST PxSg3F = PxSg3F ;
+LIST PxSg3M = PxSg3M ;
+  
+LIST PxPl1 = PxPl1 ;
+LIST PxPl2 = PxPl2 ;
+LIST PxPl3 = PxPl3 ;
+LIST CLB = CLB ;
+
+LIST Comp = Comp ;
+LIST Superl = Superl ;
+
+LIST Attr = Attr ;
+LIST Ord = Ord ;
+ 
+LIST Qst = Qst ;
+ 
+LIST Clit/ba = Clit/ba ;
+LIST Clit/na = Clit/na ;
+LIST Clit/se = Clit/se ;
+
+LIST CLITICS = Clit/ba Clit/na Clit/se ;
+
+LIST IV = IV ;
+LIST TV = TV ;
+
+LIST 1Sg = 1Sg ;
+LIST 2Sg = 2Sg ;
+LIST 3Sg = 3Sg ;
+LIST 3SgM = 3SgM ;
+LIST 3SgF = 3SgF ;
+LIST Null = Null ;
+
+LIST 1Pl = 1Pl ;
+LIST 2Pl = 2Pl ;
+LIST 3Pl = 3Pl ;
+
+LIST Inf = Inf ;
+LIST Neg = Neg ;
+
+
+LIST Past = Past ;
+LIST Pres = Pres ;
+LIST Ind = Ind ;
+
+LIST Foc/baa = Foc/baa ;
+LIST Foc/L = Foc/L ;
+LIST Foc/R = Foc/R ;
+LIST Foc/V = Foc/V ;
+
+# Syntactic tags
+# --------------
+
+LIST @FOC = @FOC ;  # Focused item
+LIST @FM = @FM ;  # Focus marker
+
+LIST @+FAUXV = @+FAUXV ;
+LIST @+FMAINV = @+FMAINV ;
+LIST @-FAUXV = @-FAUXV ;
+LIST @>P = @>P ;
+ 
+LIST @-FMAINV = @-FMAINV ;
+LIST @-FSUBJ> = @-FSUBJ> ;
+LIST @-F<OBJ = @-F<OBJ ;
+LIST @-FOBJ> = @-FOBJ> ;
+LIST @SPRED<OBJ = @SPRED<OBJ ;
+LIST @-F<ADVL = @-F<ADVL ;
+LIST @-FADVL> = @-FADVL> ;
+LIST @-F<SPRED = @-F<SPRED ;
+LIST @-F<OPRED = @-F<OPRED ;
+LIST @-FSPRED> = @-FSPRED> ;
+LIST @-FOPRED> = @-FOPRED> ;
+
+SET FOBJ = @-F<OBJ OR @-FOBJ> ; 
+SET FMAINV = @-FMAINV OR @+FMAINV ;
+SET FAUXV = @-FAUXV OR @+FAUXV ;
+
+LIST @ADVL = @ADVL @ADVL> @ADVL< @<ADVL @>ADVL @-F<ADVL @-FADVL> ;
+LIST @>ADVL = @>ADVL ;
+LIST @ADVL< = @ADVL< ;
+LIST @<ADVL = @<ADVL ;
+LIST @ADVL> = @ADVL> ;
+
+LIST @HAB = @HAB ;
+
+LIST @>N = @>N ;
+
+LIST @V< = @V< ;
+
+LIST @>V = @>V ;
+
+LIST @N< = @N< ;
+
+LIST @NP = @NP ;
+LIST @NP-HEAD = @NP-HEAD ;
+
+LIST @>A = @>A ;
+
+LIST @P< = @P< ;
+
+LIST @>P = @>P ;
+
+LIST @HNOUN = @HNOUN ;
+LIST @INTERJ = @INTERJ ;
+ 
+LIST @>Num = @>Num;
+
+LIST @Pron< = @Pron< ;
+LIST @>Pron = @>Pron ;
+
+LIST @Num< = @Num< ;
+
+# TESTING
+LIST @OMG = @OMG ;
+
+LIST @OBJ = @OBJ ;
+LIST @<OBJ = @<OBJ ;
+LIST @OBJ> = @OBJ> ;
+LIST @OPRED = @OPRED ;
+LIST @<OPRED = @<OPRED ;
+LIST @OPRED> = @OPRED> ;
+LIST @PCLE = @PCLE ;
+LIST @COMP-CS< = @COMP-CS< ;
+ 
+LIST @SPRED = @SPRED ;
+LIST @<SPRED = @<SPRED ;
+LIST @SPRED> = @SPRED> ;
+LIST @SUBJ = @SUBJ ;
+LIST @<SUBJ = @<SUBJ ;
+LIST @SUBJ> = @SUBJ> ;
+SET SUBJ = @<SUBJ OR @SUBJ> OR @SUBJ ;
+SET SPRED = @<SPRED OR @SPRED> OR @SPRED ;
+SET OPRED = @<OPRED OR @OPRED> OR @OPRED ;
+
+LIST @PPRED = @PPRED ;
+ 
+LIST @APP = @APP ;
+LIST @APP-N< = @APP-N< ;
+LIST @APP-Pron< = @APP-Pron< ;
+LIST @APP>Pron = @APP>Pron ;
+LIST @APP-Num< = @APP-Num< ;
+LIST @APP-ADVL< = @APP-ADVL< ;
+LIST @VOC = @VOC ;
+
+LIST @CVP = @CVP ;
+LIST @CNP = @CNP ;
+
+SET OBJ = (@<OBJ) OR (@OBJ>) OR (@OBJ) OR (@-F<OBJ) OR (@-FOBJ>) ;
+LIST <OBJ = @-F<OBJ @<OBJ ;
+LIST OBJ> = @OBJ> @-FOBJ> ;
+
+SET <OBJ-OTHERS = <OBJ OR (Gen) OR (Nom) OR (Ess) OR (Loc) OR (Adv) ;
+SET OBJ>-OTHERS = OBJ> OR (Gen) OR (Nom) OR (Ess) OR (Loc) OR (Adv) ;
+
+# Help identify words that are only guesses
+LIST @Guess-Only = @Guess-Only ;
+
+LIST @X = @X ;
+
+# Semantic tags
+# -------------
+
+LIST Masc = Masc ;
+LIST Fem = Fem ;
+LIST Mal = Mal ;
+
+LIST Subj = Subj ;
+LIST Obj = Obj ;
+LIST Org = Org ;
+LIST Plc = Plc ;
+
+
+
+# Other tags
+# ----------
+
+LIST ABBR = ABBR ;
+LIST ACR = ACR ;
+
+SET TRANSITIVITY = TV OR IV OR DV ;
+
+SET CLB-OR-BOS = CLB OR BOS ;
+SET CLB-OR-EOS = CLB OR EOS ;
+SET CLB-OR-CS = CLB OR CS ;
+
+SET SubjPron-OR-CS = (Pron Pers Subj) OR CS ;
+
+SET Imper-Or-Recit = Imper OR Recit ;
+
+SET Focus-Like = Imper 
+              OR Recit 
+              OR Foc/baa 
+              OR (CS Foc/R) 
+              OR (CS Foc/L) 
+              OR (CS Foc/V) 
+              ;
+
+SET FOCUSES = Foc/baa 
+           OR Foc/L 
+           OR Foc/R 
+           OR Foc/V ;
+
+SET Focus-Like-Not-Particle = Imper 
+                           OR Recit 
+                           OR (CS Foc/R) 
+                           OR (CS Foc/L) 
+                           OR (CS Foc/V) 
+                           ;
+
+# TODO: confirm these? check with +Rel verb marking, see if it corresponds
+SET CS-Dep = ("kolkii" CS)
+          OR ("haddii" CS)
+          OR ("in" CS)
+          OR ("goormaa" CS)
+          OR ("markaas" CS)
+          OR ("intii" CS)
+          OR ("markii" CS)
+          OR ("haddii" CS)
+          OR ("kolkii" CS)
+          OR ("sidii" CS)
+          OR ("goortii" CS)
+          OR ("sidaas" CS)
+          OR ("kolkaa" CS) ;
+
+LIST PPUNCT = PUNCT ;
+LIST QMARK = """ ; # ADD " FOR SYNTAX COLOURING.
+SET PUNCT = PPUNCT - QMARK ;
+
+
+
+# Single-word sets
+# ----------------
+ 
+LIST COMMA = "," ;
+LIST ¶ = ¶;
+
+# #LexicalSets
+
+# TODO: adj syntax tag for these words, in NP template?
+LIST Adj-Post-Positive-Non-Inflecting = "sarsare" "hore" "kale" "dhan" "kasta" "kore" "dambe" "sare" "walba" "shishe" "soke" "badan" "nijaas" "miskiin" "leh" ;
+
+LIST Common-Verb-With-IN-Complement = "seeg" "wargeli" "lee" "doon" "geli" "hayso" "qiro" "sii" "guuleyso" "baahi" "cadayo" "celi" "dafir" "dah" "guuleyso" "handad" "magacow" "sharaf" "sharax" "socodsii" "taag" "tibaax" "waay" "xaddid" "andacoo" "aqbal" "bandhig" "shaqee" "xus" "gaabso" "hanjab" "soc" "yaab" "rog" "eed" "hay" "dareen" "baaq" "dir" "sahal" "qabo" "saadaali" "qaado" "xir" "dhaadhac" "jeed" "raaci" "sheeg" "dood" "gaadh" "gaadhi" "qiyaas" "dalbo" "qir" "fiiqo" "maqal" "raaco" "hub" "noqo" "qeex" "caddow" "dambee" "dhali" "fil" "filo" "bixi" "horseed" "kac" "doono" "saar" "amar" "qoro" "tali" "hadal" "mamnuuc" "day" "daabac" "salee" "gaadh" "hel" "keen" "codso" "xukun" "arag" "bax+Use/NG" "dhig" "dhaaf" "fil" "doon+Der/N" "doon+Der/V" "codee" "fiiq" "jawaab" "xiriir" "caddee" "dayo" "dig" "og+A/ah" "ogaan" "muuqo" "shaaci" "rab" "xaqiiji" "jir" "dhawaaq" "bax" "qab" "tilmaan" "geli" "sabab" "qor" "raac" "doon" "dhac" "muuji" "wad" "gal" "qaad" "gaar" "kar" "dar" "ah" "diid" "jeedi" "sheeg" ;
+
+ 
+# Tag sets
+# ========
+  SETS
+# ========
+
+
+# Word or not
+# -----------
+LIST WORD = N A Adv V Pron CS CC Po Pr Interj Pcle Num ABBR ACR  \? ;
+
+# Noun sets
+# - - - - -
+
+SET N-NUM = (N Sg) OR (N Pl) ;
+
+LIST PROP = (N Prop);
+
+SET COMMONNOUN = N - Prop;
+
+
+# Verb sets
+# - - - - -
+
+SET NOTVERB = WORD - V ;
+
+# Focus sets
+# - - - - - -
+#
+
+SET FOCL = (CS Foc/L) ;
+SET FOCR = ("waxa" CS) ;
+SET FOCV = ("waa" CS Foc/V) ;
+
+SET FOC = FOCL OR FOCR or FOCV;
+
+# TODO: set for focus markers and set for subordinating CSes apart from these
+
+SET SUBORD = CS - FOC ;
+
+SET VSUBORD = (V Red) OR (V Rel) ;
+
+# Person sets
+# - - - - - -
+# 
+
+LIST PERSON-AGREE = 1Sg 2Sg 3SgM 3SgF 1Pl 2Pl 3Pl ;
+
+SET PERSON-AGREEMENT = 1Sg OR 2Sg OR 3SgM OR 3SgF OR 1Pl OR 2Pl OR 3Pl ;
+SET FIRSTP = 1Sg OR 1Pl ;
+SET SECONDP = 2Sg OR 2Pl ;
+SET THIRDP = 3SgM OR 3SgF OR 3Pl ;
+SET NULLP = Null OR 3SgM ;
+
+SET NON3P =  FIRSTP OR SECONDP ;
+
+# For impersonal agreement.
+LIST NON3PMasc = 1Sg 1Pl 2Sg 2Pl 3SgF 3Pl;
+
+SET POSSESSIVE = PxSg1
+              OR PxSg2
+              OR PxSg3
+              OR PxSg3F
+              OR PxSg3M
+              OR PxPl1
+              OR PxPl2
+              OR PxPl3 ;
+
+SET POSSESSED-NOUN = (N PxSg1)
+                  OR (N PxSg2)
+                  OR (N PxSg3)
+                  OR (N PxSg3F)
+                  OR (N PxSg3M)
+                  OR (N PxPl1)
+                  OR (N PxPl2)
+                  OR (N PxPl3) ;
+
+
+# -- Lexical sets -- 
+
+SET POSTPOSITIONAL-NOUNS = 
+       ("debed" N Fem)
+    OR ("ag" N Fem)
+    OR ("dul" N Fem)
+    OR ("hoos" N Fem)
+    OR ("hor" N Fem)
+    OR ("dabo" N Fem)
+    OR ("dhex" N Fem)
+    OR ("qaar" N Masc)
+    OR (Adp Loc) ;
+
+# Verbal phrase
+# - - - - - - -
+#
+
+
+#
+# This is a syntactically rigid group within Somali, and constituent order does not vary.
+#
+# 															VERB
+
+# Should maybe make a template?
+
+# Going to name these all with V- to separate them from other possible lists 
+
+# VERB = V
+# VERB = VInf V
+
+SET V-INF = (V Inf) ;
+
+SET V-DEIC = ("sii" Deic) 
+				OR ("soo" Deic) ;
+
+# TODO: decide on some other tag for these
+SET V-SEP = ("wada" PP) 
+				OR ("kala" PP) ;
+
+SET V-ADP = ("ku" Adp) 
+				OR ("ka" Adp) 
+				OR ("u" Adp) 
+				OR ("la" Adp) 
+				OR (Adp/u)
+				OR (Adp/la)
+				OR (Adp/ku)
+				OR (Adp/ka) 
+				;
+				
+SET V-LOC = ("dhex" Adp Loc) 
+				OR ("hor" Adp Loc) 
+				OR ("ag" Adp Loc) ;
+
+	# According to lecarme: dhéx 'inside', kór 'above', hóos 'under', ág 'near'
+	# 		'place locative nominal roots'
+
+	# I can find: dhex, hor, ag; hoos and kor appear in a different position
+
+# uu soo cid diray?
+# cid = no-one?
+
+# LIST V-OBJ-C = ("na" Pron Obj) ("ina" Pron Obj) ("i" Pron Obj) ("ku" Pron Obj) ("idin" Pron Obj) ;
+# LIST V-SUBJ-C = ("aan" Pron Subj) ("aad" Pron Subj) ("ay" Pron Subj) ("uu" Pron Subj) ("aydin" Pron Subj) ("aannu" Pron Subj) ("aynu" Pers Subj) ; 
+
+SET V-OBJ-C = (Pron Pers Obj) ;
+SET V-SUBJ-C = (Pron Pers Subj) ;
+SET V-IND-C = (Pron Pers Poss) ;
+
+SET V-CS = (CS) ;
+
+SET V-FOC-BAA = ("ayaa" CS) OR ("waxaa" CS) OR ("waa" CS) ;
+SET V-FOC = V-FOC-BAA OR ("baa" CS) ;
+
+SET VALENCE = IV OR TV ;
+
+# Can probably generalize to (Pron Subj) so that that gets negatives and everything.
+
+
+#						soo VERB
+#						sii VERB
+#					 ka soo VERB
+#					 ka sii VERB
+#					 u soo VERB
+#					 u sii VERB
+
+#					aad ka VERB
+#				    aad kaga VERB
+
+#				  aad ku soo VERB
+#				  aad ku sii VERB
+#				  aad ka soo VERB
+
+#				  oo uu ka soo VERB
+
+#					aad soo VERB
+#					aad sii VERB
+#				   waad soo VERB
+#				   waad sii VERB
+
+
+#					ADP DEIC VERB
+
+#					OBJ DEIC VERB
+#					OBJ LOC VERB
+
+#					OBJ DEIC VERB
+#					oo OBJ DEIC VERB
+#					waa OBJ DEIC VERB
+#					waxaa OBJ DEIC VERB
+#					ayaa OBJ DEIC VERB				! no foc with baa
+#					Pron OBJ DEIC VERB
+#					ClitPron OBJ DEIC VERB
+#					in+ClitPron OBJ DEIC VERB
+#					CS+ClitPron OBJ DEIC VERB
+#					CS ClitPron OBJ DEIC VERB
+
+#					DEIC VERB
+#					waa DEIC VERB
+#					baa DEIC VERB
+#					ayaa DEIC VERB
+#					waxaa DEIC VERB
+
+#					SUBJ OBJ soo VERB
+
+
+#						soo wada VERB
+#						soo kala VERB
+#						ii soo kaa VERB
+
+#						soo wada dhex VERB
+
+#						ku kala dhex VERB
+#						ku wada dhex VERB
+
+#						ku kala VERB
+#						ku wada VERB
+
+#						ku soo wada VERB
+#						u soo kala VERB
+
+
+
+# !						ku dhex kala VERB
+
+#						u kala hor VERB
+
+#						soo dhex VERB
+#						soo hor VERB
+
+#						sii dhex VERB
+#						sii hor VERB
+#					 ku sii dhex VERB
+#					  u sii dhex VERB
+
+
+#						soo ma ah
+
+#						soo ma VERB
+#						soo ma uu VERB
+
+
+
+# summarizing above:
+
+				 			 # ADP DEIC LOC VERB
+					 			 # ADP DEIC VERB
+				  			  # ADP SEP LOC VERB
+				  			# CS OBJ-C DEIC VERB
+			 		   # CS SUBJ-C ADP DEIC VERB
+			 		 # CS SUBJ-C OBJ-C DEIC VERB
+						  # DEIC NEG SUBJ-C VERB
+					 			 # DEIC NEV VERB
+					 			 # DEIC LOC VERB
+					 			 # DEIC SEP VERB
+						 			 # DEIC VERB
+					 			 # FOC DEIC VERB
+			 		   # FOC-BAA OBJ-C DEIC VERB
+			  			# OBJ-C DEIC INDOBJ VERB
+					 		   # OBJ-C DEIC VERB
+					  			# OBJ-C LOC VERB
+		   			 # PRON-SUBJ OBJ-C DEIC VERB
+						  # SUBJ-C ADP DEIC VERB
+					 		   # SUBJ-C ADP VERB
+							  # SUBJ-C DEIC VERB
+						# SUBJ-C OBJ-C DEIC VERB
+
+
+# summarizing above? 
+
+
+# V-SUBJ-C     V-OBJ-C   	V-ADP    	V-DEIC    V-IND-C    	V-SEP    LOC		VERB
+#                        
+#	aan		    	i      		kú	  	   soo		kaa			wada	dhex
+#	aad		    	na     		lá	  	   sii		kay			kala	hor
+#	uu		    	idin   		 í	  				etc
+#	etc				etc			ká
+
+
+# V-SEP sometimes seems to occur after LOC in a few odd places.
+
+
+# TODO: would be fun to generate all possible permutations and see which are and are not attested in
+#		all the corpuses I've collected
+
+
+# Lecarme provides a ranking she gets from andrzejewski and zholkovski
+
+#		SubjClitics		Impersonal		ObjClitics		Preverbs		Possessor		'Other'
+#				aan											ú,kú		káy,káa,kayó
+#				aad			la			i					ká,lá		kéen,kíin, (no 3)	
+#				uu						ku
+#				etc...					na, ina
+#										idin
+#										0
+#										is
+#	'Other'		are the deictics, separative/together, and place locative nomianl
+
+
+SET VERB = (V) OR (V Inf) ;
+
+# TODO: NP templates
+# TEMPLATE NP = (0 (N Sg) LINK 1 (N Gen)) OR 
+#               # num iyo num N Sg
+#               (1 (Num) LINK 1 (CC) LINK 1 (Num) LINK 1 (N Sg)); 
+
+SET POST-NOMINAL-NOMINAL = (N Gen)
+                        OR (Num)
+                        ;
+
+TEMPLATE SIMPLE-NP = (0 (N Def) LINK (1 POST-NOMINAL-NOMINAL)) ;
+TEMPLATE NUM-NP = (0 (Num) LINK (1 (N Pl Gen))) ;
+
+TEMPLATE NP = (0 T:SIMPLE-NP)
+              # xisbiga mucaaradka
+
+           OR (0 T:SIMPLE-NP LINK (1 (N Prop))) 
+              # Guddiga doorashada dalka Ghana
+
+           OR (0 T:SIMPLE-NP LINK ((1 ("ee" CS)) LINK (1 T:SIMPLE-NP)))
+              # wareegga kowaad ee doorashada madaxnimada
+              # May only be applying because of the first part of this rule?
+              ;
+
+# N N Gen
+# Num N
+# Subj N?
+
+# (T:Waffle)     
+
+TEMPLATE VP =  ([V-LOC, VERB]) OR
+			   ([V-SEP, V-LOC, VERB]) OR
+			   ([V-IND-C, V-SEP, V-LOC, VERB]) 
+			   ;
+
+
+###
+### Phonological stuff that we don't care about for now
+###
+
+SECTION
+REMOVE (ATR) ;
+
+# Remove Use/NG if there are other analyses.
+REMOVE (Use/NG) if (0C (*)) ;
+
+
+# SECTION
+# 
+#  MAP (@Guess-Only) TARGET (Guess) (0C Guess) ;
+
+
+# Remove guesses when there are other analyses.
+REMOVE (Guess) (0C (*)) ;
+
+# REMOVE (Der/V N) (0C (N)) ;
+
+# Select transitives if they are tagged on verbs
+# SELECT TRANSITIVITY (NEGATE 0 (N)) (NEGATE 0 (CS)); 
+
+SELECT (IV) (NEGATE 0 TV) (NEGATE 0 A) (NEGATE 0 N) (NEGATE 0 CS) ;
+
+###
+#    ###   Pos Disambiguation           #BASICPOS
+#####   
+
+SECTION
+    REMOVE (Der/sho) ;
+
+    REMOVE ("ug" V) (0 Adp) (*1 V BARRIER CS);
+    REMOVE ("ba'" V) (0 CS) (NEGATE *-1 FOCUSES BARRIER CLB) (NEGATE *1 FOCUSES BARRIER CLB);
+
+    SELECT ("badan" A) (-1 N)    ;
+    SELECT ("badan" A) (-1 Pron) ;
+
+    #
+    # Select pronominal / absolutive / impersonal objecty readings
+    #
+
+    SELECT ("wax" Pron Abs) (1 A) (2 (V TV)) ;
+        # wax badan dhala
+
+    SELECT ("wax" Pron Abs) (1 V) ;
+        # wax qoraa 
+
+    SELECT ("wax" Pron Abs) (1 Adp) (2 V) ;
+        # wax ku qoraa
+
+    # TODO: Use of this implies transitivity
+
+    # SELECT (0 TV) (-2 ("wax" Pron Abs)) (-1 A) ;
+    # SELECT (0 V TV) ;
+        # Idinku wax badan dhala, oo tarma.
+
+    # Some basic disambiguations for when a word has multiple PoSes
+    
+    # Select cohorts marked with valency when they exist
+    # SELECT VALENCE; 
+    
+    
+    # Certain conjunctions can disambiguate surroundings
+    
+    SELECT (N) IF (0 V) (-1 ("iyo" CC)) ;
+    SELECT (N) IF (1 ("iyo" CC)) (2 N) ;
+    
+    SELECT (N Abs) IF (0 N) (-1 ("iyo" CC)) (-2 (N Abs)) ;
+    SELECT (N Abs) IF (1 ("iyo" CC)) (2 (N Abs)) ;
+        # Lab iyo dhaddig
+    
+    SELECT (N Abs) IF (1 ("iyo" CC)) (2 (?)) ;
+        # had iyo goorba (with no analysis)
+    
+    SELECT (N) IF (-1 Num) (1 ("iyo")) (2 Num) (3 N) ;
+    SELECT (N) IF (-1 Num) (-2 ("iyo")) (-4 Num) (-3 N) ;
+    
+    SELECT (N) IF (0 V) (1 ("dhex")) ;
+        # Beerta dhex
+    
+    SELECT ("uun" Pron) IF (1 V) (-1 V) ;
+        # Biyuhu aad ha u soo bixiyeen uun dhaqdhaqaaqa oo badan.
+    
+    # SELECT (N) IF (1 Adp) (2 V) ;
+    
+    SELECT CS IF (-1 ("oo" CS)) (1 Pron) (2 V) ;
+
+    SELECT CS IF (-1 CLB) (0 ("in" CS)) (1 N) ;
+    
+    SELECT ("badan" Adv) IF (-1 N) ;
+    
+    SELECT (N Indef) IF (1 ("badan" Adv)) ;
+    REMOVE (N Gen) IF (1 ("badan" Adv)) (-1 CS);
+    
+    SELECT (N Gen) IF (-1 Num) ;
+    
+    SELECT (N) (1 N) (2 ("ah" V)) ;
+    SELECT (N) (-1 N) (1 ("ah" V)) (NEGATE 0 ("in" CS)) ;
+    
+    SELECT (N) (1 ("ha" CS Imper)) (2 V);
+        # iftiin ha ahaado
+    
+    SELECT (N) (1 ("ee" CC)) (2 A);
+        # iftiin ee waaweyn
+    
+    SELECT (CS) (0 CLITICS) (0 N) (-1 CLB-OR-BOS) ;
+        # Haddaba ... 
+    
+    # SELECT (N) (0C (V Imper)) (-1 CLB-OR-BOS) (1 (N)) (NEGATE 0C CS) ;
+    
+    SELECT ("beer" N) (1 (N Prop)) ;
+    
+    SELECT (N) (-1 ("bixi" V)) (-2 ("u"));
+    
+    # SELECT (N) (0 V) (1 (N Gen));
+    
+    
+    SELECT (N) (1 ("kale" A)) ;
+    
+    SELECT ("mar" N Masc) (1 ("kale" A)) ;
+    SELECT ("mar" N Masc) (1 ("dambe" A)) ;
+        # Mar 'moment' is masculine if it means time
+        # another time ; again
+    
+    SELECT (N) (1 ("dambe" A)) (0 V) ;
+        # Dambe pretty much always nouns
+        # mar dambe, kol dambe, xoog dambe, xaggii dambe, jidka dambe
+    
+    SELECT (N) (1C A) ;
+    
+    REMOVE (N Gen) (1 ("dambe" A)) ;
+        # Also it is usually not genitive preceding
+    
+    
+    REMOVE (V) (-1 N) (1 V) ;
+        # Kolkaasaa Sheem iyo Yaafed dhar qaadeen, 
+    
+    SELECT (N Prop Masc) (1 3SgM) ;
+    
+    SELECT (N Prop) (0 V) ;
+    
+    SELECT (N) (0 V) (-1 (V "ah")) ;
+        # waxaynu ahaanay walaalo
+    
+    SELECT (V) (0 N) (-1 (Adp)) (NEGATE 1 ("ah" V));
+        # kor u taag
+    
+    SELECT (Adp Loc) (1 Adp) (2 V) ;
+        # Indhahaaga kor u taag
+
+    # Also select Adp Loc Indef Abs if available.
+    SELECT (Adp Loc)           (1 CLB-OR-EOS) (-1 Adp) (-2 (N Indef)) ;
+    SELECT (Adp Loc Indef Abs) (1 CLB-OR-EOS) (-1 Adp) (-2 (N Indef)) ;
+        # Bil ka hor, ayaa 
+    
+    SELECT ("ku" Adp) (-1 CS) (1 IV) ; 
+        # oo waxay ku yidhaahdeen buurihii iyo dhagaxyadii
+        # oo waxaan ku dhawaaqaa, waa
+    
+    SELECT ("ku" Pron) (1 (V TV)) (-1 CS) ;
+        # wuu ku sharfay
+    
+    SELECT ("la" Adp) (-3 CS) (-2 N) (-1 N)    (1 V) ;
+        # Markaasaa Rabbigu Muuse la hadlay
+    
+    SELECT ("la" Adp) (-2 CLB-OR-BOS) (-1 (CS 3SgM)) (1 (V)) (2 (N Masc)) ;
+    SELECT ("la" Adp) (-2 CLB-OR-BOS) (-1 (CS 3SgF)) (1 (V)) (2 (N Fem))  ;
+        # Wuxuuse la hadlaa Ilaah
+    
+    # TODO: too far reaching, need f.ex sida CS when there is N Fem, VTV, etc.
+    # SELECT (N) IF (0 V) (1 (N Prop)) (NEGATE 0C CS) ;
+        # Boqor _
+
+    SELECT (N Abs) (-1 ("doon" V)) (1 EOS) (*-1 (CS Subj));
+        # Ex.) Waxaanan doonayn qalin.
+
+    SELECT (Num Ord) (0 ("ka" Pron Foc/baa)) ;
+        # Ex.) wareegga kowaad
+
+    REMOVE (Pron Pers Subj Foc/baa) (0 CS) ;
+
+    REMOVE (V) (-1 Foc/L) (1 Adp) (2 (V Ind)) ((3 N) OR (3 CLB-OR-CS));
+        # Ex.) _ ayaa dood ka qaba natiljada.
+        # Ex.) _ ayaa gaadh ka qabtay magaalada reer Dimishaq, si ...
+        # Ex.) _ ayaa boqor ka noqday.
+
+    SELECT ("mid" Det) (1 Pron) (-1 V) ;
+
+    SELECT ("wada" PP Com) IF (-1 Pron) (1 V) ;
+    SELECT ("wada" PP Com) IF (-1 Pron) (1 A) (2 V) ;
+
+    ##  REMOVE (0 V) (0C PP);
+    
+
+    SELECT (A) (1 ("ah" V)) ;
+    REMOVE (Der/V* A) (0 A) (1 ("ah" V)) ;
+        # wanaagsan yahay 
+
+    REMOVE (Der/V* A) (0 A) (-1 N) ;
+        # oo ciiddda engegani ha muuqato ; 
+
+    REMOVE (Der/V* A) (0 A) ;
+
+    SELECT (N) 
+        IF (-2 CS) 
+           ((-1 (Subj Nom)) OR (-1 (Pron))) 
+           (0 V) (0 N)
+           (1 Adp LINK *1 VERB BARRIER VERB) ;
+        # Ex.) mideysan si ay awooda uga tuuraan
+
+    SELECT ("in" CS) (-1 Common-Verb-With-IN-Complement) (-1 V);
+        # Ex.) Wuxuu wargeliyay in aan la ... 
+        #
+
+    
+    SELECT (V IV "jir") (-1 Inf) ;
+
+    REMOVE (Der/V*) (0 V) ;
+    REMOVE (Der/N*) (0 V) ;
+
+        # TODO: oo waraabin jirtay
+        #   - missing simple jir, only derivational ones avail
+        #
+        # Laakiin ceeryaamo baa dhulka kor uga soo bixi jirtay.
+
+    # TODO: kasta  gets V reading of kas sometimes.
+    #
+    # TODO: disambiguation of oo CS/CC, ee CS/CC
+    #
+
+    SELECT ("oo" CS) ;
+    SELECT ("ee" CS) (*1 V BARRIER CS) ;
+
+    SELECT ("aad" Adv) (1 ("u" Adp)) ;
+
+    SELECT ("kasta" Attr) (-1 N) ;
+    SELECT ("kasta" Attr) (-1 Pron) ;
+
+
+    SELECT (A) (0 N) (-1 CS) (1 CLB-OR-CS) ;
+    SELECT (V) (0 N) (-1 CS) (1 CLB-OR-CS) ;
+
+
+
+    # TODO: iyo uun kasta oo nool oo dhaqdhaqaaqa ,
+    #               ^        ^
+    #
+
+###
+#    ###   Subject/Verb agreement
+#####   
+
+SECTION
+
+
+     # Subject clitics affix to CSes but sometimes occur free-standing
+     # on their own.
+    
+     # Some examples:  
+    
+     #       v----v         v----------v       v----------------------v
+     # Waxaannu u nimid inaannu ku xidhno, si aannu gacanta kuugu gelinno reer Falastiin.
+    
+     #     1Pl    1Pl      1Pl        1Pl      1Pl                    1Pl
+     #     Excl            Excl                Excl
+    
+     # Note: Clitics on CSes mark inclusive/exclusivity, but verbs do not. 
+    
+     # TODO: test with clause boundaries
+    
+    
+    
+    ### Verb selection              #AGREEMENT
+    
+    SELECT (V 1Sg)  (*-1 (Subj 1Sg)  BARRIER CLB-OR-CS) ;
+    SELECT (V 2Sg)  (*-1 (Subj 2Sg)  BARRIER CLB-OR-CS) ;
+    SELECT (V 3SgM) (*-1 (Subj 3SgM) BARRIER CLB-OR-CS) ;
+    SELECT (V 3SgF) (*-1 (Subj 3SgF) BARRIER CLB-OR-CS) ;
+    
+    SELECT (V 1Pl)  (*-1 (Subj 1Pl)  BARRIER CLB-OR-CS) ;
+    SELECT (V 2Pl)  (*-1 (Subj 2Pl)  BARRIER CLB-OR-CS) ;
+    SELECT (V 3Pl)  (*-1 (Subj 3Pl)  BARRIER CLB-OR-CS) ;
+
+
+    # How to only add it once? 
+    # ADDRELATION (verbagreement) TARGET (V) TO (*-1 Subj) ;
+    
+    
+    #### ... if preceding Subj is 'Null', but look for Nom marking
+    
+    SELECT (V 3SgM) (*-1 (Masc Nom) 	BARRIER CLB-OR-CS) (NEGATE 0 CS) ;
+    SELECT (V 3SgF) (*-1 (Fem Nom)  	BARRIER CLB-OR-CS) (NEGATE 0 CS) ;
+    
+    	# Ex.) Gabadhu bariiska baa cuntay.
+    	# Ex.) Inanku bariiska baa cunay.
+    
+    #### ... null agrees with 3SgM, maybe analyzer needs +Null on verbs?
+    
+    SELECT (V 3SgM) (*-1 (Subj Null) BARRIER CLB-OR-CS) ;
+        # Ex.) Waxaana jiray fiid iyo subax maalintii saddexaad.
+    
+    SELECT (V 3SgM) (-1 (Pron Indef) BARRIER CLB-OR-CS) ;
+        # Ex.) Biyuhu aad ha u soo bixiyeen uun dhaqdhaqaaqa oo badan.
+    
+    SELECT (V 3SgM) (*-1 (Pron Impers Subj) BARRIER CS) ;
+        # Ex.) nin kasta waa in la u dilaa dembigiisa
+
+    SELECT (V 3SgM) (*-1 ("la" Pron Impers)) (-1 (CS Neg)) ;
+        # Ex.) Berri la ma shaqeeyo
+
+    # TODO: probably needs some more test sentences here.
+    # This is an imprersonal without an impersonal subject `la`
+    SELECT (V 3SgM) (NEGATE *-1 (N Sg Nom) BARRIER (V)) ;
+        # Ex.) Warshaddaas ka ma shaqeeyo.
+        # Ex.) Axmed lacagta iiguma kaa keenin. ( Does this apply?)
+
+    #### ... in subordinate clauses
+    
+    SELECT (V 3Sg)   (0 VSUBORD) (*-1 (N Sg Abs) BARRIER CLB-OR-CS) (1 CLB-OR-CS) ;
+    SELECT (V 3SgF)  (0 VSUBORD) (*-1 (N Fem Sg Abs) BARRIER CLB-OR-CS) (1 CLB-OR-CS) ;
+    SELECT (V 3SgM)  (0 VSUBORD) (*-1 (N Masc Sg Abs) BARRIER CLB-OR-CS) (1 CLB-OR-CS) ;
+    
+    	# Ex.) Naagta keenta waan arkay.
+
+    
+    SELECT (V 3Pl)  (0 VSUBORD) (*-1 (N Pl Abs)  BARRIER CLB-OR-CS) (1 CLB-OR-CS) ;
+    	# Ex.) Naagaha keenaya waan arkay.
+    
+    SELECT (V 3Pl)  (0 VSUBORD) (*-1 (N Masc Pl) BARRIER CLB-OR-CS) (1 V) ;
+    
+    #### ... in subordinate clauses with appositive CS `oo`
+    
+    SELECT (V 3SgM) 	(0 VSUBORD) (*-1 (CS Appos) LINK -1 (N Masc Sg)) ;
+    SELECT (V 3SgF) 	(0 VSUBORD) (*-1 (CS Appos) LINK -1 (N Fem Sg)) ;
+    SELECT (V 3Pl) 		(0 VSUBORD) (*-1 (CS Appos) BARRIER CLB-OR-CS LINK -1 (N Pl)) ;
+    
+    	# Ex.) Naagta oo laybreeriga ku qortay waa imanayaa.
+    	# Ex.) Ninka oo jaamacadda ku qortay waa imanayaa.
+    
+    #### ... in copula "ah"
+    
+    SELECT ("ah" V 3SgM Nom) IF (-1 (N Abs)) (-2 (N Masc Abs));
+    SELECT ("ah" V 3SgF Nom) IF (-1 (N Abs)) (-2 (N Fem Abs));
+    
+        # Ex.) raggiinna dhallinyarada ahuna wax bay arki doonaan
+    
+    # These were too general.
+    #SELECT (V 3SgM)     (0 ("ah" V)) (*-1 (N Abs Masc) BARRIER CLB );
+    #SELECT (V 3SgF)     (0 ("ah" V)) (*-1 (N Abs Fem) BARRIER CLB );
+        
+        # Ex.) raggiinna dhallinyarada ahuna wax bay arki doonaan
+    
+    
+    # TODO: this could make lots of problems.
+    SELECT THIRDP (0 V) (*-1 (CS Null) BARRIER CLB-OR-CS) ;
+    
+    	# Ex.) maxáa dhacaý? 
+    
+    ### Negative selection
+    
+    REMOVE ("doon" V Neg) (-1 V-INF) ;
+        # Ex.) arki doonaan
+    
+        # TODO: need examples of this with negative, how to select Neg when linked
+        #       to neg in CLB, but otherwise drop?
+    
+    ### Agree with ungendered proper noun
+    
+    REMOVE NON3P (0 V) (*-1 (N Prop) BARRIER CLB-OR-CS) (1 CLB-OR-CS) ;
+
+
+    ### Agreement in negative with no pronouns
+    
+    REMOVE THIRDP (0 V) (*-1 (CS Neg) BARRIER V) 
+                        (NEGATE 0 (V) LINK *-1 (Pron) BARRIER V) ;
+        # Ex.) Xamar ma tago.
+        # Ex.) Isaga Xamar ma tago.
+        # Ex.) Isaga Xamar ma uu tago.
+        # Ex.) Xusen ima uu arkin.
+    
+    # TODO: Berri al ma shaqeeyo.
+    
+    
+    ### CS selection
+    
+    SELECT (CS Subj Null Neg) 
+           (0 (CS) LINK *1 (V Neg) BARRIER V) 
+           (-1 Abs) ;
+        # Ex.) Xusen baan i arkin.
+        # Ex.) Xamar baanan tegin.
+
+    SELECT (CS Subj 1Sg) (*1 (V Ind 1Sg)    BARRIER CLB-OR-CS) ;
+    SELECT (CS Subj 2Sg) (*1 (V Ind 2Sg)    BARRIER CLB-OR-CS) ;
+    SELECT (CS Subj 3SgM) (*1 (V Ind 3SgM)  BARRIER CLB-OR-CS) ;
+    SELECT (CS Subj 3SgF) (*1 (V Ind 3SgF)  BARRIER CLB-OR-CS) ;
+    
+    SELECT (CS Subj 1Pl) (*1 (V Ind 1Pl)    BARRIER CLB-OR-CS) ;
+    SELECT (CS Subj 2Pl) (*1 (V Ind 2Pl)    BARRIER CLB-OR-CS) ;
+    SELECT (CS Subj 3Pl) (*1 (V Ind 3Pl)    BARRIER CLB-OR-CS) ;
+    
+    
+    ### Pronoun selection
+    
+    SELECT (Pron Subj 1Sg) (*1 (V Ind 1Sg)    BARRIER CLB-OR-CS) ;
+    SELECT (Pron Subj 2Sg) (*1 (V Ind 2Sg)    BARRIER CLB-OR-CS) ;
+    SELECT (Pron Subj 3SgM) (*1 (V Ind 3SgM)  BARRIER CLB-OR-CS) ;
+    SELECT (Pron Subj 3SgF) (*1 (V Ind 3SgF)  BARRIER CLB-OR-CS) ;
+    
+    SELECT (Pron Subj 1Pl) (*1 (V Ind 1Pl)    BARRIER CLB-OR-CS) ;
+    SELECT (Pron Subj 2Pl) (*1 (V Ind 2Pl)    BARRIER CLB-OR-CS) ;
+    SELECT (Pron Subj 3Pl) (*1 (V Ind 3Pl)    BARRIER CLB-OR-CS) ;
+
+    
+    SELECT (V 3SgF) (*-1 (N Sg Fem Nom) BARRIER CLB-OR-CS) ;
+    SELECT (V 3SgM) (*-1 (N Sg Masc Nom) BARRIER CLB-OR-CS) ;
+    	# Ex.) Buugga oo gabadhu soo iibsatay bay akhriyay.
+    	# 			   | ^-----------^
+    
+    
+    ### NP + waxa
+        # NOTE: This may need to be different from NP/Nom + V, unwilling to join yet.
+    
+    # Ex.) Ardaydu waxay ... 
+    SELECT ("waxa" CS Subj 3Pl) (-1 (N Pl Nom)) ;
+    
+    # Ex.) ninku wuxuu ...  / naagtu waxay ... 
+    SELECT ("waxa" CS Subj 3SgM) (-1 (N Masc Sg Nom)) ;
+    SELECT ("waxa" CS Subj 3SgF) (-1 (N Fem Sg Nom)) ;
+    
+    ### TODO: what to do when -1 does not agree with waxa?
+        # TODO: collective plurals that aren't plural marked?
+        # dadku waxay soo ...
+        # shirku waxay iyagii ugu dharteen ... ... oo markaasaa shirkii oo dhammu waxay ka ...  ...
+        # Markaasaa dadku waxay odhan doonaan, Maxaa yeelay, iyagu waxay ka tageen axdigii uu Rabbiga ah Ilaaha awowayaashood la dhigtay markuu ka soo bixiyey dalkii Masar.
+        # Pl agreement with sg subject here.
+    
+    	# Collective plural in rag goes across a gen. argument?
+    	# Wait, where is genitive here. men of the forces 
+    	#   v--------------v
+    	# raggii ciidanku waxay ... 
+    
+    
+    # some CS/CCs always have +Red form if there is a verb in the clause
+    #
+    #  oo  but without focus
+    #  
+    #  ma - or maxaa? 
+    #
+    #
+
+    #   Obj focus with overt 3P Subj.
+    #
+    #     (42)      S          N buu/bay     V
+    #     (43)    * S          N baa         V
+    #     (44)      N buu/bay  S             V
+    #     (45)      N baa      S             V
+    #     (46)      N buu/bay  V             S
+    #     (47)    * N baa      V             S
+    #
+    #   Da (42-47) si deduce che quando baa marca un SN non-soggetto deve
+    #   essere accompagnato dalla ripresa pronominale del soggetto nei seguenti
+    #   casi:
+    #
+    #     a) se il soggetto precede il SN marcato (cfr. (42) rispetto a (43))
+    #     b) se il soggetto segue il verbo (cfr. (46) rispetto a (47)) Quando
+    #     invece il SN marcato da baa precede il soggetto e questo è in
+    #     posizione preverbale, allora la ripresa pronominale può esserci (cfr.
+    #     (45))
+    #
+    #   When there are other persons, agreement must occur, and overt
+    #   independent pronouns can occur mostly anywhere.
+    #
+    #       (a.) moos baad cuntay
+    #       Moos baad (a.) cuntay
+    #       Moos baad cuntay (a.)
+    #
+    #       (a.) = adigu
+    #
+    #   Subject focus:
+    #
+    #       S baa       N       V
+    #     * S buu       N       V
+    #       N           S baa   V
+    #     * N           S buu   V
+    #       S baa       V       N
+    #     * S buu       V       N
+    #
+    #   No person clitics if subject is focused, object can move around, same follows
+    #   for other persons, but there overt pronouns are absolutive.
+    #
+    #       Adigu moos baad cunayaa
+    #       Adiga baa moos cunayá
+    #
+
+    ###
+    #    ###   Verbs
+    #####
+    
+        SELECT (V Inf) (1 (V Ind)) ;
+        
+        # Negative selection might be tricky. How to get 
+        # 	-> V 3Pl Ind Pres
+        # 	   V 3Pl Ind Pres Rel
+        # 	   V 3Pl Ind Pres Neg
+        
+        
+        REMOVE (V Neg) (*-1 FOC LINK NOT *-1 CLB-OR-CS) ;
+    
+    
+    ###
+    #    ###   Case and Focus                   #CASE #FOCUS
+    #####   
+    
+         # The different focus markers have different interactions with case
+         #
+         # baa/ayaa focus nouns immediately to the left, and these nouns
+         # must be in absolutive.
+         	# Ex.) Laakiinse dab baan ku soo dayn doonaa ... 
+         	# TODO: tones
+        
+        SELECT (N Abs) (2 FOCL) (1 POSTPOSITIONAL-NOUNS) ;
+        SELECT (N Abs) (1 FOCL);
+        	# Ex.) ?
+
+        SELECT (N Abs) (-1 Foc/L) (1 Adp) (2 (V Ind)) ((3 (N Abs)) OR (3 CLB-OR-CS)) ;
+            # Ex.) _ ayaa dood ka qaba natiljada.
+            # Ex.) _ ayaa gaadh ka qabtay magaalada reer Dimishaq, si ...
+            # Ex.) _ ayaa boqor ka noqday.
+        
+        # MAP (@SUBJ>) Target (N Nom) (0 (N Nom) LINK *1 ("ma" CS Neg) BARRIER (CS)) ;
+        REMOVE (N Nom) (0 (N Nom) LINK *-1 (N Nom) BARRIER (CLB-OR-CS)) ;
+        
+        REMOVE (N Nom) (0 (N Nom) LINK *1 (N Nom) BARRIER (CLB-OR-CS)) ;
+        	# Ex.) Dhulkuna qaab ma lahayn, ... 
+        
+        # Needs to be ahead of the genitive marking?
+        REMOVE (N Gen) (1 (N Abs)) (2 ("ah" Nom)) ;
+        REMOVE (N Gen) (-1 (N Abs)) (1 ("ah" Nom)) ;
+            # TODO: Rabbiga Ilaah ahuna
+            # TODO: raggiinna dhallinyaryada ahuna; maybe -gii can be nominative?
+
+        SELECT (N Gen) (0 COMMONNOUN) (-1 COMMONNOUN);
+            # Ex.) ciidda dhulka
+            # TODO: mark head and complement with tags
+
+        SELECT (N Gen) (-1 COMMONNOUN) (0 (N Prop Gen)) ;
+        SELECT (N Gen) (-1 COMMONNOUN) (0 (N Prop Gen)) (1 ("ee" CS)) ;
+        
+        REMOVE (N Gen) (NEGATE -1 (N)) ;
+
+        SELECT (Nom) (1 FOCV) (2 N) ;
+            # Ex.) Cali waa macallin.
+
+        SELECT (Abs) (-1 Nom) (1 (CS Neg)) (2 ("ah" Neg)) ;
+            # Ex.) Cali macallin ma aha. 
+
+        SELECT (Nom) (1 Abs) (2 (CS Neg)) (3 ("ah" Neg)) ;
+            # Ex.) Cali macallin ma aha. 
+        
+        
+        SELECT (N Abs) (-1 (V Ind)) (NEGATE 0 CS) ;
+            # Ex.) nin buu ka sameeyey ciidda dhulka
+
+        SELECT ("in" CS) (1 N) (-1 (V Red)) ;
+        SELECT ("in" CS) (1 (Pron Subj)) (-1 (V Red)) ;
+
+        SELECT ("in" CS) (-1 ("waa" CS)) ;
+            # Waa inaad
+
+        SELECT ("in" CS) (-1 (V Neg)) ;
+
+        
+        SELECT (N Prop Masc Nom) (-1 (Subj Null)) ;
+        
+        # Absolutive before "waa" Null, even on bare nouns
+        #
+        # TODO -1 CLB or nothing?
+        SELECT (N Abs) IF (1 ("waa" Null)) (2 ("in" Subj)) ;
+        
+        # TODO: why is Adj-Post-Positive-Non-Inflecting not working?
+        SELECT (N Abs) IF (1 (A)) (2 ("waa" Null))  (3 ("in")) ;
+        
+            # Ex.) laakiinse nin kasta waa in loo dilaa dembigiisa uu isagu falay.
+
+		# Select reduced if linked to null-person left-focus, e.g. subject is focused.
+        SELECT (V Red Abs) IF (0 (V Red) LINK *-1 (CS Foc/L Null) BARRIER CLB-OR-CS LINK -1 (N Abs)) ;
+			
+			# Ex.) Rice ayaa qiratay khaladkii Bengasi
+
+		# TODO: when to select Red Nom?
+
+		# Remove Red verbs if linked to focused non-subject, so, nominative should exist, but also there should be an agr relationship.
+		# for some reason $$PERSON-AGREE isn't working
+		REMOVE (V Red) IF (0 (V) LINK *-1 (CS Foc/L) BARRIER CLB-OR-CS LINK -1 (N Abs)) ;
+
+		SELECT (N Prop Masc Nom) (-1 (Subj 3SgM)) ;
+		SELECT (N Prop Masc Nom) (-1 (Subj 3SgM)) ;
+
+		SELECT (V 3SgM) (-1 (CS Neg)) (-2 (N Abs)) (-3 (N Masc)) (-4 BOS) ;
+		SELECT (V 3SgF) (-1 (CS Neg)) (-2 (N Abs)) (-3 (N Fem)) (-4 BOS) ;
+		    # Ex.) Cali macallin ma aha.
+    
+        SELECT (N Guess Abs) (1 (N Gen)) ;
+            # Ex.) Z doorashada dalka Ghana
+
+        SELECT (N Abs) ((1 Gen) OR (1 CLB)) (NEGATE 0 CS) (NEGATE 0 Adp) ;
+
+    ###
+    #    ###   Adjectival stuff             #ADJECTIVES
+    #####   
+
+        SELECT (A Attr) (-1 N) (NEGATE 1 ("ah" V)) ;
+        
+
+
+    ###
+    #    ###   Possessive Agreement             #POSSESSIVE
+    #####   
+    
+        # Possessive with absolutives
+        SELECT (PxSg3F) IF (0 (N Abs) LINK *-1 (N Fem) BARRIER N);
+        SELECT (PxSg3M) IF (0 (N Abs) LINK *-1 (N Masc) BARRIER N);
+        
+            # Ex.) maaliintaas ayaa Ilaah ka nastay shuqulkiisii
+        
+        # TODO: possessive agreement with subject, find examples
+        # SELECT (PxSg3F) IF (0 (N Abs) LINK *-1 (Subj) BARRIER CLB);
+        # SELECT (PxSg3M) IF (0 (N Abs) LINK *-1 (Subj) BARRIER CLB);
+        
+        
+        ##
+        ## wax transitivization
+        ##
+        
+        # TODO: kwicsnt for more rules
+        # TODO: @OBJ tag?
+        SELECT ("wax" Pron Indef Abs) (1 Adp) (2 V) ;
+        SELECT ("wax" Pron Indef Abs) (1 Adp) (2 ("dhex" N)) (3 V) ;
+        SELECT ("wax" Pron Indef Abs) (1 Adp) (2 Deic) (3 V) ;
+        
+        	# Ex.) Naágta laybreériga wax ku dhex qoraysá ayáa soo socotá.
+        	# Ex.) Waxayna la yaabeen wax bariddiisa, waayo, wuxuu wax u barayay sida mid amar leh, oo uma uu baraynin sida culimmada.
+        	# Ex.) si aad wax u soo xusuusatid
+        
+        # some notes ...
+        #  + Need to get the right case on `wax` from cg.
+        #  + [naágta laybreériga wax ku dhex qóraysá] ayáa soo socotá. 
+        #  + in whole of bible, things following wax are most commonly.
+        #  	- wax Rabbiga/Israa'iil/Ilaah
+        #  	- wax aad/aan
+        #  	- wax + V
+        #  	- wax + Adp + V
+        #  	- wax + Adp + soo + V
+        
+        
+        REMOVE (N Gen) (1 FOCR);
+        
+         # 
+         # NPs occurring to the right of waxaa often are in nominative.
+         	# Ex.) dadku waxay soo galeen durkii, ... 
+         	# TODO: tones
+    
+    
+    ###
+    #    ###   Restrictive / Appositive CS Selection        #CS
+    #####   
+
+        SELECT ("ee" CS) (-1 (N Gen)) (1 (N Abs)) (2 (N Gen)) ;
+
+        SELECT ("ee" CS) (-1 (V)) ;
+
+        SELECT ("ee" CS) (1 (Adp)) ;
+
+        SELECT ("oo" CS Restr) (1 (V Ind)) ;
+            # Ex.) Nana Akufo Addo oo helay.
+
+
+
+    ###
+    #    ###   Object and Adpositional slot
+    #####   
+    
+        # Some ambiguity here with ku. Maybe this can be solved with IV/TV marking?
+        
+        
+        # TODO: Discontinuous constituents.
+        # 		Some @TAGs for marking adpositional elements and location
+        
+        # TODO: combined adpositions, how to separate? 
+        # 11 Madaxiisiina waxaa lagu keenay xeedho, oo gabadhii la siiyey, iyaduna hooyadeed bay u keentay.
+        # 11  And his head was brought in a dish, and given to the damsel: and she brought {it} to her mother.
+        # la 'one' + ku 'in'
+        # 
+        ## problem:
+        ## 
+        ##	   lagu	la+Pron+Impers+Subj#ku+Adp
+        ##	   
+        ##	   =>
+        ##	   
+        ##		"<lagu>"
+        ##			"la+Pron+Impers+Subj#ku" Adp
+        ## 
+        ## need to have following output:
+        ##	   
+        ##		"<lagu>"
+        ##			"la" Pron Impers Subj
+        ##	   
+        ##		"<lagu>"
+        ##			"ku" Adp
+        ## 
+        
+        SELECT Adp (1 ("dhex" N)) ;
+        SELECT ("dhex" Adp Loc) (1 V) ;
+    
+    ###
+    #    ###   Verbal phrase stuff         #VERBPARTICLES
+    #####   
+    
+        # Probably won't be a lot of ambiguities
+        
+        # summarizing above:
+        
+        				 			 # ADP DEIC LOC VERB
+        					 			 # ADP DEIC VERB
+        				  			  # ADP SEP LOC VERB
+        				  			# CS OBJ-C DEIC VERB
+        			 		   # CS SUBJ-C ADP DEIC VERB
+        			 		 # CS SUBJ-C OBJ-C DEIC VERB
+        						  # DEIC NEG SUBJ-C VERB
+        					 			 # DEIC NEV VERB
+        					 			 # DEIC LOC VERB
+        					 			 # DEIC SEP VERB
+        						 			 # DEIC VERB
+        					 			 # FOC DEIC VERB
+        			 		   # FOC-BAA OBJ-C DEIC VERB
+        			  			# OBJ-C DEIC INDOBJ VERB
+        					 		   # OBJ-C DEIC VERB
+        					  			# OBJ-C LOC VERB
+        		   			 # PRON-SUBJ OBJ-C DEIC VERB
+        						  # SUBJ-C ADP DEIC VERB
+        					 		   # SUBJ-C ADP VERB
+        							  # SUBJ-C DEIC VERB
+        						# SUBJ-C OBJ-C DEIC VERB
+        
+        
+        SELECT Deic IF (1 V) ;
+        
+            # Ex.) ay sii sheegi doonaan
+        
+        SELECT V-SEP IF (-1 Adp) ;
+        SELECT V-SEP IF (-1 V-ADP) ;
+
+    ###
+    #    ###   Adpositions                      #ADPOSITIONS
+    #####   
+    
+        # Demonstrative pronouns really only occur immediately before oo+CS, 
+        # focus markers, another nominal, or another pronoun (kaas uun baan).
+        #
+    
+        REMOVE ("ka" Pron Dem)
+               (1 (V Ind))
+               ;
+
+        REMOVE ("ka" Pron Dem)
+               (1 (V IV)) ;
+
+        SELECT ("ka" Adp)
+               IF
+               (-1 N)
+               (1 (Adp Loc))
+               ;
+            # Ex.) Bil ka hor, 
+
+        SELECT ("ka" Adp)
+               (-1 N)
+               (1 (PP Deic))
+               (2 V) ;
+            # Ex.) Islaamiyiinta Somalia ee dowladda ka soo horjeeda.
+
+        SELECT ("ka" Adp)
+               (-1 Pron)
+               (1 (PP Deic))
+               (2 V) ;
+            # Ex.) Libya ayaa sheegaya in dadku ay ka soo horjeedaan oo ay xanaaqsan yihiin.
+
+        # ku vs kú
+        #
+        # This is harder-- it is an adp and an object pronoun, 
+        # so will need to construct several very specific rules.
+        
+        # Select Adp when there is focus structure before including
+        # a place or object, and a focused subject.
+        #
+        REMOVE ("ku" Pron Pers Obj)
+               (0 (Adp))
+               (-1 (N Abs))
+               (-2 (Foc/L Null))
+               (-3 (N Def Abs))
+               ;
+
+            # Ex.) nimanka baa talyaaniga ku hadlaya.
+
+        # TODO: find test sentence. 
+        REMOVE ("ku" Pron Pers Obj)
+               (1 (V IV))
+               (NEGATE 1 (V TV))
+               ;
+
+
+        REMOVE ("la" Pron Impers) (1 (V)) (1 NON3PMasc) ;
+        REMOVE ("la" Pron Impers) (0 (Impers) LINK *-1 NON3PMasc BARRIER CLB-OR-CS) ;
+         
+            # Ex.)  Haddii Cali uu yimaaddo waxaan doonayaa inaan la hadlo.
+
+        # TODO: also with 3p Nominals, and 3pM Subj uu
+        
+SECTION
+
+###
+#    ###   Focus                      #FOCUS
+#####   
+
+    REMOVE (Foc/baa)
+           (0 (V Foc/baa)
+           LINK *-1 Focus-Like-Not-Particle BARRIER Focus-Like-Not-Particle
+           )
+           ;
+
+        # Ex.) Mooskii buu Cali cunayaa.
+
+
+###
+#    ###   Relative and reduced forms
+#####   
+
+SECTION
+
+    ### TODO: Red+Nom selection
+    ### TODO: will need to add Nom marking to irregular verbs   
+    #
+    #  Waxaan rajeynayaa inaad yimaaddo´.
+    #  Inaad timaaddaa waa fiican yahay. 
+    #
+    #  Waa run inuu yimaado´.
+    #  Inuu yimaaddaa waa run.
+    #
+    #  But:
+    #
+    #  Waa inaad berri tagto´.
+    #  Waa inaad berri tagtaa.
+    #
+    #  Waa inuu degdeg u soo noqdo´.
+    #  Waa inuu degdeg u soo noqdaa. 
+    #
+    #  And
+    #
+    #  bustayaashayda waa in maanta la qasaalaa.
+    #  waa in bustayaashayda maanta la qasaalaa. 
+
+
+
+    ### TODO: Reduced vs non-reduced selection
+	    # Could be that reduced paradigms need to have more careful
+	    # selection rules because they are more likely to have tons of
+	    # ambiguity.
+	    #
+	    # Subject focus comes with reduced paradigms
+	    # Object focus does not?
+     
+    SELECT (V Rel) (-1 ("in" CS Subj)) ;
+
+    SELECT (V Rel) (*-1 (Pron Pers) LINK -1 CLB) ;
+        # Ex.) , uu ku guuleystay wareegga kowaad ee ... 
+
+    # TODO: maybe this can be disambiguated if there us subj focus.
+    SELECT (V Red Abs) (1 ("in" CS)) ;
+
+    SELECT (V Red) (*-1 ("oo" CS Appos) BARRIER CLB-OR-CS) ;
+
+    ### TODO: Relative vs Optative selection
+        # Rel tag should probably be relabeled Subord?
+	    # Link to preceding CS and following *1C Non-Rel?
+
+    SELECT (Opt) (*-1 ("ha" CS Imper Neg) BARRIER CLB-OR-CS) ;
+        # Ex.) Iftiin ha ahaado
+
+    SELECT (V Rel) (*-1 ("oo" CS Appos) BARRIER CLB-OR-CS) ; 
+	    # Ex.) Búugga oo ay qortaý báan akhriyay. 
+	    # Ex.) Búugga oo gabádhu soo iibsatay báy akhrisay.
+
+
+
+    SELECT (V Rel) (-1 (N Nom)) (-2 (N Abs)) ; 
+	    # Ex.) Macállinku wúxuu kariyay búugga ínanku cúnayó.
+	    # TODO: try one with negation? the book the boy is not reading?
+
+
+    SELECT (V Rel) (-1 (Pron Pers Subj)) (-2 (N Abs)) ; 
+	    # Ex.) Búugga ay qortaý báan akhriyay.
+
+
+    SELECT (V Abs) (*-1 (CS Q) BARRIER CLB-OR-CS) ;
+	    # Ex.) Maxáa dhacaý? (Red+Abs)
+
+
+    # Is this too general?
+    REMOVE (V Rel) (*-1 FOC BARRIER CLB-OR-CS) ;    
+
+	    # Ex.) Búugga oo ay qortaý báan akhriyay.
+	    # 					^			^
+	    # 					Rel			-Rel
+	    #
+	    # Ex.) Mooskii bay wiilashaasi cunayaan.
+
+
+    ### NOTE: V Rel is normally distinguished with tone, but in non-tonal
+        #     situations, we need to disambiguate
+        #
+        #     qortaý - "qor" V 3SgF Ind Past Rel
+        #     qortay - "qor" V 3SgF Ind Past
+
+    # With Foc/V, don't need Red Rel
+    REMOVE (V Red) (*-1 (Foc/V) BARRIER CLB-OR-CS) ;
+    REMOVE (V Rel) (*-1 (Foc/V) BARRIER CLB-OR-CS) ;
+
+    # also waxa and maxa
+    REMOVE (V Red) (*-1 ("waxa" Foc/R) BARRIER CLB-OR-CS) ;
+    REMOVE (V Rel) (*-1 ("waxa" Foc/R) BARRIER CLB-OR-CS) ;
+
+    # some subordinate clauses are started with bare prnoun and no CS, but
+    # these are detectable be cause the preceding clause also has a CS
+    
+    # TODO: confirm that it is V Rel, and not V Red
+    SELECT (V Rel) 
+           (0 (V Rel) 
+           LINK *-1 (Subj) BARRIER CLB-OR-CS LINK
+                                             *-1 (Subj) BARRIER CLB-OR-CS)
+           ;
+
+    # CS-Dep
+    # kolkii CS
+    # haddii CS
+    # in CS
+    #
+
+    # TODO: also in an agreement relationship?
+    SELECT (V Rel)
+           (0 (V Rel)
+           LINK *-1 CS-Dep BARRIER CLB-OR-CS 
+           )
+           ;
+        # Ex.) Kolkuu walaalkaa yimaaddo waan so noqonayaa.
+
+    # # TODO: test. seems to not be ambiguous enough in following sentence
+    #
+    # wiilka baa warshadda sonkorta ka shaqeeya´.
+    # wiilasha baa warshadda sonkorta ka shaqeeya´. 
+    #
+    # SELECT (V Red Abs)
+    #        (0 (V Red Abs)
+    #        LINK *-1 (Foc/L Null) BARRIER BOS LINK
+    #                                         -1 (N Abs) 
+    #        )
+    #        ;
+
+    # Negation that is CS pretty much spans across everything.
+    # If there is negation in subordinate clauses, then it is with `aan`
+    SELECT (CS Neg) (0 (Neg) LINK *1 (V Neg) BARRIER V) ;
+        # Ex.) Ma doonayo inaan sheego.
+        # Ex.) Axmed ma jaamacadda buugag geeyo.
+
+    SELECT (V Neg)
+           (0 (Neg) LINK *-1 (CS Neg) BARRIER CS)
+           ;
+
+    SELECT (V Neg) (0 (Neg) LINK *-1 (Pron Pers Neg) BARRIER CS)
+           ;
+
+        # Ex.) isagoo aanan u baahan in ... 
+
+    REMOVE (V Neg) (NEGATE 0 V LINK *-1 Neg BARRIER Neg) 
+                   (NEGATE 0 V LINK *1 Neg BARRIER CLB-OR-EOS) ;
+        # Ex.) Banaanbax lagu taageerayo Puntland. 
+
+    # TODO: selecting V Rel vs V Neg in subordinate clauses which start with pron
+    # SELECT (V Rel)
+    #        (NEGATE 0 (V Rel)
+    #        LINK *-1 (Neg) BARRIER CLB-OR-CS 
+    #        )
+    #        ;
+    #
+
+
+###
+#    ###   Fusion                      #FUSION
+#####   
+
+SECTION
+# Split fused forms into separate cohorts
+# This is meant to aid mapping of dependencies.
+# TODO: if -oo can also be CS, then this section needs to be moved down
+
+# Need to include negates, otherwise rules overapply several times. Also add
+# splitted cohorts in reverse order.
+
+##
+### Adp + Adp
+##
+
+# ugu -> u u
+ADDCOHORT ("<u>" "u" Adp Fus/Prev) AFTER ("<ugu>" "u" Adp Adp/u) IF (NEGATE 1 Adp) ;
+ADDCOHORT ("<u>" "u" Adp)          AFTER ("<ugu>" "u" Adp Adp/u) IF (NEGATE 2 Adp) ;
+
+REMCOHORT ("<ugu>" "u" Adp Adp/u) IF (1 ("<u>" "u" Adp)) (2 ("<u>" "u" Adp)) ;
+
+# uga -> u ka
+ADDCOHORT ("<ka>" "ka" Adp Fus/Prev) AFTER ("<uga>" "u" Adp Adp/ka) IF (NEGATE 1 Adp) ;
+ADDCOHORT ("<u>" "u" Adp)            AFTER ("<uga>" "u" Adp Adp/ka) IF (NEGATE 2 Adp) ;
+
+REMCOHORT ("<uga>" "u" Adp Adp/ka) IF (1 ("<u>" "u" Adp)) (2 ("<ka>" "ka" Adp)) ;
+
+
+# kala -> ka la
+ADDCOHORT ("<la>" "la" Adp Fus/Prev)   AFTER ("<kala>" "ka" Adp Adp/la) IF (NEGATE 1 Adp) ;
+ADDCOHORT ("<ka>" "ka" Adp)            AFTER ("<kala>" "ka" Adp Adp/la) IF (NEGATE 2 Adp) ;
+REMCOHORT ("<kala>" "ka" Adp Adp/la)   IF (1 ("<ka>" "ka" Adp)) (2 ("<la>" "la" Adp)) ;
+
+
+
+# isla -> is la
+ADDCOHORT ("<la>" "la" Adp Fus/Prev) 
+            AFTER ("<isla>" "is" Adp Refl Adp/la) 
+
+            IF (NEGATE 1 Adp) ;
+
+ADDCOHORT ("<is>" "is" Adp Refl)     
+            AFTER ("<isla>" "is" Adp Refl Adp/la) 
+
+            IF (NEGATE 2 Adp) ;
+
+REMCOHORT ("<isla>" "is" Adp Refl Adp/la) 
+
+            IF (1 ("<is>" "is" Adp)) 
+               (2 ("<la>" "la" Adp)) ;
+
+
+
+# TODO: 
+#    8 	"i" Pron Pers 1Sg Obj Adp/u
+#   10 	"ku" Pron Pers 2Sg Obj Adp/ku Adp/la @>V
+#   11 	"ina" Pron Pers 1Pl Obj Adp/ka @>V
+#   11 	"ina" Pron Pers 1Pl Obj Adp/la @>V
+#   12 	"na" Pron Pers 1Pl Excl Obj Adp/u @>V
+#   14 	"iyaga" Pron Pers 3Pl Nom Adp/u
+#   15 	"idinka" Pron Pers 2Pl Obj Adp/ka
+#   15 	"iyada" Pron Pers 3SgF Nom Adp/u
+#   15 	"ku" Pron Pers 2Sg Obj Adp/u Adp/ka @>V
+#   16 	"ina" Pron Pers 1Pl Obj Adp/u @>V
+#   18 	"la" Pron Pers Impers Subj Adp/u Adp/ka @>V
+#   20 	"ina" Pron Pers 1Pl Obj Adp/ku @>V
+#   22 	"i" Pron Pers 1Sg Obj Adp/u Adp/ka @>V
+#   22 	"isaga" Pron Pers 3SgM Nom Adp/u
+#   23 	"idinka" Pron Pers 2Pl Obj Adp/la @>V
+#   24 	"i" Pron Pers 1Sg Obj Adp/la @>V
+#   26 	"iyada" Pron Pers 3SgF Abs Adp/u
+#   26 	"u" Adp Adp/la @>V
+#   51 	"la" Pron Pers Impers Subj Adp/u @>V
+#   53 	"i" Pron Pers 1Sg Obj Adp/ka @>V
+#   54 	"i" Pron Pers 1Sg Obj Adp/ku @>V
+#   57 	"ku" Pron Pers 2Sg Obj Adp/ku @>V
+#   67 	"ku" Pron Pers 2Sg Obj Adp/ka @>V
+#   71 	"idinka" Pron Pers 2Pl Obj Adp/ka @>V
+#   75 	"ka" Adp Adp/ka @>V
+#   76 	"idinka" Pron Pers 2Pl Obj Adp/ku @>V
+#   81 	"ku" Adp Adp/ka @>V
+#   81 	"ku" Adp Adp/ku @>V
+#   88 	"ku" Pron Pers 2Sg Obj Adp/la @>V
+#   91 	"is" Adp Refl Adp/ku
+#   91 	"ku" Adp Adp/la @>V
+#   93 	"idinka" Pron Pers 2Pl Obj Adp/u @>V
+#  100 	"isaga" Pron Pers 3SgM Abs Adp/u
+#  102 	"iyaga" Pron Pers 3Pl Abs Adp/u
+#  103 	"ku" Pron Pers 2Sg Obj Adp/u @>V
+#  122 	"is" Adp Refl Adp/ka
+#  148 	"i" Pron Pers 1Sg Obj Adp/u @>V
+#  175 	"la" Pron Impers Subj Adp/u
+#  179 	"la" Pron Impers Subj Adp/ka
+#  276 	"la" Pron Impers Subj Adp/ku
+
+
+##
+### Independent pronoun + u
+##
+
+
+# iyagoo -> iyagu u
+
+ADDCOHORT ("<u>" "u" Adp Fus/Prev) 
+            AFTER ("<iyagoo>" "iyaga" Pron Pers 3Pl Nom Adp/u) 
+            IF (NEGATE 1 ("iyaga" Pron));
+
+ADDCOHORT ("<iyagu>" "iyaga" Pron Pers 3Pl Nom)
+            AFTER ("<iyagoo>" "iyaga" Pron Pers 3Pl Nom Adp/u) 
+            IF (NEGATE 1 ("iyaga" Pron));
+
+REMCOHORT ("<iyagoo>" "iyaga" Pron Pers 3Pl Nom Adp/u)
+
+            IF (1 ("<iyagu>"))
+               (2 ("<u>")) ;
+
+# adigoo -> adigu u
+
+ADDCOHORT ("<u>" "u" Adp Fus/Prev) 
+            AFTER ("<adigoo>" "adiga" Pron Pers 2Sg Nom Adp/u) 
+            IF (NEGATE 1 ("adiga" Pron));
+
+ADDCOHORT ("<adigu>" "adiga" Pron Pers 2Sg Nom)
+            AFTER ("<adigoo>" "adiga" Pron Pers 2Sg Nom Adp/u) 
+            IF (NEGATE 1 ("adiga" Pron));
+
+REMCOHORT ("<adigoo>" "adiga" Pron Pers 2Sg Nom Adp/u)
+
+            IF (1 ("<adigu>"))
+               (2 ("<u>")) ;
+
+# anigoo  -> anigu u
+
+ADDCOHORT ("<u>" "u" Adp Fus/Prev) 
+            AFTER ("<anigoo>" "aniga" Pron Pers 1Sg Nom Adp/u) 
+            IF (NEGATE 1 ("aniga" Pron));
+
+ADDCOHORT ("<anigu>" "aniga" Pron Pers 1Sg Nom)
+            AFTER ("<anigoo>" "aniga" Pron Pers 1Sg Nom Adp/u) 
+            IF (NEGATE 1 ("aniga" Pron));
+
+REMCOHORT ("<anigoo>" "aniga" Pron Pers 1Sg Nom Adp/u)
+
+            IF (1 ("<anigu>"))
+               (2 ("<u>")) ;
+
+# annagoo -> annagu u
+
+ADDCOHORT ("<u>" "u" Adp Fus/Prev) 
+            AFTER ("<annagoo>" "annaga" Pron Pers 1PlExcl Nom Adp/u) 
+            IF (NEGATE 1 ("annaga" Pron));
+
+ADDCOHORT ("<annagu>" "annaga" Pron Pers 1PlExcl Nom)
+            AFTER ("<annagoo>" "annaga" Pron Pers 1PlExcl Nom Adp/u) 
+            IF (NEGATE 1 ("annaga" Pron));
+
+REMCOHORT ("<annagoo>" "annaga" Pron Pers 1PlExcl Nom Adp/u)
+
+            IF (1 ("<annagu>"))
+               (2 ("<u>")) ;
+
+# idinkoo -> idinku u
+
+ADDCOHORT ("<u>" "u" Adp Fus/Prev) 
+            AFTER ("<idinkoo>" "idinka" Pron Pers 2Pl Nom Adp/u) 
+            IF (NEGATE 1 ("idinka" Pron));
+
+ADDCOHORT ("<idinku>" "idinka" Pron Pers 2Pl Nom)
+            AFTER ("<idinkoo>" "idinka" Pron Pers 2Pl Nom Adp/u) 
+            IF (NEGATE 1 ("idinka" Pron));
+
+REMCOHORT ("<idinkoo>" "idinka" Pron Pers 2Pl Nom Adp/u)
+
+            IF (1 ("<idinku>"))
+               (2 ("<u>")) ;
+
+
+
+# innagoo -> innagu u
+
+ADDCOHORT ("<u>" "u" Adp Fus/Prev) 
+            AFTER ("<innagoo>" "innaga" Pron Pers 1PlIncl Nom Adp/u) 
+            IF (NEGATE 1 Pron) (NEGATE 2 Adp);
+
+ADDCOHORT ("<innagu>" "innaga" Pron Pers 1PlIncl Nom)
+            AFTER ("<innagoo>" "innaga" Pron Pers 1PlIncl Nom Adp/u) 
+            IF (NEGATE 1 Pron) (NEGATE 2 Adp);
+
+REMCOHORT ("<innagoo>" "innaga" Pron Pers 1PlIncl Nom Adp/u)
+
+            IF (1 ("<innagu>"))
+               (2 ("<u>")) ;
+
+# isagoo  -> isagu u
+
+ADDCOHORT ("<u>" "u" Adp Fus/Prev) 
+            AFTER ("<isagoo>" "isaga" Pron Pers 3SgM Nom Adp/u) 
+            IF (NEGATE 1 ("isaga" Pron));
+
+ADDCOHORT ("<isagu>" "isaga" Pron Pers 3SgM Nom)
+            AFTER ("<isagoo>" "isaga" Pron Pers 3SgM Nom Adp/u) 
+            IF (NEGATE 1 ("isaga" Pron));
+
+REMCOHORT ("<isagoo>" "isaga" Pron Pers 3SgM Nom Adp/u)
+
+            IF (1 ("<isagu>"))
+               (2 ("<u>")) ;
+
+# iyadoo  -> iyadu u
+
+ADDCOHORT ("<u>" "u" Adp Fus/Prev) 
+            AFTER ("<iyadoo>" "iyada" Pron Pers 3SgF Nom Adp/u) 
+            IF (NEGATE 1 Pron) (NEGATE 2 Adp);
+
+ADDCOHORT ("<iyadu>" "iyada" Pron Pers 3SgF Nom)
+            AFTER ("<iyadoo>" "iyada" Pron Pers 3SgF Nom Adp/u) 
+            IF (NEGATE 1 Pron) (NEGATE 2 Adp);
+
+REMCOHORT ("<iyadoo>" "iyada" Pron Pers 3SgF Nom Adp/u)
+
+            IF (1 ("<iyadu>"))
+               (2 ("<u>")) ;
+
+# isagii -> isaga u
+
+ADDCOHORT ("<u>" "u" Adp Fus/Prev) 
+            AFTER ("<isagii>" "isaga" Pron Pers 3SgM Abs Adp/u) 
+            IF (NEGATE 1 ("isaga" Pron));
+
+ADDCOHORT ("<isagu>" "isaga" Pron Pers 3SgM Abs)
+            AFTER ("<isagii>" "isaga" Pron Pers 3SgM Abs Adp/u) 
+            IF (NEGATE 1 ("isaga" Pron));
+
+REMCOHORT ("<isagii>" "isaga" Pron Pers 3SgM Abs Adp/u)
+            IF (1 ("<isagu>"))
+               (2 ("<u>")) ;
+
+# anigii -> aniga u
+
+ADDCOHORT ("<u>" "u" Adp Fus/Prev) 
+            AFTER ("<anigii>" "aniga" Pron Pers 1Sg Abs Adp/u) 
+            IF (NEGATE 1 ("aniga" Pron));
+
+ADDCOHORT ("<anigu>" "aniga" Pron Pers 1Sg Abs)
+            AFTER ("<anigii>" "aniga" Pron Pers 1Sg Abs Adp/u) 
+            IF (NEGATE 1 ("aniga" Pron));
+
+REMCOHORT ("<anigii>" "aniga" Pron Pers 1Sg Abs Adp/u)
+            IF (1 ("<anigu>"))
+               (2 ("<u>")) ;
+
+
+# adigii -> adiga u
+
+ADDCOHORT ("<u>" "u" Adp Fus/Prev) 
+            AFTER ("<adigii>" "adiga" Pron Pers 2Sg Abs Adp/u) 
+            IF (NEGATE 1 ("adiga" Pron));
+
+ADDCOHORT ("<adigu>" "adiga" Pron Pers 2Sg Abs)
+            AFTER ("<adigii>" "adiga" Pron Pers 2Sg Abs Adp/u) 
+            IF (NEGATE 1 ("adiga" Pron));
+
+REMCOHORT ("<adigii>" "adiga" Pron Pers 2Sg Abs Adp/u)
+            IF (1 ("<adigu>"))
+               (2 ("<u>")) ;
+
+# iyadii -> iyada u
+
+ADDCOHORT ("<u>" "u" Adp Fus/Prev) 
+            AFTER ("<iyadii>" "iyada" Pron Pers 3SgF Abs Adp/u) 
+            IF (NEGATE 1 ("iyada" Pron));
+
+ADDCOHORT ("<iyadu>" "iyada" Pron Pers 3SgF Abs)
+            AFTER ("<iyadii>" "iyada" Pron Pers 3SgF Abs Adp/u) 
+            IF (NEGATE 1 ("iyada" Pron));
+
+REMCOHORT ("<iyadii>" "iyada" Pron Pers 3SgF Abs Adp/u)
+            IF (1 ("<iyadu>"))
+               (2 ("<u>")) ;
+
+# annagii -> annaga u
+
+ADDCOHORT ("<u>" "u" Adp Fus/Prev) 
+            AFTER ("<annagii>" "annaga" Pron Pers 1PlExcl Abs Adp/u) 
+            IF (NEGATE 1 ("annaga" Pron));
+
+ADDCOHORT ("<annagu>" "annaga" Pron Pers 1PlExcl Abs)
+            AFTER ("<annagii>" "annaga" Pron Pers 1PlExcl Abs Adp/u) 
+            IF (NEGATE 1 ("annaga" Pron));
+
+REMCOHORT ("<annagii>" "annaga" Pron Pers 1PlExcl Abs Adp/u)
+            IF (1 ("<annagu>"))
+               (2 ("<u>")) ;
+
+# TODO: innagii -> innaga u
+# TODO: idinkii -> idinka u
+# TODO: iyagii -> iyaga u
+
+
+######
+######  @Tagging
+######
+
+# NOTE: Use these
+# https://giellalt.uit.no/lang/common/docu-sme-syntaxtags.html
+
+    SECTION
+    
+    ###
+    #    ###   @SUBJ
+    #####   
+
+        # TODO: kani waa ninkii aan shalay la hadlay.
+    
+        MAP (@SUBJ>) TARGET (N Nom) (0 (N Nom) LINK *1 (V Ind) BARRIER V) ;
+        # TODO: Maybe add condition to mark if prev foc is null? 
+        
+        #         @SUB      @V
+        # ninku wuxuu soo u tagay
+        # @SUB  |
+        #       CLB
+        # TODO: could be bad to link to V because it could be something like
+        # ninku buugga qoraya soo u tagay.
+        # wuxuu soo u tagay ninku wax qoraya(??)
+        
+        
+        # TODO: how to set up agreement relationships?
+        
+        MAP (@SUBJ>) TARGET (N Nom) (0 (N Nom) LINK *1 (V Ind)) (1 ("waxa" CS) LINK *-1 (N Nom) BARRIER (Nom));
+        MAP (@SUBJ>) TARGET (N Nom) (0 (N Nom) LINK *1 ("ma" CS Neg) BARRIER (CS)) ;
+        
+        	# Ex.) Dhulkuna qaab ma lahayn
+        
+        # MAP (@SUBJ>) TARGET (CS Subj) (0 (CS) LINK *1 (V Ind) BARRIER CLB) ;
+        
+        # TODO: @SUBJ> @<SUBJ map to subject NP if they exist, as well as SUBJ clitic? pointing to V agr?
+        # TODO: Those sentences about eating camels and realtive clauses should be fun to mess with here.
+        
+        # TODO: @SUBJ> marking for impersonals 
+        #    madaxiisiina lagu keentay xeedho
+        #
+
+        MAP (@SUBJ> @FOC) TARGET (N Abs) IF (0 (N Abs) LINK 1 (Foc/L Null) BARRIER V) 
+											(NEGATE -1 (N Nom));
+
+			# Ex.) Rice khaladkii ayay qiratay Bengasi
+			# vs.  Rice ayaa qiratay khaladkii Bengasi
+			#
+			# Ex.) gabadhu bariiska bay cuntay.
+
+
+    ###
+    #    ###   #Subordination
+    #####   
+    
+        SELECT CS IF (1 (Pron Pers)) ;
+
+
+    ###
+    #    ###   @FOC and @FM
+    #####   
+    
+        SECTION
+        MAP (@OMG) TARGET (V) (0 V) (0 N) ;
+        
+        MAP (@FM) TARGET FOC ;
+        
+        MAP (@FOC) TARGET (V) (0 (V) LINK *-1 FOCV BARRIER CLB-OR-CS) ;
+
+        # Focus the first N after Foc/R, however need to also go for the first CSC
+        MAP (@FOC) TARGET (N Abs) (0 (N Abs) LINK *-1 FOCR BARRIER CLB-OR-CS) ;
+        
+        MAP (@FOC) TARGET (N Abs) (1 FOCL) 
+            # Not in cases of possession, there we want to mark the head
+            (NEGATE 0 PxSg3M LINK -1 Masc) 
+            ;
+
+            # Ex.) Cali agtiisa baad soo martay, wuusan ku arkin.
+
+        MAP (@FOC) TARGET (N Abs) (0 (Prop Masc Sg) LINK 1 (PxSg3M)) 
+                          (2 FOCL) 
+                          ;
+        
+        
+        # TODO: mark head of subordinate verb; naagta laybreeriga wax ku dhex qoraysa ... 
+        
+        ###
+        #    ###   @>V
+        #####
+        
+        MAP (@>V) TARGET V-INF 	   IF  (0 V-INF LINK 1 (V Ind)) ;
+        
+        MAP (@>V) TARGET V-LOC 	   IF  (0 V-LOC LINK 1 VERB) ;
+        MAP (@>V) TARGET V-ADP 	   IF  (0 V-ADP LINK *1 VERB BARRIER VERB) ;
+        MAP (@>V) TARGET V-SEP     IF  (0 V-SEP LINK *1 VERB BARRIER VERB) ;
+        MAP (@>V) TARGET V-DEIC    IF  (0 V-DEIC LINK *1 VERB BARRIER VERB) ;
+        MAP (@>V) TARGET V-OBJ-C   IF  (0 V-OBJ-C LINK *1 VERB BARRIER VERB) ;
+        MAP (@>V) TARGET V-SUBJ-C  IF  (0 V-SUBJ-C LINK *1 VERB BARRIER VERB) ;
+
+        #
+        ###
+        #    ###   @N<      Prenominal modifier to the right
+        #####
+        
+        MAP (@N<) TARGET (N Prop Gen) IF (-1 (N Abs)) ;
+
+        ###
+        #    ###   @OBJ
+        #####
+        
+        #### @-F<OBJ, Object to the right of verb in subordinate clause
+        
+        # TODO: replace with NP template mapping to head
+        # Map @OBJ to N Abs 
+        MAP (@-F<OBJ) TARGET (N Abs) 
+                          # when preceded by an Ind Rel verb, which is preceded by a CS Subj
+                          (0 (N Abs) LINK 
+                                     (-1 (V Ind Rel) LINK 
+                                                     (*-1 (CS Subj) BARRIER CLB))) 
+                          # and followed by a CLB or CS TODO: optional?
+                          ((1 CLB-OR-CS OR (N Gen))) ;
+        
+        #    Ex.) Markaasaa Fircoon u sheegay riyadiisii laakiin
+        #         And then the pharaoh told them his dream, but ... 
+        #    Ex.) Markaasaa Yuusuf ku dhacay wejigii aabbihiis, CLB
+        #         And joseph fell upon his father's face, CLB
+        #    Ex.) Markaasaa Fircoon la hadlay Yuusuf, CLB
+        #         And Pharaoh spoke to Joseph, CLB
+        #    Ex.) Markaasaa Muuse u cadhooday saraakiishii ciidanka,
+        #         And Moses was wroth with the officers of the host,
+        #    Ex.) Kolkaasaa Gidcoon u kacay xagga
+        #    Ex.) inuu Daauud u gacangeliyo reer Falastiin
+        #    Ex.) Oo Ilaah wuu barakeeyey maalintii toddobaad
+        
+        # TODO: make NP template, include N binu N+Prop, and N N+Gen, initial marked as head
+        #
+        MAP (@-F<OBJ) TARGET 
+                      (N Abs) 
+                      # when preceded by an Ind Rel verb, which is preceded by a CS Subj
+                      (0 (N Abs) LINK 
+                                 (-1 (V Ind Rel) LINK 
+                                                 (*-1 (CS Subj) BARRIER CLB))) 
+                      # and followed by noun phrase of X binu X form
+                      (1 (Pr)) 
+                      (2 (N Prop));
+        
+        #    Ex.) Markaasaa Muuse la hadlay reer binu Israaiil,
+        #         
+        
+        ### Cs+Subj* N+Prop* Adp* V* N*
+        #
+        # Markaasaa Yashuuca u yeedhay laba iyo tobankii nin 
+        # 
+        #
+        # inuu Daauud u gacangeliyo reer Falastiin
+        #
+        # Markuu Yeruusaalem u yimid inuu
+        # 
+        #
+        
+        MAP (@-FOBJ>) TARGET (N Abs) 
+                          # When followed by a relative verb
+                          (0 (N Abs) LINK (*1 (V Ind Rel) BARRIER (N Abs)))
+                          # And preceded by another Absolutive , which is linked to a Subj Pron or CS+Subj
+                          (0 (N Abs) LINK (*-1 (N Abs) BARRIER CLB LINK *-1 (Subj) BARRIER CLB))
+                          ;
+            
+            # Ex.) , markii ay Haagaar Ismaaciil u dhashay Aabraam.
+            #      when Hagar bore Ishmael to Abram.
+        
+        # Haaruunna waa inuu Fircoon la hadlo si uu reer binu Israa'iil u sii daayo si ay dalkiisa uga baxaan
+        # Aaron thy brother shall speak to Pharaoh, that he send the children of Israel out of his land.
+        #
+        # Markaasaa Muuse ku yidhi Haaruun iyo wiilashiisii ahaa Elecaasaar iyo Iitaamaar, CLB
+        # Then Moses said to Aaron and his sons who are Elecaasaar and Iitamaar, CLB
+        #
+        # Markaasaa Rabbigu u cadhooday Muuse (prop / prop)
+        
+        ### CS+Subj* N+Masc* Adp* V* N*
+        ### CS+Subj* N+Fem* Adp* V* N*
+        #
+        #  seems easier to find CS Prop Adp V Prop
+        #
+        # intuu garbaha u saaray, wiilkiina
+        # Kolkaasuu halkaas ka dhisay meel / allabari CLB
+        # And he built an altar there CLB
+        #
+        #
+        # wadaadku waa inuu kafaaraggud u sameeyaa dembigiisii uu dembaabay
+        # and the priest eshall make an atonement for him for his sin which he hath sinned
+        #
+        # sidaasay dadkiina ku galeen magaaladii
+        # so that the people went up into the city
+        #
+        # Markaasuu magiciisii u bixiyey Beriicaah
+        # and he called his name Beriah, CLB
+        #
+        #
+        #
+        # 
+        # ma inaan wiilkaaga ku celiyo dalkii
+        #
+        # Markaasaan sayidkaygii ku idhi CLB
+        
+        ### CS+Subj Adp V N CS
+        #
+        # inaan ku siiyo dalkan, si
+        # i give to thee this land, thus
+        #
+        # Markaasuu ku noqday Yahuudah,  oo 
+        # And then he returned to Judah, and ... 
+        #
+        # oo laba saldhigba waa inay ka hooseeyaan loox, inay
+        # ... and two sockets shall . and put under the board, which
+        #
+        
+        ### Cs+Subj* Adp* V* N*
+        #
+        # Markaasuu ku noqday Yahuudah
+        # And he returned to Judah, CLB
+        
+        
+        
+        #
+        # Yacquubna wuxuu Raaxeel u sheegay inuu
+        #
+        # N CS N Adp V CLB
+        # Sub  Obj Adp---> CS
+        #      Subj Obj     IndObj
+        # 
+        # CS+Pron N Adp V N CLB
+        # Subj Subj Adp --> Obj
+        #
+        
+        MAP (@>P) TARGET POSTPOSITIONAL-NOUNS IF 
+            (0 (N Abs))
+            (0 POSTPOSITIONAL-NOUNS LINK -1 (N Prop) );
+
+            # Ex.) Cali agtiisa baad soo martay, wuusan ku arkin.
+        
+        # MAP @NP TARGET (T:NP) ;
+        #
+
+        MAP (@NP-HEAD) TARGET N IF (T:NP) ;
+        MAP (@NP-HEAD) TARGET Num IF (1 (N Pl Gen)) ;
+
+# Adposition - Nominal relations
+SECTION
+
+    # ADDRELATIONS (discont-adp-n) (discont-adp-adp) TARGET (N LINK 1 CLB-OR-CS) TO (*-1 Adp) ;
+    # ADDRELATIONS (discont-adp-n) (discont-adp-adp) TARGET (N) TO (*-1 Adp BARRIER CLB-OR-CS) ;
+
+# Relation mappings
+SECTION
+    # ADD (@OMG) TARGET r:adpdiscont ;
+
+
+#  vim: set ts=4 sw=4 tw=0 syntax=cg :
