@@ -1,0 +1,25 @@
+LEXICON Adverb
+Multiwords ; 
+Advs ; 
+
+LEXICON Advs
+! These have morphology
+halkaas		AdvEnd	"there"                           ; 
+markaas		AdvEnd	"at that time, when"              ; 
+
+maanta		AdvEnd	"today" ; 
+
+LEXICON Misc
+kala		AdvEnd 	"separately" ; ! adv or verbal particle thing?
+
+LEXICON Multiwords
+marka% hore		AdvEnd 	"firstly"                      ;
+khaas% ahaan	AdvEnd 		"especially"               ;
+isla% markaasi	AdvEnd 		"at the same time"         ;
+ka% dib			AdvEnd 	"afterwards, after"            ;
+! Some of these probably shouldn't be here?
+ilaa			AdvEnd "until" ;
+
+LEXICON AdvEnd
++Adv: 		# ; 
+

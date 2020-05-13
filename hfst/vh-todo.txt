@@ -1,0 +1,18 @@
+* analyze
+* vh-gen, add +Front
+* cg
+
+
+$ echo "Waa wanaagsanyahay" | hfst-proc -a -C ../bin/som-vh.hfst.ol 
+"<Waa>"
+        "waa+V+Imper+Sg"
+"<wanaagsanyahay>"
+        "wanaagsan+A+Pres+Sg3Masc"
+
+Should be able to supply VH forms without problems for analysis here.
+
+$ echo "Waa wanaagsanyähäy" | hfst-proc -a -C ../bin/som-vh.hfst.ol 
+"<Waa>"
+        "waa+V+Imper+Sg"
+"<wanaagsanyahay>"
+        "wanaagsan+A+Pres+Sg3Masc"

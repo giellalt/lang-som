@@ -1,0 +1,720 @@
+
+! NOTE: had to convert multichar symbols to IPA temporarily. Use IPA on the right side, orth on the left.
+! dh, sh, kh
+
+
+! MORPHOLOGICAL NOTES.
+
+! Declension 3: 
+! NOTE: mark second vowel with %^; it needs to be deleted in plurals and such.
+! NOTE: final obstruents need to be listed on right side with 'voiceless', except for b; for which there is no p.
+!       the same follows for n/m alternation; right side has m, left has n.
+
+
+! Declension 6:
+! Final vowel marked with {o}, targetted by rules that change {o}:a in all contexts
+! except for before another o
+
+
+! n/m
+! waddan:wadda{m}
+! {m} becomes n word finally or before k
+
+LEXICON Nouns
+	Noun ;
+
+
+
+
+! These will probably need to be split up into declensions, to handle gender polarity in plurals
+! soomaali - soomaaliga (sg), soomaalida (pl); pl marking is tonal, but Determiner agrees with gender changes resulting.
+
+LEXICON Noun
+	Masc ;
+	Fem ;
+	D1 ;
+	D2 ;
+	D3 ;
+	D4 ;
+	D5 ;
+	D6 ; 
+	D7 ;
+	Irreg ; 
+	Unknown_Declensions ;
+	Proper ;
+
+
+! Some uncategorized items ehre
+LEXICON Masc 
+sicir NOUNM "price" ; 
+dad   NOUNM/NoPlural "people" ;
+
+
+LEXICON Fem
+# ;
+
+
+! Move to prop
+LEXICON Months
+Janaayo:Janaayo	NOUNF	"January" ;
+Febraayo:Febraayo NOUNF "February" ;
+Maarso:Maarso NOUNF "March" ;
+Abriil:Abriil NOUNF "April" ;
+Maajo:Maajo     NOUNF "May"  ;
+Juun:Juun      NOUNF "June"  ;
+Luulyo:Luulyo    NOUNF "July"  ;
+Agoosto:Agoosto   NOUNF "August"  ;
+Sebtember:Sebtember NOUNF "September"  ;
+Oktoobar:Oktoobar  NOUNF "October"  ;
+Noofembar:Noofembar NOUNF "November"  ;
+Disembar:Disembar NOUNF "December" ;
+
+
+
+LEXICON Irreg
+wax:wax   Irreg_WAX "thing" ;  ! irregular pl. waxyaabo
+
+
+! Orwin recognizes about 6 (8?) main classes of nouns, some of which break up into separate subgroups depending on various phonological or gender polarity properties... Some notes.
+
+! Declensions 1
+! 	GENDER - (sg) mostly fem, (pl) always masc
+!   PLURAL - -o
+!   SINGULAR - does not end in -o
+
+! 	Stress tones: masc sg. - penultimate vowel
+!				  fem  sg. - final vowel
+!				  pl       - no stress tone
+
+
+!   Notes
+!		* If sg. ends in -i, then pl is -yo
+!		mindí (F)		mindiyo
+!		gúri (M)		guriyo, guryo
+
+
+LEXICON D1
+D1_F ;
+D1_M ;
+D1_F_Col ;
+D1_M/SgOnly ;
+
+
+LEXICON D1_F
+daar:daar         NOUN1_F   "stone building" ;
+dayuurad:dayuurad     NOUN1_F   "aeroplane" ;
+dhakhtarad:dhakhtarad   NOUN1_F   "doctor (female)" ;
+hees:hees  		 NOUN1_F   "song"  ;
+jaamacad:jaamacad 	 NOUN1_F	 "university" ;
+! jidh:jidh         NOUN1_F   "body" ;					! D4 also?  Masc.
+kab:kab          NOUN1_F   "shoe" ;
+saxiibad:saxiibad     NOUN1_F   "femfriend" ;
+warqad:warqad       NOUN1_F   "letter" ;
+saacad:saacad       NOUN1_F   "hour";
+naag:naag         NOUN1_F   "woman" ;
+sabab:sabab        NOUN1_F   "reason" ;
+shimbir:shimbir      NOUN1_F   "bird" ;
+su'aal:su'aal       NOUN1_F   "question" ;
+mindi:mindi        NOUN1_F   "knife" ;
+beer:beer         NOUN1_F   "garden" ;
+bil:bil          NOUN1_F   "month" ;
+qayb:qayb         NOUN1_F   "share" ;
+abaar:abaar 		 NOUN1_F 		"drought" ;
+ag:ag 			 NOUN1_F 			"nearness" ;
+arrin:arrin 		 NOUN1_F 		"matter" ;			! arrimo
+curad:curad 		 NOUN1_F 		"first-born child" ;
+daar:daar 		 NOUN1_F 		"house (of stone)" ;
+dabayl:dabayl 		 NOUN1_F 		"wind" ;
+dameer:dameer 		 NOUN1_F 		"female donkey" ;
+daqiiqad:daqiiqad 	 NOUN1_F 	"minute" ;
+dawlad:dawlad 		 NOUN1_F 		"government" ;
+dowlad:dowlad 		 NOUN1_F 		"state" ;
+dayuurad:dayuurad 	 NOUN1_F 	"aeroplane" ;
+debed:debed 		 NOUN1_F 		"outside, exterior" ;
+
+hal:hal			NOUN1_F "female camel"          ; 
+hawl:hawl		NOUN1_F "work, activity"        ; 
+hees:hees		NOUN1_F "song"                  ; 
+hoos:hoos		NOUN1_F "bottom, lower part"    ; 
+jaamacad:jaamacad	NOUN1_F "university"            ; 
+kab:kab			NOUN1_F "shoe"                  ; 
+kal:kal			NOUN1_F "pestle"                ; 
+koofiyad:koofiyad	NOUN1_F "hat"                   ; 
+koox:koox		NOUN1_F "group"                 ; 
+kubbad:kubbad		NOUN1_F "ball"                  ; 
+lug:lug			NOUN1_F "leg, foot"             ; 
+macalgad:macalgad	NOUN1_F "metal spoon"           ; 
+macallimad:macallimad	NOUN1_F "female teacher"        ; 
+mar:mar			NOUN1_F "women's clothing, (in plural it may mean material)" ; 
+meel:meel		NOUN1_F "place"                     ; 
+mindi:mindi		NOUN1_F "knife"                     ; 
+nabad:nabad		NOUN1_F "peace"                     ; 
+qasacad:qasacad		NOUN1_F "tin, can"                  ; 
+makhaayad:makhaayad	NOUN1_F 	"teashop, restaurant"   ; 
+habaryar:habaryar	NOUN1_F "maternal aunt"             ; 
+qayb:qayb		NOUN1_F "part, share"               ; 
+
+ri			NOUN1_F		"nanny goat";
+saacad		NOUN1_F		"hour, clock";
+saan:saa{m}		NOUN1_F		"hide" ; ! saamo
+saaxiibad	NOUN1_F		"female friend" ;
+sabab		NOUN1_F		"reason";
+sanuunad	NOUN1_F		"gravy";
+shandad		NOUN1_F		"suitcase";
+shimbir		NOUN1_F		"bird (not a bird of prey)";
+su'aal		NOUN1_F		"question";
+walaal		NOUN1_F		"sister";
+waraaq		NOUN1_F		"paper";
+warqad		NOUN1_F		"letter";
+xabaal		NOUN1_F		"grave";
+xarun:xaru{m}		NOUN1_F		"capital";	! xarumo
+xeeb		NOUN1_F		"coast";
+xukumad		NOUN1_F		"government"; 
+
+! TODO: check paradigms
+aalad		NOUN1_F		"weapon" ; 
+
+! Making a lexicon for the things tagged collective in Orwin, just in case.
+LEXICON D1_F_Col
+khudrad:khudrad 		NOUN1_F "vegetables" ;
+caleen:caleen		NOUN1_F "leaves" ; 
+
+
+LEXICON D1_M
+guri:guri	NOUN1_M   "house" ;
+buur:buur	NOUN1_M   "mountain" ;
+geed:geed	NOUN1_M 		"tree"           ;
+gees:gees	NOUN1_M 		"horn"           ;
+jidh:jidh		NOUN1_M 		"body"           ;
+musqul:musqul	NOUN1_M 		"bathroom"       ;
+sanad		NOUN1_M		"year" 		;
+walaal		NOUN1_M		"brother"  ; 
+
+! TODO: check paradigms
+aakhir		NOUN1_M		"end" ; 
+
+LEXICON D1_M/SgOnly
+waqti:waqti		NOUN1_M/SgOnly "time" ;
+wakhti:wakhti	NOUN1_M/SgOnly "time" ;
+khamri:khamri 	NOUN1_M/SgOnly "wine" ;
+carshi:carshi	NOUN1_M/SgOnly "?" ;	
+
+
+
+
+! Declensions 2
+! 	GENDER - (sg) mostly masc, (pl) always fem
+!   PLURAL - -o (addt'l sound changes)
+!   SINGULAR - more than one syll., do not end in -e
+
+! 	Stress tones: masc sg. - penultimate vowel
+!				  fem  sg. - final vowel
+!				  pl       - no stress tone
+
+! 	Notes:
+!
+!		* if sg. n ends in [b d dh l r n], then consonant is doubled
+!		albáab		albaabbo		doors
+!		baabúur		baabuurro		lorries
+!		sánad		sanaddo			years
+!
+!		* if sg. ends in -n, then it changes to -m- intervocalically
+!		ínan		inammo			'boy'
+
+!  TODO: some words may not have the doubling: baruuro, *baruurro ? 
+!  TODO: baabuur seems to be both, baabuur may support tonal sg/pl and morph: baabuurro, baabuurta/baabuurka
+					
+LEXICON D2
+D2_M ;
+D2_F ;
+D2_M_Col ;
+D2_M_Mass ; 
+D2_M_Loan_Pl ; 
+
+LEXICON D2_M
+adeer        NOUN2_M 		"paternal uncle, term of address" ;
+albaab       NOUN2_M "door" ;			        ! albaabbo
+baabuur      NOUN2_M "truck, lorry" ;	        ! baabuurro
+bangi        NOUN2_M "bank" ;                 ! bangiyo
+barnaamij    NOUN2_M "program" ;              ! barnamiijyo
+buluug       NOUN2_M 		"blue" ;
+caadi        NOUN2_M 		"ordinary, normal" ;
+caday        NOUN2_M 		"tooth-brushing stick" ;
+cadow        NOUN2_M 		"enemy" ;
+cashar       NOUN2_M "lesson" ;               ! casharro
+curad        NOUN2_M 		"first-born child" ;
+dagaal       NOUN2_M 		"fighting, war" ;
+dameer       NOUN2_M 		"male donkey" ;
+dariiq       NOUN2_M "road" ;			        ! dariiqyo
+dhinac		NOUN2_M "side; (ka): from the direction of"   ;
+doollar		NOUN2_M "dollar"                              ;
+dufan		NOUN2_M "grease"                              ;
+dugsi		NOUN2_M "school"                              ;
+dukaan:dukaa{m}       NOUN2_M "shop" ;                 ! dukaammo
+garoon		NOUN2_M "ground; field"              ; 
+gidaar       NOUN2_M "wall" ;		   	        ! gidaarro
+go'aan:go'aa{m}		NOUN2_M "decision" 					 ;    ! go'aammo - pl.
+gobol		NOUN2_M "area"                       ; 
+habeen		NOUN2_M "evening"                    ; 		! does not have -n / -m change? habeeno wanaagsan; habeenno?
+hagaag		NOUN2_M "straightness"               ; 
+hudheel		NOUN2_M "hotel"                      ; 
+iibis		NOUN2_M "trade"                      ; 
+inan:ina{m}         NOUN2_M "boy" ;					! inammo
+isbahaysi	NOUN2_M "alliance"                   ; 
+kabadh		NOUN2_M "cupboard" 					 ;    ! loanword?
+kildhi		NOUN2_M "kettle"                     ; 
+kursi        NOUN2_M "chair" ;                ! kursiyo, 				arabic pl. karaasi
+laabbis      NOUN2_M "pencil" ;               ! laabbisyo
+laybreeri    NOUN2_M "library" ;              ! laybreeriyo
+macallin	NOUN2_M "male teacher"               ; 
+madax		NOUN2_M "head"                       ; 
+madax+Dec/2M:madax        NOUN2_M "head" ;         ! madaxyo				also d5   ! madaxa +M+Def+Sg madaxda +F+Def+Pl
+madbakh		NOUN2_M "kitchen"                    ; 
+magac        NOUN2_M "name" ;					! magacyo
+! TODO: disable ablaut? magac:maga%^c        NOUN2_M "name" ;					! magacyo
+midab		NOUN2_M "colour"                     ; 
+mucaarad	NOUN2_M "opposition (political)"     ; 
+mudac		NOUN2_M "fork"                       ; 
+nacas        NOUN2_M "fool" ;			        ! nacasyo
+nambar		NOUN2_M "number"                     ; 
+sac          NOUN2_M "cow" ;					! sacyo
+sanad        NOUN2_M "year" ;			     	! sanaddo
+sannad       NOUN2_M "year" ;                                         ! spelling variant, how to generalize? which is standard?
+sharci		NOUN2_M "muslim law" ; 
+fadhi		NOUN2_M "sit, conference" ; 
+subax        NOUN2_M "morning" ;              ! subaxyo
+subax+Dec/2M:subax        NOUN2_M "morning" ;              ! subaxyo
+tagsi        NOUN2_M "taxi" ;			   	    ! tagsiyo
+dhaqdhaqaaq  NOUN2_M 		"movement" ;
+dhakhtar     NOUN2_M "doctor" ;		        ! dhakhtarro
+fandhaal	NOUN2_M "spoon (wooden)"     ; 
+gaadhi		NOUN2_M "car"                ; 
+dheeraad	NOUN2_M "extra"              ; 
+urur NOUN2_M "assembly, meeting" ; ! TODO: check
+
+
+saaxiib		NOUN2_M		"male friend";
+sac			NOUN2_M		"cow";
+safar		NOUN2_M		"journey";
+sharci		NOUN2_M		"law";
+siraad		NOUN2_M		"lamp";
+tagsi		NOUN2_M		"taxi";
+telefoon	NOUN2_M		"telephone";
+termuus		NOUN2_M		"thermos";
+wadahadal	NOUN2_M		"talks";
+waddan:wadda{m}		NOUN2_M		"country, nation"; 
+wasiir		NOUN2_M		"minister";
+webi		NOUN2_M		"river";
+weerar		NOUN2_M		"attack";
+xanuun		NOUN2_M		"pain";
+xilli		NOUN2_M		"season";
+xisbi		NOUN2_M		"party (political)";
+rubuc		NOUN2_M		"quarter";
+suuq		NOUN2_M		"market"; ! TODO: suuqa (def)
+! TODO: check paradigm, def.
+adhijir		NOUN2_M		"shepherdess(?)" ; 
+amar		NOUN2_M		"command" ;
+cudur		NOUN2_M		"aliment" ; 
+wasiir		NOUN2_M		"minister" ; 
+kitaab		NOUN2_M		"book" ; 
+mamuul		NOUN2_M		"management" ; 
+qoraal		NOUN2_M		"writing" ;
+sabuul		NOUN2_M		"class (?)" ;
+wadaad		NOUN2_M		"man of religion" ; 
+waayeel		NOUN2_M		"old person" ; 
+wakiil		NOUN2_M		"representative" ; 
+dagaal		NOUN2_M		"attack; war" ; 
+
+qarni		NOUN2_M		"century" ;
+qalbi		NOUN2_M		"heart" ;
+
+toddobaad:toddobaa{đ}        NOUN2_M "week" ;			   	    ! toddobaaddo, toddobaadyo 
+toddobaad        NOUN2_M "week" ;			   	    ! toddobaaddo, toddobaadyo 
+
+LEXICON D2_M_Col
+kalluun:kalluu{m}		NOUN2_M		"fish"                   ; ! Seems to have a plural 
+raashin		NOUN2_M		"provisions"             ;		   ! Seems not to have a plural 
+canab		NOUN2_M "grapes" ; 
+
+! Do something with these. Some are commented out to prevent multiple analyses, but need to have some arabic pl form
+LEXICON D2_M_Loan_Pl
+masaajid	NOUN2_M "mosque" 					 ;    ! pl?
+surwaal		NOUN2_M		"trousers"; ! TODO: saraawiil (m.) pl.
+! kursi		NOUN2_M "chair" 					 ;    ! karaasi (f.), kursiyo (f.?); laon
+
+LEXICON D2_M_Mass
+shaah		NOUN2_M		"tea" ; 
+subag		NOUN2_M 	"butter (esp. clarified butter)" ;
+baraf		NOUN2_M		"snow, ice" ; ! TODO: confirm
+
+LEXICON D2_F
+quraac	NOUN2_F "breakfast" ; ! TEST:quraac,quraac
+subax	NOUN2_F	"morning" ; 
+subax+Dec/2F:subax	NOUN2_F	"morning" ; 
+
+! Declensions 3
+! 	GENDER - (sg) masc or fem, (pl) always masc
+!   PLURAL - -o, but delete final vowel of sg.
+!   WORD SHAPE - (C)V(V)CVC
+!
+!
+! 	Stress tones: masc sg. - penultimate vowel
+!				  fem  sg. - final vowel
+!				  pl       - no stress tone
+
+LEXICON D3
+D3_M ;
+D3_F ;
+
+
+LEXICON D3_M
+ilig:il%^ik      NOUN3_M "tooth" ;          ! ilig, iligga, ilko, ilkaha
+qalin:qal%^i{m}     NOUN3_M "pen" ;            ! ... , qalinka, qalmo, qalmaha
+hilib:hil%^ib     NOUN3_M "meat" ;           ! ... , hilibka, hilbo, hilbaha
+xadhig:xadh%^ik    NOUN3_M "rope" ;    ! ... , xadhigga, xadhko, xadhkaha
+garab:gar%^ab     NOUN3_M "shoulder"  ;      ! ... , garabka, garbo, garbaha
+jilib:jil%^ib     NOUN3_M "knee"  ;          ! ... , jilibka, jilbo, jilbaha
+waran:war%^a{m}     NOUN3_M "spear"  ;         ! ... , waranka, warmo, warmaha
+
+! note: {m}
+LEXICON D3_F
+galab:gal%^ab     NOUN3_F "afternoon"  ;     ! ... , galabta , galbo, galbaha
+maalin:maal%^i{m}    NOUN3_F "day"  ;           ! ... , maalinta , maalmo, maalmaha
+gabadh:gab%^adh    NOUN3_F "girl"  ;          ! ... ,  gabadha , gabdho, gabdhaha
+gacan:gac%^a{m}     NOUN3_F "hand"  ;          ! ... ,  gacanta , gacmo, gacmaha
+kibis:kib%^is     NOUN3_F "bread"  ;         ! ... ,  kibista , kibso, kibsaha
+xubin:xub%^in		NOUN3_F	"member" ; 		! ... , xubinta , xubno, xubnaha
+
+
+! Could also tag declensions if it's worth it:
+! +Decl/3F:gabadh NOUNF "girl" ;
+
+! Declension 4
+! 	GENDER - (sg) always masc, (pl) always masc?
+!   PLURAL - add -a and copy final consonant
+! 			miis -> miisas 'tables'
+!			af -> afaf 'mouths, languages'
+!			qoys -> qoysas 'famliies'
+!			nin -> niman 'men'
+!
+! always masc? seems to be plenty fem words in this declension also.
+! doubt this is always fem in plural too, qoyska / qoysaska
+
+
+! Get notes for rest of declensions. in meantime... 
+! TODO: morphology for this declension doesn't quite work yet.
+
+LEXICON D4
+D4_M ;
+D4_M_b ; ! qof / qofqof
+D4_F ; 
+
+! Reduplication seems to work... 
+LEXICON D4_M
+af    NOUN4_M "mouth, language" ;			! afaf
+buug  NOUN4_M "book"  ;					! buugag
+god		NOUN4_M			"hole (esp. in the ground)"       ;
+hadh	NOUN4_M			"shade"                           ;
+heyl	NOUN4_M			"cardamom"                        ;
+jeeb	NOUN4_M			"pocket"                          ;
+jid		NOUN4_M			"road"                            ;
+jidh	NOUN4_M			"body"                            ;
+koob	NOUN4_M			"cup"                             ;
+mar		NOUN4_M		"time, occasion"                      ;
+mas		NOUN4_M			"snake"                           ;
+miis	NOUN4_M			"table"                           ;
+muus	NOUN4_M			"banana"                          ;
+nin		NOUN4_M			"man"                     ;	! (-m)  
+qol		NOUN4_M		"room"                                ;
+qoys	NOUN4_M		"family"                              ;		
+rah		NOUN4_M		"frog"                  ; ! TODO: raha, ruhu; not *rahka, *rahku
+dab		NOUN4_M	"fire" ;        
+caan	NOUN4_M		"fame"                             ; 
+dal		NOUN4_M		"country"                          ; 
+dhar	NOUN4_M		"clothes, fabric"                  ; 
+dhib	NOUN4_M		"problem, difficulty"              ; 
+dhul	NOUN4_M		"earth, land"                      ; 
+gaab	NOUN4_M		"shortness"                        ;
+san		NOUN4_M		"nose" ;
+shaadh	NOUN4_M		"shirt" ; 
+shaag	NOUN4_M		"tyre" ;
+shir	NOUN4_M		"meeting" ;
+tog		NOUN4_M		"dry valley, ravine" ; 
+toos	NOUN4_M		"directness, straightness" ; 
+war		NOUN4_M		"news" ; 
+xaas	NOUN4_M		"wife, wife and children" ; 
+xag		NOUN4_M		"direction, side" ; 
+xoog	NOUN4_M		"force, army" ; 
+roob	NOUN4_M		"rain" ; 
+xeer	NOUN4_M		"law, rule, regulation" ;
+xil		NOUN4_M 	"shame, dishonor" ;
+fal		NOUN4_M		"deed, do" ; ! do?
+! ur		NOUN4_M		"air" ; ! TODO: also a separate word urur 'assembly', fem. 
+
+LEXICON D4_M_b
+qof   NOUN4_M "person" ; ! TODO: qofqof or qofof? currently gens qofaf. :(
+
+
+
+! Rechecked these in orwin, listed as f. wtf?
+LEXICON D4_F
+dul:dul		NOUN4_F	"top, surface" ;
+gees:gees	NOUN4_F "side"            ; 
+goob:goob	NOUN4_F "site, position"  ; 
+hor:hor		NOUN4_F "front part"      ; 
+qoor:qoor	NOUN4_F "neck"            ; 
+seef:seef	NOUN4_F	"sword" ;
+
+
+LEXICON D5
+D5_M ;
+D5_M_Prop ;
+! D5_F ;
+
+LEXICON D5_M
+ardey NOUN5_M "student" ;
+ardey:arday NOUN5_M "student" ; ! Spelling variant  ! ardáy 'student' - ardaý 'students'; ardáyga 'the student', - ardaýda 'the students'; should I correct spelling variation by setting the lemma as the standard variant? 
+madax:madax NOUN5_M "head" ; 
+madax+Dec/5M:madax  NOUN5_M "head" ;                 ! madaxyo	 also d2   ! madaxa +M+Def+Sg madaxda +F+Def+Pl
+haad:haad NOUN5_M "large bird, esp- of prey" ;
+caday	NOUN5_M	"tooth-brushing stick" ; 
+carab	NOUN5_M	"an arab"              ;
+dameer	NOUN5_M	"male donkey"          ;
+ey		NOUN5_M	"dog"                  ;
+ugax	NOUN5_M	"egg (of birds other than chickens)" ; ! TODO: ugxan - pl
+
+
+LEXICON D5_M_Prop
+Soomaali NOUN5_M "a Somali" ; 
+
+
+LEXICON D6
+D6_F ;
+D6_M ;
+D6_F_Mass ;
+D6_F_Coll ;
+
+LEXICON D6_F 
+afo:af{o}			NOUN6_F 	"wife"                        ;
+boosto:boost{o}		NOUN6_F 	"post office"                 ;
+budo:bud{o}		NOUN6_F 	"flour"                       ;
+cadho:cadh{o}		NOUN6_F 	"anger"                       ;
+casho:cash{o}		NOUN6_F 	"day"                         ;
+degmo:degm{o}		NOUN6_F 	"settlement, community"       ;		! degmada, degmadaha
+dhismo:dhism{o}		NOUN6_F 	"building"                    ;
+qaaddo:qaadd{o}		NOUN6_F	"spoon"						  ;
+guntiino:guntiin{o}	NOUN6_F 	"woman's dress-like garment"    ;		
+hawo:haw{o}		NOUN6_F 	"air, weather"                  ;
+hooyo:hooy{o}		NOUN6_F 	"mother"                        ;
+masiibo:masiib{o}		NOUN6_F 	"calamity"                      ;
+qaaddo:qaadd{o}		NOUN6_F 	"spoon"                         ;
+kiilo:kiil{o}		NOUN6_F 	"kilogram"						; 
+shaneemo:shaneem{o}	NOUN6_F	"film";
+shaqo:shaq{o}		NOUN6_F	"work";
+sheeko:sheek{o}		NOUN6_F	"story";
+talo:tal{o}		NOUN6_F	"advice, decision";
+tuulo:tuul{o}		NOUN6_F	"village";
+waddo:wadd{o}		NOUN6_F	"road";
+xiiso:xiis{o}		NOUN6_F	"interest, fascination";
+yaanyo:yaany{o}		NOUN6_F	"tomato";
+magaalo:magaal{o}		NOUN6_F "town"                        ;
+
+
+LEXICON D6_M
+dhismo 		NOUNM	"building" 					;
+gudo		NOUNM "inside, interior"            ;
+moxoggo		NOUNM "cassava"                     ;
+
+
+
+! magaalaa
+! magaalad
+! magaalada
+! magaaladaas
+! magaaladaiisa
+! magaaladan
+! magaaladanelspruit
+! magaaladatan
+! magaaladda
+! magaaladu
+! magaalamadaxda
+! magaalo
+! magaalooyin
+! magaalooyinka
+
+! -o in pl only.
+
+
+LEXICON D6_F_Mass
+cunto	 NOUNF "food" ; 
+
+LEXICON D6_F_Coll
+socoto	NOUNF	"travellers" ;
+
+
+LEXICON D7
+D7_M ;
+D7_F ;
+
+LEXICON D7_M
+aabbe     NOUNM    "father" ;
+geeltoosiye	NOUNM "type of vulture"         ;
+gole		NOUNM "assembly, committee"     ;
+hoggamiye	NOUNM "leader"                  ;
+masalle		NOUNM "prayer mat"              ;
+mooye		NOUNM "mortar"                  ;
+oday		NOUNM "old man; elder"          ;
+qorfe		NOUNM "cinnamon"                ;
+qumbe		NOUNM "coconut"                 ;
+madaxweyne	NOUNM 	"president"             ;
+qalalaase	NOUNM 	"disturbance"           ;
+buste		NOUNM "blanket"                  ;
+cambe		NOUNM "mango"                    ;
+danjire		NOUNM "ambassador"               ;
+dhegayare	NOUNM "clove"                    ;
+dukaanle	NOUNM "shopkeeper"               ;
+fiise		NOUNM "visa"                     ;
+fure		NOUNM "key"                      ;
+aabbe		NOUNM "father"                   ;
+adduunweyne	NOUNM "international community"  ;
+biyo		NOUNM "water"                    ;
+tagsile		NOUNM "taxi owner"; 
+waraabe		NOUNM "hyena";
+xoghaye		NOUNM "secretary";
+
+
+! Listed without declension information in Orwin, but perhaps also had Col. or Mass. info
+LEXICON Unknown_Declensions
+	UNKNOWN_F ; 
+	UNKNOWN_F_COL ; 
+	UNKNOWN_F_MASS ;
+	UNKNOWN_M ; 
+	UNKNOWN_M_COL ; 
+	UNKNOWN_M_MASS ;
+	UNKNOWN_M_PL ; 
+	UNKNOWN_EVERYTHING ;
+
+! TODO: unknown words
+LEXICON UNKNOWN_EVERYTHING
+riyo+N+Pl:riyo		# 	"goats (in general)" ;
+
+
+LEXICON UNKNOWN_F
+hurdo		NOUNF "sleep"                   ;
+il			NOUNF "eye" 					;   		! indho (m.) eyes
+indho+N+Masc+Pl:il	NOUNF "eyes"					;
+ilaalin		NOUNF "watching over"           ;
+in			NOUNF "part, amount"            ;
+jariidad	NOUNF "newspaper" 				;   		! jaraa'id (m.); arabic loan
+jaraa'id+N+Masc+Pl:jariidad		NOUNF		"newspapers" ; 
+koonfur		NOUNF "south"                   ;
+midig		NOUNF "right"                   ;
+qurux		NOUNF "beauty"                  ;
+askar		NOUNF "soldier"                         ; 
+bocor		NOUNF "pumpkin"                         ; 
+cid			NOUNF "someone"                         ; 
+dabo		NOUNF "back part, behind"               ; 
+dar			NOUNF "reason"                          ; 
+Dayr		NOUNF "Sept-Nov, lesser wet season"     ; 
+dhuxul		NOUNF "charcoal"                        ; 
+gaajo		NOUNF "hunger"                          ; 
+gallay		NOUNF "maize"                           ; 
+run			NOUNF "truth"; 
+si			NOUNF "way"; ! TODO: siyaabo (m) pl
+sisin		NOUNF "sesame" ; 
+suugaan		NOUNF "literature" ; 
+talogelyo	NOUNF "seeking advice" ; 
+toon		NOUNF "garlic" ; 
+xabbad		NOUNF "unit (of something), piece" ; 
+xulufo		NOUNF "allies" ; 
+
+
+LEXICON UNKNOWN_F_COL
+lo'			NOUNF "cattle"			; 
+carruur		NOUNF "children"       ; 
+digir		NOUNF "beans, peas"    ; 
+soor		NOUNF "porridge-type food made from different grains" ; 
+timir		NOUNF "dates" ; 
+ukun		NOUNF "eggs (edible, mostly of chickens)" ; 
+xoolaley	NOUNF "livestock keepers" ;  ! TODO: is -ley productive? 
+
+
+LEXICON UNKNOWN_F_MASS
+lacag		NOUNF	"money"		;
+cusbo		NOUNF "salt"             ; 
+filfil		NOUNF "black pepper"     ;
+saliid		NOUNF "oil" ; 
+sonkor		NOUNF "suger" ; 
+
+LEXICON UNKNOWN_F_PL
+ciidammo	NOUNF	"forces" ;
+
+! N ? ?		dagaal sokeeye	"civil war"
+
+
+LEXICON UNKNOWN_M
+hadhuudh	NOUNM "sorghum"           ;
+harraad		NOUNM "thirst"            ;
+kulayl		NOUNM "heat; hot"         ;
+lamaddegaan	NOUNM "desert"            ;
+markab		NOUNM "ship" 			  ;  			! maraakiib (f.); loan
+qaali		NOUNM "expensive thing"   ;
+qasab		NOUNM "sugar cane"        ;
+rag			NOUNM "men"               ;
+maxbuus		NOUNM "prisoner" 		  ;  			! maxaabiis (f.)
+agagaar	    NOUNM "surroundings, neighborhood"                         ; 
+askari	    NOUNM "soldier"                                            ; 
+daalin	    NOUNM "oppressor"           ;                                   ! daalimiin (f), pl?           
+dhagax	    NOUNM "stone"	            ;                                   	! pl. dhagxan - f, dhagaxyo  
+Eebbe	    NOUNM "God"                                                ; 
+farasmagaalo	NOUNM	"city center, town center"                     ; 
+galbeed		NOUNM "west"											 ; 
+! possibly d2m ... , ciidanka, ciidamo, ciidamada
+ciidan:ciida{m}	NOUNM "force, workforce" ; 
+! ciidamad, ciidamada, ciidamadaas, ciidamadaasi, ciidamadaii, ciidamadan, ciidamadeeda, ciidamadeeduna, ciidamadeena, ciidamadii, ciidamadiisa, ciidamadooda, ciidamadoodu, ciidamadu, ciidamda, ciidammada, ciidamo, ciidamobeeleedyo, ciidan, ciidanka, ciidankaas, ciidankaasi, ciidankan, ciidankani, ciidankeeda, ciidankii, ciidankiisu, ciidankooda, ciidanku
+saxan		NOUNM 	"plate" ; ! TODO: suxuun (f) pl?
+tababbar	NOUNM 	"training" ; 
+telefishan	NOUNM 	"television" ; 
+waqooyi		NOUNM 	"north" ; 
+waqti		NOUNM 	"time" ; 
+wakhti		NOUNM 	"time" ; 
+wareysi		NOUNM 	"interview" ; 
+wax			NOUNM 	"thing" ; ! TODO: waxyaabo (m.) pl.
+waxtar		NOUNM 	"usefulness" ; 
+
+
+LEXICON UNKNOWN_M_COL
+geel		NOUNM "camels" 			  ;  ! geela, irregular definite.
+habardugaag	NOUNM "wild animals"      ;
+ido			NOUNM "sheep"             ;
+midho		NOUNM "fruit"             ;
+nuxur		NOUNM "nourishment"       ;
+dad		   NOUNM  "people"            ; 
+dumar	   NOUNM  "women"             ; 
+adhi		NOUNM	"caprines"        ; 
+waalid		NOUNM	"parents" 		;
+xawaash		NOUNM	"spices"        ;
+
+
+LEXICON UNKNOWN_M_MASS
+maraq	NOUNM	"soup" ;  ! maraqu maraqa maraqii
+caano	NOUNM	"milk" ; 
+sarreen		NOUNM	"wheat"		;
+
+LEXICON Word 
+# ; 
+
+! TODO: misc words
+LEXICON MISC_WORDS
+aad		Word		"very" ;
+
+
+LEXICON Proper
+BBC			PROP	"BBC" ;
+Puntland	PROP	"puntland" ;
+Iswiidhan	PROP	"Sweden" ;
+Ciraaq		PROP	"Iraq" ; 
+
+LEXICON PROP
++N+Prop:	# ;
+
