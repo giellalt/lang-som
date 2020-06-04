@@ -1,0 +1,9 @@
+name = "Somali"
+version = "0.1.0"
+
+[macos]
+system_pkg_id = "no.divvun.MacDivvun.so"
+
+[windows]
+system_product_code = "634D46D5-33D4-4FB3-B210-7858072A3FF1"
+msoffice_product_code = "6F2E7221-75FA-4CF3-97E6-03926D7CBA8C"
