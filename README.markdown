@@ -22,7 +22,7 @@ Documentation
 
 Documentation can be found at:
 
--   <https://giellalt.uit.no/lang/somdoc/index.html>
+-   <https://giellalt.uit.no/lang/som/SomaliDocumentation.html>
 -   <https://giellalt.uit.no/index.html>
 
 Core dependencies
