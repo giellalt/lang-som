@@ -24,14 +24,14 @@ Gen_Postp ;
 Loc_Adps ;
 RealPrepositions ; 
 
-!! !! Real Prepositions
+!! Real Prepositions
 !! These are the few actual prepositions that exist in Somali.
 
 LEXICON RealPrepositions !!= * @CODE@ 
 binu+Pr:binu PP_FINAL "bin; of" ;
 ilaa+Pr:ilaa PP_FINAL "ilaa; until" ;
 
-!! !! Locative adpositions
+!! Locative adpositions
 !! These are a part of the verb complex, mark other kinds of locations than the
 !! basic ones below.
 
@@ -84,7 +84,7 @@ LEXICON _NPPPostMPl
 +Decl/1+Masc+Pl:´´%>{N} NOUN1_M_PostBoundaryPl ;
 
 
-!! !! Simple adpositions
+!! Simple adpositions
 !! These imply something about the motion of the verb. All have high tones.
 
 LEXICON Simple
@@ -94,9 +94,9 @@ ka+Adp:ka´ PP_FINAL "at" ;
 la+Adp:la´ PP_FINAL "with" ;
 
 
-!! !!! Fusional adpositions
+!! Fusional adpositions
 
-!! !! Negation
+!! Negation
 !! The negative marker _ma_ may fuse with the simple adpositions, maintaining its low tone. (ú + ma -> úma)
 
 LEXICON Adp_Neg
@@ -124,7 +124,7 @@ la+Adp+Neg/ma:lama´´ PP_FINAL "not with" ;
 ! idin+ idiín idinkú idinká idinlá
 ! la+ loó lagú lagá lalá
 
-!! !! Long form pronouns and adpositions, and CS
+!! Long form pronouns and adpositions, and CS
 
 ! TODO: needs more work
 ! TODO: add kuwa, kuwii, etc here? are these kuwa + u = kuwii?
