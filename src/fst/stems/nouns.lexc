@@ -8,9 +8,9 @@
 !! Note that items containing ATR should mark the ATR using <¨> before the vowel
 !! or at the beginning of the stem if uncertain.
 
-!! {{{
+!! ```
 !! doog:¨doog NOUN1_M/SgOnly ;
-!! }}}
+!! ```
 
 LEXICON Nouns
 D1 ;
@@ -23,7 +23,7 @@ D7 ;
 ArabicLoans ;
 IrregNouns ;
 
-!! !! Irregular nouns
+!! Irregular nouns
 !! _il_ and _si_ are both female in singular, and have typical morphology there
 !! but, have varying irregular masculine plural forms.
 
@@ -53,7 +53,7 @@ D1_M ;
 D1_M/PlOnly ;
 D1_M/SgOnly ;
 
-!! !! Declension 1: F→M
+!! Declension 1: F→M
 
 !! TODO: write quick overview of morphosyntax, morphophon
 !! -i for some nominatives. Pl is -o.
@@ -157,7 +157,7 @@ xiddig NOUN1_F ;
 xigmad NOUN1_F ;
 xukumad NOUN1_F ;
 
-!! !! Declension 1: M, sg. only
+!! Declension 1: M, sg. only
 
 LEXICON D1_M/SgOnly
 abaal NOUN1_M/SgOnly ;
@@ -221,7 +221,7 @@ xaq NOUN1_M/SgOnly ;
 xayawaan NOUN1_M/SgOnly ;
 yamaarug NOUN1_M/SgOnly ;
 
-!! !! Declension 1: M→M, M→F
+!! Declension 1: M→M, M→F
 
 ! TODO: maybe split out NOUN1_M and NOUN1_MF so they're easier to keep track of?
 
@@ -285,12 +285,12 @@ xidig NOUN1_M ;
 xudduud NOUN1_M ;
 xuur NOUN1_M ;
 
-!! !! Declension 1: Masc. Pl. Only
+!! Declension 1: Masc. Pl. Only
 
 LEXICON D1_M/PlOnly
 xoolo:xool NOUN1_M/PlOnly ;
 
-!! !! Declension 1: Fem. Sg. Only
+!! Declension 1: Fem. Sg. Only
 
 !! A fair amount of abstract things, and some collective things that probably need
 !! to be moved to collective lexica.
@@ -434,7 +434,7 @@ xer NOUN1_F/SgOnly ;
 xirnaan NOUN1_F/SgOnly ;
 xuquuq NOUN1_F/SgOnly ;
 
-!! !! Declension 2
+!! Declension 2
 
 LEXICON D2
 Collective ;
@@ -445,7 +445,7 @@ D2_M_Mass ;
 D2_M_yo ;
 D2_M_Arabic ;
 
-!! !! Declension 2: Collective
+!! Declension 2: Collective
 
 !! Groups of things, -ley is a common suffix. Taged with +Coll, but available
 !! only in singular.
@@ -832,7 +832,7 @@ yiciis NOUN2_F_Coll ;
 yoofil NOUN2_F_Coll ;
 ¨luul:lu¨ul NOUN2_M_Coll ;
 
-!! !! Declension 2: M→F
+!! Declension 2: M→F
 !!
 !! -yo is plural.
 
@@ -2045,7 +2045,7 @@ yeeg-bishiish NOUN2_M_yo ;
 yeegtiis NOUN2_M_yo ;
 yurasil NOUN2_M_yo ;
 
-!! !! Declension 2: M→F
+!! Declension 2: M→F
 
 !! Some consonant doubling in plurals with -o, some with -yo, no doubling.
 
@@ -2893,13 +2893,13 @@ yaraan NOUN2_M ;
 yeeg-bicaddaan NOUN2_M ;
 yeeg-bijoohaar NOUN2_M ;
 
-!! !! Declension 2: M→M - Arabic words with Somali plurals.
+!! Declension 2: M→M - Arabic words with Somali plurals.
 
 LEXICON D2_M_Arabic
 masaajid NOUN2_M ;
 surwaal NOUN2_M ;
 
-!! !! Declension 2: F→F
+!! Declension 2: F→F
 !!
 !! -yo plurals
 
@@ -2910,7 +2910,7 @@ sabti NOUN2_F ;
 subax NOUN2_F ;
 subax:subax NOUN2_F ;
 
-!! !! Declension 2: M→F - collectives
+!! Declension 2: M→F - collectives
 
 !! TODO: these are collectives, but not marked as such and perhaps should be.
 !! but also, they have plurals. May be marked as collectives because of Orwin
@@ -2922,7 +2922,7 @@ kalluun:kalluu{m} NOUN2_M ;
 raashin NOUN2_M ;
 reer NOUN2_M ;
 
-!! !! Declension 2: M→F - Mass
+!! Declension 2: M→F - Mass
 
 !! TODO: these are mass nouns, but not marked as such and perhaps should be.
 !! Plurals found in word lists, so maybe these need some special handling.
@@ -2934,7 +2934,7 @@ ilaah NOUN2_M ;
 shaah NOUN2_M ;
 subag NOUN2_M ;
 
-!! !! Declension 3: M→M
+!! Declension 3: M→M
 !!
 !! These are fun, because plurals delete the second vowel.
 !! Ex.) gabadh -> gabdho; xubin -> xubno
@@ -2947,7 +2947,7 @@ LEXICON D3
 D3_M ;
 D3_F ;
 
-!! !! Declension 3: F→M
+!! Declension 3: F→M
 
 ! Test data:
 !!€gt-desc: gabadh # dh + d -> dh; vowel deletion
@@ -2964,7 +2964,7 @@ kibis:kib^is NOUN3_F ;
 maalin:maal^i{m} NOUN3_F ;
 xubin:xub^in NOUN3_F ;
 
-!! !! Declension 3: M→M
+!! Declension 3: M→M
 
 !!€gt-desc: xadhig # g ~ k; vowel deletion
 !!€ xadhig: xadhig+N+Masc+Sg+Indef+Abs
@@ -4505,7 +4505,7 @@ yeele NOUN7_M_MF/e ;
 yoonge NOUN7_M_MF/e ;
 yurqudle NOUN7_M_MF/e ;
 
-!! !! Arabic loan plural forms
+!! Arabic loan plural forms
 !!
 !! These are borrowed Arabic plural forms for Arabic loans. Not really predictable
 !! but mostly taken from Qaamuuska af-Soomaaliga.
