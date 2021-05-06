@@ -1,5 +1,6 @@
-Noun inflection
-The Somali nouns inflect in cases, are marked for gender and number.
+=================================== !
+The Somali VH morphophonological file !
+=================================== !
 
 
 
@@ -30,64 +31,136 @@ The Somali nouns inflect in cases, are marked for gender and number.
 
 
 
+Nouns
 
+Nouns in Somali have separate paradigms depending on
+morphophonological stuff, but are split up into subgroups which correspond
+to gender polarity groups.
 
+Note that items containing ATR should mark the ATR using <¨> before the vowel
+or at the beginning of the stem if uncertain.
 
+```
+doog:¨doog NOUN1_M/SgOnly ;
+```
 
 
+Irregular nouns
+_il_ and _si_ are both female in singular, and have typical morphology there
+but, have varying irregular masculine plural forms.
 
+ * LEXICON IrregNouns  
 
 
+*il # Irregular tests examples:*
+* *il:* `il+N+Fem+Sg+Indef+Abs`
+* *isha:* `il+N+Fem+Sg+Def+Abs+Prox`
+* *indho:* `il+N+Masc+Pl+Indef+Abs`
+* *indhaha:* `il+N+Masc+Pl+Def+Abs+Prox`
 
 
+*il # Irregular tests examples:*
+* *si:* `si+N+Fem+Sg+Indef+Abs`
+* *sida:* `si+N+Fem+Sg+Def+Abs+Prox`
+* *siyaabo:* `si+N+Masc+Pl+Indef+Abs`
+* *siyaabaha:* `si+N+Masc+Pl+Def+Abs+Prox`
 
 
+Declension 1: F→M
 
+TODO: write quick overview of morphosyntax, morphophon
+-i for some nominatives. Pl is -o.
 
+Good amount of nouns with -ad, Fem derivational suffix.
 
 
+*aalad # aalad sample paradigm. examples:*
+* *aalad:* `aalad+N+Decl/1+Fem+Sg+Indef+Abs`
+* *aaladda:* `aalad+N+Decl/1+Fem+Sg+Def+Abs+Prox`
+* *aalado:* `aalad+N+Decl/1+Masc+Pl+Indef+Abs`
+* *aaladaha:* `aalad+N+Decl/1+Masc+Pl+Def+Abs+Prox`
 
 
 
+Declension 1: M, sg. only
 
 
+Declension 1: M→M, M→F
 
 
 
+Declension 1: Masc. Pl. Only
 
 
+Declension 1: Fem. Sg. Only
 
+A fair amount of abstract things, and some collective things that probably need
+to be moved to collective lexica.
 
 
+Declension 2
 
 
+Declension 2: Collective
 
+Groups of things, -ley is a common suffix. Taged with +Coll, but available
+only in singular.
 
 
+Declension 2: M→F
+-yo is plural.
 
 
+Declension 2: M→F
 
+Some consonant doubling in plurals with -o, some with -yo, no doubling.
 
 
+Declension 2: M→M - Arabic words with Somali plurals.
 
 
+Declension 2: F→F
+-yo plurals
 
 
+Declension 2: M→F - collectives
 
+TODO: these are collectives, but not marked as such and perhaps should be.
+but also, they have plurals. May be marked as collectives because of Orwin
 
 
+Declension 2: M→F - Mass
 
+TODO: these are mass nouns, but not marked as such and perhaps should be.
+Plurals found in word lists, so maybe these need some special handling.
 
 
+Declension 3: M→M
+These are fun, because plurals delete the second vowel.
+Ex.) gabadh -> gabdho; xubin -> xubno
+Note that some of these have lenis/fortis changes:
+Ex.) xadhig -> xadhko
 
 
 
+Declension 3: F→M
 
 
+*gabadh # dh + d -> dh; vowel deletion examples:*
+* *gabadh:* `gabadh+N+Fem+Sg+Indef+Abs`
+* *gabadha:* `gabadh+N+Fem+Sg+Def+Abs+Prox`
+* *gabdho:* `gabadh+N+Masc+Pl+Indef+Abs`
+* *gabdhaha:* `gabadh+N+Masc+Pl+Def+Abs+Prox`
 
 
+Declension 3: M→M
 
 
+*xadhig # g ~ k; vowel deletion examples:*
+* *xadhig:* `xadhig+N+Masc+Sg+Indef+Abs`
+* *xadhigga:* `xadhig+N+Masc+Sg+Def+Abs+Prox`
+* *xadhko:* `xadhig+N+Masc+Pl+Indef+Abs`
+* *xadhkaha:* `xadhig+N+Masc+Pl+Def+Abs+Prox`
 
 
 
@@ -102,14 +175,26 @@ The Somali nouns inflect in cases, are marked for gender and number.
 
 
 
+Arabic loan plural forms
+These are borrowed Arabic plural forms for Arabic loans. Not really predictable
+but mostly taken from Qaamuuska af-Soomaaliga.
 
+Ex.) 
 
+* amar -> awaamiir
+* axmaq -> axmaqiin
+* banki -> bunuug
 
+ * LEXICON ArabicLoans  
 
 
 
 
+*guri # Odd-syllable test examples:*
+* *guri:* `guri+N+Masc+Sg+Indef+Nom`
 
+Numerals
+Numerals in the Somali language are numbers.
 
 
 
@@ -142,6 +227,8 @@ The Somali nouns inflect in cases, are marked for gender and number.
 
 
 
+Ruuxa the spirit
+Suuriya placetag "Syrian" ; Suuriyihii
 
 
 
@@ -154,6 +241,9 @@ The Somali nouns inflect in cases, are marked for gender and number.
 
 
 
+Verbs
+Verbs in Somali language are actions, and also states. They agree in person
+and number, and also gender.
 
 
 
@@ -172,9 +262,17 @@ The Somali nouns inflect in cases, are marked for gender and number.
 
 
 
+Real Prepositions
+These are the few actual prepositions that exist in Somali.
 
+ * LEXICON RealPrepositions  
 
+Locative adpositions
+These are a part of the verb complex, mark other kinds of locations than the
+basic ones below.
 
+Ex.) Gurigaa gashaba hoos buu ka guban.
+THe house burned down from inside.
 
 
 
@@ -190,10 +288,15 @@ The Somali nouns inflect in cases, are marked for gender and number.
 
 
 
+Simple adpositions
+These imply something about the motion of the verb. All have high tones.
 
 
 
+Fusional adpositions
 
+Negation
+The negative marker _ma_ may fuse with the simple adpositions, maintaining its low tone. (ú + ma -> úma)
 
 
 
@@ -201,6 +304,7 @@ The Somali nouns inflect in cases, are marked for gender and number.
 
 
 
+Long form pronouns and adpositions, and CS
 
 
 
@@ -275,9 +379,13 @@ The Somali nouns inflect in cases, are marked for gender and number.
 
 
 
+Prefixes
+Prefixes in the Somali language are bound to beginning of other words.
 
 
 
+Adjectives
+Adjectives in the Somali language describe things.
 
 
 
@@ -286,629 +394,8 @@ The Somali nouns inflect in cases, are marked for gender and number.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Proper noun inflection
-The Somali language proper nouns inflect in the same cases as regular
-nouns, but with a colon (':') as separator.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Irregular verbs
-
-These are the "irregular" verbs, which are mostly prefixing or copular.
-
-The copulas are mostly suffixing, and all the other verbs include person
-prefixes, and agreement on suffixes for person. Tense and mood are
-expressed with complex stem alternations that are no longer 100% productive,
-and progressive is formed from a derivational stem, with no person prefixes.
-
-NB: After adding in some additional morphological boundaries for some of the
-verbs, it should become obvious that some more simplification in amount
-of lexica is possible. Prefixing verbs often have multiple stems for
-separate tenses, and more or less get the same person prefixes in
-full and reduced paradigms. The only trick there is it requires more
-flag diacritics, to make sure that the prefix matches the suffix.
-
-TODO: omg
-
-
-
-
- LEXICON MA  _ma_ and related inflected forms.
-
-Ah
-
-_ah_ is a verb meaning 'to exist', but can function as a copula. It is
-inflected in all tenses, but has long and short forms.
-
- LEXICON Ah  Inflections in tense.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Symbol affixes
-
-
-
-
-
-Adjective inflection
-The Somali language adjectives compare.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Verb inflection
-The Somali language verbs inflect in persons.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-         Full            Reduced
-  1Sg    A               A
-  2Sg    B               A
-  3SgM   A               A
-  3SgF   B               B
-  1Pl    C               C
-  2Pl    D               A
-  3Pl    E               A
-
-
-
-         Present         Past
-  1Sg    keenaa          keenay
-  2Sg    keentaa         keentay
-  3SgM   keenaa          keenay
-  3SgF   keentaa         keentay
-  1Pl    keennaa         keennay
-  2Pl    keentaan        keenteen
-  3Pl    keenaan         keenaan
-
-
-
-         Present         Past
-  1Sg    keénayaa        keénayay
-  2Sg    keénaysaa       keénaysay
-  3SgM   keénayaa        keénayay
-  3SgF   keénaysaa       keénaysay
-  1Pl    keénaynaa       keénaynay
-  2Pl    keénaysaan      keénayseen
-  3Pl    keénayaan       keénayeen
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- Apply post-root tones, and other root triggers
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Pronouns
+Pronouns in the Somali language are references to things.
 
 
 
@@ -1444,6 +931,984 @@ Note: bt / obd
 * examples:*
 
 
+# Symbol affixes
+
+
+
+
+
+
+Irregular verbs
+
+These are the "irregular" verbs, which are mostly prefixing or copular.
+
+The copulas are mostly suffixing, and all the other verbs include person
+prefixes, and agreement on suffixes for person. Tense and mood are
+expressed with complex stem alternations that are no longer 100% productive,
+and progressive is formed from a derivational stem, with no person prefixes.
+
+NB: After adding in some additional morphological boundaries for some of the
+verbs, it should become obvious that some more simplification in amount
+of lexica is possible. Prefixing verbs often have multiple stems for
+separate tenses, and more or less get the same person prefixes in
+full and reduced paradigms. The only trick there is it requires more
+flag diacritics, to make sure that the prefix matches the suffix.
+
+TODO: omg
+
+
+
+
+ LEXICON MA  _ma_ and related inflected forms.
+
+Ah
+
+_ah_ is a verb meaning 'to exist', but can function as a copula. It is
+inflected in all tenses, but has long and short forms.
+
+ LEXICON Ah  Inflections in tense.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Noun inflection
+The Somali nouns inflect in cases, are marked for gender and number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Proper noun inflection
+The Somali language proper nouns inflect in the same cases as regular
+nouns, but with a colon (':') as separator.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Verb inflection
+The Somali language verbs inflect in persons.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+         Full            Reduced
+  1Sg    A               A
+  2Sg    B               A
+  3SgM   A               A
+  3SgF   B               B
+  1Pl    C               C
+  2Pl    D               A
+  3Pl    E               A
+
+
+
+         Present         Past
+  1Sg    keenaa          keenay
+  2Sg    keentaa         keentay
+  3SgM   keenaa          keenay
+  3SgF   keentaa         keentay
+  1Pl    keennaa         keennay
+  2Pl    keentaan        keenteen
+  3Pl    keenaan         keenaan
+
+
+
+         Present         Past
+  1Sg    keénayaa        keénayay
+  2Sg    keénaysaa       keénaysay
+  3SgM   keénayaa        keénayay
+  3SgF   keénaysaa       keénaysay
+  1Pl    keénaynaa       keénaynay
+  2Pl    keénaysaan      keénayseen
+  3Pl    keénayaan       keénayeen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Apply post-root tones, and other root triggers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Adjective inflection
+The Somali language adjectives compare.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Somali morphological analyser
 
 INTRODUCTION TO THE MORPHOLOGICAL ANALYSER OF SOMALI.
@@ -1956,469 +2421,20 @@ These lexica are dummy lexical to make the source compile, they contain only #.
 
 
 
-Nouns
 
-Nouns in Somali have separate paradigms depending on
-morphophonological stuff, but are split up into subgroups which correspond
-to gender polarity groups.
 
-Note that items containing ATR should mark the ATR using <¨> before the vowel
-or at the beginning of the stem if uncertain.
 
-```
-doog:¨doog NOUN1_M/SgOnly ;
-```
+We describe here how abbreviations are in Somali are read out, e.g.
+for text-to-speech systems.
 
+For example:
 
-Irregular nouns
-_il_ and _si_ are both female in singular, and have typical morphology there
-but, have varying irregular masculine plural forms.
-
- * LEXICON IrregNouns  
-
-
-*il # Irregular tests examples:*
-* *il:* `il+N+Fem+Sg+Indef+Abs`
-* *isha:* `il+N+Fem+Sg+Def+Abs+Prox`
-* *indho:* `il+N+Masc+Pl+Indef+Abs`
-* *indhaha:* `il+N+Masc+Pl+Def+Abs+Prox`
-
-
-*il # Irregular tests examples:*
-* *si:* `si+N+Fem+Sg+Indef+Abs`
-* *sida:* `si+N+Fem+Sg+Def+Abs+Prox`
-* *siyaabo:* `si+N+Masc+Pl+Indef+Abs`
-* *siyaabaha:* `si+N+Masc+Pl+Def+Abs+Prox`
-
-
-Declension 1: F→M
-
-TODO: write quick overview of morphosyntax, morphophon
--i for some nominatives. Pl is -o.
-
-Good amount of nouns with -ad, Fem derivational suffix.
-
-
-*aalad # aalad sample paradigm. examples:*
-* *aalad:* `aalad+N+Decl/1+Fem+Sg+Indef+Abs`
-* *aaladda:* `aalad+N+Decl/1+Fem+Sg+Def+Abs+Prox`
-* *aalado:* `aalad+N+Decl/1+Masc+Pl+Indef+Abs`
-* *aaladaha:* `aalad+N+Decl/1+Masc+Pl+Def+Abs+Prox`
-
-
-
-Declension 1: M, sg. only
-
-
-Declension 1: M→M, M→F
-
-
-
-Declension 1: Masc. Pl. Only
-
-
-Declension 1: Fem. Sg. Only
-
-A fair amount of abstract things, and some collective things that probably need
-to be moved to collective lexica.
-
-
-Declension 2
-
-
-Declension 2: Collective
-
-Groups of things, -ley is a common suffix. Taged with +Coll, but available
-only in singular.
-
-
-Declension 2: M→F
--yo is plural.
-
-
-Declension 2: M→F
-
-Some consonant doubling in plurals with -o, some with -yo, no doubling.
-
-
-Declension 2: M→M - Arabic words with Somali plurals.
-
-
-Declension 2: F→F
--yo plurals
-
-
-Declension 2: M→F - collectives
-
-TODO: these are collectives, but not marked as such and perhaps should be.
-but also, they have plurals. May be marked as collectives because of Orwin
-
-
-Declension 2: M→F - Mass
-
-TODO: these are mass nouns, but not marked as such and perhaps should be.
-Plurals found in word lists, so maybe these need some special handling.
-
-
-Declension 3: M→M
-These are fun, because plurals delete the second vowel.
-Ex.) gabadh -> gabdho; xubin -> xubno
-Note that some of these have lenis/fortis changes:
-Ex.) xadhig -> xadhko
-
-
-
-Declension 3: F→M
-
-
-*gabadh # dh + d -> dh; vowel deletion examples:*
-* *gabadh:* `gabadh+N+Fem+Sg+Indef+Abs`
-* *gabadha:* `gabadh+N+Fem+Sg+Def+Abs+Prox`
-* *gabdho:* `gabadh+N+Masc+Pl+Indef+Abs`
-* *gabdhaha:* `gabadh+N+Masc+Pl+Def+Abs+Prox`
-
-
-Declension 3: M→M
-
-
-*xadhig # g ~ k; vowel deletion examples:*
-* *xadhig:* `xadhig+N+Masc+Sg+Indef+Abs`
-* *xadhigga:* `xadhig+N+Masc+Sg+Def+Abs+Prox`
-* *xadhko:* `xadhig+N+Masc+Pl+Indef+Abs`
-* *xadhkaha:* `xadhig+N+Masc+Pl+Def+Abs+Prox`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Arabic loan plural forms
-These are borrowed Arabic plural forms for Arabic loans. Not really predictable
-but mostly taken from Qaamuuska af-Soomaaliga.
-
-Ex.) 
-
-* amar -> awaamiir
-* axmaq -> axmaqiin
-* banki -> bunuug
-
- * LEXICON ArabicLoans  
-
-
-
-
-*guri # Odd-syllable test examples:*
-* *guri:* `guri+N+Masc+Sg+Indef+Nom`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Ruuxa the spirit
-Suuriya placetag "Syrian" ; Suuriyihii
-
-
-
-
-
-
-
-
-
-
-
-
-Prefixes
-Prefixes in the Somali language are bound to beginning of other words.
-
-
-
-Pronouns
-Pronouns in the Somali language are references to things.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Adjectives
-Adjectives in the Somali language describe things.
-
-
-
-
-
-
-
-
-Verbs
-Verbs in Somali language are actions, and also states. They agree in person
-and number, and also gender.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Real Prepositions
-These are the few actual prepositions that exist in Somali.
-
- * LEXICON RealPrepositions  
-
-Locative adpositions
-These are a part of the verb complex, mark other kinds of locations than the
-basic ones below.
-
-Ex.) Gurigaa gashaba hoos buu ka guban.
-THe house burned down from inside.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Simple adpositions
-These imply something about the motion of the verb. All have high tones.
-
-
-
-Fusional adpositions
-
-Negation
-The negative marker _ma_ may fuse with the simple adpositions, maintaining its low tone. (ú + ma -> úma)
-
-
-
-
-
-
-
-Long form pronouns and adpositions, and CS
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Numerals
-Numerals in the Somali language are numbers.
-
-
-
-
-
-
-
-=================================== !
-The Somali VH morphophonological file !
-=================================== !
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ * s.:syntynyt # ;  
+ * os.:omaa% sukua # ;  
+ * v.:vuosi # ;  
+ * v.:vuonna # ;  
+ * esim.:esimerkki # ; 
+ * esim.:esimerkiksi # ; 
 
 
 
@@ -2474,20 +2490,4 @@ The Somali VH morphophonological file !
 % kolon% :%:     Root ;
 % sárggis% :%-   Root ; 
 % násti% :%*     Root ; 
-
-
-
-
-We describe here how abbreviations are in Somali are read out, e.g.
-for text-to-speech systems.
-
-For example:
-
- * s.:syntynyt # ;  
- * os.:omaa% sukua # ;  
- * v.:vuosi # ;  
- * v.:vuonna # ;  
- * esim.:esimerkki # ; 
- * esim.:esimerkiksi # ; 
-
 
