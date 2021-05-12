@@ -5,7 +5,7 @@
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-som)](https://github.com/giellalt/lang-som/issues)
 [![Build status](https://github.com/giellalt/lang-som/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-som/actions)
 
-This page documents the work on the **Somali language model**. 
+This page documents the work on the [Somali language model](http://github.com/giellalt/lang-som). 
 
 # Project documentation
 
