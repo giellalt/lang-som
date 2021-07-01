@@ -15,26 +15,26 @@ The lenis stop series in Somali <b d g> alternates with the fortis series <t k>,
 the <b> does not actually participate. Lenis stops are found in coda positions, and fortis
 stops are found elsewhere. The alternation occurs in both nouns and verbs.
 ```
-    ilig ‘tooth'   ~   iligga ‘tooth (Def.)'     ~   ilko ‘teeth (Indef.)’
-    arag ‘see'     ~   aragtaa ‘2Sg/3SgF sees'   ~   arkaa ‘1Sg/3SgM sees’
+ilig ‘tooth'   ~   iligga ‘tooth (Def.)'     ~   ilko ‘teeth (Indef.)’
+arag ‘see'     ~   aragtaa ‘2Sg/3SgF sees'   ~   arkaa ‘1Sg/3SgM sees’
 ```
 
 ### Voicing assimilation
-  
+
 Stops assimilate for voicing (or lenis/fortis), particularly across morpheme boundaries,
 however they only assimilate if they share place of articulation.
 ```
-    aragtaa            ‘2Sg/3SgF sees’
-    wararka            ‘the news’
-    buugga             ‘the book’
-    naagta            ‘the woman’
-    jaamacadda        ‘the university’
+aragtaa            ‘2Sg/3SgF sees’
+wararka            ‘the news’
+buugga             ‘the book’
+naagta            ‘the woman’
+jaamacadda        ‘the university’
 ```
 This also follows for the retroflex segment <dh>, however the sequence <dhdh> is shortened
 to <dh>.
 ```
-    gabadh            ‘(a) girl’
-    gabadha           ‘the girl’
+gabadh            ‘(a) girl’
+gabadha           ‘the girl’
 ```
 ### Vowel ablaut
 Vowels are subject to two main types of ablaut: (1) full ablaut across back consonants,
@@ -42,33 +42,33 @@ and (2) partial ablaut with <a> ~ <e> preceding the high vowel <i>.
 Full ablaut is constrained to morpheme boundaries: and most commonly occurs in the ‘waxa’
 focus marker.
 ```
-    waxaan ‘foc+1Sg'            magac                        rah
-    wuxuu  ‘foc+3SgM'           magucu    / magacu           ruhu
-                                magicii   / magicii 
+waxaan ‘foc+1Sg'            magac                        rah
+wuxuu  ‘foc+3SgM'           magucu    / magacu           ruhu
+magicii   / magicii 
 ```
 Full ablaut appears to be optional in some words.
 Partial ablaut occurs in verbal infinitives with mostly any word of the pattern CaC. When
 the infinitive ending <i> is appended, <a> raises to <e>. It also occurs around person
 suffixes and tense ending in <e>
 ```
-    tag ‘go'        tegi ‘to go'            tegeen ‘they went’
-    bax ‘leave'     bexi ‘to leave'         bexeen ‘they left’
+tag ‘go'        tegi ‘to go'            tegeen ‘they went’
+bax ‘leave'     bexi ‘to leave'         bexeen ‘they left’
 ```
 
 ## <k> deletion
 
 <k> is deleted when it follows a back consonant (which is not <k> itself):
 ```
-    wax + ka => waxa
-    magac + ka => magaca
-    rah + ka => raha
+wax + ka => waxa
+magac + ka => magaca
+rah + ka => raha
 ```
 <l> + <t> -> <sh>
 Occurs only across morpheme boundaries, in verbs and nouns.
-    wiilal        =>        wiilasha
-    ‘boys'                  ‘the boys’
-    maqal        =>        maqashay
-    ‘listen'            ‘2Sg/3SgF listened’
+wiilal        =>        wiilasha
+‘boys'                  ‘the boys’
+maqal        =>        maqashay
+‘listen'            ‘2Sg/3SgF listened’
 ## Vowel harmony
 For a complete description of vowel harmony, see the literature.
 Short summary: +ATR is the active spreading feature, and spreads leftward across all
@@ -90,33 +90,33 @@ Partial reduplication occurs in the 4th declension of nouns, but a subtype of th
 epenthesis of <a>. Note that partial reduplication in adjectives is prefixing,
 while in nouns it is suffixing. Also, the template is slightly different.
 ```
-    af ‘mouth, language'        =>        afaf    ‘... +Pl’
-    qoys ‘family'               =>        qoysas    ‘... +Pl’
+af ‘mouth, language'        =>        afaf    ‘... +Pl’
+qoys ‘family'               =>        qoysas    ‘... +Pl’
 ```
 Note: There may be some partial reduplication that also copies the vowel.
 Full reduplication also applies to some of these nouns:
 ```
-    qof ‘person'                =>         qofqof
-    cad ‘part'                  =>        cadcad
+qof ‘person'                =>         qofqof
+cad ‘part'                  =>        cadcad
 ```
 Adjectives:
 ```
-    quruxsán ‘beautiful'        =>        qurquruxsán ‘ ... +Pl’
-    fudúd ‘easy, light'         =>        fudfudúd
-    adág ‘difficult'            =>        ad'adág
-    yár ‘a little'              =>        yaryára
-    gaabán ‘short'              =>        gaaggaabán ‘ ... +Pl’
-    laabán ‘folded'             =>        laallaabán
-    jabán ‘broken'              =>        ‘jajabán’
+quruxsán ‘beautiful'        =>        qurquruxsán ‘ ... +Pl’
+fudúd ‘easy, light'         =>        fudfudúd
+adág ‘difficult'            =>        ad'adág
+yár ‘a little'              =>        yaryára
+gaabán ‘short'              =>        gaaggaabán ‘ ... +Pl’
+laabán ‘folded'             =>        laallaabán
+jabán ‘broken'              =>        ‘jajabán’
 ```
 Irregular adjectives:
 ```
-    dhéer ‘long, tall (sg)'        =>        dhaadhéer
-    wéyn ‘big'                     =>        waawéyn
+dhéer ‘long, tall (sg)'        =>        dhaadhéer
+wéyn ‘big'                     =>        waawéyn
 ```
 
 Note: Other possibilities might be found greping: with ‘^\(.\)aa\1e', ‘^\(.\)aa\1\1aa',
-     ‘\(.\)a\1$’
+‘\(.\)a\1$’
 
 ## Person morphemes
 
@@ -125,37 +125,37 @@ declension type and whether or not the suffix is preceded by the progressive.
 
 Realization of these suffixes is currently all handled by twolc:
 ```        
-                    sg            pl                
-        1          {đ}            {ñ}     ==>        
-        2          {ŧ}             0                
-        3 Masc     {đ}            {đ}                
-        3 Fem      {ŧ}                            
-        Declension 1
+sg            pl                
+1          {đ}            {ñ}     ==>        
+2          {ŧ}             0                
+3 Masc     {đ}            {đ}                
+3 Fem      {ŧ}                            
+Declension 1
 
-                    sg            pl                    
-        1            keenaa        keennaa         1        dhacay        dhacnay
-        2            keentaa       keenaan         2        dhacday        dheceen
-        3 Masc       keenaa        keentaan        3 Masc    dhacay        dhecdeen
-        3 Fem        keentaa                       3 Fem    dhacday
-        Declension 2
-                    sg            pl                     sg
-        1            sameeyay    sameynay       1        kariyay        karinay
-        2            sameysay    sameyseen      2        karisay        kariseen
-        3 Masc       sameeyay    sameeyeen      3 Masc   kariyay        kariyeen
-        3 Fem        sameysay                   3 Fem    karisay
-        Declension 3
-                    sg            pl                    
-        1            furay        furannay            1        watay        wadannay
-        2            furtay       furateen            2        wadatay        wadateen
-        3 Masc       furay        fureen              3 Masc    watay        wateen
-        3 Fem        furtay                           3 Fem    wadatay
+sg            pl                    
+1            keenaa        keennaa         1        dhacay        dhacnay
+2            keentaa       keenaan         2        dhacday        dheceen
+3 Masc       keenaa        keentaan        3 Masc    dhacay        dhecdeen
+3 Fem        keentaa                       3 Fem    dhacday
+Declension 2
+sg            pl                     sg
+1            sameeyay    sameynay       1        kariyay        karinay
+2            sameysay    sameyseen      2        karisay        kariseen
+3 Masc       sameeyay    sameeyeen      3 Masc   kariyay        kariyeen
+3 Fem        sameysay                   3 Fem    karisay
+Declension 3
+sg            pl                    
+1            furay        furannay            1        watay        wadannay
+2            furtay       furateen            2        wadatay        wadateen
+3 Masc       furay        fureen              3 Masc    watay        wateen
+3 Fem        furtay                           3 Fem    wadatay
 ```
-    A short summary:
+A short summary:
 ```
-        %{đ%} - 1Sg, 3SgM and 3Pl;     realized as 0/y/d in classes
-        %{ŧ%} - 2Sg, 3SgF, 2Pl;        realized as t/s in classes 
-        %{ñ%} - 1Pl;                   realized as n in all classes
-                                      ‘special' here just in case.
+%{đ%} - 1Sg, 3SgM and 3Pl;     realized as 0/y/d in classes
+%{ŧ%} - 2Sg, 3SgF, 2Pl;        realized as t/s in classes 
+%{ñ%} - 1Pl;                   realized as n in all classes
+‘special' here just in case.
 ```
 
 This process could easily be removed from twolc and done in just flag diacritics, why not?
@@ -172,7 +172,7 @@ More processes to describe:
 
 Notes:
 * If forms disappear but the rule should work, make sure
-  that the pair transforming exists in the Alphabet
+that the pair transforming exists in the Alphabet
 
 
 
@@ -213,21 +213,21 @@ TODO: tests from these
 
 ```
 ilig+N+Masc+Pl+Def+PxSg3M+Abs+Prox       il^ik´%>%{N%}a%>híisa#
-  -- > ilkihiisa 
+-- > ilkihiisa 
 walaal+N+Masc+Pl+Def+PxSg3M+Abs+Prox     walaal´´%>%{N%}a%>híisa#
-  -- > walaalihiisa 
+-- > walaalihiisa 
 
 magac+N+Masc+Sg+Def+Abs+Dist                magac´´%>%{N%}kii#
-  -- > magicii 
+-- > magicii 
 magac+N+Masc+Sg+Def+Nom+Prox                magac´´%>%{N%}ku#
-  -- > magucu 
+-- > magucu 
 magac+N+Masc+Sg+Def+PxSg3F+Abs+Prox      magac´´%>%{N%}kíisa#
-  -- > magiciisa 
+-- > magiciisa 
 waxa+CS+Foc/R+Sg3M      wax%>uu#
-  -- > wuxuu
+-- > wuxuu
 
 wax+N+Masc+Sg+Def+PxSg3M+Nom+Prox        wax´´%>%{N%}kíisu#
-  -- > wixiisu / waxiisu
+-- > wixiisu / waxiisu
 ```
 
 List of rules:
@@ -367,7 +367,7 @@ tbw.
 
 
 
- V3A
+V3A
 
 
 
@@ -376,28 +376,28 @@ tbw.
 
 Following rules are for the funky things that happen with 1Sg, 3SgM, 3Pl
 Basically, disallowed d_d, so it gets simplified to t
-  
+
 
 wada>d>aa#        wada>nn>aa#
- wada>t>aa#        wada>d>aan#
+wada>t>aa#        wada>d>aan#
 wada>d>aa#        wada>t>aan#
- wada>t>aa#
+wada>t>aa#
 
 wataa                        wadannaa
- wadataa                        wadataan
+wadataa                        wadataan
 wataa                        wataan
- wadataa
+wadataa
 
 
 fura>d>aa#        fura>nn>aa#
- fura>t>aa#        fura>d>aan#
+fura>t>aa#        fura>d>aan#
 fura>d>aa#        fura>t>aan#
- fura>t>aa#
+fura>t>aa#
 
 furtaa                        furannaa
- furataa                        furataan
+furataa                        furataan
 furtaa                        furtaan
- furataa
+furataa
 
 Also another type: TODO: merge
 
@@ -427,7 +427,7 @@ Note: bt / obd
 **V3B: otherwise**  
 
 
- General Rules
+General Rules
 
 **Vowel reduction VVV -> VV**  
 
@@ -465,3 +465,5 @@ Note: bt / obd
 
 * examples:*
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-som/blob/main/../src/fst/phonology.twolc)</small>

@@ -511,3 +511,5 @@ These lexica are dummy lexical to make the source compile, they contain only #.
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/root.lexc)</small>

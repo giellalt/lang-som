@@ -290,3 +290,5 @@ inflected in all tenses, but has long and short forms.
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/irregularverbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/irregularverbs.lexc)</small>

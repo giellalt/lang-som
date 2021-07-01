@@ -160,3 +160,5 @@ Ex.)
 *guri # Odd-syllable test examples:*
 * *guri:* `guri+N+Masc+Sg+Indef+Nom`
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/nouns.lexc)</small>

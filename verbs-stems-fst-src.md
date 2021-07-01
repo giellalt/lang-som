@@ -14,3 +14,5 @@ and number, and also gender.
 
 
 
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/verbs.lexc)</small>
