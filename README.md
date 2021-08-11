@@ -3,7 +3,7 @@ The Somali morphology and tools
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/giellalt/lang-som)](https://github.com/giellalt/lang-som/issues)
 [![Build Status](https://github.com/giellalt/lang-som/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-som/actions)
-[![License](https://img.shields.io/github/license/giellalt/lang-som)](https://raw.githubusercontent.com/giellalt/lang-som/main/LICENSE)
+[![License](https://img.shields.io/github/license/giellalt/lang-som)](https://github.com/giellalt/lang-som/blob/main/LICENSE)
 
 This repository contains finite state source files for the Somali language,
 for building morphological analysers, proofing tools
