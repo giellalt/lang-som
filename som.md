@@ -607,6 +607,1504 @@ These were the set types.
 
 * * *
 <small>This (part of) documentation was generated from [../src/cg3/functions.cg3](http://github.com/giellalt/lang-som/blob/main/../src/cg3/functions.cg3)</small>
+# Somali morphological analyser
+
+INTRODUCTION TO THE MORPHOLOGICAL ANALYSER OF SOMALI.
+
+
+# Multichar_Symbolsdefinitions definitions
+
+## Analysis symbols
+
+The morphological analyses of Somali wordforms are presented
+in this system in terms of the following symbols.
+(It is highly suggested to follow existing standards when adding new tags).
+
+The parts-of-speech are:
+
+ * +N	  
+ * +V	  
+ * +A	  
+ * +Adp      
+ * +Q	  
+ * +Pr	  
+ * +Adv      
+ * +CC	  
+ * +CS	  
+ * +Interj   
+ * +Pron     
+ * +Num      
+
+Fusional adpositions
+
+ *  +Adp/u	    Fusional ú
+ *  +Adp/ka    Fusional ká
+ *  +Adp/la    Fusional lá
+ *  +Adp/ku    Fusional kú
+
+Object pronouns in adpositional+pronoun
+
+ *  +1SgObj/i      E.x.: la + i + lá  -> laylá
+ *  +2SgObj/ku     E.x.: la + ku + lá -> lagulá
+
+Focus
+
+ * +Foc/L   Focus markers **baa** and **ayaa**
+ * +Foc/R   Focus marker **waxaa**
+
+The parts of speech are further split up into:
+
+ * +Interr             
+ * +Interr/ma          
+ * +Attr        
+ * +Short        
+ * +Cmp        
+ * +Der/sho        
+ * +Pfx        
+ * +PP        
+ * +Sep        
+ * +Com		      
+ * +Appos        
+ * +Impers        
+ * +Inch				      
+
+ *  +Recit        
+ * +Restr						      
+
+ *  +Pers	      
+ *  +Dem	      
+ *  +Coll	      
+ *  +Mass	      
+ *  +Acr	      
+ *  +Abstr	      
+ *  +Abbr        
+ *  +Prop        
+
+
+Verb and noun declensions for the analysers that want to know about that
+NOTE: We probably do not want to thag these, this is morphological and
+not morphosyntactic info. t.
+
+ * +Decl/1 				      
+ * +Decl/2 				      
+ * +Decl/2A				      
+ * +Decl/2B    
+ * +Decl/3 +Decl/3A +Decl/3B    
+ * +Decl/4 				      
+ * +Decl/5				      
+ * +Decl/6 				      
+ * +Decl/7				      
+
+The Usage extents are marked using the following tags:
+
+ *  +Err/Orth				      
+ *  +Use/-Spell				      
+ *  +Use/-Spell				      
+ *  +Use/Circ				      
+ *  +Use/CircN				      
+ *  +Err/Lex				      
+ *  +Use/Marg				      
+ *  +Use/NG				      
+ *  +Use/Ped				      
+ *  +Use/SpellNoSugg+Prog				      
+ *  +Err/Orth				      
+
+The nominals are inflected in the following case, number
+
+
+ * +Sg				      
+ * +Pl				      
+
+ * +Nom				      
+ * +Abs				      
+ * +Gen				      
+
+ * +Indef				      
+ * +Def				      
+
+
+Nominals also are inflected for gender
+
+ *  +Masc				      
+ *  +Fem				      
+
+Nominal marked for gender undergo gender polarity changes in plural.
+We want to mark +Masc and +Fem, such that disambiguation is easier,
+but knowing the gender of the lemma since it is not predictable from
+a given plural form is a good thing.
+
+
+ *  +M→M				      
+ *  +M→F				      
+ *  +F→M				      
+ *  +F→F				      
+
+Nominals also have affixed demonstratives
+
+ *  +Prox       -0
+ *  +Dist       -ii
+ *  +Near       -aas / -aasi
+ *  +Far        -eer / -eeri
+ *  +Farther    -oo / -ooyi
+ *  +Close      -an / -anu / -ani
+
+Are these in use?
+
+ *  +Adc            
+ *  +Apr            
+ *  +Prl            
+ *  +Apr            
+ *  +Cns            
+ *  +Ord            
+
+The possession is marked as such:
+
+ *  +PxSg1          
+ *  +PxSg2          
+ *  +PxSg3F         
+ *  +PxSg3M         
+
+ *  +PxPl1          
+ *  +PxPl1Incl      
+ *  +PxPl1Excl      
+ *  +PxPl2          
+ *  +PxPl3          
+
+The comparative forms are:
+
+ *  +Comp	   
+ *  +Superl   
+
+Numerals are classified under:
+
+ *  +Attr   
+ *  +Card   
+ *  +Ord    
+
+Verb moods are:
+
+ *  +Ind     
+ *  +Opt     
+ *  +Imprt   
+ *  +Neg     
+ *  +Imper   
+
+Verb tenses
+
+ *  +Past   
+ *  +Pres   
+
+Verb aspects are:
+
+ *  +Prog   
+
+Verb personal forms are (NB: no inclusive/exclusive):
+
+ * +1Sg    
+ * +2Sg    
+ * +3Sg    
+ * +3SgM   
+ * +3SgF   
+ * +1Pl    
+ * +2Pl    
+ * +3Pl    
+
+Verbs also mark some non-agreement syntactic information
+
+ *  +Red  occurs often with subjects that are focused
+ *  +Rel  the verb is within a relative clause, and is also case marked.
+
+Other verb forms are
+
+
+ * +Inf	    
+ * +Ger	    
+ * +ConNeg	    
+ * +ConNegII   
+ * +Neg	    
+ * +ImprtII    
+ * +PrsPrc	    
+ * +PrfPrc	    
+ * +Sup	    
+ * +VGen	    
+ * +VAbess	    
+
+Abbreviated words are classified with:
+
+ *  +ABBR   
+* +Symbol© = independent symbols in the text stream, like £, €, ©
+ *  +ACR   
+
+Special symbols are classified with:
+
+ * +CLB    
+ * +PUNCT   
+ * +LEFT    
+ * +RIGHT   
+
+The verbs are syntactically split according to transitivity:
+
+ * +TV   
+ * +IV   
+ * +DV   
+
+Special multiword units are analysed with:
+
+ *  +Multi   
+
+Non-dictionary words can be recognised with:
+
+ *  +Guess   
+ *  ^GUESSNOUNROOT   
+
+Question and Focus particles:
+
+ *  +Qst   
+ *  +Foc  
+
+Semantics are classified with
+
+ *  +Sem/Plc   
+
+Derivations are classified under the morphophonetic form of the suffix, the
+source and target part-of-speech.
+
+ *  +V→N 	    
+ *  +V→V 	    
+ *  +V→A	    
+ *  +Der/xxx   
+
+ *  +Incl 	    
+ *  +Excl	    
+
+Syntaxy stuff, don't want to use +Acc, because this isn't relevant in nouns
+
+ *  +Subj   
+ *  +Sem/Obj  
+
+Nominal MSP
+
+ *  +Rel  
+
+Derivation
+
+ *  +Der/A  
+ *  +Der/V  
+ *  +Der/N  
+
+Clitics
+
+ *  +Clit/ba  
+ *  +Clit/se  
+ *  +Clit/na  
+ *  +Clit/oo  
+
+ *  +Clit/CS  
+ *  +Clit/Without  
+
+Style
+
+ *  +Use/NG  
+
+ *  +Sty   
+ *  +Sty/TODO  
+ *  +Sty/i  
+ *  +Sty/D  
+ *  +Sty/R  
+
+ *  +TODO  
+
+## Morphophonology
+
+
+To represent phonologic variations in word forms we use the following
+symbols in the lexicon files:
+
+ * {N}    For tagging certain twolc rules as nominal-only
+
+Going to try to replace these with flag diacritics if possible.
+
+And following triggers to control variation
+
+
+ * {#} # -      
+
+TODO: no need for , but needs to be removed in all files
+
+ *  {m}     in nouns: for marking m~n alternations
+ *  {mm}    in nouns: rare instance of mm ~ n
+ *  {C2}    in nouns: consonant reduplication in noun declension 4. (yaab ~ yaabab)
+
+ *  {X}     in nouns: insertion of some kind in noun definiteness. TODO: twolc rule no longer exists?
+ *  {ae}    in verbs: umlaut of a~i in some verb stems (seems restricted to specific lexemes, not productive)
+ *  {e}     in nouns: -e- variation in declension 7 (waraabe ~ waraabaha), not 100% predictable
+ *  {-e}    in nouns: delete final -e, often used in conjunction with {a}, possible room for cleaning up.
+ *  {a}     in verbs: Mostly V3B: has alternation between o ~ a. (sigo ~ sigaday)
+ *  {-V}    in verbs: deletion of specific vowel, used only in affixes, to make stems prettier? room for cleaning
+ *  {-I}    in verbs: -i- deletions in V3A and -san adjectives
+ *  {-a}    used specifically in -sho derivations. TODO: change to rule with » ?
+
+
+ *  {E}     part of cliticized ee (CS+Appos)
+
+ *  {y}     in verbs: -y- deletion in certain parts of V2
+
+Tone
+
+ *  ´´     
+
+## Symbols that need to be escaped on the lower side (towards twolc):
+* **»7»**:  Literal »
+* **«7«**:  Literal «
+```
+  %[%>%]  - Literal >
+  %[%<%]  - Literal <
+```
+
+## Flag diacritics
+We have manually optimised the structure of our lexicon using following
+flag diacritics to restrict morhpological combinatorics - only allow compounds
+with verbs if the verb is further derived into a noun again:
+|  @P.NeedNoun.ON@nominalised | (Dis)allow compounds with verbs unless nominalised
+|  @D.NeedNoun.ON@nominalised | (Dis)allow compounds with verbs unless nominalised
+|  @C.NeedNoun@nominalised | (Dis)allow compounds with verbs unless nominalised
+
+For languages that allow compounding, the following flag diacritics are needed
+to control position-based compounding restrictions for nominals. Their use is
+handled automatically if combined with +CmpN/xxx tags. If not used, they will
+do no harm.
+|  @P.CmpFrst.FALSE@first | Require that words tagged as such only appear first
+|  @D.CmpPref.TRUE@ENDLEX | Block such words from entering ENDLEX
+|  @P.CmpPref.FALSE@compounds | Block these words from making further compounds
+|  @D.CmpLast.TRUE@R | Block such words from entering R
+|  @D.CmpNone.TRUE@compounding | Combines with the next tag to prohibit compounding
+|  @U.CmpNone.FALSE@compounding | Combines with the prev tag to prohibit compounding
+|  @P.CmpOnly.TRUE@R | Sets a flag to indicate that the word has passed R
+|  @D.CmpOnly.FALSE@root. | Disallow words coming directly from root.
+
+Use the following flag diacritics to control downcasing of derived proper
+nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
+these flags. There exists a ready-made regex that will do the actual down-casing
+given the proper use of these flags.
+|  @U.Cap.Obl@deatnulasj. | Allowing downcasing of derived names: deatnulasj.
+|  @U.Cap.Opt@deatnulasj. | Allowing downcasing of derived names: deatnulasj.
+
+ * @P.VCLASS.V1@  @R.VCLASS.V1@				     
+ * @P.VCLASS.V1ow@  @R.VCLASS.V1ow@			     
+ * @P.VCLASS.V1ow2@  @R.VCLASS.V1ow2@			     
+
+ * @P.VCLASS.V2A@ @R.VCLASS.V2A@				     
+ * @P.VCLASS.V2B@ @R.VCLASS.V2B@				     
+ * @P.VCLASS.V3A@ @R.VCLASS.V3A@				     
+ * @P.VCLASS.V3B@ @R.VCLASS.V3B@				     
+ * @P.VCLASS.V3B_ADel@ @R.VCLASS.V3B_ADel@		     
+ * @P.VCLASS.V3B_ADelPart@ @R.VCLASS.V3B_ADelPart@  
+ * @P.VCLASS.PREFIXING@						     
+
+ * @U.VCLASS.V1@ 								     
+ * @U.VCLASS.V2A@								     
+ * @U.VCLASS.V2B@								     
+ * @U.VCLASS.V3A@								     
+ * @U.VCLASS.V3B@								     
+ * @U.VCLASS.UREFIXING@						     
+
+ * @P.ATR.True@								     
+ * @R.ATR.True@								     
+
+Person flags
+
+ * @U.Pers.1Sg@      
+ * @U.Pers.2Sg@      
+ * @U.Pers.3SgM@     
+ * @U.Pers.3SgF@     
+
+ * @U.Pers.1Pl@      
+ * @U.Pers.2Pl@      
+ * @U.Pers.3Pl@      
+
+ * @P.Pers.1Sg@      
+ * @P.Pers.2Sg@      
+ * @P.Pers.3SgM@     
+ * @P.Pers.3SgF@     
+
+ * @P.Pers.1Pl@      
+ * @P.Pers.2Pl@      
+ * @P.Pers.3Pl@      
+
+ * @R.Pers.1Sg@      
+ * @R.Pers.2Sg@      
+ * @R.Pers.3SgM@     
+ * @R.Pers.3SgF@     
+
+ * @R.Pers.1Pl@      
+ * @R.Pers.2Pl@      
+ * @R.Pers.3Pl@      
+
+ * @R.Gender.Masc@   
+ * @P.Gender.Masc@   
+
+ * @R.Gender.Fem@    
+ * @P.Gender.Fem@    
+
+
+
+
+
+
+
+
+
+
+
+
+
+# The continuation lexica
+
+The word forms in Somali start from the lexeme roots of basic
+word classes, or optionally from prefixes:
+
+ * LEXICON Root   
+
+ * Abbreviations   ;   
+
+ * Nouns           ;   
+ * ProperNouns     ;   
+
+ * Numerals        ;   
+
+ * Pronouns        ;   
+
+ * Verbs           ;   
+ * IrregularVerbs  ;   
+ * VerbalPrefixes  ;    Certain VP elements often get combined with the verbs in writing.
+ * Adjectives      ;    Some have verb morphology, and some view them to just be a 4th declension of verbs.
+
+ * Adverbs         ;   
+
+ * Conjunctions    ;   
+ * Subjunctions    ;   
+
+ * Adpositions     ;   
+ * Determiners     ;   
+ * Interjections   ;   
+ * Punctuation     ;   
+ * Symbols         ;   
+
+## The following are coming from som-lex.txt
+* IrregularAdjective ;
+* Prefixes  ;
+
+ * LEXICON FINAL_NG  just adds the +Use/NG tag to lower ##
+
+ * LEXICON FINAL  just adds lower ##
+
+
+
+
+These lexica are dummy lexical to make the source compile, they contain only #.
+
+
+ * LEXICON Proper   
+
+ * LEXICON Unknown_Declensions  
+
+ * LEXICON Obj_Pron  
+
+ * LEXICON SemiReducedPerson  
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/root.lexc)</small>
+# Symbol affixes
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/symbols.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/symbols.lexc)</small>Noun inflection
+The Somali nouns inflect in cases, are marked for gender and number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/nouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/nouns.lexc)</small>Adjective inflection
+The Somali language adjectives compare.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/adjectives.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/adjectives.lexc)</small>
+Irregular verbs
+
+These are the "irregular" verbs, which are mostly prefixing or copular.
+
+The copulas are mostly suffixing, and all the other verbs include person
+prefixes, and agreement on suffixes for person. Tense and mood are
+expressed with complex stem alternations that are no longer 100% productive,
+and progressive is formed from a derivational stem, with no person prefixes.
+
+NB: After adding in some additional morphological boundaries for some of the
+verbs, it should become obvious that some more simplification in amount
+of lexica is possible. Prefixing verbs often have multiple stems for
+separate tenses, and more or less get the same person prefixes in
+full and reduced paradigms. The only trick there is it requires more
+flag diacritics, to make sure that the prefix matches the suffix.
+
+TODO: omg
+
+
+
+
+ LEXICON MA  _ma_ and related inflected forms.
+
+Ah
+
+_ah_ is a verb meaning 'to exist', but can function as a copula. It is
+inflected in all tenses, but has long and short forms.
+
+ LEXICON Ah  Inflections in tense.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/irregularverbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/irregularverbs.lexc)</small>Verb inflection
+The Somali language verbs inflect in persons.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Full            Reduced
+1Sg    A               A
+2Sg    B               A
+3SgM   A               A
+3SgF   B               B
+1Pl    C               C
+2Pl    D               A
+3Pl    E               A
+
+
+
+Present         Past
+1Sg    keenaa          keenay
+2Sg    keentaa         keentay
+3SgM   keenaa          keenay
+3SgF   keentaa         keentay
+1Pl    keennaa         keennay
+2Pl    keentaan        keenteen
+3Pl    keenaan         keenaan
+
+
+
+Present         Past
+1Sg    keénayaa        keénayay
+2Sg    keénaysaa       keénaysay
+3SgM   keénayaa        keénayay
+3SgF   keénaysaa       keénaysay
+1Pl    keénaynaa       keénaynay
+2Pl    keénaysaan      keénayseen
+3Pl    keénayaan       keénayeen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Apply post-root tones, and other root triggers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/verbs.lexc)</small>Proper noun inflection
+The Somali language proper nouns inflect in the same cases as regular
+nouns, but with a colon (':') as separator.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/propernouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/propernouns.lexc)</small>
 # The Somali morphophonological/twolc rules file 
 
 
@@ -1108,7 +2606,13 @@ The Somali VH morphophonological file !
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/phonology-vh.twolc](http://github.com/giellalt/lang-som/blob/main/../src/fst/phonology-vh.twolc)</small>Nouns
+<small>This (part of) documentation was generated from [../src/fst/phonology-vh.twolc](http://github.com/giellalt/lang-som/blob/main/../src/fst/phonology-vh.twolc)</small>Prefixes
+Prefixes in the Somali language are bound to beginning of other words.
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/prefixes.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/prefixes.lexc)</small>Nouns
 
 Nouns in Somali have separate paradigms depending on
 morphophonological stuff, but are split up into subgroups which correspond
@@ -1271,7 +2775,105 @@ Ex.)
 * *guri:* `guri+N+Masc+Sg+Indef+Nom`
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/nouns.lexc)</small>Numerals
+<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/nouns.lexc)</small>Adjectives
+Adjectives in the Somali language describe things.
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/adjectives.lexc)</small>Pronouns
+Pronouns in the Somali language are references to things.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/pronouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/pronouns.lexc)</small>Verbs
+Verbs in Somali language are actions, and also states. They agree in person
+and number, and also gender.
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/verbs.lexc)</small>Numerals
 Numerals in the Somali language are numbers.
 
 
@@ -1404,111 +3006,7 @@ Long form pronouns and adpositions, and CS
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/adpositions.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/adpositions.lexc)</small>Adjectives
-Adjectives in the Somali language describe things.
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/adjectives.lexc)</small>Prefixes
-Prefixes in the Somali language are bound to beginning of other words.
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/prefixes.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/prefixes.lexc)</small>Pronouns
-Pronouns in the Somali language are references to things.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/pronouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/pronouns.lexc)</small>Verbs
-Verbs in Somali language are actions, and also states. They agree in person
-and number, and also gender.
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/verbs.lexc)</small>
+<small>This (part of) documentation was generated from [../src/fst/stems/adpositions.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/adpositions.lexc)</small>
 
 
 
@@ -1549,1504 +3047,6 @@ Suuriya placetag "Syrian" ; Suuriyihii
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/stems/propernouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/propernouns.lexc)</small>
-# Somali morphological analyser
-
-INTRODUCTION TO THE MORPHOLOGICAL ANALYSER OF SOMALI.
-
-
- # Multichar_Symbols definitions
-
-## Analysis symbols
-
-The morphological analyses of Somali wordforms are presented
-in this system in terms of the following symbols.
-(It is highly suggested to follow existing standards when adding new tags).
-
-The parts-of-speech are:
-
- * +N	  
- * +V	  
- * +A	  
- * +Adp      
- * +Q	  
- * +Pr	  
- * +Adv      
- * +CC	  
- * +CS	  
- * +Interj   
- * +Pron     
- * +Num      
-
-Fusional adpositions
-
- *  +Adp/u	    Fusional ú
- *  +Adp/ka    Fusional ká
- *  +Adp/la    Fusional lá
- *  +Adp/ku    Fusional kú
-
-Object pronouns in adpositional+pronoun
-
- *  +1SgObj/i      E.x.: la + i + lá  -> laylá
- *  +2SgObj/ku     E.x.: la + ku + lá -> lagulá
-
-Focus
-
- * +Foc/L   Focus markers **baa** and **ayaa**
- * +Foc/R   Focus marker **waxaa**
-
-The parts of speech are further split up into:
-
- * +Interr             
- * +Interr/ma          
- * +Attr        
- * +Short        
- * +Cmp        
- * +Der/sho        
- * +Pfx        
- * +PP        
- * +Sep        
- * +Com		      
- * +Appos        
- * +Impers        
- * +Inch				      
-
- *  +Recit        
- * +Restr						      
-
- *  +Pers	      
- *  +Dem	      
- *  +Coll	      
- *  +Mass	      
- *  +Acr	      
- *  +Abstr	      
- *  +Abbr        
- *  +Prop        
-
-
-Verb and noun declensions for the analysers that want to know about that
-NOTE: We probably do not want to thag these, this is morphological and
-not morphosyntactic info. t.
-
- * +Decl/1 				      
- * +Decl/2 				      
- * +Decl/2A				      
- * +Decl/2B    
- * +Decl/3 +Decl/3A +Decl/3B    
- * +Decl/4 				      
- * +Decl/5				      
- * +Decl/6 				      
- * +Decl/7				      
-
-The Usage extents are marked using the following tags:
-
- *  +Err/Orth				      
- *  +Use/-Spell				      
- *  +Use/-Spell				      
- *  +Use/Circ				      
- *  +Use/CircN				      
- *  +Err/Lex				      
- *  +Use/Marg				      
- *  +Use/NG				      
- *  +Use/Ped				      
- *  +Use/SpellNoSugg+Prog				      
- *  +Err/Orth				      
-
-The nominals are inflected in the following case, number
-
-
- * +Sg				      
- * +Pl				      
-
- * +Nom				      
- * +Abs				      
- * +Gen				      
-
- * +Indef				      
- * +Def				      
-
-
-Nominals also are inflected for gender
-
- *  +Masc				      
- *  +Fem				      
-
-Nominal marked for gender undergo gender polarity changes in plural.
-We want to mark +Masc and +Fem, such that disambiguation is easier,
-but knowing the gender of the lemma since it is not predictable from
-a given plural form is a good thing.
-
-
- *  +M→M				      
- *  +M→F				      
- *  +F→M				      
- *  +F→F				      
-
-Nominals also have affixed demonstratives
-
- *  +Prox       -0
- *  +Dist       -ii
- *  +Near       -aas / -aasi
- *  +Far        -eer / -eeri
- *  +Farther    -oo / -ooyi
- *  +Close      -an / -anu / -ani
-
-Are these in use?
-
- *  +Adc            
- *  +Apr            
- *  +Prl            
- *  +Apr            
- *  +Cns            
- *  +Ord            
-
-The possession is marked as such:
-
- *  +PxSg1          
- *  +PxSg2          
- *  +PxSg3F         
- *  +PxSg3M         
-
- *  +PxPl1          
- *  +PxPl1Incl      
- *  +PxPl1Excl      
- *  +PxPl2          
- *  +PxPl3          
-
-The comparative forms are:
-
- *  +Comp	   
- *  +Superl   
-
-Numerals are classified under:
-
- *  +Attr   
- *  +Card   
- *  +Ord    
-
-Verb moods are:
-
- *  +Ind     
- *  +Opt     
- *  +Imprt   
- *  +Neg     
- *  +Imper   
-
-Verb tenses
-
- *  +Past   
- *  +Pres   
-
-Verb aspects are:
-
- *  +Prog   
-
-Verb personal forms are (NB: no inclusive/exclusive):
-
- * +1Sg    
- * +2Sg    
- * +3Sg    
- * +3SgM   
- * +3SgF   
- * +1Pl    
- * +2Pl    
- * +3Pl    
-
-Verbs also mark some non-agreement syntactic information
-
- *  +Red  occurs often with subjects that are focused
- *  +Rel  the verb is within a relative clause, and is also case marked.
-
-Other verb forms are
-
-
- * +Inf	    
- * +Ger	    
- * +ConNeg	    
- * +ConNegII   
- * +Neg	    
- * +ImprtII    
- * +PrsPrc	    
- * +PrfPrc	    
- * +Sup	    
- * +VGen	    
- * +VAbess	    
-
-Abbreviated words are classified with:
-
- *  +ABBR   
- * +Symbol = independent symbols in the text stream, like £, €, ©
- *  +ACR   
-
-Special symbols are classified with:
-
- * +CLB    
- * +PUNCT   
- * +LEFT    
- * +RIGHT   
-
-The verbs are syntactically split according to transitivity:
-
- * +TV   
- * +IV   
- * +DV   
-
-Special multiword units are analysed with:
-
- *  +Multi   
-
-Non-dictionary words can be recognised with:
-
- *  +Guess   
- *  ^GUESSNOUNROOT   
-
-Question and Focus particles:
-
- *  +Qst   
- *  +Foc  
-
-Semantics are classified with
-
- *  +Sem/Plc   
-
-Derivations are classified under the morphophonetic form of the suffix, the
-source and target part-of-speech.
-
- *  +V→N 	    
- *  +V→V 	    
- *  +V→A	    
- *  +Der/xxx   
-
- *  +Incl 	    
- *  +Excl	    
-
-Syntaxy stuff, don't want to use +Acc, because this isn't relevant in nouns
-
- *  +Subj   
- *  +Sem/Obj  
-
-Nominal MSP
-
- *  +Rel  
-
-Derivation
-
- *  +Der/A  
- *  +Der/V  
- *  +Der/N  
-
-Clitics
-
- *  +Clit/ba  
- *  +Clit/se  
- *  +Clit/na  
- *  +Clit/oo  
-
- *  +Clit/CS  
- *  +Clit/Without  
-
-Style
-
- *  +Use/NG  
-
- *  +Sty   
- *  +Sty/TODO  
- *  +Sty/i  
- *  +Sty/D  
- *  +Sty/R  
-
- *  +TODO  
-
-## Morphophonology
-
-
-To represent phonologic variations in word forms we use the following
-symbols in the lexicon files:
-
- * {N}    For tagging certain twolc rules as nominal-only
-
-Going to try to replace these with flag diacritics if possible.
-
-And following triggers to control variation
-
-
- * {#} # -      
-
-TODO: no need for , but needs to be removed in all files
-
- *  {m}     in nouns: for marking m~n alternations
- *  {mm}    in nouns: rare instance of mm ~ n
- *  {C2}    in nouns: consonant reduplication in noun declension 4. (yaab ~ yaabab)
-
- *  {X}     in nouns: insertion of some kind in noun definiteness. TODO: twolc rule no longer exists?
- *  {ae}    in verbs: umlaut of a~i in some verb stems (seems restricted to specific lexemes, not productive)
- *  {e}     in nouns: -e- variation in declension 7 (waraabe ~ waraabaha), not 100% predictable
- *  {-e}    in nouns: delete final -e, often used in conjunction with {a}, possible room for cleaning up.
- *  {a}     in verbs: Mostly V3B: has alternation between o ~ a. (sigo ~ sigaday)
- *  {-V}    in verbs: deletion of specific vowel, used only in affixes, to make stems prettier? room for cleaning
- *  {-I}    in verbs: -i- deletions in V3A and -san adjectives
- *  {-a}    used specifically in -sho derivations. TODO: change to rule with » ?
-
-
- *  {E}     part of cliticized ee (CS+Appos)
-
- *  {y}     in verbs: -y- deletion in certain parts of V2
-
-Tone
-
- *  ´´     
-
-## Symbols that need to be escaped on the lower side (towards twolc):
- * **»7**:  Literal »
- * **«7**:  Literal «
-```
-  %[%>%]  - Literal >
-  %[%<%]  - Literal <
-```
-
-## Flag diacritics
-We have manually optimised the structure of our lexicon using following
-flag diacritics to restrict morhpological combinatorics - only allow compounds
-with verbs if the verb is further derived into a noun again:
- |  @P.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
- |  @D.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
- |  @C.NeedNoun@ | (Dis)allow compounds with verbs unless nominalised
-
-For languages that allow compounding, the following flag diacritics are needed
-to control position-based compounding restrictions for nominals. Their use is
-handled automatically if combined with +CmpN/xxx tags. If not used, they will
-do no harm.
- |  @P.CmpFrst.FALSE@ | Require that words tagged as such only appear first
- |  @D.CmpPref.TRUE@ | Block such words from entering ENDLEX
- |  @P.CmpPref.FALSE@ | Block these words from making further compounds
- |  @D.CmpLast.TRUE@ | Block such words from entering R
- |  @D.CmpNone.TRUE@ | Combines with the next tag to prohibit compounding
- |  @U.CmpNone.FALSE@ | Combines with the prev tag to prohibit compounding
- |  @P.CmpOnly.TRUE@ | Sets a flag to indicate that the word has passed R
- |  @D.CmpOnly.FALSE@ | Disallow words coming directly from root.
-
-Use the following flag diacritics to control downcasing of derived proper
-nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
-these flags. There exists a ready-made regex that will do the actual down-casing
-given the proper use of these flags.
- |  @U.Cap.Obl@ | Allowing downcasing of derived names: deatnulasj.
- |  @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
-
- * @P.VCLASS.V1@  @R.VCLASS.V1@				     
- * @P.VCLASS.V1ow@  @R.VCLASS.V1ow@			     
- * @P.VCLASS.V1ow2@  @R.VCLASS.V1ow2@			     
-
- * @P.VCLASS.V2A@ @R.VCLASS.V2A@				     
- * @P.VCLASS.V2B@ @R.VCLASS.V2B@				     
- * @P.VCLASS.V3A@ @R.VCLASS.V3A@				     
- * @P.VCLASS.V3B@ @R.VCLASS.V3B@				     
- * @P.VCLASS.V3B_ADel@ @R.VCLASS.V3B_ADel@		     
- * @P.VCLASS.V3B_ADelPart@ @R.VCLASS.V3B_ADelPart@  
- * @P.VCLASS.PREFIXING@						     
-
- * @U.VCLASS.V1@ 								     
- * @U.VCLASS.V2A@								     
- * @U.VCLASS.V2B@								     
- * @U.VCLASS.V3A@								     
- * @U.VCLASS.V3B@								     
- * @U.VCLASS.UREFIXING@						     
-
- * @P.ATR.True@								     
- * @R.ATR.True@								     
-
-Person flags
-
- * @U.Pers.1Sg@      
- * @U.Pers.2Sg@      
- * @U.Pers.3SgM@     
- * @U.Pers.3SgF@     
-
- * @U.Pers.1Pl@      
- * @U.Pers.2Pl@      
- * @U.Pers.3Pl@      
-
- * @P.Pers.1Sg@      
- * @P.Pers.2Sg@      
- * @P.Pers.3SgM@     
- * @P.Pers.3SgF@     
-
- * @P.Pers.1Pl@      
- * @P.Pers.2Pl@      
- * @P.Pers.3Pl@      
-
- * @R.Pers.1Sg@      
- * @R.Pers.2Sg@      
- * @R.Pers.3SgM@     
- * @R.Pers.3SgF@     
-
- * @R.Pers.1Pl@      
- * @R.Pers.2Pl@      
- * @R.Pers.3Pl@      
-
- * @R.Gender.Masc@   
- * @P.Gender.Masc@   
-
- * @R.Gender.Fem@    
- * @P.Gender.Fem@    
-
-
-
-
-
-
-
-
-
-
-
-
-
-# The continuation lexica
-
-The word forms in Somali start from the lexeme roots of basic
-word classes, or optionally from prefixes:
-
- * LEXICON Root   
-
- * Abbreviations   ;   
-
- * Nouns           ;   
- * ProperNouns     ;   
-
- * Numerals        ;   
-
- * Pronouns        ;   
-
- * Verbs           ;   
- * IrregularVerbs  ;   
- * VerbalPrefixes  ;    Certain VP elements often get combined with the verbs in writing.
- * Adjectives      ;    Some have verb morphology, and some view them to just be a 4th declension of verbs.
-
- * Adverbs         ;   
-
- * Conjunctions    ;   
- * Subjunctions    ;   
-
- * Adpositions     ;   
- * Determiners     ;   
- * Interjections   ;   
- * Punctuation     ;   
- * Symbols         ;   
-
-## The following are coming from som-lex.txt
-* IrregularAdjective ;
-* Prefixes  ;
-
- * LEXICON FINAL_NG  just adds the +Use/NG tag to lower ##
-
- * LEXICON FINAL  just adds lower ##
-
-
-
-
-These lexica are dummy lexical to make the source compile, they contain only #.
-
-
- * LEXICON Proper   
-
- * LEXICON Unknown_Declensions  
-
- * LEXICON Obj_Pron  
-
- * LEXICON SemiReducedPerson  
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/root.lexc)</small>
-# Symbol affixes
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/symbols.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/symbols.lexc)</small>Noun inflection
-The Somali nouns inflect in cases, are marked for gender and number.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/nouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/nouns.lexc)</small>Adjective inflection
-The Somali language adjectives compare.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/adjectives.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/adjectives.lexc)</small>Verb inflection
-The Somali language verbs inflect in persons.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Full            Reduced
-1Sg    A               A
-2Sg    B               A
-3SgM   A               A
-3SgF   B               B
-1Pl    C               C
-2Pl    D               A
-3Pl    E               A
-
-
-
-Present         Past
-1Sg    keenaa          keenay
-2Sg    keentaa         keentay
-3SgM   keenaa          keenay
-3SgF   keentaa         keentay
-1Pl    keennaa         keennay
-2Pl    keentaan        keenteen
-3Pl    keenaan         keenaan
-
-
-
-Present         Past
-1Sg    keénayaa        keénayay
-2Sg    keénaysaa       keénaysay
-3SgM   keénayaa        keénayay
-3SgF   keénaysaa       keénaysay
-1Pl    keénaynaa       keénaynay
-2Pl    keénaysaan      keénayseen
-3Pl    keénayaan       keénayeen
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Apply post-root tones, and other root triggers
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/verbs.lexc)</small>
-Irregular verbs
-
-These are the "irregular" verbs, which are mostly prefixing or copular.
-
-The copulas are mostly suffixing, and all the other verbs include person
-prefixes, and agreement on suffixes for person. Tense and mood are
-expressed with complex stem alternations that are no longer 100% productive,
-and progressive is formed from a derivational stem, with no person prefixes.
-
-NB: After adding in some additional morphological boundaries for some of the
-verbs, it should become obvious that some more simplification in amount
-of lexica is possible. Prefixing verbs often have multiple stems for
-separate tenses, and more or less get the same person prefixes in
-full and reduced paradigms. The only trick there is it requires more
-flag diacritics, to make sure that the prefix matches the suffix.
-
-TODO: omg
-
-
-
-
- LEXICON MA  _ma_ and related inflected forms.
-
-Ah
-
-_ah_ is a verb meaning 'to exist', but can function as a copula. It is
-inflected in all tenses, but has long and short forms.
-
- LEXICON Ah  Inflections in tense.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/irregularverbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/irregularverbs.lexc)</small>Proper noun inflection
-The Somali language proper nouns inflect in the same cases as regular
-nouns, but with a colon (':') as separator.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/propernouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/propernouns.lexc)</small>
 
 
 We describe here how abbreviations are in Somali are read out, e.g.
