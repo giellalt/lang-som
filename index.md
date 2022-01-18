@@ -5,9 +5,14 @@
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-som)](https://github.com/giellalt/lang-som/issues)
 [![Build status](https://github.com/giellalt/lang-som/workflows/Speller%20CI+CD/badge.svg)](https://github.com/giellalt/lang-som/actions)
 
-This page documents the work on the [Somali language model](http://github.com/giellalt/lang-som). 
+This page documents the work on the [Somali language model](http://github.com/giellalt/lang-som). With 15800 stems and a basic morphological component, 
+It is large enough to be useful, but has yet to
+be put into use in practical projects. It was
+written by Ryan Johnson.
+
 
 # Project documentation
+
 
 * Add links to project specific documentation here as needed. Keep the documentation in the `docs/` directory.
 

@@ -6,7 +6,7 @@
 Real Prepositions
 These are the few actual prepositions that exist in Somali.
 
- * LEXICON RealPrepositions  
+* LEXICON RealPrepositions  
 
 Locative adpositions
 These are a part of the verb complex, mark other kinds of locations than the

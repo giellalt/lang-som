@@ -16,7 +16,7 @@ Irregular nouns
 _il_ and _si_ are both female in singular, and have typical morphology there
 but, have varying irregular masculine plural forms.
 
- * LEXICON IrregNouns  
+* LEXICON IrregNouns  
 
 
 *il # Irregular tests examples:*
@@ -152,7 +152,7 @@ Ex.)
 * axmaq -> axmaqiin
 * banki -> bunuug
 
- * LEXICON ArabicLoans  
+* LEXICON ArabicLoans  
 
 
 

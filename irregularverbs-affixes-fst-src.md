@@ -20,14 +20,14 @@ TODO: omg
 
 
 
- LEXICON MA  _ma_ and related inflected forms.
+LEXICON MA  _ma_ and related inflected forms.
 
 Ah
 
 _ah_ is a verb meaning 'to exist', but can function as a copula. It is
 inflected in all tenses, but has long and short forms.
 
- LEXICON Ah  Inflections in tense.
+LEXICON Ah  Inflections in tense.
 
 
 

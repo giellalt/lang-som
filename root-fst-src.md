@@ -4,7 +4,7 @@
 INTRODUCTION TO THE MORPHOLOGICAL ANALYSER OF SOMALI.
 
 
-# Multichar_Symbolsdefinitions definitions
+# Multichar_Symbols definitions
 
 ## Analysis symbols
 
@@ -14,111 +14,111 @@ in this system in terms of the following symbols.
 
 The parts-of-speech are:
 
- * +N	  
- * +V	  
- * +A	  
- * +Adp      
- * +Q	  
- * +Pr	  
- * +Adv      
- * +CC	  
- * +CS	  
- * +Interj   
- * +Pron     
- * +Num      
+* +N	  
+* +V	  
+* +A	  
+* +Adp      
+* +Q	  
+* +Pr	  
+* +Adv      
+* +CC	  
+* +CS	  
+* +Interj   
+* +Pron     
+* +Num      
 
 Fusional adpositions
 
- *  +Adp/u	    Fusional ú
- *  +Adp/ka    Fusional ká
- *  +Adp/la    Fusional lá
- *  +Adp/ku    Fusional kú
+*  +Adp/u	    Fusional ú
+*  +Adp/ka    Fusional ká
+*  +Adp/la    Fusional lá
+*  +Adp/ku    Fusional kú
 
 Object pronouns in adpositional+pronoun
 
- *  +1SgObj/i      E.x.: la + i + lá  -> laylá
- *  +2SgObj/ku     E.x.: la + ku + lá -> lagulá
+*  +1SgObj/i      E.x.: la + i + lá  -> laylá
+*  +2SgObj/ku     E.x.: la + ku + lá -> lagulá
 
 Focus
 
- * +Foc/L   Focus markers **baa** and **ayaa**
- * +Foc/R   Focus marker **waxaa**
+* +Foc/L   Focus markers **baa** and **ayaa**
+* +Foc/R   Focus marker **waxaa**
 
 The parts of speech are further split up into:
 
- * +Interr             
- * +Interr/ma          
- * +Attr        
- * +Short        
- * +Cmp        
- * +Der/sho        
- * +Pfx        
- * +PP        
- * +Sep        
- * +Com		      
- * +Appos        
- * +Impers        
- * +Inch				      
+* +Interr             
+* +Interr/ma          
+* +Attr        
+* +Short        
+* +Cmp        
+* +Der/sho        
+* +Pfx        
+* +PP        
+* +Sep        
+* +Com		      
+* +Appos        
+* +Impers        
+* +Inch				      
 
- *  +Recit        
- * +Restr						      
+*  +Recit        
+* +Restr						      
 
- *  +Pers	      
- *  +Dem	      
- *  +Coll	      
- *  +Mass	      
- *  +Acr	      
- *  +Abstr	      
- *  +Abbr        
- *  +Prop        
+*  +Pers	      
+*  +Dem	      
+*  +Coll	      
+*  +Mass	      
+*  +Acr	      
+*  +Abstr	      
+*  +Abbr        
+*  +Prop        
 
 
 Verb and noun declensions for the analysers that want to know about that
 NOTE: We probably do not want to thag these, this is morphological and
 not morphosyntactic info. t.
 
- * +Decl/1 				      
- * +Decl/2 				      
- * +Decl/2A				      
- * +Decl/2B    
- * +Decl/3 +Decl/3A +Decl/3B    
- * +Decl/4 				      
- * +Decl/5				      
- * +Decl/6 				      
- * +Decl/7				      
+* +Decl/1 				      
+* +Decl/2 				      
+* +Decl/2A				      
+* +Decl/2B    
+* +Decl/3 +Decl/3A +Decl/3B    
+* +Decl/4 				      
+* +Decl/5				      
+* +Decl/6 				      
+* +Decl/7				      
 
 The Usage extents are marked using the following tags:
 
- *  +Err/Orth				      
- *  +Use/-Spell				      
- *  +Use/-Spell				      
- *  +Use/Circ				      
- *  +Use/CircN				      
- *  +Err/Lex				      
- *  +Use/Marg				      
- *  +Use/NG				      
- *  +Use/Ped				      
- *  +Use/SpellNoSugg+Prog				      
- *  +Err/Orth				      
+*  +Err/Orth				      
+*  +Use/-Spell				      
+*  +Use/-Spell				      
+*  +Use/Circ				      
+*  +Use/CircN				      
+*  +Err/Lex				      
+*  +Use/Marg				      
+*  +Use/NG				      
+*  +Use/Ped				      
+*  +Use/SpellNoSugg+Prog				      
+*  +Err/Orth				      
 
 The nominals are inflected in the following case, number
 
 
- * +Sg				      
- * +Pl				      
+* +Sg				      
+* +Pl				      
 
- * +Nom				      
- * +Abs				      
- * +Gen				      
+* +Nom				      
+* +Abs				      
+* +Gen				      
 
- * +Indef				      
- * +Def				      
+* +Indef				      
+* +Def				      
 
 
 Nominals also are inflected for gender
 
- *  +Masc				      
- *  +Fem				      
+*  +Masc				      
+*  +Fem				      
 
 Nominal marked for gender undergo gender polarity changes in plural.
 We want to mark +Masc and +Fem, such that disambiguation is easier,
@@ -126,185 +126,185 @@ but knowing the gender of the lemma since it is not predictable from
 a given plural form is a good thing.
 
 
- *  +M→M				      
- *  +M→F				      
- *  +F→M				      
- *  +F→F				      
+*  +M→M				      
+*  +M→F				      
+*  +F→M				      
+*  +F→F				      
 
 Nominals also have affixed demonstratives
 
- *  +Prox       -0
- *  +Dist       -ii
- *  +Near       -aas / -aasi
- *  +Far        -eer / -eeri
- *  +Farther    -oo / -ooyi
- *  +Close      -an / -anu / -ani
+*  +Prox       -0
+*  +Dist       -ii
+*  +Near       -aas / -aasi
+*  +Far        -eer / -eeri
+*  +Farther    -oo / -ooyi
+*  +Close      -an / -anu / -ani
 
 Are these in use?
 
- *  +Adc            
- *  +Apr            
- *  +Prl            
- *  +Apr            
- *  +Cns            
- *  +Ord            
+*  +Adc            
+*  +Apr            
+*  +Prl            
+*  +Apr            
+*  +Cns            
+*  +Ord            
 
 The possession is marked as such:
 
- *  +PxSg1          
- *  +PxSg2          
- *  +PxSg3F         
- *  +PxSg3M         
+*  +PxSg1          
+*  +PxSg2          
+*  +PxSg3F         
+*  +PxSg3M         
 
- *  +PxPl1          
- *  +PxPl1Incl      
- *  +PxPl1Excl      
- *  +PxPl2          
- *  +PxPl3          
+*  +PxPl1          
+*  +PxPl1Incl      
+*  +PxPl1Excl      
+*  +PxPl2          
+*  +PxPl3          
 
 The comparative forms are:
 
- *  +Comp	   
- *  +Superl   
+*  +Comp	   
+*  +Superl   
 
 Numerals are classified under:
 
- *  +Attr   
- *  +Card   
- *  +Ord    
+*  +Attr   
+*  +Card   
+*  +Ord    
 
 Verb moods are:
 
- *  +Ind     
- *  +Opt     
- *  +Imprt   
- *  +Neg     
- *  +Imper   
+*  +Ind     
+*  +Opt     
+*  +Imprt   
+*  +Neg     
+*  +Imper   
 
 Verb tenses
 
- *  +Past   
- *  +Pres   
+*  +Past   
+*  +Pres   
 
 Verb aspects are:
 
- *  +Prog   
+*  +Prog   
 
 Verb personal forms are (NB: no inclusive/exclusive):
 
- * +1Sg    
- * +2Sg    
- * +3Sg    
- * +3SgM   
- * +3SgF   
- * +1Pl    
- * +2Pl    
- * +3Pl    
+* +1Sg    
+* +2Sg    
+* +3Sg    
+* +3SgM   
+* +3SgF   
+* +1Pl    
+* +2Pl    
+* +3Pl    
 
 Verbs also mark some non-agreement syntactic information
 
- *  +Red  occurs often with subjects that are focused
- *  +Rel  the verb is within a relative clause, and is also case marked.
+*  +Red  occurs often with subjects that are focused
+*  +Rel  the verb is within a relative clause, and is also case marked.
 
 Other verb forms are
 
 
- * +Inf	    
- * +Ger	    
- * +ConNeg	    
- * +ConNegII   
- * +Neg	    
- * +ImprtII    
- * +PrsPrc	    
- * +PrfPrc	    
- * +Sup	    
- * +VGen	    
- * +VAbess	    
+* +Inf	    
+* +Ger	    
+* +ConNeg	    
+* +ConNegII   
+* +Neg	    
+* +ImprtII    
+* +PrsPrc	    
+* +PrfPrc	    
+* +Sup	    
+* +VGen	    
+* +VAbess	    
 
 Abbreviated words are classified with:
 
- *  +ABBR   
-* +Symbol© = independent symbols in the text stream, like £, €, ©
- *  +ACR   
+*  +ABBR   
+* +Symbol = independent symbols in the text stream, like £, €, ©
+*  +ACR   
 
 Special symbols are classified with:
 
- * +CLB    
- * +PUNCT   
- * +LEFT    
- * +RIGHT   
+* +CLB    
+* +PUNCT   
+* +LEFT    
+* +RIGHT   
 
 The verbs are syntactically split according to transitivity:
 
- * +TV   
- * +IV   
- * +DV   
+* +TV   
+* +IV   
+* +DV   
 
 Special multiword units are analysed with:
 
- *  +Multi   
+*  +Multi   
 
 Non-dictionary words can be recognised with:
 
- *  +Guess   
- *  ^GUESSNOUNROOT   
+*  +Guess   
+*  ^GUESSNOUNROOT   
 
 Question and Focus particles:
 
- *  +Qst   
- *  +Foc  
+*  +Qst   
+*  +Foc  
 
 Semantics are classified with
 
- *  +Sem/Plc   
+*  +Sem/Plc   
 
 Derivations are classified under the morphophonetic form of the suffix, the
 source and target part-of-speech.
 
- *  +V→N 	    
- *  +V→V 	    
- *  +V→A	    
- *  +Der/xxx   
+*  +V→N 	    
+*  +V→V 	    
+*  +V→A	    
+*  +Der/xxx   
 
- *  +Incl 	    
- *  +Excl	    
+*  +Incl 	    
+*  +Excl	    
 
 Syntaxy stuff, don't want to use +Acc, because this isn't relevant in nouns
 
- *  +Subj   
- *  +Sem/Obj  
+*  +Subj   
+*  +Sem/Obj  
 
 Nominal MSP
 
- *  +Rel  
+*  +Rel  
 
 Derivation
 
- *  +Der/A  
- *  +Der/V  
- *  +Der/N  
+*  +Der/A  
+*  +Der/V  
+*  +Der/N  
 
 Clitics
 
- *  +Clit/ba  
- *  +Clit/se  
- *  +Clit/na  
- *  +Clit/oo  
+*  +Clit/ba  
+*  +Clit/se  
+*  +Clit/na  
+*  +Clit/oo  
 
- *  +Clit/CS  
- *  +Clit/Without  
+*  +Clit/CS  
+*  +Clit/Without  
 
 Style
 
- *  +Use/NG  
+*  +Use/NG  
 
- *  +Sty   
- *  +Sty/TODO  
- *  +Sty/i  
- *  +Sty/D  
- *  +Sty/R  
+*  +Sty   
+*  +Sty/TODO  
+*  +Sty/i  
+*  +Sty/D  
+*  +Sty/R  
 
- *  +TODO  
+*  +TODO  
 
 ## Morphophonology
 
@@ -312,131 +312,131 @@ Style
 To represent phonologic variations in word forms we use the following
 symbols in the lexicon files:
 
- * {N}    For tagging certain twolc rules as nominal-only
+* {N}    For tagging certain twolc rules as nominal-only
 
 Going to try to replace these with flag diacritics if possible.
 
 And following triggers to control variation
 
 
- * {#} # -      
+* {#} # -      
 
 TODO: no need for , but needs to be removed in all files
 
- *  {m}     in nouns: for marking m~n alternations
- *  {mm}    in nouns: rare instance of mm ~ n
- *  {C2}    in nouns: consonant reduplication in noun declension 4. (yaab ~ yaabab)
+*  {m}     in nouns: for marking m~n alternations
+*  {mm}    in nouns: rare instance of mm ~ n
+*  {C2}    in nouns: consonant reduplication in noun declension 4. (yaab ~ yaabab)
 
- *  {X}     in nouns: insertion of some kind in noun definiteness. TODO: twolc rule no longer exists?
- *  {ae}    in verbs: umlaut of a~i in some verb stems (seems restricted to specific lexemes, not productive)
- *  {e}     in nouns: -e- variation in declension 7 (waraabe ~ waraabaha), not 100% predictable
- *  {-e}    in nouns: delete final -e, often used in conjunction with {a}, possible room for cleaning up.
- *  {a}     in verbs: Mostly V3B: has alternation between o ~ a. (sigo ~ sigaday)
- *  {-V}    in verbs: deletion of specific vowel, used only in affixes, to make stems prettier? room for cleaning
- *  {-I}    in verbs: -i- deletions in V3A and -san adjectives
- *  {-a}    used specifically in -sho derivations. TODO: change to rule with » ?
+*  {X}     in nouns: insertion of some kind in noun definiteness. TODO: twolc rule no longer exists?
+*  {ae}    in verbs: umlaut of a~i in some verb stems (seems restricted to specific lexemes, not productive)
+*  {e}     in nouns: -e- variation in declension 7 (waraabe ~ waraabaha), not 100% predictable
+*  {-e}    in nouns: delete final -e, often used in conjunction with {a}, possible room for cleaning up.
+*  {a}     in verbs: Mostly V3B: has alternation between o ~ a. (sigo ~ sigaday)
+*  {-V}    in verbs: deletion of specific vowel, used only in affixes, to make stems prettier? room for cleaning
+*  {-I}    in verbs: -i- deletions in V3A and -san adjectives
+*  {-a}    used specifically in -sho derivations. TODO: change to rule with » ?
 
 
- *  {E}     part of cliticized ee (CS+Appos)
+*  {E}     part of cliticized ee (CS+Appos)
 
- *  {y}     in verbs: -y- deletion in certain parts of V2
+*  {y}     in verbs: -y- deletion in certain parts of V2
 
 Tone
 
- *  ´´     
+*  ´´     
 
 ## Symbols that need to be escaped on the lower side (towards twolc):
-* **»7»**:  Literal »
-* **«7«**:  Literal «
+* **»7**:  Literal »
+* **«7**:  Literal «
 ```
-  %[%>%]  - Literal >
-  %[%<%]  - Literal <
+ %[%>%]  - Literal >
+ %[%<%]  - Literal <
 ```
 
 ## Flag diacritics
 We have manually optimised the structure of our lexicon using following
 flag diacritics to restrict morhpological combinatorics - only allow compounds
 with verbs if the verb is further derived into a noun again:
-|  @P.NeedNoun.ON@nominalised | (Dis)allow compounds with verbs unless nominalised
-|  @D.NeedNoun.ON@nominalised | (Dis)allow compounds with verbs unless nominalised
-|  @C.NeedNoun@nominalised | (Dis)allow compounds with verbs unless nominalised
+|  @P.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
+|  @D.NeedNoun.ON@ | (Dis)allow compounds with verbs unless nominalised
+|  @C.NeedNoun@ | (Dis)allow compounds with verbs unless nominalised
 
 For languages that allow compounding, the following flag diacritics are needed
 to control position-based compounding restrictions for nominals. Their use is
 handled automatically if combined with +CmpN/xxx tags. If not used, they will
 do no harm.
-|  @P.CmpFrst.FALSE@first | Require that words tagged as such only appear first
-|  @D.CmpPref.TRUE@ENDLEX | Block such words from entering ENDLEX
-|  @P.CmpPref.FALSE@compounds | Block these words from making further compounds
-|  @D.CmpLast.TRUE@R | Block such words from entering R
-|  @D.CmpNone.TRUE@compounding | Combines with the next tag to prohibit compounding
-|  @U.CmpNone.FALSE@compounding | Combines with the prev tag to prohibit compounding
-|  @P.CmpOnly.TRUE@R | Sets a flag to indicate that the word has passed R
-|  @D.CmpOnly.FALSE@root. | Disallow words coming directly from root.
+|  @P.CmpFrst.FALSE@ | Require that words tagged as such only appear first
+|  @D.CmpPref.TRUE@ | Block such words from entering ENDLEX
+|  @P.CmpPref.FALSE@ | Block these words from making further compounds
+|  @D.CmpLast.TRUE@ | Block such words from entering R
+|  @D.CmpNone.TRUE@ | Combines with the next tag to prohibit compounding
+|  @U.CmpNone.FALSE@ | Combines with the prev tag to prohibit compounding
+|  @P.CmpOnly.TRUE@ | Sets a flag to indicate that the word has passed R
+|  @D.CmpOnly.FALSE@ | Disallow words coming directly from root.
 
 Use the following flag diacritics to control downcasing of derived proper
 nouns (e.g. Finnish Pariisi -> pariisilainen). See e.g. North Sámi for how to use
 these flags. There exists a ready-made regex that will do the actual down-casing
 given the proper use of these flags.
-|  @U.Cap.Obl@deatnulasj. | Allowing downcasing of derived names: deatnulasj.
-|  @U.Cap.Opt@deatnulasj. | Allowing downcasing of derived names: deatnulasj.
+|  @U.Cap.Obl@ | Allowing downcasing of derived names: deatnulasj.
+|  @U.Cap.Opt@ | Allowing downcasing of derived names: deatnulasj.
 
- * @P.VCLASS.V1@  @R.VCLASS.V1@				     
- * @P.VCLASS.V1ow@  @R.VCLASS.V1ow@			     
- * @P.VCLASS.V1ow2@  @R.VCLASS.V1ow2@			     
+* @P.VCLASS.V1@  @R.VCLASS.V1@				     
+* @P.VCLASS.V1ow@  @R.VCLASS.V1ow@			     
+* @P.VCLASS.V1ow2@  @R.VCLASS.V1ow2@			     
 
- * @P.VCLASS.V2A@ @R.VCLASS.V2A@				     
- * @P.VCLASS.V2B@ @R.VCLASS.V2B@				     
- * @P.VCLASS.V3A@ @R.VCLASS.V3A@				     
- * @P.VCLASS.V3B@ @R.VCLASS.V3B@				     
- * @P.VCLASS.V3B_ADel@ @R.VCLASS.V3B_ADel@		     
- * @P.VCLASS.V3B_ADelPart@ @R.VCLASS.V3B_ADelPart@  
- * @P.VCLASS.PREFIXING@						     
+* @P.VCLASS.V2A@ @R.VCLASS.V2A@				     
+* @P.VCLASS.V2B@ @R.VCLASS.V2B@				     
+* @P.VCLASS.V3A@ @R.VCLASS.V3A@				     
+* @P.VCLASS.V3B@ @R.VCLASS.V3B@				     
+* @P.VCLASS.V3B_ADel@ @R.VCLASS.V3B_ADel@		     
+* @P.VCLASS.V3B_ADelPart@ @R.VCLASS.V3B_ADelPart@  
+* @P.VCLASS.PREFIXING@						     
 
- * @U.VCLASS.V1@ 								     
- * @U.VCLASS.V2A@								     
- * @U.VCLASS.V2B@								     
- * @U.VCLASS.V3A@								     
- * @U.VCLASS.V3B@								     
- * @U.VCLASS.UREFIXING@						     
+* @U.VCLASS.V1@ 								     
+* @U.VCLASS.V2A@								     
+* @U.VCLASS.V2B@								     
+* @U.VCLASS.V3A@								     
+* @U.VCLASS.V3B@								     
+* @U.VCLASS.UREFIXING@						     
 
- * @P.ATR.True@								     
- * @R.ATR.True@								     
+* @P.ATR.True@								     
+* @R.ATR.True@								     
 
 Person flags
 
- * @U.Pers.1Sg@      
- * @U.Pers.2Sg@      
- * @U.Pers.3SgM@     
- * @U.Pers.3SgF@     
+* @U.Pers.1Sg@      
+* @U.Pers.2Sg@      
+* @U.Pers.3SgM@     
+* @U.Pers.3SgF@     
 
- * @U.Pers.1Pl@      
- * @U.Pers.2Pl@      
- * @U.Pers.3Pl@      
+* @U.Pers.1Pl@      
+* @U.Pers.2Pl@      
+* @U.Pers.3Pl@      
 
- * @P.Pers.1Sg@      
- * @P.Pers.2Sg@      
- * @P.Pers.3SgM@     
- * @P.Pers.3SgF@     
+* @P.Pers.1Sg@      
+* @P.Pers.2Sg@      
+* @P.Pers.3SgM@     
+* @P.Pers.3SgF@     
 
- * @P.Pers.1Pl@      
- * @P.Pers.2Pl@      
- * @P.Pers.3Pl@      
+* @P.Pers.1Pl@      
+* @P.Pers.2Pl@      
+* @P.Pers.3Pl@      
 
- * @R.Pers.1Sg@      
- * @R.Pers.2Sg@      
- * @R.Pers.3SgM@     
- * @R.Pers.3SgF@     
+* @R.Pers.1Sg@      
+* @R.Pers.2Sg@      
+* @R.Pers.3SgM@     
+* @R.Pers.3SgF@     
 
- * @R.Pers.1Pl@      
- * @R.Pers.2Pl@      
- * @R.Pers.3Pl@      
+* @R.Pers.1Pl@      
+* @R.Pers.2Pl@      
+* @R.Pers.3Pl@      
 
- * @R.Gender.Masc@   
- * @P.Gender.Masc@   
+* @R.Gender.Masc@   
+* @P.Gender.Masc@   
 
- * @R.Gender.Fem@    
- * @P.Gender.Fem@    
+* @R.Gender.Fem@    
+* @P.Gender.Fem@    
 
 
 
@@ -455,40 +455,40 @@ Person flags
 The word forms in Somali start from the lexeme roots of basic
 word classes, or optionally from prefixes:
 
- * LEXICON Root   
+* LEXICON Root   
 
- * Abbreviations   ;   
+* Abbreviations   ;   
 
- * Nouns           ;   
- * ProperNouns     ;   
+* Nouns           ;   
+* ProperNouns     ;   
 
- * Numerals        ;   
+* Numerals        ;   
 
- * Pronouns        ;   
+* Pronouns        ;   
 
- * Verbs           ;   
- * IrregularVerbs  ;   
- * VerbalPrefixes  ;    Certain VP elements often get combined with the verbs in writing.
- * Adjectives      ;    Some have verb morphology, and some view them to just be a 4th declension of verbs.
+* Verbs           ;   
+* IrregularVerbs  ;   
+* VerbalPrefixes  ;    Certain VP elements often get combined with the verbs in writing.
+* Adjectives      ;    Some have verb morphology, and some view them to just be a 4th declension of verbs.
 
- * Adverbs         ;   
+* Adverbs         ;   
 
- * Conjunctions    ;   
- * Subjunctions    ;   
+* Conjunctions    ;   
+* Subjunctions    ;   
 
- * Adpositions     ;   
- * Determiners     ;   
- * Interjections   ;   
- * Punctuation     ;   
- * Symbols         ;   
+* Adpositions     ;   
+* Determiners     ;   
+* Interjections   ;   
+* Punctuation     ;   
+* Symbols         ;   
 
 ## The following are coming from som-lex.txt
 * IrregularAdjective ;
 * Prefixes  ;
 
- * LEXICON FINAL_NG  just adds the +Use/NG tag to lower ##
+* LEXICON FINAL_NG  just adds the +Use/NG tag to lower ##
 
- * LEXICON FINAL  just adds lower ##
+* LEXICON FINAL  just adds lower ##
 
 
 
@@ -496,13 +496,13 @@ word classes, or optionally from prefixes:
 These lexica are dummy lexical to make the source compile, they contain only #.
 
 
- * LEXICON Proper   
+* LEXICON Proper   
 
- * LEXICON Unknown_Declensions  
+* LEXICON Unknown_Declensions  
 
- * LEXICON Obj_Pron  
+* LEXICON Obj_Pron  
 
- * LEXICON SemiReducedPerson  
+* LEXICON SemiReducedPerson  
 
 
 
