@@ -606,7 +606,41 @@ These were the set types.
 
 
 * * *
-<small>This (part of) documentation was generated from [../src/cg3/functions.cg3](http://github.com/giellalt/lang-som/blob/main/../src/cg3/functions.cg3)</small>
+<small>This (part of) documentation was generated from [../src/cg3/functions.cg3](http://github.com/giellalt/lang-som/blob/main/../src/cg3/functions.cg3)</small>=================================== !
+The Somali VH morphophonological file !
+=================================== !
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/phonology-vh.twolc](http://github.com/giellalt/lang-som/blob/main/../src/fst/phonology-vh.twolc)</small>
 # The Somali morphophonological/twolc rules file 
 
 
@@ -1074,7 +1108,1431 @@ General Rules
 * examples:*
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-som/blob/main/../src/fst/phonology.twolc)</small>
+<small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-som/blob/main/../src/fst/phonology.twolc)</small>Nouns
+
+Nouns in Somali have separate paradigms depending on
+morphophonological stuff, but are split up into subgroups which correspond
+to gender polarity groups.
+
+Note that items containing ATR should mark the ATR using <¨> before the vowel
+or at the beginning of the stem if uncertain.
+
+```
+doog:¨doog NOUN1_M/SgOnly ;
+```
+
+
+Irregular nouns
+_il_ and _si_ are both female in singular, and have typical morphology there
+but, have varying irregular masculine plural forms.
+
+* LEXICON IrregNouns  
+
+
+*il # Irregular tests examples:*
+* *il:* `il+N+Fem+Sg+Indef+Abs`
+* *isha:* `il+N+Fem+Sg+Def+Abs+Prox`
+* *indho:* `il+N+Masc+Pl+Indef+Abs`
+* *indhaha:* `il+N+Masc+Pl+Def+Abs+Prox`
+
+
+*il # Irregular tests examples:*
+* *si:* `si+N+Fem+Sg+Indef+Abs`
+* *sida:* `si+N+Fem+Sg+Def+Abs+Prox`
+* *siyaabo:* `si+N+Masc+Pl+Indef+Abs`
+* *siyaabaha:* `si+N+Masc+Pl+Def+Abs+Prox`
+
+
+Declension 1: F→M
+
+TODO: write quick overview of morphosyntax, morphophon
+-i for some nominatives. Pl is -o.
+
+Good amount of nouns with -ad, Fem derivational suffix.
+
+
+*aalad # aalad sample paradigm. examples:*
+* *aalad:* `aalad+N+Decl/1+Fem+Sg+Indef+Abs`
+* *aaladda:* `aalad+N+Decl/1+Fem+Sg+Def+Abs+Prox`
+* *aalado:* `aalad+N+Decl/1+Masc+Pl+Indef+Abs`
+* *aaladaha:* `aalad+N+Decl/1+Masc+Pl+Def+Abs+Prox`
+
+
+
+Declension 1: M, sg. only
+
+
+Declension 1: M→M, M→F
+
+
+
+Declension 1: Masc. Pl. Only
+
+
+Declension 1: Fem. Sg. Only
+
+A fair amount of abstract things, and some collective things that probably need
+to be moved to collective lexica.
+
+
+Declension 2
+
+
+Declension 2: Collective
+
+Groups of things, -ley is a common suffix. Taged with +Coll, but available
+only in singular.
+
+
+Declension 2: M→F
+-yo is plural.
+
+
+Declension 2: M→F
+
+Some consonant doubling in plurals with -o, some with -yo, no doubling.
+
+
+Declension 2: M→M - Arabic words with Somali plurals.
+
+
+Declension 2: F→F
+-yo plurals
+
+
+Declension 2: M→F - collectives
+
+TODO: these are collectives, but not marked as such and perhaps should be.
+but also, they have plurals. May be marked as collectives because of Orwin
+
+
+Declension 2: M→F - Mass
+
+TODO: these are mass nouns, but not marked as such and perhaps should be.
+Plurals found in word lists, so maybe these need some special handling.
+
+
+Declension 3: M→M
+These are fun, because plurals delete the second vowel.
+Ex.) gabadh -> gabdho; xubin -> xubno
+Note that some of these have lenis/fortis changes:
+Ex.) xadhig -> xadhko
+
+
+
+Declension 3: F→M
+
+
+*gabadh # dh + d -> dh; vowel deletion examples:*
+* *gabadh:* `gabadh+N+Fem+Sg+Indef+Abs`
+* *gabadha:* `gabadh+N+Fem+Sg+Def+Abs+Prox`
+* *gabdho:* `gabadh+N+Masc+Pl+Indef+Abs`
+* *gabdhaha:* `gabadh+N+Masc+Pl+Def+Abs+Prox`
+
+
+Declension 3: M→M
+
+
+*xadhig # g ~ k; vowel deletion examples:*
+* *xadhig:* `xadhig+N+Masc+Sg+Indef+Abs`
+* *xadhigga:* `xadhig+N+Masc+Sg+Def+Abs+Prox`
+* *xadhko:* `xadhig+N+Masc+Pl+Indef+Abs`
+* *xadhkaha:* `xadhig+N+Masc+Pl+Def+Abs+Prox`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Arabic loan plural forms
+These are borrowed Arabic plural forms for Arabic loans. Not really predictable
+but mostly taken from Qaamuuska af-Soomaaliga.
+
+Ex.) 
+
+* amar -> awaamiir
+* axmaq -> axmaqiin
+* banki -> bunuug
+
+* LEXICON ArabicLoans  
+
+
+
+
+*guri # Odd-syllable test examples:*
+* *guri:* `guri+N+Masc+Sg+Indef+Nom`
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/nouns.lexc)</small>
+
+
+
+
+Real Prepositions
+These are the few actual prepositions that exist in Somali.
+
+* LEXICON RealPrepositions  
+
+Locative adpositions
+These are a part of the verb complex, mark other kinds of locations than the
+basic ones below.
+
+Ex.) Gurigaa gashaba hoos buu ka guban.
+THe house burned down from inside.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Simple adpositions
+These imply something about the motion of the verb. All have high tones.
+
+
+
+Fusional adpositions
+
+Negation
+The negative marker _ma_ may fuse with the simple adpositions, maintaining its low tone. (ú + ma -> úma)
+
+
+
+
+
+
+
+Long form pronouns and adpositions, and CS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/adpositions.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/adpositions.lexc)</small>Pronouns
+Pronouns in the Somali language are references to things.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/pronouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/pronouns.lexc)</small>Numerals
+Numerals in the Somali language are numbers.
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/numerals.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/numerals.lexc)</small>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ruuxa the spirit
+Suuriya placetag "Syrian" ; Suuriyihii
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/propernouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/propernouns.lexc)</small>Adjectives
+Adjectives in the Somali language describe things.
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/adjectives.lexc)</small>Prefixes
+Prefixes in the Somali language are bound to beginning of other words.
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/prefixes.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/prefixes.lexc)</small>Verbs
+Verbs in Somali language are actions, and also states. They agree in person
+and number, and also gender.
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/verbs.lexc)</small>Noun inflection
+The Somali nouns inflect in cases, are marked for gender and number.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/nouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/nouns.lexc)</small>
+Irregular verbs
+
+These are the "irregular" verbs, which are mostly prefixing or copular.
+
+The copulas are mostly suffixing, and all the other verbs include person
+prefixes, and agreement on suffixes for person. Tense and mood are
+expressed with complex stem alternations that are no longer 100% productive,
+and progressive is formed from a derivational stem, with no person prefixes.
+
+NB: After adding in some additional morphological boundaries for some of the
+verbs, it should become obvious that some more simplification in amount
+of lexica is possible. Prefixing verbs often have multiple stems for
+separate tenses, and more or less get the same person prefixes in
+full and reduced paradigms. The only trick there is it requires more
+flag diacritics, to make sure that the prefix matches the suffix.
+
+TODO: omg
+
+
+
+
+LEXICON MA  _ma_ and related inflected forms.
+
+Ah
+
+_ah_ is a verb meaning 'to exist', but can function as a copula. It is
+inflected in all tenses, but has long and short forms.
+
+LEXICON Ah  Inflections in tense.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/irregularverbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/irregularverbs.lexc)</small>Proper noun inflection
+The Somali language proper nouns inflect in the same cases as regular
+nouns, but with a colon (':') as separator.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/propernouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/propernouns.lexc)</small>Adjective inflection
+The Somali language adjectives compare.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/adjectives.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/adjectives.lexc)</small>Verb inflection
+The Somali language verbs inflect in persons.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Full            Reduced
+1Sg    A               A
+2Sg    B               A
+3SgM   A               A
+3SgF   B               B
+1Pl    C               C
+2Pl    D               A
+3Pl    E               A
+
+
+
+Present         Past
+1Sg    keenaa          keenay
+2Sg    keentaa         keentay
+3SgM   keenaa          keenay
+3SgF   keentaa         keentay
+1Pl    keennaa         keennay
+2Pl    keentaan        keenteen
+3Pl    keenaan         keenaan
+
+
+
+Present         Past
+1Sg    keénayaa        keénayay
+2Sg    keénaysaa       keénaysay
+3SgM   keénayaa        keénayay
+3SgF   keénaysaa       keénaysay
+1Pl    keénaynaa       keénaynay
+2Pl    keénaysaan      keénayseen
+3Pl    keénayaan       keénayeen
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Apply post-root tones, and other root triggers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/verbs.lexc)</small>
+# Symbol affixes
+
+
+
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/fst/affixes/symbols.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/symbols.lexc)</small>
 # Somali morphological analyser
 
 INTRODUCTION TO THE MORPHOLOGICAL ANALYSER OF SOMALI.
@@ -1589,35 +3047,17 @@ These lexica are dummy lexical to make the source compile, they contain only #.
 
 * * *
 <small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/root.lexc)</small>
-Irregular verbs
 
-These are the "irregular" verbs, which are mostly prefixing or copular.
 
-The copulas are mostly suffixing, and all the other verbs include person
-prefixes, and agreement on suffixes for person. Tense and mood are
-expressed with complex stem alternations that are no longer 100% productive,
-and progressive is formed from a derivational stem, with no person prefixes.
 
-NB: After adding in some additional morphological boundaries for some of the
-verbs, it should become obvious that some more simplification in amount
-of lexica is possible. Prefixing verbs often have multiple stems for
-separate tenses, and more or less get the same person prefixes in
-full and reduced paradigms. The only trick there is it requires more
-flag diacritics, to make sure that the prefix matches the suffix.
 
-TODO: omg
 
 
 
 
-LEXICON MA  _ma_ and related inflected forms.
 
-Ah
 
-_ah_ is a verb meaning 'to exist', but can function as a copula. It is
-inflected in all tenses, but has long and short forms.
 
-LEXICON Ah  Inflections in tense.
 
 
 
@@ -1673,1397 +3113,166 @@ LEXICON Ah  Inflections in tense.
 
 
 
+retroflex plosive, voiceless			t`  ʈ	    0288, 648 (` = ASCII 096)
+retroflex plosive, voiced			d`	ɖ		0256, 598
+labiodental nasal					F 	ɱ		0271, 625
+retroflex nasal						n` 	ɳ		0273, 627
+palatal nasal						J 	ɲ		0272, 626
+velar nasal							N 	ŋ		014B, 331
+uvular nasal							N\	ɴ		0274, 628
+	
+bilabial trill						B\ 	ʙ		0299, 665
+uvular trill							R\ 	ʀ		0280, 640
+alveolar tap							4	ɾ		027E, 638
+retroflex flap						r` 	ɽ		027D, 637
+bilabial fricative, voiceless		p\ 	ɸ		0278, 632
+bilabial fricative, voiced			B 	β		03B2, 946
+dental fricative, voiceless			T 	θ		03B8, 952
+dental fricative, voiced				D 	ð		00F0, 240
+postalveolar fricative, voiceless	S	ʃ		0283, 643
+postalveolar fricative, voiced		Z 	ʒ		0292, 658
+retroflex fricative, voiceless		s` 	ʂ		0282, 642
+retroflex fricative, voiced			z` 	ʐ		0290, 656
+palatal fricative, voiceless			C 	ç		00E7, 231
+palatal fricative, voiced			j\ 	ʝ		029D, 669
+velar fricative, voiced	        	G 	ɣ		0263, 611
+uvular fricative, voiceless			X	χ		03C7, 967
+uvular fricative, voiced				R 	ʁ		0281, 641
+pharyngeal fricative, voiceless		X\ 	ħ		0127, 295
+pharyngeal fricative, voiced			?\ 	ʕ		0295, 661
+glottal fricative, voiced			h\	ɦ		0266, 614
 
+alveolar lateral fricative, vl.		K 
+alveolar lateral fricative, vd.		K\
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+labiodental approximant				P (or v\) 
+alveolar approximant					r\ 
+retroflex approximant				r\` 
+velar approximant					M\
+
+retroflex lateral approximant		l` 
+palatal lateral approximant			L 
+velar lateral approximant			L\
+Clicks
+
+bilabial								O\	(O = capital letter) 
+dental								|\
+(post)alveolar						!\ 
+palatoalveolar						=\ 
+alveolar lateral						|\|\
+Ejectives, implosives
+
+ejective								_>	e.g. ejective p		p_>
+implosive							_<	e.g. implosive b	b_<
+Vowels
+
+close back unrounded					M
+close central unrounded 				1 
+close central rounded				} 
+lax i								I 
+lax y								Y 
+lax u								U
+
+close-mid front rounded				2 
+close-mid central unrounded			@\ 
+close-mid central rounded			8 
+close-mid back unrounded				7
+
+schwa	ə							@
+
+open-mid front unrounded				E 
+open-mid front rounded				9
+open-mid central unrounded			3 
+open-mid central rounded				3\ 
+open-mid back unrounded				V 
+open-mid back rounded				O
+
+ash (ae digraph)						{ 
+open schwa (turned a)				6
+
+open front rounded					& 
+open back unrounded	        		A 
+open back rounded					Q
+Other symbols
+
+voiceless labial-velar fricative		W 
+voiced labial-palatal approx.		H 
+voiceless epiglottal fricative		H\ 
+voiced epiglottal fricative			<\ 
+epiglottal plosive					>\
+
+alveolo-palatal fricative, vl. 		s\ 
+alveolo-palatal fricative, voiced	z\ 
+alveolar lateral flap				l\ 
+simultaneous S and x					x\ 
+tie bar								_
+Suprasegmentals
+
+primary stress						" 
+secondary stress						% 
+long									: 
+half-long							:\ 
+extra-short							_X 
+linking mark							-\
+Tones and word accents
+
+level extra high						_T 
+level high							_H
+level mid							_M 
+level low							_L 
+level extra low						_B
+downstep								! 
+upstep								^	(caret, circumflex)
+
+contour, rising						 
+contour, falling						_F 
+contour, high rising					_H_T 
+contour, low rising					_B_L 
+
+contour, rising-falling				_R_F 
+(NB Instead of being written as diacritics with _, all prosodic 
+marks can alternatively be placed in a separate tier, set off 
+by < >, as recommended for the next two symbols.)
+global rise						<R> 
+global fall						<F>
+Diacritics						
+									
+voiceless						_0	(0 = figure), e.g. n_0
+voiced							_v 
+aspirated						_h 
+more rounded						_O	(O = letter) 
+less rounded						_c 
+advanced							_+
+retracted						_-
+centralized						_" 
+syllabic							=	(or _=) e.g. n= (or n_=) 
+non-syllabic						_^ 
+rhoticity						`
+									
+breathy voiced					_t 
+creaky voiced					_k
+linguolabial						_N 
+labialized						_w 
+palatalized						'	(or _j) e.g. t' (or t_j) 
+velarized						_G 
+pharyngealized					_?\
+									
+dental							_d 
+apical							_a 
+laminal							_m
+nasalized						~	(or _~) e.g. A~ (or A_~) 
+nasal release					_n
+lateral release					_l 
+no audible release				_}
+
+velarized or pharyngealized		_e 
+velarized l, alternatively		5 
+raised							_r 
+lowered							_o 
+advanced tongue root				_A 
+retracted tongue root			_q
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/irregularverbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/irregularverbs.lexc)</small>
-# Symbol affixes
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/symbols.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/symbols.lexc)</small>Proper noun inflection
-The Somali language proper nouns inflect in the same cases as regular
-nouns, but with a colon (':') as separator.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/propernouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/propernouns.lexc)</small>Verb inflection
-The Somali language verbs inflect in persons.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Full            Reduced
-1Sg    A               A
-2Sg    B               A
-3SgM   A               A
-3SgF   B               B
-1Pl    C               C
-2Pl    D               A
-3Pl    E               A
-
-
-
-Present         Past
-1Sg    keenaa          keenay
-2Sg    keentaa         keentay
-3SgM   keenaa          keenay
-3SgF   keentaa         keentay
-1Pl    keennaa         keennay
-2Pl    keentaan        keenteen
-3Pl    keenaan         keenaan
-
-
-
-Present         Past
-1Sg    keénayaa        keénayay
-2Sg    keénaysaa       keénaysay
-3SgM   keénayaa        keénayay
-3SgF   keénaysaa       keénaysay
-1Pl    keénaynaa       keénaynay
-2Pl    keénaysaan      keénayseen
-3Pl    keénayaan       keénayeen
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Apply post-root tones, and other root triggers
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/verbs.lexc)</small>Adjective inflection
-The Somali language adjectives compare.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/adjectives.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/adjectives.lexc)</small>Noun inflection
-The Somali nouns inflect in cases, are marked for gender and number.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/nouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/nouns.lexc)</small>=================================== !
-The Somali VH morphophonological file !
-=================================== !
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/phonology-vh.twolc](http://github.com/giellalt/lang-som/blob/main/../src/fst/phonology-vh.twolc)</small>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Ruuxa the spirit
-Suuriya placetag "Syrian" ; Suuriyihii
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/propernouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/propernouns.lexc)</small>Verbs
-Verbs in Somali language are actions, and also states. They agree in person
-and number, and also gender.
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/verbs.lexc)</small>Adjectives
-Adjectives in the Somali language describe things.
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/adjectives.lexc)</small>Numerals
-Numerals in the Somali language are numbers.
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/numerals.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/numerals.lexc)</small>Nouns
-
-Nouns in Somali have separate paradigms depending on
-morphophonological stuff, but are split up into subgroups which correspond
-to gender polarity groups.
-
-Note that items containing ATR should mark the ATR using <¨> before the vowel
-or at the beginning of the stem if uncertain.
-
-```
-doog:¨doog NOUN1_M/SgOnly ;
-```
-
-
-Irregular nouns
-_il_ and _si_ are both female in singular, and have typical morphology there
-but, have varying irregular masculine plural forms.
-
-* LEXICON IrregNouns  
-
-
-*il # Irregular tests examples:*
-* *il:* `il+N+Fem+Sg+Indef+Abs`
-* *isha:* `il+N+Fem+Sg+Def+Abs+Prox`
-* *indho:* `il+N+Masc+Pl+Indef+Abs`
-* *indhaha:* `il+N+Masc+Pl+Def+Abs+Prox`
-
-
-*il # Irregular tests examples:*
-* *si:* `si+N+Fem+Sg+Indef+Abs`
-* *sida:* `si+N+Fem+Sg+Def+Abs+Prox`
-* *siyaabo:* `si+N+Masc+Pl+Indef+Abs`
-* *siyaabaha:* `si+N+Masc+Pl+Def+Abs+Prox`
-
-
-Declension 1: F→M
-
-TODO: write quick overview of morphosyntax, morphophon
--i for some nominatives. Pl is -o.
-
-Good amount of nouns with -ad, Fem derivational suffix.
-
-
-*aalad # aalad sample paradigm. examples:*
-* *aalad:* `aalad+N+Decl/1+Fem+Sg+Indef+Abs`
-* *aaladda:* `aalad+N+Decl/1+Fem+Sg+Def+Abs+Prox`
-* *aalado:* `aalad+N+Decl/1+Masc+Pl+Indef+Abs`
-* *aaladaha:* `aalad+N+Decl/1+Masc+Pl+Def+Abs+Prox`
-
-
-
-Declension 1: M, sg. only
-
-
-Declension 1: M→M, M→F
-
-
-
-Declension 1: Masc. Pl. Only
-
-
-Declension 1: Fem. Sg. Only
-
-A fair amount of abstract things, and some collective things that probably need
-to be moved to collective lexica.
-
-
-Declension 2
-
-
-Declension 2: Collective
-
-Groups of things, -ley is a common suffix. Taged with +Coll, but available
-only in singular.
-
-
-Declension 2: M→F
--yo is plural.
-
-
-Declension 2: M→F
-
-Some consonant doubling in plurals with -o, some with -yo, no doubling.
-
-
-Declension 2: M→M - Arabic words with Somali plurals.
-
-
-Declension 2: F→F
--yo plurals
-
-
-Declension 2: M→F - collectives
-
-TODO: these are collectives, but not marked as such and perhaps should be.
-but also, they have plurals. May be marked as collectives because of Orwin
-
-
-Declension 2: M→F - Mass
-
-TODO: these are mass nouns, but not marked as such and perhaps should be.
-Plurals found in word lists, so maybe these need some special handling.
-
-
-Declension 3: M→M
-These are fun, because plurals delete the second vowel.
-Ex.) gabadh -> gabdho; xubin -> xubno
-Note that some of these have lenis/fortis changes:
-Ex.) xadhig -> xadhko
-
-
-
-Declension 3: F→M
-
-
-*gabadh # dh + d -> dh; vowel deletion examples:*
-* *gabadh:* `gabadh+N+Fem+Sg+Indef+Abs`
-* *gabadha:* `gabadh+N+Fem+Sg+Def+Abs+Prox`
-* *gabdho:* `gabadh+N+Masc+Pl+Indef+Abs`
-* *gabdhaha:* `gabadh+N+Masc+Pl+Def+Abs+Prox`
-
-
-Declension 3: M→M
-
-
-*xadhig # g ~ k; vowel deletion examples:*
-* *xadhig:* `xadhig+N+Masc+Sg+Indef+Abs`
-* *xadhigga:* `xadhig+N+Masc+Sg+Def+Abs+Prox`
-* *xadhko:* `xadhig+N+Masc+Pl+Indef+Abs`
-* *xadhkaha:* `xadhig+N+Masc+Pl+Def+Abs+Prox`
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Arabic loan plural forms
-These are borrowed Arabic plural forms for Arabic loans. Not really predictable
-but mostly taken from Qaamuuska af-Soomaaliga.
-
-Ex.) 
-
-* amar -> awaamiir
-* axmaq -> axmaqiin
-* banki -> bunuug
-
-* LEXICON ArabicLoans  
-
-
-
-
-*guri # Odd-syllable test examples:*
-* *guri:* `guri+N+Masc+Sg+Indef+Nom`
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/nouns.lexc)</small>Pronouns
-Pronouns in the Somali language are references to things.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/pronouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/pronouns.lexc)</small>Prefixes
-Prefixes in the Somali language are bound to beginning of other words.
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/prefixes.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/prefixes.lexc)</small>
-
-
-
-
-Real Prepositions
-These are the few actual prepositions that exist in Somali.
-
-* LEXICON RealPrepositions  
-
-Locative adpositions
-These are a part of the verb complex, mark other kinds of locations than the
-basic ones below.
-
-Ex.) Gurigaa gashaba hoos buu ka guban.
-THe house burned down from inside.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Simple adpositions
-These imply something about the motion of the verb. All have high tones.
-
-
-
-Fusional adpositions
-
-Negation
-The negative marker _ma_ may fuse with the simple adpositions, maintaining its low tone. (ú + ma -> úma)
-
-
-
-
-
-
-
-Long form pronouns and adpositions, and CS
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/fst/stems/adpositions.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/adpositions.lexc)</small>
-
-
-We describe here how abbreviations are in Somali are read out, e.g.
-for text-to-speech systems.
-
-For example:
-
-* s.:syntynyt # ;  
-* os.:omaa% sukua # ;  
-* v.:vuosi # ;  
-* v.:vuonna # ;  
-* esim.:esimerkki # ; 
-* esim.:esimerkiksi # ; 
-
-
-* * *
-<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-abbrevs2text.lexc](http://github.com/giellalt/lang-som/blob/main/../src/transcriptions/transcriptor-abbrevs2text.lexc)</small>
+<small>This (part of) documentation was generated from [../src/phonetics/txt2ipa.xfscript](http://github.com/giellalt/lang-som/blob/main/../src/phonetics/txt2ipa.xfscript)</small>
 
 
 
@@ -3119,6 +3328,23 @@ For example:
 
 * * *
 <small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-numbers-digit2text.lexc](http://github.com/giellalt/lang-som/blob/main/../src/transcriptions/transcriptor-numbers-digit2text.lexc)</small>
+
+
+We describe here how abbreviations are in Somali are read out, e.g.
+for text-to-speech systems.
+
+For example:
+
+* s.:syntynyt # ;  
+* os.:omaa% sukua # ;  
+* v.:vuosi # ;  
+* v.:vuonna # ;  
+* esim.:esimerkki # ; 
+* esim.:esimerkiksi # ; 
+
+
+* * *
+<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-abbrevs2text.lexc](http://github.com/giellalt/lang-som/blob/main/../src/transcriptions/transcriptor-abbrevs2text.lexc)</small>
 [ L A N G U A G E ]  G R A M M A R   C H E C K E R
 
 
@@ -3530,4 +3756,158 @@ expression **WORD - premodifiers**.
 
 
 * * *
-<small>This (part of) documentation was generated from [../tools/grammarcheckers/grammarchecker.cg3](http://github.com/giellalt/lang-som/blob/main/../tools/grammarcheckers/grammarchecker.cg3)</small>
+<small>This (part of) documentation was generated from [../tools/grammarcheckers/grammarchecker.cg3](http://github.com/giellalt/lang-som/blob/main/../tools/grammarcheckers/grammarchecker.cg3)</small>Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
+Then just:
+$ make
+$ echo "ja, ja" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+
+Issues:
+- [X] Ambiguous input
+- Seems to work fine
+- [X] Ambiguous multiword expessions with ambiguous tokenisation
+- Seems to work – represented within lexc now; hfst-tokenise also
+supports forms on the analyses now
+- [X] Ambiguous multiword expessions need reorganising after CG
+- The module cg-mwesplit takes wordforms from readings and turns them into
+new cohorts
+- [X] Unknown words
+- The set-difference method only works for words without
+flag diacritics (even though we should be working only on the form-side?)
+and leads to binary blow-up: With only lower unknowns, we get 45M;
+lower+upper gives 67M, while no unknowns gives 27M
+- Fixed instead by treating empty analyses as unknown-tokens in
+hfst-tokenise, and outputting unmatched strings with a prefix
+- [ ] Treat input that's within superblanks as unmatched
+- probably requires a change in hfst-tokenise itself
+- [X] Try >1 space for ambiguous MWE's? – represented within lexc now
+- [ ] Try set-difference-unknowns method with regular hfst commands?
+
+More usage examples:
+$ echo "Juos gorreválggain lea (dárbbašlaš) deavdit gáibádusa boasttu olmmoš, man mielde lahtuid." | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+$ echo "(gáfe) 'ja' ja 3. ja? ц jaja ukjend \"ukjend\"" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+$ echo "márffibiillagáffe" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+
+Pmatch documentation:
+https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch
+
+
+
+
+
+
+Characters which have analyses in the lexicon, but can appear without spaces
+before/after, that is, with no context conditions, and adjacent to words:
+* Punct contains ASCII punctuation marks
+* The symbol after m-dash is soft-hyphen `U+00AD`
+* The symbol following {•} is byte-order-mark / zero-width no-break space
+`U+FEFF`.
+
+Whitespace contains ASCII white space and
+the List contains some unicode white space characters
+* En Quad U+2000 to Zero-Width Joiner U+200d'
+* Narrow No-Break Space U+202F
+* Medium Mathematical Space U+205F
+* Word joiner U+2060
+
+
+
+
+Apart from what's in our morphology, there are
+1) unknown word-like forms, and
+2) unmatched strings
+We want to give 1) a match, but let 2) be treated specially by hfst-tokenise -a
+* select extended latin symbols
+* select symbols
+* various symbols from Private area (probably Microsoft),
+so far:
+* U+F0B7 for "x in box"
+
+TODO: Could use something like this, but built-in's don't include šžđčŋ:
+
+
+Simply give an empty reading when something is unknown:
+hfst-tokenise --giella-cg will treat such empty analyses as unknowns, and
+remove empty analyses from other readings. Empty readings are also
+legal in CG, they get a default baseform equal to the wordform, but
+no tag to check, so it's safer to let hfst-tokenise handle them.
+
+
+
+Finally we mark as a token any sequence making up a:
+* known word in context
+* unknown (OOV) token in context
+* sequence of word and punctuation
+* URL in context
+
+* * *
+<small>This (part of) documentation was generated from [../tools/tokenisers/tokeniser-gramcheck-gt-desc.pmscript](http://github.com/giellalt/lang-som/blob/main/../tools/tokenisers/tokeniser-gramcheck-gt-desc.pmscript)</small># Tokeniser for som
+
+Usage:
+```
+$ make
+$ echo "ja, ja" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+$ echo "Juos gorreválggain lea (dárbbašlaš) deavdit gáibádusa boasttu olmmoš, man mielde lahtuid." | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+$ echo "(gáfe) 'ja' ja 3. ja? ц jaja ukjend \"ukjend\"" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+$ echo "márffibiillagáffe" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+```
+
+Pmatch documentation:
+https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch
+
+
+
+
+
+
+Characters which have analyses in the lexicon, but can appear without spaces
+before/after, that is, with no context conditions, and adjacent to words:
+* Punct contains ASCII punctuation marks
+* The symbol after m-dash is soft-hyphen `U+00AD`
+* The symbol following {•} is byte-order-mark / zero-width no-break space
+`U+FEFF`.
+
+Whitespace contains ASCII white space and
+the List contains some unicode white space characters
+* En Quad U+2000 to Zero-Width Joiner U+200d'
+* Narrow No-Break Space U+202F
+* Medium Mathematical Space U+205F
+* Word joiner U+2060
+
+
+
+
+Apart from what's in our morphology, there are
+1. unknown word-like forms, and
+2. unmatched strings
+We want to give 1) a match, but let 2) be treated specially by
+`hfst-tokenise -a`
+Unknowns are made of:
+* lower-case ASCII
+* upper-case ASCII
+* select extended latin symbols
+ASCII digits
+* select symbols
+* Combining diacritics as individual symbols,
+* various symbols from Private area (probably Microsoft),
+so far:
+* U+F0B7 for "x in box"
+
+
+
+## Unknown handling
+Unknowns are tagged ?? and treated specially with `hfst-tokenise`
+hfst-tokenise --giella-cg will treat such empty analyses as unknowns, and
+remove empty analyses from other readings. Empty readings are also
+legal in CG, they get a default baseform equal to the wordform, but
+no tag to check, so it's safer to let hfst-tokenise handle them.
+
+
+
+Finally we mark as a token any sequence making up a:
+* known word in context
+* unknown (OOV) token in context
+* sequence of word and punctuation
+* URL in context
+
+* * *
+<small>This (part of) documentation was generated from [../tools/tokenisers/tokeniser-disamb-gt-desc.pmscript](http://github.com/giellalt/lang-som/blob/main/../tools/tokenisers/tokeniser-disamb-gt-desc.pmscript)</small>
