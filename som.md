@@ -1,225 +1,24 @@
+# Somali description 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+All documents in one file
 
 
 
 * Sets for POS sub-categories
 
-
-
-
-
 * Sets for Semantic tags
-
-
-
-
 
 * Sets for Morphosyntactic properties
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 * Sets for verbs
-
 
 - V is all readings with a V tag in them, REAL-V should
 be the ones without an N tag following the V.  
 The REAL-V set thus awaits a fix to the preprocess V ... N bug.
 
-
-
 * The set COPULAS is for predicative constructions
 
-
-
-
-
-
-
 * NP sets defined according to their morphosyntactic features
-
-
-
-
-
-
 
 * The PRE-NP-HEAD family of sets
 
@@ -227,90 +26,30 @@ These sets model noun phrases (NPs). The idea is to first define whatever can
 occur in front of the head of the NP, and thereafter negate that with the
 expression **WORD - premodifiers**.
 
-
-
-
-
-
-
-
-
-
-
-
 The set **NOT-NPMOD** is used to find barriers between NPs.
 Typical usage: ... (*1 N BARRIER NPT-NPMOD) ...
 meaning: Scan to the first noun, ignoring anything that can be
 part of the noun phrase of that noun (i.e., "scan to the next NP head")
 
-
-
-
-
-
 * Miscellaneous sets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 * Border sets and their complements
 
-
-
-
-
-
-
-
-
-
-
-
-
 * Syntactic sets
-
-
-
 
 These were the set types.
 
-
-
 ## HABITIVE MAPPING
 
-
 * **hab1** 
-
 
 * **hab2** 
 
 * **hab3** (<hab> @ADVL>) for hab-actor and hab-case; if leat to the right, and Nom to the right of leat. Lots of restrictions.
 
-
-
 * **habNomLeft** 
 
-
 * **hab4** 	
-
-
 
 * **hab6** 
 
@@ -319,90 +58,11 @@ These were the set types.
 * **hab8** This is not HAB
 * **hab5**  This is not HAB
 
-
-
 * **habDain** (<hab> @ADVL>) for (Pron Dem Pl Loc) if leat followed by Nom to the right
-
-
-
 
 * **habGen** (<hab> @<ADVL) hab for Gen; if Gen is located in the end of the sentence and Nom is sentence initial
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 * **spred<obj** (@SPRED<OBJ) for Acc; the object of an SPRPED. Not to be mistaken with OPRED. If SPRED is to the left, and copulas is to the left of it. Nom or Hab are found sentence initially.
-
 
 * **Hab<spred** (@<SPRED) for Nom; if copulas, goallut or jápmit is FMAINV and habitive or human Loc is found to the left. OR: if Ill or @Pron< followed by HAB are found to the left.
 
@@ -414,14 +74,11 @@ These were the set types.
 
 * **<spred** (<ext> @<SUBJ) for Nom, but not for Pers. To the left boahtit or heaŋgát as MAINV, and futher to the left is some kind of place related word, or time related word
 
-
 * **<spredQst1** (<ext> @<SUBJ) for Nom in a typically question sentence; if A) Hab, some kind of place word, Po or Nom to the left, and Qst followed by copulas to the left. B) same as a, only the Qst-pcle is attached to copulas. C) Qst to the left, with copulas to its left, but not if two Nom:s are found somewhere to the right. D) copulas to the left, and BOS to the left. E) Loc or Ill to the left, and Loc or Hab to the left of this, Qst and copulas to the left. F) Num @>N to the left, Hab, some kind of place word, Po or Nom to the left, and Qst followed by copulas to the left. NOTE) for all these rules; human, Loc or Sem/Plc not allowed to the right.
 
 * **<spredQst2** (@<SPRED) for Nom; in a typically question sentence; differs from <spredQst1 by not beeing as restricted to the right. Though you are not allowed to be Pers or human.
 
 * **Nom<spredQst** (@<SPRED) for Nom; in a typically question sentence. Differs from <spredQst2 by letting Nom be found between SPRED and copulas
-
-
 
 * **<spred** (@<SPRED) for A Nom or N Nom if; the subject Nom is on the same side of copulas as you: on the right side of copulas
 
@@ -430,7 +87,6 @@ These were the set types.
 * **leftCop<spred** (@<SPRED) for Nom; if copulas is the main verb to the left, and there is no Ess found to the left of cop (note that Loc is allowed between target and cop). OR: if you are Coll or Sem/Group with copulas to your left. 
 
 * **<spredLocEXPERIMENT** (@<SPRED) for material Loc; if you are to the right of copulas, and the Nom to the left of copulas is not a hab-actor
-
 
 * **NumTime** (@<SPRED) for A Nom
 
@@ -452,22 +108,13 @@ These were the set types.
 
 * **r492>** (@SPRED>) for Interr Gen; consisting only of negations. You are not allowed to be MII. You are not allowed to have an adjective or noun to yor right. You are not allowed to have a verb to your right; the exception beeing an aux.
 
-
-
 * **AdjSpredSg>** (@SPRED>) for A Sg Nom; if copulas to the right, but not if A or @<SPRED are found to the right of copulas
 
 * **SpredSg>Hab** (@SPRED>) for Nom; if you are sentence initial, copulas is located to the right, and there is a habitive to the right of copulas
 
-
-
 * **Spred>SubjInf** (@SPRED>) for Nom; if copulas to the right, and the subject of copulas is an Inf to the right
 
 * **spredCoord** (@<SPRED) coordination for Nom; only if there already is a SPRED to the left of CNP. Not if there is some kind of comparison involved.
-
-
-
-
-
 
 * **subj>Sgnr1** (@SUBJ>) for Nom Sg, including Indef Nom if; VFIN + Sg3 or Pl3 to the right (VFIN not allowed to the left) 
 
@@ -476,173 +123,70 @@ These were the set types.
 
 * **subj>Pl** (@SUBJ>) for plural nominatives
 
-
 * **subj>Sgnr2** (@SUBJ>) for Nom Sg; if VFIN + Sg3 to the right.
 
 * **<subjSg** (@<SUBJ) for Nom Sg; if VFIN Sg3 or Du2 to the left (no HAB allowed to the left).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 * **f<advl** (@-F<ADVL) for infinite adverbials
 
 * **f<advl** (@-F<ADVL) for infinite adverbials
-
-
 
 * **s-boundary=advl>** (@ADVL>) for ADVL that resemble s-booundaries. Mainverb to the right.
-
-
-
 
 * **-fobj>** (@-FOBJ>) for Acc 
 
 * **-fobj>** (@-FOBJ>) for Acc
 
-
-
-
 * **advl>mainV** (@ADVL>) if; finite mainverb not found to the left, but the finite mainverb is found to the right.
 
-
 * **<advl** (@<ADVL) if; finite mainverb found to the left. Not if a comma is found immediately to the left and a finite mainverb is located somewhere to the right of this comma.
-
-
-
 
 * **<advlPoPr** (@<ADVL) if mainverb to the left.
 * **advlPoPr>** (@<ADVL) if mainverb to the right.
 
-
-
 * **advlEss>** (@<ADVL) for weather and time Ess, if FMAINV to the left.
-
-
-
-
-
 
 * **advl>inbetween** (@ADVL>) for Adv; if inbetween two sentenceboundaries where no mainverb is present.
 
 * **comma<advlEOS** (@<ADVL) if; comma found to the left and the finite mainverb to the left of comma. To the right is the end of the sentence.
 
-
-
 * **advlBOS>** (@ADVL>) if; you are N Ill and found sentnece initially. First one to your right is a clause.
-
 
 * **<advlPoEOS** (@<ADVL) for Po; if you are found at the very end of a sentence. A mainverb is needed to the right though.
 
-
-
 * **cleanupILL<advl** (@<ADVL) for N Ill if; there are no boundarysymbols to your left, if you arent already @N< OR @APP-N<, and no mainverb is to yor left.
-
-
-
-
-
-
-
-
-
-
 
 * **<opredAAcc** (@<OPRED) for A Acc; if an other accusative to the left, and a transtive verb to the left of it. OR: if a transitive verb to the left, and an accusative to the left of it.
 
-
 ### sma object
-
-
-
-
-
-
-
-
 
 * **<advlEss** (@<ADVL) for ESS-ADVL if; FMAINV to the left
 * **<spredEss** (@<SPRED) for N Ess if; FMAINV to the left is intransitive or bargat
-
-
-
-
 
 ## SUBJ MAPPING - leftovers
 
 ## OBJ MAPPING - leftovers
 
-
 ## HNOUN MAPPING
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/cg3/functions.cg3](http://github.com/giellalt/lang-som/blob/main/../src/cg3/functions.cg3)</small>=================================== !
+
+<small>This (part of) documentation was generated from [src/cg3/functions.cg3](https://github.com/giellalt/lang-som/blob/main/src/cg3/functions.cg3)</small>
+
+---
+
+=================================== !
 The Somali VH morphophonological file !
 =================================== !
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/phonology-vh.twolc](http://github.com/giellalt/lang-som/blob/main/../src/fst/phonology-vh.twolc)</small>
-# The Somali morphophonological/twolc rules file 
 
+<small>This (part of) documentation was generated from [src/fst/phonology-vh.twolc](https://github.com/giellalt/lang-som/blob/main/src/fst/phonology-vh.twolc)</small>
+
+---
+
+
+# The Somali morphophonological/twolc rules file 
 
 ## Morphophonological notes 
 
@@ -810,44 +354,13 @@ More processes to describe:
 * w/b alternations
 * vowel lengthening magaalo / magaalooyin
 
-
-
 Notes:
 * If forms disappear but the rule should work, make sure
 that the pair transforming exists in the Alphabet
 
-
-
 Alphabet
 
-
-
 For ease of reduplication and treating sh as separate from l + t => sh
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 TODO: write tests for gacmahii / gacmihii, magacii / magicii, magucu / magacu
 
@@ -876,21 +389,11 @@ List of rules:
 
 **Ablaut around back fricatives at morpheme boundaries**  
 
-
-
-
 **Ablaut in declension 7 with final vowel**  
-
-
-
-
 
 **LT -> SH part 1**  
 
-
 **LT -> SH part 2**  
-
-
 
 **LT -> SH part 2 for V3B**  
 
@@ -912,35 +415,24 @@ TODO: This rule is currently conflicting with the next one.
 
 **Declension 2: -y insertion after back sounds and fricatives; and after -i**  
 
-
 **Declension 4: Plural Partial Reduplication**  
 
 **Declension 4: Plural Partial Reduplication %{m}**  
 
 **Declension 4: C2->n in m contexts**  
 
-
-
-
-
 **-y- insertion in plurals**  
 
 **Disallow yy**  
 
-
 Doesn't work with wuxu, where k has been deleted.
 Doesn't work with magicii, magucu, but should optionally. magacii and magicii, etc are both possible
 
-
 **Declension 6: final vowel**  
-
-
 
 **Declension V1: magacow / magacaabay / magacawday, shorten a**  
 
 **Delete preceding a**  
-
-
 
 AllBoundaries \?:WordChars
 
@@ -950,43 +442,21 @@ AllBoundaries \?:WordChars
 
 **Declension 7: final vowel in final position**  
 
-
-
 ## Verbal Rules
-
 
 **V2A -> V3B derivations, delete -i**  
 
 **V2A -> V3B derivations, depalatization**  
 
-
-
-
-
 **V1: a/e umlaut before i/e**  
-
 
 **V1: a/e umlaut before a**  
 
-
-
 **V1, D3: Vowel deletion**  
-
-
-
-
-
-
-
-
 
 **V1: Simplification of dhd to dh (t)**  
 
-
-
 **V1: n/m when deleted vowel results in C0n**  
-
-
 
 ## V2A
 
@@ -1002,23 +472,12 @@ tbw.
 
 **V2B: Remove e**  
 
-
-
-
-
-
-
-
 V3A
-
-
-
 
 ## V3B
 
 Following rules are for the funky things that happen with 1Sg, 3SgM, 3Pl
 Basically, disallowed d_d, so it gets simplified to t
-
 
 wada>d>aa#        wada>nn>aa#
 wada>t>aa#        wada>d>aan#
@@ -1029,7 +488,6 @@ wataa                        wadannaa
 wadataa                        wadataan
 wataa                        wataan
 wadataa
-
 
 fura>d>aa#        fura>nn>aa#
 fura>t>aa#        fura>d>aan#
@@ -1060,14 +518,11 @@ Note: bt / obd
 
 **V3B: d dissimilation w/ cor **  
 
-
 **V3B: d dissimilation 2 **  
-
 
 **V3B: root {a} deletion before suffixes with -d**  
 
 **V3B: otherwise**  
-
 
 General Rules
 
@@ -1080,9 +535,6 @@ General Rules
 **Optional m doubling**  
 
 **Velar deletion after Back, but avoiding digraphs**  
-
-
-
 
 **Final lenition.**  
 
@@ -1097,18 +549,21 @@ General Rules
 * *primus%>s*
 * *primus00*
 
-
 * examples:*
 
 * examples:*
-
 
 * examples:*
 
 * examples:*
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-som/blob/main/../src/fst/phonology.twolc)</small>Nouns
+
+<small>This (part of) documentation was generated from [src/fst/phonology.twolc](https://github.com/giellalt/lang-som/blob/main/src/fst/phonology.twolc)</small>
+
+---
+
+Nouns
 
 Nouns in Somali have separate paradigms depending on
 morphophonological stuff, but are split up into subgroups which correspond
@@ -1121,13 +576,11 @@ or at the beginning of the stem if uncertain.
 doog:¨doog NOUN1_M/SgOnly ;
 ```
 
-
 Irregular nouns
 _il_ and _si_ are both female in singular, and have typical morphology there
 but, have varying irregular masculine plural forms.
 
 * LEXICON IrregNouns  
-
 
 *il # Irregular tests examples:*
 * *il:* `il+N+Fem+Sg+Indef+Abs`
@@ -1135,13 +588,11 @@ but, have varying irregular masculine plural forms.
 * *indho:* `il+N+Masc+Pl+Indef+Abs`
 * *indhaha:* `il+N+Masc+Pl+Def+Abs+Prox`
 
-
 *il # Irregular tests examples:*
 * *si:* `si+N+Fem+Sg+Indef+Abs`
 * *sida:* `si+N+Fem+Sg+Def+Abs+Prox`
 * *siyaabo:* `si+N+Masc+Pl+Indef+Abs`
 * *siyaabaha:* `si+N+Masc+Pl+Def+Abs+Prox`
-
 
 Declension 1: F→M
 
@@ -1150,67 +601,51 @@ TODO: write quick overview of morphosyntax, morphophon
 
 Good amount of nouns with -ad, Fem derivational suffix.
 
-
 *aalad # aalad sample paradigm. examples:*
 * *aalad:* `aalad+N+Decl/1+Fem+Sg+Indef+Abs`
 * *aaladda:* `aalad+N+Decl/1+Fem+Sg+Def+Abs+Prox`
 * *aalado:* `aalad+N+Decl/1+Masc+Pl+Indef+Abs`
 * *aaladaha:* `aalad+N+Decl/1+Masc+Pl+Def+Abs+Prox`
 
-
-
 Declension 1: M, sg. only
-
 
 Declension 1: M→M, M→F
 
-
-
 Declension 1: Masc. Pl. Only
-
 
 Declension 1: Fem. Sg. Only
 
 A fair amount of abstract things, and some collective things that probably need
 to be moved to collective lexica.
 
-
 Declension 2
-
 
 Declension 2: Collective
 
 Groups of things, -ley is a common suffix. Taged with +Coll, but available
 only in singular.
 
-
 Declension 2: M→F
 -yo is plural.
-
 
 Declension 2: M→F
 
 Some consonant doubling in plurals with -o, some with -yo, no doubling.
 
-
 Declension 2: M→M - Arabic words with Somali plurals.
-
 
 Declension 2: F→F
 -yo plurals
-
 
 Declension 2: M→F - collectives
 
 TODO: these are collectives, but not marked as such and perhaps should be.
 but also, they have plurals. May be marked as collectives because of Orwin
 
-
 Declension 2: M→F - Mass
 
 TODO: these are mass nouns, but not marked as such and perhaps should be.
 Plurals found in word lists, so maybe these need some special handling.
-
 
 Declension 3: M→M
 These are fun, because plurals delete the second vowel.
@@ -1218,10 +653,7 @@ Ex.) gabadh -> gabdho; xubin -> xubno
 Note that some of these have lenis/fortis changes:
 Ex.) xadhig -> xadhko
 
-
-
 Declension 3: F→M
-
 
 *gabadh # dh + d -> dh; vowel deletion examples:*
 * *gabadh:* `gabadh+N+Fem+Sg+Indef+Abs`
@@ -1229,28 +661,13 @@ Declension 3: F→M
 * *gabdho:* `gabadh+N+Masc+Pl+Indef+Abs`
 * *gabdhaha:* `gabadh+N+Masc+Pl+Def+Abs+Prox`
 
-
 Declension 3: M→M
-
 
 *xadhig # g ~ k; vowel deletion examples:*
 * *xadhig:* `xadhig+N+Masc+Sg+Indef+Abs`
 * *xadhigga:* `xadhig+N+Masc+Sg+Def+Abs+Prox`
 * *xadhko:* `xadhig+N+Masc+Pl+Indef+Abs`
 * *xadhkaha:* `xadhig+N+Masc+Pl+Def+Abs+Prox`
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Arabic loan plural forms
 These are borrowed Arabic plural forms for Arabic loans. Not really predictable
@@ -1264,15 +681,14 @@ Ex.)
 
 * LEXICON ArabicLoans  
 
-
-
-
 *guri # Odd-syllable test examples:*
 * *guri:* `guri+N+Masc+Sg+Indef+Nom`
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/nouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/nouns.lexc)</small>
 
+<small>This (part of) documentation was generated from [src/fst/stems/nouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/stems/nouns.lexc)</small>
+
+---
 
 
 
@@ -1288,571 +704,89 @@ basic ones below.
 Ex.) Gurigaa gashaba hoos buu ka guban.
 THe house burned down from inside.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Simple adpositions
 These imply something about the motion of the verb. All have high tones.
-
-
 
 Fusional adpositions
 
 Negation
 The negative marker _ma_ may fuse with the simple adpositions, maintaining its low tone. (ú + ma -> úma)
 
-
-
-
-
-
-
 Long form pronouns and adpositions, and CS
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/adpositions.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/adpositions.lexc)</small>Pronouns
+
+<small>This (part of) documentation was generated from [src/fst/stems/adpositions.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/stems/adpositions.lexc)</small>
+
+---
+
+Pronouns
 Pronouns in the Somali language are references to things.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/pronouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/pronouns.lexc)</small>Numerals
+
+<small>This (part of) documentation was generated from [src/fst/stems/pronouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/stems/pronouns.lexc)</small>
+
+---
+
+Numerals
 Numerals in the Somali language are numbers.
 
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/numerals.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/numerals.lexc)</small>
 
+<small>This (part of) documentation was generated from [src/fst/stems/numerals.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/stems/numerals.lexc)</small>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
 
 
 Ruuxa the spirit
 Suuriya placetag "Syrian" ; Suuriyihii
 
-
-
-
-
-
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/propernouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/propernouns.lexc)</small>Adjectives
+
+<small>This (part of) documentation was generated from [src/fst/stems/propernouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/stems/propernouns.lexc)</small>
+
+---
+
+Adjectives
 Adjectives in the Somali language describe things.
 
-
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/adjectives.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/adjectives.lexc)</small>Prefixes
+
+<small>This (part of) documentation was generated from [src/fst/stems/adjectives.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/stems/adjectives.lexc)</small>
+
+---
+
+Prefixes
 Prefixes in the Somali language are bound to beginning of other words.
 
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/prefixes.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/prefixes.lexc)</small>Verbs
+
+<small>This (part of) documentation was generated from [src/fst/stems/prefixes.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/stems/prefixes.lexc)</small>
+
+---
+
+Verbs
 Verbs in Somali language are actions, and also states. They agree in person
 and number, and also gender.
 
-
-
-
-
-
-
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/stems/verbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/stems/verbs.lexc)</small>Noun inflection
+
+<small>This (part of) documentation was generated from [src/fst/stems/verbs.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/stems/verbs.lexc)</small>
+
+---
+
+Noun inflection
 The Somali nouns inflect in cases, are marked for gender and number.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/nouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/nouns.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/affixes/nouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/affixes/nouns.lexc)</small>
+
+---
+
+
 Irregular verbs
 
 These are the "irregular" verbs, which are mostly prefixing or copular.
@@ -1871,9 +805,6 @@ flag diacritics, to make sure that the prefix matches the suffix.
 
 TODO: omg
 
-
-
-
 LEXICON MA  _ma_ and related inflected forms.
 
 Ah
@@ -1883,343 +814,33 @@ inflected in all tenses, but has long and short forms.
 
 LEXICON Ah  Inflections in tense.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/irregularverbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/irregularverbs.lexc)</small>Proper noun inflection
+
+<small>This (part of) documentation was generated from [src/fst/affixes/irregularverbs.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/affixes/irregularverbs.lexc)</small>
+
+---
+
+Proper noun inflection
 The Somali language proper nouns inflect in the same cases as regular
 nouns, but with a colon (':') as separator.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/propernouns.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/propernouns.lexc)</small>Adjective inflection
+
+<small>This (part of) documentation was generated from [src/fst/affixes/propernouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/affixes/propernouns.lexc)</small>
+
+---
+
+Adjective inflection
 The Somali language adjectives compare.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/adjectives.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/adjectives.lexc)</small>Verb inflection
+
+<small>This (part of) documentation was generated from [src/fst/affixes/adjectives.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/affixes/adjectives.lexc)</small>
+
+---
+
+Verb inflection
 The Somali language verbs inflect in persons.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Full            Reduced
 1Sg    A               A
@@ -2230,8 +851,6 @@ Full            Reduced
 2Pl    D               A
 3Pl    E               A
 
-
-
 Present         Past
 1Sg    keenaa          keenay
 2Sg    keentaa         keentay
@@ -2240,8 +859,6 @@ Present         Past
 1Pl    keennaa         keennay
 2Pl    keentaan        keenteen
 3Pl    keenaan         keenaan
-
-
 
 Present         Past
 1Sg    keénayaa        keénayay
@@ -2252,291 +869,27 @@ Present         Past
 2Pl    keénaysaan      keénayseen
 3Pl    keénayaan       keénayeen
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 Apply post-root tones, and other root triggers
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/verbs.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/verbs.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/affixes/verbs.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/affixes/verbs.lexc)</small>
+
+---
+
+
 # Symbol affixes
 
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/affixes/symbols.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/affixes/symbols.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/affixes/symbols.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/affixes/symbols.lexc)</small>
+
+---
+
+
 # Somali morphological analyser
 
 INTRODUCTION TO THE MORPHOLOGICAL ANALYSER OF SOMALI.
-
 
 # Multichar_Symbols definitions
 
@@ -2606,7 +959,6 @@ The parts of speech are further split up into:
 *  +Abbr        
 *  +Prop        
 
-
 Verb and noun declensions for the analysers that want to know about that
 NOTE: We probably do not want to thag these, this is morphological and
 not morphosyntactic info. t.
@@ -2637,7 +989,6 @@ The Usage extents are marked using the following tags:
 
 The nominals are inflected in the following case, number
 
-
 * +Sg				      
 * +Pl				      
 
@@ -2648,7 +999,6 @@ The nominals are inflected in the following case, number
 * +Indef				      
 * +Def				      
 
-
 Nominals also are inflected for gender
 
 *  +Masc				      
@@ -2658,7 +1008,6 @@ Nominal marked for gender undergo gender polarity changes in plural.
 We want to mark +Masc and +Fem, such that disambiguation is easier,
 but knowing the gender of the lemma since it is not predictable from
 a given plural form is a good thing.
-
 
 *  +M→M				      
 *  +M→F				      
@@ -2741,7 +1090,6 @@ Verbs also mark some non-agreement syntactic information
 *  +Rel  the verb is within a relative clause, and is also case marked.
 
 Other verb forms are
-
 
 * +Inf	    
 * +Ger	    
@@ -2842,7 +1190,6 @@ Style
 
 ## Morphophonology
 
-
 To represent phonologic variations in word forms we use the following
 symbols in the lexicon files:
 
@@ -2851,7 +1198,6 @@ symbols in the lexicon files:
 Going to try to replace these with flag diacritics if possible.
 
 And following triggers to control variation
-
 
 * {#} # -      
 
@@ -2869,7 +1215,6 @@ TODO: no need for , but needs to be removed in all files
 *  {-V}    in verbs: deletion of specific vowel, used only in affixes, to make stems prettier? room for cleaning
 *  {-I}    in verbs: -i- deletions in V3A and -san adjectives
 *  {-a}    used specifically in -sho derivations. TODO: change to rule with » ?
-
 
 *  {E}     part of cliticized ee (CS+Appos)
 
@@ -2972,18 +1317,6 @@ Person flags
 * @R.Gender.Fem@    
 * @P.Gender.Fem@    
 
-
-
-
-
-
-
-
-
-
-
-
-
 # The continuation lexica
 
 The word forms in Somali start from the lexeme roots of basic
@@ -3024,11 +1357,7 @@ word classes, or optionally from prefixes:
 
 * LEXICON FINAL  just adds lower ##
 
-
-
-
 These lexica are dummy lexical to make the source compile, they contain only #.
-
 
 * LEXICON Proper   
 
@@ -3038,78 +1367,11 @@ These lexica are dummy lexical to make the source compile, they contain only #.
 
 * LEXICON SemiReducedPerson  
 
-
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/root.lexc)</small>
 
+<small>This (part of) documentation was generated from [src/fst/root.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/root.lexc)</small>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
 
 
@@ -3271,52 +1533,12 @@ raised							_r
 lowered							_o 
 advanced tongue root				_A 
 retracted tongue root			_q
+
 * * *
-<small>This (part of) documentation was generated from [../src/phonetics/txt2ipa.xfscript](http://github.com/giellalt/lang-som/blob/main/../src/phonetics/txt2ipa.xfscript)</small>
 
+<small>This (part of) documentation was generated from [src/phonetics/txt2ipa.xfscript](https://github.com/giellalt/lang-som/blob/main/src/phonetics/txt2ipa.xfscript)</small>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
 
 
@@ -3327,7 +1549,11 @@ retracted tongue root			_q
 % násti% :%*     Root ; 
 
 * * *
-<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-numbers-digit2text.lexc](http://github.com/giellalt/lang-som/blob/main/../src/transcriptions/transcriptor-numbers-digit2text.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/transcriptions/transcriptor-numbers-digit2text.lexc](https://github.com/giellalt/lang-som/blob/main/src/transcriptions/transcriptor-numbers-digit2text.lexc)</small>
+
+---
+
 
 
 We describe here how abbreviations are in Somali are read out, e.g.
@@ -3342,41 +1568,28 @@ For example:
 * esim.:esimerkki # ; 
 * esim.:esimerkiksi # ; 
 
-
 * * *
-<small>This (part of) documentation was generated from [../src/transcriptions/transcriptor-abbrevs2text.lexc](http://github.com/giellalt/lang-som/blob/main/../src/transcriptions/transcriptor-abbrevs2text.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/transcriptions/transcriptor-abbrevs2text.lexc](https://github.com/giellalt/lang-som/blob/main/src/transcriptions/transcriptor-abbrevs2text.lexc)</small>
+
+---
+
+
 [ L A N G U A G E ]  G R A M M A R   C H E C K E R
-
-
-
-
-
-
-
-
 
 # DELIMITERS
 
-
 # TAGS AND SETS
 
-
-
 ## Tags
-
 
 This section lists all the tags inherited from the fst, and used as tags
 in the syntactic analysis. The next section, **Sets**, contains sets defined
 on the basis of the tags listed here, those set names are not visible in the output.
 
-
-
-
 ### Beginning and end of sentence
 BOS
 EOS
-
-
 
 ### Parts of speech tags
 
@@ -3406,8 +1619,6 @@ PUNCT
 COMMA
 ¶
 
-
-
 ### Tags for POS sub-categories
 
 Pers
@@ -3423,7 +1634,6 @@ Prop
 Allegro
 Arab
 Romertall
-
 
 ### Tags for morphosyntactic properties
 
@@ -3486,11 +1696,7 @@ Sup
 Actio
 VAbess
 
-
-
 Err/Orth
-
-
 
 ### Semantic tags
 
@@ -3523,14 +1729,10 @@ HUMAN
 HAB-ACTOR
 HAB-ACTOR-NOT-HUMAN
 
-
 PROP-ATTR
 PROP-SUR
 
-
-
 TIME-N-SET
-
 
 ###  Syntactic tags
 
@@ -3602,22 +1804,15 @@ OBJ>-OTHERS
 SYN-V
 @X
 
-
-
-
-
 ## Sets containing sets of lists and tags
 
 This part of the file lists a large number of sets based partly upon the tags defined above, and
 partly upon lexemes drawn from the lexicon.
 See the sourcefile itself to inspect the sets, what follows here is an overview of the set types.
 
-
-
 ### Sets for Single-word sets
 
 INITIAL
-
 
 ### Sets for word or not
 
@@ -3625,7 +1820,6 @@ WORD
 REAL-WORD
 REAL-WORD-NOT-ABBR
 NOT-COMMA
-
 
 ### Case sets
 
@@ -3640,7 +1834,6 @@ NOT-ACC
 
 ### Verb sets
 
-
 NOT-V
 
 ### Sets for finiteness and mood
@@ -3650,7 +1843,6 @@ REAL-NEG
 MOOD-V
 
 NOT-PRFPRC
-
 
 ### Sets for person
 
@@ -3664,49 +1856,15 @@ PL1-V
 PL2-V
 PL3-V
 
-
-
-
-
 ### Pronoun sets
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### Adjectival sets and their complements
 
-
-
-
 ### Adverbial sets and their complements
-
-
-
 
 ### Sets of elements with common syntactic behaviour
 
-
 ### NP sets defined according to their morphosyntactic features
-
-
-
-
-
-
-
 
 ### The PRE-NP-HEAD family of sets
 
@@ -3714,86 +1872,34 @@ These sets model noun phrases (NPs). The idea is to first define whatever can
 occur in front of the head of the NP, and thereafter negate that with the
 expression **WORD - premodifiers**.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Border sets and their complements
-
-
-
-
-
-
-
-
-
-
 
 ### Grammarchecker sets
 
-
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../tools/grammarcheckers/grammarchecker.cg3](http://github.com/giellalt/lang-som/blob/main/../tools/grammarcheckers/grammarchecker.cg3)</small>Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
+
+<small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker.cg3](https://github.com/giellalt/lang-som/blob/main/tools/grammarcheckers/grammarchecker.cg3)</small>
+
+---
+
+# Grammar checker tokenisation for som
+
+Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
 Then just:
+```
 $ make
 $ echo "ja, ja" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
-
-Issues:
-- [X] Ambiguous input
-- Seems to work fine
-- [X] Ambiguous multiword expessions with ambiguous tokenisation
-- Seems to work – represented within lexc now; hfst-tokenise also
-supports forms on the analyses now
-- [X] Ambiguous multiword expessions need reorganising after CG
-- The module cg-mwesplit takes wordforms from readings and turns them into
-new cohorts
-- [X] Unknown words
-- The set-difference method only works for words without
-flag diacritics (even though we should be working only on the form-side?)
-and leads to binary blow-up: With only lower unknowns, we get 45M;
-lower+upper gives 67M, while no unknowns gives 27M
-- Fixed instead by treating empty analyses as unknown-tokens in
-hfst-tokenise, and outputting unmatched strings with a prefix
-- [ ] Treat input that's within superblanks as unmatched
-- probably requires a change in hfst-tokenise itself
-- [X] Try >1 space for ambiguous MWE's? – represented within lexc now
-- [ ] Try set-difference-unknowns method with regular hfst commands?
+```
 
 More usage examples:
+```
 $ echo "Juos gorreválggain lea (dárbbašlaš) deavdit gáibádusa boasttu olmmoš, man mielde lahtuid." | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
 $ echo "(gáfe) 'ja' ja 3. ja? ц jaja ukjend \"ukjend\"" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
 $ echo "márffibiillagáffe" | hfst-tokenise --giella-cg tokeniser-disamb-gt-desc.pmhfst
+```
 
 Pmatch documentation:
-https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch
-
-
-
-
-
+<https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch>
 
 Characters which have analyses in the lexicon, but can appear without spaces
 before/after, that is, with no context conditions, and adjacent to words:
@@ -3808,9 +1914,6 @@ the List contains some unicode white space characters
 * Narrow No-Break Space U+202F
 * Medium Mathematical Space U+205F
 * Word joiner U+2060
-
-
-
 
 Apart from what's in our morphology, there are
 1) unknown word-like forms, and
@@ -3824,14 +1927,11 @@ so far:
 
 TODO: Could use something like this, but built-in's don't include šžđčŋ:
 
-
 Simply give an empty reading when something is unknown:
 hfst-tokenise --giella-cg will treat such empty analyses as unknowns, and
 remove empty analyses from other readings. Empty readings are also
 legal in CG, they get a default baseform equal to the wordform, but
 no tag to check, so it's safer to let hfst-tokenise handle them.
-
-
 
 Finally we mark as a token any sequence making up a:
 * known word in context
@@ -3840,7 +1940,12 @@ Finally we mark as a token any sequence making up a:
 * URL in context
 
 * * *
-<small>This (part of) documentation was generated from [../tools/tokenisers/tokeniser-gramcheck-gt-desc.pmscript](http://github.com/giellalt/lang-som/blob/main/../tools/tokenisers/tokeniser-gramcheck-gt-desc.pmscript)</small># Tokeniser for som
+
+<small>This (part of) documentation was generated from [tools/tokenisers/tokeniser-gramcheck-gt-desc.pmscript](https://github.com/giellalt/lang-som/blob/main/tools/tokenisers/tokeniser-gramcheck-gt-desc.pmscript)</small>
+
+---
+
+# Tokeniser for som
 
 Usage:
 ```
@@ -3852,12 +1957,7 @@ $ echo "márffibiillagáffe" | hfst-tokenise --giella-cg tokeniser-disamb-gt-des
 ```
 
 Pmatch documentation:
-https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch
-
-
-
-
-
+<https://kitwiki.csc.fi/twiki/bin/view/KitWiki/HfstPmatch>
 
 Characters which have analyses in the lexicon, but can appear without spaces
 before/after, that is, with no context conditions, and adjacent to words:
@@ -3872,9 +1972,6 @@ the List contains some unicode white space characters
 * Narrow No-Break Space U+202F
 * Medium Mathematical Space U+205F
 * Word joiner U+2060
-
-
-
 
 Apart from what's in our morphology, there are
 1. unknown word-like forms, and
@@ -3892,16 +1989,12 @@ ASCII digits
 so far:
 * U+F0B7 for "x in box"
 
-
-
 ## Unknown handling
 Unknowns are tagged ?? and treated specially with `hfst-tokenise`
 hfst-tokenise --giella-cg will treat such empty analyses as unknowns, and
 remove empty analyses from other readings. Empty readings are also
 legal in CG, they get a default baseform equal to the wordform, but
 no tag to check, so it's safer to let hfst-tokenise handle them.
-
-
 
 Finally we mark as a token any sequence making up a:
 * known word in context
@@ -3910,4 +2003,8 @@ Finally we mark as a token any sequence making up a:
 * URL in context
 
 * * *
-<small>This (part of) documentation was generated from [../tools/tokenisers/tokeniser-disamb-gt-desc.pmscript](http://github.com/giellalt/lang-som/blob/main/../tools/tokenisers/tokeniser-disamb-gt-desc.pmscript)</small>
+
+<small>This (part of) documentation was generated from [tools/tokenisers/tokeniser-disamb-gt-desc.pmscript](https://github.com/giellalt/lang-som/blob/main/tools/tokenisers/tokeniser-disamb-gt-desc.pmscript)</small>
+
+---
+

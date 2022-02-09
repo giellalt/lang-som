@@ -3,7 +3,6 @@
 
 INTRODUCTION TO THE MORPHOLOGICAL ANALYSER OF SOMALI.
 
-
 # Multichar_Symbols definitions
 
 ## Analysis symbols
@@ -72,7 +71,6 @@ The parts of speech are further split up into:
 *  +Abbr        
 *  +Prop        
 
-
 Verb and noun declensions for the analysers that want to know about that
 NOTE: We probably do not want to thag these, this is morphological and
 not morphosyntactic info. t.
@@ -103,7 +101,6 @@ The Usage extents are marked using the following tags:
 
 The nominals are inflected in the following case, number
 
-
 * +Sg				      
 * +Pl				      
 
@@ -114,7 +111,6 @@ The nominals are inflected in the following case, number
 * +Indef				      
 * +Def				      
 
-
 Nominals also are inflected for gender
 
 *  +Masc				      
@@ -124,7 +120,6 @@ Nominal marked for gender undergo gender polarity changes in plural.
 We want to mark +Masc and +Fem, such that disambiguation is easier,
 but knowing the gender of the lemma since it is not predictable from
 a given plural form is a good thing.
-
 
 *  +M→M				      
 *  +M→F				      
@@ -207,7 +202,6 @@ Verbs also mark some non-agreement syntactic information
 *  +Rel  the verb is within a relative clause, and is also case marked.
 
 Other verb forms are
-
 
 * +Inf	    
 * +Ger	    
@@ -308,7 +302,6 @@ Style
 
 ## Morphophonology
 
-
 To represent phonologic variations in word forms we use the following
 symbols in the lexicon files:
 
@@ -317,7 +310,6 @@ symbols in the lexicon files:
 Going to try to replace these with flag diacritics if possible.
 
 And following triggers to control variation
-
 
 * {#} # -      
 
@@ -335,7 +327,6 @@ TODO: no need for , but needs to be removed in all files
 *  {-V}    in verbs: deletion of specific vowel, used only in affixes, to make stems prettier? room for cleaning
 *  {-I}    in verbs: -i- deletions in V3A and -san adjectives
 *  {-a}    used specifically in -sho derivations. TODO: change to rule with » ?
-
 
 *  {E}     part of cliticized ee (CS+Appos)
 
@@ -438,18 +429,6 @@ Person flags
 * @R.Gender.Fem@    
 * @P.Gender.Fem@    
 
-
-
-
-
-
-
-
-
-
-
-
-
 # The continuation lexica
 
 The word forms in Somali start from the lexeme roots of basic
@@ -490,11 +469,7 @@ word classes, or optionally from prefixes:
 
 * LEXICON FINAL  just adds lower ##
 
-
-
-
 These lexica are dummy lexical to make the source compile, they contain only #.
-
 
 * LEXICON Proper   
 
@@ -504,12 +479,9 @@ These lexica are dummy lexical to make the source compile, they contain only #.
 
 * LEXICON SemiReducedPerson  
 
-
-
-
-
-
-
-
 * * *
-<small>This (part of) documentation was generated from [../src/fst/root.lexc](http://github.com/giellalt/lang-som/blob/main/../src/fst/root.lexc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/root.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/root.lexc)</small>
+
+---
+

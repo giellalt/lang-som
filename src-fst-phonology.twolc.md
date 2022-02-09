@@ -1,7 +1,6 @@
 
 # The Somali morphophonological/twolc rules file 
 
-
 ## Morphophonological notes 
 
 # Phonological Processes in Somali
@@ -168,44 +167,13 @@ More processes to describe:
 * w/b alternations
 * vowel lengthening magaalo / magaalooyin
 
-
-
 Notes:
 * If forms disappear but the rule should work, make sure
 that the pair transforming exists in the Alphabet
 
-
-
 Alphabet
 
-
-
 For ease of reduplication and treating sh as separate from l + t => sh
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 TODO: write tests for gacmahii / gacmihii, magacii / magicii, magucu / magacu
 
@@ -234,21 +202,11 @@ List of rules:
 
 **Ablaut around back fricatives at morpheme boundaries**  
 
-
-
-
 **Ablaut in declension 7 with final vowel**  
-
-
-
-
 
 **LT -> SH part 1**  
 
-
 **LT -> SH part 2**  
-
-
 
 **LT -> SH part 2 for V3B**  
 
@@ -270,35 +228,24 @@ TODO: This rule is currently conflicting with the next one.
 
 **Declension 2: -y insertion after back sounds and fricatives; and after -i**  
 
-
 **Declension 4: Plural Partial Reduplication**  
 
 **Declension 4: Plural Partial Reduplication %{m}**  
 
 **Declension 4: C2->n in m contexts**  
 
-
-
-
-
 **-y- insertion in plurals**  
 
 **Disallow yy**  
 
-
 Doesn't work with wuxu, where k has been deleted.
 Doesn't work with magicii, magucu, but should optionally. magacii and magicii, etc are both possible
 
-
 **Declension 6: final vowel**  
-
-
 
 **Declension V1: magacow / magacaabay / magacawday, shorten a**  
 
 **Delete preceding a**  
-
-
 
 AllBoundaries \?:WordChars
 
@@ -308,43 +255,21 @@ AllBoundaries \?:WordChars
 
 **Declension 7: final vowel in final position**  
 
-
-
 ## Verbal Rules
-
 
 **V2A -> V3B derivations, delete -i**  
 
 **V2A -> V3B derivations, depalatization**  
 
-
-
-
-
 **V1: a/e umlaut before i/e**  
-
 
 **V1: a/e umlaut before a**  
 
-
-
 **V1, D3: Vowel deletion**  
-
-
-
-
-
-
-
-
 
 **V1: Simplification of dhd to dh (t)**  
 
-
-
 **V1: n/m when deleted vowel results in C0n**  
-
-
 
 ## V2A
 
@@ -360,23 +285,12 @@ tbw.
 
 **V2B: Remove e**  
 
-
-
-
-
-
-
-
 V3A
-
-
-
 
 ## V3B
 
 Following rules are for the funky things that happen with 1Sg, 3SgM, 3Pl
 Basically, disallowed d_d, so it gets simplified to t
-
 
 wada>d>aa#        wada>nn>aa#
 wada>t>aa#        wada>d>aan#
@@ -387,7 +301,6 @@ wataa                        wadannaa
 wadataa                        wadataan
 wataa                        wataan
 wadataa
-
 
 fura>d>aa#        fura>nn>aa#
 fura>t>aa#        fura>d>aan#
@@ -418,14 +331,11 @@ Note: bt / obd
 
 **V3B: d dissimilation w/ cor **  
 
-
 **V3B: d dissimilation 2 **  
-
 
 **V3B: root {a} deletion before suffixes with -d**  
 
 **V3B: otherwise**  
-
 
 General Rules
 
@@ -438,9 +348,6 @@ General Rules
 **Optional m doubling**  
 
 **Velar deletion after Back, but avoiding digraphs**  
-
-
-
 
 **Final lenition.**  
 
@@ -455,15 +362,17 @@ General Rules
 * *primus%>s*
 * *primus00*
 
-
 * examples:*
 
 * examples:*
-
 
 * examples:*
 
 * examples:*
 
 * * *
-<small>This (part of) documentation was generated from [../src/fst/phonology.twolc](http://github.com/giellalt/lang-som/blob/main/../src/fst/phonology.twolc)</small>
+
+<small>This (part of) documentation was generated from [src/fst/phonology.twolc](https://github.com/giellalt/lang-som/blob/main/src/fst/phonology.twolc)</small>
+
+---
+
