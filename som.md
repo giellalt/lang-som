@@ -653,13 +653,13 @@ General Rules
 * *primus%>s*
 * *primus00*
 
-* examples:*
+*  examples:*
 
-* examples:*
+*  examples:*
 
-* examples:*
+*  examples:*
 
-* examples:*
+*  examples:*
 
 * * *
 
@@ -1212,13 +1212,13 @@ but, have varying irregular masculine plural forms.
 
 * LEXICON IrregNouns  
 
-*il # Irregular tests examples:*
+* il # Irregular tests examples:*
 * *il:* `il+N+Fem+Sg+Indef+Abs`
 * *isha:* `il+N+Fem+Sg+Def+Abs+Prox`
 * *indho:* `il+N+Masc+Pl+Indef+Abs`
 * *indhaha:* `il+N+Masc+Pl+Def+Abs+Prox`
 
-*il # Irregular tests examples:*
+* il # Irregular tests examples:*
 * *si:* `si+N+Fem+Sg+Indef+Abs`
 * *sida:* `si+N+Fem+Sg+Def+Abs+Prox`
 * *siyaabo:* `si+N+Masc+Pl+Indef+Abs`
@@ -1231,7 +1231,7 @@ TODO: write quick overview of morphosyntax, morphophon
 
 Good amount of nouns with -ad, Fem derivational suffix.
 
-*aalad # aalad sample paradigm. examples:*
+* aalad # aalad sample paradigm. examples:*
 * *aalad:* `aalad+N+Decl/1+Fem+Sg+Indef+Abs`
 * *aaladda:* `aalad+N+Decl/1+Fem+Sg+Def+Abs+Prox`
 * *aalado:* `aalad+N+Decl/1+Masc+Pl+Indef+Abs`
@@ -1285,7 +1285,7 @@ Ex.) xadhig -> xadhko
 
 Declension 3: F→M
 
-*gabadh # dh + d -> dh; vowel deletion examples:*
+* gabadh # dh + d -> dh; vowel deletion examples:*
 * *gabadh:* `gabadh+N+Fem+Sg+Indef+Abs`
 * *gabadha:* `gabadh+N+Fem+Sg+Def+Abs+Prox`
 * *gabdho:* `gabadh+N+Masc+Pl+Indef+Abs`
@@ -1293,7 +1293,7 @@ Declension 3: F→M
 
 Declension 3: M→M
 
-*xadhig # g ~ k; vowel deletion examples:*
+* xadhig # g ~ k; vowel deletion examples:*
 * *xadhig:* `xadhig+N+Masc+Sg+Indef+Abs`
 * *xadhigga:* `xadhig+N+Masc+Sg+Def+Abs+Prox`
 * *xadhko:* `xadhig+N+Masc+Pl+Indef+Abs`
@@ -1311,7 +1311,7 @@ Ex.)
 
 * LEXICON ArabicLoans  
 
-*guri # Odd-syllable test examples:*
+* guri # Odd-syllable test examples:*
 * *guri:* `guri+N+Masc+Sg+Indef+Nom`
 
 * * *
