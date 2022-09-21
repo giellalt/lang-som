@@ -30,7 +30,7 @@ Documentation
 
 Documentation can be found at:
 
--   <https://giellalt.uit.no/lang/som/SomaliDocumentation.html>
+- [Language specific documentation](https://giellalt.github.io/lang-som/)
 -   <https://giellalt.uit.no/index.html>
 
 Core dependencies
