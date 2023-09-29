@@ -1,9 +1,10 @@
 # Somali documentation
 
 [![Maturity: Experiment](https://img.shields.io/badge/Maturity-Experiment-black.svg)](https://giellalt.github.io/MaturityClassification.html)
+![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-som%2Fgh-pages%2Flemmacount.json)
 [![License](https://img.shields.io/github/license/giellalt/lang-som)](https://github.com/giellalt/lang-som/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-som)](https://github.com/giellalt/lang-som/issues)
-[![Build Status](https://divvun-tc.thetc.se/api/github/v1/repository/giellalt/lang-som/main/badge.svg)](https://github.com/giellalt/lang-som/actions)
+[![Build Status](https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/lang-som/main/badge.svg)](https://github.com/giellalt/lang-som/actions)
 
 This page documents the work on the [Somali language model](http://github.com/giellalt/lang-som). With 15800 stems and a basic morphological component, 
 It is large enough to be useful, but has yet to
