@@ -2,7 +2,7 @@ The Somali morphology and tools
 ==========================================
 
 [![GitHub issues](https://img.shields.io/github/issues-raw/giellalt/lang-som)](https://github.com/giellalt/lang-som/issues)
-[![Build Status](https://divvun-tc.thetc.se/api/github/v1/repository/giellalt/lang-som/main/badge.svg)](https://github.com/giellalt/lang-som/actions)
+[![Build Status](https://divvun-tc.giellalt.org/api/github/v1/repository/giellalt/lang-som/main/badge.svg)](https://github.com/giellalt/lang-som/actions)
 [![License](https://img.shields.io/github/license/giellalt/lang-som)](https://github.com/giellalt/lang-som/blob/main/LICENSE)
 [![Desktop speller download](https://img.shields.io/badge/download%40latest-desktop--bhfst-brightgreen)](https://pahkat.uit.no/main/download/speller-som?platform=desktop&channel=nightly)
 [![Mobile speller download](https://img.shields.io/badge/download%40latest-mobile--bhfst-brightgreen)](https://pahkat.uit.no/main/download/speller-som?platform=mbile&channel=nightly)
