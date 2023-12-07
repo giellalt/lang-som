@@ -57,8 +57,10 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
 
 !! Focus
 
-+Foc/L  !!= * @CODE@ Focus markers **baa** and **ayaa**
-+Foc/R  !!= * @CODE@ Focus marker **waxaa**
++Foc/L   !!= * @CODE@ Focus markers **baa** and **ayaa**
++Foc/R   !!= * @CODE@ Focus marker **waxaa**
++Foc/V	 !!= * @CODE@ ??2023-12-07 validating Jaska
++Foc/baa !!= * @CODE@ ??2023-12-07 validating Jaska
 
 !! The parts of speech are further split up into:
 
@@ -89,6 +91,11 @@ Multichar_Symbols  !!≈ # @CODE@ definitions
  +Prop        !!= * @CODE@
 
 
+!QUESTIONS ad hoc
+ +Null !!= * @CODE@ ??2023-12-07 validating Jaska
+ +V/ah !!= * @CODE@ ??2023-12-07 validating Jaska
+ +V/ !!= * @CODE@ ??2023-12-07 validating Jaska
+ 
 !! Verb and noun declensions for the analysers that want to know about that
 !! NOTE: We probably do not want to thag these, this is morphological and
 !! not morphosyntactic info. t.
