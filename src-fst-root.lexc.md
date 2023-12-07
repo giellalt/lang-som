@@ -40,8 +40,10 @@ Object pronouns in adpositional+pronoun
 
 Focus
 
-* +Foc/L   Focus markers **baa** and **ayaa**
-* +Foc/R   Focus marker **waxaa**
+* +Foc/L    Focus markers **baa** and **ayaa**
+* +Foc/R    Focus marker **waxaa**
+* +Foc/V	  ??2023-12-07 validating Jaska
+* +Foc/baa  ??2023-12-07 validating Jaska
 
 The parts of speech are further split up into:
 
@@ -70,6 +72,10 @@ The parts of speech are further split up into:
 *  +Abstr	      
 *  +Abbr        
 *  +Prop        
+
+*  +Null  ??2023-12-07 validating Jaska
+*  +V/ah  ??2023-12-07 validating Jaska
+*  +V/  ??2023-12-07 validating Jaska
 
 Verb and noun declensions for the analysers that want to know about that
 NOTE: We probably do not want to thag these, this is morphological and
