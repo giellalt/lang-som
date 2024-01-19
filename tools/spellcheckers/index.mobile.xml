@@ -2,7 +2,7 @@
 <hfstspeller dtdversion="1.0" hfstversion="3">
   <info>
     <locale>so</locale>
-    <title>Giellatekno/Divvun/UiT fst-based speller for Somali</title>
+    <title>Somali</title>
     <description>This is an fst-based speller for Somali. It is based
     on the normative subset of the morphological analyser for Somali.
     The source code can be found at:
