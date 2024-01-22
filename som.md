@@ -175,7 +175,7 @@ The Somali language adjectives compare.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/affixes/adjectives.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/affixes/adjectives.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/adjectives.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/affixes/adjectives.lexc)</small>
 
 ---
 
@@ -209,7 +209,7 @@ LEXICON Ah  Inflections in tense.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/affixes/irregularverbs.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/affixes/irregularverbs.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/irregularverbs.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/affixes/irregularverbs.lexc)</small>
 
 ---
 
@@ -218,7 +218,7 @@ The Somali nouns inflect in cases, are marked for gender and number.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/affixes/nouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/affixes/nouns.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/nouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/affixes/nouns.lexc)</small>
 
 ---
 
@@ -228,7 +228,7 @@ nouns, but with a colon (':') as separator.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/affixes/propernouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/affixes/propernouns.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/propernouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/affixes/propernouns.lexc)</small>
 
 ---
 
@@ -237,7 +237,7 @@ nouns, but with a colon (':') as separator.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/affixes/symbols.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/affixes/symbols.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/symbols.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/affixes/symbols.lexc)</small>
 
 ---
 
@@ -275,17 +275,7 @@ Apply post-root tones, and other root triggers
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/affixes/verbs.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/affixes/verbs.lexc)</small>
-
----
-
-=================================== !
-The Somali VH morphophonological file !
-=================================== !
-
-* * *
-
-<small>This (part of) documentation was generated from [src/fst/phonology-vh.twolc](https://github.com/giellalt/lang-som/blob/main/src/fst/phonology-vh.twolc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/verbs.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/affixes/verbs.lexc)</small>
 
 ---
 
@@ -663,7 +653,7 @@ General Rules
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/phonology.twolc](https://github.com/giellalt/lang-som/blob/main/src/fst/phonology.twolc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/phonology.twolc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/phonology.twolc)</small>
 
 ---
 
@@ -1156,7 +1146,7 @@ These lexica are dummy lexical to make the source compile, they contain only #.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/root.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/root.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/root.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/root.lexc)</small>
 
 ---
 
@@ -1165,7 +1155,7 @@ Adjectives in the Somali language describe things.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/adjectives.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/stems/adjectives.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/adjectives.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/stems/adjectives.lexc)</small>
 
 ---
 
@@ -1195,7 +1185,7 @@ Long form pronouns and adpositions, and CS
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/adpositions.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/stems/adpositions.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/adpositions.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/stems/adpositions.lexc)</small>
 
 ---
 
@@ -1322,7 +1312,7 @@ Ex.)
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/nouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/stems/nouns.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/nouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/stems/nouns.lexc)</small>
 
 ---
 
@@ -1331,7 +1321,7 @@ Numerals in the Somali language are numbers.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/numerals.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/stems/numerals.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/numerals.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/stems/numerals.lexc)</small>
 
 ---
 
@@ -1340,7 +1330,7 @@ Prefixes in the Somali language are bound to beginning of other words.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/prefixes.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/stems/prefixes.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/prefixes.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/stems/prefixes.lexc)</small>
 
 ---
 
@@ -1349,7 +1339,7 @@ Pronouns in the Somali language are references to things.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/pronouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/stems/pronouns.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/pronouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/stems/pronouns.lexc)</small>
 
 ---
 
@@ -1360,7 +1350,7 @@ Suuriya placetag "Syrian" ; Suuriyihii
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/propernouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/stems/propernouns.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/propernouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/stems/propernouns.lexc)</small>
 
 ---
 
@@ -1370,7 +1360,7 @@ and number, and also gender.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/stems/verbs.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/stems/verbs.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/stems/verbs.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/stems/verbs.lexc)</small>
 
 ---
 
@@ -1537,7 +1527,17 @@ retracted tongue root			_q
 
 * * *
 
-<small>This (part of) documentation was generated from [src/phonetics/txt2ipa.xfscript](https://github.com/giellalt/lang-som/blob/main/src/phonetics/txt2ipa.xfscript)</small>
+<small>This (part of) documentation was generated from [src/fst/phonetics/txt2ipa.xfscript](https://github.com/giellalt/lang-som/blob/main/src/fst/phonetics/txt2ipa.xfscript)</small>
+
+---
+
+=================================== !
+The Somali VH morphophonological file !
+=================================== !
+
+* * *
+
+<small>This (part of) documentation was generated from [src/fst/phonology-vh.twolc](https://github.com/giellalt/lang-som/blob/main/src/fst/phonology-vh.twolc)</small>
 
 ---
 
@@ -1557,7 +1557,7 @@ For example:
 
 * * *
 
-<small>This (part of) documentation was generated from [src/transcriptions/transcriptor-abbrevs2text.lexc](https://github.com/giellalt/lang-som/blob/main/src/transcriptions/transcriptor-abbrevs2text.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/transcriptions/transcriptor-abbrevs2text.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/transcriptions/transcriptor-abbrevs2text.lexc)</small>
 
 ---
 
@@ -1571,7 +1571,7 @@ For example:
 
 * * *
 
-<small>This (part of) documentation was generated from [src/transcriptions/transcriptor-numbers-digit2text.lexc](https://github.com/giellalt/lang-som/blob/main/src/transcriptions/transcriptor-numbers-digit2text.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/transcriptions/transcriptor-numbers-digit2text.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/transcriptions/transcriptor-numbers-digit2text.lexc)</small>
 
 ---
 

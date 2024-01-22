@@ -28,7 +28,7 @@ LEXICON Ah  Inflections in tense.
 
 * * *
 
-<small>This (part of) documentation was generated from [src/fst/affixes/irregularverbs.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/affixes/irregularverbs.lexc)</small>
+<small>This (part of) documentation was generated from [src/fst/morphology/affixes/irregularverbs.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/affixes/irregularverbs.lexc)</small>
 
 ---
 
