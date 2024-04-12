@@ -1,6 +1,10 @@
-# Somali description 
+# Somali language model documentation
 
-All documents in one file
+All doc-comment documentation in one large file.
+
+---
+
+# src-cg3-functions.cg3.md 
 
 
 
@@ -170,7 +174,14 @@ These were the set types.
 ## HNOUN MAPPING
 
 * * *
-<small>This (part of) documentation was generated from [src/cg3/functions.cg3](https://github.com/giellalt/lang-som/blob/main/src/cg3/functions.cg3)</small>Adjective inflection
+
+<small>This (part of) documentation was generated from [src/cg3/functions.cg3](https://github.com/giellalt/lang-som/blob/main/src/cg3/functions.cg3)</small>
+
+---
+
+# src-fst-morphology-affixes-adjectives.lexc.md 
+
+Adjective inflection
 The Somali language adjectives compare.
 
 * * *
@@ -178,6 +189,8 @@ The Somali language adjectives compare.
 <small>This (part of) documentation was generated from [src/fst/morphology/affixes/adjectives.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/affixes/adjectives.lexc)</small>
 
 ---
+
+# src-fst-morphology-affixes-irregularverbs.lexc.md 
 
 
 Irregular verbs
@@ -213,6 +226,8 @@ LEXICON Ah  Inflections in tense.
 
 ---
 
+# src-fst-morphology-affixes-nouns.lexc.md 
+
 Noun inflection
 The Somali nouns inflect in cases, are marked for gender and number.
 
@@ -221,6 +236,8 @@ The Somali nouns inflect in cases, are marked for gender and number.
 <small>This (part of) documentation was generated from [src/fst/morphology/affixes/nouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/affixes/nouns.lexc)</small>
 
 ---
+
+# src-fst-morphology-affixes-propernouns.lexc.md 
 
 Proper noun inflection
 The Somali language proper nouns inflect in the same cases as regular
@@ -232,6 +249,8 @@ nouns, but with a colon (':') as separator.
 
 ---
 
+# src-fst-morphology-affixes-symbols.lexc.md 
+
 
 # Symbol affixes
 
@@ -240,6 +259,8 @@ nouns, but with a colon (':') as separator.
 <small>This (part of) documentation was generated from [src/fst/morphology/affixes/symbols.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/affixes/symbols.lexc)</small>
 
 ---
+
+# src-fst-morphology-affixes-verbs.lexc.md 
 
 Verb inflection
 The Somali language verbs inflect in persons.
@@ -278,6 +299,8 @@ Apply post-root tones, and other root triggers
 <small>This (part of) documentation was generated from [src/fst/morphology/affixes/verbs.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/affixes/verbs.lexc)</small>
 
 ---
+
+# src-fst-morphology-phonology.twolc.md 
 
 
 # The Somali morphophonological/twolc rules file 
@@ -656,6 +679,8 @@ General Rules
 <small>This (part of) documentation was generated from [src/fst/morphology/phonology.twolc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/phonology.twolc)</small>
 
 ---
+
+# src-fst-morphology-root.lexc.md 
 
 
 # Somali morphological analyser
@@ -1150,6 +1175,8 @@ These lexica are dummy lexical to make the source compile, they contain only #.
 
 ---
 
+# src-fst-morphology-stems-adjectives.lexc.md 
+
 Adjectives
 Adjectives in the Somali language describe things.
 
@@ -1158,6 +1185,8 @@ Adjectives in the Somali language describe things.
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/adjectives.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/stems/adjectives.lexc)</small>
 
 ---
+
+# src-fst-morphology-stems-adpositions.lexc.md 
 
 
 
@@ -1188,6 +1217,8 @@ Long form pronouns and adpositions, and CS
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/adpositions.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/stems/adpositions.lexc)</small>
 
 ---
+
+# src-fst-morphology-stems-nouns.lexc.md 
 
 Nouns
 
@@ -1316,6 +1347,8 @@ Ex.)
 
 ---
 
+# src-fst-morphology-stems-numerals.lexc.md 
+
 Numerals
 Numerals in the Somali language are numbers.
 
@@ -1324,6 +1357,8 @@ Numerals in the Somali language are numbers.
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/numerals.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/stems/numerals.lexc)</small>
 
 ---
+
+# src-fst-morphology-stems-prefixes.lexc.md 
 
 Prefixes
 Prefixes in the Somali language are bound to beginning of other words.
@@ -1334,6 +1369,8 @@ Prefixes in the Somali language are bound to beginning of other words.
 
 ---
 
+# src-fst-morphology-stems-pronouns.lexc.md 
+
 Pronouns
 Pronouns in the Somali language are references to things.
 
@@ -1342,6 +1379,8 @@ Pronouns in the Somali language are references to things.
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/pronouns.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/stems/pronouns.lexc)</small>
 
 ---
+
+# src-fst-morphology-stems-propernouns.lexc.md 
 
 
 
@@ -1354,6 +1393,8 @@ Suuriya placetag "Syrian" ; Suuriyihii
 
 ---
 
+# src-fst-morphology-stems-verbs.lexc.md 
+
 Verbs
 Verbs in Somali language are actions, and also states. They agree in person
 and number, and also gender.
@@ -1363,6 +1404,8 @@ and number, and also gender.
 <small>This (part of) documentation was generated from [src/fst/morphology/stems/verbs.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/stems/verbs.lexc)</small>
 
 ---
+
+# src-fst-phonetics-txt2ipa.xfscript.md 
 
 
 
@@ -1531,6 +1574,8 @@ retracted tongue root			_q
 
 ---
 
+# src-fst-phonology-vh.twolc.md 
+
 =================================== !
 The Somali VH morphophonological file !
 =================================== !
@@ -1540,6 +1585,8 @@ The Somali VH morphophonological file !
 <small>This (part of) documentation was generated from [src/fst/phonology-vh.twolc](https://github.com/giellalt/lang-som/blob/main/src/fst/phonology-vh.twolc)</small>
 
 ---
+
+# src-fst-transcriptions-transcriptor-abbrevs2text.lexc.md 
 
 
 
@@ -1561,6 +1608,8 @@ For example:
 
 ---
 
+# src-fst-transcriptions-transcriptor-numbers-digit2text.lexc.md 
+
 
 
 % komma% :,      Root ;
@@ -1574,6 +1623,8 @@ For example:
 <small>This (part of) documentation was generated from [src/fst/transcriptions/transcriptor-numbers-digit2text.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/transcriptions/transcriptor-numbers-digit2text.lexc)</small>
 
 ---
+
+# tools-grammarcheckers-grammarchecker.cg3.md 
 
 
 [ L A N G U A G E ]  G R A M M A R   C H E C K E R
@@ -1872,7 +1923,14 @@ expression **WORD - premodifiers**.
 ### Grammarchecker sets
 
 * * *
-<small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker.cg3](https://github.com/giellalt/lang-som/blob/main/tools/grammarcheckers/grammarchecker.cg3)</small># Tokeniser for som
+
+<small>This (part of) documentation was generated from [tools/grammarcheckers/grammarchecker.cg3](https://github.com/giellalt/lang-som/blob/main/tools/grammarcheckers/grammarchecker.cg3)</small>
+
+---
+
+# tools-tokenisers-tokeniser-disamb-gt-desc.pmscript.md 
+
+# Tokeniser for som
 
 Usage:
 ```
@@ -1934,6 +1992,8 @@ Finally we mark as a token any sequence making up a:
 <small>This (part of) documentation was generated from [tools/tokenisers/tokeniser-disamb-gt-desc.pmscript](https://github.com/giellalt/lang-som/blob/main/tools/tokenisers/tokeniser-disamb-gt-desc.pmscript)</small>
 
 ---
+
+# tools-tokenisers-tokeniser-gramcheck-gt-desc.pmscript.md 
 
 # Grammar checker tokenisation for som
 
@@ -1998,6 +2058,8 @@ Finally we mark as a token any sequence making up a:
 
 ---
 
+# tools-tokenisers-tokeniser-tts-cggt-desc.pmscript.md 
+
 # TTS tokenisation for smj
 
 Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
@@ -2059,6 +2121,3 @@ Needs hfst-tokenise to output things differently depending on the tag they get
 * * *
 
 <small>This (part of) documentation was generated from [tools/tokenisers/tokeniser-tts-cggt-desc.pmscript](https://github.com/giellalt/lang-som/blob/main/tools/tokenisers/tokeniser-tts-cggt-desc.pmscript)</small>
-
----
-

@@ -24,7 +24,6 @@
         * `phonetics/`
             * [txt2ipa.xfscript](src-fst-phonetics-txt2ipa.xfscript.html) ([src](https://github.com/giellalt/lang-som/blob/main/src/fst/phonetics/txt2ipa.xfscript))
         * [phonology-vh.twolc](src-fst-phonology-vh.twolc.html) ([src](https://github.com/giellalt/lang-som/blob/main/src/fst/phonology-vh.twolc))
-            * `/`
         * `transcriptions/`
             * [transcriptor-abbrevs2text.lexc](src-fst-transcriptions-transcriptor-abbrevs2text.lexc.html) ([src](https://github.com/giellalt/lang-som/blob/main/src/fst/transcriptions/transcriptor-abbrevs2text.lexc))
             * [transcriptor-numbers-digit2text.lexc](src-fst-transcriptions-transcriptor-numbers-digit2text.lexc.html) ([src](https://github.com/giellalt/lang-som/blob/main/src/fst/transcriptions/transcriptor-numbers-digit2text.lexc))

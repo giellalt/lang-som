@@ -488,6 +488,3 @@ These lexica are dummy lexical to make the source compile, they contain only #.
 * * *
 
 <small>This (part of) documentation was generated from [src/fst/morphology/root.lexc](https://github.com/giellalt/lang-som/blob/main/src/fst/morphology/root.lexc)</small>
-
----
-
