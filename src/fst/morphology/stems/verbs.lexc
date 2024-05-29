@@ -1329,7 +1329,7 @@ gafuurtaag V1_IV_VerbMorf ;
 gaggab V1_IV_VerbMorf ;
 gahayr V1_IV_VerbMorf ;
 gahayrow:gahayro V1_VerbMorf_ow_oob ;
-gal+Use/NG V1_IV_VerbMorf ;
+gal+Use/NG: V1_IV_VerbMorf ;
 gal+Use/NG:gal V1_TV_VerbMorf ;
 gal:g{ae}l V1_IV_VerbMorf ;
 gal:g{ae}l V1_TV_VerbMorf ;
