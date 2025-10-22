@@ -5,6 +5,7 @@
 [![License](https://img.shields.io/github/license/giellalt/lang-som)](https://github.com/giellalt/lang-som/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-som)](https://github.com/giellalt/lang-som/issues)
 [![Build Status](https://builds.giellalt.org/api/badge/lang-som?label=CI)](https://builds.giellalt.org/pipelines/lang-som/builds/latest)
+[![Glottolog](https://img.shields.io/badge/Glottolog-green)](https://glottolog.org/resource/languoid/id/__GLOTTOLOG_ID__)
 
 This page documents the work on the [Somali language model](http://github.com/giellalt/lang-som). With 15800 stems and a basic morphological component, 
 It is large enough to be useful, but has yet to
