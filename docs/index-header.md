@@ -1,11 +1,19 @@
 # Somali documentation
 
+<div class="twocolumn map" markdown="1">
+
 [![Maturity](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-som%2Fgh-pages%2Fmaturity.json)](https://giellalt.github.io/MaturityClassification.html)
 ![Lemma count](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fgiellalt%2Flang-som%2Fgh-pages%2Flemmacount.json)
 [![License](https://img.shields.io/github/license/giellalt/lang-som)](https://github.com/giellalt/lang-som/blob/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/giellalt/lang-som)](https://github.com/giellalt/lang-som/issues)
 [![Build Status](https://builds.giellalt.org/api/badge/lang-som?label=CI)](https://builds.giellalt.org/pipelines/lang-som/builds/latest)
 [![Glottolog](https://img.shields.io/badge/Glottolog-green)](https://glottolog.org/resource/languoid/id/soma1255)
+
+{% include_relative language-map.md %}
+
+Center location data taken from [Glottolog](https://glottolog.org/). Area extent is local data. Both can be adjusted if wrong - file a pull request!
+
+</div>
 
 This page documents the work on the [Somali language model](http://github.com/giellalt/lang-som). With 15800 stems and a basic morphological component, 
 It is large enough to be useful, but has yet to
