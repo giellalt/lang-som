@@ -4,7 +4,7 @@ All doc-comment documentation in one large file.
 
 ---
 
-# src-cg3-functions.cg3.md 
+## src-cg3-functions.cg3.md 
 
 
 
@@ -43,7 +43,7 @@ part of the noun phrase of that noun (i.e., "scan to the next NP head")
 
 These were the set types.
 
-## HABITIVE MAPPING
+### HABITIVE MAPPING
 
 * **hab1** 
 
@@ -162,16 +162,16 @@ These were the set types.
 
 * **<opredAAcc** (@<OPRED) for A Acc; if an other accusative to the left, and a transtive verb to the left of it. OR: if a transitive verb to the left, and an accusative to the left of it.
 
-### sma object
+#### sma object
 
 * **<advlEss** (@<ADVL) for ESS-ADVL if; FMAINV to the left
 * **<spredEss** (@<SPRED) for N Ess if; FMAINV to the left is intransitive or bargat
 
-## SUBJ MAPPING - leftovers
+### SUBJ MAPPING - leftovers
 
-## OBJ MAPPING - leftovers
+### OBJ MAPPING - leftovers
 
-## HNOUN MAPPING
+### HNOUN MAPPING
 
 * * *
 
@@ -179,7 +179,7 @@ These were the set types.
 
 ---
 
-# src-fst-morphology-affixes-adjectives.lexc.md 
+## src-fst-morphology-affixes-adjectives.lexc.md 
 
 Adjective inflection
 The Somali language adjectives compare.
@@ -190,7 +190,7 @@ The Somali language adjectives compare.
 
 ---
 
-# src-fst-morphology-affixes-irregularverbs.lexc.md 
+## src-fst-morphology-affixes-irregularverbs.lexc.md 
 
 
 Irregular verbs
@@ -226,7 +226,7 @@ LEXICON Ah  Inflections in tense.
 
 ---
 
-# src-fst-morphology-affixes-nouns.lexc.md 
+## src-fst-morphology-affixes-nouns.lexc.md 
 
 Noun inflection
 The Somali nouns inflect in cases, are marked for gender and number.
@@ -237,7 +237,7 @@ The Somali nouns inflect in cases, are marked for gender and number.
 
 ---
 
-# src-fst-morphology-affixes-prefixes.lexc.md 
+## src-fst-morphology-affixes-prefixes.lexc.md 
 
 Prefixes
 Prefixes in the Somali language are bound to beginning of other words.
@@ -248,7 +248,7 @@ Prefixes in the Somali language are bound to beginning of other words.
 
 ---
 
-# src-fst-morphology-affixes-propernouns.lexc.md 
+## src-fst-morphology-affixes-propernouns.lexc.md 
 
 Proper noun inflection
 The Somali language proper nouns inflect in the same cases as regular
@@ -260,10 +260,10 @@ nouns, but with a colon (':') as separator.
 
 ---
 
-# src-fst-morphology-affixes-symbols.lexc.md 
+## src-fst-morphology-affixes-symbols.lexc.md 
 
 
-# Symbol affixes
+## Symbol affixes
 
 * * *
 
@@ -271,7 +271,7 @@ nouns, but with a colon (':') as separator.
 
 ---
 
-# src-fst-morphology-affixes-verbs.lexc.md 
+## src-fst-morphology-affixes-verbs.lexc.md 
 
 Verb inflection
 The Somali language verbs inflect in persons.
@@ -311,20 +311,20 @@ Apply post-root tones, and other root triggers
 
 ---
 
-# src-fst-morphology-phonology.twolc.md 
+## src-fst-morphology-phonology.twolc.md 
 
 
-# The Somali morphophonological/twolc rules file 
+## The Somali morphophonological/twolc rules file 
 
-## Morphophonological notes 
+### Morphophonological notes 
 
-# Phonological Processes in Somali
+## Phonological Processes in Somali
 Somali has several phonological alternations involving reduplication, lenition, vowel harmony
 and tone.
 The hopes with this documentation is that it will either make twolc rules clearer, or help
 if it comes time to completely redo all the rules.
-## Spreading processes
-### Lenition
+### Spreading processes
+#### Lenition
 The lenis stop series in Somali <b d g> alternates with the fortis series <t k>, note that
 the <b> does not actually participate. Lenis stops are found in coda positions, and fortis
 stops are found elsewhere. The alternation occurs in both nouns and verbs.
@@ -333,7 +333,7 @@ ilig ‘tooth'   ~   iligga ‘tooth (Def.)'     ~   ilko ‘teeth (Indef.)’
 arag ‘see'     ~   aragtaa ‘2Sg/3SgF sees'   ~   arkaa ‘1Sg/3SgM sees’
 ```
 
-### Voicing assimilation
+#### Voicing assimilation
 
 Stops assimilate for voicing (or lenis/fortis), particularly across morpheme boundaries,
 however they only assimilate if they share place of articulation.
@@ -350,7 +350,7 @@ to <dh>.
 gabadh            ‘(a) girl’
 gabadha           ‘the girl’
 ```
-### Vowel ablaut
+#### Vowel ablaut
 Vowels are subject to two main types of ablaut: (1) full ablaut across back consonants,
 and (2) partial ablaut with <a> ~ <e> preceding the high vowel <i>.
 Full ablaut is constrained to morpheme boundaries: and most commonly occurs in the ‘waxa’
@@ -369,7 +369,7 @@ tag ‘go'        tegi ‘to go'            tegeen ‘they went’
 bax ‘leave'     bexi ‘to leave'         bexeen ‘they left’
 ```
 
-## <k> deletion
+### <k> deletion
 
 <k> is deleted when it follows a back consonant (which is not <k> itself):
 ```
@@ -383,17 +383,17 @@ wiilal        =>        wiilasha
 ‘boys'                  ‘the boys’
 maqal        =>        maqashay
 ‘listen'            ‘2Sg/3SgF listened’
-## Vowel harmony
+### Vowel harmony
 For a complete description of vowel harmony, see the literature.
 Short summary: +ATR is the active spreading feature, and spreads leftward across all
 boundaries but is blocked by pauses in speech (Intonation Phrase). +ATR can spread
 rightward, but stops at the word boundary. It does not cross clitics, typically.
 Hopefully VH will be covered in this analyzer.
-## Tonal Processes
+### Tonal Processes
 In certain environments Somali appears to dislike having two tones immediately next
 to eachother. I have some collected environments for a phonology paper. May not be
 super important right off the bat.
-## Reduplication
+### Reduplication
 
 Somali has two kinds of reduplication: partial and full. Reduplication is typically
 a strategy for marking plural in nouns and adjectives in some declensions, but also
@@ -432,7 +432,7 @@ wéyn ‘big'                     =>        waawéyn
 Note: Other possibilities might be found greping: with ‘^\(.\)aa\1e', ‘^\(.\)aa\1\1aa',
 ‘\(.\)a\1$’
 
-## Person morphemes
+### Person morphemes
 
 The realization of personal suffixes on verbs is a little complex and depends mostly on
 declension type and whether or not the suffix is preceded by the progressive.
@@ -570,7 +570,7 @@ AllBoundaries \?:WordChars
 
 **Declension 7: final vowel in final position**  
 
-## Verbal Rules
+### Verbal Rules
 
 **V2A -> V3B derivations, delete -i**  
 
@@ -586,11 +586,11 @@ AllBoundaries \?:WordChars
 
 **V1: n/m when deleted vowel results in C0n**  
 
-## V2A
+### V2A
 
 tbw.
 
-## V2B
+### V2B
 
 **V2B: y-insertion**  
 
@@ -602,7 +602,7 @@ tbw.
 
 V3A
 
-## V3B
+### V3B
 
 Following rules are for the funky things that happen with 1Sg, 3SgM, 3Pl
 Basically, disallowed d_d, so it gets simplified to t
@@ -691,16 +691,16 @@ General Rules
 
 ---
 
-# src-fst-morphology-root.lexc.md 
+## src-fst-morphology-root.lexc.md 
 
 
-# Somali morphological analyser
+## Somali morphological analyser
 
 INTRODUCTION TO THE MORPHOLOGICAL ANALYSER OF SOMALI.
 
-# Multichar_Symbols definitions
+## Multichar_Symbols definitions
 
-## Analysis symbols
+### Analysis symbols
 
 The morphological analyses of Somali wordforms are presented
 in this system in terms of the following symbols.
@@ -1001,7 +1001,7 @@ Style
 
 *  +TODO  
 
-## Morphophonology
+### Morphophonology
 
 To represent phonologic variations in word forms we use the following
 symbols in the lexicon files:
@@ -1037,7 +1037,7 @@ Tone
 
 *  ´´     
 
-## Symbols that need to be escaped on the lower side (towards twolc):
+### Symbols that need to be escaped on the lower side (towards twolc):
 * **»7**:  Literal »
 * **«7**:  Literal «
 ```
@@ -1045,7 +1045,7 @@ Tone
  %[%<%]  - Literal <
 ```
 
-## Flag diacritics
+### Flag diacritics
 We have manually optimised the structure of our lexicon using following
 flag diacritics to restrict morhpological combinatorics - only allow compounds
 with verbs if the verb is further derived into a noun again:
@@ -1130,7 +1130,7 @@ Person flags
 * @R.Gender.Fem@    
 * @P.Gender.Fem@    
 
-# The continuation lexica
+## The continuation lexica
 
 The word forms in Somali start from the lexeme roots of basic
 word classes, or optionally from prefixes:
@@ -1162,7 +1162,7 @@ word classes, or optionally from prefixes:
 * Punctuation     ;   
 * Symbols         ;   
 
-## The following are coming from som-lex.txt
+### The following are coming from som-lex.txt
 * IrregularAdjective ;
 * Prefixes  ;
 
@@ -1186,7 +1186,7 @@ These lexica are dummy lexical to make the source compile, they contain only #.
 
 ---
 
-# src-fst-morphology-stems-adjectives.lexc.md 
+## src-fst-morphology-stems-adjectives.lexc.md 
 
 Adjectives
 Adjectives in the Somali language describe things.
@@ -1197,7 +1197,7 @@ Adjectives in the Somali language describe things.
 
 ---
 
-# src-fst-morphology-stems-adpositions.lexc.md 
+## src-fst-morphology-stems-adpositions.lexc.md 
 
 
 
@@ -1229,7 +1229,7 @@ Long form pronouns and adpositions, and CS
 
 ---
 
-# src-fst-morphology-stems-nouns.lexc.md 
+## src-fst-morphology-stems-nouns.lexc.md 
 
 Nouns
 
@@ -1358,7 +1358,7 @@ Ex.)
 
 ---
 
-# src-fst-morphology-stems-numerals.lexc.md 
+## src-fst-morphology-stems-numerals.lexc.md 
 
 Numerals
 Numerals in the Somali language are numbers.
@@ -1369,7 +1369,7 @@ Numerals in the Somali language are numbers.
 
 ---
 
-# src-fst-morphology-stems-pronouns.lexc.md 
+## src-fst-morphology-stems-pronouns.lexc.md 
 
 Pronouns
 Pronouns in the Somali language are references to things.
@@ -1380,7 +1380,7 @@ Pronouns in the Somali language are references to things.
 
 ---
 
-# src-fst-morphology-stems-propernouns.lexc.md 
+## src-fst-morphology-stems-propernouns.lexc.md 
 
 
 
@@ -1393,7 +1393,7 @@ Suuriya placetag "Syrian" ; Suuriyihii
 
 ---
 
-# src-fst-morphology-stems-verbs.lexc.md 
+## src-fst-morphology-stems-verbs.lexc.md 
 
 Verbs
 Verbs in Somali language are actions, and also states. They agree in person
@@ -1405,7 +1405,7 @@ and number, and also gender.
 
 ---
 
-# src-fst-phonetics-txt2ipa.xfscript.md 
+## src-fst-phonetics-txt2ipa.xfscript.md 
 
 
 
@@ -1574,7 +1574,7 @@ retracted tongue root			_q
 
 ---
 
-# src-fst-phonology-vh.twolc.md 
+## src-fst-phonology-vh.twolc.md 
 
 =================================== !
 The Somali VH morphophonological file !
@@ -1586,7 +1586,7 @@ The Somali VH morphophonological file !
 
 ---
 
-# src-fst-transcriptions-transcriptor-abbrevs2text.lexc.md 
+## src-fst-transcriptions-transcriptor-abbrevs2text.lexc.md 
 
 
 
@@ -1608,7 +1608,7 @@ For example:
 
 ---
 
-# src-fst-transcriptions-transcriptor-numbers-digit2text.lexc.md 
+## src-fst-transcriptions-transcriptor-numbers-digit2text.lexc.md 
 
 
 
@@ -1624,26 +1624,26 @@ For example:
 
 ---
 
-# tools-grammarcheckers-grammarchecker.cg3.md 
+## tools-grammarcheckers-grammarchecker.cg3.md 
 
 
 [ L A N G U A G E ]  G R A M M A R   C H E C K E R
 
-# DELIMITERS
+## DELIMITERS
 
-# TAGS AND SETS
+## TAGS AND SETS
 
-## Tags
+### Tags
 
 This section lists all the tags inherited from the fst, and used as tags
 in the syntactic analysis. The next section, **Sets**, contains sets defined
 on the basis of the tags listed here, those set names are not visible in the output.
 
-### Beginning and end of sentence
+#### Beginning and end of sentence
 BOS
 EOS
 
-### Parts of speech tags
+#### Parts of speech tags
 
 N
 A
@@ -1670,7 +1670,7 @@ PUNCT
 COMMA
 ¶
 
-### Tags for POS sub-categories
+#### Tags for POS sub-categories
 
 Pers
 Dem
@@ -1686,7 +1686,7 @@ Allegro
 Arab
 Romertall
 
-### Tags for morphosyntactic properties
+#### Tags for morphosyntactic properties
 
 Nom
 Acc
@@ -1749,7 +1749,7 @@ VAbess
 
 Err/Orth
 
-### Semantic tags
+#### Semantic tags
 
 Sem/Act
 Sem/Ani
@@ -1782,7 +1782,7 @@ PROP-SUR
 
 TIME-N-SET
 
-###  Syntactic tags
+####  Syntactic tags
 
 @+FAUXV
 @+FMAINV
@@ -1852,22 +1852,22 @@ OBJ>-OTHERS
 SYN-V
 @X
 
-## Sets containing sets of lists and tags
+### Sets containing sets of lists and tags
 
 This part of the file lists a large number of sets based partly upon the tags defined above, and
 partly upon lexemes drawn from the lexicon.
 See the sourcefile itself to inspect the sets, what follows here is an overview of the set types.
 
-### Sets for Single-word sets
+#### Sets for Single-word sets
 
 INITIAL
 
-### Sets for word or not
+#### Sets for word or not
 
 WORD
 NOT-COMMA
 
-### Case sets
+#### Case sets
 
 ADLVCASE
 
@@ -1878,11 +1878,11 @@ NOT-NOM
 NOT-GEN
 NOT-ACC
 
-### Verb sets
+#### Verb sets
 
 NOT-V
 
-### Sets for finiteness and mood
+#### Sets for finiteness and mood
 
 REAL-NEG
 
@@ -1890,7 +1890,7 @@ MOOD-V
 
 NOT-PRFPRC
 
-### Sets for person
+#### Sets for person
 
 SG1-V
 SG2-V
@@ -1902,25 +1902,25 @@ PL1-V
 PL2-V
 PL3-V
 
-### Pronoun sets
+#### Pronoun sets
 
-### Adjectival sets and their complements
+#### Adjectival sets and their complements
 
-### Adverbial sets and their complements
+#### Adverbial sets and their complements
 
-### Sets of elements with common syntactic behaviour
+#### Sets of elements with common syntactic behaviour
 
-### NP sets defined according to their morphosyntactic features
+#### NP sets defined according to their morphosyntactic features
 
-### The PRE-NP-HEAD family of sets
+#### The PRE-NP-HEAD family of sets
 
 These sets model noun phrases (NPs). The idea is to first define whatever can
 occur in front of the head of the NP, and thereafter negate that with the
 expression **WORD - premodifiers**.
 
-### Border sets and their complements
+#### Border sets and their complements
 
-### Grammarchecker sets
+#### Grammarchecker sets
 
 * * *
 
@@ -1928,9 +1928,9 @@ expression **WORD - premodifiers**.
 
 ---
 
-# tools-tokenisers-tokeniser-disamb-gt-desc.pmscript.md 
+## tools-tokenisers-tokeniser-disamb-gt-desc.pmscript.md 
 
-# Tokeniser for som
+## Tokeniser for som
 
 Usage:
 ```
@@ -1974,7 +1974,7 @@ ASCII digits
 so far:
 * U+F0B7 for "x in box"
 
-## Unknown handling
+### Unknown handling
 Unknowns are tagged ?? and treated specially with `hfst-tokenise`
 hfst-tokenise --giella-cg will treat such empty analyses as unknowns, and
 remove empty analyses from other readings. Empty readings are also
@@ -1993,9 +1993,9 @@ Finally we mark as a token any sequence making up a:
 
 ---
 
-# tools-tokenisers-tokeniser-gramcheck-gt-desc.pmscript.md 
+## tools-tokenisers-tokeniser-gramcheck-gt-desc.pmscript.md 
 
-# Grammar checker tokenisation for som
+## Grammar checker tokenisation for som
 
 Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
 Then just:
@@ -2058,9 +2058,9 @@ Finally we mark as a token any sequence making up a:
 
 ---
 
-# tools-tokenisers-tokeniser-tts-cggt-desc.pmscript.md 
+## tools-tokenisers-tokeniser-tts-cggt-desc.pmscript.md 
 
-# TTS tokenisation for smj
+## TTS tokenisation for smj
 
 Requires a recent version of HFST (3.10.0 / git revision>=3aecdbc)
 Then just:
