@@ -1,6 +1,3 @@
-spellername = "Somali"
-spellerversion = "0.1.1"
-
 # Name of the speller package in various languages.
 # The default is English + autonym:
 [speller.name]
@@ -22,3 +19,15 @@ legacy_product_codes = [
     { value = "634D46D5-33D4-4FB3-B210-7858072A3FF1", kind = "nsis" },
     { value = "6F2E7221-75FA-4CF3-97E6-03926D7CBA8C", kind = "nsis" }
 ]
+
+[package.speller]
+name = "Somali"
+version = "0.1.1"
+
+[package.grammar]
+name = "Somali"
+version = "0.1.0"
+
+[package.tts-text-proc]
+name = "Somali"
+version = "0.1.0"
